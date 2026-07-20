@@ -50,89 +50,81 @@ const DESTINATIONS: Destination[] = [
   },
   {
     id: "pdf",
-    label: "PDF studio",
-    hint: "Upload → extract → quiz or ask",
+    label: "PDF Studio",
+    hint: "Upload, extract, quiz",
     href: `${FREE_STUDY_HREF}?dest=pdf`,
     icon: FilePdf,
   },
   {
     id: "voice",
     label: "Voice",
-    hint: "Speak · hear Kokoro reply",
+    hint: "Speak naturally to Scho",
     href: `${FREE_STUDY_HREF}?dest=voice`,
     icon: Microphone,
   },
   {
     id: "notes",
     label: "Notes",
-    hint: "Capture ideas with Scho",
+    hint: "Write, OCR, ask Scho",
     href: `${FREE_STUDY_HREF}?dest=notes`,
     icon: Notebook,
   },
+  {
+    id: "flashcards",
+    label: "Flashcards",
+    hint: "Generate from any source",
+    href: `${FREE_STUDY_HREF}?dest=flashcards`,
+    icon: PencilLine,
+  },
 ];
 
-/**
- * Brand-forward Free Studying first paint.
- * Destinations replace the mode pill strip — Tutor / Whiteboard / PDF / Voice / Notes.
- */
 export function FreeStudyLanding() {
   return (
-    <div
-      className={styles.root}
-      data-free-study-landing=""
-      aria-label={FS_ARIA.studio}
-    >
-      <div className={styles.atmosphere} aria-hidden>
-        <div className={styles.lamp} />
-        <div className={styles.grain} />
-        <div className={styles.deskLine} />
-      </div>
+    <div className={styles.root} data-free-study-landing="">
+      <header className={styles.hero} aria-label={FS_ARIA.hero}>
+        <span className={styles.badge}>Free Studying</span>
+        <h1 className={styles.title} id="fs-landing-title">
+          Study your way. Scho follows.
+        </h1>
+        <p className={styles.subtitle} id="fs-landing-subtitle">
+          Six tools. One conversation. Upload a PDF, snap a photo, draw on a
+          whiteboard, speak naturally, or just chat — Scho meets you where you
+          are.
+        </p>
+      </header>
 
-      <div className={styles.stage}>
-        <header className={styles.hero}>
-          <h1 className={styles.brand}>
-            Scholaris
-            <span className={styles.brandEm}>Free Studying</span>
-          </h1>
-          <p className={styles.headline}>Study with Scho — your way.</p>
-          <p className={styles.lede}>
-            Multimodal Scho for open study — talk, draw, read, speak, or write.
-          </p>
-        </header>
-
-        <nav
-          className={styles.destinations}
-          aria-label={FS_ARIA.destinations}
-          onKeyDown={handleDestinationRailKeyDown}
-        >
-          {DESTINATIONS.map((dest, i) => {
-            const Icon = dest.icon;
-            return (
-              <Link
-                key={dest.id}
-                href={dest.href}
-                className={styles.dest}
-                style={{ ["--delay" as string]: `${90 + i * 55}ms` }}
-                aria-label={destinationLandingLabel(dest.id, dest.hint)}
-              >
-                <span className={styles.destIcon} aria-hidden>
-                  <Icon size={22} weight="duotone" />
-                </span>
-                <span className={styles.destCopy} aria-hidden>
-                  <span className={styles.destLabel}>{dest.label}</span>
-                  <span className={styles.destHint}>{dest.hint}</span>
-                </span>
-                <ArrowRight
-                  className={styles.destArrow}
-                  size={18}
-                  weight="bold"
-                  aria-hidden
-                />
-              </Link>
-            );
-          })}
-        </nav>
-      </div>
+      <nav
+        className={styles.destinations}
+        aria-label={FS_ARIA.destinations}
+        onKeyDown={handleDestinationRailKeyDown}
+      >
+        {DESTINATIONS.map((dest, i) => {
+          const Icon = dest.icon;
+          return (
+            <Link
+              key={dest.id}
+              href={dest.href}
+              className={styles.dest}
+              style={{ ["--delay" as string]: `${90 + i * 55}ms` }}
+              aria-label={destinationLandingLabel(dest.id, dest.hint)}
+            >
+              <span className={styles.destIcon} aria-hidden="true">
+                <Icon size={22} weight="duotone" />
+              </span>
+              <div className={styles.destCopy}>
+                <span className={styles.destLabel}>{dest.label}</span>
+                <span className={styles.destHint}>{dest.hint}</span>
+              </div>
+              <ArrowRight
+                className={styles.destArrow}
+                size={16}
+                weight="bold"
+                aria-hidden="true"
+              />
+            </Link>
+          );
+        })}
+      </nav>
 
       <footer className={styles.foot}>
         <a
@@ -141,13 +133,13 @@ export function FreeStudyLanding() {
           {...PRODUCT_NEW_TAB_PROPS}
           title="Opens STEM Labs in a new tab"
         >
-          <Flask size={14} weight="fill" aria-hidden />
+          <Flask size={14} weight="fill" aria-hidden="true" />
           Open STEM Labs
           <ArrowSquareOut
             className={styles.labsOpenCue}
             size={12}
             weight="bold"
-            aria-hidden
+            aria-hidden="true"
           />
         </a>
       </footer>

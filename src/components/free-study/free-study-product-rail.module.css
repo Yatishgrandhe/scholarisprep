@@ -1,0 +1,233 @@
+/**
+ * Free Study Product Rail
+ *
+ * Vertical navigation rail with density modes (full / compact).
+ * Dark mode, focus management, reduced motion support.
+ */
+
+@import "./free-study-tokens.css";
+@import "./free-study-base.module.css";
+
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  Rail Container                                             │
+   └─────────────────────────────────────────────────────────────┘ */
+
+.rail {
+  composes: flexCol from "./free-study-base.module.css";
+  position: relative;
+  height: 100%;
+  width: var(--fs-rail-width);
+  background: hsl(var(--dashboard-sidebar-bg));
+  border-right: 1px solid hsl(var(--dashboard-sidebar-border));
+  transition: width var(--fs-normal);
+}
+
+.rail[data-density="compact"] {
+  width: var(--fs-rail-width-compact);
+}
+
+/* Glow accent */
+.glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, hsl(var(--primary) / 0.3), transparent 60%);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Header */
+.header {
+  composes: flex from "./free-study-base.module.css";
+  align-items: center;
+  justify-content: space-between;
+  height: var(--fs-header-height);
+  padding: 0 var(--fs-space-3);
+  border-bottom: 1px solid hsl(var(--dashboard-sidebar-border));
+  flex-shrink: 0;
+}
+
+.title {
+  composes: h4 from "./free-study-base.module.css";
+  color: hsl(var(--dashboard-sidebar-fg));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-density="compact"] .title {
+  display: none;
+}
+
+/* Navigation */
+.nav {
+  composes: flexCol from "./free-study-base.module.css";
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--fs-space-2);
+  gap: var(--fs-space-1);
+}
+
+.navItem {
+  composes: flex from "./free-study-base.module.css";
+  align-items: center;
+  gap: var(--fs-space-3);
+  width: 100%;
+  min-height: 44px;
+  padding: var(--fs-space-2) var(--fs-space-3);
+  border-radius: var(--fs-radius-md);
+  border: 1px solid transparent;
+  background: transparent;
+  color: hsl(var(--dashboard-sidebar-fg-muted));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 550;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--fs-fast),
+    color var(--fs-fast),
+    border-color var(--fs-fast);
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navItem:hover {
+  background: hsl(var(--dashboard-sidebar-hover));
+  color: hsl(var(--dashboard-sidebar-fg));
+}
+
+.navItem:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px hsl(var(--dashboard-sidebar-fg));
+}
+
+.navItemActive {
+  composes: navItem;
+  background: hsl(var(--dashboard-sidebar-active));
+  color: hsl(var(--dashboard-sidebar-fg));
+  border-color: color-mix(in srgb, hsl(var(--primary)) 45%, transparent);
+}
+
+.navItemAccent {
+  color: color-mix(in srgb, hsl(var(--aqua)) 45%, hsl(var(--dashboard-sidebar-fg-muted)));
+}
+
+.navItemAccent:hover {
+  color: hsl(var(--aqua));
+}
+
+.navItem[data-density="compact"] .navLabel {
+  display: none;
+}
+
+.navIcon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLabel {
+  composes: flex from "./free-study-base.module.css";
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Separator */
+.sep {
+  width: 100%;
+  height: 1px;
+  margin: var(--fs-space-2) 0;
+  border: none;
+  background: hsl(var(--dashboard-sidebar-border));
+}
+
+/* Footer */
+.footer {
+  padding: var(--fs-space-3);
+  border-top: 1px solid hsl(var(--dashboard-sidebar-border));
+  flex-shrink: 0;
+}
+
+.exitBtn {
+  composes: flex from "./free-study-base.module.css";
+  align-items: center;
+  justify-content: center;
+  gap: var(--fs-space-3);
+  width: 100%;
+  min-height: 44px;
+  padding: var(--fs-space-2) var(--fs-space-3);
+  border-radius: var(--fs-radius-md);
+  border: 1px solid transparent;
+  background: transparent;
+  color: hsl(var(--dashboard-sidebar-fg-muted));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 550;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--fs-fast),
+    color var(--fs-fast);
+}
+
+.exitBtn:hover {
+  background: hsl(var(--dashboard-sidebar-hover));
+  color: hsl(var(--dashboard-sidebar-fg));
+}
+
+.exitBtn:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px hsl(var(--dashboard-sidebar-fg));
+}
+
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  Dark Mode                                                  │
+   └─────────────────────────────────────────────────────────────┘ */
+
+:global(.dark) .rail {
+  background: hsl(var(--dashboard-sidebar-bg));
+  border-right-color: hsl(var(--dashboard-sidebar-border));
+}
+
+:global(.dark) .header,
+:global(.dark) .footer {
+  border-color: hsl(var(--dashboard-sidebar-border));
+}
+
+:global(.dark) .navItem:hover {
+  background: hsl(var(--dashboard-sidebar-hover));
+}
+
+:global(.dark) .navItem:focus-visible {
+  box-shadow: inset 0 0 0 2px hsl(var(--dashboard-sidebar-fg));
+}
+
+:global(.dark) .navItemActive {
+  background: hsl(var(--dashboard-sidebar-active));
+  border-color: color-mix(in srgb, hsl(var(--primary)) 35%, transparent);
+}
+
+:global(.dark) .exitBtn:hover {
+  background: hsl(var(--dashboard-sidebar-hover));
+}
+
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  Reduced Motion                                             │
+   └─────────────────────────────────────────────────────────────┘ */
+
+@media (prefers-reduced-motion: reduce) {
+  .rail,
+  .navItem,
+  .exitBtn {
+    transition: none;
+  }
+}
