@@ -117,7 +117,7 @@ const MODE_META: Record<
   },
   notes: {
     label: "Notes",
-    meta: "Write · save · Ask Scho",
+    meta: "Write · OCR · Ask Scho",
     icon: Notebook,
   },
 };
@@ -126,7 +126,7 @@ type ChatMsg = { role: "user" | "assistant"; content: string };
 
 type PdfArtifact =
   | { kind: "quiz"; quiz: GenerateQuizResult }
-  | { kind: "flashcards"; text: string }
+  | { kind: "flashcards"; text: string; nonce: number }
   | null;
 
 function ModelProgressBar({
@@ -264,6 +264,22 @@ export function FreeStudyHub({
           telemetry.transcript = telemetryPatch.transcript.trim();
           telemetry.source = telemetryPatch.source ?? telemetry.source ?? "voice";
         }
+        // Notes: OCR text + note excerpt only (never image bytes to Mistral).
+        if (telemetryPatch?.source === "notes") {
+          telemetry.source = "notes";
+          delete telemetry.pdf_excerpt;
+          delete telemetry.transcript;
+          if (telemetryPatch.ocr_text?.trim()) {
+            telemetry.ocr_text = telemetryPatch.ocr_text.trim();
+          } else {
+            delete telemetry.ocr_text;
+          }
+          if (telemetryPatch.note_excerpt?.trim()) {
+            telemetry.note_excerpt = telemetryPatch.note_excerpt.trim();
+          } else {
+            delete telemetry.note_excerpt;
+          }
+        }
         const result = await startStream({
           conversationId: id,
           message: text,
@@ -352,7 +368,12 @@ export function FreeStudyHub({
       }
 
       if (intent === "flashcards") {
-        setPdfArtifact({ kind: "flashcards", text: clipped });
+        // Text-only deck via FreeStudyFlashcards → /api/ai/free-study/flashcards.
+        setPdfArtifact({
+          kind: "flashcards",
+          text: clipped,
+          nonce: Date.now(),
+        });
         return;
       }
     },
@@ -409,6 +430,7 @@ export function FreeStudyHub({
   } else if (pdfArtifact?.kind === "flashcards") {
     artifactSlot = (
       <FreeStudyFlashcards
+        key={pdfArtifact.nonce}
         sourceText={pdfArtifact.text}
         examType={examType}
         onGenerated={() => toast.success("Flashcards ready")}

@@ -1,6 +1,7 @@
 # Skills Log
 
 ## 2026-07-20
+- **GitHub commit + push (FreeStudyHub notes/flashcards):** Committed pending `FreeStudyHub.tsx` — notes Ask Scho uses `ocr_text`/`note_excerpt` only (never image bytes); notes rail meta “OCR”; flashcards artifact `nonce` + remount key so re-clicks regenerate. Pushed `master` → `origin/master`. No secrets. No force-push.
 - **Whiteboard Studio UX polish:** Centered Scho open ceremony (`BoardSchoOpen` + `board-scho-open.module.css`) in true stage middle (not dock-aligned); dock waits via `revealReady`. Redesigned `BoardChatDock` + `board-chat.module.css` — display Scho header, message bubbles, composer well, empty state, collapse pill. Fixed orphan CSS in `pdf-intent.module.css` blocking build. `npm run build` exit 0; commit+push `origin/master`.
 - **Notes pane OCR→Ask:** Polished `FreeStudyNotesPane` + `free-study-notes.module.css` — attach image → client Tesseract OCR → editable text → Ask Scho with telemetry `ocr_text`/`note_excerpt` (never image bytes to Mistral). Best-effort R2 when note saved; OCR works without R2. Wired into redesigned `FreeStudyHub` notes destination.
 - **FreeStudyPdfPane (text-only PDF path):** `FreeStudyPdfPane.tsx` + `free-study-pdf.module.css` — upload → `extractPdfTextClient` (pdf.js) → excerpt → `PdfIntentChooser` → hub `onIntent` (ask/summarize via `useTutorStream` + `pdf_excerpt`; quiz via `generateQuiz` text-only; flashcards). Never sends PDF bytes to Mistral.
