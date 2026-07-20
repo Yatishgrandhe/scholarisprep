@@ -11,12 +11,38 @@ import {
   formatTutorRouteError,
   streamTutorAgent,
 } from "@/lib/ai/tutorAgent";
+import {
+  isFreeStudyTurn,
+  normalizeTelemetry,
+  type FreeStudyTelemetry,
+} from "@/lib/ai/telemetryPayload";
 import { getSubjectConfig } from "@/lib/subjectContext";
 import { getTutorPerformanceData } from "@/lib/tutor/performance";
 import { resolveCoursePreload } from "@/lib/tutor/coursePreload";
 import { sanitizeUserInput } from "@/lib/sanitize";
 import { createClient } from "@/lib/supabase/server";
 import { isExamType } from "@/lib/examTypes";
+
+const telemetrySchema = z
+  .object({
+    source: z
+      .enum(["tutor", "whiteboard", "pdf", "voice", "notes", "sims"])
+      .optional(),
+    ocr_text: z.string().max(8000).optional(),
+    pdf_excerpt: z.string().max(12000).optional(),
+    transcript: z.string().max(8000).optional(),
+    note_excerpt: z.string().max(8000).optional(),
+    sim: z
+      .object({
+        slug: z.string().max(120).optional(),
+        params: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).optional(),
+        prediction: z.string().max(1000).optional(),
+        residual: z.string().max(1000).optional(),
+        misconceptionHits: z.array(z.string().max(120)).max(8).optional(),
+      })
+      .optional(),
+  })
+  .optional();
 
 const schema = z.object({
   conversation_id: z.string().uuid(),
@@ -43,6 +69,7 @@ const schema = z.object({
         .optional(),
     })
     .optional(),
+  telemetry: telemetrySchema,
 });
 
 const SSE_HEADERS = {
@@ -97,8 +124,11 @@ async function handleTutor(req: NextRequest): Promise<Response> {
   const parsed = await parseJsonBody(req, schema);
   if (!parsed.ok) return parsed.response;
 
-  const { conversation_id, message, context } = parsed.data;
+  const { conversation_id, message, context, telemetry: rawTelemetry } =
+    parsed.data;
   const cleanMessage = sanitizeUserInput(message);
+  const telemetry: FreeStudyTelemetry | null = normalizeTelemetry(rawTelemetry);
+  const freeStudy = isFreeStudyTurn(telemetry);
 
   const { data: conversation } = await supabase
     .from("tutor_conversations")
@@ -169,6 +199,7 @@ async function handleTutor(req: NextRequest): Promise<Response> {
     subjectConfig,
     coursePreload: coursePreload || null,
     performanceData,
+    telemetry,
     conversationContext: {
       context_type: conversation.context_type,
       context_id: conversation.context_id,
@@ -205,14 +236,14 @@ async function handleTutor(req: NextRequest): Promise<Response> {
   };
 
   // Course-aware LangChain agent (`streamTutorAgent` → `streamWithTools`).
-  // CSRF / keyPolicy / maxRounds stay here; tools + search hint are course-scoped.
+  // Free Studying multimodal turns use cooler sampling + slightly longer budget.
   const agentEvents = streamTutorAgent({
     ai,
     systemPrompt: systemInstruction,
     messages,
     examType: preloadExam ?? resolvedExamType ?? examTypeRaw ?? null,
-    temperature: 0.6,
-    maxTokens: 650,
+    temperature: freeStudy ? 0.2 : 0.6,
+    maxTokens: freeStudy ? 700 : 650,
     maxRounds: 3,
   });
 

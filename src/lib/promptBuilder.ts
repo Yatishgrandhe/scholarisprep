@@ -1,4 +1,8 @@
 import { PLACEHOLDERS, PROMPTS } from "@/lib/aiPrompts";
+import {
+  formatTelemetryPayload,
+  type FreeStudyTelemetry,
+} from "@/lib/ai/telemetryPayload";
 import { sanitizeUserInput } from "@/lib/sanitize";
 import type { SubjectConfig } from "@/lib/subjectContext";
 import type { ExamType, Profile } from "@/types/supabase";
@@ -44,6 +48,8 @@ export type TutorPromptOptions = {
     topic?: string;
     question_text?: string;
   };
+  /** Free Studying multimodal payload (OCR / PDF / voice / sims). */
+  telemetry?: FreeStudyTelemetry | null;
 };
 
 export type StudyPlanDiagnosticAnswer = {
@@ -216,6 +222,7 @@ export function buildTutorPrompt(
       ? `Focus topics: ${(options.topics ?? [options.requestContext?.topic]).filter(Boolean).join(", ")}`
       : "";
 
+  const telemetryBlock = formatTelemetryPayload(options.telemetry);
   const contextParts = [
     `Exam type: ${examType}`,
     topicsLine,
@@ -227,6 +234,7 @@ export function buildTutorPrompt(
       topic: options.questionContext?.topic ?? options.requestContext?.topic,
     }),
     formatPerformanceBlock(options.performanceData),
+    telemetryBlock,
     options.conversationContext?.context_type
       ? `Conversation anchor: ${options.conversationContext.context_type}${options.conversationContext.context_id ? ` (${options.conversationContext.context_id})` : ""}`
       : "",
@@ -251,6 +259,10 @@ export function buildTutorPrompt(
     "- ALWAYS write math with KaTeX: inline math in single dollar signs like $a^2+b^2=c^2$, and display math on its own line in double dollar signs like $$c=\\sqrt{a^2+b^2}$$.",
     "- NEVER use \\( \\), \\[ \\], or bare parentheses/brackets around formulas, and never show raw LaTeX commands as plain text.",
     "- Keep replies focused and skimmable — lead with the answer, then the explanation.",
+    "",
+    "When MULTIMODAL TELEMETRY is present in SESSION CONTEXT:",
+    "- Prefer the three-section Free Studying layout (Conceptual Insight / Test-Hacker Strategy / Socratic Pivot).",
+    "- Do not invent OCR, transcript, PDF, or simulation values that were not provided.",
   ].join("\n");
 
   return (

@@ -3,12 +3,15 @@
 import { useCallback, useRef, useState } from "react";
 
 import { aiRequest } from "@/lib/ai/clientKey";
+import type { FreeStudyTelemetry } from "@/lib/ai/telemetryPayload";
 import type { TutorStreamContext } from "@/lib/tutor/questionContext";
 
 type StreamOptions = {
   conversationId: string;
   message: string;
   context?: TutorStreamContext;
+  /** Free Studying multimodal telemetry (OCR / PDF / voice / sims). */
+  telemetry?: FreeStudyTelemetry | null;
 };
 
 export function useTutorStream() {
@@ -36,6 +39,7 @@ export function useTutorStream() {
           conversation_id: options.conversationId,
           message: options.message,
           context: options.context,
+          ...(options.telemetry ? { telemetry: options.telemetry } : {}),
         }),
         signal: abortRef.current.signal,
       });

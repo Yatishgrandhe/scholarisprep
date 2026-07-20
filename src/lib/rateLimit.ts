@@ -9,6 +9,10 @@ export const RATE_LIMITS = {
   "generate-study-plan": { limit: 5, window: "1d" as const },
   "generate-diagnostic": { limit: 5, window: "1d" as const },
   "generate-course": { limit: 10, window: "1h" as const },
+  "notes-upload-url": { limit: 60, window: "1h" as const },
+  "notes-confirm": { limit: 60, window: "1h" as const },
+  "notes-asset-url": { limit: 120, window: "1h" as const },
+  "notes-images": { limit: 40, window: "1h" as const },
 } as const;
 
 export type RateLimitKey = keyof typeof RATE_LIMITS;

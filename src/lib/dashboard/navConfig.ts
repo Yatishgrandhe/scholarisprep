@@ -26,6 +26,7 @@ import {
   DiscordLogo,
   InstagramLogo,
   ArrowSquareOut,
+  Notebook,
 } from "@phosphor-icons/react";
 import { isApOrIbExam, isLanguageCourse } from "@/lib/apIbCatalog";
 import { tutorHref, tutorNavLabel } from "@/lib/tutor/routes";
@@ -67,6 +68,12 @@ function mainNavForExam(examType: ExamType): NavItem[] {
     href: tutorHref(examType),
     label: tutorNavLabel(examType),
     icon: ChatsCircle,
+  },
+  {
+    id: "free-study",
+    href: "/dashboard/free-study",
+    label: "Free Studying",
+    icon: Notebook,
   },
   { id: "planner", href: "/dashboard/study-plan", label: "Study Planner", icon: Calendar },
   {
@@ -194,6 +201,13 @@ export function getNavForExam(examType: ExamType): NavSection[] {
 export function getMoreLinksForExam(examType: ExamType): MoreLinkSection[] {
   const sections: MoreLinkSection[] = [
     {
+      id: "study",
+      label: "Study",
+      items: [
+        { id: "free-study", label: "Free Studying", href: "/dashboard/free-study" },
+      ],
+    },
+    {
       id: "college",
       label: "College",
       items: [
@@ -271,6 +285,7 @@ export function getMoreLinksForExam(examType: ExamType): MoreLinkSection[] {
 }
 
 export const MORE_SECTION_ICONS: Record<string, Icon> = {
+  study: Notebook,
   college: GraduationCap,
   support: ChatCircle,
   opportunities: Briefcase,
@@ -279,6 +294,7 @@ export const MORE_SECTION_ICONS: Record<string, Icon> = {
 };
 
 export const MORE_ITEM_ICONS: Record<string, Icon> = {
+  "free-study": Notebook,
   "campus-fit": GraduationCap,
   support: ChatCircle,
   bug: Bug,

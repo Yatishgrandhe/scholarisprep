@@ -206,6 +206,40 @@
   border-radius: inherit;
 }
 
+.accountMenu {
+  min-width: 14rem !important;
+  width: max-content !important;
+}
+
+.accountLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-block: 0.35rem;
+}
+
+.accountName {
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+}
+
+.accountEmail {
+  font-size: 0.75rem;
+  font-weight: 450;
+  color: hsl(var(--muted-foreground));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12rem;
+}
+
+.accountItem {
+  min-height: 2.5rem;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
 @media (max-width: 768px) {
   .bar {
     margin-bottom: var(--space-4);

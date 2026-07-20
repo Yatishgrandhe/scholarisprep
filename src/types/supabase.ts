@@ -701,6 +701,101 @@ export type Database = {
           },
         ]
       }
+      free_study_note_assets: {
+        Row: {
+          byte_size: number | null
+          content_type: string
+          created_at: string
+          height: number | null
+          id: string
+          note_id: string
+          object_key: string
+          paths: Json
+          provider: string
+          user_id: string
+          width: number | null
+        }
+        Insert: {
+          byte_size?: number | null
+          content_type?: string
+          created_at?: string
+          height?: number | null
+          id?: string
+          note_id: string
+          object_key: string
+          paths?: Json
+          provider?: string
+          user_id: string
+          width?: number | null
+        }
+        Update: {
+          byte_size?: number | null
+          content_type?: string
+          created_at?: string
+          height?: number | null
+          id?: string
+          note_id?: string
+          object_key?: string
+          paths?: Json
+          provider?: string
+          user_id?: string
+          width?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "free_study_note_assets_note_id_fkey"
+            columns: ["note_id"]
+            isOneToOne: false
+            referencedRelation: "free_study_notes"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "free_study_note_assets_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      free_study_notes: {
+        Row: {
+          body: string
+          created_at: string
+          exam_type: string | null
+          id: string
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          body?: string
+          created_at?: string
+          exam_type?: string | null
+          id?: string
+          title?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          body?: string
+          created_at?: string
+          exam_type?: string | null
+          id?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "free_study_notes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       full_exam_forms: {
         Row: {
           blueprint: Json
@@ -2135,132 +2230,6 @@ export type Database = {
         Relationships: []
       }
       questions_english_backup_20260625: {
-        Row: {
-          ai_generated: boolean | null
-          calculator_allowed: boolean | null
-          challenge_only: boolean | null
-          correct_answer: string | null
-          course_id: string | null
-          created_at: string | null
-          created_by: string | null
-          desmos_recommended: boolean | null
-          diagnostic_eligible: boolean | null
-          difficulty: Database["public"]["Enums"]["difficulty"] | null
-          domain_id: string | null
-          exam_type: Database["public"]["Enums"]["exam_type"] | null
-          explanation: string | null
-          external_id: string | null
-          figure_description: string | null
-          generation_seed: string | null
-          has_figure: boolean | null
-          hint: string | null
-          id: string | null
-          is_platform_question: boolean | null
-          lesson_id: string | null
-          math_domain: string | null
-          math_skill_code: string | null
-          options: Json | null
-          passage_id: string | null
-          pool_key: string | null
-          question_text: string | null
-          question_type: Database["public"]["Enums"]["question_type"] | null
-          section: string | null
-          skill_id: string | null
-          source: string | null
-          source_metadata: Json | null
-          stimulus_text: string | null
-          stimulus_type: string | null
-          subject: string | null
-          subtopic: string | null
-          tags: string[] | null
-          topic: string | null
-          updated_at: string | null
-        }
-        Insert: {
-          ai_generated?: boolean | null
-          calculator_allowed?: boolean | null
-          challenge_only?: boolean | null
-          correct_answer?: string | null
-          course_id?: string | null
-          created_at?: string | null
-          created_by?: string | null
-          desmos_recommended?: boolean | null
-          diagnostic_eligible?: boolean | null
-          difficulty?: Database["public"]["Enums"]["difficulty"] | null
-          domain_id?: string | null
-          exam_type?: Database["public"]["Enums"]["exam_type"] | null
-          explanation?: string | null
-          external_id?: string | null
-          figure_description?: string | null
-          generation_seed?: string | null
-          has_figure?: boolean | null
-          hint?: string | null
-          id?: string | null
-          is_platform_question?: boolean | null
-          lesson_id?: string | null
-          math_domain?: string | null
-          math_skill_code?: string | null
-          options?: Json | null
-          passage_id?: string | null
-          pool_key?: string | null
-          question_text?: string | null
-          question_type?: Database["public"]["Enums"]["question_type"] | null
-          section?: string | null
-          skill_id?: string | null
-          source?: string | null
-          source_metadata?: Json | null
-          stimulus_text?: string | null
-          stimulus_type?: string | null
-          subject?: string | null
-          subtopic?: string | null
-          tags?: string[] | null
-          topic?: string | null
-          updated_at?: string | null
-        }
-        Update: {
-          ai_generated?: boolean | null
-          calculator_allowed?: boolean | null
-          challenge_only?: boolean | null
-          correct_answer?: string | null
-          course_id?: string | null
-          created_at?: string | null
-          created_by?: string | null
-          desmos_recommended?: boolean | null
-          diagnostic_eligible?: boolean | null
-          difficulty?: Database["public"]["Enums"]["difficulty"] | null
-          domain_id?: string | null
-          exam_type?: Database["public"]["Enums"]["exam_type"] | null
-          explanation?: string | null
-          external_id?: string | null
-          figure_description?: string | null
-          generation_seed?: string | null
-          has_figure?: boolean | null
-          hint?: string | null
-          id?: string | null
-          is_platform_question?: boolean | null
-          lesson_id?: string | null
-          math_domain?: string | null
-          math_skill_code?: string | null
-          options?: Json | null
-          passage_id?: string | null
-          pool_key?: string | null
-          question_text?: string | null
-          question_type?: Database["public"]["Enums"]["question_type"] | null
-          section?: string | null
-          skill_id?: string | null
-          source?: string | null
-          source_metadata?: Json | null
-          stimulus_text?: string | null
-          stimulus_type?: string | null
-          subject?: string | null
-          subtopic?: string | null
-          tags?: string[] | null
-          topic?: string | null
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
-      questions_expmodel_backup_20260630: {
         Row: {
           ai_generated: boolean | null
           calculator_allowed: boolean | null

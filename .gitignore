@@ -62,6 +62,20 @@ scripts/data/.ap-ib-regen/
 scripts/data/.*-regen/
 scripts/data/.*-regen-*
 
+# Applied import artifacts already loaded into Supabase (~250–330 MB).
+# Keep tutor-preload + planner-skills as source mirrors; runtime uses src/data.
+/english-questions.json
+scripts/import-batches/
+scripts/import-mega/
+scripts/data/**/*.sql
+scripts/data/**/*.json
+!scripts/data/tutor-preload/
+!scripts/data/tutor-preload/**
+!scripts/data/planner-skills/
+!scripts/data/planner-skills/**
+# Dot-dir import scratch under scripts/data (payloads, megas, apply logs)
+scripts/data/.*
+
 # Math bank local exports / pipeline scratch (repo root)
 /math-questions-export*.json
 /declone*.json

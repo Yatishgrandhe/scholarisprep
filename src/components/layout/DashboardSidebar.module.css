@@ -8,7 +8,7 @@
   left: 0;
   top: 0;
   z-index: 40;
-  width: var(--dashboard-sidebar-width, 220px);
+  width: var(--dashboard-sidebar-width, 262px);
   height: 100vh;
   height: 100dvh;
   display: flex;
