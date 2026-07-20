@@ -11,9 +11,19 @@ export function isPracticeSessionRoute(pathname: string): boolean {
   return !PRACTICE_SHELL_SEGMENTS.has(match[1]!);
 }
 
+/** Standalone whiteboard — full-bleed canvas (no sidebar / top bar / tab bar). */
+export function isWhiteboardFullscreenRoute(pathname: string): boolean {
+  if (!pathname) return false;
+  return (
+    pathname === "/dashboard/whiteboard" ||
+    pathname.startsWith("/dashboard/whiteboard/")
+  );
+}
+
 /** Routes that use the minimal exam layout (no sidebar / top bar). */
 export function isExamFullscreenRoute(pathname: string): boolean {
   if (!pathname) return false;
+  if (isWhiteboardFullscreenRoute(pathname)) return true;
   if (isPracticeSessionRoute(pathname)) return true;
   if (pathname.startsWith("/dashboard/question-rush/session")) return true;
   if (pathname.startsWith("/dashboard/exams/") && pathname !== "/dashboard/exams") {

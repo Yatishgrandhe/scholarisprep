@@ -1,0 +1,245 @@
+/**
+ * Board atmosphere — late-night drafting desk.
+ * Cool slate surround + warm tungsten pool + soft aqua fill.
+ * Avoids purple gradients and cream/terracotta studio clichés.
+ */
+
+.root {
+  /* ── Studio tokens ─────────────────────────────── */
+  --studio-ink: #0c1524;
+  --studio-desk: #121c2e;
+  --studio-desk-edge: #1a2740;
+  --studio-paper: #e8edf4;
+  --studio-paper-tint: #dfe6f0;
+  --studio-ink-soft: #1e2a3d;
+  --studio-lamp-warm: #f0b45a;
+  --studio-lamp-core: #ffe6b8;
+  --studio-lamp-spill: #c47a2e;
+  --studio-fill-cool: #5b8fa8;
+  --studio-fill-deep: #2a4a62;
+  --studio-aqua-glint: color-mix(in srgb, var(--aqua, #06b6d4) 55%, #7eb8c9);
+  --studio-cobalt-glint: color-mix(in srgb, var(--cobalt, #2563eb) 40%, #4a6fa5);
+  --studio-grain-opacity: 0.09;
+  --studio-vignette-strength: 0.42;
+  --studio-lamp-opacity: 0.55;
+  --studio-fill-opacity: 0.28;
+  --studio-radius: var(--radius-lg, 18px);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--studio-radius);
+  background:
+    radial-gradient(
+      120% 80% at 50% 100%,
+      color-mix(in srgb, var(--studio-desk-edge) 70%, transparent) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      165deg,
+      var(--studio-desk) 0%,
+      var(--studio-ink) 72%,
+      color-mix(in srgb, var(--studio-fill-deep) 35%, var(--studio-ink)) 100%
+    );
+  color: var(--studio-ink-soft);
+  min-height: 12rem;
+}
+
+/* Cool Bristol / drafting paper — not cream */
+.paper {
+  position: absolute;
+  inset: 0.65rem 0.75rem 0.85rem;
+  border-radius: calc(var(--studio-radius) - 6px);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--studio-paper) 92%, white) 0%,
+      var(--studio-paper) 45%,
+      var(--studio-paper-tint) 100%
+    );
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, white 55%, transparent),
+    inset 0 -1px 0 color-mix(in srgb, var(--studio-ink) 6%, transparent),
+    0 1px 2px color-mix(in srgb, var(--studio-ink) 18%, transparent),
+    0 18px 40px -18px color-mix(in srgb, var(--studio-ink) 55%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle fiber grain — SVG noise, very light */
+.grain {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+  opacity: var(--studio-grain-opacity);
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* Fine paper tooth (orthogonal micro-hatch) */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.35;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      color-mix(in srgb, var(--studio-ink) 4%, transparent) 2px,
+      color-mix(in srgb, var(--studio-ink) 4%, transparent) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      color-mix(in srgb, var(--studio-ink) 3%, transparent) 3px,
+      color-mix(in srgb, var(--studio-ink) 3%, transparent) 4px
+    );
+  mix-blend-mode: soft-light;
+}
+
+/* Desk-lamp warm pool — upper-left tungsten cone */
+.lamp {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  opacity: var(--studio-lamp-opacity);
+  background:
+    radial-gradient(
+      ellipse 55% 48% at 18% 8%,
+      color-mix(in srgb, var(--studio-lamp-core) 88%, white) 0%,
+      color-mix(in srgb, var(--studio-lamp-warm) 70%, transparent) 28%,
+      color-mix(in srgb, var(--studio-lamp-spill) 35%, transparent) 52%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 40% 30% at 22% 14%,
+      color-mix(in srgb, var(--studio-lamp-core) 40%, transparent) 0%,
+      transparent 60%
+    );
+  mix-blend-mode: soft-light;
+}
+
+/* Cool window / ambient fill — opposite corner, slate-aqua */
+.fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  opacity: var(--studio-fill-opacity);
+  background:
+    radial-gradient(
+      ellipse 60% 55% at 92% 88%,
+      color-mix(in srgb, var(--studio-fill-cool) 65%, var(--studio-aqua-glint)) 0%,
+      color-mix(in srgb, var(--studio-fill-deep) 50%, transparent) 42%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 35% 40% at 78% 20%,
+      color-mix(in srgb, var(--studio-cobalt-glint) 22%, transparent) 0%,
+      transparent 65%
+    );
+  mix-blend-mode: soft-light;
+}
+
+/* Soft edge vignette — draws focus to the board */
+.vignette {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 3;
+  opacity: var(--studio-vignette-strength);
+  background: radial-gradient(
+    ellipse 72% 68% at 48% 42%,
+    transparent 38%,
+    color-mix(in srgb, var(--studio-ink) 55%, transparent) 78%,
+    var(--studio-ink) 100%
+  );
+}
+
+/* Optional stronger lamp for focus sessions */
+.root[data-lamp="bright"] {
+  --studio-lamp-opacity: 0.72;
+  --studio-fill-opacity: 0.2;
+  --studio-vignette-strength: 0.5;
+}
+
+.root[data-lamp="dim"] {
+  --studio-lamp-opacity: 0.32;
+  --studio-fill-opacity: 0.38;
+  --studio-vignette-strength: 0.36;
+  --studio-grain-opacity: 0.11;
+}
+
+.content {
+  position: relative;
+  z-index: 4;
+  /* Match `.paper` inset so the cool desk rim stays visible */
+  margin: 0.65rem 0.75rem 0.85rem;
+  min-height: calc(100% - 1.5rem);
+  height: calc(100% - 1.5rem);
+  border-radius: calc(var(--studio-radius) - 6px);
+  /* Let paper + lamp read through translucent child chrome */
+  background: transparent;
+}
+
+/* Breathing lamp — barely perceptible pool shift */
+@media (prefers-reduced-motion: no-preference) {
+  .lamp {
+    animation: studio-lamp-breathe 9s ease-in-out infinite;
+  }
+
+  .fill {
+    animation: studio-fill-drift 14s ease-in-out infinite;
+  }
+}
+
+@keyframes studio-lamp-breathe {
+  0%,
+  100% {
+    opacity: var(--studio-lamp-opacity);
+    transform: scale(1);
+  }
+  50% {
+    opacity: calc(var(--studio-lamp-opacity) * 1.08);
+    transform: scale(1.015);
+  }
+}
+
+@keyframes studio-fill-drift {
+  0%,
+  100% {
+    opacity: var(--studio-fill-opacity);
+  }
+  50% {
+    opacity: calc(var(--studio-fill-opacity) * 1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lamp,
+  .fill {
+    animation: none;
+  }
+}
+
+/* Dark host: deepen desk, cool the paper slightly */
+:global(.dark) .root {
+  --studio-ink: #060b14;
+  --studio-desk: #0a1220;
+  --studio-desk-edge: #142033;
+  --studio-paper: #d5dde8;
+  --studio-paper-tint: #c8d2e0;
+  --studio-lamp-opacity: 0.62;
+  --studio-vignette-strength: 0.55;
+}

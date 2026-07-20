@@ -24,6 +24,8 @@ import {
   FREE_STUDY_NAV_ID,
   LABS_HREF,
   LABS_NAV_ID,
+  WHITEBOARD_HREF,
+  WHITEBOARD_NAV_ID,
   getNavForExam,
 } from "@/lib/dashboard/navConfig";
 import { isTutorRoute } from "@/lib/tutor/routes";
@@ -70,8 +72,11 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
     if (id === LABS_NAV_ID || href === LABS_HREF) {
       return pathname === LABS_HREF || pathname.startsWith(`${LABS_HREF}/`);
     }
+    if (id === WHITEBOARD_NAV_ID || href === WHITEBOARD_HREF) {
+      return pathname === WHITEBOARD_HREF || pathname.startsWith(`${WHITEBOARD_HREF}/`);
+    }
     if (id === FREE_STUDY_NAV_ID || href === FREE_STUDY_HREF) {
-      // Free Studying hub only — STEM Labs have their own nav/route.
+      // Hub only — Whiteboard Studio is a child link; STEM Labs stay separate.
       return pathname === FREE_STUDY_HREF;
     }
     const path = href.split("?")[0]!;
@@ -143,37 +148,76 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
               {section.label && !collapsed ? (
                 <span className={styles.sectionLabel}>{section.label}</span>
               ) : null}
-              {section.items.map(({ id, href, label, icon: Icon, badge }) => {
-                const active =
-                  id === "scho"
-                    ? isTutorRoute(pathname)
-                    : isActive(href, id);
-                return (
-                  <Link
-                    key={id}
-                    href={href}
-                    data-nav-id={id}
-                    aria-current={active ? "page" : undefined}
-                    title={collapsed ? label : undefined}
-                    className={`${styles.navLink} ${active ? styles.navLinkActive : ""} ${collapsed ? styles.navLinkCollapsed : ""}`}
-                  >
-                    {Icon ? (
-                      <Icon
-                        size={18}
-                        weight={active ? "fill" : "regular"}
-                        className={styles.navIcon}
-                        aria-hidden
-                      />
-                    ) : null}
-                    {!collapsed && (
-                      <span className={styles.navLabel}>{label}</span>
-                    )}
-                    {!collapsed && badge ? (
-                      <span className={styles.itemBadge}>{badge}</span>
-                    ) : null}
-                  </Link>
-                );
-              })}
+              {section.items.map(
+                ({ id, href, label, icon: Icon, badge, children }) => {
+                  const active =
+                    id === "scho"
+                      ? isTutorRoute(pathname)
+                      : isActive(href, id);
+                  const childActive = Boolean(
+                    children?.some((child) => isActive(child.href, child.id)),
+                  );
+                  return (
+                    <div key={id} className={styles.navItemGroup}>
+                      <Link
+                        href={href}
+                        data-nav-id={id}
+                        aria-current={active ? "page" : undefined}
+                        title={collapsed ? label : undefined}
+                        className={`${styles.navLink} ${active ? styles.navLinkActive : ""} ${collapsed ? styles.navLinkCollapsed : ""} ${childActive && !active ? styles.navLinkParentActive : ""}`}
+                      >
+                        {Icon ? (
+                          <Icon
+                            size={18}
+                            weight={active || childActive ? "fill" : "regular"}
+                            className={styles.navIcon}
+                            aria-hidden
+                          />
+                        ) : null}
+                        {!collapsed && (
+                          <span className={styles.navLabel}>{label}</span>
+                        )}
+                        {!collapsed && badge ? (
+                          <span className={styles.itemBadge}>{badge}</span>
+                        ) : null}
+                      </Link>
+                      {!collapsed && children && children.length > 0 ? (
+                        <div
+                          className={styles.navChildren}
+                          role="group"
+                          aria-label={`${label} shortcuts`}
+                        >
+                          {children.map((child) => {
+                            const ChildIcon = child.icon;
+                            const childIsActive = isActive(child.href, child.id);
+                            return (
+                              <Link
+                                key={child.id}
+                                href={child.href}
+                                data-nav-id={child.id}
+                                aria-current={childIsActive ? "page" : undefined}
+                                className={`${styles.navLink} ${styles.navChildLink} ${childIsActive ? styles.navLinkActive : ""}`}
+                              >
+                                {ChildIcon ? (
+                                  <ChildIcon
+                                    size={16}
+                                    weight={childIsActive ? "fill" : "regular"}
+                                    className={styles.navIcon}
+                                    aria-hidden
+                                  />
+                                ) : null}
+                                <span className={styles.navLabel}>
+                                  {child.label}
+                                </span>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      ) : null}
+                    </div>
+                  );
+                },
+              )}
             </div>
           ))}
           {isPlatformAdmin ? (

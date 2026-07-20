@@ -28,6 +28,7 @@ import {
   ArrowSquareOut,
   Notebook,
   Flask,
+  PencilLine,
 } from "@phosphor-icons/react";
 import { isApOrIbExam, isLanguageCourse } from "@/lib/apIbCatalog";
 import { tutorHref, tutorNavLabel } from "@/lib/tutor/routes";
@@ -36,6 +37,8 @@ import {
   FREE_STUDY_NAV_ID,
   LABS_HREF,
   LABS_NAV_ID,
+  WHITEBOARD_HREF,
+  WHITEBOARD_NAV_ID,
 } from "@/lib/dashboard/navRoutes";
 
 export type NavItem = {
@@ -45,6 +48,8 @@ export type NavItem = {
   icon: Icon;
   badge?: string;
   external?: boolean;
+  /** Nested links (e.g. Whiteboard under Free Studying). */
+  children?: NavItem[];
 };
 
 export type NavSection = {
@@ -72,7 +77,17 @@ export {
   FREE_STUDY_NAV_ID,
   LABS_HREF,
   LABS_NAV_ID,
+  WHITEBOARD_HREF,
+  WHITEBOARD_NAV_ID,
 } from "@/lib/dashboard/navRoutes";
+
+/** Whiteboard Studio — Free Studying child / account shortcut (not STEM Labs). */
+export const WHITEBOARD_NAV_ITEM: NavItem = {
+  id: WHITEBOARD_NAV_ID,
+  href: WHITEBOARD_HREF,
+  label: "Whiteboard Studio",
+  icon: PencilLine,
+};
 
 function mainNavForExam(examType: ExamType): NavItem[] {
   return [
@@ -83,6 +98,7 @@ function mainNavForExam(examType: ExamType): NavItem[] {
       label: "Free Studying",
       icon: Notebook,
       badge: "New",
+      children: [WHITEBOARD_NAV_ITEM],
     },
     {
       id: LABS_NAV_ID,
@@ -220,8 +236,20 @@ export function getNavForExam(examType: ExamType): NavSection[] {
 }
 
 export function getMoreLinksForExam(examType: ExamType): MoreLinkSection[] {
-  // Free Studying lives in the primary sidebar / mobile tabs — not buried in More.
+  // Free Studying hub stays primary sidebar / mobile Study tab.
+  // Whiteboard Studio is a Free Studying sub-entry (desktop) + Study More (mobile).
   const sections: MoreLinkSection[] = [
+    {
+      id: "study",
+      label: "Study",
+      items: [
+        {
+          id: WHITEBOARD_NAV_ID,
+          label: "Whiteboard Studio",
+          href: WHITEBOARD_HREF,
+        },
+      ],
+    },
     {
       id: "college",
       label: "College",
@@ -300,6 +328,7 @@ export function getMoreLinksForExam(examType: ExamType): MoreLinkSection[] {
 }
 
 export const MORE_SECTION_ICONS: Record<string, Icon> = {
+  study: Notebook,
   college: GraduationCap,
   support: ChatCircle,
   opportunities: Briefcase,
@@ -308,6 +337,7 @@ export const MORE_SECTION_ICONS: Record<string, Icon> = {
 };
 
 export const MORE_ITEM_ICONS: Record<string, Icon> = {
+  whiteboard: PencilLine,
   "campus-fit": GraduationCap,
   support: ChatCircle,
   bug: Bug,

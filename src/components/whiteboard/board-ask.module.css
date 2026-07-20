@@ -1,0 +1,156 @@
+/* OCR ask strip — Read handwriting → edit → Ask Scho. Floating cobalt chrome. */
+
+.strip {
+  --ask-ink: #0f172a;
+  --ask-muted: #64748b;
+  --ask-surface: color-mix(in srgb, #f8fafc 88%, transparent);
+  --ask-edge: color-mix(in srgb, #94a3b8 40%, transparent);
+  --ask-cobalt: var(--cobalt, #2563eb);
+  --ask-danger: #e11d48;
+  --ask-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.55) inset,
+    0 8px 28px hsl(220 40% 12% / 0.1),
+    0 2px 6px hsl(220 40% 12% / 0.05);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  width: min(100%, 36rem);
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--ask-edge);
+  border-radius: 14px;
+  background: var(--ask-surface);
+  backdrop-filter: blur(14px) saturate(1.12);
+  -webkit-backdrop-filter: blur(14px) saturate(1.12);
+  box-shadow: var(--ask-shadow);
+  color: var(--ask-ink);
+  font-family: var(--font-body, "Plus Jakarta Sans", system-ui, sans-serif);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 2.15rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--ask-edge);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    opacity 140ms ease;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ask-cobalt);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: color-mix(in srgb, #fff 55%, transparent);
+  color: var(--ask-ink);
+}
+
+.secondary:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--ask-cobalt) 45%, var(--ask-edge));
+  background: color-mix(in srgb, var(--ask-cobalt) 8%, #fff);
+}
+
+.primary {
+  border-color: color-mix(in srgb, var(--ask-cobalt) 55%, transparent);
+  background: var(--ask-cobalt);
+  color: #fff;
+}
+
+.primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ask-cobalt) 88%, #0f172a);
+}
+
+.error {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: var(--ask-danger);
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--ask-muted);
+}
+
+.track {
+  height: 0.35rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ask-muted) 18%, transparent);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--ask-cobalt);
+  transition: width 160ms ease;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ask-muted);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 5.5rem;
+  resize: vertical;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--ask-edge);
+  border-radius: 10px;
+  background: color-mix(in srgb, #fff 72%, transparent);
+  color: var(--ask-ink);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.textarea::placeholder {
+  color: color-mix(in srgb, var(--ask-muted) 80%, transparent);
+  font-weight: 450;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--ask-cobalt) 50%, var(--ask-edge));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ask-cobalt) 22%, transparent);
+}

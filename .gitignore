@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# ONNX Runtime WASM copied from node_modules for Kokoro TTS (scripts/copy-ort-wasm.mjs)
+/public/ort/
+
 # production
 /build
 

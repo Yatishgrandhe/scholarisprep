@@ -9,12 +9,13 @@ validateEnv();
 const DESMOS_CSP_ORIGINS =
   "https://www.desmos.com https://desmos.com https://cdn.desmos.com https://*.desmos.com";
 
-// Hugging Face CDN for optional Kokoro/ONNX model fetch (self-host under /public/models when possible).
+// Hugging Face Hub for Kokoro ONNX model weights (ORT WASM is same-origin /ort/, not jsDelivr).
 const HF_CSP_ORIGINS = "https://huggingface.co https://*.huggingface.co https://cdn-lfs.huggingface.co https://*.hf.co";
 
 const contentSecurityPolicy = [
   `default-src 'self' ${DESMOS_CSP_ORIGINS}`,
   // wasm-unsafe-eval required for ONNX Runtime / Kokoro WASM TTS in-browser.
+  // ORT .mjs/.wasm load from 'self' (/ort/); do not depend on cdn.jsdelivr.net.
   `script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' ${DESMOS_CSP_ORIGINS}`,
   `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ${DESMOS_CSP_ORIGINS}`,
   // `data:` is required — Desmos embeds its keypad/toolbar icon font as a
@@ -86,6 +87,16 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         headers: securityHeaders,
+      },
+      // Ensure ORT WASM/JS helpers under /ort/ are cacheable and correctly typed.
+      {
+        source: "/ort/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
       },
     ];
   },

@@ -27,6 +27,9 @@ import {
   FREE_STUDY_NAV_ID,
   LABS_HREF,
   LABS_NAV_ID,
+  WHITEBOARD_HREF,
+  WHITEBOARD_NAV_ID,
+  MORE_ITEM_ICONS,
   getMoreLinksForExam,
   getNavForExam,
   type MoreLinkItem,
@@ -272,45 +275,85 @@ export function MobileTabBar() {
               <div key={section.id} className={styles.moreSection}>
                 <p className={styles.moreSectionLabel}>{section.label}</p>
                 <div className={styles.moreSectionBody}>
-                  {section.items.map((item) =>
-                    item.href ? (
-                      item.external ? (
-                        <a
-                          key={item.id}
-                          href={item.href}
-                          className={styles.moreLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={() => setMoreOpen(false)}
-                        >
-                          <span className={styles.moreLinkLabel}>{item.label}</span>
-                          <ArrowSquareOut
-                            size={14}
-                            className={styles.moreExternal}
-                            aria-hidden
-                          />
-                        </a>
-                      ) : (
+                  {section.items.map((item) => {
+                    const ItemIcon = MORE_ITEM_ICONS[item.id];
+                    if (item.href) {
+                      if (item.external) {
+                        return (
+                          <a
+                            key={item.id}
+                            href={item.href}
+                            className={styles.moreLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setMoreOpen(false)}
+                          >
+                            {ItemIcon ? (
+                              <ItemIcon
+                                size={20}
+                                weight="regular"
+                                className={styles.moreLinkIcon}
+                                aria-hidden
+                              />
+                            ) : null}
+                            <span className={styles.moreLinkLabel}>{item.label}</span>
+                            <ArrowSquareOut
+                              size={14}
+                              className={styles.moreExternal}
+                              aria-hidden
+                            />
+                          </a>
+                        );
+                      }
+                      const active =
+                        item.href === WHITEBOARD_HREF
+                          ? pathname === WHITEBOARD_HREF ||
+                            pathname.startsWith(`${WHITEBOARD_HREF}/`)
+                          : pathname === item.href ||
+                            pathname.startsWith(`${item.href}/`);
+                      return (
                         <Link
                           key={item.id}
                           href={item.href}
-                          className={styles.moreLink}
+                          className={`${styles.moreLink} ${active ? styles.moreLinkActive : ""}`}
                           onClick={() => setMoreOpen(false)}
+                          aria-current={
+                            item.id === WHITEBOARD_NAV_ID && active
+                              ? "page"
+                              : undefined
+                          }
                         >
+                          {ItemIcon ? (
+                            <ItemIcon
+                              size={20}
+                              weight={active ? "fill" : "regular"}
+                              className={styles.moreLinkIcon}
+                              aria-hidden
+                            />
+                          ) : null}
                           <span className={styles.moreLinkLabel}>{item.label}</span>
                         </Link>
-                      )
-                    ) : (
+                      );
+                    }
+                    return (
                       <button
                         key={item.id}
                         type="button"
                         className={styles.moreLink}
                         onClick={() => handleMoreClick(item)}
                       >
+                        {ItemIcon ? (
+                          <ItemIcon
+                            size={20}
+                            weight="regular"
+                            className={styles.moreLinkIcon}
+                            aria-hidden
+                          />
+                        ) : null}
                         <span className={styles.moreLinkLabel}>{item.label}</span>
                       </button>
-                    ),
-                  )}
+                    );
+                  })}
                 </div>
               </div>
             ))}

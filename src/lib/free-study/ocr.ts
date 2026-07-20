@@ -1,5 +1,6 @@
 /**
  * Client-side OCR via tesseract.js (runs in a browser worker under the hood).
+ * Tuned for tutoring whiteboard snapshots: sparse handwriting on a light board.
  */
 
 export type OcrProgress = {
@@ -23,8 +24,13 @@ export async function recognizeImageText(
     },
   });
   try {
+    // PSM 11 = SPARSE_TEXT — better for board handwriting than full-page layout.
+    await worker.setParameters({
+      tessedit_pageseg_mode: "11" as never,
+      preserve_interword_spaces: "1",
+    });
     const { data } = await worker.recognize(image);
-    return (data.text ?? "").trim();
+    return (data.text ?? "").replace(/\s+\n/g, "\n").trim();
   } finally {
     await worker.terminate();
   }

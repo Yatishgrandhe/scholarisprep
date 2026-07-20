@@ -4,6 +4,8 @@
  * Kokoro TTS Web Worker — WebGPU/fp32 → WASM/q8 fallback.
  * Self-contained (no path aliases) so Next/Turbopack can bundle it reliably.
  * Never uses speechSynthesis.
+ *
+ * ORT WASM is served from same-origin /ort/ (scripts/copy-ort-wasm.mjs), not jsDelivr.
  */
 
 declare const self: DedicatedWorkerGlobalScope;
@@ -48,7 +50,22 @@ function post(msg: KokoroWorkerOut) {
   self.postMessage(msg);
 }
 
+async function configureOrt() {
+  // Relative import — workers should not rely on @/ path aliases.
+  const { configureKokoroOrt } = await import(
+    "../lib/free-study/configureKokoroOrt"
+  );
+  await configureKokoroOrt();
+}
+
+function backendErrorMessage(webgpuErr: unknown, wasmErr: unknown): string {
+  const w = webgpuErr instanceof Error ? webgpuErr.message : String(webgpuErr);
+  const c = wasmErr instanceof Error ? wasmErr.message : String(wasmErr);
+  return `Kokoro voice unavailable. WebGPU: ${w}. WASM: ${c}. Try refreshing after the first model download, or continue in text-only mode.`;
+}
+
 async function initModel() {
+  await configureOrt();
   const { KokoroTTS } = await import("kokoro-js");
   const modelId = "onnx-community/Kokoro-82M-v1.0-ONNX";
 
@@ -69,18 +86,24 @@ async function initModel() {
     });
   };
 
+  let webgpuErr: unknown;
   try {
     tts = (await KokoroTTS.from_pretrained(modelId, {
       dtype: "fp32",
       device: "webgpu",
       progress_callback,
     })) as KokoroInstance;
-  } catch {
-    tts = (await KokoroTTS.from_pretrained(modelId, {
-      dtype: "q8",
-      device: "wasm",
-      progress_callback,
-    })) as KokoroInstance;
+  } catch (err) {
+    webgpuErr = err;
+    try {
+      tts = (await KokoroTTS.from_pretrained(modelId, {
+        dtype: "q8",
+        device: "wasm",
+        progress_callback,
+      })) as KokoroInstance;
+    } catch (wasmErr) {
+      throw new Error(backendErrorMessage(webgpuErr, wasmErr));
+    }
   }
   post({ type: "ready" });
 }

@@ -1,0 +1,121 @@
+/**
+ * Whiteboard Studio shell — full-bleed board, floating chrome, AI dock.
+ * Sibling modules own component chrome; this file only composes layout.
+ */
+
+.studio {
+  --studio-chrome-gap: 0.75rem;
+  --studio-ask-top: 3.25rem;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: min(100%, 100dvh);
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+}
+
+.atmosphere {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  border-radius: 0;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.canvasFill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.hint {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Floating tools — lift above bottom dock on narrow viewports */
+.toolbar {
+  z-index: 12;
+}
+
+@media (max-width: 860px) {
+  .toolbar {
+    bottom: calc(min(42vh, 22rem) + 1rem) !important;
+  }
+}
+
+/* OCR ask strip — top center, under Close */
+.askSlot {
+  position: absolute;
+  z-index: 14;
+  top: max(var(--studio-ask-top), calc(env(safe-area-inset-top, 0px) + 2.75rem));
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(36rem, calc(100% - 1.5rem));
+  pointer-events: none;
+}
+
+.askSlot > * {
+  pointer-events: auto;
+  margin-inline: auto;
+}
+
+/* Optional PDF peek — top trailing corner */
+.pdfSlot {
+  position: absolute;
+  z-index: 13;
+  top: max(0.65rem, env(safe-area-inset-top, 0px));
+  right: max(0.65rem, env(safe-area-inset-right, 0px));
+  width: min(18rem, calc(100% - 5.5rem));
+  pointer-events: none;
+}
+
+.pdfSlot > * {
+  pointer-events: auto;
+  margin-left: auto;
+}
+
+/* Chat dock sits in stage; sibling CSS owns absolute placement */
+.dock {
+  z-index: 20;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .askSlot {
+    top: max(3rem, calc(env(safe-area-inset-top, 0px) + 2.5rem));
+    width: calc(100% - 1rem);
+  }
+
+  .pdfSlot {
+    display: none;
+  }
+}

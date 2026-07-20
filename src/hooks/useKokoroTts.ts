@@ -6,6 +6,10 @@ import type {
   KokoroWorkerIn,
   KokoroWorkerOut,
 } from "@/lib/free-study/speechText";
+import {
+  configureKokoroOrt,
+  kokoroBackendErrorMessage,
+} from "@/lib/free-study/configureKokoroOrt";
 import { stripMarkdownForSpeech } from "@/lib/free-study/speechText";
 
 async function playPcm(pcm: Float32Array, sampleRate: number) {
@@ -37,6 +41,7 @@ async function speakOnMainThread(
     progress: 0.05,
     message: "Loading Kokoro…",
   });
+  await configureKokoroOrt();
   const { KokoroTTS } = await import("kokoro-js");
   const modelId = "onnx-community/Kokoro-82M-v1.0-ONNX";
   const progress_callback = (info: {
@@ -57,18 +62,26 @@ async function speakOnMainThread(
   };
 
   let tts;
+  let webgpuErr: unknown;
   try {
     tts = await KokoroTTS.from_pretrained(modelId, {
       dtype: "fp32",
       device: "webgpu",
       progress_callback,
     });
-  } catch {
-    tts = await KokoroTTS.from_pretrained(modelId, {
-      dtype: "q8",
-      device: "wasm",
-      progress_callback,
-    });
+  } catch (err) {
+    webgpuErr = err;
+    try {
+      tts = await KokoroTTS.from_pretrained(modelId, {
+        dtype: "q8",
+        device: "wasm",
+        progress_callback,
+      });
+    } catch (wasmErr) {
+      const message = kokoroBackendErrorMessage(webgpuErr, wasmErr);
+      onProgress({ status: "error", progress: 0, message });
+      throw new Error(message);
+    }
   }
 
   onProgress({ status: "speaking", progress: 1, message: "Speaking…" });

@@ -4,9 +4,7 @@ import {
   useCallback,
   useEffect,
   useMemo,
-  useRef,
   useState,
-  type PointerEvent as ReactPointerEvent,
 } from "react";
 import {
   ChatsCircle,
@@ -15,11 +13,12 @@ import {
   Notebook,
   PencilLine,
   PaperPlaneTilt,
-  Trash,
   UploadSimple,
   Flask,
 } from "@phosphor-icons/react";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { ensureFreshSession } from "@/lib/supabase/ensureSession";
 import { useAuth } from "@/hooks/useAuth";
@@ -31,22 +30,17 @@ import type { FreeStudyTelemetry } from "@/lib/ai/telemetryPayload";
 import { LABS_HREF } from "@/lib/dashboard/navRoutes";
 import { FreeStudySectionedReply } from "@/components/free-study/FreeStudySectionedReply";
 import styles from "./free-study.module.css";
-import Link from "next/link";
 
-export type FreeStudyMode =
-  | "tutor"
-  | "whiteboard"
-  | "pdf"
-  | "voice"
-  | "notes";
+export type FreeStudyMode = "tutor" | "pdf" | "voice" | "notes";
 
 const MODES: { id: FreeStudyMode; label: string; icon: typeof ChatsCircle }[] = [
   { id: "tutor", label: "Tutor", icon: ChatsCircle },
-  { id: "whiteboard", label: "Whiteboard", icon: PencilLine },
   { id: "pdf", label: "PDF", icon: FilePdf },
   { id: "voice", label: "Voice", icon: Microphone },
   { id: "notes", label: "Notes", icon: Notebook },
 ];
+
+const WHITEBOARD_HREF = "/dashboard/whiteboard";
 
 type ChatMsg = { role: "user" | "assistant"; content: string };
 
@@ -78,6 +72,13 @@ function ModelProgressBar({
       <p className={styles.hint}>{label}: {message ?? "Unsupported"}</p>
     ) : null;
   }
+  if (status === "error") {
+    return (
+      <p className={styles.ocrError} role="alert">
+        {label} failed{message ? `: ${message}` : ""}
+      </p>
+    );
+  }
   return (
     <div className={styles.progressBlock} aria-live="polite">
       <div className={styles.progressLabel}>
@@ -100,6 +101,7 @@ export function FreeStudyHub({
 }: {
   initialMode?: FreeStudyMode;
 }) {
+  const router = useRouter();
   const { user } = useAuth();
   const examType = useActiveExamType();
   const supabase = useMemo(() => createClient(), []);
@@ -107,7 +109,6 @@ export function FreeStudyHub({
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<ChatMsg[]>([]);
   const [conversationId, setConversationId] = useState<string | null>(null);
-  const [ocrText, setOcrText] = useState("");
   const [pdfText, setPdfText] = useState("");
   const [transcript, setTranscript] = useState("");
   const [listening, setListening] = useState(false);
@@ -118,9 +119,6 @@ export function FreeStudyHub({
   const [r2Hint, setR2Hint] = useState<string | null>(null);
   const [noteAssets, setNoteAssets] = useState<NoteAssetPreview[]>([]);
   const [uploadingImage, setUploadingImage] = useState(false);
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const drawingRef = useRef(false);
-  const lastPt = useRef<{ x: number; y: number } | null>(null);
 
   const {
     isStreaming,
@@ -131,7 +129,6 @@ export function FreeStudyHub({
   } = useTutorStream();
   const {
     models,
-    runOcr,
     startListening,
     stopListening,
     speakWithKokoro,
@@ -163,14 +160,13 @@ export function FreeStudyHub({
 
   const buildTelemetry = useCallback((): FreeStudyTelemetry => {
     const base: FreeStudyTelemetry = { source: mode };
-    if (ocrText.trim()) base.ocr_text = ocrText.trim();
     if (pdfText.trim()) base.pdf_excerpt = pdfText.trim().slice(0, 6000);
     if (transcript.trim()) base.transcript = transcript.trim();
     if (noteBody.trim() && mode === "notes") {
       base.note_excerpt = noteBody.trim().slice(0, 4000);
     }
     return base;
-  }, [mode, noteBody, ocrText, pdfText, transcript]);
+  }, [mode, noteBody, pdfText, transcript]);
 
   const askScho = useCallback(
     async (message: string) => {
@@ -209,79 +205,6 @@ export function FreeStudyHub({
       user,
     ],
   );
-
-  const clearCanvas = useCallback(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    ctx.fillStyle = "#f8fafc";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-  }, []);
-
-  useEffect(() => {
-    if (mode !== "whiteboard") return;
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const dpr = window.devicePixelRatio || 1;
-    const rect = canvas.getBoundingClientRect();
-    canvas.width = Math.floor(rect.width * dpr);
-    canvas.height = Math.floor(rect.height * dpr);
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    ctx.strokeStyle = "#0f172a";
-    ctx.lineWidth = 2.5;
-    ctx.fillStyle = "#f8fafc";
-    ctx.fillRect(0, 0, rect.width, rect.height);
-  }, [mode]);
-
-  const pointerPos = (e: ReactPointerEvent<HTMLCanvasElement>) => {
-    const canvas = canvasRef.current!;
-    const rect = canvas.getBoundingClientRect();
-    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
-  };
-
-  const onPointerDown = (e: ReactPointerEvent<HTMLCanvasElement>) => {
-    drawingRef.current = true;
-    lastPt.current = pointerPos(e);
-    e.currentTarget.setPointerCapture(e.pointerId);
-  };
-
-  const onPointerMove = (e: ReactPointerEvent<HTMLCanvasElement>) => {
-    if (!drawingRef.current || !lastPt.current) return;
-    const ctx = canvasRef.current?.getContext("2d");
-    if (!ctx) return;
-    const next = pointerPos(e);
-    ctx.beginPath();
-    ctx.moveTo(lastPt.current.x, lastPt.current.y);
-    ctx.lineTo(next.x, next.y);
-    ctx.stroke();
-    lastPt.current = next;
-  };
-
-  const onPointerUp = () => {
-    drawingRef.current = false;
-    lastPt.current = null;
-  };
-
-  const runWhiteboardOcr = async () => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    try {
-      const blob = await new Promise<Blob | null>((resolve) =>
-        canvas.toBlob(resolve, "image/png"),
-      );
-      if (!blob) return;
-      const text = await runOcr(blob);
-      setOcrText(text);
-      if (!text) toast.message("No text detected — try darker strokes.");
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "OCR failed");
-    }
-  };
 
   const onPdfUpload = async (file: File | null) => {
     if (!file) return;
@@ -461,8 +384,7 @@ export function FreeStudyHub({
         <div>
           <h1 className={styles.title}>Free Studying</h1>
           <p className={styles.subtitle}>
-            Multimodal Scho — whiteboard, PDF, voice, and notes — with neural
-            Kokoro voice.{" "}
+            Multimodal Scho — PDF, voice, and notes — with neural Kokoro voice.{" "}
             <Link href={LABS_HREF} className={styles.inlineLink}>
               <Flask size={14} weight="fill" aria-hidden /> Open STEM Labs →
             </Link>
@@ -482,6 +404,14 @@ export function FreeStudyHub({
             {label}
           </button>
         ))}
+        <button
+          type="button"
+          className={styles.tab}
+          onClick={() => router.push(WHITEBOARD_HREF)}
+        >
+          <PencilLine size={16} weight="regular" aria-hidden />
+          Whiteboard
+        </button>
       </nav>
 
       <div className={styles.layout}>
@@ -506,60 +436,6 @@ export function FreeStudyHub({
                 message={ttsProgress.message}
                 status={ttsProgress.status}
               />
-            </div>
-          ) : null}
-
-          {mode === "whiteboard" ? (
-            <div className={styles.paneBody}>
-              <canvas
-                ref={canvasRef}
-                className={styles.whiteboard}
-                onPointerDown={onPointerDown}
-                onPointerMove={onPointerMove}
-                onPointerUp={onPointerUp}
-                onPointerLeave={onPointerUp}
-              />
-              <div className={styles.row}>
-                <button type="button" className={styles.secondaryBtn} onClick={clearCanvas}>
-                  <Trash size={14} aria-hidden /> Clear
-                </button>
-                <button
-                  type="button"
-                  className={styles.primaryBtn}
-                  onClick={() => void runWhiteboardOcr()}
-                >
-                  Run OCR
-                </button>
-                <button
-                  type="button"
-                  className={styles.primaryBtn}
-                  disabled={!ocrText.trim()}
-                  onClick={() =>
-                    void askScho(
-                      ocrText.trim()
-                        ? `Help me with this whiteboard work:\n${ocrText}`
-                        : "Help me with my whiteboard work.",
-                    )
-                  }
-                >
-                  Ask Scho
-                </button>
-              </div>
-              <ModelProgressBar
-                label="OCR"
-                progress={models.ocr.progress}
-                message={models.ocr.message}
-                status={models.ocr.status}
-              />
-              {ocrText ? (
-                <textarea
-                  className={styles.textarea}
-                  value={ocrText}
-                  onChange={(e) => setOcrText(e.target.value)}
-                  rows={5}
-                  aria-label="OCR text"
-                />
-              ) : null}
             </div>
           ) : null}
 

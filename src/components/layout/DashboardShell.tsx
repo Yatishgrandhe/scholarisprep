@@ -35,6 +35,9 @@ function getSidebarServerSnapshot() {
 export function DashboardShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const examType = useActiveExamType();
+  // Pathname-driven: practice sessions, exams, question-rush, and
+  // `/dashboard/whiteboard` drop sidebar + top bar for a full-bleed canvas.
+  // Other dashboard routes keep the normal chrome (incl. free-study hub).
   const hideShell = isExamFullscreenRoute(pathname ?? "");
   const pageScopeKey = `${pathname ?? ""}:${examType}`;
   const collapsed = useSyncExternalStore(
@@ -51,7 +54,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
 
   if (hideShell) {
     return (
-      <div className={styles.examLayout}>
+      <div className={styles.examLayout} data-shell="fullscreen">
         {children}
         <AiKeyPrompt />
       </div>

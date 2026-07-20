@@ -95,13 +95,149 @@
 }
 
 .whiteboard {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+  background: #f8fafc;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.whiteboardWrap {
+  position: relative;
   width: 100%;
   height: min(420px, 55vh);
   border-radius: 12px;
   border: 1px solid hsl(var(--border));
-  touch-action: none;
-  cursor: crosshair;
-  background: #f8fafc;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #fbfcfe 0%, #f1f5f9 100%);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.7);
+}
+
+.wbEmpty {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+  font-weight: 550;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0.85;
+}
+
+.wbToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.wbToolGroup {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.wbToolBtn,
+.wbWidthBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 2.25rem;
+  padding: 0 0.7rem;
+  border-radius: 9px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-size: 0.8125rem;
+  font-weight: 650;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.wbToolBtn:disabled,
+.wbWidthBtn:disabled,
+.wbSwatch:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.wbToolBtn:hover:not(:disabled),
+.wbWidthBtn:hover:not(:disabled) {
+  border-color: hsl(var(--foreground) / 0.22);
+}
+
+.wbToolBtnActive {
+  background: color-mix(in srgb, var(--cobalt, #2563eb) 12%, hsl(var(--card)));
+  border-color: color-mix(in srgb, var(--cobalt, #2563eb) 45%, hsl(var(--border)));
+  color: var(--cobalt, #2563eb);
+}
+
+.wbSwatches {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0.2rem 0.35rem;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.35);
+}
+
+.wbSwatch {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  border: 2px solid hsl(0 0% 100%);
+  box-shadow: 0 0 0 1px hsl(var(--border));
+  cursor: pointer;
+  padding: 0;
+}
+
+.wbSwatchActive {
+  box-shadow:
+    0 0 0 1px hsl(var(--border)),
+    0 0 0 3px color-mix(in srgb, var(--cobalt, #2563eb) 45%, transparent);
+}
+
+.wbWidthBtn {
+  min-width: 2.25rem;
+  padding: 0;
+}
+
+.wbWidthDot {
+  display: block;
+  border-radius: 999px;
+  background: hsl(var(--foreground));
+}
+
+.wbOcrLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+.ocrError {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: hsl(var(--destructive));
+  font-weight: 600;
 }
 
 .row {
@@ -469,7 +605,9 @@
   .progressFill,
   .tab,
   .primaryBtn,
-  .secondaryBtn {
+  .secondaryBtn,
+  .wbToolBtn,
+  .wbWidthBtn {
     transition: none;
   }
 }

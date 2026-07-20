@@ -1,0 +1,142 @@
+/**
+ * Whiteboard Studio motion budget (CSS-only).
+ * Three intentional motions — dock slide, toolbar fade, stroke commit.
+ * Import via useBoardMotion or apply classes directly on chrome/canvas.
+ */
+
+.dock,
+.toolbar,
+.strokeSurface {
+  --board-motion-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --board-motion-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --board-dock-ms: 280ms;
+  --board-toolbar-ms: 200ms;
+  --board-stroke-ms: 320ms;
+}
+
+/* ── 1. Dock slide (chat rail / bottom panel) ───────────────────────── */
+
+.dock {
+  will-change: transform, opacity;
+  transition:
+    transform var(--board-dock-ms) var(--board-motion-ease-out),
+    opacity var(--board-dock-ms) var(--board-motion-ease);
+}
+
+/* Bottom dock: closed sits just off-screen */
+.dockBottom {
+  transform: translate3d(0, calc(100% + 12px), 0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dockBottom.dockOpen {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Side dock: slides from the trailing edge */
+.dockSide {
+  transform: translate3d(calc(100% + 16px), 0, 0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dockSide.dockOpen {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── 2. Toolbar fade (floating tool cluster auto-hide) ──────────────── */
+
+.toolbar {
+  will-change: opacity, transform;
+  transition:
+    opacity var(--board-toolbar-ms) var(--board-motion-ease),
+    transform var(--board-toolbar-ms) var(--board-motion-ease);
+}
+
+.toolbarVisible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+}
+
+.toolbarHidden {
+  opacity: 0;
+  transform: translate3d(0, 6px, 0);
+  pointer-events: none;
+}
+
+/* ── 3. Stroke commit feedback (ink settles on pointer-up) ──────────── */
+
+.strokeSurface {
+  position: relative;
+}
+
+.strokeSurface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  box-shadow: inset 0 0 0 0 transparent;
+}
+
+.strokeCommit::after {
+  animation: boardStrokeCommit var(--board-stroke-ms) var(--board-motion-ease-out);
+}
+
+@keyframes boardStrokeCommit {
+  0% {
+    opacity: 0;
+    box-shadow: inset 0 0 0 0 transparent;
+  }
+  35% {
+    opacity: 1;
+    box-shadow:
+      inset 0 0 0 1px color-mix(in srgb, var(--cobalt, #2563eb) 28%, transparent),
+      inset 0 0 28px color-mix(in srgb, var(--cobalt, #2563eb) 8%, transparent);
+  }
+  100% {
+    opacity: 0;
+    box-shadow: inset 0 0 0 0 transparent;
+  }
+}
+
+/* ── Reduced motion ─────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .dock,
+  .toolbar {
+    transition: none;
+  }
+
+  .dockBottom,
+  .dockSide {
+    transform: none;
+  }
+
+  .dockBottom:not(.dockOpen),
+  .dockSide:not(.dockOpen) {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .dockBottom.dockOpen,
+  .dockSide.dockOpen {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .toolbarHidden {
+    transform: none;
+  }
+
+  .strokeCommit::after {
+    animation: none;
+  }
+}
