@@ -9,9 +9,21 @@ export type TelemetrySource =
   | "notes"
   | "sims";
 
+/** Study intent after PDF/image extract (PdfIntentChooser chips). */
+export type FreeStudyIntent =
+  | "ask"
+  | "quiz"
+  | "summarize"
+  | "flashcards";
+
 export type FreeStudyTelemetry = {
   source?: TelemetrySource;
-  /** OCR text from whiteboard ink (tesseract). */
+  /**
+   * Optional study intent — system framing for summarize / quiz / etc.
+   * Source text still lives in pdf_excerpt / ocr_text (never file bytes).
+   */
+  intent?: FreeStudyIntent;
+  /** OCR text from whiteboard ink or photo upload (tesseract) — never image bytes. */
   ocr_text?: string;
   /** Extracted PDF plain text (truncated). */
   pdf_excerpt?: string;
@@ -55,6 +67,15 @@ export function normalizeTelemetry(
   ) {
     normalized.source = source;
   }
+  const intent = raw.intent;
+  if (
+    intent === "ask" ||
+    intent === "quiz" ||
+    intent === "summarize" ||
+    intent === "flashcards"
+  ) {
+    normalized.intent = intent;
+  }
   const ocr = clip(raw.ocr_text);
   if (ocr) normalized.ocr_text = ocr;
   const pdf = clip(raw.pdf_excerpt, 6000);
@@ -79,6 +100,7 @@ export function normalizeTelemetry(
   }
   const hasContent =
     Boolean(normalized.source) ||
+    Boolean(normalized.intent) ||
     Boolean(normalized.ocr_text) ||
     Boolean(normalized.pdf_excerpt) ||
     Boolean(normalized.transcript) ||
@@ -101,8 +123,15 @@ export function formatTelemetryPayload(
     "MULTIMODAL TELEMETRY (treat as ground truth from the student's device — do not invent missing fields):",
   ];
   if (t.source) lines.push(`Channel: ${t.source}`);
+  if (t.intent === "summarize") {
+    lines.push(
+      "Study intent: SUMMARIZE — Produce a study-ready brief from the attached excerpt/OCR. Structure: main claim → key points → definitions/formulas. Stay faithful to the source; do not invent content; do not quiz unless the student asks.",
+    );
+  } else if (t.intent) {
+    lines.push(`Study intent: ${t.intent}`);
+  }
   if (t.ocr_text) {
-    lines.push(`Whiteboard OCR text:\n${t.ocr_text}`);
+    lines.push(`OCR text:\n${t.ocr_text}`);
   }
   if (t.pdf_excerpt) {
     lines.push(`PDF excerpt:\n${t.pdf_excerpt}`);

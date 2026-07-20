@@ -28,6 +28,9 @@ const telemetrySchema = z
     source: z
       .enum(["tutor", "whiteboard", "pdf", "voice", "notes", "sims"])
       .optional(),
+    intent: z
+      .enum(["ask", "quiz", "summarize", "flashcards"])
+      .optional(),
     ocr_text: z.string().max(8000).optional(),
     pdf_excerpt: z.string().max(12000).optional(),
     transcript: z.string().max(8000).optional(),

@@ -1,0 +1,177 @@
+/**
+ * FreeStudyPdfPane — upload → client pdf.js extract → excerpt (text only).
+ * Never posts PDF bytes; telemetry uses pdf_excerpt.
+ */
+
+.shell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.uploadZone {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+  padding: 1.1rem 1rem;
+  border-radius: 14px;
+  border: 1px dashed hsl(var(--primary) / 0.35);
+  background:
+    linear-gradient(
+      165deg,
+      hsl(var(--primary) / 0.06) 0%,
+      hsl(var(--card)) 55%
+    );
+}
+
+.uploadZone[data-busy="true"] {
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.uploadTitle {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+.uploadHint {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: hsl(var(--muted-foreground));
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.uploadBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.5rem;
+  padding: 0 0.95rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.uploadBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ghostBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.5rem;
+  padding: 0 0.85rem;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.45);
+  color: hsl(var(--foreground));
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.ghostBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.fileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.fileName {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.charCount {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 650;
+  color: hsl(var(--muted-foreground));
+  font-variant-numeric: tabular-nums;
+}
+
+.error {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: hsl(var(--destructive));
+}
+
+.safeNote {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: hsl(var(--muted-foreground));
+}
+
+.safeNote code {
+  font-size: 0.7rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.pasteArea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  padding: 0.75rem 0.9rem;
+  resize: vertical;
+  min-height: 5rem;
+  line-height: 1.45;
+}
+
+.pasteArea:disabled {
+  opacity: 0.6;
+}

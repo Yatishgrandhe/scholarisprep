@@ -1,0 +1,394 @@
+/**
+ * Free Studying studio chrome — calm destination landing + slim rail.
+ * Cobalt Scholaris (not purple AI slop / cream-terracotta).
+ * Pane/chat/notes chrome lives in free-study.module.css.
+ */
+
+.studio {
+  --fs-cobalt: #2563eb;
+  --fs-cobalt-deep: #1d4ed8;
+  --fs-aqua: #06b6d4;
+  --fs-ink: hsl(215 28% 14%);
+  --fs-muted: hsl(215 14% 42%);
+  --fs-paper: hsl(210 40% 99%);
+  --fs-snow: #f8fafc;
+  --fs-edge: hsl(215 20% 78% / 0.55);
+  --fs-glow: color-mix(in srgb, var(--fs-cobalt) 16%, transparent);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+  width: 100%;
+  min-height: min(78vh, 840px);
+  isolation: isolate;
+  color: var(--fs-ink);
+  font-family: var(--font-body, "Plus Jakarta Sans", system-ui, sans-serif);
+}
+
+/* Soft desk atmosphere — cool slate + cobalt wash */
+.studio::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem -0.75rem auto;
+  height: min(28rem, 55vh);
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 0 0 2rem 2rem;
+  background:
+    radial-gradient(ellipse 70% 55% at 12% 0%, var(--fs-glow), transparent 62%),
+    radial-gradient(ellipse 50% 45% at 88% 8%, color-mix(in srgb, var(--fs-aqua) 12%, transparent), transparent 58%),
+    linear-gradient(180deg, hsl(214 45% 97%) 0%, transparent 100%);
+  opacity: 0.95;
+}
+
+.studio > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Landing ── */
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 0.35rem 0 1.25rem;
+  animation: fsLandIn 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fsLandIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-width: 36rem;
+  padding-top: 0.5rem;
+}
+
+.brand {
+  margin: 0;
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(2.15rem, 5.2vw, 3.15rem);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--fs-ink);
+}
+
+.brandAccent {
+  font-style: normal;
+  color: var(--fs-cobalt);
+}
+
+.lede {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--fs-muted);
+  max-width: 28rem;
+}
+
+.destGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+  gap: 0.85rem;
+  max-width: 52rem;
+}
+
+.destCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-height: 8.5rem;
+  padding: 1.05rem 1.1rem 1.15rem;
+  text-align: left;
+  border-radius: 16px;
+  border: 1px solid var(--fs-edge);
+  background:
+    linear-gradient(165deg, hsl(0 0% 100% / 0.92) 0%, var(--fs-paper) 100%);
+  box-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.8) inset,
+    0 8px 28px hsl(215 30% 20% / 0.04);
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.destCard:hover {
+  border-color: color-mix(in srgb, var(--fs-cobalt) 42%, var(--fs-edge));
+  transform: translateY(-2px);
+  box-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.85) inset,
+    0 14px 36px hsl(215 45% 30% / 0.08);
+}
+
+.destCard:focus-visible {
+  outline: 2px solid var(--fs-cobalt);
+  outline-offset: 3px;
+}
+
+.destCard[data-accent="whiteboard"] {
+  background:
+    linear-gradient(155deg, hsl(214 60% 98%) 0%, hsl(210 40% 96%) 100%);
+}
+
+.destIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--fs-cobalt) 11%, white);
+  color: var(--fs-cobalt);
+}
+
+.destCard[data-accent="whiteboard"] .destIcon {
+  background: color-mix(in srgb, var(--fs-aqua) 14%, white);
+  color: color-mix(in srgb, var(--fs-cobalt-deep) 70%, var(--fs-aqua));
+}
+
+.destLabel {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fs-ink);
+}
+
+.destHint {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--fs-muted);
+}
+
+.landingFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  margin-top: 0.25rem;
+}
+
+.labsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--fs-cobalt);
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.labsLink:hover {
+  text-decoration: underline;
+}
+
+.labsHint {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--fs-muted);
+}
+
+/* ── Focused studio: slim rail + workspace ── */
+
+.focused {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: stretch;
+  min-width: 0;
+  min-height: min(72vh, 760px);
+  animation: fsFocusIn 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fsFocusIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.45rem;
+  width: 3.35rem;
+  border-radius: 16px;
+  border: 1px solid var(--fs-edge);
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.88), var(--fs-snow));
+  box-shadow: 0 6px 22px hsl(215 30% 20% / 0.04);
+  align-self: start;
+  position: sticky;
+  top: 0.5rem;
+}
+
+.railHome {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 11px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--fs-muted);
+  cursor: pointer;
+  margin-bottom: 0.15rem;
+}
+
+.railHome:hover {
+  color: var(--fs-cobalt);
+  background: color-mix(in srgb, var(--fs-cobalt) 8%, white);
+}
+
+.railHome:focus-visible,
+.railBtn:focus-visible {
+  outline: 2px solid var(--fs-cobalt);
+  outline-offset: 2px;
+}
+
+.railSep {
+  height: 1px;
+  margin: 0.2rem 0.45rem 0.35rem;
+  background: var(--fs-edge);
+  border: 0;
+}
+
+.railBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 11px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--fs-muted);
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease;
+}
+
+.railBtn:hover {
+  color: var(--fs-ink);
+  background: hsl(215 25% 96%);
+}
+
+.railBtnActive {
+  color: var(--fs-cobalt);
+  background: color-mix(in srgb, var(--fs-cobalt) 12%, white);
+  border-color: color-mix(in srgb, var(--fs-cobalt) 28%, transparent);
+}
+
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.workspaceHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.15rem 0.1rem;
+}
+
+.workspaceTitle {
+  margin: 0;
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(1.35rem, 2.8vw, 1.7rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--fs-ink);
+}
+
+.workspaceMeta {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--fs-muted);
+}
+
+.workspaceBody {
+  min-width: 0;
+  flex: 1;
+}
+
+@media (max-width: 720px) {
+  .focused {
+    grid-template-columns: 1fr;
+  }
+
+  .rail {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    position: static;
+    padding: 0.4rem;
+    gap: 0.3rem;
+  }
+
+  .railSep {
+    display: none;
+  }
+
+  .railHome {
+    margin-bottom: 0;
+  }
+
+  .destGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .destGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing,
+  .focused,
+  .destCard {
+    animation: none;
+    transition: none;
+  }
+
+  .destCard:hover {
+    transform: none;
+  }
+}

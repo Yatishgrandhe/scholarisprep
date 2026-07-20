@@ -1,0 +1,306 @@
+/**
+ * FreeStudyFlashcards — cobalt drill deck from extracted text.
+ * No purple / cream-terracotta; calm paper + cobalt accent.
+ */
+
+.root {
+  --fc-cobalt: #2563eb;
+  --fc-ink: hsl(215 28% 14%);
+  --fc-muted: hsl(215 12% 42%);
+  --fc-paper: hsl(210 40% 99%);
+  --fc-edge: hsl(215 18% 70% / 0.35);
+  --fc-glow: color-mix(in srgb, var(--fc-cobalt) 12%, transparent);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+  font-family: var(--font-body, system-ui, sans-serif);
+  color: var(--fc-ink);
+  animation: fcIn 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fcIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root {
+    animation: none;
+  }
+
+  .cardInner {
+    transition: none;
+  }
+
+  .cardFace {
+    transition: none;
+  }
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fc-cobalt);
+}
+
+.title {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display, var(--font-body, Georgia, serif));
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--fc-muted);
+  max-width: 36rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 2.4rem;
+  padding: 0 0.9rem;
+  border-radius: 10px;
+  border: 1px solid var(--fc-edge);
+  background: var(--fc-paper);
+  color: var(--fc-ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--fc-cobalt) 45%, var(--fc-edge));
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--fc-cobalt) 40%, transparent);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btnPrimary {
+  background: var(--fc-cobalt);
+  border-color: var(--fc-cobalt);
+  color: #fff;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.error {
+  margin: 0;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, #b91c1c 35%, var(--fc-edge));
+  background: color-mix(in srgb, #b91c1c 6%, var(--fc-paper));
+  color: #991b1b;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--fc-muted);
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.cardButton {
+  appearance: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  perspective: 1200px;
+}
+
+.cardButton:focus-visible {
+  outline: none;
+}
+
+.cardButton:focus-visible .cardInner {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--fc-cobalt) 45%, transparent);
+}
+
+.cardInner {
+  position: relative;
+  min-height: min(240px, 42vh);
+  border-radius: 16px;
+  border: 1px solid var(--fc-edge);
+  background:
+    radial-gradient(120% 80% at 10% 0%, var(--fc-glow), transparent 55%),
+    linear-gradient(165deg, #fff 0%, var(--fc-paper) 100%);
+  box-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.8) inset,
+    0 10px 28px hsl(215 30% 20% / 0.06);
+  transform-style: preserve-3d;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cardInner[data-flipped="true"] {
+  transform: rotateY(180deg);
+}
+
+.cardFace {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.15rem 1.25rem;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+}
+
+.faceLabel {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--fc-cobalt);
+}
+
+.faceText {
+  margin: 0;
+  flex: 1;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  color: var(--fc-ink);
+  overflow-wrap: anywhere;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--fc-muted);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.progress {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--fc-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.navBtns {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.empty {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px dashed var(--fc-edge);
+  background: var(--fc-paper);
+  color: var(--fc-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.listItem {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--fc-edge);
+  background: var(--fc-paper);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+
+.listItem[data-active="true"] {
+  border-color: color-mix(in srgb, var(--fc-cobalt) 55%, var(--fc-edge));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--fc-cobalt) 25%, transparent);
+}
+
+.listFront {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.listBack {
+  font-size: 0.75rem;
+  color: var(--fc-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

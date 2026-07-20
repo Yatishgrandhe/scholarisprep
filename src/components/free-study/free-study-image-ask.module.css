@@ -1,0 +1,207 @@
+/* Image upload → Tesseract OCR → editable text → Ask Scho (ocr_text telemetry). */
+
+.root {
+  --img-ask-ink: hsl(var(--foreground));
+  --img-ask-muted: hsl(var(--muted-foreground));
+  --img-ask-edge: hsl(var(--border));
+  --img-ask-cobalt: var(--cobalt, #2563eb);
+  --img-ask-danger: hsl(var(--destructive));
+  --img-ask-surface: hsl(var(--card) / 0.65);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--img-ask-edge);
+  border-radius: 12px;
+  background: var(--img-ask-surface);
+  color: var(--img-ask-ink);
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--img-ask-muted);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.uploadLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.35rem;
+  padding: 0 0.85rem;
+  border-radius: 10px;
+  border: 1px dashed var(--img-ask-edge);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  cursor: pointer;
+  color: var(--img-ask-ink);
+  background: color-mix(in srgb, #fff 40%, transparent);
+}
+
+.uploadLabel:hover {
+  border-color: color-mix(in srgb, var(--img-ask-cobalt) 45%, var(--img-ask-edge));
+}
+
+.uploadLabel[data-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.fileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 2.35rem;
+  padding: 0 0.85rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--img-ask-cobalt);
+  outline-offset: 2px;
+}
+
+.secondary {
+  background: hsl(var(--muted) / 0.55);
+  color: var(--img-ask-ink);
+  border-color: var(--img-ask-edge);
+}
+
+.primary {
+  background: var(--img-ask-cobalt);
+  color: #fff;
+}
+
+.preview {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.thumb {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--img-ask-edge);
+  background: hsl(var(--muted) / 0.35);
+}
+
+.fileMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+  font-size: 0.75rem;
+  color: var(--img-ask-muted);
+}
+
+.fileName {
+  font-weight: 650;
+  color: var(--img-ask-ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 14rem;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--img-ask-muted);
+}
+
+.track {
+  height: 0.35rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--img-ask-muted) 18%, transparent);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--img-ask-cobalt);
+  transition: width 160ms ease;
+}
+
+.error {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: var(--img-ask-danger);
+  font-weight: 600;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 650;
+  color: var(--img-ask-muted);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 5.5rem;
+  resize: vertical;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--img-ask-edge);
+  border-radius: 10px;
+  background: hsl(var(--background) / 0.85);
+  color: var(--img-ask-ink);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.textarea::placeholder {
+  color: color-mix(in srgb, var(--img-ask-muted) 80%, transparent);
+  font-weight: 450;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--img-ask-cobalt) 50%, var(--img-ask-edge));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--img-ask-cobalt) 22%, transparent);
+}

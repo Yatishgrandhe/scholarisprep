@@ -1,60 +1,133 @@
 "use client";
 
+/**
+ * Free Studying hub — destination rail + work surfaces.
+ * PDF/image → extract text → Mistral via telemetry only (never file bytes).
+ */
+
 import {
   useCallback,
-  useEffect,
   useMemo,
   useState,
+  type ReactNode,
 } from "react";
 import {
+  ArrowLeft,
   ChatsCircle,
   FilePdf,
+  House,
   Microphone,
   Notebook,
   PencilLine,
   PaperPlaneTilt,
-  UploadSimple,
-  Flask,
 } from "@phosphor-icons/react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { ensureFreshSession } from "@/lib/supabase/ensureSession";
 import { useAuth } from "@/hooks/useAuth";
 import { useTutorStream } from "@/hooks/useTutorStream";
 import { useLocalTelemetryModels } from "@/hooks/useLocalTelemetryModels";
 import { useActiveExamType } from "@/hooks/useActiveExamType";
-import { extractPdfTextClient } from "@/lib/pdf/extractText";
 import type { FreeStudyTelemetry } from "@/lib/ai/telemetryPayload";
-import { LABS_HREF } from "@/lib/dashboard/navRoutes";
+import { FREE_STUDY_HREF, WHITEBOARD_HREF } from "@/lib/dashboard/navRoutes";
 import { FreeStudySectionedReply } from "@/components/free-study/FreeStudySectionedReply";
+import { FreeStudyImageAsk } from "@/components/free-study/FreeStudyImageAsk";
+import { FreeStudyLanding } from "@/components/free-study/FreeStudyLanding";
+import { FreeStudyPdfPane } from "@/components/free-study/FreeStudyPdfPane";
+import { FreeStudyQuizPanel } from "@/components/free-study/FreeStudyQuizPanel";
+import { FreeStudyFlashcards } from "@/components/free-study/FreeStudyFlashcards";
+import { FreeStudyVoicePane } from "@/components/free-study/FreeStudyVoicePane";
+import { FreeStudyNotesPane } from "@/components/free-study/FreeStudyNotesPane";
+import {
+  buildSummarizeFromExcerpt,
+  promptForPdfIntent,
+  type PdfIntent,
+} from "@/components/free-study/PdfIntentChooser";
+import {
+  generateQuiz,
+  GenerateQuizError,
+  type GenerateQuizResult,
+} from "@/lib/free-study/generateQuiz";
 import styles from "./free-study.module.css";
+import studio from "./free-study-studio.module.css";
 
 export type FreeStudyMode = "tutor" | "pdf" | "voice" | "notes";
 
-const MODES: { id: FreeStudyMode; label: string; icon: typeof ChatsCircle }[] = [
-  { id: "tutor", label: "Tutor", icon: ChatsCircle },
-  { id: "pdf", label: "PDF", icon: FilePdf },
-  { id: "voice", label: "Voice", icon: Microphone },
-  { id: "notes", label: "Notes", icon: Notebook },
+type DestinationId = FreeStudyMode | "whiteboard";
+
+const DESTINATIONS: {
+  id: DestinationId;
+  label: string;
+  hint: string;
+  icon: typeof ChatsCircle;
+  accent?: "whiteboard";
+}[] = [
+  {
+    id: "tutor",
+    label: "Tutor",
+    hint: "Ask Scho anything — text, photo OCR, Kokoro voice",
+    icon: ChatsCircle,
+  },
+  {
+    id: "whiteboard",
+    label: "Whiteboard",
+    hint: "Full-page ink studio — write, then ask Scho",
+    icon: PencilLine,
+    accent: "whiteboard",
+  },
+  {
+    id: "pdf",
+    label: "PDF studio",
+    hint: "Upload a passage — ask, quiz, summarize, flashcards",
+    icon: FilePdf,
+  },
+  {
+    id: "voice",
+    label: "Voice",
+    hint: "Talk it out — listen, transcript, then Ask Scho",
+    icon: Microphone,
+  },
+  {
+    id: "notes",
+    label: "Notes",
+    hint: "Save study notes, attach images, ask from context",
+    icon: Notebook,
+  },
 ];
 
-const WHITEBOARD_HREF = "/dashboard/whiteboard";
+const MODE_META: Record<
+  FreeStudyMode,
+  { label: string; meta: string; icon: typeof ChatsCircle }
+> = {
+  tutor: {
+    label: "Tutor",
+    meta: "Chat with Scho",
+    icon: ChatsCircle,
+  },
+  pdf: {
+    label: "PDF studio",
+    meta: "Extract · intent · Ask Scho",
+    icon: FilePdf,
+  },
+  voice: {
+    label: "Voice",
+    meta: "Listen · transcript · Ask Scho",
+    icon: Microphone,
+  },
+  notes: {
+    label: "Notes",
+    meta: "Write · save · Ask Scho",
+    icon: Notebook,
+  },
+};
 
 type ChatMsg = { role: "user" | "assistant"; content: string };
 
-type NoteRow = {
-  id: string;
-  title: string;
-  body: string;
-  updated_at: string;
-};
-
-type NoteAssetPreview = {
-  id: string;
-  url: string | null;
-};
+type PdfArtifact =
+  | { kind: "quiz"; quiz: GenerateQuizResult }
+  | { kind: "flashcards"; text: string }
+  | null;
 
 function ModelProgressBar({
   label,
@@ -69,7 +142,9 @@ function ModelProgressBar({
 }) {
   if (status === "idle" || status === "ready" || status === "unsupported") {
     return status === "unsupported" ? (
-      <p className={styles.hint}>{label}: {message ?? "Unsupported"}</p>
+      <p className={styles.hint}>
+        {label}: {message ?? "Unsupported"}
+      </p>
     ) : null;
   }
   if (status === "error") {
@@ -97,28 +172,26 @@ function ModelProgressBar({
 }
 
 export function FreeStudyHub({
-  initialMode = "tutor",
+  initialMode,
 }: {
+  /** When set, skip the destination landing and open this mode. */
   initialMode?: FreeStudyMode;
 }) {
   const router = useRouter();
   const { user } = useAuth();
   const examType = useActiveExamType();
   const supabase = useMemo(() => createClient(), []);
-  const [mode, setMode] = useState<FreeStudyMode>(initialMode);
+  const [mode, setMode] = useState<FreeStudyMode | null>(initialMode ?? null);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<ChatMsg[]>([]);
   const [conversationId, setConversationId] = useState<string | null>(null);
   const [pdfText, setPdfText] = useState("");
   const [transcript, setTranscript] = useState("");
   const [listening, setListening] = useState(false);
-  const [notes, setNotes] = useState<NoteRow[]>([]);
-  const [activeNoteId, setActiveNoteId] = useState<string | null>(null);
-  const [noteTitle, setNoteTitle] = useState("");
-  const [noteBody, setNoteBody] = useState("");
-  const [r2Hint, setR2Hint] = useState<string | null>(null);
-  const [noteAssets, setNoteAssets] = useState<NoteAssetPreview[]>([]);
-  const [uploadingImage, setUploadingImage] = useState(false);
+  /** Tutor-mode image OCR — telemetry `ocr_text` only (never image bytes). */
+  const [ocrText, setOcrText] = useState("");
+  const [pdfBusy, setPdfBusy] = useState(false);
+  const [pdfArtifact, setPdfArtifact] = useState<PdfArtifact>(null);
 
   const {
     isStreaming,
@@ -129,6 +202,7 @@ export function FreeStudyHub({
   } = useTutorStream();
   const {
     models,
+    runOcr,
     startListening,
     stopListening,
     speakWithKokoro,
@@ -159,17 +233,21 @@ export function FreeStudyHub({
   }, [conversationId, examType, supabase, user]);
 
   const buildTelemetry = useCallback((): FreeStudyTelemetry => {
-    const base: FreeStudyTelemetry = { source: mode };
+    const source = mode ?? "tutor";
+    const base: FreeStudyTelemetry = { source };
+    if (ocrText.trim() && mode !== "notes") {
+      base.ocr_text = ocrText.trim().slice(0, 4000);
+    }
     if (pdfText.trim()) base.pdf_excerpt = pdfText.trim().slice(0, 6000);
     if (transcript.trim()) base.transcript = transcript.trim();
-    if (noteBody.trim() && mode === "notes") {
-      base.note_excerpt = noteBody.trim().slice(0, 4000);
-    }
     return base;
-  }, [mode, noteBody, pdfText, transcript]);
+  }, [mode, ocrText, pdfText, transcript]);
 
   const askScho = useCallback(
-    async (message: string) => {
+    async (
+      message: string,
+      telemetryPatch?: Partial<FreeStudyTelemetry> | null,
+    ) => {
       const text = message.trim();
       if (!text || isStreaming || !user) return;
       setMessages((m) => [...m, { role: "user", content: text }]);
@@ -177,11 +255,20 @@ export function FreeStudyHub({
       const id = await ensureConversation();
       if (!id) return;
       try {
+        const telemetry: FreeStudyTelemetry = {
+          ...buildTelemetry(),
+          ...telemetryPatch,
+        };
+        // Voice STT → Mistral as plain-text telemetry (never drop transcript).
+        if (telemetryPatch?.transcript?.trim()) {
+          telemetry.transcript = telemetryPatch.transcript.trim();
+          telemetry.source = telemetryPatch.source ?? telemetry.source ?? "voice";
+        }
         const result = await startStream({
           conversationId: id,
           message: text,
           context: { exam_type: examType },
-          telemetry: buildTelemetry(),
+          telemetry,
         });
         if (!result.aborted && result.text) {
           setMessages((m) => [
@@ -206,16 +293,71 @@ export function FreeStudyHub({
     ],
   );
 
-  const onPdfUpload = async (file: File | null) => {
-    if (!file) return;
-    try {
-      const text = await extractPdfTextClient(file);
-      setPdfText(text);
-      toast.success("PDF text extracted");
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "PDF extract failed");
-    }
-  };
+  const onPdfIntent = useCallback(
+    async (intent: PdfIntent, excerpt: string) => {
+      const clipped = excerpt.trim();
+      if (!clipped) {
+        toast.error("Extract or paste PDF text first.");
+        return;
+      }
+      setPdfText(clipped);
+
+      if (intent === "summarize") {
+        try {
+          const turn = buildSummarizeFromExcerpt(clipped);
+          setPdfArtifact(null);
+          void askScho(turn.message, turn.telemetry);
+        } catch (err) {
+          toast.error(
+            err instanceof Error ? err.message : "Nothing to summarize",
+          );
+        }
+        return;
+      }
+
+      if (intent === "ask") {
+        setPdfArtifact(null);
+        void askScho(promptForPdfIntent("ask", clipped), {
+          source: "pdf",
+          intent: "ask",
+          pdf_excerpt: clipped.slice(0, 6000),
+        });
+        return;
+      }
+
+      if (intent === "quiz") {
+        setPdfBusy(true);
+        setPdfArtifact(null);
+        try {
+          // Text only — never File/Blob to the quiz API.
+          const quiz = await generateQuiz({
+            text: clipped,
+            exam_type: examType,
+            count: 5,
+          });
+          setPdfArtifact({ kind: "quiz", quiz });
+          toast.success("Quiz ready");
+        } catch (err) {
+          const msg =
+            err instanceof GenerateQuizError
+              ? err.message
+              : err instanceof Error
+                ? err.message
+                : "Quiz generation failed";
+          toast.error(msg);
+        } finally {
+          setPdfBusy(false);
+        }
+        return;
+      }
+
+      if (intent === "flashcards") {
+        setPdfArtifact({ kind: "flashcards", text: clipped });
+        return;
+      }
+    },
+    [askScho, examType],
+  );
 
   const toggleListen = () => {
     if (listening) {
@@ -233,495 +375,337 @@ export function FreeStudyHub({
     setListening(true);
   };
 
-  const loadNotes = useCallback(async () => {
-    if (!user) return;
-    await ensureFreshSession(supabase);
-    const { data, error } = await supabase
-      .from("free_study_notes")
-      .select("id, title, body, updated_at")
-      .eq("user_id", user.id)
-      .order("updated_at", { ascending: false })
-      .limit(40);
-    if (error) {
-      // Table may not be migrated yet on remote — degrade gracefully.
-      console.warn("[free-study notes]", error.message);
+  const openDestination = (id: DestinationId) => {
+    if (id === "whiteboard") {
+      router.push(WHITEBOARD_HREF);
       return;
     }
-    setNotes((data as NoteRow[]) ?? []);
-  }, [supabase, user]);
-
-  useEffect(() => {
-    if (mode === "notes") void loadNotes();
-  }, [loadNotes, mode]);
-
-  const saveNote = async () => {
-    if (!user) return;
-    await ensureFreshSession(supabase);
-    const title = noteTitle.trim() || "Untitled note";
-    const body = noteBody;
-    if (activeNoteId) {
-      const { error } = await supabase
-        .from("free_study_notes")
-        .update({
-          title,
-          body,
-          exam_type: examType,
-          updated_at: new Date().toISOString(),
-        })
-        .eq("id", activeNoteId)
-        .eq("user_id", user.id);
-      if (error) {
-        toast.error(error.message);
-        return;
-      }
-    } else {
-      const { data, error } = await supabase
-        .from("free_study_notes")
-        .insert({
-          user_id: user.id,
-          title,
-          body,
-          exam_type: examType,
-        })
-        .select("id, title, body, updated_at")
-        .single();
-      if (error) {
-        toast.error(
-          error.message.includes("free_study_notes")
-            ? "Notes table missing — apply migration 20260720120000_free_study_notes.sql"
-            : error.message,
-        );
-        return;
-      }
-      setActiveNoteId(data.id);
-    }
-    toast.success("Note saved");
-    void loadNotes();
+    setMode(id);
+    setPdfArtifact(null);
+    router.replace(`${FREE_STUDY_HREF}?dest=${id}`);
   };
 
-  const loadNoteAssets = useCallback(
-    async (noteId: string) => {
-      if (!user) return;
-      await ensureFreshSession(supabase);
-      const { data, error } = await supabase
-        .from("free_study_note_assets")
-        .select("id")
-        .eq("note_id", noteId)
-        .eq("user_id", user.id)
-        .order("created_at", { ascending: false })
-        .limit(12);
-      if (error || !data) {
-        setNoteAssets([]);
-        return;
-      }
-      const previews: NoteAssetPreview[] = await Promise.all(
-        data.map(async (row) => {
-          try {
-            const res = await fetch(
-              `/api/notes/images/${row.id}/url?variant=thumb`,
-              { credentials: "same-origin" },
-            );
-            if (!res.ok) return { id: row.id, url: null };
-            const json = (await res.json()) as { url?: string };
-            return { id: row.id, url: json.url ?? null };
-          } catch {
-            return { id: row.id, url: null };
-          }
-        }),
-      );
-      setNoteAssets(previews);
-    },
-    [supabase, user],
-  );
-
-  useEffect(() => {
-    if (mode === "notes" && activeNoteId) {
-      void loadNoteAssets(activeNoteId);
-    } else if (!activeNoteId) {
-      setNoteAssets([]);
-    }
-  }, [activeNoteId, loadNoteAssets, mode]);
-
-  const onNoteImage = async (file: File | null) => {
-    if (!file || !activeNoteId) {
-      toast.message("Save the note first, then attach an image.");
-      return;
-    }
-    const form = new FormData();
-    form.set("note_id", activeNoteId);
-    form.set("file", file);
-    form.set("handwriting", "true");
-    setUploadingImage(true);
-    try {
-      const res = await fetch("/api/notes/images", {
-        method: "POST",
-        body: form,
-        credentials: "same-origin",
-      });
-      const data = (await res.json()) as {
-        error?: string;
-        configured?: boolean;
-        asset?: { id: string };
-      };
-      if (!res.ok) {
-        setR2Hint(data.error ?? "Upload failed");
-        toast.error(data.error ?? "Upload failed");
-        return;
-      }
-      setR2Hint(null);
-      toast.success("Image uploaded");
-      await loadNoteAssets(activeNoteId);
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Upload failed");
-    } finally {
-      setUploadingImage(false);
-    }
+  const backToLanding = () => {
+    setMode(null);
+    setPdfArtifact(null);
+    router.replace(FREE_STUDY_HREF);
   };
+
+  /* Prefer FreeStudyLanding (page) — hub fallback if mounted without dest */
+  if (mode === null) {
+    return <FreeStudyLanding />;
+  }
+
+  const active = MODE_META[mode];
+
+  let artifactSlot: ReactNode = null;
+  if (pdfArtifact?.kind === "quiz") {
+    artifactSlot = (
+      <FreeStudyQuizPanel
+        quiz={pdfArtifact.quiz}
+        onClose={() => setPdfArtifact(null)}
+      />
+    );
+  } else if (pdfArtifact?.kind === "flashcards") {
+    artifactSlot = (
+      <FreeStudyFlashcards
+        sourceText={pdfArtifact.text}
+        examType={examType}
+        onGenerated={() => toast.success("Flashcards ready")}
+      />
+    );
+  }
 
   return (
-    <div className={styles.page}>
-      <header className={styles.header}>
-        <div>
-          <h1 className={styles.title}>Free Studying</h1>
-          <p className={styles.subtitle}>
-            Multimodal Scho — PDF, voice, and notes — with neural Kokoro voice.{" "}
-            <Link href={LABS_HREF} className={styles.inlineLink}>
-              <Flask size={14} weight="fill" aria-hidden /> Open STEM Labs →
-            </Link>
-          </p>
-        </div>
-      </header>
-
-      <nav className={styles.tabs} aria-label="Free Studying modes">
-        {MODES.map(({ id, label, icon: Icon }) => (
+    <div className={studio.studio}>
+      <div className={studio.focused}>
+        <nav className={studio.rail} aria-label="Study destinations">
           <button
-            key={id}
             type="button"
-            className={`${styles.tab} ${mode === id ? styles.tabActive : ""}`}
-            onClick={() => setMode(id)}
+            className={studio.railHome}
+            onClick={backToLanding}
+            aria-label="All destinations"
+            title="All destinations"
           >
-            <Icon size={16} weight={mode === id ? "fill" : "regular"} aria-hidden />
-            {label}
+            <House size={18} weight="duotone" aria-hidden />
           </button>
-        ))}
-        <button
-          type="button"
-          className={styles.tab}
-          onClick={() => router.push(WHITEBOARD_HREF)}
-        >
-          <PencilLine size={16} weight="regular" aria-hidden />
-          Whiteboard
-        </button>
-      </nav>
+          <hr className={studio.railSep} />
+          {DESTINATIONS.map(({ id, label, icon: Icon }) => {
+            if (id === "whiteboard") {
+              return (
+                <button
+                  key={id}
+                  type="button"
+                  className={studio.railBtn}
+                  onClick={() => router.push(WHITEBOARD_HREF)}
+                  aria-label={label}
+                  title={label}
+                >
+                  <Icon size={18} weight="regular" aria-hidden />
+                </button>
+              );
+            }
+            const isActive = mode === id;
+            return (
+              <button
+                key={id}
+                type="button"
+                className={`${studio.railBtn} ${isActive ? studio.railBtnActive : ""}`}
+                onClick={() => openDestination(id)}
+                aria-label={label}
+                aria-current={isActive ? "page" : undefined}
+                title={label}
+              >
+                <Icon
+                  size={18}
+                  weight={isActive ? "fill" : "regular"}
+                  aria-hidden
+                />
+              </button>
+            );
+          })}
+        </nav>
 
-      <div className={styles.layout}>
-        <section className={styles.pane} aria-label={`${mode} tools`}>
-          {mode === "tutor" ? (
-            <div className={styles.paneBody}>
-              <p className={styles.hint}>
-                Ask anything for {examType}. Replies use Conceptual Insight,
-                Test-Hacker Strategy, and Socratic Pivot when multimodal context
-                is attached.
-              </p>
+        <div className={studio.workspace}>
+          <header className={studio.workspaceHead}>
+            <div>
               <button
                 type="button"
-                className={styles.secondaryBtn}
-                onClick={() => void preloadTts()}
+                className={styles.backLink}
+                onClick={backToLanding}
               >
-                Preload Kokoro voice (~90 MB once)
+                <ArrowLeft size={14} aria-hidden />
+                Destinations
               </button>
-              <ModelProgressBar
-                label="Kokoro"
-                progress={ttsProgress.progress}
-                message={ttsProgress.message}
-                status={ttsProgress.status}
-              />
+              <h2 className={studio.workspaceTitle}>{active.label}</h2>
             </div>
-          ) : null}
+            <p className={studio.workspaceMeta}>{active.meta}</p>
+          </header>
 
-          {mode === "pdf" ? (
-            <div className={styles.paneBody}>
-              <label className={styles.uploadLabel}>
-                <UploadSimple size={18} aria-hidden />
-                Upload PDF
-                <input
-                  type="file"
-                  accept="application/pdf"
-                  className={styles.fileInput}
-                  onChange={(e) => void onPdfUpload(e.target.files?.[0] ?? null)}
-                />
-              </label>
-              {pdfText ? (
-                <>
-                  <textarea
-                    className={styles.textarea}
-                    value={pdfText.slice(0, 8000)}
-                    onChange={(e) => setPdfText(e.target.value)}
-                    rows={10}
-                    aria-label="PDF excerpt"
+          <div className={`${styles.layout} ${studio.workspaceBody}`}>
+            <section className={styles.pane} aria-label={`${mode} tools`}>
+              {mode === "tutor" ? (
+                <div className={styles.paneBody}>
+                  <p className={styles.hint}>
+                    Ask anything for {examType}. Photo OCR runs on-device —
+                    only recognized text goes to Scho.
+                  </p>
+                  <FreeStudyImageAsk
+                    ocrText={ocrText}
+                    onOcrTextChange={setOcrText}
+                    askDisabled={isStreaming || !user}
+                    onAsk={(message, text) => {
+                      void askScho(message, {
+                        source: "tutor",
+                        ocr_text: text.slice(0, 4000),
+                      });
+                    }}
                   />
                   <button
                     type="button"
-                    className={styles.primaryBtn}
-                    onClick={() =>
-                      void askScho(
-                        `Help me understand this PDF excerpt:\n${pdfText.slice(0, 2000)}`,
-                      )
-                    }
+                    className={styles.secondaryBtn}
+                    onClick={() => void preloadTts()}
                   >
-                    Ask Scho about PDF
+                    Preload Kokoro voice (~90 MB once)
                   </button>
-                </>
-              ) : (
-                <p className={styles.hint}>Extracts text client-side with pdf.js.</p>
-              )}
-            </div>
-          ) : null}
-
-          {mode === "voice" ? (
-            <div className={styles.paneBody}>
-              <div className={styles.row}>
-                <button
-                  type="button"
-                  className={listening ? styles.dangerBtn : styles.primaryBtn}
-                  onClick={toggleListen}
-                >
-                  <Microphone size={16} weight="fill" aria-hidden />
-                  {listening ? "Stop" : "Start listening"}
-                </button>
-                <button
-                  type="button"
-                  className={styles.primaryBtn}
-                  disabled={!transcript.trim()}
-                  onClick={() => void askScho(transcript)}
-                >
-                  Ask Scho
-                </button>
-              </div>
-              <ModelProgressBar
-                label="STT"
-                progress={listening ? 0.5 : models.stt.status === "ready" ? 1 : 0}
-                message={models.stt.message}
-                status={
-                  models.stt.status === "unsupported"
-                    ? "unsupported"
-                    : listening
-                      ? "downloading"
-                      : models.stt.status
-                }
-              />
-              <ModelProgressBar
-                label="Kokoro"
-                progress={ttsProgress.progress}
-                message={ttsProgress.message}
-                status={ttsProgress.status}
-              />
-              <textarea
-                className={styles.textarea}
-                value={transcript}
-                onChange={(e) => setTranscript(e.target.value)}
-                rows={6}
-                placeholder="Transcript appears here…"
-                aria-label="Voice transcript"
-              />
-            </div>
-          ) : null}
-
-          {mode === "notes" ? (
-            <div className={styles.paneBody}>
-              <div className={styles.notesLayout}>
-                <ul className={styles.noteList}>
-                  <li>
-                    <button
-                      type="button"
-                      className={styles.secondaryBtn}
-                      onClick={() => {
-                        setActiveNoteId(null);
-                        setNoteTitle("");
-                        setNoteBody("");
-                      }}
-                    >
-                      New note
-                    </button>
-                  </li>
-                  {notes.map((n) => (
-                    <li key={n.id}>
-                      <button
-                        type="button"
-                        className={`${styles.noteItem} ${
-                          activeNoteId === n.id ? styles.noteItemActive : ""
-                        }`}
-                        onClick={() => {
-                          setActiveNoteId(n.id);
-                          setNoteTitle(n.title);
-                          setNoteBody(n.body);
-                        }}
-                      >
-                        {n.title || "Untitled"}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-                <div className={styles.noteEditor}>
-                  <input
-                    className={styles.input}
-                    value={noteTitle}
-                    onChange={(e) => setNoteTitle(e.target.value)}
-                    placeholder="Title"
-                    aria-label="Note title"
+                  <ModelProgressBar
+                    label="Kokoro"
+                    progress={ttsProgress.progress}
+                    message={ttsProgress.message}
+                    status={ttsProgress.status}
                   />
-                  <textarea
-                    className={styles.textarea}
-                    value={noteBody}
-                    onChange={(e) => setNoteBody(e.target.value)}
-                    rows={12}
-                    placeholder="Write your notes…"
-                    aria-label="Note body"
-                  />
-                  {noteAssets.length > 0 ? (
-                    <ul className={styles.assetGrid} aria-label="Note images">
-                      {noteAssets.map((asset) => (
-                        <li key={asset.id} className={styles.assetThumb}>
-                          {asset.url ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img src={asset.url} alt="" />
-                          ) : (
-                            <span className={styles.hint}>Image saved</span>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                  <div className={styles.row}>
-                    <button
-                      type="button"
-                      className={styles.primaryBtn}
-                      onClick={() => void saveNote()}
-                    >
-                      Save
-                    </button>
-                    <label className={styles.uploadLabel}>
-                      {uploadingImage ? "Uploading…" : "Attach image"}
-                      <input
-                        type="file"
-                        accept="image/*"
-                        className={styles.fileInput}
-                        disabled={uploadingImage || !activeNoteId}
-                        onChange={(e) => {
-                          void onNoteImage(e.target.files?.[0] ?? null);
-                          e.target.value = "";
-                        }}
-                      />
-                    </label>
-                    <button
-                      type="button"
-                      className={styles.secondaryBtn}
-                      disabled={!noteBody.trim()}
-                      onClick={() =>
-                        void askScho(
-                          `Help me study from my notes:\n${noteBody.slice(0, 1500)}`,
-                        )
-                      }
-                    >
-                      Ask Scho
-                    </button>
-                  </div>
-                  {!activeNoteId ? (
-                    <p className={styles.hint}>
-                      Save the note once before attaching images (R2).
-                    </p>
-                  ) : null}
-                  {r2Hint ? <p className={styles.hint}>{r2Hint}</p> : null}
                 </div>
-              </div>
-            </div>
-          ) : null}
-        </section>
+              ) : null}
 
-        <section className={styles.chat} aria-label="Scho conversation">
-          <div className={styles.messages}>
-            {messages.length === 0 && !streamedText ? (
-              <p className={styles.empty}>
-                Your Free Studying thread with Scho appears here.
-              </p>
-            ) : null}
-            {messages.map((m, i) => (
-              <div
-                key={`${m.role}-${i}`}
-                className={
-                  m.role === "user" ? styles.userBubble : styles.assistantBubble
-                }
-              >
-                {m.role === "assistant" ? (
-                  <FreeStudySectionedReply
-                    content={m.content}
-                    playing={
-                      ttsProgress.status === "speaking" ||
-                      ttsProgress.status === "downloading"
-                    }
-                    onPlay={(text) => {
-                      void speakWithKokoro(text).catch((err) =>
-                        toast.error(
-                          err instanceof Error ? err.message : "Kokoro failed",
-                        ),
-                      );
+              {mode === "pdf" ? (
+                <div className={styles.paneBody}>
+                  <FreeStudyPdfPane
+                    value={pdfText}
+                    onChange={(next) => {
+                      setPdfText(next);
+                      if (!next.trim()) setPdfArtifact(null);
+                    }}
+                    disabled={isStreaming || pdfBusy || !user}
+                    onIntent={(intent, excerpt) => {
+                      void onPdfIntent(intent, excerpt);
                     }}
                   />
-                ) : (
-                  <p className={styles.userText}>{m.content}</p>
-                )}
-              </div>
-            ))}
-            {streamedText ? (
-              <div className={styles.assistantBubble}>
-                <FreeStudySectionedReply content={streamedText} />
-              </div>
-            ) : null}
-            {(ttsProgress.status === "downloading" ||
-              ttsProgress.status === "speaking") &&
-            mode !== "tutor" &&
-            mode !== "voice" ? (
-              <ModelProgressBar
-                label="Kokoro"
-                progress={ttsProgress.progress}
-                message={ttsProgress.message}
-                status={ttsProgress.status}
-              />
-            ) : null}
-            {statusNote ? <p className={styles.hint}>{statusNote}</p> : null}
-            {isStreaming && !streamedText ? (
-              <p className={styles.hint}>Scho is thinking…</p>
-            ) : null}
-          </div>
+                  {pdfBusy ? (
+                    <p className={styles.hint} aria-live="polite">
+                      Generating quiz from extracted text…
+                    </p>
+                  ) : null}
+                  {artifactSlot}
+                </div>
+              ) : null}
 
-          <form
-            className={styles.composer}
-            onSubmit={(e) => {
-              e.preventDefault();
-              const text = input.trim();
-              if (!text) return;
-              setInput("");
-              void askScho(text);
-            }}
-          >
-            <input
-              className={styles.composerInput}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask Scho…"
-              disabled={isStreaming || !user}
-              aria-label="Message Scho"
-            />
-            <button
-              type="submit"
-              className={styles.sendBtn}
-              disabled={isStreaming || !input.trim() || !user}
-              aria-label="Send"
-            >
-              <PaperPlaneTilt size={18} weight="fill" aria-hidden />
-            </button>
-          </form>
-        </section>
+              {mode === "voice" ? (
+                <div className={styles.paneBody}>
+                  <FreeStudyVoicePane
+                    transcript={transcript}
+                    onTranscriptChange={setTranscript}
+                    listening={listening}
+                    onToggleListen={toggleListen}
+                    askDisabled={isStreaming || !user}
+                    sttError={
+                      models.stt.status === "error"
+                        ? (models.stt.message ?? null)
+                        : null
+                    }
+                    onAsk={({ message, transcript: voiceText }) => {
+                      if (listening) {
+                        stopListening();
+                        setListening(false);
+                      }
+                      void askScho(message, {
+                        source: "voice",
+                        transcript: voiceText,
+                      });
+                    }}
+                    progressSlot={
+                      <>
+                        <ModelProgressBar
+                          label="STT"
+                          progress={
+                            listening
+                              ? 0.5
+                              : models.stt.status === "ready"
+                                ? 1
+                                : 0
+                          }
+                          message={models.stt.message}
+                          status={
+                            models.stt.status === "unsupported"
+                              ? "unsupported"
+                              : listening
+                                ? "downloading"
+                                : models.stt.status
+                          }
+                        />
+                        <ModelProgressBar
+                          label="Kokoro"
+                          progress={ttsProgress.progress}
+                          message={ttsProgress.message}
+                          status={ttsProgress.status}
+                        />
+                      </>
+                    }
+                  />
+                </div>
+              ) : null}
+
+              {mode === "notes" ? (
+                <div className={styles.paneBody}>
+                  <FreeStudyNotesPane
+                    examType={examType}
+                    askDisabled={isStreaming || !user}
+                    runOcr={async (image) => runOcr(image)}
+                    ocrStatus={models.ocr.status}
+                    ocrProgress={models.ocr.progress}
+                    ocrMessage={models.ocr.message}
+                    onAskScho={({ message, telemetry }) => {
+                      void askScho(message, {
+                        source: "notes",
+                        ...telemetry,
+                      });
+                    }}
+                  />
+                </div>
+              ) : null}
+            </section>
+
+            <section className={styles.chat} aria-label="Scho conversation">
+              <div className={styles.messages}>
+                {messages.length === 0 && !streamedText ? (
+                  <p className={styles.empty}>
+                    Your Free Studying thread with Scho appears here.
+                  </p>
+                ) : null}
+                {messages.map((m, i) => (
+                  <div
+                    key={`${m.role}-${i}`}
+                    className={
+                      m.role === "user"
+                        ? styles.userBubble
+                        : styles.assistantBubble
+                    }
+                  >
+                    {m.role === "assistant" ? (
+                      <FreeStudySectionedReply
+                        content={m.content}
+                        playing={
+                          ttsProgress.status === "speaking" ||
+                          ttsProgress.status === "downloading"
+                        }
+                        onPlay={(text) => {
+                          void speakWithKokoro(text).catch((err) =>
+                            toast.error(
+                              err instanceof Error
+                                ? err.message
+                                : "Kokoro failed",
+                            ),
+                          );
+                        }}
+                      />
+                    ) : (
+                      <p className={styles.userText}>{m.content}</p>
+                    )}
+                  </div>
+                ))}
+                {streamedText ? (
+                  <div className={styles.assistantBubble}>
+                    <FreeStudySectionedReply content={streamedText} />
+                  </div>
+                ) : null}
+                {(ttsProgress.status === "downloading" ||
+                  ttsProgress.status === "speaking") &&
+                mode !== "tutor" &&
+                mode !== "voice" ? (
+                  <ModelProgressBar
+                    label="Kokoro"
+                    progress={ttsProgress.progress}
+                    message={ttsProgress.message}
+                    status={ttsProgress.status}
+                  />
+                ) : null}
+                {statusNote ? (
+                  <p className={styles.hint}>{statusNote}</p>
+                ) : null}
+                {isStreaming && !streamedText ? (
+                  <p className={styles.hint}>Scho is thinking…</p>
+                ) : null}
+              </div>
+
+              <form
+                className={styles.composer}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const text = input.trim();
+                  if (!text) return;
+                  setInput("");
+                  void askScho(text);
+                }}
+              >
+                <input
+                  className={styles.composerInput}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Ask Scho…"
+                  disabled={isStreaming || !user}
+                  aria-label="Message Scho"
+                />
+                <button
+                  type="submit"
+                  className={styles.sendBtn}
+                  disabled={isStreaming || !input.trim() || !user}
+                  aria-label="Send"
+                >
+                  <PaperPlaneTilt size={18} weight="fill" aria-hidden />
+                </button>
+              </form>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   );
