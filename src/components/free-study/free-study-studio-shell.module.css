@@ -688,3 +688,42 @@
 :global(.dark) .stageTitle {
   color: hsl(215 20% 65%);
 }
+
+:global(.dark) .navItem {
+  color: hsl(210 40% 98% / 0.7);
+}
+
+:global(.dark) .navItem:hover {
+  background: hsl(210 40% 98% / 0.08);
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .navItemActive {
+  background: hsl(210 40% 98% / 0.14);
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .densityBtn {
+  background: hsl(222 47% 15%);
+  border-color: hsl(210 40% 98% / 0.08);
+  color: hsl(210 40% 98% / 0.7);
+}
+
+:global(.dark) .densityBtn:hover {
+  background: hsl(222 47% 20%);
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .mobileBar {
+  background: hsl(222 47% 11%);
+  border-top-color: hsl(210 40% 98% / 0.08);
+}
+
+:global(.dark) .overlay {
+  background: hsl(0 0% 0% / 0.6);
+}
+
+:global(.dark) .rail {
+  background: hsl(222 47% 11%);
+  border-right-color: hsl(210 40% 98% / 0.08);
+}

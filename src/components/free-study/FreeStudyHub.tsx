@@ -10,6 +10,7 @@ import {
   useCallback,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -198,6 +199,12 @@ export function FreeStudyHub({
     ttsProgress,
     preloadTts,
   } = useLocalTelemetryModels();
+
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, streamedText]);
 
   const ensureConversation = useCallback(async (): Promise<string | null> => {
     if (conversationId) return conversationId;
@@ -645,6 +652,7 @@ export function FreeStudyHub({
                 {isStreaming && !streamedText ? (
                   <p className={styles.hint}>Scho is thinking…</p>
                 ) : null}
+                <div ref={messagesEndRef} />
               </div>
 
               <form
@@ -657,13 +665,20 @@ export function FreeStudyHub({
                   void askScho(text);
                 }}
               >
-                <input
+                <textarea
                   className={styles.composerInput}
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Ask Scho…"
                   disabled={isStreaming || !user}
                   aria-label={FS_ARIA.composer}
+                  rows={1}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault();
+                      e.currentTarget.form?.requestSubmit();
+                    }
+                  }}
                 />
                 <button
                   type="submit"

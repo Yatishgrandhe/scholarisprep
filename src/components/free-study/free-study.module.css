@@ -557,6 +557,11 @@
 .composerInput {
   flex: 1;
   min-width: 0;
+  min-height: 2.75rem;
+  max-height: 10rem;
+  resize: none;
+  line-height: 1.45;
+  overflow-y: auto;
 }
 
 .sendBtn {
@@ -672,5 +677,34 @@
 :global(.dark) .wbWidthBtn {
   border-color: hsl(210 40% 98% / 0.08);
   background: hsl(222 47% 13%);
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .sectionInsight {
+  border-left-color: hsl(210 70% 60%);
+}
+
+:global(.dark) .sectionStrategy {
+  border-left-color: hsl(160 50% 50%);
+}
+
+:global(.dark) .sectionPivot {
+  border-left-color: hsl(28 80% 60%);
+}
+
+:global(.dark) .noteItem {
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .noteItemActive,
+:global(.dark) .noteItem:hover {
+  background: hsl(222 47% 20%);
+}
+
+:global(.dark) .textarea,
+:global(.dark) .input,
+:global(.dark) .composerInput {
+  background: hsl(222 47% 13%);
+  border-color: hsl(210 40% 98% / 0.08);
   color: hsl(210 40% 98%);
 }

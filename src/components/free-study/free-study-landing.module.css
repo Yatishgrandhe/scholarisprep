@@ -362,7 +362,7 @@
 
 /* ── Dark mode ── */
 
-:global(.dark) .landing {
+:global(.dark) .root {
   color: hsl(210 40% 98%);
 }
 
@@ -379,10 +379,23 @@
   border-color: color-mix(in srgb, var(--cobalt, #2563eb) 35%, hsl(210 40% 98% / 0.08));
 }
 
-:global(.dark) .destTitle {
+:global(.dark) .destLabel {
   color: hsl(210 40% 98%);
 }
 
-:global(.dark) .destDesc {
+:global(.dark) .destHint {
   color: hsl(215 20% 65%);
+}
+
+:global(.dark) .foot {
+  border-top-color: hsl(210 40% 98% / 0.08);
+}
+
+:global(.dark) .labsLink {
+  color: hsl(210 40% 98% / 0.7);
+}
+
+:global(.dark) .labsLink:hover {
+  color: hsl(210 40% 98%);
+  background: hsl(210 40% 98% / 0.08);
 }

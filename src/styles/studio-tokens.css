@@ -22,4 +22,31 @@
   --shell-radius: var(--radius-lg, 18px);
   --shell-chrome-gap: 0.75rem;
   --shell-ask-top: 3.25rem;
+  --shell-surface: hsl(0 0% 100%);
+  --shell-surface-raised: hsl(0 0% 100% / 0.96);
+  --shell-border: hsl(var(--border));
+  --shell-border-subtle: hsl(215 20% 78% / 0.18);
+  --shell-overlay: hsl(215 40% 8% / 0.45);
+  --shell-card-shadow: 0 8px 28px hsl(215 30% 20% / 0.04);
+  --shell-section-insight: hsl(210 80% 48%);
+  --shell-section-strategy: hsl(160 55% 38%);
+  --shell-section-pivot: hsl(28 85% 48%);
+}
+
+:global(.dark) {
+  --shell-ink: hsl(210 40% 98%);
+  --shell-muted: hsl(215 20% 65%);
+  --shell-paper: hsl(222 47% 13%);
+  --shell-snow: hsl(222 47% 11%);
+  --shell-edge: hsl(210 40% 98% / 0.12);
+  --shell-glow: color-mix(in srgb, var(--shell-cobalt) 8%, transparent);
+  --shell-surface: hsl(222 47% 11%);
+  --shell-surface-raised: hsl(222 47% 15%);
+  --shell-border: hsl(210 40% 98% / 0.08);
+  --shell-border-subtle: hsl(210 40% 98% / 0.05);
+  --shell-overlay: hsl(0 0% 0% / 0.6);
+  --shell-card-shadow: 0 8px 28px hsl(0 0% 0% / 0.3);
+  --shell-section-insight: hsl(210 70% 60%);
+  --shell-section-strategy: hsl(160 50% 50%);
+  --shell-section-pivot: hsl(28 80% 60%);
 }
