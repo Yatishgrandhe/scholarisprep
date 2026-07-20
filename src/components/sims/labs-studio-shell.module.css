@@ -830,3 +830,62 @@
     transition: none;
   }
 }
+
+/* ── Dark mode ── */
+
+:global(.dark) .root {
+  color: hsl(210 40% 98%);
+  background: hsl(222 47% 11%);
+}
+
+:global(.dark) .stage {
+  background: hsl(222 47% 11%);
+}
+
+:global(.dark) .glow {
+  opacity: 0.12;
+}
+
+:global(.dark) .skipLink {
+  background: var(--labs-cobalt);
+}
+
+:global(.dark) .mobileBar {
+  background: hsl(222 47% 11%);
+  border-bottom-color: hsl(210 40% 98% / 0.08);
+}
+
+:global(.dark) .densityBtn {
+  color: hsl(215 20% 65%);
+}
+
+:global(.dark) .densityBtn:hover {
+  color: hsl(210 40% 98%);
+  background: hsl(210 40% 98% / 0.08);
+}
+
+:global(.dark) .category {
+  color: hsl(215 20% 65%);
+}
+
+:global(.dark) .category:hover:not(:disabled) {
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .category[data-active] {
+  color: hsl(210 40% 98%);
+  background: hsl(210 40% 98% / 0.1);
+}
+
+:global(.dark) .labLink {
+  color: hsl(215 20% 65%);
+}
+
+:global(.dark) .labLink:hover {
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .labLink[data-active] {
+  color: hsl(210 40% 98%);
+  background: hsl(210 40% 98% / 0.08);
+}

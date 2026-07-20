@@ -721,3 +721,23 @@
     animation: none;
   }
 }
+
+/* ── Dark mode ── */
+
+:global(.dark) .root {
+  color: hsl(210 40% 98%);
+  background: hsl(222 47% 11%);
+}
+
+:global(.dark) .stage {
+  background: hsl(222 47% 11%);
+}
+
+:global(.dark) .atmosphere {
+  opacity: 0.15;
+}
+
+:global(.dark) .mobileBar {
+  background: hsl(222 47% 11%);
+  border-bottom-color: hsl(210 40% 98% / 0.08);
+}

@@ -359,3 +359,30 @@
     transform: none;
   }
 }
+
+/* ── Dark mode ── */
+
+:global(.dark) .landing {
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .hero {
+  background: linear-gradient(165deg, hsl(222 47% 11%) 0%, hsl(222 47% 15%) 42%, hsl(222 47% 12%) 100%);
+}
+
+:global(.dark) .dest {
+  background: hsl(222 47% 15%);
+  border-color: hsl(210 40% 98% / 0.08);
+}
+
+:global(.dark) .dest:hover {
+  border-color: color-mix(in srgb, var(--cobalt, #2563eb) 35%, hsl(210 40% 98% / 0.08));
+}
+
+:global(.dark) .destTitle {
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .destDesc {
+  color: hsl(215 20% 65%);
+}

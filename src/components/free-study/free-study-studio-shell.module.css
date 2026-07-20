@@ -656,3 +656,35 @@
     transition: none;
   }
 }
+
+/* ── Dark mode ── */
+
+:global(.dark) .root {
+  color: hsl(210 40% 98%);
+  background: hsl(222 47% 11%);
+}
+
+:global(.dark) .stageBody {
+  background: hsl(222 47% 11%);
+}
+
+:global(.dark) .glow {
+  opacity: 0.18;
+}
+
+:global(.dark) .peepBtn,
+:global(.dark) .exitTop {
+  background: color-mix(in srgb, hsl(222 47% 11%) 88%, var(--fs-cobalt));
+  color: hsl(210 40% 98%);
+  border-color: hsl(210 40% 98% / 0.12);
+}
+
+:global(.dark) .peepBtn:hover,
+:global(.dark) .exitTop:hover {
+  background: color-mix(in srgb, hsl(222 47% 11%) 75%, var(--fs-cobalt));
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .stageTitle {
+  color: hsl(215 20% 65%);
+}

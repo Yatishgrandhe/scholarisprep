@@ -54,7 +54,7 @@
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  z-index: 5;
+  z-index: 50;
   padding: 0.45rem 0.75rem;
   border-radius: 8px;
   background: var(--fs-cobalt);
@@ -447,4 +447,34 @@
   .destCard:hover {
     transform: none;
   }
+}
+
+/* ── Dark mode ── */
+
+:global(.dark) .studio {
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .studio::before {
+  background:
+    radial-gradient(ellipse 70% 55% at 12% 0%, color-mix(in srgb, var(--fs-cobalt) 8%, transparent), transparent 62%),
+    radial-gradient(ellipse 50% 45% at 88% 8%, color-mix(in srgb, var(--fs-aqua) 6%, transparent), transparent 58%),
+    linear-gradient(180deg, hsl(222 47% 11%) 0%, transparent 100%);
+}
+
+:global(.dark) .destCard {
+  background: hsl(222 47% 15%);
+  border-color: hsl(210 40% 98% / 0.08);
+}
+
+:global(.dark) .destCard:hover {
+  border-color: color-mix(in srgb, var(--fs-cobalt) 35%, hsl(210 40% 98% / 0.08));
+}
+
+:global(.dark) .destLabel {
+  color: hsl(210 40% 98%);
+}
+
+:global(.dark) .destMeta {
+  color: hsl(215 20% 65%);
 }

@@ -255,6 +255,8 @@
 }
 
 .primaryBtn:disabled,
+.secondaryBtn:disabled,
+.dangerBtn:disabled,
 .sendBtn:disabled,
 .playBtn:disabled {
   opacity: 0.5;
@@ -265,6 +267,11 @@
   background: hsl(var(--muted) / 0.55);
   color: hsl(var(--foreground));
   border-color: hsl(var(--border));
+}
+
+.secondaryBtn:hover:not(:disabled) {
+  background: hsl(var(--muted) / 0.75);
+  border-color: hsl(var(--muted-foreground) / 0.35);
 }
 
 .quietBtn {
@@ -296,6 +303,10 @@
 .dangerBtn {
   background: hsl(var(--destructive));
   color: hsl(var(--destructive-foreground, 0 0% 100%));
+}
+
+.dangerBtn:hover:not(:disabled) {
+  background: hsl(var(--destructive) / 0.9);
 }
 
 .uploadLabel {
@@ -624,4 +635,42 @@
   .wbWidthBtn {
     transition: none;
   }
+}
+
+/* ── Dark mode ── */
+
+:global(.dark) .pane,
+:global(.dark) .chat {
+  border-color: hsl(210 40% 98% / 0.08);
+  background: hsl(222 47% 15%);
+  box-shadow: 0 8px 28px hsl(0 0% 0% / 0.2);
+}
+
+:global(.dark) .whiteboard {
+  background: hsl(222 47% 11%);
+}
+
+:global(.dark) .whiteboardWrap {
+  border-color: hsl(210 40% 98% / 0.08);
+  background: linear-gradient(180deg, hsl(222 47% 13%) 0%, hsl(222 47% 11%) 100%);
+}
+
+:global(.dark) .userBubble {
+  background: hsl(var(--primary) / 0.2);
+}
+
+:global(.dark) .composer {
+  border-top-color: hsl(210 40% 98% / 0.08);
+}
+
+:global(.dark) .sectionCard {
+  border-color: hsl(210 40% 98% / 0.08);
+  background: hsl(222 47% 13%);
+}
+
+:global(.dark) .wbToolBtn,
+:global(.dark) .wbWidthBtn {
+  border-color: hsl(210 40% 98% / 0.08);
+  background: hsl(222 47% 13%);
+  color: hsl(210 40% 98%);
 }

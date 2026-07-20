@@ -489,6 +489,18 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .navLink,
+  .collapseBtn,
+  .collapsedBrand,
+  .profileRow,
+  .upgradeBtn,
+  .signOut {
+    transition: none;
+  }
+}
+
 /* Touch-friendly rail targets on coarse pointers (tablet / hybrid) */
 @media (hover: none) and (pointer: coarse) {
   .navLink {
