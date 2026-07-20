@@ -1,12 +1,14 @@
 "use client";
 
 /**
- * Free Studying hub — destination rail + work surfaces.
+ * Free Studying hub — work surfaces inside FreeStudyShell.
+ * Destinations live in FreeStudyShell sidebar (not a duplicate icon rail).
  * PDF/image → extract text → Mistral via telemetry only (never file bytes).
  */
 
 import {
   useCallback,
+  useEffect,
   useMemo,
   useState,
   type ReactNode,
@@ -15,14 +17,12 @@ import {
   ArrowLeft,
   ChatsCircle,
   FilePdf,
-  House,
   Microphone,
   Notebook,
-  PencilLine,
   PaperPlaneTilt,
 } from "@phosphor-icons/react";
 import { toast } from "sonner";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { ensureFreshSession } from "@/lib/supabase/ensureSession";
 import { useAuth } from "@/hooks/useAuth";
@@ -30,7 +30,11 @@ import { useTutorStream } from "@/hooks/useTutorStream";
 import { useLocalTelemetryModels } from "@/hooks/useLocalTelemetryModels";
 import { useActiveExamType } from "@/hooks/useActiveExamType";
 import type { FreeStudyTelemetry } from "@/lib/ai/telemetryPayload";
-import { FREE_STUDY_HREF, WHITEBOARD_HREF } from "@/lib/dashboard/navRoutes";
+import { FREE_STUDY_HREF } from "@/lib/dashboard/navRoutes";
+import {
+  resolveFreeStudyDest,
+  type FreeStudyDest,
+} from "@/lib/free-study/parseDest";
 import { FreeStudySectionedReply } from "@/components/free-study/FreeStudySectionedReply";
 import { FreeStudyImageAsk } from "@/components/free-study/FreeStudyImageAsk";
 import { FreeStudyLanding } from "@/components/free-study/FreeStudyLanding";
@@ -49,52 +53,14 @@ import {
   GenerateQuizError,
   type GenerateQuizResult,
 } from "@/lib/free-study/generateQuiz";
+import {
+  FS_ARIA,
+  chatLogLiveRegionProps,
+} from "@/components/free-study/freeStudyA11y";
 import styles from "./free-study.module.css";
 import studio from "./free-study-studio.module.css";
 
-export type FreeStudyMode = "tutor" | "pdf" | "voice" | "notes";
-
-type DestinationId = FreeStudyMode | "whiteboard";
-
-const DESTINATIONS: {
-  id: DestinationId;
-  label: string;
-  hint: string;
-  icon: typeof ChatsCircle;
-  accent?: "whiteboard";
-}[] = [
-  {
-    id: "tutor",
-    label: "Tutor",
-    hint: "Ask Scho anything — text, photo OCR, Kokoro voice",
-    icon: ChatsCircle,
-  },
-  {
-    id: "whiteboard",
-    label: "Whiteboard",
-    hint: "Full-page ink studio — write, then ask Scho",
-    icon: PencilLine,
-    accent: "whiteboard",
-  },
-  {
-    id: "pdf",
-    label: "PDF studio",
-    hint: "Upload a passage — ask, quiz, summarize, flashcards",
-    icon: FilePdf,
-  },
-  {
-    id: "voice",
-    label: "Voice",
-    hint: "Talk it out — listen, transcript, then Ask Scho",
-    icon: Microphone,
-  },
-  {
-    id: "notes",
-    label: "Notes",
-    hint: "Write notes, OCR photos → text, then Ask Scho",
-    icon: Notebook,
-  },
-];
+export type FreeStudyMode = FreeStudyDest;
 
 const MODE_META: Record<
   FreeStudyMode,
@@ -178,10 +144,22 @@ export function FreeStudyHub({
   initialMode?: FreeStudyMode;
 }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { user } = useAuth();
   const examType = useActiveExamType();
   const supabase = useMemo(() => createClient(), []);
-  const [mode, setMode] = useState<FreeStudyMode | null>(initialMode ?? null);
+
+  // URL is source of truth so FreeStudyShell sidebar Links (?dest= / ?mode=) work
+  const urlMode = resolveFreeStudyDest(
+    searchParams.get("dest"),
+    searchParams.get("mode"),
+  );
+  const urlHasDestKey =
+    searchParams.has("dest") || searchParams.has("mode");
+
+  const [mode, setMode] = useState<FreeStudyMode | null>(
+    () => urlMode ?? initialMode ?? null,
+  );
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<ChatMsg[]>([]);
   const [conversationId, setConversationId] = useState<string | null>(null);
@@ -192,6 +170,17 @@ export function FreeStudyHub({
   const [ocrText, setOcrText] = useState("");
   const [pdfBusy, setPdfBusy] = useState(false);
   const [pdfArtifact, setPdfArtifact] = useState<PdfArtifact>(null);
+
+  useEffect(() => {
+    // When URL clears (Home), do not fall back to stale initialMode
+    const next = urlHasDestKey ? urlMode : null;
+    setMode((prev) => (prev === next ? prev : next));
+  }, [urlMode, urlHasDestKey]);
+
+  useEffect(() => {
+    if (!urlMode) return;
+    setPdfArtifact(null);
+  }, [urlMode]);
 
   const {
     isStreaming,
@@ -214,13 +203,16 @@ export function FreeStudyHub({
     if (conversationId) return conversationId;
     if (!user) return null;
     await ensureFreshSession(supabase);
+    // context_type must match tutor_conversations_context_type_check
+    // (exam_prep|lesson|question|general). "free_study" 400s until
+    // migration 20260720190000_tutor_conversations_free_study_context.sql.
     const { data, error } = await supabase
       .from("tutor_conversations")
       .insert({
         user_id: user.id,
         title: "Free Studying",
         exam_type: examType,
-        context_type: "free_study",
+        context_type: "general",
       })
       .select("id")
       .single();
@@ -396,18 +388,7 @@ export function FreeStudyHub({
     setListening(true);
   };
 
-  const openDestination = (id: DestinationId) => {
-    if (id === "whiteboard") {
-      router.push(WHITEBOARD_HREF);
-      return;
-    }
-    setMode(id);
-    setPdfArtifact(null);
-    router.replace(`${FREE_STUDY_HREF}?dest=${id}`);
-  };
-
   const backToLanding = () => {
-    setMode(null);
     setPdfArtifact(null);
     router.replace(FREE_STUDY_HREF);
   };
@@ -438,68 +419,36 @@ export function FreeStudyHub({
     );
   }
 
+  /* Destination nav lives in FreeStudyShell — hub is workspace only. */
   return (
-    <div className={studio.studio}>
-      <div className={studio.focused}>
-        <nav className={studio.rail} aria-label="Study destinations">
-          <button
-            type="button"
-            className={studio.railHome}
-            onClick={backToLanding}
-            aria-label="All destinations"
-            title="All destinations"
-          >
-            <House size={18} weight="duotone" aria-hidden />
-          </button>
-          <hr className={studio.railSep} />
-          {DESTINATIONS.map(({ id, label, icon: Icon }) => {
-            if (id === "whiteboard") {
-              return (
-                <button
-                  key={id}
-                  type="button"
-                  className={studio.railBtn}
-                  onClick={() => router.push(WHITEBOARD_HREF)}
-                  aria-label={label}
-                  title={label}
-                >
-                  <Icon size={18} weight="regular" aria-hidden />
-                </button>
-              );
-            }
-            const isActive = mode === id;
-            return (
-              <button
-                key={id}
-                type="button"
-                className={`${studio.railBtn} ${isActive ? studio.railBtnActive : ""}`}
-                onClick={() => openDestination(id)}
-                aria-label={label}
-                aria-current={isActive ? "page" : undefined}
-                title={label}
-              >
-                <Icon
-                  size={18}
-                  weight={isActive ? "fill" : "regular"}
-                  aria-hidden
-                />
-              </button>
-            );
-          })}
-        </nav>
-
-        <div className={studio.workspace}>
+    <div
+      className={studio.studio}
+      data-free-study-hub=""
+      aria-label={FS_ARIA.studio}
+    >
+      <a href="#fs-workspace" className={studio.skipLink}>
+        {FS_ARIA.skipToWorkspace}
+      </a>
+      <div className={studio.focusedShell}>
+        <div
+          id="fs-workspace"
+          className={studio.workspace}
+          aria-label={FS_ARIA.workspace}
+        >
           <header className={studio.workspaceHead}>
             <div>
               <button
                 type="button"
                 className={styles.backLink}
                 onClick={backToLanding}
+                aria-label={FS_ARIA.backToDestinations}
               >
                 <ArrowLeft size={14} aria-hidden />
-                Destinations
+                Home
               </button>
-              <h2 className={studio.workspaceTitle}>{active.label}</h2>
+              <h2 className={studio.workspaceTitle} id="fs-workspace-title">
+                {active.label}
+              </h2>
             </div>
             <p className={studio.workspaceMeta}>{active.meta}</p>
           </header>
@@ -525,10 +474,10 @@ export function FreeStudyHub({
                   />
                   <button
                     type="button"
-                    className={styles.secondaryBtn}
+                    className={styles.quietBtn}
                     onClick={() => void preloadTts()}
                   >
-                    Preload Kokoro voice (~90 MB once)
+                    Preload voice model
                   </button>
                   <ModelProgressBar
                     label="Kokoro"
@@ -636,8 +585,8 @@ export function FreeStudyHub({
               ) : null}
             </section>
 
-            <section className={styles.chat} aria-label="Scho conversation">
-              <div className={styles.messages}>
+            <section className={styles.chat} aria-label={FS_ARIA.chat}>
+              <div className={styles.messages} {...chatLogLiveRegionProps()}>
                 {messages.length === 0 && !streamedText ? (
                   <p className={styles.empty}>
                     Your Free Studying thread with Scho appears here.
@@ -714,13 +663,13 @@ export function FreeStudyHub({
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Ask Scho…"
                   disabled={isStreaming || !user}
-                  aria-label="Message Scho"
+                  aria-label={FS_ARIA.composer}
                 />
                 <button
                   type="submit"
                   className={styles.sendBtn}
                   disabled={isStreaming || !input.trim() || !user}
-                  aria-label="Send"
+                  aria-label={FS_ARIA.send}
                 >
                   <PaperPlaneTilt size={18} weight="fill" aria-hidden />
                 </button>

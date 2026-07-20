@@ -12,5 +12,4 @@ export { BoardAtmosphere } from "./BoardAtmosphere";
 export { BoardEmptyHint } from "./BoardEmptyHint";
 export { BoardSchoOpen } from "./BoardSchoOpen";
 export { BoardTopEsc } from "./BoardTopEsc";
-export { BoardPdfPeek } from "./BoardPdfPeek";
 export { BoardVoiceControls } from "./BoardVoiceControls";

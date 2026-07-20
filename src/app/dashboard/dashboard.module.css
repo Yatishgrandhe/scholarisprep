@@ -1473,6 +1473,13 @@
   background: hsl(var(--accent));
 }
 
+/* Subtle open-in-new-tab cue for Free Studying / STEM Labs CTAs */
+.ctaNewTabCue {
+  flex-shrink: 0;
+  opacity: 0.55;
+  margin-inline-start: 0.05rem;
+}
+
 .homeHeroActions {
   display: flex;
   flex-wrap: wrap;

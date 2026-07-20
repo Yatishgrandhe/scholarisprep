@@ -149,7 +149,7 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
                 <span className={styles.sectionLabel}>{section.label}</span>
               ) : null}
               {section.items.map(
-                ({ id, href, label, icon: Icon, badge, children }) => {
+                ({ id, href, label, icon: Icon, badge, children, external }) => {
                   const active =
                     id === "scho"
                       ? isTutorRoute(pathname)
@@ -157,30 +157,50 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
                   const childActive = Boolean(
                     children?.some((child) => isActive(child.href, child.id)),
                   );
+                  const linkClassName = `${styles.navLink} ${active ? styles.navLinkActive : ""} ${collapsed ? styles.navLinkCollapsed : ""} ${childActive && !active ? styles.navLinkParentActive : ""}`;
+                  const linkInner = (
+                    <>
+                      {Icon ? (
+                        <Icon
+                          size={18}
+                          weight={active || childActive ? "fill" : "regular"}
+                          className={styles.navIcon}
+                          aria-hidden
+                        />
+                      ) : null}
+                      {!collapsed && (
+                        <span className={styles.navLabel}>{label}</span>
+                      )}
+                      {!collapsed && badge ? (
+                        <span className={styles.itemBadge}>{badge}</span>
+                      ) : null}
+                    </>
+                  );
                   return (
                     <div key={id} className={styles.navItemGroup}>
-                      <Link
-                        href={href}
-                        data-nav-id={id}
-                        aria-current={active ? "page" : undefined}
-                        title={collapsed ? label : undefined}
-                        className={`${styles.navLink} ${active ? styles.navLinkActive : ""} ${collapsed ? styles.navLinkCollapsed : ""} ${childActive && !active ? styles.navLinkParentActive : ""}`}
-                      >
-                        {Icon ? (
-                          <Icon
-                            size={18}
-                            weight={active || childActive ? "fill" : "regular"}
-                            className={styles.navIcon}
-                            aria-hidden
-                          />
-                        ) : null}
-                        {!collapsed && (
-                          <span className={styles.navLabel}>{label}</span>
-                        )}
-                        {!collapsed && badge ? (
-                          <span className={styles.itemBadge}>{badge}</span>
-                        ) : null}
-                      </Link>
+                      {external ? (
+                        <a
+                          href={href}
+                          data-nav-id={id}
+                          aria-current={active ? "page" : undefined}
+                          title={collapsed ? label : undefined}
+                          className={linkClassName}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {linkInner}
+                        </a>
+                      ) : (
+                        <Link
+                          href={href}
+                          data-nav-id={id}
+                          aria-current={active ? "page" : undefined}
+                          title={collapsed ? label : undefined}
+                          className={linkClassName}
+                        >
+                          {linkInner}
+                        </Link>
+                      )}
                       {!collapsed && children && children.length > 0 ? (
                         <div
                           className={styles.navChildren}

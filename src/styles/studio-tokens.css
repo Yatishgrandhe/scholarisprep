@@ -1,0 +1,25 @@
+/**
+ * Shared tokens for studio shells — Free Studying, Whiteboard Studio, STEM Labs.
+ *
+ * Cobalt Scholaris chrome (not purple / cream-terracotta). Feature modules may
+ * keep short local aliases (`--fs-*`, `--lab-*`, `--fc-*`) that point here.
+ * Whiteboard desk atmosphere keeps its own `--studio-*` desk/lamp vars scoped
+ * to BoardAtmosphere — those are immersive, not UI chrome.
+ */
+
+:root {
+  --shell-cobalt: var(--cobalt, #2563eb);
+  --shell-cobalt-deep: var(--cobalt-dark, #1d4ed8);
+  --shell-aqua: var(--aqua, #06b6d4);
+  --shell-navy: var(--navy, #0f1e3c);
+  --shell-ink: hsl(215 28% 14%);
+  --shell-muted: hsl(215 14% 42%);
+  --shell-paper: hsl(210 40% 99%);
+  --shell-snow: var(--snow, #f8fafc);
+  --shell-edge: hsl(215 20% 78% / 0.55);
+  --shell-glow: color-mix(in srgb, var(--shell-cobalt) 16%, transparent);
+  --shell-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shell-radius: var(--radius-lg, 18px);
+  --shell-chrome-gap: 0.75rem;
+  --shell-ask-top: 3.25rem;
+}

@@ -51,8 +51,6 @@ export type BoardChatDockHandle = {
 export type BoardChatDockProps = {
   /** Live whiteboard OCR text → tutor telemetry on each ask. */
   ocrText?: string;
-  /** Optional PDF peek excerpt for telemetry. */
-  pdfExcerpt?: string;
   placement?: BoardChatDockPlacement;
   defaultCollapsed?: boolean;
   className?: string;
@@ -80,7 +78,6 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
   function BoardChatDock(
     {
       ocrText = "",
-      pdfExcerpt = "",
       placement = "auto",
       defaultCollapsed = false,
       className,
@@ -103,17 +100,12 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
 
     const ocrLiveRef = useRef(ocrText);
     const transcriptRef = useRef("");
-    const pdfLiveRef = useRef(pdfExcerpt);
     const feedRef = useRef<HTMLDivElement | null>(null);
     const pendingExpandRef = useRef(false);
 
     useEffect(() => {
       ocrLiveRef.current = ocrText;
     }, [ocrText]);
-
-    useEffect(() => {
-      pdfLiveRef.current = pdfExcerpt;
-    }, [pdfExcerpt]);
 
     useEffect(() => {
       if (typeof window === "undefined") return;
@@ -146,7 +138,6 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
     } = useBoardTutor({
       getOcrText: () => ocrLiveRef.current,
       getTranscript: () => transcriptRef.current,
-      getPdfExcerpt: () => pdfLiveRef.current,
     });
 
     const { progress: ttsProgress, speak } = useKokoroTts();
@@ -329,7 +320,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
                 aria-label="Collapse chat"
                 title="Collapse"
               >
-                <CaretDown size={16} weight="bold" />
+                <CaretDown size={15} weight="bold" />
               </button>
             </div>
           </header>
@@ -408,7 +399,16 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
               </div>
             ) : null}
 
-            <div className={styles.composerRow}>
+            <form
+              className={styles.composer}
+              onSubmit={(e) => {
+                e.preventDefault();
+                const text = input.trim();
+                if (!text) return;
+                setInput("");
+                void sendAsk(text);
+              }}
+            >
               <div
                 className={styles.voiceSlot}
                 aria-label={BOARD_ARIA.voiceControls}
@@ -416,6 +416,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
                 <BoardVoiceControls
                   lockedMode="toggle"
                   hidePreview
+                  compact
                   disabled={disabled || isStreaming}
                   onTranscript={onVoiceTranscript}
                   onSessionEnd={onVoiceSessionEnd}
@@ -423,36 +424,25 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
                 />
               </div>
 
-              <form
-                className={styles.composer}
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const text = input.trim();
-                  if (!text) return;
-                  setInput("");
-                  void sendAsk(text);
-                }}
+              <input
+                className={styles.field}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder={
+                  listening ? "Listening…" : "Ask about the board…"
+                }
+                disabled={isStreaming || !canAsk || disabled}
+                aria-label={BOARD_ARIA.chatComposer}
+              />
+              <button
+                type="submit"
+                className={styles.sendBtn}
+                disabled={!canSend}
+                aria-label="Send"
               >
-                <input
-                  className={styles.field}
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  placeholder={
-                    listening ? "Listening…" : "Ask about the board…"
-                  }
-                  disabled={isStreaming || !canAsk || disabled}
-                  aria-label={BOARD_ARIA.chatComposer}
-                />
-                <button
-                  type="submit"
-                  className={styles.sendBtn}
-                  disabled={!canSend}
-                  aria-label="Send"
-                >
-                  <PaperPlaneTilt size={15} weight="fill" aria-hidden />
-                </button>
-              </form>
-            </div>
+                <PaperPlaneTilt size={16} weight="fill" aria-hidden />
+              </button>
+            </form>
           </div>
         </div>
       </aside>

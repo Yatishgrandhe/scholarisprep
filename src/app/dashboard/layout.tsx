@@ -9,7 +9,8 @@ export const metadata = {
 /**
  * Dashboard chrome (sidebar / top bar / mobile tab bar) lives in
  * `DashboardShell`, which hides it on fullscreen routes — including
- * `/dashboard/whiteboard` — via pathname detection. Other pages unchanged.
+ * `/dashboard/whiteboard`, `/dashboard/free-study`, and `/dashboard/labs`
+ * — via pathname detection. Other pages unchanged.
  */
 export default function DashboardLayout({
   children,

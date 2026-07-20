@@ -6,7 +6,8 @@ export const metadata: Metadata = {
 
 /**
  * Immersive Whiteboard Studio layout.
- * No Free Studying mode tabs — studio fills the dashboard main pane.
+ * No Free Studying / Labs product sidebars — studio fills examLayout.
+ * Dashboard chrome is hidden via `isWhiteboardFullscreenRoute`.
  * See docs/research/whiteboard/CONTRACT.md
  */
 export default function WhiteboardLayout({
@@ -14,5 +15,18 @@ export default function WhiteboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <div
+      data-whiteboard-layout=""
+      style={{
+        width: "100%",
+        height: "100dvh",
+        maxHeight: "100dvh",
+        minHeight: 0,
+        overflow: "hidden",
+      }}
+    >
+      {children}
+    </div>
+  );
 }

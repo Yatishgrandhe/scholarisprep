@@ -12,20 +12,28 @@ const DESMOS_CSP_ORIGINS =
 // Hugging Face Hub for Kokoro ONNX model weights (ORT WASM is same-origin /ort/, not jsDelivr).
 const HF_CSP_ORIGINS = "https://huggingface.co https://*.huggingface.co https://cdn-lfs.huggingface.co https://*.hf.co";
 
+// Vercel Live / Toolbar feedback on preview (and optional prod toolbar).
+// Official allowlist: https://vercel.com/docs/vercel-toolbar/managing-toolbar
+const VERCEL_LIVE_ORIGIN = "https://vercel.live";
+const VERCEL_LIVE_CONNECT = `${VERCEL_LIVE_ORIGIN} wss://ws-us3.pusher.com`;
+const VERCEL_LIVE_IMG = `${VERCEL_LIVE_ORIGIN} https://vercel.com`;
+const VERCEL_LIVE_FONT = `${VERCEL_LIVE_ORIGIN} https://assets.vercel.com`;
+
 const contentSecurityPolicy = [
   `default-src 'self' ${DESMOS_CSP_ORIGINS}`,
   // wasm-unsafe-eval required for ONNX Runtime / Kokoro WASM TTS in-browser.
   // ORT .mjs/.wasm load from 'self' (/ort/); do not depend on cdn.jsdelivr.net.
-  `script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' ${DESMOS_CSP_ORIGINS}`,
-  `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ${DESMOS_CSP_ORIGINS}`,
+  `script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' ${DESMOS_CSP_ORIGINS} ${VERCEL_LIVE_ORIGIN}`,
+  `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ${DESMOS_CSP_ORIGINS} ${VERCEL_LIVE_ORIGIN}`,
   // `data:` is required — Desmos embeds its keypad/toolbar icon font as a
   // base64 data: URI, so without it those buttons render as empty squares (tofu).
-  `font-src 'self' data: https://fonts.gstatic.com ${DESMOS_CSP_ORIGINS}`,
-  `img-src 'self' data: blob: https://*.supabase.co https://*.r2.cloudflarestorage.com https://img.youtube.com https://i.ytimg.com https://images.unsplash.com https://api.dicebear.com ${DESMOS_CSP_ORIGINS}`,
+  // Do NOT add frontend-cdn.perplexity.ai — not used by the app (extension noise).
+  `font-src 'self' data: https://fonts.gstatic.com ${DESMOS_CSP_ORIGINS} ${VERCEL_LIVE_FONT}`,
+  `img-src 'self' data: blob: https://*.supabase.co https://*.r2.cloudflarestorage.com https://img.youtube.com https://i.ytimg.com https://images.unsplash.com https://api.dicebear.com ${DESMOS_CSP_ORIGINS} ${VERCEL_LIVE_IMG}`,
   `worker-src 'self' blob: ${DESMOS_CSP_ORIGINS}`,
-  `connect-src 'self' https://*.supabase.co https://*.r2.cloudflarestorage.com ${DESMOS_CSP_ORIGINS} ${HF_CSP_ORIGINS}`,
+  `connect-src 'self' https://*.supabase.co https://*.r2.cloudflarestorage.com ${DESMOS_CSP_ORIGINS} ${HF_CSP_ORIGINS} ${VERCEL_LIVE_CONNECT}`,
   `media-src 'self' blob: data:`,
-  `frame-src https://www.youtube.com ${DESMOS_CSP_ORIGINS}`,
+  `frame-src https://www.youtube.com ${DESMOS_CSP_ORIGINS} ${VERCEL_LIVE_ORIGIN}`,
 ].join("; ");
 
 const securityHeaders = [

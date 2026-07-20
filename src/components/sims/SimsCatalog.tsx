@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Flask, ArrowLeft } from "@phosphor-icons/react";
+import { Flask } from "@phosphor-icons/react";
+import { LABS_HREF } from "@/lib/dashboard/navRoutes";
 import { getFidelityBadge, type SimManifestMeta } from "@/sims/contracts";
 import styles from "./sims-hub.module.css";
 
@@ -9,14 +10,11 @@ type Props = {
   sims: SimManifestMeta[];
 };
 
+/** Catalog grid — back / categories live in LabsShell sidebar. */
 export function SimsCatalog({ sims }: Props) {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <Link href="/dashboard" className={styles.back}>
-          <ArrowLeft size={16} weight="bold" aria-hidden />
-          Dashboard
-        </Link>
         <div className={styles.headerRow}>
           <span className={styles.headerIcon} aria-hidden>
             <Flask size={22} weight="fill" />
@@ -45,7 +43,7 @@ export function SimsCatalog({ sims }: Props) {
             return (
               <li key={sim.id}>
                 <Link
-                  href={`/dashboard/labs/${sim.id}`}
+                  href={`${LABS_HREF}/${sim.id}`}
                   className={styles.card}
                 >
                   <div className={styles.cardTop}>

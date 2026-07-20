@@ -1,12 +1,6 @@
-import { FreeStudyHub, type FreeStudyMode } from "@/components/free-study/FreeStudyHub";
+import { FreeStudyHub } from "@/components/free-study/FreeStudyHub";
 import { FreeStudyLanding } from "@/components/free-study/FreeStudyLanding";
-
-const HUB_MODES = new Set<FreeStudyMode>(["tutor", "pdf", "voice", "notes"]);
-
-function parseMode(value: string | undefined): FreeStudyMode | null {
-  if (!value || !HUB_MODES.has(value as FreeStudyMode)) return null;
-  return value as FreeStudyMode;
-}
+import { resolveFreeStudyDest } from "@/lib/free-study/parseDest";
 
 export default async function FreeStudyPage({
   searchParams,
@@ -15,10 +9,11 @@ export default async function FreeStudyPage({
   searchParams: Promise<{ mode?: string; dest?: string }>;
 }) {
   const params = await searchParams;
-  const mode = parseMode(params.dest) ?? parseMode(params.mode);
+  const mode = resolveFreeStudyDest(params.dest, params.mode);
 
   if (mode) {
-    return <FreeStudyHub initialMode={mode} />;
+    // key forces remount when FreeStudyShell sidebar / deep links change ?dest=
+    return <FreeStudyHub key={mode} initialMode={mode} />;
   }
 
   return <FreeStudyLanding />;

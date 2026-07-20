@@ -17,12 +17,11 @@ export type BoardTutorMessage = {
 
 export type UseBoardTutorOptions = {
   /**
-   * Live OCR / voice / PDF getters — read at ask time so the latest board
+   * Live OCR / voice getters — read at ask time so the latest board
    * snapshot wins (same sync-ref pattern as Free Studying whiteboard).
    */
   getOcrText?: () => string;
   getTranscript?: () => string;
-  getPdfExcerpt?: () => string;
 };
 
 /**
@@ -30,7 +29,7 @@ export type UseBoardTutorOptions = {
  * telemetry. Consumed by `BoardChatDock`.
  */
 export function useBoardTutor(options: UseBoardTutorOptions = {}) {
-  const { getOcrText, getTranscript, getPdfExcerpt } = options;
+  const { getOcrText, getTranscript } = options;
   const { user } = useAuth();
   const examType = useActiveExamType();
   const supabase = useMemo(() => createClient(), []);
@@ -59,13 +58,16 @@ export function useBoardTutor(options: UseBoardTutorOptions = {}) {
     if (conversationId) return conversationId;
     if (!user) return null;
     await ensureFreshSession(supabase);
+    // context_type must match tutor_conversations_context_type_check
+    // (exam_prep|lesson|question|general). "free_study" 400s until
+    // migration 20260720190000_tutor_conversations_free_study_context.sql.
     const { data, error } = await supabase
       .from("tutor_conversations")
       .insert({
         user_id: user.id,
         title: "Whiteboard",
         exam_type: examType,
-        context_type: "free_study",
+        context_type: "general",
       })
       .select("id")
       .single();
@@ -83,10 +85,8 @@ export function useBoardTutor(options: UseBoardTutorOptions = {}) {
     if (ocr) telemetry.ocr_text = ocr;
     const transcript = getTranscript?.().trim();
     if (transcript) telemetry.transcript = transcript;
-    const pdf = getPdfExcerpt?.().trim();
-    if (pdf) telemetry.pdf_excerpt = pdf.slice(0, 6000);
     return telemetry;
-  }, [getOcrText, getPdfExcerpt, getTranscript]);
+  }, [getOcrText, getTranscript]);
 
   const askScho = useCallback(
     async (

@@ -54,7 +54,12 @@ export async function createTutorConversation(
   userId: string,
   options: {
     title?: string;
-    context_type?: "exam_prep" | "lesson" | "question" | "general";
+    context_type?:
+      | "exam_prep"
+      | "lesson"
+      | "question"
+      | "general"
+      | "free_study";
     context_id?: string;
     exam_type?: ExamType;
   } = {},

@@ -4,11 +4,11 @@
  */
 
 .root {
-  --qz-cobalt: var(--cobalt, #2563eb);
-  --qz-ink: hsl(215 28% 14%);
-  --qz-muted: hsl(215 12% 42%);
-  --qz-paper: hsl(210 40% 99%);
-  --qz-edge: hsl(215 18% 70% / 0.38);
+  --qz-cobalt: var(--shell-cobalt);
+  --qz-ink: var(--shell-ink);
+  --qz-muted: var(--shell-muted);
+  --qz-paper: var(--shell-paper);
+  --qz-edge: color-mix(in srgb, var(--shell-edge) 70%, transparent);
   --qz-surface: color-mix(in srgb, var(--qz-cobalt) 4%, var(--qz-paper));
   --qz-good: hsl(152 55% 32%);
   --qz-bad: hsl(0 62% 42%);
@@ -27,7 +27,7 @@
     var(--qz-surface);
   color: var(--qz-ink);
   font-family: var(--font-body, system-ui, sans-serif);
-  animation: qzIn 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: qzIn 420ms var(--shell-ease) both;
 }
 
 @keyframes qzIn {

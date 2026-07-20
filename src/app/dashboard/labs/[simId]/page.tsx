@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 import "@/sims/catalog";
 import { getSim, listSimIds } from "@/sims/catalog";
 import { SimLabHost } from "@/components/sims/SimLabHost";
@@ -16,22 +14,21 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { simId } = await params;
+  const { simId: raw } = await params;
+  const simId = decodeURIComponent(raw);
   const sim = getSim(simId);
   return { title: sim ? `${sim.title} · STEM Lab` : "STEM Lab" };
 }
 
+/** Lab stage — catalog nav / back live in LabsShell sidebar. */
 export default async function StemLabPage({ params }: Props) {
-  const { simId } = await params;
+  const { simId: raw } = await params;
+  const simId = decodeURIComponent(raw);
   if (!getSim(simId)) notFound();
 
   return (
     <div className={styles.labPage}>
-      <Link href="/dashboard/labs" className={styles.labBack}>
-        <ArrowLeft size={16} weight="bold" aria-hidden />
-        All labs
-      </Link>
-      <SimLabHost simId={simId} />
+      <SimLabHost key={simId} simId={simId} />
     </div>
   );
 }

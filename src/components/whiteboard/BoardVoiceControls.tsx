@@ -42,6 +42,11 @@ export type BoardVoiceControlsProps = {
   lang?: string;
   /** Hide the live transcript preview strip. */
   hidePreview?: boolean;
+  /**
+   * Icon-only mic for embedding in a chat composer well
+   * (no rail chrome, status, or Talk label).
+   */
+  compact?: boolean;
   disabled?: boolean;
   className?: string;
 };
@@ -61,6 +66,7 @@ export function BoardVoiceControls({
   lockedMode,
   lang = "en-US",
   hidePreview = false,
+  compact = false,
   disabled = false,
   className,
 }: BoardVoiceControlsProps) {
@@ -216,19 +222,27 @@ export function BoardVoiceControls({
     if (listeningRef.current && modeRef.current === "ptt") stopSession();
   };
 
+  const rootClass = [styles.root, compact ? styles.compact : "", className]
+    .filter(Boolean)
+    .join(" ");
+
   if (!supported) {
     return (
       <div
-        className={[styles.root, className].filter(Boolean).join(" ")}
+        className={rootClass}
         role="group"
         aria-labelledby={labelId}
       >
         <div className={styles.unsupported} id={labelId}>
-          <MicrophoneSlash size={18} weight="bold" aria-hidden />
-          <div>
-            <strong>Voice unavailable</strong>
-            Web Speech API needs Chrome or Edge. Type in the chat dock instead.
-          </div>
+          <MicrophoneSlash size={compact ? 16 : 18} weight="bold" aria-hidden />
+          {compact ? (
+            <span className={styles.unsupportedShort}>Voice unavailable</span>
+          ) : (
+            <div>
+              <strong>Voice unavailable</strong>
+              Web Speech API needs Chrome or Edge. Type in the chat dock instead.
+            </div>
+          )}
         </div>
       </div>
     );
@@ -257,12 +271,12 @@ export function BoardVoiceControls({
 
   return (
     <div
-      className={[styles.root, className].filter(Boolean).join(" ")}
+      className={rootClass}
       role="group"
       aria-labelledby={labelId}
     >
       <div className={styles.rail}>
-        {!lockedMode ? (
+        {!lockedMode && !compact ? (
           <div className={styles.modes} role="radiogroup" aria-label="Mic mode">
             <button
               type="button"
@@ -311,6 +325,7 @@ export function BoardVoiceControls({
               .join(" ")}
             disabled={disabled}
             aria-pressed={listening}
+            title={statusText}
             aria-label={
               activeMode === "ptt"
                 ? listening
@@ -328,12 +343,14 @@ export function BoardVoiceControls({
               activeMode === "ptt" ? onPttLostCapture : undefined
             }
           >
-            <Microphone size={18} weight="fill" aria-hidden />
-            <span className={styles.micLabel}>{micLabel}</span>
+            <Microphone size={compact ? 16 : 18} weight="fill" aria-hidden />
+            {!compact ? (
+              <span className={styles.micLabel}>{micLabel}</span>
+            ) : null}
           </button>
         </div>
 
-        <div className={styles.meta}>
+        <div className={compact ? styles.metaSr : styles.meta}>
           <p
             id={labelId}
             className={[
@@ -345,11 +362,13 @@ export function BoardVoiceControls({
           >
             {statusText}
           </p>
-          <p className={styles.hint}>
-            {activeMode === "ptt"
-              ? "Push-to-talk keeps the board free while you speak."
-              : "Toggle stays on until you tap stop."}
-          </p>
+          {!compact ? (
+            <p className={styles.hint}>
+              {activeMode === "ptt"
+                ? "Push-to-talk keeps the board free while you speak."
+                : "Toggle stays on until you tap stop."}
+            </p>
+          ) : null}
         </div>
       </div>
 

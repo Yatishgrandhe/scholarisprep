@@ -4,11 +4,11 @@
  */
 
 .root {
-  --fc-cobalt: #2563eb;
-  --fc-ink: hsl(215 28% 14%);
-  --fc-muted: hsl(215 12% 42%);
-  --fc-paper: hsl(210 40% 99%);
-  --fc-edge: hsl(215 18% 70% / 0.35);
+  --fc-cobalt: var(--shell-cobalt);
+  --fc-ink: var(--shell-ink);
+  --fc-muted: var(--shell-muted);
+  --fc-paper: var(--shell-paper);
+  --fc-edge: color-mix(in srgb, var(--shell-edge) 65%, transparent);
   --fc-glow: color-mix(in srgb, var(--fc-cobalt) 12%, transparent);
 
   display: flex;
@@ -17,7 +17,7 @@
   min-width: 0;
   font-family: var(--font-body, system-ui, sans-serif);
   color: var(--fc-ink);
-  animation: fcIn 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: fcIn 400ms var(--shell-ease) both;
 }
 
 @keyframes fcIn {

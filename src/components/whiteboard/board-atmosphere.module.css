@@ -17,13 +17,13 @@
   --studio-lamp-spill: #c47a2e;
   --studio-fill-cool: #5b8fa8;
   --studio-fill-deep: #2a4a62;
-  --studio-aqua-glint: color-mix(in srgb, var(--aqua, #06b6d4) 55%, #7eb8c9);
-  --studio-cobalt-glint: color-mix(in srgb, var(--cobalt, #2563eb) 40%, #4a6fa5);
+  --studio-aqua-glint: color-mix(in srgb, var(--shell-aqua) 55%, #7eb8c9);
+  --studio-cobalt-glint: color-mix(in srgb, var(--shell-cobalt) 40%, #4a6fa5);
   --studio-grain-opacity: 0.09;
   --studio-vignette-strength: 0.42;
   --studio-lamp-opacity: 0.55;
   --studio-fill-opacity: 0.28;
-  --studio-radius: var(--radius-lg, 18px);
+  --studio-radius: var(--shell-radius);
 
   position: relative;
   isolation: isolate;

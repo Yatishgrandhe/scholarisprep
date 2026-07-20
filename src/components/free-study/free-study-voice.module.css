@@ -4,7 +4,7 @@
  */
 
 .root {
-  --fsv-cobalt: var(--cobalt, #2563eb);
+  --fsv-cobalt: var(--shell-cobalt);
   --fsv-cobalt-soft: color-mix(in srgb, var(--fsv-cobalt) 12%, hsl(var(--card)));
   --fsv-ink: hsl(var(--foreground));
   --fsv-muted: hsl(var(--muted-foreground));
@@ -43,58 +43,61 @@
 }
 
 .steps {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--fsv-cobalt) 14%, var(--fsv-border));
 }
 
 .step {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
   min-width: 0;
-  padding: 0.55rem 0.65rem;
-  border-radius: 12px;
-  border: 1px solid var(--fsv-border);
-  background: hsl(var(--muted) / 0.28);
+  padding: 0.2rem 0.45rem 0.45rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
   color: var(--fsv-muted);
+  box-shadow: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
   transition:
-    border-color 160ms ease,
-    background 160ms ease,
     color 160ms ease,
-    box-shadow 160ms ease;
+    border-color 160ms ease;
 }
 
 .stepActive {
   color: var(--fsv-ink);
-  border-color: color-mix(in srgb, var(--fsv-cobalt) 35%, var(--fsv-border));
-  background: var(--fsv-cobalt-soft);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--fsv-cobalt) 18%, transparent);
+  background: transparent;
+  border-color: transparent;
+  border-bottom-color: var(--fsv-cobalt);
+  box-shadow: none;
 }
 
 .stepDone {
-  color: var(--fsv-ink);
-  border-color: color-mix(in srgb, var(--fsv-cobalt) 22%, var(--fsv-border));
+  color: color-mix(in srgb, var(--fsv-cobalt) 55%, var(--fsv-ink));
+  border-color: transparent;
+  background: transparent;
 }
 
 .stepNum {
   font-size: 0.625rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
+  font-weight: 750;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--fsv-cobalt);
+  color: inherit;
+  opacity: 0.7;
 }
 
 .stepLabel {
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 650;
   letter-spacing: -0.01em;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .micRail {
@@ -198,22 +201,13 @@
 }
 
 .telemetryHint {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.45rem;
   margin: 0;
-  padding: 0.55rem 0.7rem;
-  border-radius: 12px;
-  border: 1px dashed color-mix(in srgb, var(--fsv-cobalt) 28%, var(--fsv-border));
-  background: color-mix(in srgb, var(--fsv-cobalt) 6%, hsl(var(--card)));
+  padding: 0;
+  border: none;
+  background: transparent;
   color: var(--fsv-muted);
   font-size: 0.75rem;
   line-height: 1.4;
-}
-
-.telemetryHint strong {
-  color: var(--fsv-ink);
-  font-weight: 700;
 }
 
 .reviewBlock {

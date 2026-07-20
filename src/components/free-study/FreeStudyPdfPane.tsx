@@ -291,8 +291,7 @@ export function FreeStudyPdfPane({
             </p>
           ) : (
             <p className={styles.safeNote}>
-              Text only goes to Scho via <code>pdf_excerpt</code> telemetry —
-              not the PDF bytes.
+              Scho only receives the excerpt below — never the PDF file.
             </p>
           )}
           <PdfIntentChooser

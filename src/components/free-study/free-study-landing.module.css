@@ -1,13 +1,14 @@
 /* Free Studying home — brand-forward cobalt first paint. No mode pill strip. */
 
 .root {
-  --fs-cobalt: #2563eb;
-  --fs-cobalt-deep: #1d4ed8;
-  --fs-navy: #0f1e3c;
-  --fs-aqua: #06b6d4;
-  --fs-ink: #0f1e3c;
+  /* Local aliases → shared studio shell tokens */
+  --fs-cobalt: var(--shell-cobalt);
+  --fs-cobalt-deep: var(--shell-cobalt-deep);
+  --fs-navy: var(--shell-navy);
+  --fs-aqua: var(--shell-aqua);
+  --fs-ink: var(--shell-navy);
   --fs-muted: color-mix(in srgb, var(--fs-navy) 58%, #64748b);
-  --fs-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fs-ease: var(--shell-ease);
 
   position: relative;
   isolation: isolate;
@@ -20,7 +21,7 @@
   color: var(--fs-ink);
   font-family: var(--font-body);
   overflow: clip;
-  border-radius: var(--radius-lg, 18px);
+  border-radius: var(--shell-radius);
   background:
     radial-gradient(
       120% 80% at 12% -10%,
@@ -260,9 +261,18 @@
   transition: color 160ms var(--fs-ease), border-color 160ms var(--fs-ease);
 }
 
+.labsOpenCue {
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
 .labsLink:hover {
   color: var(--fs-navy);
   border-color: color-mix(in srgb, var(--fs-navy) 35%, transparent);
+}
+
+.labsLink:hover .labsOpenCue {
+  opacity: 0.75;
 }
 
 .labsLink:focus-visible {

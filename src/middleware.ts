@@ -73,7 +73,9 @@ export async function middleware(request: NextRequest) {
     if (!user && (isProtected(pathname) || isOnboardingRoute(pathname))) {
       const loginUrl = request.nextUrl.clone();
       loginUrl.pathname = "/auth/login";
-      loginUrl.searchParams.set("redirectTo", pathname);
+      // Preserve query (e.g. /dashboard/free-study?dest=tutor) for post-login deep links
+      const redirectTo = `${pathname}${request.nextUrl.search}`;
+      loginUrl.searchParams.set("redirectTo", redirectTo);
       return redirectWithSession(loginUrl, supabaseResponse);
     }
 

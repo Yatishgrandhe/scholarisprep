@@ -5,9 +5,9 @@
   flex-direction: column;
   gap: var(--space-3);
   min-width: 0;
-  --notes-cobalt: #2563eb;
-  --notes-ink: hsl(222 28% 14%);
-  --notes-paper: hsl(210 28% 98%);
+  --notes-cobalt: var(--shell-cobalt);
+  --notes-ink: var(--shell-ink);
+  --notes-paper: var(--shell-paper);
   --notes-rail: hsl(214 32% 96%);
   --notes-line: hsl(214 20% 88%);
 }
@@ -367,7 +367,7 @@
 }
 
 .secondaryBtn:hover:not(:disabled) {
-  border-color: hsl(217 70% 72%);
+  border-color: color-mix(in srgb, var(--notes-cobalt) 40%, hsl(var(--border)));
   color: var(--notes-cobalt);
 }
 

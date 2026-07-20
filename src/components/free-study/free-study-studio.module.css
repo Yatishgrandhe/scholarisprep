@@ -5,15 +5,16 @@
  */
 
 .studio {
-  --fs-cobalt: #2563eb;
-  --fs-cobalt-deep: #1d4ed8;
-  --fs-aqua: #06b6d4;
-  --fs-ink: hsl(215 28% 14%);
-  --fs-muted: hsl(215 14% 42%);
-  --fs-paper: hsl(210 40% 99%);
-  --fs-snow: #f8fafc;
-  --fs-edge: hsl(215 20% 78% / 0.55);
-  --fs-glow: color-mix(in srgb, var(--fs-cobalt) 16%, transparent);
+  /* Local aliases → shared studio shell tokens (src/styles/studio-tokens.css) */
+  --fs-cobalt: var(--shell-cobalt);
+  --fs-cobalt-deep: var(--shell-cobalt-deep);
+  --fs-aqua: var(--shell-aqua);
+  --fs-ink: var(--shell-ink);
+  --fs-muted: var(--shell-muted);
+  --fs-paper: var(--shell-paper);
+  --fs-snow: var(--shell-snow);
+  --fs-edge: var(--shell-edge);
+  --fs-glow: var(--shell-glow);
 
   position: relative;
   display: flex;
@@ -48,6 +49,30 @@
   z-index: 1;
 }
 
+/* Skip link — visible on keyboard focus only */
+.skipLink {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 5;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  background: var(--fs-cobalt);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  text-decoration: none;
+  transform: translateY(-120%);
+  transition: transform 160ms ease;
+}
+
+.skipLink:focus,
+.skipLink:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid var(--fs-cobalt-deep);
+  outline-offset: 2px;
+}
+
 /* ── Landing ── */
 
 .landing {
@@ -55,7 +80,7 @@
   flex-direction: column;
   gap: 1.75rem;
   padding: 0.35rem 0 1.25rem;
-  animation: fsLandIn 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: fsLandIn 480ms var(--shell-ease) both;
 }
 
 @keyframes fsLandIn {
@@ -212,7 +237,7 @@
   color: var(--fs-muted);
 }
 
-/* ── Focused studio: slim rail + workspace ── */
+/* ── Focused studio: slim rail + workspace (legacy; shell owns nav) ── */
 
 .focused {
   display: grid;
@@ -221,7 +246,16 @@
   align-items: stretch;
   min-width: 0;
   min-height: min(72vh, 760px);
-  animation: fsFocusIn 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: fsFocusIn 360ms var(--shell-ease) both;
+}
+
+/* Workspace-only layout when FreeStudyShell provides the product sidebar */
+.focusedShell {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: min(72vh, 760px);
+  animation: fsFocusIn 360ms var(--shell-ease) both;
 }
 
 @keyframes fsFocusIn {
@@ -238,14 +272,13 @@
 .rail {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  padding: 0.45rem;
-  width: 3.35rem;
-  border-radius: 16px;
-  border: 1px solid var(--fs-edge);
-  background:
-    linear-gradient(180deg, hsl(0 0% 100% / 0.88), var(--fs-snow));
-  box-shadow: 0 6px 22px hsl(215 30% 20% / 0.04);
+  gap: 2px;
+  padding: var(--space-1, 4px);
+  width: 2.75rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--fs-cobalt) 10%, var(--fs-edge));
+  background: color-mix(in srgb, var(--fs-snow) 92%, transparent);
+  box-shadow: none;
   align-self: start;
   position: sticky;
   top: 0.5rem;
@@ -255,14 +288,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.45rem;
-  height: 2.45rem;
-  border-radius: 11px;
-  border: 1px solid transparent;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 8px;
+  border: none;
   background: transparent;
   color: var(--fs-muted);
   cursor: pointer;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0;
 }
 
 .railHome:hover {
@@ -274,11 +307,17 @@
 .railBtn:focus-visible {
   outline: 2px solid var(--fs-cobalt);
   outline-offset: 2px;
+  z-index: 1;
+  position: relative;
+}
+
+.railBtnActive:focus-visible {
+  outline-offset: 3px;
 }
 
 .railSep {
   height: 1px;
-  margin: 0.2rem 0.45rem 0.35rem;
+  margin: var(--space-1, 4px) 0.4rem;
   background: var(--fs-edge);
   border: 0;
 }
@@ -287,28 +326,27 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.45rem;
-  height: 2.45rem;
-  border-radius: 11px;
-  border: 1px solid transparent;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 8px;
+  border: none;
   background: transparent;
   color: var(--fs-muted);
   cursor: pointer;
   transition:
-    background 140ms ease,
-    color 140ms ease,
-    border-color 140ms ease;
+    background 140ms var(--shell-ease, ease),
+    color 140ms var(--shell-ease, ease);
 }
 
 .railBtn:hover {
   color: var(--fs-ink);
-  background: hsl(215 25% 96%);
+  background: color-mix(in srgb, var(--fs-cobalt) 6%, white);
 }
 
 .railBtnActive {
-  color: var(--fs-cobalt);
+  color: var(--fs-cobalt-deep);
   background: color-mix(in srgb, var(--fs-cobalt) 12%, white);
-  border-color: color-mix(in srgb, var(--fs-cobalt) 28%, transparent);
+  box-shadow: inset 2px 0 0 var(--fs-cobalt);
 }
 
 .workspace {
@@ -329,16 +367,18 @@
 
 .workspaceTitle {
   margin: 0;
-  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
-  font-size: clamp(1.35rem, 2.8vw, 1.7rem);
-  font-weight: 400;
+  font-family: var(--font-body, "Plus Jakarta Sans", system-ui, sans-serif);
+  font-size: clamp(1.125rem, 2.2vw, 1.35rem);
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--fs-ink);
 }
 
 .workspaceMeta {
   margin: 0;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   color: var(--fs-muted);
 }
 
@@ -352,21 +392,37 @@
     grid-template-columns: 1fr;
   }
 
+  /* Slim icon strip — never a wrapping fat tab row */
   .rail {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: auto;
+    max-width: 100%;
+    overflow-x: auto;
     position: static;
-    padding: 0.4rem;
-    gap: 0.3rem;
+    padding: 0.35rem;
+    gap: 0.2rem;
+    border-radius: 12px;
   }
 
   .railSep {
-    display: none;
+    width: 1px;
+    height: 1.35rem;
+    margin: 0 0.2rem;
+    align-self: center;
+    background: var(--fs-edge);
   }
 
   .railHome {
     margin-bottom: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .railBtn {
+    width: 2.25rem;
+    height: 2.25rem;
+    flex-shrink: 0;
   }
 
   .destGrid {

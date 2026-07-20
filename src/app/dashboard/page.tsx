@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { Notebook, Sparkle } from "@phosphor-icons/react/dist/ssr";
+import {
+  ArrowSquareOut,
+  Flask,
+  Notebook,
+  Sparkle,
+} from "@phosphor-icons/react/dist/ssr";
 import { createClient } from "@/lib/supabase/server";
 import {
   predictFromAttempts,
@@ -14,7 +19,11 @@ import {
   defaultTargetForExam,
   scoreBoundsForExam,
 } from "@/lib/onboarding/examPrograms";
-import { FREE_STUDY_HREF } from "@/lib/dashboard/navRoutes";
+import {
+  FREE_STUDY_HREF,
+  LABS_HREF,
+  PRODUCT_NEW_TAB_PROPS,
+} from "@/lib/dashboard/navRoutes";
 import { tutorCtaLabel, tutorHref } from "@/lib/tutor/routes";
 import type { ExamType, Profile } from "@/types/supabase";
 import {
@@ -201,15 +210,38 @@ export default async function DashboardPage() {
                 Create my study plan
               </Link>
             ) : null}
-            <Link
+            <a
               href={FREE_STUDY_HREF}
+              {...PRODUCT_NEW_TAB_PROPS}
+              title="Opens Free Studying in a new tab"
               className={
                 hasPlan ? styles.greetingCta : styles.homeApIbCtaSecondary
               }
             >
               <Notebook size={16} weight="duotone" aria-hidden />
               Free Studying
-            </Link>
+              <ArrowSquareOut
+                className={styles.ctaNewTabCue}
+                size={13}
+                weight="bold"
+                aria-hidden
+              />
+            </a>
+            <a
+              href={LABS_HREF}
+              {...PRODUCT_NEW_TAB_PROPS}
+              title="Opens STEM Labs in a new tab"
+              className={styles.homeApIbCtaSecondary}
+            >
+              <Flask size={16} weight="duotone" aria-hidden />
+              STEM Labs
+              <ArrowSquareOut
+                className={styles.ctaNewTabCue}
+                size={13}
+                weight="bold"
+                aria-hidden
+              />
+            </a>
           </div>
           {apIb ? (
             <div className={styles.homeApIbCtas}>

@@ -46,7 +46,6 @@ export const BOARD_ARIA = {
   chatMessages: "Chat messages",
   chatComposer: "Message Scho",
   voiceControls: "Voice controls",
-  pdfPeek: "PDF reference",
   emptyHint: "Write anything — then talk to Scho",
   statusRegion: "Whiteboard status",
   ocrStatus: "OCR status",

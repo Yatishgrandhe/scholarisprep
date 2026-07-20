@@ -4,15 +4,18 @@
  */
 
 .studio {
-  --studio-chrome-gap: 0.75rem;
-  --studio-ask-top: 3.25rem;
+  /* Layout chrome → shared studio shell tokens (FS / Labs / WB) */
+  --studio-chrome-gap: var(--shell-chrome-gap, 0.75rem);
+  --studio-ask-top: var(--shell-ask-top, 3.25rem);
 
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  min-height: min(100%, 100dvh);
+  /* Match FreeStudyShell / LabsShell: fill examLayout via dvh, not % */
+  height: 100dvh;
+  max-height: 100dvh;
+  min-height: 0;
   overflow: hidden;
   isolation: isolate;
   background: transparent;
@@ -61,14 +64,12 @@
   pointer-events: none;
 }
 
-.askSlot[data-ready],
-.pdfSlot[data-ready] {
+.askSlot[data-ready] {
   opacity: 1;
-  transition: opacity 280ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 280ms var(--shell-ease);
 }
 
-.askSlot:not([data-ready]),
-.pdfSlot:not([data-ready]) {
+.askSlot:not([data-ready]) {
   opacity: 0;
   pointer-events: none;
 }
@@ -100,21 +101,6 @@
   margin-inline: auto;
 }
 
-/* Optional PDF peek — top trailing corner */
-.pdfSlot {
-  position: absolute;
-  z-index: 13;
-  top: max(0.65rem, env(safe-area-inset-top, 0px));
-  right: max(0.65rem, env(safe-area-inset-right, 0px));
-  width: min(18rem, calc(100% - 5.5rem));
-  pointer-events: none;
-}
-
-.pdfSlot > * {
-  pointer-events: auto;
-  margin-left: auto;
-}
-
 /* Chat dock sits in stage; sibling CSS owns absolute placement */
 .dock {
   z-index: 20;
@@ -136,9 +122,5 @@
   .askSlot {
     top: max(3rem, calc(env(safe-area-inset-top, 0px) + 2.5rem));
     width: calc(100% - 1rem);
-  }
-
-  .pdfSlot {
-    display: none;
   }
 }

@@ -227,20 +227,12 @@
   cursor: not-allowed;
 }
 
-.tile[data-intent="ask"] {
-  --tile-accent: #2563eb;
-}
-
-.tile[data-intent="quiz"] {
-  --tile-accent: #0d9488;
-}
-
-.tile[data-intent="summarize"] {
-  --tile-accent: #0369a1;
-}
-
+/* All intents stay cobalt — primary CTA weight via .tilePrimary only */
+.tile[data-intent="ask"],
+.tile[data-intent="quiz"],
+.tile[data-intent="summarize"],
 .tile[data-intent="flashcards"] {
-  --tile-accent: #c2410c;
+  --tile-accent: var(--pi-cobalt);
 }
 
 .tileIcon {

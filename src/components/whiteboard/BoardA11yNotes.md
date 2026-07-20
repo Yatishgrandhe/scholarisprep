@@ -22,7 +22,6 @@ Canonical strings and patterns for `/dashboard/whiteboard`.
 | Chat messages | live `log` · `Chat messages` | `chatLogLiveRegionProps()` |
 | Chat composer | `Message Scho` | `BOARD_ARIA.chatComposer` |
 | Voice controls | `Voice controls` | `BOARD_ARIA.voiceControls` |
-| PDF peek | `PDF reference` | `BOARD_ARIA.pdfPeek` |
 
 ---
 

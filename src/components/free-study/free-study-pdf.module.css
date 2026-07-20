@@ -17,11 +17,11 @@
   gap: var(--space-3);
   padding: 1.1rem 1rem;
   border-radius: 14px;
-  border: 1px dashed hsl(var(--primary) / 0.35);
+  border: 1px dashed color-mix(in srgb, var(--cobalt, #2563eb) 35%, hsl(var(--border)));
   background:
     linear-gradient(
       165deg,
-      hsl(var(--primary) / 0.06) 0%,
+      color-mix(in srgb, var(--cobalt, #2563eb) 7%, transparent) 0%,
       hsl(var(--card)) 55%
     );
 }
@@ -63,12 +63,16 @@
   padding: 0 0.95rem;
   border-radius: 10px;
   border: 1px solid transparent;
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background: var(--cobalt, #2563eb);
+  color: #fff;
   font-size: 0.875rem;
   font-weight: 650;
   cursor: pointer;
   font-family: var(--font-body);
+}
+
+.uploadBtn:hover:not(:disabled) {
+  background: var(--cobalt-dark, #1d4ed8);
 }
 
 .uploadBtn:disabled {
@@ -91,6 +95,11 @@
   font-weight: 600;
   cursor: pointer;
   font-family: var(--font-body);
+}
+
+.ghostBtn:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--cobalt, #2563eb) 40%, hsl(var(--border)));
+  color: var(--cobalt, #2563eb);
 }
 
 .ghostBtn:disabled {

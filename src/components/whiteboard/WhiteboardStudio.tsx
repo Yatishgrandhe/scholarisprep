@@ -18,7 +18,6 @@ import {
 } from "./BoardChatDock";
 import { BoardAskBar } from "./BoardAskBar";
 import { BoardEmptyHint } from "./BoardEmptyHint";
-import { BoardPdfPeek } from "./BoardPdfPeek";
 import { BoardSchoOpen } from "./BoardSchoOpen";
 import { BoardTopEsc } from "./BoardTopEsc";
 import {
@@ -61,7 +60,6 @@ export function WhiteboardStudio() {
   const [canUndo, setCanUndo] = useState(false);
   const [drawing, setDrawing] = useState(false);
   const [ocrText, setOcrText] = useState("");
-  const [pdfExcerpt, setPdfExcerpt] = useState("");
   const [statusNote, setStatusNote] = useState("");
   /** Dock waits until centered Scho open ceremony finishes. */
   const [schoOpenDone, setSchoOpenDone] = useState(false);
@@ -170,15 +168,10 @@ export function WhiteboardStudio() {
             />
           </div>
 
-          <div className={styles.pdfSlot} data-ready={schoOpenDone || undefined}>
-            <BoardPdfPeek value={pdfExcerpt} onChange={setPdfExcerpt} />
-          </div>
-
           <BoardChatDock
             ref={chatRef}
             className={styles.dock}
             ocrText={ocrText}
-            pdfExcerpt={pdfExcerpt}
             placement="auto"
             defaultCollapsed={false}
             revealReady={schoOpenDone}

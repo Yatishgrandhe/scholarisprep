@@ -79,6 +79,7 @@ export {
   LABS_NAV_ID,
   WHITEBOARD_HREF,
   WHITEBOARD_NAV_ID,
+  PRODUCT_NEW_TAB_PROPS,
 } from "@/lib/dashboard/navRoutes";
 
 /** Whiteboard Studio — Free Studying child / account shortcut (not STEM Labs). */
@@ -98,6 +99,8 @@ function mainNavForExam(examType: ExamType): NavItem[] {
       label: "Free Studying",
       icon: Notebook,
       badge: "New",
+      /** Open hub in a new browser tab from dashboard chrome. */
+      external: true,
       children: [WHITEBOARD_NAV_ITEM],
     },
     {
@@ -106,6 +109,8 @@ function mainNavForExam(examType: ExamType): NavItem[] {
       label: "STEM Labs",
       icon: Flask,
       badge: "New",
+      /** Open labs catalog in a new browser tab from dashboard chrome. */
+      external: true,
     },
     {
       id: "scho",

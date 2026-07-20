@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {
   ArrowRight,
+  ArrowSquareOut,
   ChatsCircle,
   FilePdf,
   Flask,
@@ -13,12 +14,19 @@ import {
 import {
   FREE_STUDY_HREF,
   LABS_HREF,
+  PRODUCT_NEW_TAB_PROPS,
   WHITEBOARD_HREF,
 } from "@/lib/dashboard/navRoutes";
+import {
+  FS_ARIA,
+  destinationLandingLabel,
+  handleDestinationRailKeyDown,
+  type FreeStudyDestinationId,
+} from "@/components/free-study/freeStudyA11y";
 import styles from "./free-study-landing.module.css";
 
 type Destination = {
-  id: "tutor" | "whiteboard" | "pdf" | "voice" | "notes";
+  id: FreeStudyDestinationId;
   label: string;
   hint: string;
   href: string;
@@ -69,7 +77,11 @@ const DESTINATIONS: Destination[] = [
  */
 export function FreeStudyLanding() {
   return (
-    <div className={styles.root}>
+    <div
+      className={styles.root}
+      data-free-study-landing=""
+      aria-label={FS_ARIA.studio}
+    >
       <div className={styles.atmosphere} aria-hidden>
         <div className={styles.lamp} />
         <div className={styles.grain} />
@@ -88,7 +100,11 @@ export function FreeStudyLanding() {
           </p>
         </header>
 
-        <nav className={styles.destinations} aria-label="Free Studying destinations">
+        <nav
+          className={styles.destinations}
+          aria-label={FS_ARIA.destinations}
+          onKeyDown={handleDestinationRailKeyDown}
+        >
           {DESTINATIONS.map((dest, i) => {
             const Icon = dest.icon;
             return (
@@ -97,11 +113,12 @@ export function FreeStudyLanding() {
                 href={dest.href}
                 className={styles.dest}
                 style={{ ["--delay" as string]: `${90 + i * 55}ms` }}
+                aria-label={destinationLandingLabel(dest.id, dest.hint)}
               >
                 <span className={styles.destIcon} aria-hidden>
                   <Icon size={22} weight="duotone" />
                 </span>
-                <span className={styles.destCopy}>
+                <span className={styles.destCopy} aria-hidden>
                   <span className={styles.destLabel}>{dest.label}</span>
                   <span className={styles.destHint}>{dest.hint}</span>
                 </span>
@@ -118,10 +135,21 @@ export function FreeStudyLanding() {
       </div>
 
       <footer className={styles.foot}>
-        <Link href={LABS_HREF} className={styles.labsLink}>
+        <a
+          href={LABS_HREF}
+          className={styles.labsLink}
+          {...PRODUCT_NEW_TAB_PROPS}
+          title="Opens STEM Labs in a new tab"
+        >
           <Flask size={14} weight="fill" aria-hidden />
           Open STEM Labs
-        </Link>
+          <ArrowSquareOut
+            className={styles.labsOpenCue}
+            size={12}
+            weight="bold"
+            aria-hidden
+          />
+        </a>
       </footer>
     </div>
   );

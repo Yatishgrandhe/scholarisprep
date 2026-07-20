@@ -10,7 +10,12 @@ import { ActiveExamScopeEffect } from "@/components/dashboard/ActiveExamScopeEff
 import { AiKeyPrompt } from "@/components/ai/AiKeyPrompt";
 import { BackfillExamTypeEffect } from "@/components/dashboard/BackfillExamTypeEffect";
 import { ErrorBoundary } from "@/components/shared/ErrorBoundary";
-import { isExamFullscreenRoute } from "@/lib/dashboard/shellRoutes";
+import {
+  isExamFullscreenRoute,
+  isFreeStudyFullscreenRoute,
+  isLabsFullscreenRoute,
+  isWhiteboardFullscreenRoute,
+} from "@/lib/dashboard/shellRoutes";
 import { useActiveExamType } from "@/hooks/useActiveExamType";
 import {
   getSidebarCollapsed,
@@ -35,11 +40,20 @@ function getSidebarServerSnapshot() {
 export function DashboardShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const examType = useActiveExamType();
-  // Pathname-driven: practice sessions, exams, question-rush, and
-  // `/dashboard/whiteboard` drop sidebar + top bar for a full-bleed canvas.
-  // Other dashboard routes keep the normal chrome (incl. free-study hub).
-  const hideShell = isExamFullscreenRoute(pathname ?? "");
-  const pageScopeKey = `${pathname ?? ""}:${examType}`;
+  const path = pathname ?? "";
+
+  // Immersive study surfaces drop PRIMARY dashboard chrome (sidebar / top bar /
+  // mobile tab bar). Product shells keep their own sidebars:
+  // - FreeStudyShell on `/dashboard/free-study`
+  // - LabsShell on `/dashboard/labs` (+ `/dashboard/labs/[simId]`)
+  // - WhiteboardStudio on `/dashboard/whiteboard`
+  const hideShell =
+    isExamFullscreenRoute(path) ||
+    isFreeStudyFullscreenRoute(path) ||
+    isLabsFullscreenRoute(path) ||
+    isWhiteboardFullscreenRoute(path);
+
+  const pageScopeKey = `${path}:${examType}`;
   const collapsed = useSyncExternalStore(
     subscribeSidebar,
     getSidebarSnapshot,
@@ -54,7 +68,21 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
 
   if (hideShell) {
     return (
-      <div className={styles.examLayout} data-shell="fullscreen">
+      <div
+        className={styles.examLayout}
+        data-shell="fullscreen"
+        data-dashboard-chrome="hidden"
+        data-free-study-fullscreen={
+          isFreeStudyFullscreenRoute(path) ? "true" : undefined
+        }
+        data-labs-fullscreen={
+          isLabsFullscreenRoute(path) ? "true" : undefined
+        }
+        data-whiteboard-fullscreen={
+          isWhiteboardFullscreenRoute(path) ? "true" : undefined
+        }
+      >
+        {/* No DashboardSidebar / DashboardTopBar / MobileTabBar here. */}
         {children}
         <AiKeyPrompt />
       </div>
@@ -65,6 +93,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
     <div
       className={`${styles.layout} ${collapsed ? styles.layoutCollapsed : ""}`}
       data-sidebar-collapsed={collapsed ? "true" : "false"}
+      data-dashboard-chrome="visible"
     >
       <AccountSyncEffect />
       <BackfillExamTypeEffect />
@@ -72,7 +101,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
         <ActiveExamScopeEffect />
       </Suspense>
 
-      {/* Sidebar always rendered — collapses to icon rail, never disappears */}
+      {/* Primary dashboard sidebar — not used on free-study / labs / whiteboard */}
       <DashboardSidebar collapsed={collapsed} onCollapse={toggleSidebar} />
 
       <div className={styles.contentShell} data-dashboard-shell>

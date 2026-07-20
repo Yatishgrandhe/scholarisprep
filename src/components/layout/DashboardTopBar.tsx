@@ -102,7 +102,9 @@ export function DashboardTopBar() {
               <DropdownMenuSeparator />
               <DropdownMenuItem
                 className={styles.accountItem}
-                onClick={() => router.push(FREE_STUDY_HREF)}
+                onClick={() =>
+                  window.open(FREE_STUDY_HREF, "_blank", "noopener,noreferrer")
+                }
               >
                 <Notebook size={16} weight="duotone" aria-hidden />
                 Free Studying

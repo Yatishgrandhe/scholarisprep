@@ -148,8 +148,7 @@ export function FreeStudyVoicePane({
       </div>
 
       <p className={styles.telemetryHint}>
-        <strong>Text telemetry.</strong> On Ask Scho, the transcript is attached
-        as <code>transcript</code> for Mistral — same channel as PDF/OCR text.
+        Only the edited transcript goes to Scho — never the audio recording.
       </p>
 
       <div className={styles.reviewBlock}>
@@ -205,7 +204,7 @@ export function FreeStudyVoicePane({
         </button>
         <p className={styles.askMeta}>
           {hasTranscript
-            ? "Sends your question plus the transcript as text telemetry."
+            ? "Sends your question with the transcript attached."
             : "Start listening (or paste text) before asking."}
         </p>
       </div>

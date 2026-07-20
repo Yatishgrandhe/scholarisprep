@@ -150,8 +150,10 @@ export function MobileTabBar() {
                   ? pathname === LABS_HREF ||
                     pathname.startsWith(`${LABS_HREF}/`)
                   : isActive(pathname, href!, match);
-          return (
-            <Link
+          const openInNewTab =
+            id === FREE_STUDY_NAV_ID || id === LABS_NAV_ID;
+          return openInNewTab ? (
+            <a
               key={id}
               href={href!}
               className={`${styles.tab} ${active ? styles.tabActive : ""}`}
@@ -163,6 +165,18 @@ export function MobileTabBar() {
                     ? "STEM Labs"
                     : undefined
               }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon size={22} weight={active ? "fill" : "regular"} aria-hidden />
+              <span className={styles.tabLabel}>{label}</span>
+            </a>
+          ) : (
+            <Link
+              key={id}
+              href={href!}
+              className={`${styles.tab} ${active ? styles.tabActive : ""}`}
+              aria-current={active ? "page" : undefined}
             >
               <Icon size={22} weight={active ? "fill" : "regular"} aria-hidden />
               <span className={styles.tabLabel}>{label}</span>
