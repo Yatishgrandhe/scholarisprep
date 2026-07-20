@@ -10,7 +10,6 @@ import {
 } from "react";
 import {
   CaretDown,
-  ChatsCircle,
   PaperPlaneTilt,
   Stop,
 } from "@phosphor-icons/react";
@@ -19,6 +18,7 @@ import { useActiveExamType } from "@/hooks/useActiveExamType";
 import { useBoardTutor } from "@/hooks/useBoardTutor";
 import { useKokoroTts } from "@/hooks/useKokoroTts";
 import { FreeStudySectionedReply } from "@/components/free-study/FreeStudySectionedReply";
+import { ScholarisLogoMark } from "@/components/brand/ScholarisLogoMark";
 import {
   BOARD_ARIA,
   chatLogLiveRegionProps,
@@ -60,6 +60,11 @@ export type BoardChatDockProps = {
   onPlay?: (text: string) => void;
   playing?: boolean;
   disabled?: boolean;
+  /**
+   * When false, dock stays collapsed and does not animate open
+   * (e.g. wait for centered Scho open ceremony).
+   */
+  revealReady?: boolean;
 };
 
 function resolveEdge(
@@ -82,13 +87,16 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
       onPlay,
       playing,
       disabled,
+      revealReady = true,
     },
     ref,
   ) {
     const examType = useActiveExamType();
     const { dockClassName } = useBoardMotion();
 
-    const [collapsed, setCollapsed] = useState(defaultCollapsed);
+    const [collapsed, setCollapsed] = useState(
+      defaultCollapsed || !revealReady,
+    );
     const [input, setInput] = useState("");
     const [listening, setListening] = useState(false);
     const [autoEdge, setAutoEdge] = useState<BoardDockEdge>("side");
@@ -97,6 +105,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
     const transcriptRef = useRef("");
     const pdfLiveRef = useRef(pdfExcerpt);
     const feedRef = useRef<HTMLDivElement | null>(null);
+    const pendingExpandRef = useRef(false);
 
     useEffect(() => {
       ocrLiveRef.current = ocrText;
@@ -114,6 +123,15 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
       mq.addEventListener("change", sync);
       return () => mq.removeEventListener("change", sync);
     }, []);
+
+    // After Scho open ceremony, expand unless user already collapsed or asked early.
+    useEffect(() => {
+      if (!revealReady) return;
+      if (pendingExpandRef.current || !defaultCollapsed) {
+        setCollapsed(false);
+        pendingExpandRef.current = false;
+      }
+    }, [revealReady, defaultCollapsed]);
 
     const {
       messages,
@@ -162,13 +180,17 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
         if (options?.ocrText !== undefined) {
           ocrLiveRef.current = options.ocrText;
         }
-        setCollapsed(false);
+        if (!revealReady) {
+          pendingExpandRef.current = true;
+        } else {
+          setCollapsed(false);
+        }
         await askScho(text, {
           ocrText: options?.ocrText,
           transcript: transcriptRef.current || undefined,
         });
       },
-      [askScho, canAsk, disabled],
+      [askScho, canAsk, disabled, revealReady],
     );
 
     useImperativeHandle(
@@ -177,14 +199,20 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
         ask: (message: string, options?: BoardChatAskOptions) => {
           void sendAsk(message, options);
         },
-        expand: () => setCollapsed(false),
+        expand: () => {
+          if (!revealReady) {
+            pendingExpandRef.current = true;
+            return;
+          }
+          setCollapsed(false);
+        },
         collapse: () => setCollapsed(true),
         setOcrText: (text: string) => {
           ocrLiveRef.current = text;
           setOcrText(text);
         },
       }),
-      [sendAsk, setOcrText],
+      [sendAsk, setOcrText, revealReady],
     );
 
     const onVoiceTranscript = useCallback(
@@ -216,26 +244,38 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
 
     const ocrPreview = (ocrText || tutorOcr).trim();
     const canSend = Boolean(input.trim()) && canAsk && !disabled;
+    const live = listening || isStreaming;
+    const dockOpen = revealReady && !collapsed;
 
-    if (collapsed) {
+    if (!revealReady || collapsed) {
       return (
         <aside
           className={`${styles.dock} ${styles.collapsed} ${className ?? ""}`}
           aria-label={BOARD_ARIA.chatDock}
+          aria-hidden={!revealReady}
         >
           <button
             type="button"
             className={styles.tab}
-            onClick={() => setCollapsed(false)}
+            onClick={() => {
+              if (!revealReady) return;
+              setCollapsed(false);
+            }}
             aria-expanded={false}
+            disabled={!revealReady}
           >
+            <span className={styles.tabMark} aria-hidden>
+              <ScholarisLogoMark size={16} />
+            </span>
+            Talk with Scho
             <span
-              className={`${styles.tabDot} ${listening || isStreaming ? styles.tabDotLive : ""}`}
+              className={`${styles.tabDot} ${live ? styles.tabDotLive : ""}`}
               aria-hidden
             />
-            Talk with Scho
             {messages.length > 0 ? (
-              <span aria-hidden>· {messages.length}</span>
+              <span className={styles.tabCount} aria-hidden>
+                {messages.length}
+              </span>
             ) : null}
           </button>
         </aside>
@@ -247,7 +287,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
         className={[
           styles.dock,
           placementClass,
-          dockClassName(true, edge),
+          dockClassName(dockOpen, edge),
           className,
         ]
           .filter(Boolean)
@@ -258,35 +298,40 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
           <div className={styles.rail} aria-hidden />
 
           <header className={styles.head}>
-            <span className={styles.brandMark} aria-hidden>
-              <ChatsCircle size={15} weight="fill" />
+            <span
+              className={`${styles.brandMark} ${live ? styles.brandMarkLive : ""}`}
+              aria-hidden
+            >
+              <ScholarisLogoMark size={18} />
             </span>
             <div className={styles.brandCopy}>
-              <p className={styles.brandTitle}>Scho on the board</p>
+              <p className={styles.brandTitle}>Scho</p>
               <p className={styles.brandSub}>
-                Ask while you draw · {examType}
+                On the board · {examType}
               </p>
             </div>
-            {isStreaming ? (
+            <div className={styles.headActions}>
+              {isStreaming ? (
+                <button
+                  type="button"
+                  className={styles.iconBtn}
+                  onClick={() => cancelStream()}
+                  aria-label="Stop reply"
+                  title="Stop"
+                >
+                  <Stop size={14} weight="fill" />
+                </button>
+              ) : null}
               <button
                 type="button"
                 className={styles.iconBtn}
-                onClick={() => cancelStream()}
-                aria-label="Stop reply"
-                title="Stop"
+                onClick={() => setCollapsed(true)}
+                aria-label="Collapse chat"
+                title="Collapse"
               >
-                <Stop size={14} weight="fill" />
+                <CaretDown size={16} weight="bold" />
               </button>
-            ) : null}
-            <button
-              type="button"
-              className={styles.iconBtn}
-              onClick={() => setCollapsed(true)}
-              aria-label="Collapse chat"
-              title="Collapse"
-            >
-              <CaretDown size={16} weight="bold" />
-            </button>
+            </div>
           </header>
 
           <div
@@ -295,11 +340,16 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
             {...chatLogLiveRegionProps()}
           >
             {messages.length === 0 && !streamedText ? (
-              <p className={styles.empty}>
-                <strong>Board stays primary</strong>
-                Talk here — OCR from your ink is attached automatically when you
-                ask.
-              </p>
+              <div className={styles.empty}>
+                <span className={styles.emptyMark} aria-hidden>
+                  <ScholarisLogoMark size={20} />
+                </span>
+                <strong>Ask while you draw</strong>
+                <p className={styles.emptyHint}>
+                  Board stays primary. Handwriting OCR attaches automatically
+                  when you ask.
+                </p>
+              </div>
             ) : null}
 
             {messages.map((m, i) =>
@@ -309,7 +359,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
                   className={`${styles.turn} ${styles.turnUser}`}
                 >
                   <span className={styles.turnMeta}>You</span>
-                  <p className={styles.userText}>{m.content}</p>
+                  <p className={styles.userBubble}>{m.content}</p>
                 </div>
               ) : (
                 <div
@@ -317,11 +367,13 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
                   className={`${styles.turn} ${styles.turnAssistant}`}
                 >
                   <span className={styles.turnMeta}>Scho</span>
-                  <FreeStudySectionedReply
-                    content={m.content}
-                    playing={isPlaying}
-                    onPlay={handlePlay}
-                  />
+                  <div className={styles.assistantBody}>
+                    <FreeStudySectionedReply
+                      content={m.content}
+                      playing={isPlaying}
+                      onPlay={handlePlay}
+                    />
+                  </div>
                 </div>
               ),
             )}
@@ -329,63 +381,79 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
             {streamedText ? (
               <div className={`${styles.turn} ${styles.turnAssistant}`}>
                 <span className={styles.turnMeta}>Scho</span>
-                <FreeStudySectionedReply content={streamedText} />
+                <div className={styles.assistantBody}>
+                  <FreeStudySectionedReply content={streamedText} />
+                </div>
               </div>
             ) : null}
 
             {statusNote ? <p className={styles.status}>{statusNote}</p> : null}
             {isStreaming && !streamedText ? (
-              <p className={styles.status}>Scho is thinking…</p>
+              <p className={styles.thinking}>
+                <span className={styles.thinkingDots} aria-hidden>
+                  <span />
+                  <span />
+                  <span />
+                </span>
+                Scho is thinking…
+              </p>
             ) : null}
           </div>
 
-          {ocrPreview ? (
-            <div className={styles.ocrChip} title={ocrPreview}>
-              OCR attached · {ocrPreview.slice(0, 72)}
-              {ocrPreview.length > 72 ? "…" : ""}
+          <div className={styles.footer}>
+            {ocrPreview ? (
+              <div className={styles.ocrChip} title={ocrPreview}>
+                OCR · {ocrPreview.slice(0, 64)}
+                {ocrPreview.length > 64 ? "…" : ""}
+              </div>
+            ) : null}
+
+            <div className={styles.composerRow}>
+              <div
+                className={styles.voiceSlot}
+                aria-label={BOARD_ARIA.voiceControls}
+              >
+                <BoardVoiceControls
+                  lockedMode="toggle"
+                  hidePreview
+                  disabled={disabled || isStreaming}
+                  onTranscript={onVoiceTranscript}
+                  onSessionEnd={onVoiceSessionEnd}
+                  className={styles.voiceControls}
+                />
+              </div>
+
+              <form
+                className={styles.composer}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const text = input.trim();
+                  if (!text) return;
+                  setInput("");
+                  void sendAsk(text);
+                }}
+              >
+                <input
+                  className={styles.field}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder={
+                    listening ? "Listening…" : "Ask about the board…"
+                  }
+                  disabled={isStreaming || !canAsk || disabled}
+                  aria-label={BOARD_ARIA.chatComposer}
+                />
+                <button
+                  type="submit"
+                  className={styles.sendBtn}
+                  disabled={!canSend}
+                  aria-label="Send"
+                >
+                  <PaperPlaneTilt size={15} weight="fill" aria-hidden />
+                </button>
+              </form>
             </div>
-          ) : null}
-
-          <div className={styles.voiceSlot} aria-label={BOARD_ARIA.voiceControls}>
-            <BoardVoiceControls
-              lockedMode="toggle"
-              hidePreview
-              disabled={disabled || isStreaming}
-              onTranscript={onVoiceTranscript}
-              onSessionEnd={onVoiceSessionEnd}
-              className={styles.voiceControls}
-            />
           </div>
-
-          <form
-            className={styles.composer}
-            onSubmit={(e) => {
-              e.preventDefault();
-              const text = input.trim();
-              if (!text) return;
-              setInput("");
-              void sendAsk(text);
-            }}
-          >
-            <input
-              className={styles.field}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder={
-                listening ? "Listening…" : "Ask about the board…"
-              }
-              disabled={isStreaming || !canAsk || disabled}
-              aria-label={BOARD_ARIA.chatComposer}
-            />
-            <button
-              type="submit"
-              className={styles.sendBtn}
-              disabled={!canSend}
-              aria-label="Send"
-            >
-              <PaperPlaneTilt size={16} weight="fill" aria-hidden />
-            </button>
-          </form>
         </div>
       </aside>
     );

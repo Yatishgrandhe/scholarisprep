@@ -10,6 +10,7 @@ export { BoardChatDock, type BoardChatDockHandle } from "./BoardChatDock";
 export { BoardAskBar } from "./BoardAskBar";
 export { BoardAtmosphere } from "./BoardAtmosphere";
 export { BoardEmptyHint } from "./BoardEmptyHint";
+export { BoardSchoOpen } from "./BoardSchoOpen";
 export { BoardTopEsc } from "./BoardTopEsc";
 export { BoardPdfPeek } from "./BoardPdfPeek";
 export { BoardVoiceControls } from "./BoardVoiceControls";

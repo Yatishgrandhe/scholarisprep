@@ -209,6 +209,8 @@
 .tilePrimary .tileLabel {
   color: var(--pi-cobalt);
 }
+
+.tilePrimary:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px hsl(215 30% 20% / 0.08);
 }

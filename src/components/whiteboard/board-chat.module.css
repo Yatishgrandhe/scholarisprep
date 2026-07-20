@@ -1,13 +1,16 @@
-/* Board chat dock — glass rail overlay; board stays the primary surface. */
+/* Board chat dock — polished studio companion rail (cobalt Scholaris). */
 
 .dock {
   --dock-cobalt: var(--cobalt, #2563eb);
-  --dock-glass: color-mix(in srgb, hsl(210 40% 98%) 72%, transparent);
+  --dock-aqua: var(--aqua, #06b6d4);
   --dock-ink: hsl(222 47% 11%);
-  --dock-muted: hsl(215 16% 42%);
-  --dock-line: color-mix(in srgb, var(--dock-cobalt) 28%, hsl(214 32% 88%));
-  --dock-width: min(22.5rem, 100%);
-  --dock-height: min(42vh, 22rem);
+  --dock-muted: hsl(215 14% 46%);
+  --dock-line: color-mix(in srgb, var(--dock-cobalt) 22%, hsl(214 28% 86%));
+  --dock-glass: color-mix(in srgb, hsl(210 45% 99%) 78%, transparent);
+  --dock-surface: color-mix(in srgb, hsl(0 0% 100%) 88%, hsl(210 40% 96%));
+  --dock-width: min(23.5rem, calc(100% - 1.25rem));
+  --dock-height: min(46vh, 24rem);
+  --dock-radius: 20px;
 
   position: absolute;
   z-index: 20;
@@ -21,37 +24,37 @@
 }
 
 .dockSide {
-  top: 0.75rem;
-  right: 0.75rem;
-  bottom: 0.75rem;
+  top: 0.65rem;
+  right: 0.65rem;
+  bottom: 0.65rem;
   width: var(--dock-width);
 }
 
 .dockBottom {
-  left: 0.75rem;
-  right: 0.75rem;
-  bottom: 0.75rem;
+  left: 0.65rem;
+  right: 0.65rem;
+  bottom: 0.65rem;
   height: var(--dock-height);
-  max-height: calc(100% - 1.5rem);
+  max-height: calc(100% - 1.25rem);
 }
 
 @media (max-width: 860px) {
   .dockAuto {
     top: auto;
-    right: 0.75rem;
-    left: 0.75rem;
-    bottom: 0.75rem;
+    right: 0.65rem;
+    left: 0.65rem;
+    bottom: 0.65rem;
     width: auto;
     height: var(--dock-height);
-    max-height: calc(100% - 1.5rem);
+    max-height: calc(100% - 1.25rem);
   }
 }
 
 @media (min-width: 861px) {
   .dockAuto {
-    top: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.75rem;
+    top: 0.65rem;
+    right: 0.65rem;
+    bottom: 0.65rem;
     left: auto;
     width: var(--dock-width);
     height: auto;
@@ -65,58 +68,87 @@
   flex: 1;
   min-height: 0;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: var(--dock-radius);
   border: 1px solid var(--dock-line);
   background:
     linear-gradient(
-      145deg,
-      color-mix(in srgb, hsl(0 0% 100%) 55%, transparent) 0%,
-      color-mix(in srgb, hsl(210 60% 96%) 40%, transparent) 48%,
-      color-mix(in srgb, var(--dock-cobalt) 8%, transparent) 100%
+      165deg,
+      color-mix(in srgb, white 70%, transparent) 0%,
+      color-mix(in srgb, hsl(210 55% 97%) 50%, transparent) 42%,
+      color-mix(in srgb, var(--dock-cobalt) 6%, transparent) 100%
     ),
     var(--dock-glass);
-  backdrop-filter: blur(18px) saturate(1.35);
-  -webkit-backdrop-filter: blur(18px) saturate(1.35);
+  backdrop-filter: blur(22px) saturate(1.4);
+  -webkit-backdrop-filter: blur(22px) saturate(1.4);
   box-shadow:
-    0 1px 0 hsl(0 0% 100% / 0.65) inset,
-    0 18px 40px -24px hsl(222 47% 11% / 0.35),
-    0 0 0 1px hsl(0 0% 100% / 0.2) inset;
+    0 1px 0 hsl(0 0% 100% / 0.72) inset,
+    0 0 0 1px hsl(0 0% 100% / 0.18) inset,
+    0 22px 48px -28px hsl(222 47% 11% / 0.38),
+    0 8px 20px -16px hsl(222 47% 11% / 0.18);
 }
 
 .rail {
   position: absolute;
-  top: 12px;
-  bottom: 12px;
+  top: 14px;
+  bottom: 14px;
   left: 0;
   width: 3px;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 4px 4px 0;
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--dock-cobalt) 85%, white),
-    color-mix(in srgb, var(--dock-cobalt) 45%, hsl(200 80% 70%))
+    color-mix(in srgb, var(--dock-cobalt) 92%, white),
+    color-mix(in srgb, var(--dock-aqua) 55%, var(--dock-cobalt))
   );
-  box-shadow: 0 0 12px color-mix(in srgb, var(--dock-cobalt) 35%, transparent);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--dock-cobalt) 32%, transparent);
   pointer-events: none;
+  opacity: 0.95;
 }
 
 .head {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.7rem 0.75rem 0.55rem 1rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--dock-line) 70%, transparent);
+  gap: 0.65rem;
+  padding: 0.85rem 0.8rem 0.7rem 1.05rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--dock-line) 65%, transparent);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, white 45%, transparent) 0%,
+    transparent 100%
+  );
   flex-shrink: 0;
 }
 
 .brandMark {
+  position: relative;
   display: grid;
   place-items: center;
-  width: 1.65rem;
-  height: 1.65rem;
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--dock-cobalt) 14%, white);
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 11px;
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--dock-cobalt) 16%, white),
+      color-mix(in srgb, var(--dock-aqua) 10%, white)
+    );
   color: var(--dock-cobalt);
   flex-shrink: 0;
+  box-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.7) inset,
+    0 4px 10px -6px color-mix(in srgb, var(--dock-cobalt) 40%, transparent);
+}
+
+.brandMarkLive::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: hsl(0 72% 48%);
+  box-shadow: 0 0 0 2px color-mix(in srgb, white 80%, transparent);
+  animation: micPulse 1.4s ease-in-out infinite;
 }
 
 .brandCopy {
@@ -126,21 +158,31 @@
 
 .brandTitle {
   margin: 0;
-  font-size: 0.8125rem;
-  font-weight: 750;
+  font-family: var(--font-display, ui-serif, Georgia, serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: italic;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.15;
+  color: var(--dock-ink);
 }
 
 .brandSub {
-  margin: 0.1rem 0 0;
+  margin: 0.15rem 0 0;
   font-size: 0.6875rem;
-  font-weight: 550;
+  font-weight: 600;
   color: var(--dock-muted);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.headActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
 }
 
 .iconBtn {
@@ -149,7 +191,7 @@
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  border-radius: 9px;
+  border-radius: 10px;
   border: 1px solid transparent;
   background: transparent;
   color: var(--dock-muted);
@@ -163,8 +205,14 @@
 
 .iconBtn:hover {
   color: var(--dock-ink);
-  background: hsl(0 0% 100% / 0.55);
+  background: hsl(0 0% 100% / 0.62);
   border-color: color-mix(in srgb, var(--dock-line) 80%, transparent);
+}
+
+.iconBtn:focus-visible {
+  outline: none;
+  border-color: color-mix(in srgb, var(--dock-cobalt) 45%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dock-cobalt) 18%, transparent);
 }
 
 .iconBtn:disabled {
@@ -177,136 +225,242 @@
   min-height: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 0.65rem 0.75rem 0.5rem 1rem;
+  padding: 0.85rem 0.85rem 0.65rem 1.05rem;
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.95rem;
   scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--dock-cobalt) 35%, transparent)
+  scrollbar-color: color-mix(in srgb, var(--dock-cobalt) 30%, transparent)
     transparent;
 }
 
 .empty {
   margin: auto 0;
-  padding: 0.75rem 0.25rem;
-  text-align: left;
-  font-size: 0.8125rem;
-  line-height: 1.45;
-  color: var(--dock-muted);
+  padding: 1.15rem 0.65rem 1.35rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.emptyMark {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.25rem;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--dock-cobalt) 10%, white);
+  color: var(--dock-cobalt);
 }
 
 .empty strong {
   display: block;
-  margin-bottom: 0.25rem;
+  font-family: var(--font-display, ui-serif, Georgia, serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
   color: var(--dock-ink);
-  font-weight: 700;
-  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+.emptyHint {
+  margin: 0;
+  max-width: 16rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--dock-muted);
+  text-wrap: balance;
 }
 
 .turn {
   display: grid;
   gap: 0.35rem;
   min-width: 0;
-  animation: dockIn 220ms ease-out;
+  animation: dockIn 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .turnUser {
-  padding-left: 0.55rem;
-  border-left: 2px solid color-mix(in srgb, var(--dock-cobalt) 55%, transparent);
+  justify-items: end;
+}
+
+.turnAssistant {
+  justify-items: start;
+  min-width: 0;
 }
 
 .turnMeta {
   font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--dock-muted);
+  padding-inline: 0.15rem;
 }
 
-.userText {
+.userBubble {
   margin: 0;
+  max-width: 95%;
+  padding: 0.55rem 0.75rem;
+  border-radius: 14px 14px 4px 14px;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--dock-cobalt) 88%, #1d4ed8),
+    var(--dock-cobalt)
+  );
+  color: white;
   font-size: 0.875rem;
   line-height: 1.45;
-  color: var(--dock-ink);
   white-space: pre-wrap;
   word-break: break-word;
+  box-shadow: 0 6px 16px -10px color-mix(in srgb, var(--dock-cobalt) 55%, transparent);
 }
 
-.turnAssistant {
+.assistantBody {
+  width: 100%;
   min-width: 0;
+  padding: 0.55rem 0.7rem 0.65rem;
+  border-radius: 4px 14px 14px 14px;
+  border: 1px solid color-mix(in srgb, var(--dock-line) 80%, transparent);
+  background: color-mix(in srgb, white 72%, transparent);
+  box-shadow: 0 1px 0 hsl(0 0% 100% / 0.5) inset;
 }
 
 .status {
   margin: 0;
+  padding: 0.15rem 0.25rem;
   font-size: 0.75rem;
   color: var(--dock-muted);
   font-style: italic;
+}
+
+.thinking {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.35rem 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--dock-muted);
+}
+
+.thinkingDots {
+  display: inline-flex;
+  gap: 0.22rem;
+}
+
+.thinkingDots span {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background: var(--dock-cobalt);
+  opacity: 0.45;
+  animation: thinkBounce 1.1s ease-in-out infinite;
+}
+
+.thinkingDots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.thinkingDots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.55rem 0.7rem 0.75rem 0.9rem;
+  border-top: 1px solid color-mix(in srgb, var(--dock-line) 65%, transparent);
+  background:
+    linear-gradient(
+      0deg,
+      color-mix(in srgb, hsl(210 40% 97%) 55%, transparent) 0%,
+      color-mix(in srgb, white 40%, transparent) 100%
+    );
 }
 
 .ocrChip {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  margin: 0 0.75rem 0.35rem 1rem;
-  padding: 0.35rem 0.55rem;
+  align-self: flex-start;
+  max-width: 100%;
+  padding: 0.3rem 0.6rem;
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--dock-cobalt) 22%, transparent);
-  background: color-mix(in srgb, var(--dock-cobalt) 8%, white);
-  color: color-mix(in srgb, var(--dock-cobalt) 70%, var(--dock-ink));
+  border: 1px solid color-mix(in srgb, var(--dock-cobalt) 20%, transparent);
+  background: color-mix(in srgb, var(--dock-cobalt) 7%, white);
+  color: color-mix(in srgb, var(--dock-cobalt) 72%, var(--dock-ink));
   font-size: 0.6875rem;
   font-weight: 650;
-  flex-shrink: 0;
-  max-width: calc(100% - 1.75rem);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.composerRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
 .voiceSlot {
   flex-shrink: 0;
-  padding: 0 0.65rem 0.35rem 0.85rem;
   min-width: 0;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
 }
 
 .voiceControls {
-  /* Compact BoardVoiceControls mic rail inside the glass dock. */
-  gap: 0.35rem;
+  gap: 0;
 }
 
 .composer {
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.45rem 0.65rem 0.7rem 0.85rem;
-  border-top: 1px solid color-mix(in srgb, var(--dock-line) 70%, transparent);
-  background: color-mix(in srgb, hsl(0 0% 100%) 35%, transparent);
-  flex-shrink: 0;
-}
-
-.field {
-  flex: 1;
   min-width: 0;
-  height: 2.35rem;
-  padding: 0 0.75rem;
-  border-radius: 11px;
-  border: 1px solid color-mix(in srgb, var(--dock-line) 90%, transparent);
-  background: hsl(0 0% 100% / 0.62);
-  color: var(--dock-ink);
-  font-size: 0.875rem;
-  font-family: inherit;
-  outline: none;
+  padding: 0.3rem 0.3rem 0.3rem 0.75rem;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--dock-line) 88%, transparent);
+  background: var(--dock-surface);
+  box-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.65) inset,
+    0 6px 16px -14px hsl(222 47% 11% / 0.2);
   transition:
     border-color 140ms ease,
     box-shadow 140ms ease;
 }
 
-.field::placeholder {
-  color: color-mix(in srgb, var(--dock-muted) 80%, transparent);
+.composer:focus-within {
+  border-color: color-mix(in srgb, var(--dock-cobalt) 48%, transparent);
+  box-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.65) inset,
+    0 0 0 3px color-mix(in srgb, var(--dock-cobalt) 16%, transparent);
 }
 
-.field:focus {
-  border-color: color-mix(in srgb, var(--dock-cobalt) 55%, transparent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dock-cobalt) 18%, transparent);
+.field {
+  flex: 1;
+  min-width: 0;
+  height: 2.4rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--dock-ink);
+  font-size: 0.875rem;
+  font-family: inherit;
+  outline: none;
+}
+
+.field::placeholder {
+  color: color-mix(in srgb, var(--dock-muted) 78%, transparent);
 }
 
 .field:disabled {
@@ -317,8 +471,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.35rem;
-  height: 2.35rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 11px;
   border: 1px solid transparent;
   background: var(--dock-cobalt);
@@ -327,7 +481,9 @@
   flex-shrink: 0;
   transition:
     filter 140ms ease,
-    transform 140ms ease;
+    transform 140ms ease,
+    box-shadow 140ms ease;
+  box-shadow: 0 6px 14px -8px color-mix(in srgb, var(--dock-cobalt) 70%, transparent);
 }
 
 .sendBtn:hover:not(:disabled) {
@@ -339,16 +495,22 @@
 }
 
 .sendBtn:disabled {
-  opacity: 0.4;
+  opacity: 0.38;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
-/* Collapsed: thin glass tab so the board stays full-bleed. */
+.sendBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dock-cobalt) 22%, transparent);
+}
+
+/* Collapsed: elegant floating invite pill */
 .collapsed {
-  inset: auto 0.75rem 0.75rem auto;
+  inset: auto 0.75rem 0.85rem auto;
   width: auto;
   height: auto;
-  bottom: 0.75rem;
+  bottom: 0.85rem;
   right: 0.75rem;
   top: auto;
   left: auto;
@@ -357,28 +519,28 @@
 .tab {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  min-height: 2.6rem;
-  padding: 0 0.9rem 0 0.7rem;
+  gap: 0.55rem;
+  min-height: 2.75rem;
+  padding: 0 1rem 0 0.75rem;
   border-radius: 999px;
   border: 1px solid var(--dock-line);
   background:
     linear-gradient(
       135deg,
-      color-mix(in srgb, white 70%, transparent),
-      color-mix(in srgb, var(--dock-cobalt) 10%, transparent)
+      color-mix(in srgb, white 78%, transparent),
+      color-mix(in srgb, var(--dock-cobalt) 9%, transparent)
     ),
     var(--dock-glass);
-  backdrop-filter: blur(14px) saturate(1.3);
-  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  backdrop-filter: blur(16px) saturate(1.35);
+  -webkit-backdrop-filter: blur(16px) saturate(1.35);
   color: var(--dock-ink);
   font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   cursor: pointer;
   box-shadow:
-    0 1px 0 hsl(0 0% 100% / 0.6) inset,
-    0 12px 28px -18px hsl(222 47% 11% / 0.4);
+    0 1px 0 hsl(0 0% 100% / 0.65) inset,
+    0 14px 32px -18px hsl(222 47% 11% / 0.42);
   transition:
     transform 160ms ease,
     box-shadow 160ms ease;
@@ -387,28 +549,52 @@
 .tab:hover {
   transform: translateY(-1px);
   box-shadow:
-    0 1px 0 hsl(0 0% 100% / 0.6) inset,
-    0 16px 32px -16px hsl(222 47% 11% / 0.45);
+    0 1px 0 hsl(0 0% 100% / 0.65) inset,
+    0 18px 36px -16px hsl(222 47% 11% / 0.48);
+}
+
+.tabMark {
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--dock-cobalt) 14%, white);
+  color: var(--dock-cobalt);
 }
 
 .tabDot {
-  width: 0.45rem;
-  height: 0.45rem;
+  width: 0.42rem;
+  height: 0.42rem;
   border-radius: 50%;
   background: var(--dock-cobalt);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dock-cobalt) 22%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dock-cobalt) 20%, transparent);
 }
 
 .tabDotLive {
   background: hsl(0 72% 46%);
-  box-shadow: 0 0 0 3px color-mix(in srgb, hsl(0 72% 46%) 22%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, hsl(0 72% 46%) 20%, transparent);
   animation: micPulse 1.4s ease-in-out infinite;
+}
+
+.tabCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--dock-cobalt) 12%, white);
+  color: var(--dock-cobalt);
+  font-size: 0.6875rem;
+  font-weight: 750;
 }
 
 @keyframes dockIn {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -419,10 +605,23 @@
 @keyframes micPulse {
   0%,
   100% {
-    box-shadow: 0 0 0 3px color-mix(in srgb, hsl(0 72% 46%) 16%, transparent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, hsl(0 72% 46%) 14%, transparent);
   }
   50% {
-    box-shadow: 0 0 0 6px color-mix(in srgb, hsl(0 72% 46%) 10%, transparent);
+    box-shadow: 0 0 0 6px color-mix(in srgb, hsl(0 72% 46%) 8%, transparent);
+  }
+}
+
+@keyframes thinkBounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  40% {
+    transform: translateY(-3px);
+    opacity: 1;
   }
 }
 
@@ -430,7 +629,9 @@
   .turn,
   .tabDotLive,
   .tab,
-  .sendBtn {
+  .sendBtn,
+  .brandMarkLive::after,
+  .thinkingDots span {
     animation: none;
     transition: none;
   }

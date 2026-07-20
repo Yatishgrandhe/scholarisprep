@@ -19,6 +19,7 @@ import {
 import { BoardAskBar } from "./BoardAskBar";
 import { BoardEmptyHint } from "./BoardEmptyHint";
 import { BoardPdfPeek } from "./BoardPdfPeek";
+import { BoardSchoOpen } from "./BoardSchoOpen";
 import { BoardTopEsc } from "./BoardTopEsc";
 import {
   BoardToolbar,
@@ -35,6 +36,7 @@ import chatStyles from "./board-chat.module.css";
 import canvasStyles from "./board-canvas.module.css";
 import atmosphereStyles from "./board-atmosphere.module.css";
 import motionStyles from "./board-motion.module.css";
+import schoOpenStyles from "./board-scho-open.module.css";
 
 const DEFAULT_COLOR: string = BOARD_INK_COLORS[0]!.value;
 const DEFAULT_WIDTH: number = BOARD_STROKE_WIDTHS[1]!.value;
@@ -46,6 +48,7 @@ void chatStyles;
 void canvasStyles;
 void atmosphereStyles;
 void motionStyles;
+void schoOpenStyles;
 
 export function WhiteboardStudio() {
   const canvasRef = useRef<BoardCanvasHandle | null>(null);
@@ -60,6 +63,8 @@ export function WhiteboardStudio() {
   const [ocrText, setOcrText] = useState("");
   const [pdfExcerpt, setPdfExcerpt] = useState("");
   const [statusNote, setStatusNote] = useState("");
+  /** Dock waits until centered Scho open ceremony finishes. */
+  const [schoOpenDone, setSchoOpenDone] = useState(false);
 
   const { toolbarClassName, strokeSurfaceClassName, pulseStrokeCommit } =
     useBoardMotion();
@@ -128,10 +133,18 @@ export function WhiteboardStudio() {
             />
           </div>
 
-          <BoardEmptyHint hasStroke={hasInk} className={styles.hint} />
+          <BoardSchoOpen
+            className={styles.schoOpen}
+            onComplete={() => setSchoOpenDone(true)}
+          />
+
+          <BoardEmptyHint
+            hasStroke={hasInk || !schoOpenDone}
+            className={styles.hint}
+          />
 
           <BoardToolbar
-            className={[styles.toolbar, toolbarClassName(true)]
+            className={[styles.toolbar, toolbarClassName(schoOpenDone)]
               .filter(Boolean)
               .join(" ")}
             tool={tool}
@@ -147,7 +160,7 @@ export function WhiteboardStudio() {
             onClear={handleClear}
           />
 
-          <div className={styles.askSlot}>
+          <div className={styles.askSlot} data-ready={schoOpenDone || undefined}>
             <BoardAskBar
               getSnapshot={getSnapshot}
               hasInk={hasInk}
@@ -157,7 +170,7 @@ export function WhiteboardStudio() {
             />
           </div>
 
-          <div className={styles.pdfSlot}>
+          <div className={styles.pdfSlot} data-ready={schoOpenDone || undefined}>
             <BoardPdfPeek value={pdfExcerpt} onChange={setPdfExcerpt} />
           </div>
 
@@ -168,6 +181,7 @@ export function WhiteboardStudio() {
             pdfExcerpt={pdfExcerpt}
             placement="auto"
             defaultCollapsed={false}
+            revealReady={schoOpenDone}
           />
         </div>
       </BoardAtmosphere>

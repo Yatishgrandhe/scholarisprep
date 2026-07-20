@@ -50,6 +50,29 @@
   pointer-events: none;
 }
 
+/* Scho open lockup — forced to true stage center (above chrome, below esc) */
+.schoOpen {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  pointer-events: none;
+}
+
+.askSlot[data-ready],
+.pdfSlot[data-ready] {
+  opacity: 1;
+  transition: opacity 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.askSlot:not([data-ready]),
+.pdfSlot:not([data-ready]) {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Floating tools — lift above bottom dock on narrow viewports */
 .toolbar {
   z-index: 12;
@@ -57,7 +80,7 @@
 
 @media (max-width: 860px) {
   .toolbar {
-    bottom: calc(min(42vh, 22rem) + 1rem) !important;
+    bottom: calc(min(46vh, 24rem) + 1rem) !important;
   }
 }
 
