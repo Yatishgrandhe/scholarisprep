@@ -91,7 +91,7 @@ const DESTINATIONS: {
   {
     id: "notes",
     label: "Notes",
-    hint: "Save study notes, attach images, ask from context",
+    hint: "Write notes, OCR photos → text, then Ask Scho",
     icon: Notebook,
   },
 ];
