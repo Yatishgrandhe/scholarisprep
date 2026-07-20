@@ -13,9 +13,9 @@ export function SimsCatalog({ sims }: Props) {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <Link href="/dashboard/free-study" className={styles.back}>
+        <Link href="/dashboard" className={styles.back}>
           <ArrowLeft size={16} weight="bold" aria-hidden />
-          Free Studying
+          Dashboard
         </Link>
         <div className={styles.headerRow}>
           <span className={styles.headerIcon} aria-hidden>
@@ -45,7 +45,7 @@ export function SimsCatalog({ sims }: Props) {
             return (
               <li key={sim.id}>
                 <Link
-                  href={`/dashboard/free-study/sims/${sim.id}`}
+                  href={`/dashboard/labs/${sim.id}`}
                   className={styles.card}
                 >
                   <div className={styles.cardTop}>

@@ -14,7 +14,7 @@ import {
   defaultTargetForExam,
   scoreBoundsForExam,
 } from "@/lib/onboarding/examPrograms";
-import { FREE_STUDY_HREF } from "@/lib/dashboard/navConfig";
+import { FREE_STUDY_HREF } from "@/lib/dashboard/navRoutes";
 import { tutorCtaLabel, tutorHref } from "@/lib/tutor/routes";
 import type { ExamType, Profile } from "@/types/supabase";
 import {

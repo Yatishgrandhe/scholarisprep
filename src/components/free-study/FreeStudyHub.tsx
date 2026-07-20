@@ -14,10 +14,10 @@ import {
   Microphone,
   Notebook,
   PencilLine,
-  Planet,
   PaperPlaneTilt,
   Trash,
   UploadSimple,
+  Flask,
 } from "@phosphor-icons/react";
 import { toast } from "sonner";
 import { createClient } from "@/lib/supabase/client";
@@ -28,7 +28,7 @@ import { useLocalTelemetryModels } from "@/hooks/useLocalTelemetryModels";
 import { useActiveExamType } from "@/hooks/useActiveExamType";
 import { extractPdfTextClient } from "@/lib/pdf/extractText";
 import type { FreeStudyTelemetry } from "@/lib/ai/telemetryPayload";
-import { listFreeStudySims } from "@/lib/free-study/simRegistry";
+import { LABS_HREF } from "@/lib/dashboard/navRoutes";
 import { FreeStudySectionedReply } from "@/components/free-study/FreeStudySectionedReply";
 import styles from "./free-study.module.css";
 import Link from "next/link";
@@ -38,8 +38,7 @@ export type FreeStudyMode =
   | "whiteboard"
   | "pdf"
   | "voice"
-  | "notes"
-  | "sims";
+  | "notes";
 
 const MODES: { id: FreeStudyMode; label: string; icon: typeof ChatsCircle }[] = [
   { id: "tutor", label: "Tutor", icon: ChatsCircle },
@@ -47,7 +46,6 @@ const MODES: { id: FreeStudyMode; label: string; icon: typeof ChatsCircle }[] = 
   { id: "pdf", label: "PDF", icon: FilePdf },
   { id: "voice", label: "Voice", icon: Microphone },
   { id: "notes", label: "Notes", icon: Notebook },
-  { id: "sims", label: "Sims", icon: Planet },
 ];
 
 type ChatMsg = { role: "user" | "assistant"; content: string };
@@ -457,16 +455,17 @@ export function FreeStudyHub({
     }
   };
 
-  const simEntries = listFreeStudySims();
-
   return (
     <div className={styles.page}>
       <header className={styles.header}>
         <div>
           <h1 className={styles.title}>Free Studying</h1>
           <p className={styles.subtitle}>
-            Multimodal Scho — whiteboard, PDF, voice, notes, and sims — with
-            neural Kokoro voice.
+            Multimodal Scho — whiteboard, PDF, voice, and notes — with neural
+            Kokoro voice.{" "}
+            <Link href={LABS_HREF} className={styles.inlineLink}>
+              <Flask size={14} weight="fill" aria-hidden /> Open STEM Labs →
+            </Link>
           </p>
         </div>
       </header>
@@ -759,47 +758,6 @@ export function FreeStudyHub({
                   {r2Hint ? <p className={styles.hint}>{r2Hint}</p> : null}
                 </div>
               </div>
-            </div>
-          ) : null}
-
-          {mode === "sims" ? (
-            <div className={styles.paneBody}>
-              <p className={styles.hint}>
-                Exam-aligned model labs with predict → run → compare. Open an
-                available lab, or browse the full catalog.
-              </p>
-              <p className={styles.hint}>
-                <Link href="/dashboard/free-study/sims" className={styles.inlineLink}>
-                  Open STEM Labs catalog →
-                </Link>
-              </p>
-              <ul className={styles.simGrid}>
-                {simEntries.map((sim) => (
-                  <li key={sim.id} className={styles.simCard}>
-                    {sim.href && sim.status === "available" ? (
-                      <Link href={sim.href} className={styles.simLink}>
-                        <div className={styles.simTitle}>{sim.title}</div>
-                        <div className={styles.simMeta}>
-                          {sim.subject} · {sim.fidelity} · available
-                        </div>
-                        <div className={styles.simTags}>
-                          {sim.examTags.join(" · ")}
-                        </div>
-                      </Link>
-                    ) : (
-                      <>
-                        <div className={styles.simTitle}>{sim.title}</div>
-                        <div className={styles.simMeta}>
-                          {sim.subject} · {sim.fidelity} · planned
-                        </div>
-                        <div className={styles.simTags}>
-                          {sim.examTags.join(" · ")}
-                        </div>
-                      </>
-                    )}
-                  </li>
-                ))}
-              </ul>
             </div>
           ) : null}
         </section>

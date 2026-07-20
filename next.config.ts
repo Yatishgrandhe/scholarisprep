@@ -67,6 +67,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/dashboard/free-study/sims",
+        destination: "/dashboard/labs",
+        permanent: true,
+      },
+      {
+        source: "/dashboard/free-study/sims/:simId",
+        destination: "/dashboard/labs/:simId",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

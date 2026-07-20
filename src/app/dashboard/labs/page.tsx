@@ -13,7 +13,7 @@ function toMeta(sim: ReturnType<typeof listSims>[number]): SimManifestMeta {
   return meta;
 }
 
-export default function FreeStudySimsPage() {
+export default function StemLabsCatalogPage() {
   const sims = listSims().map(toMeta);
   return <SimsCatalog sims={sims} />;
 }

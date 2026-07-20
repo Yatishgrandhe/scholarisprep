@@ -21,13 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: sim ? `${sim.title} · STEM Lab` : "STEM Lab" };
 }
 
-export default async function FreeStudySimPage({ params }: Props) {
+export default async function StemLabPage({ params }: Props) {
   const { simId } = await params;
   if (!getSim(simId)) notFound();
 
   return (
     <div className={styles.labPage}>
-      <Link href="/dashboard/free-study/sims" className={styles.labBack}>
+      <Link href="/dashboard/labs" className={styles.labBack}>
         <ArrowLeft size={16} weight="bold" aria-hidden />
         All labs
       </Link>

@@ -27,9 +27,16 @@ import {
   InstagramLogo,
   ArrowSquareOut,
   Notebook,
+  Flask,
 } from "@phosphor-icons/react";
 import { isApOrIbExam, isLanguageCourse } from "@/lib/apIbCatalog";
 import { tutorHref, tutorNavLabel } from "@/lib/tutor/routes";
+import {
+  FREE_STUDY_HREF,
+  FREE_STUDY_NAV_ID,
+  LABS_HREF,
+  LABS_NAV_ID,
+} from "@/lib/dashboard/navRoutes";
 
 export type NavItem = {
   id: string;
@@ -60,9 +67,12 @@ export type MoreLinkSection = {
   items: MoreLinkItem[];
 };
 
-/** Primary Free Studying hub — keep in main sidebar (not More-only). */
-export const FREE_STUDY_HREF = "/dashboard/free-study";
-export const FREE_STUDY_NAV_ID = "free-study";
+export {
+  FREE_STUDY_HREF,
+  FREE_STUDY_NAV_ID,
+  LABS_HREF,
+  LABS_NAV_ID,
+} from "@/lib/dashboard/navRoutes";
 
 function mainNavForExam(examType: ExamType): NavItem[] {
   return [
@@ -72,6 +82,13 @@ function mainNavForExam(examType: ExamType): NavItem[] {
       href: FREE_STUDY_HREF,
       label: "Free Studying",
       icon: Notebook,
+      badge: "New",
+    },
+    {
+      id: LABS_NAV_ID,
+      href: LABS_HREF,
+      label: "STEM Labs",
+      icon: Flask,
       badge: "New",
     },
     {

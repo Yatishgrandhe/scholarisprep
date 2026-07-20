@@ -22,6 +22,8 @@ import { useActiveExamType } from "@/hooks/useActiveExamType";
 import {
   FREE_STUDY_HREF,
   FREE_STUDY_NAV_ID,
+  LABS_HREF,
+  LABS_NAV_ID,
   getNavForExam,
 } from "@/lib/dashboard/navConfig";
 import { isTutorRoute } from "@/lib/tutor/routes";
@@ -65,11 +67,12 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
   };
 
   const isActive = (href: string, id?: string) => {
+    if (id === LABS_NAV_ID || href === LABS_HREF) {
+      return pathname === LABS_HREF || pathname.startsWith(`${LABS_HREF}/`);
+    }
     if (id === FREE_STUDY_NAV_ID || href === FREE_STUDY_HREF) {
-      return (
-        pathname === FREE_STUDY_HREF ||
-        pathname.startsWith(`${FREE_STUDY_HREF}/`)
-      );
+      // Free Studying hub only — STEM Labs have their own nav/route.
+      return pathname === FREE_STUDY_HREF;
     }
     const path = href.split("?")[0]!;
     if (path === "/dashboard") return pathname === "/dashboard";

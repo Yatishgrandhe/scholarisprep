@@ -1,5 +1,5 @@
 /**
- * Free Studying Sims tab bridge → live `src/sims` registry.
+ * STEM Labs catalog bridge → live `src/sims` registry.
  * Packs self-register under src/sims/<subject>/**; this file must not list
  * lab implementations — only merges live manifests with planned placeholders.
  */
@@ -55,7 +55,7 @@ export function listFreeStudySims(): SimCatalogEntry[] {
     examTags: sim.examTags.map((t) =>
       t.course ? `${t.board} · ${t.course}` : t.board,
     ),
-    href: `/dashboard/free-study/sims/${sim.id}`,
+    href: `/dashboard/labs/${sim.id}`,
   }));
 
   const liveIds = new Set(live.map((s) => s.id));

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   House,
-  BookOpen,
   ChatsCircle,
   ChartBar,
   DotsThree,
@@ -12,6 +11,7 @@ import {
   Key,
   ArrowSquareOut,
   Notebook,
+  Flask,
   X,
 } from "@phosphor-icons/react";
 import {
@@ -25,6 +25,8 @@ import { useActiveExamType } from "@/hooks/useActiveExamType";
 import {
   FREE_STUDY_HREF,
   FREE_STUDY_NAV_ID,
+  LABS_HREF,
+  LABS_NAV_ID,
   getMoreLinksForExam,
   getNavForExam,
   type MoreLinkItem,
@@ -49,13 +51,13 @@ const PRIMARY_TAB_DEFS = [
     href: FREE_STUDY_HREF,
     label: "Study",
     icon: Notebook,
-    match: "prefix" as const,
+    match: "exact" as const,
   },
   {
-    id: "bank",
-    href: "/dashboard/practice/bank",
-    label: "Bank",
-    icon: BookOpen,
+    id: LABS_NAV_ID,
+    href: LABS_HREF,
+    label: "Labs",
+    icon: Flask,
     match: "prefix" as const,
   },
   {
@@ -140,16 +142,24 @@ export function MobileTabBar() {
             id === "tutor"
               ? isTutorRoute(pathname)
               : id === FREE_STUDY_NAV_ID
-                ? pathname === FREE_STUDY_HREF ||
-                  pathname.startsWith(`${FREE_STUDY_HREF}/`)
-                : isActive(pathname, href!, match);
+                ? pathname === FREE_STUDY_HREF
+                : id === LABS_NAV_ID
+                  ? pathname === LABS_HREF ||
+                    pathname.startsWith(`${LABS_HREF}/`)
+                  : isActive(pathname, href!, match);
           return (
             <Link
               key={id}
               href={href!}
               className={`${styles.tab} ${active ? styles.tabActive : ""}`}
               aria-current={active ? "page" : undefined}
-              aria-label={id === FREE_STUDY_NAV_ID ? "Free Studying" : undefined}
+              aria-label={
+                id === FREE_STUDY_NAV_ID
+                  ? "Free Studying"
+                  : id === LABS_NAV_ID
+                    ? "STEM Labs"
+                    : undefined
+              }
             >
               <Icon size={22} weight={active ? "fill" : "regular"} aria-hidden />
               <span className={styles.tabLabel}>{label}</span>
