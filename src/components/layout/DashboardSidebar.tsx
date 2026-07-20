@@ -19,7 +19,11 @@ import { SupportChatModal } from "@/components/dashboard/SupportChatModal";
 import { useAuth } from "@/hooks/useAuth";
 import { SubjectSwitcher } from "@/components/shared/SubjectSwitcher";
 import { useActiveExamType } from "@/hooks/useActiveExamType";
-import { getNavForExam } from "@/lib/dashboard/navConfig";
+import {
+  FREE_STUDY_HREF,
+  FREE_STUDY_NAV_ID,
+  getNavForExam,
+} from "@/lib/dashboard/navConfig";
 import { isTutorRoute } from "@/lib/tutor/routes";
 import {
   formatMemberSince,
@@ -60,7 +64,13 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
     }
   };
 
-  const isActive = (href: string) => {
+  const isActive = (href: string, id?: string) => {
+    if (id === FREE_STUDY_NAV_ID || href === FREE_STUDY_HREF) {
+      return (
+        pathname === FREE_STUDY_HREF ||
+        pathname.startsWith(`${FREE_STUDY_HREF}/`)
+      );
+    }
     const path = href.split("?")[0]!;
     if (path === "/dashboard") return pathname === "/dashboard";
     return pathname.startsWith(path);
@@ -132,19 +142,26 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
               ) : null}
               {section.items.map(({ id, href, label, icon: Icon, badge }) => {
                 const active =
-                  id === "scho" ? isTutorRoute(pathname) : isActive(href);
+                  id === "scho"
+                    ? isTutorRoute(pathname)
+                    : isActive(href, id);
                 return (
                   <Link
-                    key={href}
+                    key={id}
                     href={href}
+                    data-nav-id={id}
+                    aria-current={active ? "page" : undefined}
                     title={collapsed ? label : undefined}
                     className={`${styles.navLink} ${active ? styles.navLinkActive : ""} ${collapsed ? styles.navLinkCollapsed : ""}`}
                   >
-                    <Icon
-                      size={18}
-                      weight={active ? "fill" : "regular"}
-                      className={styles.navIcon}
-                    />
+                    {Icon ? (
+                      <Icon
+                        size={18}
+                        weight={active ? "fill" : "regular"}
+                        className={styles.navIcon}
+                        aria-hidden
+                      />
+                    ) : null}
                     {!collapsed && (
                       <span className={styles.navLabel}>{label}</span>
                     )}

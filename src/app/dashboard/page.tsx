@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sparkle } from "@phosphor-icons/react/dist/ssr";
+import { Notebook, Sparkle } from "@phosphor-icons/react/dist/ssr";
 import { createClient } from "@/lib/supabase/server";
 import {
   predictFromAttempts,
@@ -14,6 +14,7 @@ import {
   defaultTargetForExam,
   scoreBoundsForExam,
 } from "@/lib/onboarding/examPrograms";
+import { FREE_STUDY_HREF } from "@/lib/dashboard/navConfig";
 import { tutorCtaLabel, tutorHref } from "@/lib/tutor/routes";
 import type { ExamType, Profile } from "@/types/supabase";
 import {
@@ -194,11 +195,22 @@ export default async function DashboardPage() {
                 : `Your ${examLabel} prep, all in one place.`
               : "Let's start by creating a study plan"}
           </p>
-          {!hasPlan ? (
-            <Link href="/dashboard/study-plan" className={styles.greetingCta}>
-              Create my study plan
+          <div className={styles.homeHeroActions}>
+            {!hasPlan ? (
+              <Link href="/dashboard/study-plan" className={styles.greetingCta}>
+                Create my study plan
+              </Link>
+            ) : null}
+            <Link
+              href={FREE_STUDY_HREF}
+              className={
+                hasPlan ? styles.greetingCta : styles.homeApIbCtaSecondary
+              }
+            >
+              <Notebook size={16} weight="duotone" aria-hidden />
+              Free Studying
             </Link>
-          ) : null}
+          </div>
           {apIb ? (
             <div className={styles.homeApIbCtas}>
               <Link href="/dashboard/exams" className={styles.homeApIbCta}>

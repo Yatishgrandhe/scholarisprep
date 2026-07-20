@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Bug, Gear, MagnifyingGlass, Notebook, SignOut } from "@phosphor-icons/react";
 import { useAuth } from "@/hooks/useAuth";
 import { getProfileAvatarInitial } from "@/lib/dashboard/userDisplay";
+import { FREE_STUDY_HREF } from "@/lib/dashboard/navConfig";
 import { BugReportModal } from "@/components/dashboard/BugReportModal";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { SubjectSwitcher } from "@/components/shared/SubjectSwitcher";
@@ -101,7 +102,7 @@ export function DashboardTopBar() {
               <DropdownMenuSeparator />
               <DropdownMenuItem
                 className={styles.accountItem}
-                onClick={() => router.push("/dashboard/free-study")}
+                onClick={() => router.push(FREE_STUDY_HREF)}
               >
                 <Notebook size={16} weight="duotone" aria-hidden />
                 Free Studying

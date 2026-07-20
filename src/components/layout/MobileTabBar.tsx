@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   House,
-  Lightning,
   BookOpen,
   ChatsCircle,
   ChartBar,
@@ -12,6 +11,7 @@ import {
   Gear,
   Key,
   ArrowSquareOut,
+  Notebook,
   X,
 } from "@phosphor-icons/react";
 import {
@@ -23,6 +23,8 @@ import {
 import { useState } from "react";
 import { useActiveExamType } from "@/hooks/useActiveExamType";
 import {
+  FREE_STUDY_HREF,
+  FREE_STUDY_NAV_ID,
   getMoreLinksForExam,
   getNavForExam,
   type MoreLinkItem,
@@ -37,26 +39,24 @@ import { BugReportModal } from "@/components/dashboard/BugReportModal";
 import { JoinClassModal } from "@/components/dashboard/JoinClassModal";
 import { SupportChatModal } from "@/components/dashboard/SupportChatModal";
 import { isExamFullscreenRoute } from "@/lib/dashboard/shellRoutes";
-import { isApOrIbExam } from "@/lib/apIbCatalog";
 import { isTutorRoute, tutorHref, tutorTabLabel } from "@/lib/tutor/routes";
 import styles from "./MobileTabBar.module.css";
 
 const PRIMARY_TAB_DEFS = [
   { id: "home", href: "/dashboard", label: "Home", icon: House, match: "exact" as const },
   {
+    id: FREE_STUDY_NAV_ID,
+    href: FREE_STUDY_HREF,
+    label: "Study",
+    icon: Notebook,
+    match: "prefix" as const,
+  },
+  {
     id: "bank",
     href: "/dashboard/practice/bank",
     label: "Bank",
     icon: BookOpen,
     match: "prefix" as const,
-  },
-  {
-    id: "drill",
-    href: "/dashboard/question-rush",
-    label: "Drill",
-    icon: Lightning,
-    match: "prefix" as const,
-    satOnly: true,
   },
   {
     id: "tutor",
@@ -113,11 +113,8 @@ export function MobileTabBar() {
     }
   };
 
-  // Speed Drill is SAT/ACT-oriented; hide for ACT (legacy) and AP/IB courses.
-  const tabs = PRIMARY_TAB_DEFS.filter(
-    (tab) =>
-      !tab.satOnly || (examType !== "ACT" && !isApOrIbExam(examType)),
-  ).map((tab) =>
+  // Free Studying is always a primary tab — the desktop sidebar is hidden ≤768px.
+  const tabs = PRIMARY_TAB_DEFS.map((tab) =>
     tab.id === "tutor"
       ? {
           ...tab,
@@ -142,13 +139,17 @@ export function MobileTabBar() {
           const active =
             id === "tutor"
               ? isTutorRoute(pathname)
-              : isActive(pathname, href!, match);
+              : id === FREE_STUDY_NAV_ID
+                ? pathname === FREE_STUDY_HREF ||
+                  pathname.startsWith(`${FREE_STUDY_HREF}/`)
+                : isActive(pathname, href!, match);
           return (
             <Link
               key={id}
               href={href!}
               className={`${styles.tab} ${active ? styles.tabActive : ""}`}
               aria-current={active ? "page" : undefined}
+              aria-label={id === FREE_STUDY_NAV_ID ? "Free Studying" : undefined}
             >
               <Icon size={22} weight={active ? "fill" : "regular"} aria-hidden />
               <span className={styles.tabLabel}>{label}</span>

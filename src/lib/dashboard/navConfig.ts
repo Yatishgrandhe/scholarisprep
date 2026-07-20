@@ -60,37 +60,41 @@ export type MoreLinkSection = {
   items: MoreLinkItem[];
 };
 
+/** Primary Free Studying hub — keep in main sidebar (not More-only). */
+export const FREE_STUDY_HREF = "/dashboard/free-study";
+export const FREE_STUDY_NAV_ID = "free-study";
+
 function mainNavForExam(examType: ExamType): NavItem[] {
   return [
-  { id: "home", href: "/dashboard", label: "Home", icon: House },
-  {
-    id: "scho",
-    href: tutorHref(examType),
-    label: tutorNavLabel(examType),
-    icon: ChatsCircle,
-  },
-  {
-    id: "free-study",
-    href: "/dashboard/free-study",
-    label: "Free Studying",
-    icon: Notebook,
-  },
-  { id: "planner", href: "/dashboard/study-plan", label: "Study Planner", icon: Calendar },
-  {
-    id: "workshops",
-    href: "/dashboard/masterclass",
-    label: "Expert Workshops",
-    icon: PlayCircle,
-  },
-  {
-    id: "ai-courses",
-    href: "/dashboard/courses/create",
-    label: "AI Courses",
-    icon: Sparkle,
-    badge: "New",
-  },
-  { id: "analytics", href: "/dashboard/analytics", label: "Analytics", icon: ChartLine },
-];
+    { id: "home", href: "/dashboard", label: "Home", icon: House },
+    {
+      id: FREE_STUDY_NAV_ID,
+      href: FREE_STUDY_HREF,
+      label: "Free Studying",
+      icon: Notebook,
+      badge: "New",
+    },
+    {
+      id: "scho",
+      href: tutorHref(examType),
+      label: tutorNavLabel(examType),
+      icon: ChatsCircle,
+    },
+    { id: "planner", href: "/dashboard/study-plan", label: "Study Planner", icon: Calendar },
+    {
+      id: "workshops",
+      href: "/dashboard/masterclass",
+      label: "Expert Workshops",
+      icon: PlayCircle,
+    },
+    {
+      id: "ai-courses",
+      href: "/dashboard/courses/create",
+      label: "AI Courses",
+      icon: Sparkle,
+    },
+    { id: "analytics", href: "/dashboard/analytics", label: "Analytics", icon: ChartLine },
+  ];
 }
 
 const SAT_PRACTICE: NavItem[] = [
@@ -199,14 +203,8 @@ export function getNavForExam(examType: ExamType): NavSection[] {
 }
 
 export function getMoreLinksForExam(examType: ExamType): MoreLinkSection[] {
+  // Free Studying lives in the primary sidebar / mobile tabs — not buried in More.
   const sections: MoreLinkSection[] = [
-    {
-      id: "study",
-      label: "Study",
-      items: [
-        { id: "free-study", label: "Free Studying", href: "/dashboard/free-study" },
-      ],
-    },
     {
       id: "college",
       label: "College",
@@ -285,7 +283,6 @@ export function getMoreLinksForExam(examType: ExamType): MoreLinkSection[] {
 }
 
 export const MORE_SECTION_ICONS: Record<string, Icon> = {
-  study: Notebook,
   college: GraduationCap,
   support: ChatCircle,
   opportunities: Briefcase,
@@ -294,7 +291,6 @@ export const MORE_SECTION_ICONS: Record<string, Icon> = {
 };
 
 export const MORE_ITEM_ICONS: Record<string, Icon> = {
-  "free-study": Notebook,
   "campus-fit": GraduationCap,
   support: ChatCircle,
   bug: Bug,
