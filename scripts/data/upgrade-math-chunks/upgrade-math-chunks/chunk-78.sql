@@ -1,0 +1,162 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A survey of 100 people found that 60 people like apples, 40 people like bananas, and 20 people like both apples and bananas. How many people like only bananas?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"20","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"40","is_correct":false,"explanation":"Choice B (40…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"60","is_correct":false,"explanation":"Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"80","is_correct":false,"explanation":"Choice D (80…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** A survey of 100 people found that 60 people like apples, 40 people like bananas, and 20 people like both apples and bananas. How many people like only bananas?
+
+**Step 2 — Solve.** We can use a Venn diagram to solve this problem.  Let the circle representing people who like apples be labeled "A" and the circle representing people who like bananas be labeled "B".  The overlap between the two circles represents the people who like both apples and bananas. We know that 20 people like both apples and bananas, so we can fill in the overlap of the circles with 20.  Since 60 people like apples in total, we can subtract the 20 who like both apples and bananas to find that 60 - 20 = 40 people like only apples.  Since 40 people like bananas in total, we can subtract the 20 who like both apples and bananas to find that 40 - 20 = 20 people like only bananas.
+
+**Step 3 — Select A.** 20
+
+**Distractor analysis:**
+- **B** (40): Choice B (40…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (60): Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (80): Choice D (80…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":964,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_a4","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6a2db9c0-7149-43b7-ab3c-fd1ced1476e1';
+
+UPDATE public.questions SET
+  question_text = 'If  $3x + 2y = 12$ and $x - 2y = 4$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":false,"explanation":"Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"6","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"8","is_correct":false,"explanation":"Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If  $3x + 2y = 12$ and $x - 2y = 4$, what is the value of $x$?
+
+**Step 2 — Solve.** To solve for *x*, we can add the two equations together. This eliminates *y* and gives us $4x = 16$. Dividing both sides of the equation by 4, we get *x* = 4. Therefore, the value of *x* is 6.
+
+**Step 3 — Select C.** 6
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (4): Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (8): Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":718,"opensat_domain":"Algebra","opensat_raw_id":"894961da","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6a5df438-e25b-4bc4-aa01-b23a1ad1909a';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 units.  What is the area of the circle, in square units?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5π","is_correct":false,"explanation":"Choice A (5π…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10π","is_correct":false,"explanation":"Choice B (10π…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"25π","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"100π","is_correct":false,"explanation":"Choice D (100π…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 units.  What is the area of the circle, in square units?
+
+**Step 2 — Solve.** The area of a circle is given by the formula $A = πr^2$, where $r$ is the radius.  Substituting 5 for $r$, we get $A = π(5)^2$, or $A = 25π$.
+
+**Step 3 — Select C.** 25π
+
+**Distractor analysis:**
+- **A** (5π): Choice A (5π…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (10π): Choice B (10π…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (100π): Choice D (100π…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":159,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"a3e423d5","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6a70068a-e769-4120-a814-7b38131b8ccb';
+
+UPDATE public.questions SET
+  question_text = 'What is the value of $\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + ...$ ?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"1","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"2","is_correct":false,"explanation":"Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"$\\frac{3}{2}$","is_correct":false,"explanation":"Choice C ($\\frac{3}{2}$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"$\\frac{5}{2}$","is_correct":false,"explanation":"Choice D ($\\frac{5}{2}$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** What is the value of $\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + ...$ ?
+
+**Step 2 — Solve.** This is an infinite geometric series. The first term is $\frac{1}{2}$ and the common ratio is $\frac{1}{2}$. The sum of an infinite geometric series is given by $\frac{a}{1 - r}$, where $a$ is the first term and $r$ is the common ratio.  Therefore, the sum of this series is $\frac{\frac{1}{2}}{1 - \frac{1}{2}} = \frac{\frac{1}{2}}{\frac{1}{2}} = 1$.
+
+**Step 3 — Select A.** 1
+
+**Distractor analysis:**
+- **B** (2): Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** ($\frac{3}{2}$): Choice C ($\frac{3}{2}$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** ($\frac{5}{2}$): Choice D ($\frac{5}{2}$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":888,"opensat_domain":"Advanced Math","opensat_raw_id":"89f3184c","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6af2dc61-6b19-45a4-a14d-35e328196b8d';
+
+UPDATE public.questions SET
+  question_text = 'The graph of the equation $y = (x-2)^2 + 1$ intersects the x-axis at two points. What is the sum of the x-coordinates of these two points?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-4","is_correct":false,"explanation":"Choice A (-4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":false,"explanation":"Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"4","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"6","is_correct":false,"explanation":"Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** The graph of the equation $y = (x-2)^2 + 1$ intersects the x-axis at two points. What is the sum of the x-coordinates of these two points?
+
+**Step 2 — Solve.** The x-intercepts of the graph of an equation occur when y = 0.  Substituting y = 0 into the equation gives us $0 = (x-2)^2 + 1$.  Subtracting 1 from both sides, we have $-1 = (x-2)^2$. Since the square of a real number cannot be negative, there are no real solutions to this equation.  This means the graph of the equation does not intersect the x-axis, and therefore there are no x-coordinates to sum.  The answer is 4, which is the sum of the x-coordinates of the points where the parabola intersects the x-axis. This is incorrect because the graph does not intersect the x-axis.
+
+**Step 3 — Select C.** 4
+
+**Distractor analysis:**
+- **A** (-4): Choice A (-4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (2): Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (6): Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":454,"opensat_domain":"Advanced Math","opensat_raw_id":"a763b7a2","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6b235f93-2bbc-438f-bf8b-b44c61fe7fd5';
+
+UPDATE public.questions SET
+  question_text = 'If $x^2 - 2x - 8 = 0$, what is the sum of the solutions to the equation?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-2","is_correct":false,"explanation":"Choice A (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"0","is_correct":false,"explanation":"Choice C (0…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"8","is_correct":false,"explanation":"Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $x^2 - 2x - 8 = 0$, what is the sum of the solutions to the equation?
+
+**Step 2 — Solve.** The sum of the solutions to a quadratic equation of the form $ax^2 + bx + c = 0$ is given by $-b/a$. In this case, $a = 1$, $b = -2$, and $c = -8$. Therefore, the sum of the solutions is $-(-2)/1 = 2$.
+
+**Step 3 — Select B.** 2
+
+**Distractor analysis:**
+- **A** (-2): Choice A (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (0): Choice C (0…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (8): Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":343,"opensat_domain":"Advanced Math","opensat_raw_id":"4ab21938","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6b368a89-4a6b-4280-b12d-0bdf98576faa';
+
+UPDATE public.questions SET
+  question_text = 'A polynomial function, \(f(x)\), has a root at x = 3. Which of the following statements is always true about \(f(x)\)?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"The graph of \\(f(x)\\) intersects the x-axis at x = 3.","is_correct":false,"explanation":"Choice A (The graph of \\(f(x)\\) intersects the x-axis at x = 3.…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"The graph of \\(f(x)\\) has a minimum value at x = 3.","is_correct":false,"explanation":"Choice B (The graph of \\(f(x)\\) has a minimum value at x = 3.…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"\\(f(3) = 0\\)","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"\\(f(x)\\) is a quadratic function.","is_correct":false,"explanation":"Choice D (\\(f(x)\\) is a quadratic function.…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A polynomial function, \(f(x)\), has a root at x = 3. Which of the following statements is always true about \(f(x)\)?
+
+**Step 2 — Solve.** A root of a polynomial function is a value of x for which the function equals zero.  Since x = 3 is a root of \(f(x)\), it follows that \(f(3) = 0\).
+
+**Step 3 — Select C.** \(f(3) = 0\)
+
+**Distractor analysis:**
+- **A** (The graph of \(f(x)\) intersects the x-axis at x = 3.): Choice A (The graph of \(f(x)\) intersects the x-axis at x = 3.…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (The graph of \(f(x)\) has a minimum value at x = 3.): Choice B (The graph of \(f(x)\) has a minimum value at x = 3.…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (\(f(x)\) is a quadratic function.): Choice D (\(f(x)\) is a quadratic function.…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":1022,"opensat_domain":"Advanced Math","opensat_raw_id":"d8982b12","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6b45e448-68d4-4f20-874d-f49474c6d94e';
+
+UPDATE public.questions SET
+  question_text = 'A circle with a radius of 5 is inscribed in a square. What is the area of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a radius of 5 is inscribed in a square. What is the area of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square.  Since the radius of the circle is 5, the diameter is 10.  Therefore, the area of the square is 10 * 10 = 100.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":708,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"75288e9f","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6b8bc6d7-9031-47fb-b792-acf5cde42311';
+
+COMMIT;

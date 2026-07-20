@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('b747296d-96d8-4389-82b4-93e5690b41d0', 'Which choice completes the text with the most logical transition?', 'The film''s director shot most scenes in dim, gray light to mirror the bleakness of the story. The producers worried that audiences would find the look too dreary, ______ so they pushed for brighter, warmer tones in the final cut.', NULL, '[{"id":"A","text":"nonetheless,","is_correct":false,"explanation":"Incorrect: the producers'' push follows logically from their worry, not in spite of it."},{"id":"B","text":"for instance,","is_correct":false,"explanation":"Incorrect: pushing for brighter tones is not an example of the dim lighting."},{"id":"C","text":"as a result,","is_correct":true,"explanation":"Correct: the producers'' worry causes their push for a brighter look."},{"id":"D","text":"by contrast,","is_correct":false,"explanation":"Incorrect: the clause continues the producers'' reasoning rather than opposing it."}]'::jsonb, 'C', 'Step 1 — Identify the motivation
+The producers {{yellow:worried that audiences would find the look too dreary}}, prompting a change.
+Step 2 — Supply the consequence
+''As a result'' connects that worry to their push for warmer tones.
+Distractor analysis:
+- A: ''nonetheless'' implies they acted despite the worry, but the worry drove the action.
+- B: ''for instance'' would give an example of the dreary look, which it does not.
+- D: ''by contrast'' sets up opposition that the cause-effect link does not need.', 'What does the producers'' worry lead them to do?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

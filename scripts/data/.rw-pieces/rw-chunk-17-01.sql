@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('4bb8b262-45ee-45e2-ae56-319f2097b500', 'Which choice completes the text with the most logical transition?', 'Many gardeners pull dandelions on sight, treating them as worthless weeds to be eliminated. Ecologists point out that dandelions bloom early in spring, ______ they provide one of the first reliable food sources for emerging bees when little else is flowering.', NULL, '[{"id":"A","text":"so","is_correct":true,"explanation":"Correct: early blooming is the reason dandelions feed early bees, a cause-and-effect link."},{"id":"B","text":"yet","is_correct":false,"explanation":"Incorrect: there is no contrast; the second clause follows logically from the early bloom."},{"id":"C","text":"meanwhile,","is_correct":false,"explanation":"Incorrect: ''meanwhile'' marks simultaneous unrelated events, not the causal link present here."},{"id":"D","text":"nonetheless,","is_correct":false,"explanation":"Incorrect: ''nonetheless'' concedes a contrast, but the clauses agree."}]'::jsonb, 'A', 'Step 1 — Trace the cause
+The ecologists note that dandelions {{yellow:bloom early in spring}}, and this timing is what lets them feed emerging bees.
+Step 2 — Pick the result word
+Because the early bloom causes the early food supply, a causal ''so'' is correct.
+Distractor analysis:
+- B: ''yet'' signals contrast, but the two clauses reinforce each other.
+- C: ''meanwhile'' suggests parallel timing, not the causal relationship.
+- D: ''nonetheless'' concedes opposition that does not exist here.', 'Does blooming early cause the benefit to bees, or contradict it?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

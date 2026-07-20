@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('a194c915-1d22-42ca-b255-77543557506b', 'Which choice completes the text with the most logical and precise word or phrase?', 'The detective studied the case for weeks. At first, the many clues seemed to point in different directions, and nothing made sense. Then she noticed a single detail that tied everything together. Suddenly the confusing facts became ______, and she understood exactly how the crime had happened from start to finish.', NULL, '[{"id":"A","text":"coherent","is_correct":true,"explanation":"Correct: facts that suddenly fit together so she understands fully have become coherent."},{"id":"B","text":"scattered","is_correct":false,"explanation":"Reverse: scattered describes the earlier confusing state, not the new understanding."},{"id":"C","text":"missing","is_correct":false,"explanation":"No evidence: the facts are present and understood, not missing."},{"id":"D","text":"boring","is_correct":false,"explanation":"No evidence: the passage addresses clarity, not how interesting the facts are."}]'::jsonb, 'A', 'Step 1 — Find the clue
+The text says after one detail tied things together, she {{yellow:understood exactly how the crime had happened}}.
+Step 2 — Match the word
+Facts that now fit together into full understanding have become coherent, the opposite of confusing.
+Distractor analysis:
+- B: ''Scattered'' reverses the clue, describing the earlier confused state.
+- C: ''Missing'' is unsupported; the facts are present and understood.
+- D: ''Boring'' has no support; the passage is about clarity, not interest.', 'The once-confusing facts now fit together so she fully understood.', 'Craft and Structure', 'Words in Context', 'reading_writing', 'craft', 'WIC', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

@@ -1,0 +1,451 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+}
+
+.panelInline {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: hsl(var(--muted) / 0.35);
+  border: 1px solid hsl(var(--border));
+}
+
+/*
+ * The exam UI is an always-light "paper" surface, but this panel uses theme
+ * tokens. On the paper it must stay light/readable regardless of the app
+ * theme, so pin the local palette to light values. Every rule below reads
+ * these variables, so this single override recolors the whole panel.
+ * (Report pages omit `.paper` and follow the app theme as before.)
+ */
+.paper {
+  --background: 0 0% 100%;
+  --card: 0 0% 100%;
+  --foreground: 222 22% 14%;
+  --muted: 220 14% 93%;
+  --muted-foreground: 220 9% 40%;
+  --border: 220 13% 86%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 22% 14%;
+  color: hsl(var(--foreground));
+}
+
+.paper.panelInline {
+  background: hsl(0 0% 100%);
+}
+
+/*
+ * The exam paper is now dark-mode aware. `.paper` above pins a LIGHT palette
+ * for the light theme; in dark mode re-pin the same local tokens to the dark
+ * theme values (mirroring globals.css `.dark`) so every rule below — which all
+ * read these vars — renders light text on dark surfaces instead of the
+ * dark-on-dark that the light pin produced.
+ */
+:global(.dark) .paper {
+  --background: 222 28% 9%;
+  --card: 222 26% 13%;
+  --foreground: 210 20% 92%;
+  --muted: 222 22% 17%;
+  --muted-foreground: 215 14% 58%;
+  --border: 222 18% 22%;
+  --popover: 222 26% 14%;
+  --popover-foreground: 210 20% 92%;
+}
+
+:global(.dark) .paper.panelInline {
+  background: hsl(var(--card));
+}
+
+.panelDrawer {
+  flex: 1;
+  overflow: auto;
+  padding: var(--space-3);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.reportLink {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+}
+
+.reportLink:hover {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+}
+
+.togglePlain {
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  color: hsl(var(--muted-foreground));
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.togglePlain:hover,
+.togglePlainActive {
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+}
+
+.optionTabs {
+  display: flex;
+  gap: 6px;
+}
+
+.optionTab {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1.5px solid hsl(var(--border));
+  background: transparent;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionTabActive {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.1);
+}
+
+.optionTabCorrect {
+  border-color: hsl(var(--score-positive));
+  color: hsl(var(--score-positive));
+}
+
+.optionTabWrong {
+  border-color: hsl(var(--score-negative, 0 72% 51%));
+  color: hsl(var(--score-negative, 0 72% 51%));
+}
+
+.tabIcon {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: hsl(var(--background));
+  border-radius: 999px;
+}
+
+.verdict {
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1.5px solid hsl(var(--border));
+}
+
+.verdictCorrect {
+  border-color: hsl(var(--score-positive) / 0.55);
+  background: hsl(var(--score-positive) / 0.1);
+}
+
+.verdictWrong {
+  border-color: hsl(var(--score-negative, 0 72% 51%) / 0.55);
+  background: hsl(var(--score-negative, 0 72% 51%) / 0.08);
+}
+
+.verdictLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 6px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.verdictCorrect .verdictLabel {
+  color: hsl(var(--score-positive));
+}
+
+.verdictWrong .verdictLabel {
+  color: hsl(var(--score-negative, 0 72% 51%));
+}
+
+.verdictChoice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+}
+
+.choiceBadge {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8125rem;
+}
+
+.verdictCorrect .choiceBadge {
+  background: hsl(var(--score-positive));
+  color: hsl(var(--primary-foreground, 0 0% 100%));
+}
+
+.verdictWrong .choiceBadge {
+  background: hsl(var(--score-negative, 0 72% 51%) / 0.15);
+  color: hsl(var(--score-negative, 0 72% 51%));
+}
+
+.choiceText {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.verdictWrong .choiceText {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  color: hsl(var(--score-negative, 0 72% 51%));
+}
+
+.verdictRationale {
+  margin: 8px 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.timelineItem:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 24px;
+  bottom: 0;
+  width: 2px;
+  background: hsl(var(--border));
+}
+
+.timelineDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: 2px solid hsl(var(--primary));
+  background: hsl(var(--background));
+  color: hsl(var(--primary));
+  font-size: 0.6875rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.stepTitle {
+  margin: 0 0 4px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.stepBody {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.stepLocked .stepBody {
+  filter: blur(4px);
+  user-select: none;
+}
+
+.blurWrap {
+  position: relative;
+}
+
+.unlockBtn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.passageExcerpt {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: hsl(var(--muted) / 0.45);
+  border: 1px solid hsl(var(--border));
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  font-family: var(--font-serif, Georgia, "Times New Roman", serif);
+}
+
+.highlightYellow {
+  background: hsl(48 96% 76% / 0.85);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlightBlue {
+  background: hsl(205 90% 82% / 0.85);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlightPink {
+  background: hsl(330 85% 84% / 0.85);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.eliminatedList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.eliminatedOption {
+  border: 1.5px solid hsl(var(--score-negative, 0 72% 51%) / 0.45);
+  background: hsl(var(--score-negative, 0 72% 51%) / 0.07);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.eliminatedHead {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 4px;
+}
+
+.eliminatedBadge {
+  flex-shrink: 0;
+  font-weight: 800;
+  color: hsl(var(--score-negative, 0 72% 51%));
+}
+
+.eliminatedText {
+  margin: 0;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  color: hsl(var(--score-negative, 0 72% 51%));
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.eliminatedRationale {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: hsl(var(--foreground));
+}
+
+.plainText {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.footer {
+  border-radius: 10px;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: hsl(var(--score-positive));
+  background: hsl(var(--score-positive) / 0.1);
+  border: 1px solid hsl(var(--score-positive) / 0.35);
+}
+
+.askCta {
+  width: 100%;
+  padding: 10px;
+  border: 1px dashed hsl(var(--border));
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.askCta:hover {
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+}
+
+@media (max-width: 480px) {
+  .panelInline {
+    padding: 12px 12px;
+  }
+
+  .askCta {
+    min-height: 44px;
+    padding: 12px;
+  }
+}

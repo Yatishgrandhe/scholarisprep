@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('29c830f8-4043-4c1f-ad4c-8c7099add829', 'Which choice completes the text with the most logical transition?', 'The composer Clara Schumann was celebrated across Europe as a brilliant pianist during her lifetime. Her own compositions, ______ were largely ignored until scholars in the late twentieth century began performing and recording them.', NULL, '[{"id":"A","text":"in contrast,","is_correct":true,"explanation":"Correct: it contrasts her celebrated performing career with the neglect of her compositions."},{"id":"B","text":"as a result,","is_correct":false,"explanation":"Incorrect: her fame as a pianist did not cause her compositions to be ignored."},{"id":"C","text":"in addition,","is_correct":false,"explanation":"Incorrect: ''in addition'' adds a like idea, but neglect contrasts with celebration."},{"id":"D","text":"indeed,","is_correct":false,"explanation":"Incorrect: ''indeed'' intensifies a prior point, but the second sentence shifts to an opposite outcome."}]'::jsonb, 'A', 'Step 1 — Identify the two outcomes
+Schumann was celebrated as a pianist, yet her compositions {{yellow:were largely ignored until scholars in the late twentieth century}}.
+Step 2 — Choose the contrast
+Celebration versus neglect requires a contrasting transition such as ''in contrast.''
+Distractor analysis:
+- B: ''as a result'' wrongly implies her fame caused the neglect of her works.
+- C: ''in addition'' signals a parallel addition, but the ideas are opposed.
+- D: ''indeed'' would reinforce the first idea, not introduce the reversal.', 'Are her two reputations (performer vs. composer) the same or opposite?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

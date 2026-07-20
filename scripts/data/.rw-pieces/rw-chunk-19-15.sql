@@ -1,0 +1,16 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('12b8786d-6f0e-4836-9e26-44a8594f4868', 'The student wants to emphasize the historical significance of Lovelace''s notes. Which choice most effectively uses information from the notes to accomplish this goal?', 'Ada Lovelace and the Analytical Engine
+- Ada Lovelace was a 19th-century English mathematician.
+- In the 1840s she translated an article about Charles Babbage''s proposed Analytical Engine, a mechanical computing machine.
+- To her translation she added extensive notes that were longer than the original article.
+- In these notes she described a step-by-step method for the machine to calculate a sequence of numbers.
+- Many scholars consider this method to be the first published algorithm intended for a machine.', NULL, '[{"id":"A","text":"Ada Lovelace, a 19th-century English mathematician, translated an article about Charles Babbage''s proposed Analytical Engine in the 1840s.","is_correct":false,"explanation":"This states what she translated but does not convey the historical significance of her own notes."},{"id":"B","text":"Lovelace''s added notes were longer than the original article she had translated.","is_correct":false,"explanation":"This is a true detail about length but does not establish why the notes are historically significant."},{"id":"C","text":"In her notes, Lovelace described a step-by-step method that many scholars consider the first published algorithm intended for a machine.","is_correct":true,"explanation":"This pairs the content of her notes with the scholarly judgment that they contained the first published machine algorithm, conveying their significance."},{"id":"D","text":"Charles Babbage proposed the Analytical Engine, a mechanical computing machine, in the 19th century.","is_correct":false,"explanation":"This focuses on Babbage''s machine rather than the significance of Lovelace''s notes."}]'::jsonb, 'C', 'Step 1 — Locate the significance
+The notes say her method is what {{yellow:many scholars consider to be the first published algorithm intended for a machine}}.
+Step 2 — Match the goal
+To emphasize significance, the correct choice must connect her notes to that landmark distinction, which choice C does.
+Distractor analysis:
+- A: Describes the translation but omits the significant algorithm claim.
+- B: A true but trivial detail about length, not significance.
+- D: Centers on Babbage''s machine rather than Lovelace''s notes.', 'Significance comes from the claim that her method was a ''first'' of its kind.', 'Expression of Ideas', 'Rhetorical Synthesis', 'reading_writing', 'expression', 'SYN', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

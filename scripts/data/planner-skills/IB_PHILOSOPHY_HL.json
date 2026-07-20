@@ -1,0 +1,172 @@
+{
+  "examType": "IB_PHILOSOPHY_HL",
+  "topics": [
+    "Core theme \u2014 being human",
+    "Optional theme A",
+    "Optional theme B",
+    "Prescribed text skills",
+    "HL extension \u2014 philosophical activity",
+    "Argument construction",
+    "Unseen text response",
+    "IA philosophical analysis"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_core_theme_being_human",
+      "title": "Core theme \u2014 being human",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_optional_theme_a",
+      "title": "Optional theme A",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_optional_theme_b",
+      "title": "Optional theme B",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_prescribed_text_skills",
+      "title": "Prescribed text skills",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_hl_extension_philosophical_activity",
+      "title": "HL extension \u2014 philosophical activity",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_argument_construction",
+      "title": "Argument construction",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_unseen_text_response",
+      "title": "Unseen text response",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_ia_philosophical_analysis",
+      "title": "IA philosophical analysis",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_PHILOSOPHY_HL:U1_core_theme_being_human",
+      "unit_code": "U1_core_theme_being_human",
+      "title": "Core theme \u2014 being human",
+      "topics": [
+        "personhood",
+        "mind and body",
+        "identity",
+        "freedom"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_PHILOSOPHY_HL:U2_optional_theme_a",
+      "unit_code": "U2_optional_theme_a",
+      "title": "Optional theme A",
+      "topics": [
+        "aesthetics",
+        "epistemology",
+        "ethics foundations"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_PHILOSOPHY_HL:U1_core_theme_being_human"
+      ]
+    },
+    {
+      "skill_id": "IB_PHILOSOPHY_HL:U3_optional_theme_b",
+      "unit_code": "U3_optional_theme_b",
+      "title": "Optional theme B",
+      "topics": [
+        "political philosophy",
+        "religion",
+        "philosophy of science"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_PHILOSOPHY_HL:U2_optional_theme_a"
+      ]
+    },
+    {
+      "skill_id": "IB_PHILOSOPHY_HL:U4_prescribed_text_skills",
+      "unit_code": "U4_prescribed_text_skills",
+      "title": "Prescribed text skills",
+      "topics": [
+        "close reading",
+        "argument reconstruction",
+        "critique"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_PHILOSOPHY_HL:U3_optional_theme_b"
+      ]
+    },
+    {
+      "skill_id": "IB_PHILOSOPHY_HL:U5_hl_extension_philosophical_activity",
+      "unit_code": "U5_hl_extension_philosophical_activity",
+      "title": "HL extension \u2014 philosophical activity",
+      "topics": [
+        "methodology",
+        "comparative analysis"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_PHILOSOPHY_HL:U4_prescribed_text_skills"
+      ]
+    },
+    {
+      "skill_id": "IB_PHILOSOPHY_HL:U6_argument_construction",
+      "unit_code": "U6_argument_construction",
+      "title": "Argument construction",
+      "topics": [
+        "premises",
+        "validity",
+        "counterarguments",
+        "examples"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_PHILOSOPHY_HL:U5_hl_extension_philosophical_activity"
+      ]
+    },
+    {
+      "skill_id": "IB_PHILOSOPHY_HL:U7_unseen_text_response",
+      "unit_code": "U7_unseen_text_response",
+      "title": "Unseen text response",
+      "topics": [
+        "extract analysis",
+        "application of concepts"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_PHILOSOPHY_HL:U6_argument_construction"
+      ]
+    },
+    {
+      "skill_id": "IB_PHILOSOPHY_HL:U8_ia_philosophical_analysis",
+      "unit_code": "U8_ia_philosophical_analysis",
+      "title": "IA philosophical analysis",
+      "topics": [
+        "stimulus choice",
+        "analysis structure",
+        "evaluation"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_PHILOSOPHY_HL:U7_unseen_text_response"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

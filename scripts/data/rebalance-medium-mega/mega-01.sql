@@ -1,0 +1,254 @@
+BEGIN;
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+The committee reviewed the proposal it was thorough and well documented ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…proposal; it…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…proposal, it…","is_correct":false,"explanation":"Incorrect boundary: …proposal, it… creates a run-on or splice."},{"id":"C","text":"…proposal it…","is_correct":false,"explanation":"Incorrect boundary: …proposal it… creates a run-on or splice."},{"id":"D","text":"…proposal: it…","is_correct":false,"explanation":"Incorrect boundary: …proposal: it… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '45892cf5-d3f9-43dd-80b2-09b5601435f4';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+After the lecture ended the students asked follow up questions ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…ended, the…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…ended the…","is_correct":false,"explanation":"Incorrect boundary: …ended the… creates a run-on or splice."},{"id":"C","text":"…ended; the…","is_correct":false,"explanation":"Incorrect boundary: …ended; the… creates a run-on or splice."},{"id":"D","text":"…ended: the…","is_correct":false,"explanation":"Incorrect boundary: …ended: the… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd6ef20e3-0a43-4b85-974a-25b0afc71c61';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+The committee reviewed the proposal it was thorough and well documented ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…proposal; it…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…proposal, it…","is_correct":false,"explanation":"Incorrect boundary: …proposal, it… creates a run-on or splice."},{"id":"C","text":"…proposal it…","is_correct":false,"explanation":"Incorrect boundary: …proposal it… creates a run-on or splice."},{"id":"D","text":"…proposal: it…","is_correct":false,"explanation":"Incorrect boundary: …proposal: it… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '66f829d6-8c8d-43ba-b885-5d2ddbce645d';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+After the lecture ended the students asked follow up questions ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…ended, the…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…ended the…","is_correct":false,"explanation":"Incorrect boundary: …ended the… creates a run-on or splice."},{"id":"C","text":"…ended; the…","is_correct":false,"explanation":"Incorrect boundary: …ended; the… creates a run-on or splice."},{"id":"D","text":"…ended: the…","is_correct":false,"explanation":"Incorrect boundary: …ended: the… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '06ac7207-77a4-4c83-8f73-a9009cd1670b';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+The committee reviewed the proposal it was thorough and well documented ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…proposal; it…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…proposal, it…","is_correct":false,"explanation":"Incorrect boundary: …proposal, it… creates a run-on or splice."},{"id":"C","text":"…proposal it…","is_correct":false,"explanation":"Incorrect boundary: …proposal it… creates a run-on or splice."},{"id":"D","text":"…proposal: it…","is_correct":false,"explanation":"Incorrect boundary: …proposal: it… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e586400e-8034-4b49-b669-84f00edadb0f';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+After the lecture ended the students asked follow up questions ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…ended, the…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…ended the…","is_correct":false,"explanation":"Incorrect boundary: …ended the… creates a run-on or splice."},{"id":"C","text":"…ended; the…","is_correct":false,"explanation":"Incorrect boundary: …ended; the… creates a run-on or splice."},{"id":"D","text":"…ended: the…","is_correct":false,"explanation":"Incorrect boundary: …ended: the… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'b906dc30-9636-424b-aac2-d66fa4440614';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+The committee reviewed the proposal it was thorough and well documented ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…proposal; it…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…proposal, it…","is_correct":false,"explanation":"Incorrect boundary: …proposal, it… creates a run-on or splice."},{"id":"C","text":"…proposal it…","is_correct":false,"explanation":"Incorrect boundary: …proposal it… creates a run-on or splice."},{"id":"D","text":"…proposal: it…","is_correct":false,"explanation":"Incorrect boundary: …proposal: it… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'a61572c5-8342-49c4-a725-69b92381f469';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+After the lecture ended the students asked follow up questions ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…ended, the…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…ended the…","is_correct":false,"explanation":"Incorrect boundary: …ended the… creates a run-on or splice."},{"id":"C","text":"…ended; the…","is_correct":false,"explanation":"Incorrect boundary: …ended; the… creates a run-on or splice."},{"id":"D","text":"…ended: the…","is_correct":false,"explanation":"Incorrect boundary: …ended: the… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'bc8b90ff-dc9c-4e62-8894-0c3a0e575f7d';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+The committee reviewed the proposal it was thorough and well documented ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…proposal; it…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…proposal, it…","is_correct":false,"explanation":"Incorrect boundary: …proposal, it… creates a run-on or splice."},{"id":"C","text":"…proposal it…","is_correct":false,"explanation":"Incorrect boundary: …proposal it… creates a run-on or splice."},{"id":"D","text":"…proposal: it…","is_correct":false,"explanation":"Incorrect boundary: …proposal: it… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '7ec235d5-1663-40a9-bd4d-d864bb8646bc';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+After the lecture ended the students asked follow up questions ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…ended, the…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…ended the…","is_correct":false,"explanation":"Incorrect boundary: …ended the… creates a run-on or splice."},{"id":"C","text":"…ended; the…","is_correct":false,"explanation":"Incorrect boundary: …ended; the… creates a run-on or splice."},{"id":"D","text":"…ended: the…","is_correct":false,"explanation":"Incorrect boundary: …ended: the… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'b9cfe77e-46e8-4066-a0c5-93d981491639';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+The committee reviewed the proposal it was thorough and well documented ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…proposal; it…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…proposal, it…","is_correct":false,"explanation":"Incorrect boundary: …proposal, it… creates a run-on or splice."},{"id":"C","text":"…proposal it…","is_correct":false,"explanation":"Incorrect boundary: …proposal it… creates a run-on or splice."},{"id":"D","text":"…proposal: it…","is_correct":false,"explanation":"Incorrect boundary: …proposal: it… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'bd0eacd1-4dfa-438c-9706-fcd9457cec58';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+After the lecture ended the students asked follow up questions ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…ended, the…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…ended the…","is_correct":false,"explanation":"Incorrect boundary: …ended the… creates a run-on or splice."},{"id":"C","text":"…ended; the…","is_correct":false,"explanation":"Incorrect boundary: …ended; the… creates a run-on or splice."},{"id":"D","text":"…ended: the…","is_correct":false,"explanation":"Incorrect boundary: …ended: the… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '5aae958e-835c-42fc-a05d-4026ca2e9186';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+The committee reviewed the proposal it was thorough and well documented ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…proposal; it…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…proposal, it…","is_correct":false,"explanation":"Incorrect boundary: …proposal, it… creates a run-on or splice."},{"id":"C","text":"…proposal it…","is_correct":false,"explanation":"Incorrect boundary: …proposal it… creates a run-on or splice."},{"id":"D","text":"…proposal: it…","is_correct":false,"explanation":"Incorrect boundary: …proposal: it… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '4925d706-6244-4778-bd34-b512b758f73e';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+After the lecture ended the students asked follow up questions ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…ended, the…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…ended the…","is_correct":false,"explanation":"Incorrect boundary: …ended the… creates a run-on or splice."},{"id":"C","text":"…ended; the…","is_correct":false,"explanation":"Incorrect boundary: …ended; the… creates a run-on or splice."},{"id":"D","text":"…ended: the…","is_correct":false,"explanation":"Incorrect boundary: …ended: the… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'b3299d0e-70fc-4e5a-b314-a32702a3ffe9';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+The committee reviewed the proposal it was thorough and well documented ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…proposal; it…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…proposal, it…","is_correct":false,"explanation":"Incorrect boundary: …proposal, it… creates a run-on or splice."},{"id":"C","text":"…proposal it…","is_correct":false,"explanation":"Incorrect boundary: …proposal it… creates a run-on or splice."},{"id":"D","text":"…proposal: it…","is_correct":false,"explanation":"Incorrect boundary: …proposal: it… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '089bdf71-7ac8-454e-911a-c9074e0d1038';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the sentence so that it follows the conventions of Standard English?
+
+After the lecture ended the students asked follow up questions ______ continued.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"…ended, the…","is_correct":true,"explanation":"Correct boundary punctuation."},{"id":"B","text":"…ended the…","is_correct":false,"explanation":"Incorrect boundary: …ended the… creates a run-on or splice."},{"id":"C","text":"…ended; the…","is_correct":false,"explanation":"Incorrect boundary: …ended; the… creates a run-on or splice."},{"id":"D","text":"…ended: the…","is_correct":false,"explanation":"Incorrect boundary: …ended: the… creates a run-on or splice."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'Boundary items require recognizing where one clause ends and the next begins. Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"hard_content_upgraded_at":"2026-06-12T20:29:31.378Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.877Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"boundaries","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'dcae577b-b338-4473-9046-a121fd3c15f0';
+UPDATE public.questions SET
+  stimulus_text = 'Historians examining trade route 2 note that camel caravans carried not only goods but also astronomical tables, spreading navigation techniques across deserts long before printed maps existed. Merchants who survived the crossing depended on star charts copied onto leather scrolls, and those copies often accumulated marginal notes from later travelers. A ledger recovered near route 2 lists dates, caravan leaders, and the scientific texts exchanged at each oasis, suggesting that commerce and scholarship moved together. When one city tightened tariffs, caravans rerouted through secondary wells, and the astronomical knowledge rerouted with them. Modern scholars therefore treat desert trade networks as early information highways rather than simple supply chains. The passage emphasizes how practical navigation needs drove the circulation of technical knowledge among communities that rarely shared a written language. Recent digitization projects have linked surviving ledger fragments to star-chart marginalia, strengthening the case for integrated commercial and intellectual exchange.',
+  question_text = 'According to the passage, which statement is best supported by the text?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"Protecting herbivorous fish helps reefs recover because grazing controls algae and enables coral settlement.","is_correct":true,"explanation":"The passage centers on grazing, algae control, and coral recruitment as interconnected processes."},{"id":"B","text":"Reefs never recover once algae appear, regardless of grazing or recruitment.","is_correct":false,"explanation":"The passage describes recovery mechanisms; it does not claim permanent loss once algae appear."},{"id":"C","text":"The passage rejects scientific study of reefs in favor of anecdotal fishing reports.","is_correct":false,"explanation":"The passage cites research and field surveys; it does not reject scientific methods."},{"id":"D","text":"Coral larvae cannot survive on any hard surface mentioned in marine research.","is_correct":false,"explanation":"The passage states larvae settle on bare rock when grazing permits it."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'The passage develops a causal chain linking herbivory to reef recovery. The stimulus anchors the correct choice in language such as "Historians examining trade route 2 note that camel caravans carried not only goods but also astronom…". Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"section":"english","remix_at":"2026-06-12T00:00:00Z","skill_id":"CID","domain_id":"information","is_remixed":true,"remix_method":"rules","opensat_index":3,"remix_version":"1.0.0","opensat_domain":"Information and Ideas","opensat_raw_id":"99315200","hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"opensat_difficulty":"Hard","hard_content_upgraded_at":"2026-06-12T20:29:31.372Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.896Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"main_idea","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '6cde7376-fccd-4c17-869a-c4ced1a6dccf';
+UPDATE public.questions SET
+  stimulus_text = 'In her essay on urban soundscapes, writer 3 argues that city planners should treat noise pollution as a public-health issue, citing studies linking traffic noise to elevated stress hormones. She describes neighborhoods where sirens, construction, and highway hum overlap for eighteen hours a day, leaving residents with fragmented sleep even when air quality meets regulatory standards. Community interviews quoted in the essay repeatedly mention difficulty concentrating at work and heightened irritability at home. The writer contrasts cosmetic beautification projects—new planters and paint—with measurable acoustic interventions such as berms, low-noise pavement, and delivery-time restrictions. She acknowledges that complete silence is impossible in dense cities, yet insists that reducing predictable high-decibel spikes could yield health benefits comparable to modest improvements in green space. The essay concludes that sound belongs in urban planning budgets alongside light and air. Pilot programs in three cities reported measurable sleep gains after targeted speed reductions on arterial roads.',
+  question_text = 'According to the passage, which statement is best supported by the text?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"Protecting herbivorous fish helps reefs recover because grazing controls algae and enables coral settlement.","is_correct":true,"explanation":"The passage centers on grazing, algae control, and coral recruitment as interconnected processes."},{"id":"B","text":"Reefs never recover once algae appear, regardless of grazing or recruitment.","is_correct":false,"explanation":"The passage describes recovery mechanisms; it does not claim permanent loss once algae appear."},{"id":"C","text":"The passage rejects scientific study of reefs in favor of anecdotal fishing reports.","is_correct":false,"explanation":"The passage cites research and field surveys; it does not reject scientific methods."},{"id":"D","text":"Coral larvae cannot survive on any hard surface mentioned in marine research.","is_correct":false,"explanation":"The passage states larvae settle on bare rock when grazing permits it."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'The passage develops a causal chain linking herbivory to reef recovery. The stimulus anchors the correct choice in language such as "In her essay on urban soundscapes, writer 3 argues that city planners should treat noise pollution a…". Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"section":"english","skill_id":"CID","domain_id":"information","opensat_index":39,"opensat_domain":"Information and Ideas","opensat_raw_id":"random_id_12","hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"opensat_difficulty":"Hard","hard_content_upgraded_at":"2026-06-12T20:29:31.372Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.897Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"main_idea","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'b641c0d2-6b7b-425a-8e4c-60a00b54ff04';
+UPDATE public.questions SET
+  stimulus_text = 'Economists analyzing market 4 observed that small retailers adapted faster than national chains when supply chains stalled, partly because they could reorder from local wholesalers within days. While big-box stores waited for centralized distribution centers to reopen, corner shops phoned alternate suppliers named in handwritten contact lists. The economists interviewed owners who shifted product mix toward shelf-stable goods and services that did not depend on overseas shipping. National chains, bound to national contracts and uniform pricing algorithms, could not pivot as quickly without corporate approval cycles. The study does not claim small stores always outperform chains; rather, it shows that flexibility and local relationships became decisive when long-distance logistics failed. Readers should infer that organizational scale can become a liability during sudden disruptions. A follow-up survey eighteen months later found that retailers who diversified suppliers during the stall retained higher customer loyalty scores.',
+  question_text = 'Which choice best states the main idea of the passage?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"Protecting herbivorous fish helps reefs recover because grazing controls algae and enables coral settlement.","is_correct":true,"explanation":"The passage centers on grazing, algae control, and coral recruitment as interconnected processes."},{"id":"B","text":"Reefs never recover once algae appear, regardless of grazing or recruitment.","is_correct":false,"explanation":"The passage describes recovery mechanisms; it does not claim permanent loss once algae appear."},{"id":"C","text":"The passage rejects scientific study of reefs in favor of anecdotal fishing reports.","is_correct":false,"explanation":"The passage cites research and field surveys; it does not reject scientific methods."},{"id":"D","text":"Coral larvae cannot survive on any hard surface mentioned in marine research.","is_correct":false,"explanation":"The passage states larvae settle on bare rock when grazing permits it."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'The passage develops a causal chain linking herbivory to reef recovery. The stimulus anchors the correct choice in language such as "Economists analyzing market 4 observed that small retailers adapted faster than national chains when…". Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"section":"english","skill_id":"CID","domain_id":"information","opensat_index":50,"opensat_domain":"Information and Ideas","opensat_raw_id":"random_id_english_a3","hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"opensat_difficulty":"Hard","hard_content_upgraded_at":"2026-06-12T20:29:31.372Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.897Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"main_idea","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '9489020a-89d1-45e6-83f9-24135a7f5e5f';
+UPDATE public.questions SET
+  stimulus_text = 'Archaeologists at site 5 discovered that pottery shards contained residue of fermented grain, suggesting the community brewed beverages for ritual gatherings rather than daily meals. Layer analysis placed the shards in a ceremonial plaza rather than domestic kitchens, and nearby hearths showed feasting debris concentrated on solstice dates. Chemical tests identified compounds consistent with controlled fermentation but not with large-scale storage for everyday consumption. The team compared the findings with neighboring settlements where grain storage pits dominated the record. That contrast supports the interpretation that brewing here marked special occasions and social bonding. The passage invites readers to connect material evidence with inferred cultural practice without claiming certainty about every recipe detail. Residue profiles from adjacent sites lacked the same fermentation markers, suggesting the practice was localized rather than regional.',
+  question_text = 'According to the passage, which statement is best supported by the text?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"Protecting herbivorous fish helps reefs recover because grazing controls algae and enables coral settlement.","is_correct":true,"explanation":"The passage centers on grazing, algae control, and coral recruitment as interconnected processes."},{"id":"B","text":"Reefs never recover once algae appear, regardless of grazing or recruitment.","is_correct":false,"explanation":"The passage describes recovery mechanisms; it does not claim permanent loss once algae appear."},{"id":"C","text":"The passage rejects scientific study of reefs in favor of anecdotal fishing reports.","is_correct":false,"explanation":"The passage cites research and field surveys; it does not reject scientific methods."},{"id":"D","text":"Coral larvae cannot survive on any hard surface mentioned in marine research.","is_correct":false,"explanation":"The passage states larvae settle on bare rock when grazing permits it."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = 'The passage develops a causal chain linking herbivory to reef recovery. The stimulus anchors the correct choice in language such as "Archaeologists at site 5 discovered that pottery shards contained residue of fermented grain, sugges…". Choice A is correct: x. Incorrect options contradict explicit details, import absent information, or answer a different question than the stem asks.',
+  difficulty = 'medium',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"section":"english","skill_id":"CID","domain_id":"information","opensat_index":71,"opensat_domain":"Information and Ideas","opensat_raw_id":"random_id_8","hard_content_v2":false,"prior_difficulty":"medium","english_content_v2":true,"opensat_difficulty":"Hard","hard_content_upgraded_at":"2026-06-12T20:29:31.372Z","difficulty_reclassified_at":"2026-06-12T20:24:49.070Z","difficulty_reclassified_to":"medium","english_content_upgraded_at":"2026-06-12T20:01:56.897Z","hard_content_upgrade_method":"generate-hard-english.mjs","difficulty_reclassified_from":"hard","difficulty_reclassified_reason":"calibration_shift_down_v1","english_content_upgrade_method":"upgrade-english-content.mjs","rw_subtype":"main_idea","english_medium_rebalance":"english_medium_rebalance_v1","english_medium_rebalanced_at":"2026-06-12T20:57:24.340Z","rebalance_method":"rebalance-english-medium.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '17baf2d4-a61c-40f1-9a44-1519ff368258';
+COMMIT;

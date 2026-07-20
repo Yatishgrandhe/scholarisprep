@@ -1,0 +1,35 @@
+{
+  "exam_type": "AP_COMPUTER_SCIENCE_PRINCIPLES",
+  "skills": [
+    {
+      "id": "ap_computer_science_principles_U1_creative_development",
+      "unit_code": "U1_creative_development",
+      "label": "Creative development and collaboration",
+      "description": "Practice and review: Creative Development. Topics include Program design and development; Collaboration; Documentation and testing."
+    },
+    {
+      "id": "ap_computer_science_principles_U2_data",
+      "unit_code": "U2_data",
+      "label": "Data representation and analysis",
+      "description": "Practice and review: Data. Topics include Binary and data representation; Data compression; Extracting information from data."
+    },
+    {
+      "id": "ap_computer_science_principles_U3_algorithms_programming",
+      "unit_code": "U3_algorithms_programming",
+      "label": "Algorithms and programming concepts",
+      "description": "Practice and review: Algorithms and Programming. Topics include Variables and algorithms; Control structures; Lists and procedures."
+    },
+    {
+      "id": "ap_computer_science_principles_U4_computing_systems_networks",
+      "unit_code": "U4_computing_systems_networks",
+      "label": "Systems and networks",
+      "description": "Practice and review: Computing Systems and Networks. Topics include Internet structure; Fault tolerance; Protocols and packets."
+    },
+    {
+      "id": "ap_computer_science_principles_U5_impact_of_computing",
+      "unit_code": "U5_impact_of_computing",
+      "label": "Impacts, ethics, and security",
+      "description": "Practice and review: Impact of Computing. Topics include Beneficial and harmful effects; Digital divide; Privacy and security."
+    }
+  ]
+}

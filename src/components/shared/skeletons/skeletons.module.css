@@ -1,0 +1,309 @@
+.dashboardLayout {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: hsl(var(--background));
+}
+
+.dashboardSidebar {
+  width: 220px;
+  flex-shrink: 0;
+  padding: var(--space-4);
+  border-right: 1px solid hsl(var(--border));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background: hsl(var(--card));
+}
+
+.dashboardMain {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.headerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 480px;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.statGridFour {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+@media (max-width: 1024px) {
+  .statGridFour {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .statGridFour {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardGridWide {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+.statCard {
+  height: 140px;
+  border-radius: var(--radius-lg);
+}
+
+.wideCard {
+  height: 280px;
+  border-radius: 16px;
+}
+
+/* OnePrep home skeleton */
+.homeHeroRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.homeHeroRow .headerBlock {
+  flex: 1;
+  min-width: 280px;
+}
+
+.countdownCard {
+  width: 320px;
+  max-width: 100%;
+  height: 124px;
+  border-radius: 16px;
+}
+
+.bannerStrip {
+  width: 100%;
+  height: 72px;
+  border-radius: 16px;
+}
+
+.analyticsJoined {
+  width: 100%;
+  height: 128px;
+  border-radius: 16px;
+}
+
+.scoreColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.scoreRowSk {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.scoreCardSk {
+  height: 108px;
+  border-radius: 16px;
+}
+
+.questionShell {
+  display: flex;
+  flex-direction: column;
+  min-height: min(100dvh, 720px);
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.questionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.questionBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  min-height: 420px;
+}
+
+.questionPanel {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.questionPanelLeft {
+  border-right: 1px solid hsl(var(--border));
+}
+
+.courseCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: hsl(var(--card));
+}
+
+.courseThumb {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.courseBody {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+.chartBlock {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.tutorLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-5);
+  min-height: 520px;
+}
+
+.tutorSidebar {
+  height: 520px;
+  border-radius: var(--radius-lg);
+}
+
+.tutorChat {
+  height: 520px;
+  border-radius: var(--radius-lg);
+}
+
+.achievementGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.achievementTile {
+  height: 120px;
+  border-radius: var(--radius-lg);
+}
+
+.bankRoot {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.bankSectionCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.bankSectionCard {
+  height: 120px;
+  border-radius: var(--radius-lg);
+}
+
+.bankToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.bankDomainRow {
+  height: 56px;
+  border-radius: var(--radius-md);
+}
+
+.analyticsStrip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.analyticsStripCard {
+  height: 88px;
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 1024px) {
+  .analyticsStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bankSectionCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cardGrid,
+  .cardGridWide {
+    grid-template-columns: 1fr;
+  }
+
+  .questionBody {
+    grid-template-columns: 1fr;
+  }
+
+  .questionPanelLeft {
+    border-right: none;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .tutorLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardLayout {
+    flex-direction: column;
+  }
+
+  .dashboardSidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .dashboardMain {
+    padding: var(--space-5) var(--space-4);
+  }
+}

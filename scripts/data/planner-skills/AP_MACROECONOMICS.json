@@ -1,0 +1,77 @@
+{
+  "exam_type": "AP_MACROECONOMICS",
+  "skills": [
+    {
+      "id": "SK_SCARCITY_PPC",
+      "unit_code": "U1",
+      "label": "SCARCITY PPC",
+      "description": "Basic Economic Concepts: practice skill for scarcity ppc."
+    },
+    {
+      "id": "SK_COMPARATIVE_ADVANTAGE",
+      "unit_code": "U1",
+      "label": "COMPARATIVE ADVANTAGE",
+      "description": "Basic Economic Concepts: practice skill for comparative advantage."
+    },
+    {
+      "id": "SK_GDP_UNEMPLOYMENT",
+      "unit_code": "U2",
+      "label": "GDP UNEMPLOYMENT",
+      "description": "Economic Indicators and the Business Cycle: practice skill for gdp unemployment."
+    },
+    {
+      "id": "SK_INFLATION_CYCLE",
+      "unit_code": "U2",
+      "label": "INFLATION CYCLE",
+      "description": "Economic Indicators and the Business Cycle: practice skill for inflation cycle."
+    },
+    {
+      "id": "SK_ADAS",
+      "unit_code": "U3",
+      "label": "ADAS",
+      "description": "National Income and Price Determination: practice skill for adas."
+    },
+    {
+      "id": "SK_MULTIPLIER_FISCAL",
+      "unit_code": "U3",
+      "label": "MULTIPLIER FISCAL",
+      "description": "National Income and Price Determination: practice skill for multiplier fiscal."
+    },
+    {
+      "id": "SK_MONEY_BANKING",
+      "unit_code": "U4",
+      "label": "MONEY BANKING",
+      "description": "Financial Sector: practice skill for money banking."
+    },
+    {
+      "id": "SK_MONETARY_POLICY",
+      "unit_code": "U4",
+      "label": "MONETARY POLICY",
+      "description": "Financial Sector: practice skill for monetary policy."
+    },
+    {
+      "id": "SK_PHILLIPS",
+      "unit_code": "U5",
+      "label": "PHILLIPS",
+      "description": "Long-Run Consequences of Stabilization Policies: practice skill for phillips."
+    },
+    {
+      "id": "SK_GROWTH_POLICY",
+      "unit_code": "U5",
+      "label": "GROWTH POLICY",
+      "description": "Long-Run Consequences of Stabilization Policies: practice skill for growth policy."
+    },
+    {
+      "id": "SK_FOREX",
+      "unit_code": "U6",
+      "label": "FOREX",
+      "description": "Open Economy International Trade and Finance: practice skill for forex."
+    },
+    {
+      "id": "SK_BOP_NX",
+      "unit_code": "U6",
+      "label": "BOP NX",
+      "description": "Open Economy International Trade and Finance: practice skill for bop nx."
+    }
+  ]
+}

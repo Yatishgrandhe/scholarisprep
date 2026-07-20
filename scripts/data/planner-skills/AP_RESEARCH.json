@@ -1,0 +1,89 @@
+{
+  "exam_type": "AP_RESEARCH",
+  "skills": [
+    {
+      "id": "AP_RESEARCH_U1_question_refine",
+      "unit_code": "U1",
+      "label": "Refine Research Question",
+      "description": "Sharpen a question so it is focused, feasible, and researchable."
+    },
+    {
+      "id": "AP_RESEARCH_U1_purpose_justify",
+      "unit_code": "U1",
+      "label": "Justify Purpose",
+      "description": "Explain why the inquiry matters and for whom."
+    },
+    {
+      "id": "AP_RESEARCH_U2_lit_map",
+      "unit_code": "U2",
+      "label": "Map Literature",
+      "description": "Organize prior work into a coherent scholarly conversation."
+    },
+    {
+      "id": "AP_RESEARCH_U2_gap_claim",
+      "unit_code": "U2",
+      "label": "Identify Research Gap",
+      "description": "State what is unresolved and how the study addresses it."
+    },
+    {
+      "id": "AP_RESEARCH_U3_method_design",
+      "unit_code": "U3",
+      "label": "Design Method",
+      "description": "Choose and justify procedures aligned to the question."
+    },
+    {
+      "id": "AP_RESEARCH_U3_ethics_check",
+      "unit_code": "U3",
+      "label": "Ethics and Bias Check",
+      "description": "Anticipate ethical issues, consent, and bias controls."
+    },
+    {
+      "id": "AP_RESEARCH_U4_analyze_findings",
+      "unit_code": "U4",
+      "label": "Analyze Findings",
+      "description": "Organize data/evidence into claim-ready findings."
+    },
+    {
+      "id": "AP_RESEARCH_U4_interpret_limits",
+      "unit_code": "U4",
+      "label": "Interpret with Limits",
+      "description": "Discuss meaning while owning limitations and alternatives."
+    },
+    {
+      "id": "AP_RESEARCH_U5_paper_structure",
+      "unit_code": "U5",
+      "label": "Structure Academic Paper",
+      "description": "Build a clear scholarly paper architecture."
+    },
+    {
+      "id": "AP_RESEARCH_U5_cite_integrate",
+      "unit_code": "U5",
+      "label": "Integrate Citations",
+      "description": "Weave sources with accurate attribution and commentary."
+    },
+    {
+      "id": "AP_RESEARCH_U6_present_arc",
+      "unit_code": "U6",
+      "label": "Present Research Arc",
+      "description": "Tell the inquiry story for a live audience."
+    },
+    {
+      "id": "AP_RESEARCH_U6_oral_defense",
+      "unit_code": "U6",
+      "label": "Defend Orally",
+      "description": "Answer method, evidence, and reflection probes."
+    },
+    {
+      "id": "AP_RESEARCH_U7_process_log",
+      "unit_code": "U7",
+      "label": "Log Process Evidence",
+      "description": "Document iteration, decisions, and feedback."
+    },
+    {
+      "id": "AP_RESEARCH_U7_reflect_iterate",
+      "unit_code": "U7",
+      "label": "Reflect and Iterate",
+      "description": "Use critique to revise question, method, or claims."
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "exam_type": "AP_ENVIRONMENTAL_SCIENCE",
+  "display_name": "AP Environmental Science",
+  "command_terms": [
+    "calculate",
+    "describe",
+    "explain",
+    "identify",
+    "propose",
+    "justify",
+    "evaluate"
+  ],
+  "misconceptions": [
+    "Confusing weather with climate",
+    "Assuming all greenhouse gases are pollutants in the same way",
+    "Mixing point vs nonpoint source pollution",
+    "Treating renewable as always low-impact",
+    "Ignoring tradeoffs in energy and land-use solutions",
+    "Misreading age-structure diagrams"
+  ],
+  "paper_rules": [
+    "FRQ often includes a quantitative calculation part — show dimensional analysis",
+    "Propose solutions that are specific and feasible",
+    "Link human activity → environmental effect → consequence",
+    "Use precise environmental science vocabulary"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "key": "mcq",
+        "calculator": "none",
+        "note": "No calculator"
+      },
+      {
+        "key": "frq",
+        "calculator": "none",
+        "note": "No calculator; arithmetic may be required by hand"
+      }
+    ],
+    "notes": "No calculator. Students should be fluent with dimensional analysis and percent change by hand."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_ecosystems",
+      "unit_name": "The Living World: Ecosystems",
+      "unit_order": 1,
+      "weight_hint": 0.07,
+      "quota": 35,
+      "topics": [
+        "Energy flow",
+        "Biogeochemical cycles",
+        "Trophic relationships"
+      ]
+    },
+    {
+      "unit_code": "U2_biodiversity",
+      "unit_name": "The Living World: Biodiversity",
+      "unit_order": 2,
+      "weight_hint": 0.07,
+      "quota": 35,
+      "topics": [
+        "Levels of biodiversity",
+        "Ecosystem services",
+        "Island biogeography and ecological tolerance"
+      ]
+    },
+    {
+      "unit_code": "U3_populations",
+      "unit_name": "Populations",
+      "unit_order": 3,
+      "weight_hint": 0.12,
+      "quota": 60,
+      "topics": [
+        "Generalist vs specialist",
+        "Survivorship and growth models",
+        "Human population dynamics",
+        "Demographic transition"
+      ]
+    },
+    {
+      "unit_code": "U4_earth_systems",
+      "unit_name": "Earth Systems and Resources",
+      "unit_order": 4,
+      "weight_hint": 0.12,
+      "quota": 60,
+      "topics": [
+        "Plate tectonics and soil",
+        "Atmosphere and climate basics",
+        "Watersheds and solar intensity"
+      ]
+    },
+    {
+      "unit_code": "U5_land_water_use",
+      "unit_name": "Land and Water Use",
+      "unit_order": 5,
+      "weight_hint": 0.12,
+      "quota": 60,
+      "topics": [
+        "Agriculture and forestry",
+        "Mining and urbanization",
+        "Fisheries and water resources"
+      ]
+    },
+    {
+      "unit_code": "U6_energy",
+      "unit_name": "Energy Resources and Consumption",
+      "unit_order": 6,
+      "weight_hint": 0.12,
+      "quota": 60,
+      "topics": [
+        "Fossil fuels",
+        "Nuclear energy",
+        "Renewables",
+        "Energy conservation and units"
+      ]
+    },
+    {
+      "unit_code": "U7_atmospheric_pollution",
+      "unit_name": "Atmospheric Pollution",
+      "unit_order": 7,
+      "weight_hint": 0.09,
+      "quota": 45,
+      "topics": [
+        "Air pollutants",
+        "Photochemical smog and acid deposition",
+        "Noise and indoor air",
+        "Reduction strategies"
+      ]
+    },
+    {
+      "unit_code": "U8_aquatic_terrestrial_pollution",
+      "unit_name": "Aquatic and Terrestrial Pollution",
+      "unit_order": 8,
+      "weight_hint": 0.09,
+      "quota": 45,
+      "topics": [
+        "Sources and effects of pollution",
+        "Bioaccumulation",
+        "Waste disposal and remediation",
+        "LD50 and dose–response"
+      ]
+    },
+    {
+      "unit_code": "U9_global_change",
+      "unit_name": "Global Change",
+      "unit_order": 9,
+      "weight_hint": 0.2,
+      "quota": 100,
+      "topics": [
+        "Ozone depletion",
+        "Climate change causes and effects",
+        "Invasive species",
+        "Human impacts on biodiversity"
+      ]
+    }
+  ]
+}

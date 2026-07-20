@@ -1,0 +1,471 @@
+/* Question bank — flat OnePrep-style: hairline borders, no shadows or glass. */
+
+.root {
+  max-width: none;
+  min-width: 0;
+}
+
+/* Section label above the subject cards (page header lives on the page). */
+.sectionLabel {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-3);
+  color: hsl(var(--foreground));
+}
+
+/* Module title inside the toolbar. */
+.title {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.sectionCards {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .sectionCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* OnePrep-style subject cards: vivid gradient covers with a watermark icon.
+   (Intentional exception to the flat-card rule.) */
+.sectionCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  min-height: 148px;
+  padding: var(--space-5) var(--space-6);
+  border-radius: 16px;
+  border: none;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(221 83% 56%) 0%, hsl(224 76% 44%) 100%);
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: filter 160ms ease;
+}
+
+.sectionCard:hover {
+  filter: brightness(1.06);
+}
+
+.sectionCardRw {
+  background: linear-gradient(135deg, hsl(221 83% 56%) 0%, hsl(224 76% 44%) 100%);
+}
+
+.sectionCardMath {
+  background: linear-gradient(135deg, hsl(262 70% 58%) 0%, hsl(266 64% 45%) 100%);
+}
+
+.sectionIcon {
+  position: absolute;
+  top: -10px;
+  right: -6px;
+  color: hsl(0 0% 100% / 0.16);
+  pointer-events: none;
+}
+
+.sectionName {
+  position: relative;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.sectionCount {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: hsl(0 0% 100% / 0.85);
+}
+
+.sectionCta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  color: hsl(221 83% 45%);
+}
+
+.sectionCardMath .sectionCta {
+  color: hsl(262 70% 46%);
+}
+
+/* AP/IB unit cards — calm slate/teal, not SAT R&W/Math gradients. */
+.sectionCardsUnits {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .sectionCardsUnits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .sectionCardsUnits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.sectionCardUnit {
+  min-height: 120px;
+  background: linear-gradient(135deg, hsl(178 32% 34%) 0%, hsl(200 38% 28%) 100%);
+}
+
+.sectionCardUnit .sectionCta {
+  color: hsl(178 40% 26%);
+}
+
+.emptyUnits {
+  margin: 0;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Flat filter toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.backLink {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: hsl(var(--foreground));
+}
+
+.toolbarActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.toolBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 2.25rem;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.toolBtn:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.moreWrap {
+  position: relative;
+}
+
+.moreMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 20;
+  margin-top: 4px;
+  min-width: 220px;
+  padding: var(--space-2);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.moreRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 0.8125rem;
+  color: hsl(var(--foreground));
+}
+
+.moreRow input[type="checkbox"] {
+  accent-color: hsl(var(--primary));
+}
+
+.startBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition:
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.startBtn:hover:not(:disabled) {
+  background: var(--btn-primary-hover-bg);
+  color: var(--btn-primary-text);
+  box-shadow: var(--btn-primary-shadow);
+}
+
+.startBtn:disabled {
+  opacity: 0.6;
+}
+
+.tableHeader {
+  margin-bottom: var(--space-2);
+}
+
+.selectAll {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-size: 0.75rem;
+  font-weight: 650;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.selectAll:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+/* Domain accordion blocks */
+.domainBlock {
+  border: 1px solid hsl(var(--border));
+  border-radius: 16px;
+  margin-bottom: var(--space-2);
+  overflow: hidden;
+  background: hsl(var(--card));
+}
+
+.domainHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  background: hsl(var(--muted) / 0.4);
+  color: hsl(var(--foreground));
+  font-size: 0.8125rem;
+  font-weight: 650;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-align: left;
+  transition: background-color 160ms ease;
+}
+
+.domainHeader:hover {
+  background: hsl(var(--muted) / 0.6);
+}
+
+.caretOpen {
+  transform: rotate(180deg);
+}
+
+.domainMeta {
+  margin-left: auto;
+  font-size: 0.6875rem;
+  color: hsl(var(--muted-foreground));
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.domainAccuracy {
+  min-width: 2.75rem;
+  font-size: 0.6875rem;
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.skillList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skillRow {
+  display: grid;
+  grid-template-columns: auto 1fr minmax(4.5rem, auto) 72px auto auto;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-top: 1px solid hsl(var(--border));
+  font-size: 0.8125rem;
+  color: hsl(var(--foreground));
+  transition: background-color 160ms ease;
+}
+
+.skillRow:hover {
+  background: hsl(var(--muted) / 0.3);
+}
+
+.skillRow input[type="checkbox"] {
+  accent-color: hsl(var(--primary));
+}
+
+.skillLabelBtn {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.skillLabelBtn:hover {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+}
+
+.progressBar {
+  height: 4px;
+  border-radius: 999px;
+  background: hsl(var(--muted));
+  overflow: hidden;
+}
+
+.progressFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: hsl(var(--primary));
+}
+
+.difficultyMeta {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  font-size: 0.625rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.diffEasy,
+.diffMedium,
+.diffHard {
+  padding: 1px 5px;
+  border-radius: 4px;
+  line-height: 1.35;
+}
+
+.diffEasy {
+  color: hsl(142 55% 32%);
+  background: hsl(142 55% 92%);
+}
+
+.diffMedium {
+  color: hsl(38 75% 32%);
+  background: hsl(38 90% 92%);
+}
+
+.diffHard {
+  color: hsl(0 65% 38%);
+  background: hsl(0 70% 94%);
+}
+
+.progress,
+.accuracy {
+  font-size: 0.6875rem;
+  color: hsl(var(--muted-foreground));
+  font-variant-numeric: tabular-nums;
+}
+
+.accuracy {
+  min-width: 2.75rem;
+  text-align: right;
+}
+
+/* Custom CSS spinner for section card loading states */
+.cardSpinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid hsl(221 83% 56% / 0.25);
+  border-top-color: hsl(221 83% 56%);
+  border-radius: 50%;
+  animation: cardSpin 0.65s linear infinite;
+}
+
+.sectionCardUnit .cardSpinner {
+  border-color: hsl(178 32% 34% / 0.25);
+  border-top-color: hsl(178 32% 34%);
+}
+
+@keyframes cardSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Smaller spinner for hierarchy stats loading in domain/skill rows */
+.hierarchySpinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid hsl(var(--muted));
+  border-top-color: hsl(var(--primary));
+  border-radius: 50%;
+  animation: cardSpin 0.65s linear infinite;
+  vertical-align: middle;
+}

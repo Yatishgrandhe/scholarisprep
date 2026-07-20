@@ -1,0 +1,55 @@
+{
+  "exam_type": "IB_PHYSICS_HL",
+  "display_name": "IB Physics HL",
+  "units": [
+    "Measurements & uncertainties",
+    "Mechanics",
+    "Thermal physics",
+    "Waves",
+    "Electricity & magnetism",
+    "Circular motion & gravitation / atomic / nuclear / energy",
+    "HL additional higher level",
+    "Experimental & IA skills"
+  ],
+  "command_terms": [
+    "state",
+    "outline",
+    "describe",
+    "explain",
+    "calculate",
+    "determine",
+    "deduce",
+    "suggest",
+    "discuss",
+    "evaluate",
+    "design"
+  ],
+  "misconceptions": [
+    "confusing precision and accuracy",
+    "skipping significant figures",
+    "command term mismatch"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it",
+    "Paper 3: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "Scientific calculator on calculator-allowed papers; Paper 1 typically none for Chem/Phys-style P1.",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_measurements_uncertainties skill focus: SI",
+    "Keep unit_code=U2_mechanics skill focus: kinematics",
+    "Keep unit_code=U3_thermal_physics skill focus: temperature",
+    "Keep unit_code=U4_waves skill focus: SHM",
+    "Keep unit_code=U5_electricity_magnetism skill focus: fields",
+    "Keep unit_code=U6_circular_motion_gravitation_atomic_nuclear_energy skill focus: gravitation",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

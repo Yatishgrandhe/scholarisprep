@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('550e1e9a-c348-4a08-b787-593a8eece08e', 'Which choice completes the text with the most logical transition?', 'The new public library was designed to serve every neighborhood, with bus routes planned to reach its doors from across the city. The transit budget was cut before construction finished, ______ leaving residents in outer districts with no direct way to get there.', NULL, '[{"id":"A","text":"for example,","is_correct":false,"explanation":"Incorrect: the budget cut is not an example of the library''s inclusive design."},{"id":"B","text":"however,","is_correct":true,"explanation":"Correct: it contrasts the inclusive intent with the outcome that excluded outer districts."},{"id":"C","text":"in addition,","is_correct":false,"explanation":"Incorrect: nothing in the first sentence is being added to; the result undercuts the plan."},{"id":"D","text":"as a result,","is_correct":false,"explanation":"Incorrect: the cut did not result from the inclusive design goal."}]'::jsonb, 'B', 'Step 1 — Find the tension
+The plan aimed to {{yellow:serve every neighborhood}}, but the cut left outer residents stranded.
+Step 2 — Choose contrast
+The outcome defeats the stated intent, so a contrast word like ''however'' fits.
+Distractor analysis:
+- A: ''for example'' would illustrate the design goal, but the cut contradicts it.
+- C: ''in addition'' implies a supporting point, yet the second idea undermines the first.
+- D: ''as a result'' wrongly makes the cut a consequence of the inclusive plan.', 'Did the result fulfill the design goal or work against it?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

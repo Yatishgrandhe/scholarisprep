@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('1ee56800-b4b6-4d2e-82bf-ff53e1e0bbe9', 'Which choice completes the text with the most logical transition?', 'For decades, the small mill town''s economy depended entirely on a single textile factory that employed most of its residents. When the factory closed, many predicted that the town would empty out within a generation. ______, a cluster of artisans and remote workers gradually moved into the cheap, spacious buildings the mill had left behind.', NULL, '[{"id":"A","text":"Instead,","is_correct":true,"explanation":"Correct: the town''s revival replaces the predicted emptying-out, marking a turn from expectation."},{"id":"B","text":"Consequently,","is_correct":false,"explanation":"Wrong: the influx of newcomers contradicts the prediction rather than resulting from it."},{"id":"C","text":"Furthermore,","is_correct":false,"explanation":"Wrong: it merely adds, but the sentence reverses the expected outcome."},{"id":"D","text":"In particular,","is_correct":false,"explanation":"Wrong: ''In particular'' narrows to a detail, but the sentence contradicts the forecast."}]'::jsonb, 'A', 'Step 1 — Identify the prediction
+Observers expected that {{yellow:the town would empty out within a generation}}.
+Step 2 — Choose the relationship
+The final sentence describes newcomers arriving instead of departure, so a substitution-contrast transition fits.
+Distractor analysis:
+- B: ''Consequently'' implies the influx followed from the prediction, reversing the logic.
+- C: ''Furthermore'' adds a point rather than overturning the forecast.
+- D: ''In particular'' specifies a detail of a stated idea, not a reversal.', 'The outcome is the opposite of what was predicted.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

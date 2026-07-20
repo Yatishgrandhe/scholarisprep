@@ -1,0 +1,87 @@
+{
+  "examType": "IB_ENG_A_LAL_HL",
+  "topics": [
+    "Readers, Writers and Texts",
+    "Time and Space",
+    "Intertextuality",
+    "Language and Assessment Skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_readers_writers_and_texts",
+      "title": "Readers, Writers and Texts",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_audience",
+        "U1_S2_purpose",
+        "U1_S3_stylistic_features_in_lit_and_non_lit"
+      ],
+      "topics": [
+        "audience",
+        "purpose",
+        "stylistic features in lit and non-lit"
+      ]
+    },
+    {
+      "unit_code": "U2_time_and_space",
+      "title": "Time and Space",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_context_of_production_reception",
+        "U2_S2_culture_and_identity"
+      ],
+      "topics": [
+        "context of production/reception",
+        "culture and identity"
+      ]
+    },
+    {
+      "unit_code": "U3_intertextuality",
+      "title": "Intertextuality",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_text_types_in_conversation",
+        "U3_S2_media_and_literature_links"
+      ],
+      "topics": [
+        "text types in conversation",
+        "media and literature links"
+      ]
+    },
+    {
+      "unit_code": "U4_language_and_assessment_skills",
+      "title": "Language and Assessment Skills",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_paper_1_analysis",
+        "U4_S2_paper_2",
+        "U4_S3_io_hl_essay"
+      ],
+      "topics": [
+        "Paper 1 analysis",
+        "Paper 2",
+        "IO / HL essay"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_readers_writers_and_texts": [
+      "U1_S1_audience",
+      "U1_S2_purpose",
+      "U1_S3_stylistic_features_in_lit_and_non_lit"
+    ],
+    "U2_time_and_space": [
+      "U2_S1_context_of_production_reception",
+      "U2_S2_culture_and_identity"
+    ],
+    "U3_intertextuality": [
+      "U3_S1_text_types_in_conversation",
+      "U3_S2_media_and_literature_links"
+    ],
+    "U4_language_and_assessment_skills": [
+      "U4_S1_paper_1_analysis",
+      "U4_S2_paper_2",
+      "U4_S3_io_hl_essay"
+    ]
+  }
+}

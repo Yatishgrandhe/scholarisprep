@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('803cf2f0-9b29-47d2-b62d-c4f67f3e9a02', 'Which choice completes the text with the most logical transition?', 'Volcanic eruptions can darken skies and lower global temperatures for years by filling the atmosphere with reflective ash and gas. The same eruptions enrich surrounding soils with minerals over time. ______ regions near active volcanoes often become some of the most fertile farmland on Earth.', NULL, '[{"id":"A","text":"Consequently,","is_correct":true,"explanation":"Correct: the mineral enrichment is the cause that leads to the fertile farmland result."},{"id":"B","text":"Nonetheless,","is_correct":false,"explanation":"Incorrect: the fertility follows naturally from the enrichment, so no concession of contrast is needed."},{"id":"C","text":"Similarly,","is_correct":false,"explanation":"Incorrect: ''Similarly'' signals a parallel, but the sentence states an effect of the enrichment."},{"id":"D","text":"In contrast,","is_correct":false,"explanation":"Incorrect: the fertile farmland agrees with the enrichment point rather than contrasting it."}]'::jsonb, 'A', 'Step 1 — Identify the cause
+The text says eruptions {{yellow:enrich surrounding soils with minerals over time}}.
+Step 2 — Link to the effect
+Fertile farmland results directly from that enrichment, so a causal ''Consequently'' fits.
+Distractor analysis:
+- B: ''Nonetheless'' concedes a contrast, but the fertility flows logically from the enrichment.
+- C: ''Similarly'' implies a comparison, but this is a cause-and-effect chain.
+- D: ''In contrast'' opposes the enrichment point, which the fertility actually supports.', 'Does the fertile farmland result from the soil enrichment or contradict it?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

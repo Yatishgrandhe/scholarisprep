@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('43bbf3e3-188b-4769-a092-dfeced46f0fd', 'Which choice completes the text with the most logical transition?', 'The invention of the printing press in the fifteenth century made books far cheaper to produce. Before this, every book had to be copied by hand, a slow and costly process. ______ ideas could now spread across Europe faster than ever before.', NULL, '[{"id":"A","text":"Nevertheless,","is_correct":false,"explanation":"Signals contrast, but the sentence follows logically from cheaper book production."},{"id":"B","text":"As a result,","is_correct":true,"explanation":"Correctly marks the faster spread of ideas as the consequence of cheaper, faster printing."},{"id":"C","text":"Similarly,","is_correct":false,"explanation":"Implies a parallel point, yet the sentence states an effect of the press."},{"id":"D","text":"In contrast,","is_correct":false,"explanation":"Sets up an opposition that the sentences do not contain."}]'::jsonb, 'B', 'Step 1 — Find the relationship
+The text says the printing press {{yellow:made books far cheaper to produce}}, and the final sentence describes what this allowed.
+Step 2 — Match the transition
+Because the faster spread of ideas follows from cheaper books, a cause-and-effect transition fits.
+Distractor analysis:
+- A: "Nevertheless" signals contrast, but the sentence follows naturally from the press.
+- C: "Similarly" implies a comparison, yet the sentence gives a result.
+- D: "In contrast" wrongly sets up an opposition between the ideas.', 'Decide whether the spread of ideas is a result of cheaper printing or a contrast to it.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

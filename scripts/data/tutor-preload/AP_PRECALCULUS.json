@@ -1,0 +1,116 @@
+{
+  "exam_type": "AP_PRECALCULUS",
+  "display_name": "AP Precalculus",
+  "command_terms": [
+    "construct",
+    "determine",
+    "explain",
+    "interpret",
+    "justify",
+    "model",
+    "rewrite",
+    "show",
+    "verify"
+  ],
+  "misconceptions": [
+    "Confusing end behavior with local extrema for polynomials",
+    "Mixing domain restrictions with removable discontinuities in rationals",
+    "Treating log of a sum as sum of logs",
+    "Using degree measure when radian is required",
+    "Misreading amplitude/period shifts in sinusoids",
+    "Forgetting parameter constraints in modeling contexts"
+  ],
+  "paper_rules": [
+    "Show algebraic work even when calculator is allowed",
+    "Label axes and units on graphs; state model assumptions",
+    "Report exact values when asked; decimal approximations only when directed",
+    "Connect function representations: equation, table, graph, context"
+  ],
+  "calculator_policy": {
+    "default": "graphing",
+    "sections": [
+      {
+        "key": "mcq_part_a",
+        "calculator": "none",
+        "note": "No calculator on designated MCQ subset"
+      },
+      {
+        "key": "mcq_part_b",
+        "calculator": "graphing",
+        "note": "Graphing calculator required"
+      },
+      {
+        "key": "frq_part_a",
+        "calculator": "graphing",
+        "note": "Graphing calculator required"
+      },
+      {
+        "key": "frq_part_b",
+        "calculator": "none",
+        "note": "No calculator on designated FRQ subset"
+      }
+    ],
+    "notes": "Graphing calculator required for designated MCQ and FRQ parts; other parts are no-calculator."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_polynomial_rational",
+      "unit_name": "Polynomial and Rational Functions",
+      "unit_order": 1,
+      "weight_hint": 0.3,
+      "quota": 150,
+      "topics": [
+        "Change in linear and quadratic models",
+        "Polynomial rates of change and end behavior",
+        "Zeros, factors, and multiplicity",
+        "Rational functions and asymptotes",
+        "Transformations and equivalent representations",
+        "Function modeling with polynomial/rational contexts"
+      ]
+    },
+    {
+      "unit_code": "U2_exponential_logarithmic",
+      "unit_name": "Exponential and Logarithmic Functions",
+      "unit_order": 2,
+      "weight_hint": 0.27,
+      "quota": 135,
+      "topics": [
+        "Exponential growth and decay models",
+        "Composition and inverse relationships",
+        "Logarithmic scales and change of base",
+        "Solving exponential and logarithmic equations",
+        "Semi-log and residual analysis for models",
+        "Contextual modeling with exp/log"
+      ]
+    },
+    {
+      "unit_code": "U3_trig_polar",
+      "unit_name": "Trigonometric and Polar Functions",
+      "unit_order": 3,
+      "weight_hint": 0.3,
+      "quota": 150,
+      "topics": [
+        "Periodic phenomena and sinusoidal models",
+        "Radian measure and unit circle",
+        "Sinusoidal transformations and inverse trig",
+        "Trig identities and equation solving",
+        "Polar coordinates and polar graphs",
+        "Rates of change in trig contexts"
+      ]
+    },
+    {
+      "unit_code": "U4_functions_modeling",
+      "unit_name": "Functions Involving Parameters, Vectors, and Matrices",
+      "unit_order": 4,
+      "weight_hint": 0.13,
+      "quota": 65,
+      "topics": [
+        "Parametric functions and motion models",
+        "Vectors in the plane",
+        "Matrix operations and transformations",
+        "Linear transformations and composition",
+        "Modeling with parameters and constraints"
+      ]
+    }
+  ]
+}

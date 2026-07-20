@@ -1,0 +1,275 @@
+{
+  "offset": 100000,
+  "total_rows": 4225,
+  "target": 4225,
+  "chunks": 85,
+  "letter_totals": {
+    "A": 1068,
+    "B": 1058,
+    "C": 1055,
+    "D": 1044
+  },
+  "letter_pct": {
+    "A": 25.3,
+    "B": 25,
+    "C": 25,
+    "D": 24.7
+  },
+  "by_subtype": {
+    "vocabulary_in_context": {
+      "skill_id": "WIC",
+      "generated": 325,
+      "fails": 0,
+      "clean": 231,
+      "soft": 94,
+      "letters": {
+        "A": 82,
+        "B": 81,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {
+        "hard_passage_sentences": 94
+      }
+    },
+    "structure": {
+      "skill_id": "TSP",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 81,
+        "B": 82,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    },
+    "cross_text_response": {
+      "skill_id": "CTC",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 81,
+        "B": 81,
+        "C": 82,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    },
+    "main_idea": {
+      "skill_id": "CID",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 82,
+        "B": 81,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    },
+    "textual_evidence": {
+      "skill_id": "COE",
+      "generated": 325,
+      "fails": 0,
+      "clean": 174,
+      "soft": 151,
+      "letters": {
+        "A": 82,
+        "B": 81,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {
+        "word_spread": 95,
+        "hard_passage_sentences": 56
+      }
+    },
+    "quantitative_table": {
+      "skill_id": "COE",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 82,
+        "B": 81,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    },
+    "general": {
+      "skill_id": "INF",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 82,
+        "B": 81,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    },
+    "prediction": {
+      "skill_id": "INF",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 81,
+        "B": 82,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    },
+    "implication": {
+      "skill_id": "INF",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 81,
+        "B": 81,
+        "C": 82,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    },
+    "transition": {
+      "skill_id": "TRA",
+      "generated": 325,
+      "fails": 0,
+      "clean": 231,
+      "soft": 94,
+      "letters": {
+        "A": 89,
+        "B": 83,
+        "C": 81,
+        "D": 72
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {
+        "hard_passage_sentences": 94
+      }
+    },
+    "boundaries": {
+      "skill_id": "BOU",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 82,
+        "B": 81,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    },
+    "notes_synthesis": {
+      "skill_id": "SYN",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 81,
+        "B": 82,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    },
+    "form_structure_sense": {
+      "skill_id": "FSS",
+      "generated": 325,
+      "fails": 0,
+      "clean": 325,
+      "soft": 0,
+      "letters": {
+        "A": 82,
+        "B": 81,
+        "C": 81,
+        "D": 81
+      },
+      "byDiff": {
+        "easy": 126,
+        "medium": 105,
+        "hard": 94
+      },
+      "softReasons": {}
+    }
+  },
+  "sample_fails": []
+}

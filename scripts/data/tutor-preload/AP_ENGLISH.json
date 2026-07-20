@@ -1,0 +1,120 @@
+{
+  "exam_type": "AP_ENGLISH",
+  "display_name": "AP English Language (legacy alias)",
+  "family": "AP",
+  "units": [
+    {
+      "unit_code": "U1_rhetorical_situation",
+      "unit_name": "Rhetorical Situation",
+      "topics": [
+        "exigency",
+        "audience",
+        "purpose",
+        "context"
+      ]
+    },
+    {
+      "unit_code": "U2_claims_and_evidence",
+      "unit_name": "Claims and Evidence",
+      "topics": [
+        "thesis",
+        "evidence selection",
+        "commentary"
+      ]
+    },
+    {
+      "unit_code": "U3_reasoning_and_organization",
+      "unit_name": "Reasoning and Organization",
+      "topics": [
+        "line of reasoning",
+        "methods of development"
+      ]
+    },
+    {
+      "unit_code": "U4_style_and_conventions",
+      "unit_name": "Style and Conventions",
+      "topics": [
+        "diction",
+        "syntax",
+        "tone"
+      ]
+    },
+    {
+      "unit_code": "U5_synthesis_writing",
+      "unit_name": "Synthesis Writing",
+      "topics": [
+        "source integration",
+        "conversation among sources"
+      ]
+    },
+    {
+      "unit_code": "U6_argument_and_rhetorical_analysis",
+      "unit_name": "Argument and Rhetorical Analysis",
+      "topics": [
+        "argument FRQ",
+        "rhetorical analysis FRQ"
+      ]
+    }
+  ],
+  "command_terms": [
+    "analyze",
+    "synthesize",
+    "argue",
+    "evaluate rhetorical choices"
+  ],
+  "misconceptions": [
+    "Feature-spotting without linking to purpose/audience",
+    "Thin commentary on evidence"
+  ],
+  "paper_rules": [
+    "MCQ + 3 FRQs (synthesis, rhetorical analysis, argument)",
+    "Thesis-driven essays with line of reasoning"
+  ],
+  "calculator": {
+    "policy": "none",
+    "notes": "No calculator",
+    "section_rules": [
+      {
+        "section": "all",
+        "calculator_allowed": false
+      }
+    ],
+    "per_question_default": false,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "No Desmos block; calculator not used.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "AP CED-aligned item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Match AP task model for the unit"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": null
+}

@@ -1,0 +1,173 @@
+{
+  "examType": "IB_TOK",
+  "topics": [
+    "Knowledge & the knower",
+    "Knowledge and technology",
+    "Knowledge and language",
+    "Knowledge and politics",
+    "Knowledge and religion / indigenous societies",
+    "Areas of knowledge \u2014 arts & history",
+    "Areas of knowledge \u2014 human & natural sciences / maths",
+    "Exhibition & essay skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_knowledge_the_knower",
+      "title": "Knowledge & the knower",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_knowledge_and_technology",
+      "title": "Knowledge and technology",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_knowledge_and_language",
+      "title": "Knowledge and language",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_knowledge_and_politics",
+      "title": "Knowledge and politics",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_knowledge_and_religion_indigenous_societies",
+      "title": "Knowledge and religion / indigenous societies",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_areas_of_knowledge_arts_history",
+      "title": "Areas of knowledge \u2014 arts & history",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_areas_of_knowledge_human_natural_sciences_maths",
+      "title": "Areas of knowledge \u2014 human & natural sciences / maths",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_exhibition_essay_skills",
+      "title": "Exhibition & essay skills",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_TOK:U1_knowledge_the_knower",
+      "unit_code": "U1_knowledge_the_knower",
+      "title": "Knowledge & the knower",
+      "topics": [
+        "perspectives",
+        "bias",
+        "responsibility"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_TOK:U2_knowledge_and_technology",
+      "unit_code": "U2_knowledge_and_technology",
+      "title": "Knowledge and technology",
+      "topics": [
+        "algorithms",
+        "expertise",
+        "access"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_TOK:U1_knowledge_the_knower"
+      ]
+    },
+    {
+      "skill_id": "IB_TOK:U3_knowledge_and_language",
+      "unit_code": "U3_knowledge_and_language",
+      "title": "Knowledge and language",
+      "topics": [
+        "translation",
+        "metaphor",
+        "power"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_TOK:U2_knowledge_and_technology"
+      ]
+    },
+    {
+      "skill_id": "IB_TOK:U4_knowledge_and_politics",
+      "unit_code": "U4_knowledge_and_politics",
+      "title": "Knowledge and politics",
+      "topics": [
+        "expertise",
+        "disinformation",
+        "authority"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_TOK:U3_knowledge_and_language"
+      ]
+    },
+    {
+      "skill_id": "IB_TOK:U5_knowledge_and_religion_indigenous_societies",
+      "unit_code": "U5_knowledge_and_religion_indigenous_societies",
+      "title": "Knowledge and religion / indigenous societies",
+      "topics": [
+        "faith",
+        "tradition",
+        "pluralism"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_TOK:U4_knowledge_and_politics"
+      ]
+    },
+    {
+      "skill_id": "IB_TOK:U6_areas_of_knowledge_arts_history",
+      "unit_code": "U6_areas_of_knowledge_arts_history",
+      "title": "Areas of knowledge \u2014 arts & history",
+      "topics": [
+        "evidence",
+        "interpretation",
+        "creativity"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_TOK:U5_knowledge_and_religion_indigenous_societies"
+      ]
+    },
+    {
+      "skill_id": "IB_TOK:U7_areas_of_knowledge_human_natural_sciences_maths",
+      "unit_code": "U7_areas_of_knowledge_human_natural_sciences_maths",
+      "title": "Areas of knowledge \u2014 human & natural sciences / maths",
+      "topics": [
+        "method",
+        "models",
+        "certainty"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_TOK:U6_areas_of_knowledge_arts_history"
+      ]
+    },
+    {
+      "skill_id": "IB_TOK:U8_exhibition_essay_skills",
+      "unit_code": "U8_exhibition_essay_skills",
+      "title": "Exhibition & essay skills",
+      "topics": [
+        "IA prompts",
+        "objects",
+        "claim\u2013evidence\u2013explanation",
+        "essay structure"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_TOK:U7_areas_of_knowledge_human_natural_sciences_maths"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

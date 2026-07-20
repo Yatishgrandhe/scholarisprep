@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('78d5d5ce-993a-43d7-9dc2-fbddd24e1aaa', 'Which choice completes the text with the most logical transition?', 'Critics initially dismissed the novelist''s experimental punctuation as a careless gimmick that made her prose hard to read. Closer study revealed a deliberate pattern: each omitted comma mirrored a character''s racing thoughts. ______ what looked like sloppiness was in fact a carefully engineered technique.', NULL, '[{"id":"A","text":"Thus,","is_correct":true,"explanation":"Correct: it draws the conclusion that follows from discovering the deliberate pattern."},{"id":"B","text":"Otherwise,","is_correct":false,"explanation":"Incorrect: ''otherwise'' introduces an alternative condition, not a conclusion drawn from the evidence."},{"id":"C","text":"However,","is_correct":false,"explanation":"Incorrect: the final sentence agrees with the closer study rather than contrasting it."},{"id":"D","text":"Meanwhile,","is_correct":false,"explanation":"Incorrect: ''meanwhile'' marks a simultaneous event, not a logical conclusion."}]'::jsonb, 'A', 'Step 1 — Find the basis for the conclusion
+The middle sentence reveals that {{yellow:each omitted comma mirrored a character''s racing thoughts}}, showing the punctuation was deliberate.
+Step 2 — Draw the inference
+The final sentence concludes from that evidence, so a summative ''Thus'' fits.
+Distractor analysis:
+- B: ''Otherwise'' proposes an alternative scenario, which the text does not offer.
+- C: ''However'' signals contrast, but the final sentence confirms the discovery.
+- D: ''Meanwhile'' implies concurrent action rather than a conclusion.', 'Is the last sentence a conclusion drawn from the discovery or a contradiction of it?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

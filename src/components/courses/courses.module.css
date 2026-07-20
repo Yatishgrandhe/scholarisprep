@@ -1,0 +1,212 @@
+/* Course card — flat OnePrep-style: vivid cover, white body, black CTA. */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  overflow: hidden;
+}
+
+/* ── Cover ──────────────────────────────────────────────────────── */
+.cover {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 200px;
+  padding: 20px;
+}
+
+.thumbnail {
+  object-fit: cover;
+}
+
+/* Scrim keeps white title legible over uploaded thumbnails. */
+.coverScrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    hsl(222 47% 11% / 0.1) 0%,
+    hsl(222 47% 11% / 0.6) 100%
+  );
+  pointer-events: none;
+}
+
+.examBadge {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  z-index: 1;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid hsl(0 0% 100% / 0.4);
+  background: hsl(0 0% 100% / 0.18);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: hsl(0 0% 100%);
+}
+
+.coverTitle {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: hsl(0 0% 100%);
+}
+
+/* ── Body ───────────────────────────────────────────────────────── */
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-4);
+  padding: 20px;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.progressBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.progressRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.progressLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.progressValue {
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--muted-foreground));
+}
+
+.progressTrack {
+  height: 6px;
+  border-radius: 999px;
+  background: hsl(var(--muted));
+  overflow: hidden;
+}
+
+.progressFill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+}
+
+.priceLabel {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+}
+
+/* ── Footer CTA ─────────────────────────────────────────────────── */
+.footer {
+  margin-top: auto;
+}
+
+.blackBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0 16px;
+  border: none;
+  border-radius: 10px;
+  background: hsl(222 47% 11%);
+  color: hsl(0 0% 100%);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.blackBtn:hover {
+  background: hsl(222 47% 18%);
+}
+
+.blackBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+:global(.dark) .blackBtn {
+  background: hsl(0 0% 100%);
+  color: hsl(222 47% 11%);
+}
+
+:global(.dark) .blackBtn:hover {
+  background: hsl(0 0% 90%);
+}
+
+.enrolledBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0 16px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 10px;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: default;
+}
+
+@media (max-width: 480px) {
+  .cover {
+    min-height: 160px;
+    padding: 16px;
+  }
+
+  .coverTitle {
+    font-size: 1.125rem;
+  }
+
+  .examBadge {
+    top: 12px;
+    left: 16px;
+  }
+
+  .body {
+    padding: 16px;
+    gap: var(--space-3);
+  }
+
+  .blackBtn,
+  .enrolledBtn {
+    min-height: 2.75rem;
+  }
+}

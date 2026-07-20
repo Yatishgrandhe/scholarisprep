@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('f3df05c4-9555-4e29-b642-05f2d2feb649', 'Which choice completes the text with the most logical transition?', 'For decades, astronomers believed the universe''s expansion must be slowing down because of gravity. Then, in the late 1990s, careful measurements of distant supernovae revealed something unexpected. ______ the expansion is actually speeding up over time.', NULL, '[{"id":"A","text":"Likewise,","is_correct":false,"explanation":"Wrong: ''Likewise'' signals agreement, but the finding overturns the prior belief."},{"id":"B","text":"In fact,","is_correct":true,"explanation":"Correct: it reveals the surprising truth that the measurements uncovered."},{"id":"C","text":"For example,","is_correct":false,"explanation":"Wrong: the speeding-up is the discovery itself, not an example of the measurements."},{"id":"D","text":"Therefore,","is_correct":false,"explanation":"Wrong: the result contradicts, rather than logically follows from, the old assumption."}]'::jsonb, 'B', 'Step 1 — Set up the surprise
+The text says the measurements {{yellow:revealed something unexpected}}, then states what that was.
+Step 2 — Choose the revealing transition
+Because the final sentence delivers the surprising truth, ''In fact'' introduces it well.
+Distractor analysis:
+- A: ''Likewise'' marks agreement, but the finding reverses the old belief.
+- C: ''For example'' needs an illustration, but this is the discovery itself.
+- D: ''Therefore'' marks a logical result, but the finding contradicts the assumption.', 'The last sentence delivers the unexpected truth the measurements showed.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

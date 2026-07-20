@@ -1,0 +1,54 @@
+{
+  "exam_type": "IB_ECONOMICS_HL",
+  "display_name": "IB Economics HL",
+  "units": [
+    "Introduction to economics",
+    "Microeconomics \u2014 demand & supply",
+    "Market failure",
+    "Theory of the firm (HL emphasis)",
+    "Macroeconomics \u2014 measurement",
+    "Macroeconomic models & policy",
+    "International economics",
+    "Development economics"
+  ],
+  "command_terms": [
+    "define",
+    "describe",
+    "explain",
+    "analyse",
+    "compare",
+    "contrast",
+    "discuss",
+    "evaluate",
+    "to what extent",
+    "examine"
+  ],
+  "misconceptions": [
+    "confusing movement along vs shift",
+    "assuming correlation is causation",
+    "mixing real and nominal"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it",
+    "Paper 3: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_introduction_to_economics skill focus: scarcity",
+    "Keep unit_code=U2_microeconomics_demand_supply skill focus: elasticity",
+    "Keep unit_code=U3_market_failure skill focus: externalities",
+    "Keep unit_code=U4_theory_of_the_firm_hl_emphasis skill focus: costs",
+    "Keep unit_code=U5_macroeconomics_measurement skill focus: GDP",
+    "Keep unit_code=U6_macroeconomic_models_policy skill focus: AD/AS",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

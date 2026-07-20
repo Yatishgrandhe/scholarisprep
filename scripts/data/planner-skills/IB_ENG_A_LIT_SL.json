@@ -1,0 +1,93 @@
+{
+  "examType": "IB_ENG_A_LIT_SL",
+  "topics": [
+    "Readers, Writers and Texts",
+    "Time and Space",
+    "Intertextuality: Connecting Texts",
+    "Assessment Skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_readers_writers_and_texts",
+      "title": "Readers, Writers and Texts",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_reader_response",
+        "U1_S2_authorial_choices",
+        "U1_S3_literary_forms"
+      ],
+      "topics": [
+        "reader response",
+        "authorial choices",
+        "literary forms"
+      ]
+    },
+    {
+      "unit_code": "U2_time_and_space",
+      "title": "Time and Space",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_cultural_context",
+        "U2_S2_historical_setting",
+        "U2_S3_intercultural_reading"
+      ],
+      "topics": [
+        "cultural context",
+        "historical setting",
+        "intercultural reading"
+      ]
+    },
+    {
+      "unit_code": "U3_intertextuality_connecting_texts",
+      "title": "Intertextuality: Connecting Texts",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_allusion",
+        "U3_S2_genre_conversation",
+        "U3_S3_comparative_links"
+      ],
+      "topics": [
+        "allusion",
+        "genre conversation",
+        "comparative links"
+      ]
+    },
+    {
+      "unit_code": "U4_assessment_skills",
+      "title": "Assessment Skills",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_paper_1_unseen",
+        "U4_S2_paper_2_comparative",
+        "U4_S3_hl_essay_io_prep"
+      ],
+      "topics": [
+        "Paper 1 unseen",
+        "Paper 2 comparative",
+        "HL essay / IO prep"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_readers_writers_and_texts": [
+      "U1_S1_reader_response",
+      "U1_S2_authorial_choices",
+      "U1_S3_literary_forms"
+    ],
+    "U2_time_and_space": [
+      "U2_S1_cultural_context",
+      "U2_S2_historical_setting",
+      "U2_S3_intercultural_reading"
+    ],
+    "U3_intertextuality_connecting_texts": [
+      "U3_S1_allusion",
+      "U3_S2_genre_conversation",
+      "U3_S3_comparative_links"
+    ],
+    "U4_assessment_skills": [
+      "U4_S1_paper_1_unseen",
+      "U4_S2_paper_2_comparative",
+      "U4_S3_hl_essay_io_prep"
+    ]
+  }
+}

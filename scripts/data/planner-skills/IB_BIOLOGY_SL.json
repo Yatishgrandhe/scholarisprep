@@ -1,0 +1,166 @@
+{
+  "examType": "IB_BIOLOGY_SL",
+  "topics": [
+    "Cell biology",
+    "Molecular biology",
+    "Genetics",
+    "Ecology",
+    "Evolution & biodiversity",
+    "Human physiology",
+    "Experimental & IA skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_cell_biology",
+      "title": "Cell biology",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_molecular_biology",
+      "title": "Molecular biology",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_genetics",
+      "title": "Genetics",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_ecology",
+      "title": "Ecology",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_evolution_biodiversity",
+      "title": "Evolution & biodiversity",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_human_physiology",
+      "title": "Human physiology",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_experimental_ia_skills",
+      "title": "Experimental & IA skills",
+      "sort_order": 7
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_BIOLOGY_SL:U1_cell_biology",
+      "unit_code": "U1_cell_biology",
+      "title": "Cell biology",
+      "topics": [
+        "ultrastructure",
+        "membranes",
+        "division",
+        "origin of cells"
+      ],
+      "recommended_hours": 7,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_BIOLOGY_SL:U2_molecular_biology",
+      "unit_code": "U2_molecular_biology",
+      "title": "Molecular biology",
+      "topics": [
+        "water",
+        "carbs/lipids",
+        "proteins",
+        "enzymes",
+        "DNA/RNA",
+        "respiration",
+        "photosynthesis"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_BIOLOGY_SL:U1_cell_biology"
+      ]
+    },
+    {
+      "skill_id": "IB_BIOLOGY_SL:U3_genetics",
+      "unit_code": "U3_genetics",
+      "title": "Genetics",
+      "topics": [
+        "genes",
+        "chromosomes",
+        "meiosis",
+        "inheritance",
+        "biotechnology"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_BIOLOGY_SL:U2_molecular_biology"
+      ]
+    },
+    {
+      "skill_id": "IB_BIOLOGY_SL:U4_ecology",
+      "unit_code": "U4_ecology",
+      "title": "Ecology",
+      "topics": [
+        "species",
+        "energy flow",
+        "carbon cycle",
+        "climate change"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_BIOLOGY_SL:U3_genetics"
+      ]
+    },
+    {
+      "skill_id": "IB_BIOLOGY_SL:U5_evolution_biodiversity",
+      "unit_code": "U5_evolution_biodiversity",
+      "title": "Evolution & biodiversity",
+      "topics": [
+        "evidence",
+        "natural selection",
+        "cladistics",
+        "classification"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_BIOLOGY_SL:U4_ecology"
+      ]
+    },
+    {
+      "skill_id": "IB_BIOLOGY_SL:U6_human_physiology",
+      "unit_code": "U6_human_physiology",
+      "title": "Human physiology",
+      "topics": [
+        "digestion",
+        "circulation",
+        "defence",
+        "gas exchange",
+        "neurons",
+        "homeostasis",
+        "reproduction"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_BIOLOGY_SL:U5_evolution_biodiversity"
+      ]
+    },
+    {
+      "skill_id": "IB_BIOLOGY_SL:U7_experimental_ia_skills",
+      "unit_code": "U7_experimental_ia_skills",
+      "title": "Experimental & IA skills",
+      "topics": [
+        "design",
+        "data processing",
+        "evaluation",
+        "communication"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_BIOLOGY_SL:U6_human_physiology"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

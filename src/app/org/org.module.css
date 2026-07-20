@@ -1,0 +1,356 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-8) var(--space-10);
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .shell {
+    flex-direction: column;
+  }
+
+  .main {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+.pageHeaderRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+/* md+: page header toggle; mobile: OrgSidebar footer theme row */
+.headerThemeToggle {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .headerThemeToggle {
+    display: flex;
+  }
+}
+
+.pageHeader {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.pageTitle {
+  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+.pageSubtitle {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .statsRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+}
+
+.cardTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 var(--space-4);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.emptyState {
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-end;
+  margin-bottom: var(--space-5);
+}
+
+.toolbarField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 12rem;
+}
+
+.toolbarLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.toolbarGrow {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filterSelect {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid hsl(var(--input));
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+}
+
+.filterSelect option {
+  background: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+}
+
+.progressBar {
+  height: 6px;
+  background: hsl(var(--border));
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  min-width: 80px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
+}
+
+.progressLabel {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: var(--space-1);
+}
+
+.reportsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .reportsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chartCard {
+  min-height: 300px;
+}
+
+.chartTitle {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: var(--space-4);
+}
+
+.emptyChart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+  text-align: center;
+  padding: var(--space-4);
+}
+
+.heatmapSection {
+  margin-bottom: var(--space-6);
+}
+
+.heatmapGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--space-3);
+}
+
+.heatmapCell {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-1);
+  border: 1px solid hsl(var(--border));
+}
+
+.heatmapTopic {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.heatmapAccuracy {
+  font-size: 1rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.heatmapAttempted {
+  font-size: 0.625rem;
+  opacity: 0.85;
+}
+
+.heatmapNone {
+  background: hsl(var(--muted) / 0.5);
+  color: hsl(var(--muted-foreground));
+}
+
+.heatmapGood {
+  background: hsl(var(--score-positive) / 0.85);
+  color: hsl(var(--primary-foreground));
+}
+
+.heatmapMid {
+  background: hsl(var(--exam-jamb) / 0.9);
+  color: hsl(var(--primary-foreground));
+}
+
+.heatmapLow {
+  background: hsl(var(--score-negative) / 0.85);
+  color: hsl(var(--primary-foreground));
+}
+
+.loading {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.9375rem;
+}
+
+.inviteFields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.memberIdentity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.memberName {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.memberEmail {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.placeholderPage {
+  padding: var(--space-6) 0 var(--space-8);
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+}
+
+.manageMembersLink {
+  display: inline-flex;
+  margin-top: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.chartCard :global(.recharts-default-tooltip) {
+  background: hsl(var(--popover)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius-md) !important;
+  color: hsl(var(--popover-foreground)) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.chartCard :global(.recharts-tooltip-label) {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+.chartCard :global(.recharts-tooltip-item) {
+  color: hsl(var(--foreground)) !important;
+}
+
+.chartCard :global(.recharts-legend-item-text) {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+.chartCard :global(.recharts-cartesian-axis-tick-value) {
+  fill: hsl(var(--muted-foreground));
+}

@@ -1,0 +1,92 @@
+{
+  "exam_type": "AP_US_GOVERNMENT",
+  "display_name": "AP United States Government and Politics",
+  "command_terms": [
+    "describe",
+    "explain",
+    "compare",
+    "draw a conclusion",
+    "develop an argument"
+  ],
+  "misconceptions": [
+    "Assuming separation of powers means branches never interact",
+    "Confusing civil liberties with civil rights",
+    "Treating all polls as equally valid regardless of methodology",
+    "Misstating required SCOTUS holdings or applying the wrong clause",
+    "Writing argument essays without a clear thesis and evidence line"
+  ],
+  "paper_rules": [
+    "SCOTUS Comparison requires accurate description of required case and comparison case",
+    "Argument Essay needs a defensible claim, evidence, and reasoning with a rebuttal/alternative",
+    "Quantitative Analysis should cite specific data from the stimulus"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "mcq",
+        "label": "Multiple Choice",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "frq",
+        "label": "Free Response",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "No calculator. Quantitative Analysis FRQ may include tables/graphs requiring interpretation only."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_foundations",
+      "unit_name": "Foundations of American Democracy",
+      "topics": [
+        "ideals of democracy",
+        "types of democracy",
+        "government power and ratification debates",
+        "federalism"
+      ]
+    },
+    {
+      "unit_code": "U2_branches",
+      "unit_name": "Interactions Among Branches of Government",
+      "topics": [
+        "Congress",
+        "presidency",
+        "judiciary",
+        "bureaucracy",
+        "checks and balances in action"
+      ]
+    },
+    {
+      "unit_code": "U3_civil_liberties",
+      "unit_name": "Civil Liberties and Civil Rights",
+      "topics": [
+        "Bill of Rights applications",
+        "selective incorporation",
+        "equal protection",
+        "civil rights movements and policy"
+      ]
+    },
+    {
+      "unit_code": "U4_ideologies",
+      "unit_name": "American Political Ideologies and Beliefs",
+      "topics": [
+        "political socialization",
+        "ideology measurement",
+        "policy mood",
+        "economic and social ideology"
+      ]
+    },
+    {
+      "unit_code": "U5_participation",
+      "unit_name": "Political Participation",
+      "topics": [
+        "voting behavior",
+        "political parties",
+        "interest groups and media",
+        "campaigns and elections"
+      ]
+    }
+  ]
+}

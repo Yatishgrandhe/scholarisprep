@@ -1,0 +1,160 @@
+{
+  "examType": "IB_PSYCHOLOGY_SL",
+  "topics": [
+    "Research methodology",
+    "Biological approach",
+    "Cognitive approach",
+    "Sociocultural approach",
+    "Abnormal psychology",
+    "Health / human relationships / developmental options",
+    "IA experimental skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_research_methodology",
+      "title": "Research methodology",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_biological_approach",
+      "title": "Biological approach",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_cognitive_approach",
+      "title": "Cognitive approach",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_sociocultural_approach",
+      "title": "Sociocultural approach",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_abnormal_psychology",
+      "title": "Abnormal psychology",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_health_human_relationships_developmental_options",
+      "title": "Health / human relationships / developmental options",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_ia_experimental_skills",
+      "title": "IA experimental skills",
+      "sort_order": 7
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_PSYCHOLOGY_SL:U1_research_methodology",
+      "unit_code": "U1_research_methodology",
+      "title": "Research methodology",
+      "topics": [
+        "experiments",
+        "correlations",
+        "ethics",
+        "sampling",
+        "validity"
+      ],
+      "recommended_hours": 7,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_PSYCHOLOGY_SL:U2_biological_approach",
+      "unit_code": "U2_biological_approach",
+      "title": "Biological approach",
+      "topics": [
+        "brain and behaviour",
+        "hormones",
+        "genetics",
+        "evolution"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PSYCHOLOGY_SL:U1_research_methodology"
+      ]
+    },
+    {
+      "skill_id": "IB_PSYCHOLOGY_SL:U3_cognitive_approach",
+      "unit_code": "U3_cognitive_approach",
+      "title": "Cognitive approach",
+      "topics": [
+        "models of memory",
+        "schema",
+        "thinking and decision-making",
+        "reliability of cognition"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PSYCHOLOGY_SL:U2_biological_approach"
+      ]
+    },
+    {
+      "skill_id": "IB_PSYCHOLOGY_SL:U4_sociocultural_approach",
+      "unit_code": "U4_sociocultural_approach",
+      "title": "Sociocultural approach",
+      "topics": [
+        "social identity",
+        "culture",
+        "enculturation",
+        "stereotypes"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PSYCHOLOGY_SL:U3_cognitive_approach"
+      ]
+    },
+    {
+      "skill_id": "IB_PSYCHOLOGY_SL:U5_abnormal_psychology",
+      "unit_code": "U5_abnormal_psychology",
+      "title": "Abnormal psychology",
+      "topics": [
+        "normality",
+        "diagnosis",
+        "explanations",
+        "treatments"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PSYCHOLOGY_SL:U4_sociocultural_approach"
+      ]
+    },
+    {
+      "skill_id": "IB_PSYCHOLOGY_SL:U6_health_human_relationships_developmental_options",
+      "unit_code": "U6_health_human_relationships_developmental_options",
+      "title": "Health / human relationships / developmental options",
+      "topics": [
+        "stress",
+        "health promotion",
+        "relationships",
+        "development"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PSYCHOLOGY_SL:U5_abnormal_psychology"
+      ]
+    },
+    {
+      "skill_id": "IB_PSYCHOLOGY_SL:U7_ia_experimental_skills",
+      "unit_code": "U7_ia_experimental_skills",
+      "title": "IA experimental skills",
+      "topics": [
+        "design",
+        "analysis",
+        "evaluation",
+        "report structure"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_PSYCHOLOGY_SL:U6_health_human_relationships_developmental_options"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

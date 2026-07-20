@@ -1,0 +1,175 @@
+{
+  "examType": "IB_CLASSICAL_LANG_SL",
+  "topics": [
+    "Language foundations",
+    "Unseen translation skills",
+    "Set text comprehension",
+    "Literary devices & genre",
+    "Historical & cultural context",
+    "Composition / style analysis",
+    "Comparative reading",
+    "Exam technique"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_language_foundations",
+      "title": "Language foundations",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_unseen_translation_skills",
+      "title": "Unseen translation skills",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_set_text_comprehension",
+      "title": "Set text comprehension",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_literary_devices_genre",
+      "title": "Literary devices & genre",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_historical_cultural_context",
+      "title": "Historical & cultural context",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_composition_style_analysis",
+      "title": "Composition / style analysis",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_comparative_reading",
+      "title": "Comparative reading",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_exam_technique",
+      "title": "Exam technique",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_CLASSICAL_LANG_SL:U1_language_foundations",
+      "unit_code": "U1_language_foundations",
+      "title": "Language foundations",
+      "topics": [
+        "morphology",
+        "case uses",
+        "verb systems",
+        "syntax patterns"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_CLASSICAL_LANG_SL:U2_unseen_translation_skills",
+      "unit_code": "U2_unseen_translation_skills",
+      "title": "Unseen translation skills",
+      "topics": [
+        "sense units",
+        "vocabulary strategy",
+        "idiom recognition"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CLASSICAL_LANG_SL:U1_language_foundations"
+      ]
+    },
+    {
+      "skill_id": "IB_CLASSICAL_LANG_SL:U3_set_text_comprehension",
+      "unit_code": "U3_set_text_comprehension",
+      "title": "Set text comprehension",
+      "topics": [
+        "close reading",
+        "context clues",
+        "commentary skills"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CLASSICAL_LANG_SL:U2_unseen_translation_skills"
+      ]
+    },
+    {
+      "skill_id": "IB_CLASSICAL_LANG_SL:U4_literary_devices_genre",
+      "unit_code": "U4_literary_devices_genre",
+      "title": "Literary devices & genre",
+      "topics": [
+        "epic",
+        "lyric",
+        "historiography",
+        "rhetoric"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CLASSICAL_LANG_SL:U3_set_text_comprehension"
+      ]
+    },
+    {
+      "skill_id": "IB_CLASSICAL_LANG_SL:U5_historical_cultural_context",
+      "unit_code": "U5_historical_cultural_context",
+      "title": "Historical & cultural context",
+      "topics": [
+        "institutions",
+        "religion",
+        "daily life",
+        "politics"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CLASSICAL_LANG_SL:U4_literary_devices_genre"
+      ]
+    },
+    {
+      "skill_id": "IB_CLASSICAL_LANG_SL:U6_composition_style_analysis",
+      "unit_code": "U6_composition_style_analysis",
+      "title": "Composition / style analysis",
+      "topics": [
+        "register",
+        "word order emphasis",
+        "tone"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CLASSICAL_LANG_SL:U5_historical_cultural_context"
+      ]
+    },
+    {
+      "skill_id": "IB_CLASSICAL_LANG_SL:U7_comparative_reading",
+      "unit_code": "U7_comparative_reading",
+      "title": "Comparative reading",
+      "topics": [
+        "theme tracking",
+        "authorial purpose",
+        "audience"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CLASSICAL_LANG_SL:U6_composition_style_analysis"
+      ]
+    },
+    {
+      "skill_id": "IB_CLASSICAL_LANG_SL:U8_exam_technique",
+      "unit_code": "U8_exam_technique",
+      "title": "Exam technique",
+      "topics": [
+        "timing",
+        "annotation",
+        "markscheme language"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_CLASSICAL_LANG_SL:U7_comparative_reading"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

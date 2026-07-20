@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('b7d67d14-fe99-460e-bb14-1d48868775c0', 'Which choice completes the text with the most logical transition?', 'A psychologist found that students who studied in short, spaced sessions remembered material far better than those who crammed. The same students reported feeling less confident during the spaced sessions, ______ since the slower pace made the work feel harder in the moment.', NULL, '[{"id":"A","text":"even though","is_correct":false,"explanation":"Incorrect: this would invert the logic, as the clause explains rather than concedes."},{"id":"B","text":"however,","is_correct":false,"explanation":"Incorrect: the second clause explains the low confidence rather than contrasting it."},{"id":"C","text":"that is,","is_correct":false,"explanation":"Incorrect: the clause adds a reason, not a restatement of the same point."},{"id":"D","text":"because","is_correct":true,"explanation":"Correct: it introduces the cause of the students'' lower confidence, the harder-feeling slow pace."}]'::jsonb, 'D', 'Step 1 — Find the effect needing a cause
+Students {{yellow:reported feeling less confident during the spaced sessions}}, and the clause explains why.
+Step 2 — Choose the causal link
+''Because'' introduces the reason: the slower pace felt harder in the moment.
+Distractor analysis:
+- A: ''even though'' would frame the clause as a concession, but it gives a cause.
+- B: ''however'' signals contrast, yet the clause supports the prior statement.
+- C: ''that is'' restates, but the clause supplies new causal information.', 'Why did the students feel less confident?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

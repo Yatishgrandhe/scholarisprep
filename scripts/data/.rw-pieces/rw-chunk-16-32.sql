@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('5d5b0410-9587-4c29-9933-96ec292db7a1', 'Which choice completes the text with the most logical transition?', 'Marine biologists once assumed that deep-sea creatures lived in near-total isolation, rarely interacting across vast stretches of ocean floor. Recent tracking studies, ______ have revealed that some species migrate thousands of miles to gather at the same underwater ridges each year.', NULL, '[{"id":"A","text":"however,","is_correct":true,"explanation":"Correct: it signals the contrast between the old assumption of isolation and the new finding of long migrations."},{"id":"B","text":"therefore,","is_correct":false,"explanation":"Incorrect: the new studies do not result from the old assumption; they overturn it."},{"id":"C","text":"likewise,","is_correct":false,"explanation":"Incorrect: the second sentence contradicts rather than parallels the first."},{"id":"D","text":"for instance,","is_correct":false,"explanation":"Incorrect: the studies are not an example of isolation; they disprove it."}]'::jsonb, 'A', 'Step 1 — Spot the reversal
+The first sentence says creatures live in {{yellow:near-total isolation, rarely interacting}}, but the second reports long migrations to shared ridges.
+Step 2 — Match the contrast
+Because the new evidence overturns the old assumption, a contrast transition like ''however'' is needed.
+Distractor analysis:
+- B: ''therefore'' implies the studies follow from the assumption, but they refute it.
+- C: ''likewise'' signals agreement, yet the ideas oppose each other.
+- D: ''for instance'' would introduce an example of isolation, which the sentence does not provide.', 'Does the second sentence agree with or contradict the old assumption?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

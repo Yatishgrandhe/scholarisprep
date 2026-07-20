@@ -1,0 +1,165 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A rectangle has a length of 12 centimeters and a width of 8 centimeters. What is the area, in square centimeters, of the rectangle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"20","is_correct":false,"explanation":"Choice A (20…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"40","is_correct":false,"explanation":"Choice B (40…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"96","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"192","is_correct":false,"explanation":"Choice D (192…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A rectangle has a length of 12 centimeters and a width of 8 centimeters. What is the area, in square centimeters, of the rectangle?
+
+**Step 2 — Solve.** The area of a rectangle is found by multiplying its length and width.  Therefore, the area of this rectangle is 12 cm * 8 cm = 96 square centimeters.
+
+**Step 3 — Select C.** 96
+
+**Distractor analysis:**
+- **A** (20): Choice A (20…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (40): Choice B (40…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (192): Choice D (192…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"ARE","domain_id":"geometry","opensat_index":146,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a1","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '048a4aa8-2008-4bc6-a81b-a7081dd0b885';
+
+UPDATE public.questions SET
+  question_text = 'If $2x + 3y = 12$ and $x - y = 1$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $2x + 3y = 12$ and $x - y = 1$, what is the value of $x$?
+
+**Step 2 — Solve.** To solve for $x$, we can use the elimination method.  Multiplying the second equation by 3, we get $3x - 3y = 3$. Adding this equation to the first equation, we get $5x = 15$, which means $x = 3$.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":456,"opensat_domain":"Algebra","opensat_raw_id":"random_id_1","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '04b7d39f-28c3-42c7-99bf-a72133005fb6';
+
+UPDATE public.questions SET
+  question_text = 'A survey of 100 students found that 60 students liked apples, 40 students liked bananas, and 10 students liked both apples and bananas. How many students liked only apples?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"10","is_correct":false,"explanation":"Choice A (10…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"20","is_correct":false,"explanation":"Choice B (20…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"50","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"60","is_correct":false,"explanation":"Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A survey of 100 students found that 60 students liked apples, 40 students liked bananas, and 10 students liked both apples and bananas. How many students liked only apples?
+
+**Step 2 — Solve.** We can use a Venn diagram to visualize the problem.  Since 10 students liked both apples and bananas, 60 - 10 = 50 students liked only apples.
+
+**Step 3 — Select C.** 50
+
+**Distractor analysis:**
+- **A** (10): Choice A (10…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (20): Choice B (20…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (60): Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":422,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_c1","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '04dafa33-1d18-4567-805a-6c6f6f6243e3';
+
+UPDATE public.questions SET
+  question_text = 'What is the value of  $\frac{x^2 + 2x + 1}{x^2 - 1}$ when $x=3$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"4","is_correct":false,"explanation":"Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"8","is_correct":false,"explanation":"Choice C (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"16","is_correct":false,"explanation":"Choice D (16…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** What is the value of  $\frac{x^2 + 2x + 1}{x^2 - 1}$ when $x=3$?
+
+**Step 2 — Solve.** We can simplify the expression first by factoring the numerator and denominator:  $\frac{x^2 + 2x + 1}{x^2 - 1} = \frac{(x+1)(x+1)}{(x+1)(x-1)}$.  Since $x=3$, we can substitute to get $\frac{(3+1)(3+1)}{(3+1)(3-1)} = \frac{(4)(4)}{(4)(2)} = \frac{16}{8} = 2$.
+
+**Step 3 — Select A.** 2
+
+**Distractor analysis:**
+- **B** (4): Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (8): Choice C (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (16): Choice D (16…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":103,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_a1","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '05080631-f434-4bbb-9c5f-360817c795b7';
+
+UPDATE public.questions SET
+  question_text = 'The function \(f\) is defined by \(f(x) = \frac{x^2 - 4}{x - 2}\) for $x \neq 2$. What is the value of \(f(3)\)?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":false,"explanation":"Choice B (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"5","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"7","is_correct":false,"explanation":"Choice D (7…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** The function \(f\) is defined by \(f(x) = \frac{x^2 - 4}{x - 2}\) for $x \neq 2$. What is the value of \(f(3)\)?
+
+**Step 2 — Solve.** To find \(f(3)\), we substitute 3 for *x* in the function: \(f(3) = \frac{3^2 - 4}{3 - 2}\) = \(\frac{9 - 4}{1}\) = 5.
+
+**Step 3 — Select C.** 5
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (3): Choice B (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (7): Choice D (7…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":448,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_a1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '0513703d-777d-4eb2-9c90-e65bf95e0c69';
+
+UPDATE public.questions SET
+  question_text = 'A survey of 100 people found that 60 people like apples, 45 people like oranges, and 20 people like both apples and oranges. How many people like only apples?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"20","is_correct":false,"explanation":"Choice A (20…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"40","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"60","is_correct":false,"explanation":"Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"80","is_correct":false,"explanation":"Choice D (80…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A survey of 100 people found that 60 people like apples, 45 people like oranges, and 20 people like both apples and oranges. How many people like only apples?
+
+**Step 2 — Solve.** We can use a Venn diagram to solve this.  Let the number of people who like only apples be represented by x.  
+[asy] 
+label("Apples",(1.5,1.5));
+label("Oranges",(2.5,1.5));
+label("x",(1,1));
+label("20",(2,1));
+label("25",(3,1));
+draw(Circle((1,1),1));
+draw(Circle((2,1),1));
+draw((0.5,0)--(3.5,0));
+draw((0,0.5)--(0,2.5));
+[/asy]  The number of people who like oranges is 45, so 20 + 25 = 45. Therefore, the number of people who like only apples is 40.
+
+**Step 3 — Select B.** 40
+
+**Distractor analysis:**
+- **A** (20): Choice A (20…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (60): Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (80): Choice D (80…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":990,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_a8","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '052dcad8-12be-4645-80f1-f9cded778ef4';
+
+UPDATE public.questions SET
+  question_text = 'In a right triangle, one angle measures 30 degrees and the hypotenuse has a length of 10. What is the length of the side opposite the 30-degree angle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"5","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"5\\sqrt{3}","is_correct":false,"explanation":"Choice C (5\\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"10\\sqrt{3}","is_correct":false,"explanation":"Choice D (10\\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** In a right triangle, one angle measures 30 degrees and the hypotenuse has a length of 10. What is the length of the side opposite the 30-degree angle?
+
+**Step 2 — Solve.** A 30-60-90 right triangle has sides in the ratio of 1:√3:2. Since the hypotenuse has a length of 10, the side opposite the 30-degree angle has a length of 10 / 2 = 5.
+
+**Step 3 — Select B.** 5
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (5\sqrt{3}): Choice C (5\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (10\sqrt{3}): Choice D (10\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RIG","domain_id":"geometry","opensat_index":87,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a5","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '0573c643-bbcf-47b9-aae1-1c8164c08c65';
+
+UPDATE public.questions SET
+  question_text = 'What is the circumference? (Use $\pi \approx 3.14$.)',
+  stimulus_text = 'A circular track has radius 12 meters.',
+  options = '[{"id":"A","text":"$75.36$","is_correct":true,"explanation":"**Step 1:** $C=2\\pi r$. **Step 2:** $2(3.14)(12)=75.36$."},{"id":"B","text":"$452.16$","is_correct":false,"explanation":"Area formula $\\pi r^2$, not circumference."},{"id":"C","text":"$24.00$","is_correct":false,"explanation":"Diameter only."},{"id":"D","text":"$37.68$","is_correct":false,"explanation":"Half of circumference."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Formula $C=2\pi r$.
+**Step 2:** $C≈2(3.14)(12)=75.36$ m.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '05c2f326-a3ea-468a-9b75-f83e5cde62c1';
+
+COMMIT;

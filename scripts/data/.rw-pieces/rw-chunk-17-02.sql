@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('71cee8cd-25ed-4957-8f65-bd7c4a223b2f', 'Which choice completes the text with the most logical transition?', 'The Roman emperor Diocletian tried to halt runaway inflation by issuing an edict that fixed maximum prices for hundreds of goods. Merchants simply withdrew their wares from the market rather than sell at a loss, ______ shortages grew worse and the edict was soon abandoned.', NULL, '[{"id":"A","text":"and so","is_correct":true,"explanation":"Correct: the merchants'' withdrawal directly caused the worsening shortages and the edict''s failure."},{"id":"B","text":"even though","is_correct":false,"explanation":"Incorrect: the shortages are a result of the withdrawal, not something it occurred in spite of."},{"id":"C","text":"in particular,","is_correct":false,"explanation":"Incorrect: the second clause is an outcome, not a specific example of the first."},{"id":"D","text":"by comparison,","is_correct":false,"explanation":"Incorrect: nothing is being compared; the clauses form a chain of cause and effect."}]'::jsonb, 'A', 'Step 1 — Locate the trigger
+Merchants reacted by choosing to {{yellow:withdrew their wares from the market rather than sell at a loss}}, which then produced worse shortages.
+Step 2 — Pick the consequence link
+Since the withdrawal causes the shortages and the edict''s collapse, ''and so'' fits.
+Distractor analysis:
+- B: ''even though'' implies the shortages happened despite the withdrawal, reversing the logic.
+- C: ''in particular'' signals an example, but this is an effect.
+- D: ''by comparison'' implies a comparison absent from the text.', 'Did withdrawing goods cause the shortages, or happen despite them?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

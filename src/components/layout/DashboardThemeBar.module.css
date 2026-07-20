@@ -1,0 +1,43 @@
+.sidebarRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.sidebarRow .label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.toggleOnDark {
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.toggleOnDark:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: var(--white) !important;
+}
+
+.mobileBar {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4) 0;
+}
+
+.mobileBar .label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+}
+
+@media (max-width: 767px) {
+  .mobileBar {
+    display: flex;
+  }
+}

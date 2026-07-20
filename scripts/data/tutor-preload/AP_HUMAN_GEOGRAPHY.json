@@ -1,0 +1,36 @@
+{
+  "exam_type": "AP_HUMAN_GEOGRAPHY",
+  "display_name": "AP Human Geography",
+  "command_terms": [
+    "describe",
+    "explain",
+    "compare",
+    "identify",
+    "apply model",
+    "interpret map",
+    "analyze spatial pattern"
+  ],
+  "misconceptions": [
+    "Confusing map projection distortions with real distances",
+    "Using demographic transition stages without linking to development context",
+    "Treating culture as static and non-diffusing",
+    "Mixing nation and state terminology",
+    "Memorizing urban models without applying to a real city pattern"
+  ],
+  "paper_rules": [
+    "MCQ frequently includes maps, charts, and aerial/landscape images",
+    "FRQs: define terms, apply models, and explain spatial processes with examples",
+    "Scale matters: local/regional/global answers must match the prompt",
+    "Name specific places when prompts ask for examples"
+  ],
+  "calculator_policy": "none",
+  "units_summary": [
+    "U1 Thinking Geographically (w≈0.08, q=40)",
+    "U2 Population and Migration (w≈0.13, q=65)",
+    "U3 Cultural Patterns and Processes (w≈0.13, q=65)",
+    "U4 Political Patterns and Processes (w≈0.13, q=65)",
+    "U5 Agriculture and Rural Land Use (w≈0.13, q=65)",
+    "U6 Cities and Urban Land Use (w≈0.17, q=85)",
+    "U7 Industrial and Economic Development (w≈0.23, q=115)"
+  ]
+}

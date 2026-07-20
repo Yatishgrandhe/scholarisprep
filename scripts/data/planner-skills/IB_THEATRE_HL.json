@@ -1,0 +1,171 @@
+{
+  "examType": "IB_THEATRE_HL",
+  "topics": [
+    "Staging play texts",
+    "Exploring world theatre traditions",
+    "Collaboratively creating original theatre",
+    "Performing theatre theory",
+    "Production elements",
+    "Research presentation skills",
+    "Solo theatre piece (HL)",
+    "Collaborative project & journal"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_staging_play_texts",
+      "title": "Staging play texts",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_exploring_world_theatre_traditions",
+      "title": "Exploring world theatre traditions",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_collaboratively_creating_original_theatre",
+      "title": "Collaboratively creating original theatre",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_performing_theatre_theory",
+      "title": "Performing theatre theory",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_production_elements",
+      "title": "Production elements",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_research_presentation_skills",
+      "title": "Research presentation skills",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_solo_theatre_piece_hl",
+      "title": "Solo theatre piece (HL)",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_collaborative_project_journal",
+      "title": "Collaborative project & journal",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_THEATRE_HL:U1_staging_play_texts",
+      "unit_code": "U1_staging_play_texts",
+      "title": "Staging play texts",
+      "topics": [
+        "interpretation",
+        "directorial vision",
+        "audience"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_THEATRE_HL:U2_exploring_world_theatre_traditions",
+      "unit_code": "U2_exploring_world_theatre_traditions",
+      "title": "Exploring world theatre traditions",
+      "topics": [
+        "conventions",
+        "context",
+        "performance"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_THEATRE_HL:U1_staging_play_texts"
+      ]
+    },
+    {
+      "skill_id": "IB_THEATRE_HL:U3_collaboratively_creating_original_theatre",
+      "unit_code": "U3_collaboratively_creating_original_theatre",
+      "title": "Collaboratively creating original theatre",
+      "topics": [
+        "devising",
+        "ensemble",
+        "intention"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_THEATRE_HL:U2_exploring_world_theatre_traditions"
+      ]
+    },
+    {
+      "skill_id": "IB_THEATRE_HL:U4_performing_theatre_theory",
+      "unit_code": "U4_performing_theatre_theory",
+      "title": "Performing theatre theory",
+      "topics": [
+        "practitioners",
+        "application",
+        "reflection"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_THEATRE_HL:U3_collaboratively_creating_original_theatre"
+      ]
+    },
+    {
+      "skill_id": "IB_THEATRE_HL:U5_production_elements",
+      "unit_code": "U5_production_elements",
+      "title": "Production elements",
+      "topics": [
+        "design",
+        "space",
+        "technical theatre"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_THEATRE_HL:U4_performing_theatre_theory"
+      ]
+    },
+    {
+      "skill_id": "IB_THEATRE_HL:U6_research_presentation_skills",
+      "unit_code": "U6_research_presentation_skills",
+      "title": "Research presentation skills",
+      "topics": [
+        "inquiry",
+        "theatre tradition analysis"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_THEATRE_HL:U5_production_elements"
+      ]
+    },
+    {
+      "skill_id": "IB_THEATRE_HL:U7_solo_theatre_piece_hl",
+      "unit_code": "U7_solo_theatre_piece_hl",
+      "title": "Solo theatre piece (HL)",
+      "topics": [
+        "theory-driven creation",
+        "performance",
+        "report"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_THEATRE_HL:U6_research_presentation_skills"
+      ]
+    },
+    {
+      "skill_id": "IB_THEATRE_HL:U8_collaborative_project_journal",
+      "unit_code": "U8_collaborative_project_journal",
+      "title": "Collaborative project & journal",
+      "topics": [
+        "process",
+        "evaluation",
+        "documentation"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_THEATRE_HL:U7_solo_theatre_piece_hl"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "exam_type": "AP_CALCULUS_AB",
+  "skills": [
+    {
+      "id": "U1_limits_s1",
+      "unit_code": "U1_limits",
+      "label": "Evaluate limits analytically",
+      "description": "Practice Evaluate limits analytically in Limits and Continuity with exam-style items and feedback."
+    },
+    {
+      "id": "U1_limits_s2",
+      "unit_code": "U1_limits",
+      "label": "Continuity classification",
+      "description": "Practice Continuity classification in Limits and Continuity with exam-style items and feedback."
+    },
+    {
+      "id": "U1_limits_s3",
+      "unit_code": "U1_limits",
+      "label": "Asymptote behavior",
+      "description": "Practice Asymptote behavior in Limits and Continuity with exam-style items and feedback."
+    },
+    {
+      "id": "U2_differentiation_s1",
+      "unit_code": "U2_differentiation",
+      "label": "Definition of derivative",
+      "description": "Practice Definition of derivative in Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U2_differentiation_s2",
+      "unit_code": "U2_differentiation",
+      "label": "Power product quotient chain",
+      "description": "Practice Power product quotient chain in Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U2_differentiation_s3",
+      "unit_code": "U2_differentiation",
+      "label": "Implicit differentiation",
+      "description": "Practice Implicit differentiation in Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U3_appl_diff_s1",
+      "unit_code": "U3_appl_diff",
+      "label": "Related rates setup",
+      "description": "Practice Related rates setup in Applications of Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U3_appl_diff_s2",
+      "unit_code": "U3_appl_diff",
+      "label": "First/second derivative tests",
+      "description": "Practice First/second derivative tests in Applications of Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U3_appl_diff_s3",
+      "unit_code": "U3_appl_diff",
+      "label": "Optimization modeling",
+      "description": "Practice Optimization modeling in Applications of Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U4_integration_s1",
+      "unit_code": "U4_integration",
+      "label": "FTC applications",
+      "description": "Practice FTC applications in Integration and Accumulation with exam-style items and feedback."
+    },
+    {
+      "id": "U4_integration_s2",
+      "unit_code": "U4_integration",
+      "label": "U-substitution",
+      "description": "Practice U-substitution in Integration and Accumulation with exam-style items and feedback."
+    },
+    {
+      "id": "U4_integration_s3",
+      "unit_code": "U4_integration",
+      "label": "Accumulation interpretation",
+      "description": "Practice Accumulation interpretation in Integration and Accumulation with exam-style items and feedback."
+    },
+    {
+      "id": "U5_diff_eq_s1",
+      "unit_code": "U5_diff_eq",
+      "label": "Slope field reading",
+      "description": "Practice Slope field reading in Differential Equations with exam-style items and feedback."
+    },
+    {
+      "id": "U5_diff_eq_s2",
+      "unit_code": "U5_diff_eq",
+      "label": "Separate and integrate",
+      "description": "Practice Separate and integrate in Differential Equations with exam-style items and feedback."
+    },
+    {
+      "id": "U5_diff_eq_s3",
+      "unit_code": "U5_diff_eq",
+      "label": "Exponential growth/decay",
+      "description": "Practice Exponential growth/decay in Differential Equations with exam-style items and feedback."
+    },
+    {
+      "id": "U6_appl_int_s1",
+      "unit_code": "U6_appl_int",
+      "label": "Area between curves",
+      "description": "Practice Area between curves in Applications of Integration with exam-style items and feedback."
+    },
+    {
+      "id": "U6_appl_int_s2",
+      "unit_code": "U6_appl_int",
+      "label": "Volume methods",
+      "description": "Practice Volume methods in Applications of Integration with exam-style items and feedback."
+    },
+    {
+      "id": "U6_appl_int_s3",
+      "unit_code": "U6_appl_int",
+      "label": "Motion from velocity/acceleration",
+      "description": "Practice Motion from velocity/acceleration in Applications of Integration with exam-style items and feedback."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "exam_type": "AP_SEMINAR",
+  "skills": [
+    {
+      "id": "AP_SEMINAR_U1_question_frame",
+      "unit_code": "U1",
+      "label": "Frame Inquiry Questions",
+      "description": "Turn a broad topic into a focused, researchable question with clear scope."
+    },
+    {
+      "id": "AP_SEMINAR_U1_context_scan",
+      "unit_code": "U1",
+      "label": "Scan Context and Stakeholders",
+      "description": "Identify relevant contexts, audiences, and stakeholder interests."
+    },
+    {
+      "id": "AP_SEMINAR_U2_claim_map",
+      "unit_code": "U2",
+      "label": "Map Claims and Evidence",
+      "description": "Extract main claims and supporting evidence from an argument."
+    },
+    {
+      "id": "AP_SEMINAR_U2_reasoning_trace",
+      "unit_code": "U2",
+      "label": "Trace Line of Reasoning",
+      "description": "Explain how an author connects evidence to a conclusion."
+    },
+    {
+      "id": "AP_SEMINAR_U3_source_eval",
+      "unit_code": "U3",
+      "label": "Evaluate Source Credibility",
+      "description": "Judge reliability, bias, and usefulness of sources for a purpose."
+    },
+    {
+      "id": "AP_SEMINAR_U3_perspective_compare",
+      "unit_code": "U3",
+      "label": "Compare Perspectives",
+      "description": "Contrast how different lenses frame the same issue."
+    },
+    {
+      "id": "AP_SEMINAR_U4_synthesize",
+      "unit_code": "U4",
+      "label": "Synthesize Across Sources",
+      "description": "Integrate multiple sources into a coherent original claim."
+    },
+    {
+      "id": "AP_SEMINAR_U4_counterargue",
+      "unit_code": "U4",
+      "label": "Address Counterarguments",
+      "description": "Anticipate and respond to opposing views with warrants."
+    },
+    {
+      "id": "AP_SEMINAR_U5_team_argument",
+      "unit_code": "U5",
+      "label": "Build Team Argument",
+      "description": "Coordinate roles and evidence into a shared team claim."
+    },
+    {
+      "id": "AP_SEMINAR_U5_oral_defense",
+      "unit_code": "U5",
+      "label": "Defend Team Work Orally",
+      "description": "Answer probing questions about process, evidence, and choices."
+    },
+    {
+      "id": "AP_SEMINAR_U6_stimulus_research",
+      "unit_code": "U6",
+      "label": "Research from Stimulus Pack",
+      "description": "Generate and pursue a question grounded in provided stimuli."
+    },
+    {
+      "id": "AP_SEMINAR_U6_written_argument",
+      "unit_code": "U6",
+      "label": "Craft Individual Written Argument",
+      "description": "Produce a researched essay with attribution and synthesis."
+    },
+    {
+      "id": "AP_SEMINAR_U7_eoce_part_a",
+      "unit_code": "U7",
+      "label": "EOCE Part A Analysis",
+      "description": "Answer short prompts that dissect an argument's reasoning."
+    },
+    {
+      "id": "AP_SEMINAR_U7_eoce_part_b",
+      "unit_code": "U7",
+      "label": "EOCE Part B Synthesis Essay",
+      "description": "Write a timed evidence-based argument from a source set."
+    }
+  ]
+}

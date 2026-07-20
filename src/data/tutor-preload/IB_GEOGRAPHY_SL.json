@@ -1,0 +1,53 @@
+{
+  "exam_type": "IB_GEOGRAPHY_SL",
+  "display_name": "IB Geography SL",
+  "units": [
+    "Geographic skills & data",
+    "Population & changing places",
+    "Global climate & vulnerability",
+    "Global resource consumption",
+    "Power, places and networks",
+    "Human development & diversity",
+    "Risks and resilience",
+    "Fieldwork / IA skills"
+  ],
+  "command_terms": [
+    "define",
+    "describe",
+    "explain",
+    "analyse",
+    "compare",
+    "contrast",
+    "discuss",
+    "evaluate",
+    "to what extent",
+    "examine"
+  ],
+  "misconceptions": [
+    "skipping command terms",
+    "memorizing without application",
+    "ignoring markscheme language"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_geographic_skills_data skill focus: maps",
+    "Keep unit_code=U2_population_changing_places skill focus: demographic transition",
+    "Keep unit_code=U3_global_climate_vulnerability skill focus: atmosphere\u2013ocean",
+    "Keep unit_code=U4_global_resource_consumption skill focus: water",
+    "Keep unit_code=U5_power_places_and_networks skill focus: global interactions",
+    "Keep unit_code=U6_human_development_diversity skill focus: development indicators",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

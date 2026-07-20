@@ -1,0 +1,231 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: rgb(7 12 22 / 0.58);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  animation: fadeIn 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal {
+  width: min(480px, 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  padding: var(--space-6);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  animation: scaleIn 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.titleGroup {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.bugIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: hsl(var(--destructive) / 0.1);
+  color: hsl(var(--destructive));
+}
+
+.bugIcon {
+  color: inherit;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+}
+
+.hint {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: 2px 0 0;
+}
+
+.close {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  padding: var(--space-1);
+  color: hsl(var(--muted-foreground));
+  transition: all var(--transition-fast);
+}
+
+.close:hover {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Location Context Card */
+.contextCard {
+  background: hsl(var(--muted) / 0.4);
+  border: 1px solid hsl(var(--border) / 0.6);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contextHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--muted-foreground));
+}
+
+.contextIcon {
+  color: hsl(var(--primary));
+}
+
+.contextUrl {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: hsl(var(--foreground));
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Form Fields */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.field label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.fieldIcon {
+  color: hsl(var(--muted-foreground));
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  padding: var(--space-3);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+  transition: all var(--transition-fast);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.15);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  border-top: 1px solid hsl(var(--border) / 0.6);
+  padding-top: var(--space-4);
+}
+
+.cancel,
+.submit {
+  min-height: 2.5rem;
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all var(--transition-fast);
+}
+
+.cancel {
+  border: 1px solid hsl(var(--border));
+  background: transparent;
+  color: hsl(var(--foreground));
+}
+
+.cancel:hover {
+  background: hsl(var(--muted));
+}
+
+.submit {
+  border: none;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: var(--shadow-sm);
+}
+
+.submit:hover:not(:disabled) {
+  background: hsl(var(--accent));
+  box-shadow: var(--shadow-md);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,68 @@
+.grid {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  overflow: visible;
+  align-items: stretch;
+}
+
+.grid > * {
+  min-width: 0;
+}
+
+.cols2 {
+  grid-template-columns: 1fr;
+}
+
+.cols3 {
+  grid-template-columns: 1fr;
+}
+
+.cols4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .cols2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .cols3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 640px) and (max-width: 899px) {
+  .cols4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .cols4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.pricingGrid {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  overflow: visible;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+.pricingGrid > * {
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .pricingGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

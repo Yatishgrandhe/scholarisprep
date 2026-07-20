@@ -1,0 +1,744 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Brand display + body faces from the Scholaris design system (Course Builder). */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@source "../**/*.{js,ts,jsx,tsx,mdx}";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "react-day-picker/style.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --navy: #0f1e3c;
+  --cobalt: #2563eb;
+  --cobalt-dark: #1d4ed8;
+  --cobalt-light: #eff6ff;
+  --aqua: #06b6d4;
+  --aqua-light: #cffafe;
+  --white: #ffffff;
+  --snow: #f8fafc;
+  --slate-50: #f1f5f9;
+  --slate-100: #e2e8f0;
+  --slate-200: #cbd5e1;
+  --slate-300: #94a3b8;
+  --slate-400: #64748b;
+  --slate-500: #475569;
+  --text-primary: hsl(220 26% 10%);
+  --text-secondary: hsl(220 13% 42%);
+  --text-muted: hsl(220 13% 42%);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+  --sat-color: #7c3aed;
+  --act-color: #db2777;
+  --jamb-color: #d97706;
+  --gre-color: #059669;
+  /* Hex aliases derived from --exam-ap / --exam-ib HSL triplets below */
+  --ap-color: hsl(var(--exam-ap));
+  --ib-color: hsl(var(--exam-ib));
+  /* Scholaris design-system brand faces: DM Serif Display for headings/wordmark,
+     Plus Jakarta Sans for body/UI. (Question screen keeps --font-serif below.) */
+  --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  /* Bluebook/OnePrep-style reading serif for the question-taking experience
+     (passages, question stem, answer choices). Scoped to the question screen. */
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --radius-sm: 9px;
+  --radius-md: 13px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 3px hsl(var(--foreground) / 0.08), 0 1px 2px hsl(var(--foreground) / 0.04);
+  --shadow-md: 0 4px 16px hsl(var(--foreground) / 0.1), 0 2px 6px hsl(var(--foreground) / 0.06);
+  --shadow-lg: 0 12px 40px hsl(var(--foreground) / 0.14), 0 4px 12px hsl(var(--foreground) / 0.08);
+  --shadow-cobalt: 0 8px 32px hsl(var(--primary) / 0.24);
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* ── CORE SURFACES (warm off-white light mode) ─── */
+  --background: 40 18% 97%;
+  --card: 40 14% 99%;
+  --popover: 40 14% 99%;
+  --muted: 40 12% 93%;
+
+  /* ── TEXT ──────────────────────────────────────── */
+  --foreground: 222 22% 14%;
+  --card-foreground: 222 22% 14%;
+  --popover-foreground: 222 22% 14%;
+  --muted-foreground: 222 12% 42%;
+
+  /* ── BRAND (cobalt blue — matches icon.svg #2563eb) ── */
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 224 76% 48%;
+  --accent-foreground: 0 0% 100%;
+
+  /* ── INTERACTIVE ───────────────────────────────── */
+  --secondary: 220 14% 94%;
+  --secondary-foreground: 220 26% 10%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* ── BORDERS & INPUTS ──────────────────────────── */
+  --border: 220 13% 88%;
+  --input: 220 13% 88%;
+  --ring: 221 83% 53%;
+
+  /* ── CUSTOM SCHOLARIS ──────────────────────────── */
+  --surface-raised: 220 20% 97%;
+  --surface-sunken: 220 14% 92%;
+  --score-positive: 142 71% 38%;
+  --score-negative: 0 72% 51%;
+  --exam-sat: 262 83% 58%;
+  --exam-act: 330 81% 51%;
+  --exam-jamb: 38 92% 50%;
+  --exam-gre: 158 64% 40%;
+  /* AP forest teal / IB navy — HSL triplets (parity with --exam-sat) */
+  --exam-ap: 173 76% 26%;
+  --exam-ib: 214 52% 25%;
+
+  /* ── BUTTON TOKENS ─────────────────────────────── */
+  --btn-primary-bg: hsl(221 83% 53%);
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover-bg: hsl(224 76% 48%);
+  --btn-primary-shadow: 0 4px 16px hsl(221 83% 53% / 0.28);
+  --feedback-error-bg: #fef2f2;
+  --feedback-error-border: #fecaca;
+  --feedback-success-bg: #ecfdf5;
+  --feedback-success-border: #a7f3d0;
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 1rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Dashboard shell sidebar — OnePrep-style dark navy rail (both themes) */
+  --dashboard-sidebar-bg: 220 55% 16%;
+  --dashboard-sidebar-fg: 210 40% 98%;
+  --dashboard-sidebar-fg-muted: 215 26% 74%;
+  --dashboard-sidebar-border: 210 40% 98% / 0.1;
+  --dashboard-sidebar-hover: 210 40% 98% / 0.08;
+  --dashboard-sidebar-active: 210 40% 98% / 0.14;
+  --dashboard-avatar-bg: 220 45% 24%;
+  --dashboard-avatar-fg: 210 40% 92%;
+
+  /* Legacy on-navy tokens (marketing/admin) */
+  --on-navy-fg: 210 40% 98%;
+  --on-navy-fg-muted: 210 25% 75%;
+  --on-navy-border: 210 40% 98% / 0.12;
+  --on-navy-border-strong: 210 40% 98% / 0.2;
+  --on-navy-hover: 210 40% 98% / 0.08;
+  --on-navy-active: 221 83% 53% / 0.35;
+  --on-navy-accent-bg: 224 76% 48% / 0.2;
+  --on-navy-accent-fg: 221 83% 65%;
+
+  /* Course AI chat — GetStudi-inspired tokens (see course-ai-chat.module.css) */
+  --cai-bg: 38 76% 97%;
+  --cai-bg-alt: 38 52% 92%;
+  --cai-bg-elevated: 33 100% 97%;
+  --cai-bg-card: 0 0% 100%;
+  --cai-fg: 30 68% 7%;
+  --cai-fg-muted: 30 20% 35%;
+  --cai-fg-faint: 30 17% 63%;
+  --cai-border: 33 30% 86%;
+  --cai-border-faint: 33 35% 91%;
+  --cai-accent: 14 73% 55%;
+  --cai-accent-hover: 12 84% 61%;
+  --cai-accent-dim: 14 73% 55% / 0.1;
+  --cai-teal: 168 47% 42%;
+  --cai-amber: 36 80% 55%;
+  --cai-lavender: 268 49% 63%;
+  --cai-pink: 343 65% 58%;
+  --cai-sidebar-w: 256px;
+  --cai-column-max: 740px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 8rem;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  line-height: 1.6;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Root loading curtain: block scroll while intro / route loader is up. */
+html[data-scholaris-loading],
+html[data-scholaris-loading] body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  color: hsl(var(--foreground));
+}
+
+p {
+  color: hsl(var(--muted-foreground));
+}
+
+.card p,
+[data-slot="card"] p {
+  color: hsl(var(--muted-foreground));
+}
+
+small,
+.caption,
+.meta,
+.label-text {
+  color: hsl(var(--muted-foreground));
+  font-size: 12.5px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Global container — horizontal padding on every marketing section inner */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@theme inline {
+  --font-heading: var(--font-body);
+  --font-sans: var(--font-body);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  /* These design tokens are stored as raw HSL triplets (e.g. "221 83% 53%"), so
+     the @theme mappings MUST wrap them in hsl() — otherwise Tailwind emits
+     `background-color: 221 83% 53%`, which is invalid and renders transparent.
+     (CSS Modules reference the raw --x tokens via hsl(var(--x)) directly, so
+     they are unaffected by this wrapping.) The chart/sidebar tokens above are
+     full oklch() colors and are intentionally left unwrapped. */
+  --color-ring: hsl(var(--ring));
+  --color-input: hsl(var(--input));
+  --color-border: hsl(var(--border));
+  --color-destructive: hsl(var(--destructive));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card: hsl(var(--card));
+  --color-foreground: hsl(var(--foreground));
+  --color-background: hsl(var(--background));
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+.dark {
+  /* Legacy text tokens — must track --foreground in dark mode */
+  --text-primary: hsl(var(--foreground));
+  --text-secondary: hsl(var(--muted-foreground));
+  --text-muted: hsl(var(--muted-foreground));
+
+  /* ── CORE SURFACES (deep slate dark mode) ──────── */
+  --background: 222 28% 9%;
+  --card: 222 26% 13%;
+  --popover: 222 26% 14%;
+  --muted: 222 22% 17%;
+
+  /* ── TEXT ──────────────────────────────────────── */
+  --foreground: 210 20% 92%;
+  --card-foreground: 210 20% 92%;
+  --popover-foreground: 210 20% 92%;
+  --muted-foreground: 215 14% 58%;
+
+  /* ── BRAND (cobalt blue — matches icon.svg #2563eb) ── */
+  --primary: 221 83% 58%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 217 91% 65%;
+  --accent-foreground: 222 28% 9%;
+
+  /* ── INTERACTIVE ───────────────────────────────── */
+  --secondary: 222 22% 18%;
+  --secondary-foreground: 210 20% 92%;
+  --destructive: 0 72% 56%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* ── BORDERS & INPUTS ──────────────────────────── */
+  --border: 222 18% 22%;
+  --input: 222 18% 22%;
+  --ring: 221 83% 58%;
+
+  /* ── CUSTOM SCHOLARIS ──────────────────────────── */
+  --surface-raised: 222 26% 14%;
+  --surface-sunken: 222 32% 6%;
+  --score-positive: 142 71% 42%;
+  --score-negative: 0 72% 56%;
+  --exam-sat: 262 83% 68%;
+  --exam-act: 330 81% 64%;
+  --exam-jamb: 38 92% 58%;
+  --exam-gre: 158 64% 48%;
+  --exam-ap: 173 70% 42%;
+  --exam-ib: 214 48% 48%;
+
+  --btn-primary-bg: hsl(221 83% 58%);
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover-bg: hsl(221 83% 52%);
+  --btn-primary-shadow: 0 4px 16px hsl(221 83% 58% / 0.32);
+  --cobalt-light: hsl(221 83% 58% / 0.14);
+
+  /* Dashboard shell sidebar (dark) — deeper navy, same OnePrep rail */
+  --dashboard-sidebar-bg: 222 45% 11%;
+  --dashboard-sidebar-fg: 210 30% 95%;
+  --dashboard-sidebar-fg-muted: 215 20% 68%;
+  --dashboard-sidebar-border: 210 40% 98% / 0.08;
+  --dashboard-sidebar-hover: 210 40% 98% / 0.07;
+  --dashboard-sidebar-active: 210 40% 98% / 0.12;
+  --dashboard-avatar-bg: 222 35% 20%;
+  --dashboard-avatar-fg: 210 30% 88%;
+  --feedback-error-bg: hsl(0 72% 56% / 0.12);
+  --feedback-error-border: hsl(0 72% 56% / 0.28);
+  --feedback-success-bg: hsl(142 71% 42% / 0.12);
+  --feedback-success-border: hsl(142 71% 42% / 0.28);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+
+  /* Course AI chat — dark (GetStudi warm slate) */
+  --cai-bg: 30 8% 12%;
+  --cai-bg-alt: 30 8% 16%;
+  --cai-bg-elevated: 30 10% 14%;
+  --cai-bg-card: 30 8% 15%;
+  --cai-fg: 38 30% 94%;
+  --cai-fg-muted: 30 14% 68%;
+  --cai-fg-faint: 30 10% 48%;
+  --cai-border: 30 10% 22%;
+  --cai-border-faint: 30 8% 18%;
+  --cai-accent: 14 78% 58%;
+  --cai-accent-hover: 12 84% 64%;
+  --cai-accent-dim: 14 73% 55% / 0.16;
+}
+
+@layer base {
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px hsl(var(--ring) / 0.28);
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  [role="menuitem"]:focus-visible,
+  [role="radio"]:focus-visible,
+  [role="tab"]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px hsl(var(--ring) / 0.28);
+  }
+
+  /* No blue focus outline on text-entry fields, site-wide.
+     Checkboxes, radios, and buttons keep their accessible ring above. */
+  input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not(
+      [type="submit"]
+    ):not([type="reset"]):not([type="color"]):not([type="range"]):focus,
+  input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not(
+      [type="submit"]
+    ):not([type="reset"]):not([type="color"]):not([type="range"]):focus-visible,
+  textarea:focus,
+  textarea:focus-visible,
+  [contenteditable="true"]:focus,
+  [contenteditable="true"]:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    font-weight: 400;
+  }
+  html {
+    @apply font-sans;
+  }
+  p {
+    margin-bottom: 1.2em;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  label {
+    font-weight: 500;
+  }
+  [data-slot="button"],
+  a.group\/button {
+    font-family: var(--font-body);
+  }
+  [data-slot="card"] {
+    min-width: 0;
+  }
+}
+
+@layer components {
+  [data-slot="button"],
+  a.group\/button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background-color var(--transition-fast),
+      border-color var(--transition-fast),
+      color var(--transition-fast),
+      box-shadow var(--transition-fast);
+  }
+
+  [data-slot="button"]:not([class*="bg-"]):not([class*="border-"]),
+  a.group\/button:not([class*="bg-"]):not([class*="border-"]) {
+    min-height: 2.5rem;
+    min-width: 7.5rem;
+    padding: 0 1.5rem;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: 1px solid transparent;
+  }
+
+  [data-slot="button"]:not([class*="bg-"]):not([class*="border-"]):hover,
+  a.group\/button:not([class*="bg-"]):not([class*="border-"]):hover {
+    opacity: 0.9;
+  }
+}
+
+.dark input:not([type="range"]),
+.dark textarea,
+.dark select {
+  background: hsl(var(--background)) !important;
+  border-color: hsl(var(--input)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: hsl(var(--muted-foreground) / 0.6) !important;
+}
+
+/* KaTeX inherits readable text color in dark mode */
+.dark .katex {
+  color: hsl(var(--foreground));
+}
+
+.dark .katex .mord,
+.dark .katex .mrel,
+.dark .katex .mbin,
+.dark .katex .mop,
+.dark .katex .mopen,
+.dark .katex .mclose,
+.dark .katex .mpunct {
+  color: inherit;
+}
+
+/* Horizontally scrollable charts on narrow viewports */
+.chartScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chartScrollInner {
+  min-width: 400px;
+}
+
+/* Tables → card rows on mobile */
+@media (max-width: 768px) {
+  .responsiveTable [data-slot="table-container"] {
+    overflow: visible;
+  }
+
+  .responsiveTable [data-slot="table-container"] table,
+  .responsiveTable > table {
+    display: block;
+    width: 100%;
+  }
+
+  .responsiveTable thead {
+    display: none;
+  }
+
+  .responsiveTable tbody {
+    display: block;
+  }
+
+  .responsiveTable [data-slot="table-body"] {
+    display: block;
+  }
+
+  .responsiveTable tr {
+    display: block;
+    margin-bottom: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-lg);
+    background: hsl(var(--card));
+  }
+
+  .responsiveTable [data-slot="table-row"] {
+    display: block;
+  }
+
+  .responsiveTable tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .responsiveTable td,
+  .responsiveTable [data-slot="table-cell"] {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+    border: none;
+    white-space: normal;
+    text-align: right;
+  }
+
+  .responsiveTable td::before,
+  .responsiveTable [data-slot="table-cell"]::before {
+    content: attr(data-label);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(var(--muted-foreground));
+    text-align: left;
+    flex-shrink: 0;
+    max-width: 45%;
+  }
+
+  .responsiveTable td:empty::before,
+  .responsiveTable [data-slot="table-cell"]:empty::before {
+    display: none;
+  }
+
+  .responsiveTable .actions {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .responsiveTable.historyTable thead {
+    display: none;
+  }
+
+  .responsiveTable.historyTable tbody {
+    display: block;
+  }
+
+  .responsiveTable.historyTable tr {
+    display: block;
+    margin-bottom: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-lg);
+    background: hsl(var(--card));
+  }
+
+  .responsiveTable.historyTable td {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+    border: none;
+  }
+
+  .responsiveTable.historyTable td::before {
+    content: attr(data-label);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .responsiveTable.historyTable td:last-child {
+    justify-content: flex-end;
+    padding-top: var(--space-3);
+  }
+
+  .responsiveTable.historyTable td:last-child::before {
+    display: none;
+  }
+}
+
+/* Sonner — readable in light and dark (richColors + custom toasts) */
+[data-sonner-toaster] [data-sonner-toast] {
+  background: hsl(var(--popover)) !important;
+  color: hsl(var(--popover-foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  box-shadow: var(--shadow-md);
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-description] {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-close-button] {
+  background: hsl(var(--muted)) !important;
+  color: hsl(var(--muted-foreground)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast][data-type="success"] [data-icon] {
+  color: hsl(var(--score-positive));
+}
+
+[data-sonner-toaster] [data-sonner-toast][data-type="error"] [data-icon] {
+  color: hsl(var(--destructive));
+}
+
+[data-sonner-toaster] [data-sonner-toast][data-type="warning"] [data-icon] {
+  color: hsl(var(--exam-jamb));
+}
+
+[data-sonner-toaster] [data-sonner-toast][data-type="info"] [data-icon] {
+  color: hsl(var(--primary));
+}

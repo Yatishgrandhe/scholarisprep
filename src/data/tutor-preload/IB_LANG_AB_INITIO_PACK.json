@@ -1,0 +1,45 @@
+{
+  "exam_type": "IB_LANG_AB_INITIO_PACK",
+  "display_name": "IB Language ab initio",
+  "units": [
+    "Identities \u2014 foundations",
+    "Experiences \u2014 foundations",
+    "Human ingenuity \u2014 foundations",
+    "Social organization \u2014 foundations",
+    "Sharing the planet \u2014 foundations",
+    "Core vocabulary & grammar",
+    "Receptive practice",
+    "Productive practice"
+  ],
+  "command_terms": [
+    "describe",
+    "identify",
+    "explain"
+  ],
+  "misconceptions": [
+    "ab initio requires fluency",
+    "grammar before communication"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_identities_foundations skill focus: self and others",
+    "Keep unit_code=U2_experiences_foundations skill focus: school life",
+    "Keep unit_code=U3_human_ingenuity_foundations skill focus: media basics",
+    "Keep unit_code=U4_social_organization_foundations skill focus: family",
+    "Keep unit_code=U5_sharing_the_planet_foundations skill focus: local environment",
+    "Keep unit_code=U6_core_vocabulary_grammar skill focus: present tense",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": "ab initio SL template \u2014 language param"
+}

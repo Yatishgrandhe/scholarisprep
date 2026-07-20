@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('32bba819-c9d3-4984-b786-3dca99369425', 'Which choice completes the text with the most logical transition?', 'For decades, doctors believed stomach ulcers were caused mainly by stress and spicy food. In the 1980s, two researchers discovered that a bacterium often triggered the ulcers instead. ______ the standard treatment shifted from bland diets to antibiotics.', NULL, '[{"id":"A","text":"Consequently,","is_correct":true,"explanation":"Correct: the change in treatment is the direct result of the new bacterial discovery."},{"id":"B","text":"Nonetheless,","is_correct":false,"explanation":"Incorrect: the treatment changed because of the discovery, not despite it."},{"id":"C","text":"Similarly,","is_correct":false,"explanation":"Incorrect: ''Similarly'' signals likeness, but this is a cause-and-effect shift."},{"id":"D","text":"For example,","is_correct":false,"explanation":"Incorrect: the new treatment is a consequence, not an example of the discovery."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+Researchers found that {{yellow:a bacterium often triggered the ulcers instead}}, which caused medicine to change its approach.
+Step 2 — Choose the transition
+Because the new treatment follows logically from the discovery, a cause-effect transition like ''Consequently'' fits.
+Distractor analysis:
+- B: ''Nonetheless'' implies the change happened in spite of the finding, reversing the logic.
+- C: ''Similarly'' wrongly suggests two parallel ideas rather than a result.
+- D: ''For example'' frames the treatment shift as an illustration, but it is an outcome.', 'Did the treatment change because of the bacterial discovery?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

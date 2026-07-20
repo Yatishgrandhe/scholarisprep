@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('9dad9427-1775-47b1-b563-e285964cc9b1', 'Which choice completes the text with the most logical transition?', 'Ancient Roman engineers built roads designed primarily to move soldiers quickly across the empire. These same roads, however, also let merchants, ideas, and even diseases travel farther than ever before. ______ a network created for military control became one of the great engines of cultural exchange.', NULL, '[{"id":"A","text":"Thus,","is_correct":true,"explanation":"Correct: the broad movement of people and ideas leads to the conclusion that the roads enabled cultural exchange."},{"id":"B","text":"Otherwise,","is_correct":false,"explanation":"Wrong: ''Otherwise'' describes an alternative scenario, not the actual outcome."},{"id":"C","text":"In contrast,","is_correct":false,"explanation":"Wrong: the conclusion follows from the prior sentence rather than opposing it."},{"id":"D","text":"Specifically,","is_correct":false,"explanation":"Wrong: the sentence broadens to a general conclusion rather than narrowing to a detail."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The roads let {{yellow:merchants, ideas, and even diseases travel farther than ever before}}.
+Step 2 — Match the transition
+That wide movement leads to the conclusion that a military network became a cultural engine, so a result transition fits.
+Distractor analysis:
+- B: ''Otherwise'' introduces a hypothetical alternative, not the real result.
+- C: ''In contrast'' wrongly signals opposition.
+- D: ''Specifically'' would add a precise detail, but the sentence draws a general conclusion.', 'The final sentence sums up the consequence of all that travel.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

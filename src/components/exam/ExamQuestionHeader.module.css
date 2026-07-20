@@ -1,0 +1,200 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 24px 10px;
+  border-bottom: 1px solid #f3f4f6;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #111827;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  flex-shrink: 0;
+}
+
+.diffBadge {
+  flex-shrink: 0;
+}
+
+.markReview {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: #6b7280;
+  min-height: 36px;
+}
+
+.markReviewLabel {
+  white-space: nowrap;
+}
+
+.markReview:hover,
+.markReviewActive {
+  color: #111827;
+}
+
+.markReviewActive {
+  color: #d97706;
+}
+
+.iconAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.iconAction:hover,
+.iconActionActive {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.strikeoutBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.strikeoutBtn:hover,
+.strikeoutBtnActive {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.strikeLetter {
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  text-decoration: line-through;
+}
+
+/* ---- Dark mode (the header is hard-coded light by default) ---- */
+:global(.dark) .header {
+  background: hsl(var(--card));
+  border-bottom-color: hsl(var(--border));
+}
+
+:global(.dark) .qNumber {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .markReview,
+:global(.dark) .iconAction {
+  color: hsl(var(--muted-foreground));
+}
+
+:global(.dark) .markReview:hover,
+:global(.dark) .markReviewActive,
+:global(.dark) .iconAction:hover,
+:global(.dark) .iconActionActive {
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .iconAction:hover,
+:global(.dark) .iconActionActive {
+  background: hsl(var(--muted));
+}
+
+:global(.dark) .strikeoutBtn {
+  background: hsl(var(--card));
+  border-color: hsl(var(--border));
+  color: hsl(var(--muted-foreground));
+}
+
+:global(.dark) .strikeoutBtn:hover,
+:global(.dark) .strikeoutBtnActive {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.18);
+  color: hsl(var(--primary));
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 14px 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .left,
+  .right {
+    gap: 8px;
+  }
+
+  .right {
+    margin-left: auto;
+  }
+
+  .iconAction,
+  .strikeoutBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .markReview {
+    min-height: 40px;
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 8px 12px;
+  }
+
+  .markReviewLabel {
+    display: none;
+  }
+
+  .markReview {
+    min-width: 40px;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .qNumber {
+    width: 32px;
+    height: 32px;
+  }
+}

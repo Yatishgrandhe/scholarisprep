@@ -1,0 +1,173 @@
+{
+  "examType": "IB_LANG_AB_INITIO_PACK",
+  "topics": [
+    "Identities \u2014 foundations",
+    "Experiences \u2014 foundations",
+    "Human ingenuity \u2014 foundations",
+    "Social organization \u2014 foundations",
+    "Sharing the planet \u2014 foundations",
+    "Core vocabulary & grammar",
+    "Receptive practice",
+    "Productive practice"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_identities_foundations",
+      "title": "Identities \u2014 foundations",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_experiences_foundations",
+      "title": "Experiences \u2014 foundations",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_human_ingenuity_foundations",
+      "title": "Human ingenuity \u2014 foundations",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_social_organization_foundations",
+      "title": "Social organization \u2014 foundations",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_sharing_the_planet_foundations",
+      "title": "Sharing the planet \u2014 foundations",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_core_vocabulary_grammar",
+      "title": "Core vocabulary & grammar",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_receptive_practice",
+      "title": "Receptive practice",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_productive_practice",
+      "title": "Productive practice",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_LANG_AB_INITIO_PACK:U1_identities_foundations",
+      "unit_code": "U1_identities_foundations",
+      "title": "Identities \u2014 foundations",
+      "topics": [
+        "self and others",
+        "daily routines",
+        "personal preferences"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_LANG_AB_INITIO_PACK:U2_experiences_foundations",
+      "unit_code": "U2_experiences_foundations",
+      "title": "Experiences \u2014 foundations",
+      "topics": [
+        "school life",
+        "free time",
+        "travel basics"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_AB_INITIO_PACK:U1_identities_foundations"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_AB_INITIO_PACK:U3_human_ingenuity_foundations",
+      "unit_code": "U3_human_ingenuity_foundations",
+      "title": "Human ingenuity \u2014 foundations",
+      "topics": [
+        "media basics",
+        "transport",
+        "inventions in daily life"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_AB_INITIO_PACK:U2_experiences_foundations"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_AB_INITIO_PACK:U4_social_organization_foundations",
+      "unit_code": "U4_social_organization_foundations",
+      "title": "Social organization \u2014 foundations",
+      "topics": [
+        "family",
+        "friends",
+        "community roles"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_AB_INITIO_PACK:U3_human_ingenuity_foundations"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_AB_INITIO_PACK:U5_sharing_the_planet_foundations",
+      "unit_code": "U5_sharing_the_planet_foundations",
+      "title": "Sharing the planet \u2014 foundations",
+      "topics": [
+        "local environment",
+        "recycling",
+        "weather"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_AB_INITIO_PACK:U4_social_organization_foundations"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_AB_INITIO_PACK:U6_core_vocabulary_grammar",
+      "unit_code": "U6_core_vocabulary_grammar",
+      "title": "Core vocabulary & grammar",
+      "topics": [
+        "present tense",
+        "questions",
+        "negation",
+        "agreement"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_AB_INITIO_PACK:U5_sharing_the_planet_foundations"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_AB_INITIO_PACK:U7_receptive_practice",
+      "unit_code": "U7_receptive_practice",
+      "title": "Receptive practice",
+      "topics": [
+        "short texts",
+        "audio notices",
+        "menus and signs"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_AB_INITIO_PACK:U6_core_vocabulary_grammar"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_AB_INITIO_PACK:U8_productive_practice",
+      "unit_code": "U8_productive_practice",
+      "title": "Productive practice",
+      "topics": [
+        "messages",
+        "descriptions",
+        "simple narratives"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_LANG_AB_INITIO_PACK:U7_receptive_practice"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

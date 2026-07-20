@@ -1,0 +1,29 @@
+{
+  "exam_type": "AP_PRECALCULUS",
+  "skills": [
+    {
+      "id": "ap_precalculus_U1_polynomial_rational",
+      "unit_code": "U1_polynomial_rational",
+      "label": "Polynomial/rational analysis and modeling",
+      "description": "Practice and review: Polynomial and Rational Functions. Topics include Change in linear and quadratic models; Polynomial rates of change and end behavior; Zeros, factors, and multiplicity."
+    },
+    {
+      "id": "ap_precalculus_U2_exponential_logarithmic",
+      "unit_code": "U2_exponential_logarithmic",
+      "label": "Exp/log equations and contextual models",
+      "description": "Practice and review: Exponential and Logarithmic Functions. Topics include Exponential growth and decay models; Composition and inverse relationships; Logarithmic scales and change of base."
+    },
+    {
+      "id": "ap_precalculus_U3_trig_polar",
+      "unit_code": "U3_trig_polar",
+      "label": "Trigonometric/polar representation and graphs",
+      "description": "Practice and review: Trigonometric and Polar Functions. Topics include Periodic phenomena and sinusoidal models; Radian measure and unit circle; Sinusoidal transformations and inverse trig."
+    },
+    {
+      "id": "ap_precalculus_U4_functions_modeling",
+      "unit_code": "U4_functions_modeling",
+      "label": "Parametric, vector, and matrix modeling",
+      "description": "Practice and review: Functions Involving Parameters, Vectors, and Matrices. Topics include Parametric functions and motion models; Vectors in the plane; Matrix operations and transformations."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('e1a766ec-6be4-41d8-b1c8-41454805153c', 'Which choice completes the text with the most logical and precise word or phrase?', 'Early mapmakers often filled unexplored regions with imaginative beasts and decorative flourishes. As surveying instruments improved, however, cartographers grew unwilling to draw what they could not verify. Blank spaces began to appear where dragons once roamed. This new ______ marked a shift in the profession: a mapmaker''s authority now rested on admitting the limits of knowledge rather than disguising them.', NULL, '[{"id":"A","text":"restraint","is_correct":true,"explanation":"Correct: refusing to draw the unverified and leaving blanks reflects deliberate self-restraint."},{"id":"B","text":"extravagance","is_correct":false,"explanation":"This describes the earlier decorative style the new mapmakers rejected."},{"id":"C","text":"carelessness","is_correct":false,"explanation":"Leaving honest blanks is a careful, disciplined choice, not negligence."},{"id":"D","text":"ambition","is_correct":false,"explanation":"The passage shows holding back, not striving for more; nothing signals heightened ambition."}]'::jsonb, 'A', 'Step 1 — Find the clue
+Cartographers grew {{yellow:unwilling to draw what they could not verify}}, leaving blank spaces.
+Step 2 — Match the word
+Deliberately holding back from unverified embellishment is restraint.
+Distractor analysis:
+- B: "Extravagance" describes the old dragon-filled style they abandoned, the opposite.
+- C: "Carelessness" misreads disciplined honesty as negligence.
+- D: "Ambition" implies reaching for more, but the shift is toward limiting claims.', 'What quality is shown by refusing to draw what cannot be verified?', 'Craft and Structure', 'Words in Context', 'reading_writing', 'craft', 'WIC', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

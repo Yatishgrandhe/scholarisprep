@@ -1,0 +1,168 @@
+/* Theme-aware spotlight panel for the interactive score demo */
+
+.section {
+  padding: var(--home-section-y, clamp(4rem, 10vw, 6.5rem)) max(1.5rem, 5vw);
+  background: hsl(var(--background));
+  border-top: 1px solid hsl(var(--border));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 24px;
+  border: 1px solid hsl(var(--border));
+  background:
+    radial-gradient(
+      120% 140% at 10% 0%,
+      hsl(var(--primary) / 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      110% 130% at 95% 100%,
+      hsl(var(--exam-sat) / 0.08) 0%,
+      transparent 52%
+    ),
+    linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted) / 0.4) 100%);
+  color: hsl(var(--foreground));
+  box-shadow:
+    0 1px 2px hsl(var(--foreground) / 0.04),
+    0 20px 50px -22px hsl(var(--foreground) / 0.16);
+  overflow: hidden;
+}
+
+.inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(var(--primary) / 0.8) 30%,
+    hsl(var(--exam-sat) / 0.8) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+@media (min-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.copy {
+  color: hsl(var(--foreground));
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: hsl(var(--foreground));
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 2rem;
+  line-height: 1.75;
+  max-width: 38ch;
+}
+
+.examTabs {
+  margin-bottom: 1.5rem;
+}
+
+.sliderLabel {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--foreground));
+}
+
+.sliderLabel strong {
+  color: hsl(var(--primary));
+}
+
+.slider {
+  width: 100%;
+  max-width: 320px;
+  accent-color: hsl(var(--primary));
+}
+
+.gaugeWrap {
+  text-align: center;
+}
+
+.gauge {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.gaugeTrack {
+  stroke: hsl(var(--border));
+}
+
+.gaugeNeedle {
+  stroke: hsl(var(--foreground));
+}
+
+.score {
+  margin-top: 1rem;
+}
+
+.scoreValue {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: linear-gradient(
+    120deg,
+    hsl(var(--primary)) 20%,
+    hsl(var(--exam-sat)) 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+.scoreLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: hsl(var(--muted-foreground));
+}
+
+:global(.dark) .inner {
+  background:
+    radial-gradient(
+      120% 140% at 10% 0%,
+      hsl(var(--primary) / 0.16) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      110% 130% at 95% 100%,
+      hsl(var(--exam-sat) / 0.14) 0%,
+      transparent 52%
+    ),
+    linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--background)) 100%);
+  box-shadow:
+    0 1px 2px hsl(0 0% 0% / 0.3),
+    0 20px 50px -22px hsl(0 0% 0% / 0.5);
+}

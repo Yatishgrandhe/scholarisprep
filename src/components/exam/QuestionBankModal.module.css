@@ -1,0 +1,357 @@
+.wrap {
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgb(15 23 42 / 0.18);
+}
+
+.modal {
+  position: fixed;
+  z-index: 101;
+  width: min(420px, calc(100vw - 24px));
+  max-height: min(72vh, 520px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgb(15 23 42 / 0.14);
+  overflow: hidden;
+}
+
+.modalSheet {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  max-height: min(78vh, 520px);
+  border-radius: 12px 12px 0 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #111827;
+  flex: 1;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.groupBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.groupBtn:hover {
+  background: #f9fafb;
+}
+
+.groupBtnActive {
+  border-color: #111827;
+  background: #f3f4f6;
+}
+
+.closeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 14px 10px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.legendIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.legendCorrect {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.legendIncorrect {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.legendReview {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.legendCorrectAfter {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.body {
+  padding: 10px 14px 14px;
+  overflow-y: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.cell {
+  position: relative;
+  aspect-ratio: 1;
+  min-height: 40px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.cell:hover {
+  transform: translateY(-1px);
+}
+
+.cellCurrent {
+  border-color: #111827;
+  border-width: 3px;
+}
+
+.diffEasy {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.diffMedium {
+  background: #fef9c3;
+  color: #a16207;
+}
+
+.diffHard {
+  background: #ffe4e6;
+  color: #be123c;
+}
+
+.diffChallenge {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.statusBadge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
+}
+
+.statusCorrect {
+  background: #22c55e;
+  color: #fff;
+}
+
+.statusIncorrect {
+  background: #ef4444;
+  color: #fff;
+}
+
+.statusReview {
+  background: #f97316;
+  color: #fff;
+}
+
+.statusCorrectAfter {
+  background: #f97316;
+  color: #fff;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+.trigger:hover {
+  background: #f9fafb;
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .legend {
+    gap: 10px;
+  }
+
+  .cell {
+    min-height: 44px;
+  }
+
+  .trigger {
+    min-height: 40px;
+    padding: 8px 12px;
+  }
+
+  .modalSheet {
+    max-height: min(85dvh, 560px);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .closeBtn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .title {
+    flex: 1 1 100%;
+    order: -1;
+  }
+}
+
+/* ---- Dark mode (the modal + trigger are hard-coded light) ---- */
+:global(.dark) .modal {
+  background: hsl(var(--popover));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.5);
+}
+
+:global(.dark) .title {
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .groupBtn {
+  background: hsl(var(--card));
+  border-color: hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .groupBtn:hover {
+  background: hsl(var(--muted));
+}
+
+:global(.dark) .groupBtnActive {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.18);
+}
+
+:global(.dark) .closeBtn {
+  color: hsl(var(--muted-foreground));
+}
+
+:global(.dark) .closeBtn:hover {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .legend {
+  border-bottom-color: hsl(var(--border));
+}
+
+:global(.dark) .legendItem {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Current-question ring needs to read against dark difficulty tiles. */
+:global(.dark) .cellCurrent {
+  border-color: hsl(var(--foreground));
+}
+
+/* The badge ring separates it from the tile — match the modal surface. */
+:global(.dark) .statusBadge {
+  border-color: hsl(var(--popover));
+}
+
+:global(.dark) .trigger {
+  background: hsl(var(--card));
+  border-color: hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .trigger:hover {
+  background: hsl(var(--muted));
+}

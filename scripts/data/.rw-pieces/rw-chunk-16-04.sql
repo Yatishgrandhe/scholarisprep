@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('277ce418-191d-4141-9ed2-01301d616f74', 'Which choice completes the text with the most logical transition?', 'Deserts are often imagined as completely lifeless stretches of sand. In reality, many desert animals survive by staying underground during the scorching day. ______ the kangaroo rat rarely drinks water, getting most of its moisture from the seeds it eats.', NULL, '[{"id":"A","text":"For example,","is_correct":true,"explanation":"Correct: the kangaroo rat is a specific instance of desert animals adapting to survive."},{"id":"B","text":"Nevertheless,","is_correct":false,"explanation":"Incorrect: the example supports the prior claim rather than countering it."},{"id":"C","text":"As a result,","is_correct":false,"explanation":"Incorrect: the kangaroo rat''s habit is an illustration, not an effect of the prior sentence."},{"id":"D","text":"Instead,","is_correct":false,"explanation":"Incorrect: ''Instead'' signals replacement, but the sentence illustrates the same point."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The prior sentence says {{yellow:many desert animals survive by staying underground during the scorching day}}, and the kangaroo rat is offered as a concrete adaptation.
+Step 2 — Choose the transition
+Because the final sentence gives a specific case of desert survival, an example transition like ''For example'' fits.
+Distractor analysis:
+- B: ''Nevertheless'' implies contrast, but the example reinforces the claim.
+- C: ''As a result'' frames the rat''s behavior as an effect rather than an illustration.
+- D: ''Instead'' signals a substitution that does not match an example.', 'Is the kangaroo rat a specific case of desert survival?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

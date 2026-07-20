@@ -1,0 +1,181 @@
+{
+  "examType": "IB_COMPUTER_SCIENCE_HL",
+  "topics": [
+    "System fundamentals",
+    "Computer organization",
+    "Networks",
+    "Computational thinking & problem-solving",
+    "Programming constructs",
+    "Abstract data structures",
+    "Resource management & control (HL)",
+    "Case study & IA skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_system_fundamentals",
+      "title": "System fundamentals",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_computer_organization",
+      "title": "Computer organization",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_networks",
+      "title": "Networks",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_computational_thinking_problem_solving",
+      "title": "Computational thinking & problem-solving",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_programming_constructs",
+      "title": "Programming constructs",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_abstract_data_structures",
+      "title": "Abstract data structures",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_resource_management_control_hl",
+      "title": "Resource management & control (HL)",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_case_study_ia_skills",
+      "title": "Case study & IA skills",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_COMPUTER_SCIENCE_HL:U1_system_fundamentals",
+      "unit_code": "U1_system_fundamentals",
+      "title": "System fundamentals",
+      "topics": [
+        "planning",
+        "system design",
+        "components",
+        "networks"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_COMPUTER_SCIENCE_HL:U2_computer_organization",
+      "unit_code": "U2_computer_organization",
+      "title": "Computer organization",
+      "topics": [
+        "architecture",
+        "CPU",
+        "binary",
+        "logic gates",
+        "OS basics"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_COMPUTER_SCIENCE_HL:U1_system_fundamentals"
+      ]
+    },
+    {
+      "skill_id": "IB_COMPUTER_SCIENCE_HL:U3_networks",
+      "unit_code": "U3_networks",
+      "title": "Networks",
+      "topics": [
+        "protocols",
+        "wireless",
+        "security",
+        "internet"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_COMPUTER_SCIENCE_HL:U2_computer_organization"
+      ]
+    },
+    {
+      "skill_id": "IB_COMPUTER_SCIENCE_HL:U4_computational_thinking_problem_solving",
+      "unit_code": "U4_computational_thinking_problem_solving",
+      "title": "Computational thinking & problem-solving",
+      "topics": [
+        "decomposition",
+        "algorithms",
+        "pseudocode",
+        "tracing"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_COMPUTER_SCIENCE_HL:U3_networks"
+      ]
+    },
+    {
+      "skill_id": "IB_COMPUTER_SCIENCE_HL:U5_programming_constructs",
+      "unit_code": "U5_programming_constructs",
+      "title": "Programming constructs",
+      "topics": [
+        "variables",
+        "control flow",
+        "arrays",
+        "collections",
+        "OOP basics"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_COMPUTER_SCIENCE_HL:U4_computational_thinking_problem_solving"
+      ]
+    },
+    {
+      "skill_id": "IB_COMPUTER_SCIENCE_HL:U6_abstract_data_structures",
+      "unit_code": "U6_abstract_data_structures",
+      "title": "Abstract data structures",
+      "topics": [
+        "stacks",
+        "queues",
+        "linked lists",
+        "trees",
+        "recursion"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_COMPUTER_SCIENCE_HL:U5_programming_constructs"
+      ]
+    },
+    {
+      "skill_id": "IB_COMPUTER_SCIENCE_HL:U7_resource_management_control_hl",
+      "unit_code": "U7_resource_management_control_hl",
+      "title": "Resource management & control (HL)",
+      "topics": [
+        "OS resource control",
+        "control systems"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_COMPUTER_SCIENCE_HL:U6_abstract_data_structures"
+      ]
+    },
+    {
+      "skill_id": "IB_COMPUTER_SCIENCE_HL:U8_case_study_ia_skills",
+      "unit_code": "U8_case_study_ia_skills",
+      "title": "Case study & IA skills",
+      "topics": [
+        "product design",
+        "development",
+        "evaluation",
+        "documentation"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_COMPUTER_SCIENCE_HL:U7_resource_management_control_hl"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

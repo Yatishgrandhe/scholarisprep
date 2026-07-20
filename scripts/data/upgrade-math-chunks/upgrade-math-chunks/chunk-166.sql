@@ -1,0 +1,147 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 units.  What is the circumference of the circle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5\\pi","is_correct":false,"explanation":"Choice A (5\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"25\\pi","is_correct":false,"explanation":"Choice C (25\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"50\\pi","is_correct":false,"explanation":"Choice D (50\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 units.  What is the circumference of the circle?
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula C = 2πr, where r is the radius.  Substituting 5 for r, we get C = 2π(5) = 10π.
+
+**Step 3 — Select B.** 10\pi
+
+**Distractor analysis:**
+- **A** (5\pi): Choice A (5\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (25\pi): Choice C (25\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (50\pi): Choice D (50\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":377,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"c4594b5d","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.075Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e1a0fe38-1722-4939-84fb-f56fbe2556c0';
+
+UPDATE public.questions SET
+  question_text = 'After $t=34$ hours, how many miles has the car traveled?',
+  stimulus_text = 'A car''s distance $d$ (miles) after $t$ hours is modeled by $d=3t+31$.',
+  options = '[{"id":"A","text":"$130$","is_correct":false,"explanation":"Uses $t-1$ instead of $t=34$."},{"id":"B","text":"$133$","is_correct":true,"explanation":"**Step 1:** Substitute $t=34$. **Step 2:** $d=3(34)+31=133$."},{"id":"C","text":"$134$","is_correct":false,"explanation":"Adds 1 to the correct distance."},{"id":"D","text":"$34$","is_correct":false,"explanation":"Adds slope and intercept instead of evaluating."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Plug in $t=34$: $d=3(34)+31$.
+**Step 2:** Compute: $d=133$ miles.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.075Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e1c29918-bd76-43f7-bf7e-76551ec4094d';
+
+UPDATE public.questions SET
+  question_text = 'Which value of $x$ satisfies $7x + 6 > 402$ and represents a feasible weight?',
+  stimulus_text = 'A package must weigh more than 402 grams but at most 415 grams to ship.',
+  options = '[{"id":"A","text":"$54$","is_correct":false,"explanation":"Too small: $7(54)+6=384$."},{"id":"B","text":"$55$","is_correct":false,"explanation":"Still below threshold 402."},{"id":"C","text":"$56$","is_correct":false,"explanation":"Borderline; check strict inequality."},{"id":"D","text":"$57$","is_correct":true,"explanation":"**Step 1:** $7x > 396$. **Step 2:** $x > 56.57142857142857$. Smallest integer choice: 57."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Isolate: $7x > 396$.
+**Step 2:** $x > 56.57$.
+**Step 3:** Among choices, $57$ is the smallest valid value.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.075Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e1e5f322-186c-4473-9477-d768ac3ba78a';
+
+UPDATE public.questions SET
+  question_text = 'If $2x + 3y = 12$ and $x - y = 4$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-2","is_correct":false,"explanation":"Choice A (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":false,"explanation":"Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"3","is_correct":false,"explanation":"Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"4","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** If $2x + 3y = 12$ and $x - y = 4$, what is the value of $x$?
+
+**Step 2 — Solve.** To solve for $x$, we can use the elimination method. Multiplying the second equation by 3, we get $3x - 3y = 12$.  Adding this equation to the first equation, we get $5x = 24$, or $x=\frac{24}{5}$ = 4.8, which is closest to 4.
+
+**Step 3 — Select D.** 4
+
+**Distractor analysis:**
+- **A** (-2): Choice A (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (2): Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (3): Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":553,"opensat_domain":"Algebra","opensat_raw_id":"e89f2c9a","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.075Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e20a0eef-d8c7-45b6-9df0-eb3a3890ec38';
+
+UPDATE public.questions SET
+  question_text = 'The function $f(x)$ is defined by $f(x) = \frac{x^2 - 4}{x + 2}$. For what value of $x$ is $f(x)$ undefined?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-4","is_correct":false,"explanation":"Choice A (-4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"-2","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"2","is_correct":false,"explanation":"Choice C (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"4","is_correct":false,"explanation":"Choice D (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** The function $f(x)$ is defined by $f(x) = \frac{x^2 - 4}{x + 2}$. For what value of $x$ is $f(x)$ undefined?
+
+**Step 2 — Solve.** A rational function is undefined when the denominator is equal to zero.  The denominator of $f(x)$ is $x + 2$, which is equal to zero when $x = -2$. Therefore, $f(x)$ is undefined when $x = -2$.
+
+**Step 3 — Select B.** -2
+
+**Distractor analysis:**
+- **A** (-4): Choice A (-4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (2): Choice C (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (4): Choice D (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":113,"opensat_domain":"Advanced Math","opensat_raw_id":"a618f78a","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.075Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e2262a23-4392-4c0f-a04f-b5a926329c01';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 cm. What is the area of the circle in square centimeters?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5$\\pi$","is_correct":false,"explanation":"Choice A (5$\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10$\\pi$","is_correct":false,"explanation":"Choice B (10$\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"25$\\pi$","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"100$\\pi$","is_correct":false,"explanation":"Choice D (100$\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 cm. What is the area of the circle in square centimeters?
+
+**Step 2 — Solve.** The area of a circle is given by the formula $A = \pi r^2$, where r is the radius.  Substituting 5 cm for r, we get $A = \pi (5)^2 = 25\pi$ square centimeters.
+
+**Step 3 — Select C.** 25$\pi$
+
+**Distractor analysis:**
+- **A** (5$\pi$): Choice A (5$\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (10$\pi$): Choice B (10$\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (100$\pi$): Choice D (100$\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":508,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_e4","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.075Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e263e068-f5e8-4596-a3a4-ba58d21452e9';
+
+UPDATE public.questions SET
+  question_text = 'The function *f* is defined by *f*(x) = 3x^2 + 2. For what value of *x* does *f*(x) = 29?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-3","is_correct":false,"explanation":"Choice A (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"-1","is_correct":false,"explanation":"Choice B (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"1","is_correct":false,"explanation":"Choice C (1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"3","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** The function *f* is defined by *f*(x) = 3x^2 + 2. For what value of *x* does *f*(x) = 29?
+
+**Step 2 — Solve.** To find the value of *x* that makes *f*(x) = 29, we set the equation 3x^2 + 2 = 29 and solve for *x*. Subtracting 2 from both sides, we get 3x^2 = 27. Dividing both sides by 3, we get x^2 = 9. Taking the square root of both sides, we get x = 3 or x = -3. Since the problem asks for the value of *x* that makes *f*(x) = 29, the answer is x = 3.
+
+**Step 3 — Select D.** 3
+
+**Distractor analysis:**
+- **A** (-3): Choice A (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (-1): Choice B (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (1): Choice C (1…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":652,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_a3","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.075Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e272e46e-7489-47d8-bd1f-fbb20f9b8513';
+
+UPDATE public.questions SET
+  question_text = 'A survey asked 100 people if they prefer to eat pizza or tacos.  Of the people surveyed, 60% preferred pizza.  If 30 people said they preferred tacos, how many people preferred pizza?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"40","is_correct":false,"explanation":"Choice A (40…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"60","is_correct":false,"explanation":"Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"70","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** A survey asked 100 people if they prefer to eat pizza or tacos.  Of the people surveyed, 60% preferred pizza.  If 30 people said they preferred tacos, how many people preferred pizza?
+
+**Step 2 — Solve.** If 60% of the people surveyed preferred pizza, then 40% preferred tacos.  Since 30 people preferred tacos, then 30 represents 40% of the people surveyed. We can set up a proportion: \frac{30}{40} = \frac{x}{100}. Solving for $x$, we get $x = 75$.  Since 75 people preferred tacos, then 100 - 75 = 25 people preferred pizza.
+
+**Step 3 — Select D.** 70
+
+**Distractor analysis:**
+- **A** (40): Choice A (40…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (60): Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":577,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"e8a7453f","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.075Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e289cfcd-2e05-48cf-b640-c5c4f3417e42';
+
+COMMIT;

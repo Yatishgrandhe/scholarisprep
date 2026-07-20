@@ -1,0 +1,155 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A regular hexagon is inscribed in a circle with a radius of 6.  What is the perimeter of the hexagon?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"12","is_correct":false,"explanation":"Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"18","is_correct":false,"explanation":"Choice B (18…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"24","is_correct":false,"explanation":"Choice C (24…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"36","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** A regular hexagon is inscribed in a circle with a radius of 6.  What is the perimeter of the hexagon?
+
+**Step 2 — Solve.** A regular hexagon can be divided into 6 equilateral triangles, each with a side length equal to the radius of the circle. The perimeter of the hexagon is 6 times the side length of one of these triangles, so the perimeter is 6 * 6 = 36.
+
+**Step 3 — Select D.** 36
+
+**Distractor analysis:**
+- **A** (12): Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (18): Choice B (18…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (24): Choice C (24…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":539,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c9","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7c50e585-88bf-4a1c-acd8-b3d408a68cb0';
+
+UPDATE public.questions SET
+  question_text = 'Which value of $x$ satisfies $6x + 6 > 309$ and represents a feasible weight?',
+  stimulus_text = 'A package must weigh more than 309 grams but at most 322 grams to ship.',
+  options = '[{"id":"A","text":"$48$","is_correct":false,"explanation":"Too small: $6(48)+6=294$."},{"id":"B","text":"$49$","is_correct":false,"explanation":"Still below threshold 309."},{"id":"C","text":"$50$","is_correct":false,"explanation":"Borderline; check strict inequality."},{"id":"D","text":"$51$","is_correct":true,"explanation":"**Step 1:** $6x > 303$. **Step 2:** $x > 50.5$. Smallest integer choice: 51."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Isolate: $6x > 303$.
+**Step 2:** $x > 50.50$.
+**Step 3:** Among choices, $51$ is the smallest valid value.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '7c513a3e-3d0d-46b7-94d5-f0cab25439b1';
+
+UPDATE public.questions SET
+  question_text = 'The function *f* is defined by *f*(x) = 2x² – 3x + 5.  What is the value of *f*(–2)?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-19","is_correct":false,"explanation":"Choice A (-19…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"-9","is_correct":false,"explanation":"Choice B (-9…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"19","is_correct":false,"explanation":"Choice C (19…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"29","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** The function *f* is defined by *f*(x) = 2x² – 3x + 5.  What is the value of *f*(–2)?
+
+**Step 2 — Solve.** To find *f*(–2), we substitute –2 for *x* in the function.  *f*(–2) = 2(–2)² – 3(–2) + 5 = 2(4) + 6 + 5 = 8 + 6 + 5 = 19.
+
+**Step 3 — Select D.** 29
+
+**Distractor analysis:**
+- **A** (-19): Choice A (-19…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (-9): Choice B (-9…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (19): Choice C (19…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":633,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_d4","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7c89c712-4f47-4269-be3d-6aed653119c5';
+
+UPDATE public.questions SET
+  question_text = 'A function  is defined as \(f(x) = \frac{x^2 - 4}{x - 2}\) for $x \neq 2$.  What is the value of \(f(5)\)?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"7","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"9","is_correct":false,"explanation":"Choice B (9…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"11","is_correct":false,"explanation":"Choice C (11…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"13","is_correct":false,"explanation":"Choice D (13…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** A function  is defined as \(f(x) = \frac{x^2 - 4}{x - 2}\) for $x \neq 2$.  What is the value of \(f(5)\)?
+
+**Step 2 — Solve.** To find the value of f(5), we substitute 5 for x in the function. This gives us f(5) = (5^2 - 4)/(5 - 2) = (25 - 4)/3 = 21/3 = 7.
+
+**Step 3 — Select A.** 7
+
+**Distractor analysis:**
+- **B** (9): Choice B (9…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (11): Choice C (11…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (13): Choice D (13…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":237,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_c1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7c9e8e1a-7ed2-449c-9469-c174690a2ec9';
+
+UPDATE public.questions SET
+  question_text = 'In the figure below, right triangle $ABC$ has a right angle at $C$, and $AC = 6$ and $BC = 8$. What is the length of the hypotenuse $AB$?  [asy] draw((0,0)--(8,0)--(0,6)--cycle); draw((0,0)--(8,0),EndArrow); draw((0,0)--(0,6),EndArrow); label("A",(0,0),SW); label("B",(8,0),SE); label("C",(0,6),NW); label("6",(0,3),W); label("8",(4,0),S); [/asy]',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"10","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"12","is_correct":false,"explanation":"Choice B (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"14","is_correct":false,"explanation":"Choice C (14…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"16","is_correct":false,"explanation":"Choice D (16…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** In the figure below, right triangle $ABC$ has a right angle at $C$, and $AC = 6$ and $BC = 8$. What is the length of the hypotenuse $AB$?  [asy] draw((0,0)--(8,0)--(0,6)--cycle); draw((0,0)--(8,0),EndArrow); draw((0,0)--(0,6),EndArrow); label("A",(0,0),SW); label("B",(8,0),SE); label("C",(0,6),NW); label("6",(0,3),W); label("8",(4,0),S); [/asy]
+
+**Step 2 — Solve.** Triangle $ABC$ is a right triangle, so we can use the Pythagorean Theorem to find the length of the hypotenuse. The Pythagorean Theorem states that in a right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides. In this case, we have $AB^2 = AC^2 + BC^2$, so $AB^2 = 6^2 + 8^2 = 36 + 64 = 100$. Taking the square root of both sides, we get $AB = \sqrt{100}$, or $AB = 10$.
+
+**Step 3 — Select A.** 10
+
+**Distractor analysis:**
+- **B** (12): Choice B (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (14): Choice C (14…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (16): Choice D (16…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RIG","domain_id":"geometry","opensat_index":930,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c8","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7d597d40-562d-47e4-934f-b878de0ca574';
+
+UPDATE public.questions SET
+  question_text = 'If $x^2 + 2x + 1 = 0$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-1","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"0","is_correct":false,"explanation":"Choice B (0…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"1","is_correct":false,"explanation":"Choice C (1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"2","is_correct":false,"explanation":"Choice D (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** If $x^2 + 2x + 1 = 0$, what is the value of $x$?
+
+**Step 2 — Solve.** The expression on the left side of the equation is a perfect square trinomial: $(x + 1)^2$.  Taking the square root of both sides, we get $x + 1 = 0$.  Subtracting 1 from both sides gives us $x = -1$.
+
+**Step 3 — Select A.** -1
+
+**Distractor analysis:**
+- **B** (0): Choice B (0…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (1): Choice C (1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (2): Choice D (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":398,"opensat_domain":"Advanced Math","opensat_raw_id":"f4a9fd2e","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7d912013-a6ff-4a66-9f4c-55125af3e5c4';
+
+UPDATE public.questions SET
+  question_text = 'A rectangle has a length of 10 centimeters and a width of 6 centimeters. What is the area, in square centimeters, of the rectangle? ',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"16","is_correct":false,"explanation":"Choice A (16…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"32","is_correct":false,"explanation":"Choice B (32…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"60","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"106","is_correct":false,"explanation":"Choice D (106…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A rectangle has a length of 10 centimeters and a width of 6 centimeters. What is the area, in square centimeters, of the rectangle? 
+
+**Step 2 — Solve.** The area of a rectangle is equal to the product of its length and its width. So, the area of this rectangle is 10 centimeters * 6 centimeters = 60 square centimeters.
+
+**Step 3 — Select C.** 60
+
+**Distractor analysis:**
+- **A** (16): Choice A (16…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (32): Choice B (32…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (106): Choice D (106…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"ARE","domain_id":"geometry","opensat_index":593,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c1","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '7d946a07-133a-4a1e-af60-26192a842a79';
+
+UPDATE public.questions SET
+  question_text = 'Which of the following is equivalent to the expression $(x^2+1)(x^2-1)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"x^4 - 1","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"x^4 + 1","is_correct":false,"explanation":"Adds quantities that should be multiplied or compares unrelated terms."},{"id":"C","text":"x^4 + 2x^2 + 1","is_correct":false,"explanation":"May result from squaring when you should multiply or add."},{"id":"D","text":"x^4 - 2x^2 + 1","is_correct":false,"explanation":"May result from squaring when you should multiply or add."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** Which of the following is equivalent to the expression $(x^2+1)(x^2-1)$?
+
+**Step 2 — Solve.** This expression is in the form of the difference of squares: (a + b)(a - b) = a^2 - b^2. In this case, a = x^2 and b = 1.  Therefore, (x^2 + 1)(x^2 - 1) = (x^2)^2 - 1^2 = x^4 - 1.
+
+**Step 3 — Select A.** x^4 - 1
+
+**Distractor analysis:**
+- **B** (x^4 + 1): Adds quantities that should be multiplied or compares unrelated terms.
+- **C** (x^4 + 2x^2 + 1): May result from squaring when you should multiply or add.
+- **D** (x^4 - 2x^2 + 1): May result from squaring when you should multiply or add.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":459,"opensat_domain":"Advanced Math","opensat_raw_id":"8d3b424f","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '7dc01d6e-a876-4ade-8df9-e210b6066b0d';
+
+COMMIT;

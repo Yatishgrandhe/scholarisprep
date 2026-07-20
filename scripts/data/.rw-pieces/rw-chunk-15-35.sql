@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('8b2b5e92-f87a-4f1c-b286-fe4cfa8d78f6', 'Which choice completes the text with the most logical transition?', 'Many people assume that the Great Wall of China was built all at once by a single emperor. In reality, it was constructed in stages over many centuries by a series of different dynasties. ______ the structure we see today is a patchwork of sections built in different eras and styles.', NULL, '[{"id":"A","text":"Nevertheless,","is_correct":false,"explanation":"Signals contrast, but the sentence confirms the multi-era construction just described."},{"id":"B","text":"Thus,","is_correct":true,"explanation":"Correctly presents the patchwork wall as the logical result of staged construction by many dynasties."},{"id":"C","text":"Similarly,","is_correct":false,"explanation":"Implies a parallel point, yet the sentence states a consequence of the prior fact."},{"id":"D","text":"However,","is_correct":false,"explanation":"Signals contrast, but the sentence agrees with the correction just offered."}]'::jsonb, 'B', 'Step 1 — Find the relationship
+The text states the wall was {{yellow:constructed in stages over many centuries by a series of different dynasties}}, and the final sentence describes the resulting appearance.
+Step 2 — Match the transition
+Because the patchwork structure follows from staged construction, a result transition fits.
+Distractor analysis:
+- A: "Nevertheless" signals contrast, but the sentence confirms the staged history.
+- C: "Similarly" implies a comparison, yet the sentence gives a consequence.
+- D: "However" wrongly sets up a contrast where the ideas align.', 'Ask whether the patchwork wall results from staged construction or contradicts it.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

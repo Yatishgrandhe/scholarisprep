@@ -1,0 +1,141 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'Given $x+y=47$ and $2x-y=31$, what is $x$?',
+  stimulus_text = 'At a fundraiser, 47 tickets were sold in two price tiers. VIP tickets cost twice as much as standard tickets, and revenue from 26 VIP and 21 standard tickets follows the system below.',
+  options = '[{"id":"A","text":"$26$","is_correct":true,"explanation":"**Step 1:** Add equations: $3x=78$. **Step 2:** $x=26$."},{"id":"B","text":"$25$","is_correct":false,"explanation":"One less than the solution."},{"id":"C","text":"$21$","is_correct":false,"explanation":"That is $y$, not $x$."},{"id":"D","text":"$27$","is_correct":false,"explanation":"One more than the solution."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Add: $(x+y)+(2x-y)=47+31$ → $3x=78$.
+**Step 2:** $x=26$.
+**Step 3:** Back-substitute: $y=21$.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fdc781ef-dfb6-4eba-ba40-bb1aa0bb0349';
+
+UPDATE public.questions SET
+  question_text = 'Which of the following is equivalent to $(x+y)^2 - (x-y)^2$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2x^2 + 2y^2","is_correct":false,"explanation":"May result from squaring when you should multiply or add."},{"id":"B","text":"4xy","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"2x^2 - 2y^2","is_correct":false,"explanation":"May result from squaring when you should multiply or add."},{"id":"D","text":"x^2 - y^2","is_correct":false,"explanation":"May result from squaring when you should multiply or add."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** Which of the following is equivalent to $(x+y)^2 - (x-y)^2$?
+
+**Step 2 — Solve.** We can use the difference of squares pattern to simplify the expression.  The difference of squares pattern states that $a^2 - b^2 = (a+b)(a-b)$. Applying this pattern to our expression, we get: 
+ $(x+y)^2 - (x-y)^2 = (x+y + x-y)(x+y - x+y)$ 
+ Simplifying, we get $(2x)(2y) = 4xy$.
+
+**Step 3 — Select B.** 4xy
+
+**Distractor analysis:**
+- **A** (2x^2 + 2y^2): May result from squaring when you should multiply or add.
+- **C** (2x^2 - 2y^2): May result from squaring when you should multiply or add.
+- **D** (x^2 - y^2): May result from squaring when you should multiply or add.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":853,"opensat_domain":"Advanced Math","opensat_raw_id":"a9478db4","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fdeaaed1-b4f8-4992-a172-bd3e7fe22579';
+
+UPDATE public.questions SET
+  question_text = 'Which conclusion is best supported?',
+  stimulus_text = 'Poll: 63% favor a policy, margin of error ±4 percentage points (95% confidence), $n=1200$.',
+  options = '[{"id":"A","text":"Exactly 63% of all citizens favor the policy","is_correct":false,"explanation":"Sample statistics are not exact population values."},{"id":"B","text":"Plausible support is between 59% and 67%","is_correct":true,"explanation":"**Step 1:** Interval 59% to 67%. **Step 2:** This range is supported."},{"id":"C","text":"The sample proves every citizen was asked","is_correct":false,"explanation":"Only 1200 people were surveyed."},{"id":"D","text":"Margin of error makes the poll useless","is_correct":false,"explanation":"MOE quantifies uncertainty; it does not invalidate the poll."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Compute interval: 59% to 67%.
+**Step 2:** At 95% confidence, true support likely falls in this range.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fdf3d32e-5647-4388-8622-11354e31e527';
+
+UPDATE public.questions SET
+  question_text = 'If $x + 3 = 7$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"4","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"10","is_correct":false,"explanation":"Choice B (10…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"14","is_correct":false,"explanation":"Choice C (14…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"21","is_correct":false,"explanation":"Choice D (21…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** If $x + 3 = 7$, what is the value of $x$?
+
+**Step 2 — Solve.** Subtracting 3 from both sides of the equation, we get $x = 7 - 3$, or $x = 4$.
+
+**Step 3 — Select A.** 4
+
+**Distractor analysis:**
+- **B** (10): Choice B (10…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (14): Choice C (14…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (21): Choice D (21…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":896,"opensat_domain":"Algebra","opensat_raw_id":"random_id_a2","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fe5ddeee-19d4-45d4-9054-decfd1a5066a';
+
+UPDATE public.questions SET
+  question_text = 'Which conclusion is best supported?',
+  stimulus_text = 'Poll: 60% favor a policy, margin of error ±4 percentage points (95% confidence), $n=1200$.',
+  options = '[{"id":"A","text":"Exactly 60% of all citizens favor the policy","is_correct":false,"explanation":"Sample statistics are not exact population values."},{"id":"B","text":"Plausible support is between 56% and 64%","is_correct":true,"explanation":"**Step 1:** Interval 56% to 64%. **Step 2:** This range is supported."},{"id":"C","text":"The sample proves every citizen was asked","is_correct":false,"explanation":"Only 1200 people were surveyed."},{"id":"D","text":"Margin of error makes the poll useless","is_correct":false,"explanation":"MOE quantifies uncertainty; it does not invalidate the poll."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Compute interval: 56% to 64%.
+**Step 2:** At 95% confidence, true support likely falls in this range.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fe725e8f-cd5f-421a-bc4b-05bd744a35e3';
+
+UPDATE public.questions SET
+  question_text = 'A line in the $xy$-plane passes through the points $(2,4)$ and $(6,10)$. What is the slope of the line?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$\\frac{1}{2}$","is_correct":false,"explanation":"Inverts the ratio — a common probability error."},{"id":"B","text":"$\\frac{3}{2}$","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"2","is_correct":false,"explanation":"Choice C (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"3","is_correct":false,"explanation":"Choice D (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A line in the $xy$-plane passes through the points $(2,4)$ and $(6,10)$. What is the slope of the line?
+
+**Step 2 — Solve.** The slope of a line passing through two points $(x_1, y_1)$ and $(x_2, y_2)$ is given by  $\frac{y_2 - y_1}{x_2 - x_1}$.  Substituting $(2,4)$ for $(x_1, y_1)$ and $(6,10)$ for $(x_2, y_2)$, we get $\frac{10-4}{6-2} = \frac{6}{4} = \frac{3}{2}$. Therefore, the slope of the line is $\frac{3}{2}$.
+
+**Step 3 — Select B.** $\frac{3}{2}$
+
+**Distractor analysis:**
+- **A** ($\frac{1}{2}$): Inverts the ratio — a common probability error.
+- **C** (2): Choice C (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (3): Choice D (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":14,"opensat_domain":"Algebra","opensat_raw_id":"893a69b2","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fe73710e-4528-4cd7-9a46-9d5471c65ca5';
+
+UPDATE public.questions SET
+  question_text = 'A survey of 100 students found that 60 students liked pizza, 50 students liked burgers, and 20 students liked both pizza and burgers. How many students liked only pizza?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"10","is_correct":false,"explanation":"Choice A (10…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"20","is_correct":false,"explanation":"Choice B (20…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"40","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"60","is_correct":false,"explanation":"Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A survey of 100 students found that 60 students liked pizza, 50 students liked burgers, and 20 students liked both pizza and burgers. How many students liked only pizza?
+
+**Step 2 — Solve.** We can use a Venn diagram to visualize the problem. Since 20 students liked both pizza and burgers, we subtract this number from the total number of students who liked pizza and the total number of students who liked burgers to find the number of students who liked only each food: 60 - 20 = 40 students liked only pizza and 50 - 20 = 30 students liked only burgers.
+
+**Step 3 — Select C.** 40
+
+**Distractor analysis:**
+- **A** (10): Choice A (10…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (20): Choice B (20…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (60): Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":214,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_a1","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fe867319-1007-46ef-9593-252fd8b4905a';
+
+UPDATE public.questions SET
+  question_text = 'A bag contains 5 red marbles, 3 blue marbles, and 2 green marbles.  If a marble is chosen at random from the bag, what is the probability that the marble is blue?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"1/5","is_correct":false,"explanation":"Choice A (1/5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"1/3","is_correct":false,"explanation":"Choice B (1/3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"3/10","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"2/5","is_correct":false,"explanation":"Choice D (2/5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A bag contains 5 red marbles, 3 blue marbles, and 2 green marbles.  If a marble is chosen at random from the bag, what is the probability that the marble is blue?
+
+**Step 2 — Solve.** There are 10 marbles in total.  The probability of choosing a blue marble is the number of blue marbles divided by the total number of marbles, or 3/10.
+
+**Step 3 — Select C.** 3/10
+
+**Distractor analysis:**
+- **A** (1/5): Choice A (1/5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (1/3): Choice B (1/3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (2/5): Choice D (2/5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"PRO","domain_id":"psda","opensat_index":461,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_a2","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fe922983-c7c9-4c71-8021-118b5cc1c303';
+
+COMMIT;

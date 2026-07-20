@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('a5120a8d-3585-4f17-ac5c-3ef034037956', 'Which choice completes the text with the most logical transition?', 'The city installed brighter streetlights hoping to make pedestrians feel safer at night. Surveys taken afterward showed that residents did report feeling more secure. Crime statistics for the same blocks, ______ remained essentially unchanged from the previous year.', NULL, '[{"id":"A","text":"however,","is_correct":true,"explanation":"Correct: it contrasts the improved feeling of safety with the unchanged actual crime data."},{"id":"B","text":"accordingly,","is_correct":false,"explanation":"Incorrect: unchanged crime is not an outcome that follows from residents feeling safer."},{"id":"C","text":"furthermore,","is_correct":false,"explanation":"Incorrect: ''furthermore'' adds a supporting point, but the data undercut the perception."},{"id":"D","text":"as a result,","is_correct":false,"explanation":"Incorrect: the flat crime numbers are not a consequence of the increased sense of security."}]'::jsonb, 'A', 'Step 1 — Compare perception and data
+Residents felt safer, but the crime statistics {{yellow:remained essentially unchanged from the previous year}}.
+Step 2 — Choose the contrast
+The gap between feeling and fact calls for a contrastive ''however.''
+Distractor analysis:
+- B: ''accordingly'' implies the flat crime followed from the feeling, a false cause.
+- C: ''furthermore'' adds agreement, but the data oppose the perception.
+- D: ''as a result'' wrongly treats unchanged crime as an effect of the survey result.', 'Do the crime numbers confirm the residents'' feeling of safety or clash with it?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

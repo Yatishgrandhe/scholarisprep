@@ -1,0 +1,54 @@
+{
+  "exam_type": "IB_ANTHROPOLOGY_HL",
+  "display_name": "IB Social and Cultural Anthropology HL",
+  "units": [
+    "The practice of anthropology",
+    "Belonging",
+    "Classifying the world",
+    "Communication, expression and technology",
+    "Conflict",
+    "Development & inequality",
+    "Health, illness and healing",
+    "Engaging with ethnography / IA"
+  ],
+  "command_terms": [
+    "define",
+    "describe",
+    "explain",
+    "analyse",
+    "compare",
+    "contrast",
+    "discuss",
+    "evaluate",
+    "to what extent",
+    "examine"
+  ],
+  "misconceptions": [
+    "skipping command terms",
+    "memorizing without application",
+    "ignoring markscheme language"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it",
+    "Paper 3: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_the_practice_of_anthropology skill focus: fieldwork",
+    "Keep unit_code=U2_belonging skill focus: identity",
+    "Keep unit_code=U3_classifying_the_world skill focus: classification systems",
+    "Keep unit_code=U4_communication_expression_and_technology skill focus: language",
+    "Keep unit_code=U5_conflict skill focus: violence",
+    "Keep unit_code=U6_development_inequality skill focus: aid",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

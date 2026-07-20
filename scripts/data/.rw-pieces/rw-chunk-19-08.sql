@@ -1,0 +1,16 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('f7534be7-b1fd-45a1-b597-59bcc07bb10c', 'The student wants to explain why the Antikythera mechanism is considered remarkable for its time. Which choice most effectively uses information from the notes to accomplish this goal?', 'The Mystery of the Antikythera Mechanism
+- In 1901 divers recovered a corroded bronze device from a shipwreck near the Greek island of Antikythera.
+- The device dates to roughly the second century BCE.
+- X-ray studies revealed dozens of precisely cut interlocking gears inside it.
+- Researchers determined it could predict the positions of the sun, moon, and planets.
+- No comparable geared device is known to have existed for over a thousand years afterward.', NULL, '[{"id":"A","text":"In 1901 divers recovered a corroded bronze device from a shipwreck near the Greek island of Antikythera.","is_correct":false,"explanation":"Off-goal: it describes the discovery, not why the device is remarkable for its era."},{"id":"B","text":"The device could predict astronomical positions using gears, yet no comparable device appeared for over a thousand years afterward.","is_correct":true,"explanation":"Correct: it pairs the device''s sophisticated function with the long gap before anything similar, showing why it is remarkable for its time."},{"id":"C","text":"The device dates to roughly the second century BCE.","is_correct":false,"explanation":"Too narrow: a date alone does not explain why the device is remarkable."},{"id":"D","text":"X-ray studies revealed dozens of precisely cut interlocking gears inside it.","is_correct":false,"explanation":"True but incomplete: it notes the gears but omits the comparison that makes the device remarkable for its time."}]'::jsonb, 'B', 'Step 1 — Identify what makes it remarkable
+The notes say it {{yellow:could predict the positions of the sun, moon, and planets}} and that {{yellow:No comparable geared device is known to have existed for over a thousand years afterward}}.
+Step 2 — Match the goal
+Choice B unites the device''s advanced capability with its unmatched status for a millennium, explaining why it is remarkable for its time.
+Distractor analysis:
+- A: Describes the recovery, not its significance.
+- C: Gives only a date.
+- D: Notes the gears but lacks the comparison showing its rarity.', 'Remarkable for its time means combining what it did with how long it remained without equal.', 'Expression of Ideas', 'Rhetorical Synthesis', 'reading_writing', 'expression', 'SYN', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

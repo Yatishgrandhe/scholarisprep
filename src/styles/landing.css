@@ -1,0 +1,96 @@
+/* Landing rhythm — shared section/container primitives for the marketing
+ * home page rebuild (src/components/landing/*). Independent from the
+ * legacy `.section` / `.container` in marketing.css so landing sections can
+ * migrate incrementally without fighting other home page styles.
+ *
+ * Breakpoints: 1024 / 768 / 480 (matches the rest of the marketing shell).
+ */
+
+.landing__container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.landing__section {
+  position: relative;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.landing__section--tight {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.landing__section--flush {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .landing__section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .landing__section--tight {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .landing__section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .landing__section--tight {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .landing__section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+/* Reduced motion — disable looping/continuous CSS animations (marquees,
+ * floating orbs, gradient shifts) inside the landing shell. GSAP-driven
+ * ScrollTrigger work is gated separately by each section via
+ * useReducedMotion(); this is a CSS-only backstop for plain @keyframes.
+ * Hover/focus transitions are intentionally left untouched. */
+@media (prefers-reduced-motion: reduce) {
+  .landing {
+    scroll-behavior: auto;
+  }
+
+  .landing *,
+  .landing *::before,
+  .landing *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

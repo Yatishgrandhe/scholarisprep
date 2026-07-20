@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('8e9f414b-bd77-44c0-81c9-d514d841c1ab', 'Which choice completes the text with the most logical transition?', 'Volcanic eruptions can release huge clouds of ash high into the atmosphere. These ash particles block some sunlight from reaching the ground. ______ large eruptions can temporarily cool global temperatures.', NULL, '[{"id":"A","text":"Consequently,","is_correct":true,"explanation":"Correct: the cooling is the direct effect of ash blocking incoming sunlight."},{"id":"B","text":"However,","is_correct":false,"explanation":"Incorrect: the cooling follows from the blocked sunlight rather than contrasting it."},{"id":"C","text":"In addition,","is_correct":false,"explanation":"Incorrect: the cooling is a result of the blocked sunlight, not a separate added fact."},{"id":"D","text":"For example,","is_correct":false,"explanation":"Incorrect: global cooling is an effect, not an example of ash blocking light."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The ash particles {{yellow:block some sunlight from reaching the ground}}, which leads to lower global temperatures.
+Step 2 — Choose the transition
+Because the cooling is caused by the reduced sunlight, a cause-effect transition like ''Consequently'' fits.
+Distractor analysis:
+- B: ''However'' implies a contrast that the cause-effect chain does not contain.
+- C: ''In addition'' treats the cooling as a separate fact rather than a result.
+- D: ''For example'' frames the cooling as an illustration instead of an outcome.', 'Is the temporary cooling caused by ash blocking sunlight?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

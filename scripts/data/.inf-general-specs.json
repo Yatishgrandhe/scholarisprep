@@ -1,0 +1,427 @@
+[
+  {
+    "question_text": "Based on the passage, it can most reasonably be inferred that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "further evidence is needed before drawing universal conclusions",
+      "all debate on the topic has been permanently settled",
+      "the findings apply identically in every context without exception",
+      "the authors reject empirical inquiry altogether"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 0
+  },
+  {
+    "question_text": "The passage most strongly suggests that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "researchers will continue testing the claim under varied conditions",
+      "no further study is necessary because the case is closed",
+      "policy must change overnight regardless of context",
+      "the phenomenon will vanish without any intervention"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 1
+  },
+  {
+    "question_text": "Which choice can most reasonably be inferred from the passage? the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "decision makers should weigh limitations alongside promising signals",
+      "stakeholders should ignore nuance and act on slogans alone",
+      "evidence can be dismissed whenever inconvenient",
+      "only absolute certainty justifies any action"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 2
+  },
+  {
+    "question_text": "It can reasonably be inferred from the passage that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "further evidence is needed before drawing universal conclusions",
+      "all debate on the topic has been permanently settled",
+      "the findings apply identically in every context without exception",
+      "the authors reject empirical inquiry altogether"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 3
+  },
+  {
+    "question_text": "The passage implies that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "researchers will continue testing the claim under varied conditions",
+      "no further study is necessary because the case is closed",
+      "policy must change overnight regardless of context",
+      "the phenomenon will vanish without any intervention"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 4
+  },
+  {
+    "question_text": "Based on the passage, it can most reasonably be inferred that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "decision makers should weigh limitations alongside promising signals",
+      "stakeholders should ignore nuance and act on slogans alone",
+      "evidence can be dismissed whenever inconvenient",
+      "only absolute certainty justifies any action"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 5
+  },
+  {
+    "question_text": "The passage most strongly suggests that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "further evidence is needed before drawing universal conclusions",
+      "all debate on the topic has been permanently settled",
+      "the findings apply identically in every context without exception",
+      "the authors reject empirical inquiry altogether"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 6
+  },
+  {
+    "question_text": "Which choice can most reasonably be inferred from the passage? the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "researchers will continue testing the claim under varied conditions",
+      "no further study is necessary because the case is closed",
+      "policy must change overnight regardless of context",
+      "the phenomenon will vanish without any intervention"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 7
+  },
+  {
+    "question_text": "It can reasonably be inferred from the passage that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "decision makers should weigh limitations alongside promising signals",
+      "stakeholders should ignore nuance and act on slogans alone",
+      "evidence can be dismissed whenever inconvenient",
+      "only absolute certainty justifies any action"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 8
+  },
+  {
+    "question_text": "The passage implies that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "further evidence is needed before drawing universal conclusions",
+      "all debate on the topic has been permanently settled",
+      "the findings apply identically in every context without exception",
+      "the authors reject empirical inquiry altogether"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 9
+  },
+  {
+    "question_text": "Based on the passage, it can most reasonably be inferred that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "researchers will continue testing the claim under varied conditions",
+      "no further study is necessary because the case is closed",
+      "policy must change overnight regardless of context",
+      "the phenomenon will vanish without any intervention"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 10
+  },
+  {
+    "question_text": "The passage most strongly suggests that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "decision makers should weigh limitations alongside promising signals",
+      "stakeholders should ignore nuance and act on slogans alone",
+      "evidence can be dismissed whenever inconvenient",
+      "only absolute certainty justifies any action"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 11
+  },
+  {
+    "question_text": "Which choice can most reasonably be inferred from the passage? the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "further evidence is needed before drawing universal conclusions",
+      "all debate on the topic has been permanently settled",
+      "the findings apply identically in every context without exception",
+      "the authors reject empirical inquiry altogether"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 12
+  },
+  {
+    "question_text": "It can reasonably be inferred from the passage that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "researchers will continue testing the claim under varied conditions",
+      "no further study is necessary because the case is closed",
+      "policy must change overnight regardless of context",
+      "the phenomenon will vanish without any intervention"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 13
+  },
+  {
+    "question_text": "The passage implies that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "decision makers should weigh limitations alongside promising signals",
+      "stakeholders should ignore nuance and act on slogans alone",
+      "evidence can be dismissed whenever inconvenient",
+      "only absolute certainty justifies any action"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 14
+  },
+  {
+    "question_text": "Based on the passage, it can most reasonably be inferred that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "further evidence is needed before drawing universal conclusions",
+      "all debate on the topic has been permanently settled",
+      "the findings apply identically in every context without exception",
+      "the authors reject empirical inquiry altogether"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 0
+  },
+  {
+    "question_text": "The passage most strongly suggests that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "researchers will continue testing the claim under varied conditions",
+      "no further study is necessary because the case is closed",
+      "policy must change overnight regardless of context",
+      "the phenomenon will vanish without any intervention"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 1
+  },
+  {
+    "question_text": "Which choice can most reasonably be inferred from the passage? the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "decision makers should weigh limitations alongside promising signals",
+      "stakeholders should ignore nuance and act on slogans alone",
+      "evidence can be dismissed whenever inconvenient",
+      "only absolute certainty justifies any action"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 2
+  },
+  {
+    "question_text": "It can reasonably be inferred from the passage that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "further evidence is needed before drawing universal conclusions",
+      "all debate on the topic has been permanently settled",
+      "the findings apply identically in every context without exception",
+      "the authors reject empirical inquiry altogether"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 3
+  },
+  {
+    "question_text": "The passage implies that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "researchers will continue testing the claim under varied conditions",
+      "no further study is necessary because the case is closed",
+      "policy must change overnight regardless of context",
+      "the phenomenon will vanish without any intervention"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 4
+  },
+  {
+    "question_text": "Based on the passage, it can most reasonably be inferred that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "decision makers should weigh limitations alongside promising signals",
+      "stakeholders should ignore nuance and act on slogans alone",
+      "evidence can be dismissed whenever inconvenient",
+      "only absolute certainty justifies any action"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 5
+  },
+  {
+    "question_text": "The passage most strongly suggests that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "further evidence is needed before drawing universal conclusions",
+      "all debate on the topic has been permanently settled",
+      "the findings apply identically in every context without exception",
+      "the authors reject empirical inquiry altogether"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 6
+  },
+  {
+    "question_text": "Which choice can most reasonably be inferred from the passage? the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "researchers will continue testing the claim under varied conditions",
+      "no further study is necessary because the case is closed",
+      "policy must change overnight regardless of context",
+      "the phenomenon will vanish without any intervention"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 7
+  },
+  {
+    "question_text": "It can reasonably be inferred from the passage that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "decision makers should weigh limitations alongside promising signals",
+      "stakeholders should ignore nuance and act on slogans alone",
+      "evidence can be dismissed whenever inconvenient",
+      "only absolute certainty justifies any action"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 8
+  },
+  {
+    "question_text": "The passage implies that the authors treat their conclusion as provisional.",
+    "correctId": "A",
+    "texts": [
+      "further evidence is needed before drawing universal conclusions",
+      "all debate on the topic has been permanently settled",
+      "the findings apply identically in every context without exception",
+      "the authors reject empirical inquiry altogether"
+    ],
+    "expls": [
+      "Bounded inference supported by the passage's cautious framing.",
+      "Overly broad: passage does not claim final settlement.",
+      "No-evidence synthesis: passage emphasizes contextual limits.",
+      "Contradicts the passage's empirical approach."
+    ],
+    "passageIdx": 9
+  }
+]

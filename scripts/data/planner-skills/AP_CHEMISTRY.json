@@ -1,0 +1,59 @@
+{
+  "exam_type": "AP_CHEMISTRY",
+  "skills": [
+    {
+      "id": "ap_chemistry_U1_atomic_structure",
+      "unit_code": "U1_atomic_structure",
+      "label": "Atomic structure and periodicity",
+      "description": "Practice and review: Atomic Structure and Properties. Topics include Moles and mass spectrometry; Electron configuration; Photoelectron spectroscopy cues."
+    },
+    {
+      "id": "ap_chemistry_U2_compound_structure",
+      "unit_code": "U2_compound_structure",
+      "label": "Bonding and molecular structure",
+      "description": "Practice and review: Molecular and Ionic Compound Structure and Properties. Topics include Bond types; Lewis structures and VSEPR; Lattice energy cues."
+    },
+    {
+      "id": "ap_chemistry_U3_imf_properties",
+      "unit_code": "U3_imf_properties",
+      "label": "IMFs, gases, and solutions",
+      "description": "Practice and review: Intermolecular Forces and Properties. Topics include IMFs and properties; Ideal gas and deviations; Solutions and spectroscopy."
+    },
+    {
+      "id": "ap_chemistry_U4_chemical_reactions",
+      "unit_code": "U4_chemical_reactions",
+      "label": "Reactions and stoichiometry",
+      "description": "Practice and review: Chemical Reactions. Topics include Net ionic equations; Stoichiometry; Titrations and redox intro."
+    },
+    {
+      "id": "ap_chemistry_U5_kinetics",
+      "unit_code": "U5_kinetics",
+      "label": "Kinetics",
+      "description": "Practice and review: Kinetics. Topics include Rate laws; Mechanisms and catalysts; Collision theory and energy profiles."
+    },
+    {
+      "id": "ap_chemistry_U6_thermodynamics",
+      "unit_code": "U6_thermodynamics",
+      "label": "Thermochemistry",
+      "description": "Practice and review: Thermodynamics. Topics include Enthalpy and calorimetry; Bond enthalpies; Heat transfer."
+    },
+    {
+      "id": "ap_chemistry_U7_equilibrium",
+      "unit_code": "U7_equilibrium",
+      "label": "Chemical equilibrium",
+      "description": "Practice and review: Equilibrium. Topics include K and Q; Le Châtelier; Solubility equilibrium."
+    },
+    {
+      "id": "ap_chemistry_U8_acids_bases",
+      "unit_code": "U8_acids_bases",
+      "label": "Acids and bases",
+      "description": "Practice and review: Acids and Bases. Topics include pH and Ka/Kb; Buffers and titrations; Acid–base molecular view."
+    },
+    {
+      "id": "ap_chemistry_U9_applications_thermo",
+      "unit_code": "U9_applications_thermo",
+      "label": "Thermo applications and electrochemistry",
+      "description": "Practice and review: Applications of Thermodynamics. Topics include Entropy and Gibbs free energy; Electrochemistry; Coupled processes."
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "exam_type": "AP_COMPUTER_SCIENCE_A",
+  "display_name": "AP Computer Science A",
+  "command_terms": [
+    "complete",
+    "determine",
+    "identify",
+    "implement",
+    "modify",
+    "trace",
+    "write"
+  ],
+  "misconceptions": [
+    "Off-by-one errors in loops and array indices",
+    "Confusing object reference equality with content equality",
+    "Mutating ArrayList while iterating incorrectly",
+    "Forgetting to call super in subclass constructors",
+    "Infinite recursion from missing/incorrect base case",
+    "Assuming enhanced-for can safely remove elements"
+  ],
+  "paper_rules": [
+    "Write compilable Java; use AP Java subset conventions",
+    "FRQ: implement required methods; do not rewrite given class shells unnecessarily",
+    "Trace code carefully for MCQ; watch short-circuit evaluation",
+    "Respect encapsulation; access fields via methods when appropriate"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "key": "mcq",
+        "calculator": "none",
+        "note": "No calculator"
+      },
+      {
+        "key": "frq",
+        "calculator": "none",
+        "note": "No calculator; write Java free-response code"
+      }
+    ],
+    "notes": "No calculator. Java is the required language for free-response coding."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_primitive_types",
+      "unit_name": "Primitive Types",
+      "unit_order": 1,
+      "weight_hint": 0.04,
+      "quota": 20,
+      "topics": [
+        "int, double, boolean",
+        "Arithmetic and casting",
+        "Compound assignment"
+      ]
+    },
+    {
+      "unit_code": "U2_using_objects",
+      "unit_name": "Using Objects",
+      "unit_order": 2,
+      "weight_hint": 0.07,
+      "quota": 35,
+      "topics": [
+        "Object references",
+        "String methods",
+        "Math class and wrappers"
+      ]
+    },
+    {
+      "unit_code": "U3_boolean_conditionals",
+      "unit_name": "Boolean Expressions and if Statements",
+      "unit_order": 3,
+      "weight_hint": 0.16,
+      "quota": 80,
+      "topics": [
+        "Relational and logical operators",
+        "if/else nesting",
+        "De Morgan equivalents"
+      ]
+    },
+    {
+      "unit_code": "U4_iteration",
+      "unit_name": "Iteration",
+      "unit_order": 4,
+      "weight_hint": 0.19,
+      "quota": 95,
+      "topics": [
+        "while and for loops",
+        "Nested iteration",
+        "Loop algorithms on Strings"
+      ]
+    },
+    {
+      "unit_code": "U5_writing_classes",
+      "unit_name": "Writing Classes",
+      "unit_order": 5,
+      "weight_hint": 0.08,
+      "quota": 40,
+      "topics": [
+        "Constructors and fields",
+        "Methods and overloading",
+        "Encapsulation and this"
+      ]
+    },
+    {
+      "unit_code": "U6_arrays",
+      "unit_name": "Array",
+      "unit_order": 6,
+      "weight_hint": 0.12,
+      "quota": 60,
+      "topics": [
+        "1D array traversal",
+        "Standard algorithms",
+        "Enhanced for loops"
+      ]
+    },
+    {
+      "unit_code": "U7_arraylist",
+      "unit_name": "ArrayList",
+      "unit_order": 7,
+      "weight_hint": 0.08,
+      "quota": 40,
+      "topics": [
+        "ArrayList API",
+        "Traversal and modification",
+        "Searching/sorting patterns"
+      ]
+    },
+    {
+      "unit_code": "U8_2d_arrays",
+      "unit_name": "2D Array",
+      "unit_order": 8,
+      "weight_hint": 0.1,
+      "quota": 50,
+      "topics": [
+        "Row-major traversal",
+        "2D algorithms",
+        "Rectangular array patterns"
+      ]
+    },
+    {
+      "unit_code": "U9_inheritance",
+      "unit_name": "Inheritance",
+      "unit_order": 9,
+      "weight_hint": 0.09,
+      "quota": 45,
+      "topics": [
+        "extends and super",
+        "Overriding",
+        "Polymorphism"
+      ]
+    },
+    {
+      "unit_code": "U10_recursion",
+      "unit_name": "Recursion",
+      "unit_order": 10,
+      "weight_hint": 0.07,
+      "quota": 35,
+      "topics": [
+        "Base and recursive cases",
+        "Recursive thinking",
+        "Simple recursive algorithms"
+      ]
+    }
+  ]
+}

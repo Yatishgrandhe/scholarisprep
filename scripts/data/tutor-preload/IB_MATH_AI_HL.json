@@ -1,0 +1,53 @@
+{
+  "exam_type": "IB_MATH_AI_HL",
+  "display_name": "IB Mathematics: Applications and Interpretation HL",
+  "units": [
+    "Number & algebra",
+    "Functions",
+    "Geometry & trigonometry",
+    "Statistics & probability",
+    "Calculus",
+    "HL further statistics & modelling",
+    "HL further calculus & algebra",
+    "Technology & IA skills"
+  ],
+  "command_terms": [
+    "write down",
+    "find",
+    "hence",
+    "show that",
+    "prove",
+    "sketch",
+    "determine",
+    "interpret",
+    "justify"
+  ],
+  "misconceptions": [
+    "GDC on Paper 1 AA",
+    "rounding too early",
+    "not showing working for method marks"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it",
+    "Paper 3: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "Technology-required papers; Desmos graphing when calculator_allowed.",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_number_algebra skill focus: approximation",
+    "Keep unit_code=U2_functions skill focus: modelling",
+    "Keep unit_code=U3_geometry_trigonometry skill focus: bearings",
+    "Keep unit_code=U4_statistics_probability skill focus: sampling",
+    "Keep unit_code=U5_calculus skill focus: rates of change",
+    "Keep unit_code=U6_hl_further_statistics_modelling skill focus: non-linear regression",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

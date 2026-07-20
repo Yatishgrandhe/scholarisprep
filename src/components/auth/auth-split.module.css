@@ -1,0 +1,740 @@
+/* ============================================================
+   Auth shell — landing-aligned split layout
+   Flat page canvas = hsl(var(--background)) via .landing tokens.
+   Cobalt / aqua accents only (no purple marketing gradients).
+   Form panel is the sole interactive "card"; brand panel is open.
+   ============================================================ */
+
+.page {
+  /* Local aliases — prefer landing tokens when scoped under .landing */
+  --auth-cobalt: var(--landing-cobalt-500, var(--primary));
+  --auth-cobalt-soft: var(--landing-cobalt-400, var(--primary));
+  --auth-aqua: var(--landing-aqua-500, 189 94% 43%);
+  --auth-aqua-soft: var(--landing-aqua-400, 187 92% 55%);
+
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  /* P0: same flat canvas as landing — no separate cool-paper zone */
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  overflow-x: clip;
+  isolation: isolate;
+}
+
+:global(.dark) .page {
+  --auth-cobalt: var(--landing-cobalt-400, var(--primary));
+  --auth-cobalt-soft: var(--landing-cobalt-400, var(--primary));
+  --auth-aqua: var(--landing-aqua-400, 187 88% 58%);
+  --auth-aqua-soft: var(--landing-aqua-300, 187 80% 68%);
+}
+
+/* Kept for call-site markup (forgot/reset pages) — visually off so auth
+   does not tint into a separate cool-paper / navy-grid zone vs landing. */
+.aurora,
+.gridLines {
+  display: none;
+}
+
+/* ---------- Topbar ---------- */
+
+.topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 20px clamp(20px, 4vw, 44px);
+  min-width: 0;
+}
+
+.topbar > :first-child {
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.topbarActions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: var(--space-2);
+}
+
+.themeBar {
+  display: flex;
+  align-items: center;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 7px 14px;
+  border-radius: var(--landing-radius-sm, var(--radius-md));
+  border: 1px solid hsl(var(--landing-border, var(--border)));
+  background: transparent;
+  font-size: 0.8125rem;
+  font-weight: 550;
+  color: hsl(var(--landing-muted-foreground, var(--muted-foreground)));
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.backLink:hover {
+  color: hsl(var(--landing-foreground, var(--foreground)));
+  border-color: hsl(var(--auth-cobalt) / 0.45);
+  background: hsl(var(--auth-cobalt) / 0.06);
+  text-decoration: none;
+}
+
+/* ---------- Layout grid ---------- */
+
+.layout {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  justify-items: stretch;
+  gap: clamp(24px, 4vw, 72px);
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(12px, 3vw, 32px) clamp(16px, 5vw, 48px)
+    clamp(40px, 6vw, 80px);
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    /* minmax(0, …) so brand panel never crushes the form column */
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: start;
+    justify-items: stretch;
+    column-gap: clamp(48px, 6vw, 88px);
+  }
+}
+
+/* ---------- Showcase panel (left, desktop) ---------- */
+
+.showcase {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .showcase {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    max-width: 460px;
+    min-width: 0;
+    padding-right: var(--space-2);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .showcase > * {
+    animation: riseIn 0.55s cubic-bezier(0.21, 0.65, 0.36, 1) both;
+  }
+
+  .showcase > *:nth-child(2) {
+    animation-delay: 0.05s;
+  }
+  .showcase > *:nth-child(3) {
+    animation-delay: 0.1s;
+  }
+  .showcase > *:nth-child(4) {
+    animation-delay: 0.15s;
+  }
+  .showcase > *:nth-child(5) {
+    animation-delay: 0.2s;
+  }
+
+  .card {
+    animation: riseIn 0.55s 0.08s cubic-bezier(0.21, 0.65, 0.36, 1) both;
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brandSignal {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 3.6vw, 3rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: hsl(var(--landing-foreground, var(--foreground)));
+}
+
+.showcaseTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: hsl(var(--landing-foreground, var(--foreground)));
+  text-wrap: balance;
+}
+
+.showcaseTitle em {
+  font-style: italic;
+  background: linear-gradient(
+    92deg,
+    hsl(var(--auth-cobalt)),
+    hsl(var(--auth-aqua))
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.showcaseLead {
+  margin: 0;
+  font-size: 0.9688rem;
+  line-height: 1.6;
+  color: hsl(var(--landing-muted-foreground, var(--muted-foreground)));
+  text-wrap: pretty;
+  max-width: 38ch;
+}
+
+/* Framed showcase photo — no overlay badges */
+
+.heroFrame {
+  position: relative;
+  border-radius: var(--landing-radius, var(--radius-lg));
+  overflow: hidden;
+  border: 1px solid hsl(var(--landing-border, var(--border)));
+  aspect-ratio: 16 / 10;
+  box-shadow: 0 18px 40px -28px hsl(var(--foreground) / 0.28);
+}
+
+:global(.dark) .heroFrame {
+  border-color: hsl(var(--landing-border, var(--border)));
+  box-shadow: 0 18px 40px -28px hsl(0 0% 0% / 0.5);
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.heroFrameOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 40%,
+    hsl(var(--landing-background, var(--background)) / 0.45) 100%
+  );
+  pointer-events: none;
+}
+
+/* Checklist — open rows, not cards */
+
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+}
+
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: hsl(var(--auth-cobalt) / 0.1);
+  border: 1px solid hsl(var(--auth-cobalt) / 0.22);
+  color: hsl(var(--auth-cobalt));
+}
+
+.checkTitle {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  color: hsl(var(--landing-foreground, var(--foreground)));
+}
+
+.checkDescription {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.8438rem;
+  line-height: 1.5;
+  color: hsl(var(--landing-muted-foreground, var(--muted-foreground)));
+}
+
+/* Testimonial — hairline separator, not a card */
+
+.testimonial {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin: var(--space-2) 0 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid hsl(var(--landing-border, var(--border)) / 0.7);
+}
+
+.testimonialAvatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid hsl(var(--landing-background, var(--background)));
+  box-shadow: 0 0 0 2px hsl(var(--auth-cobalt) / 0.35);
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: hsl(38 88% 48%);
+  margin-bottom: 5px;
+}
+
+.testimonialQuote {
+  margin: 0 0 5px;
+  border: none;
+  padding: 0;
+  font-size: 0.9063rem;
+  line-height: 1.6;
+  color: hsl(var(--landing-foreground, var(--foreground)) / 0.88);
+  text-wrap: pretty;
+}
+
+.testimonialAttribution {
+  font-size: 0.7813rem;
+  font-weight: 650;
+  color: hsl(var(--landing-muted-foreground, var(--muted-foreground)));
+}
+
+.testimonialAttribution::before {
+  content: "— ";
+}
+
+/* ---------- Form panel (right) — interactive card ---------- */
+
+.cardColumn {
+  width: 100%;
+  max-width: 440px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: clamp(20px, 4.5vw, 40px) clamp(16px, 4.5vw, 40px);
+  border-radius: calc(var(--landing-radius, var(--radius-lg)) + 4px);
+  border: 1px solid hsl(var(--landing-border, var(--border)));
+  background: hsl(var(--landing-card, var(--card)));
+  box-shadow:
+    0 1px 0 hsl(var(--foreground) / 0.04),
+    0 24px 56px -36px hsl(var(--foreground) / 0.28);
+  overflow: hidden;
+}
+
+:global(.dark) .card {
+  background: hsl(var(--landing-card, var(--card)));
+  border-color: hsl(var(--landing-border, var(--border)));
+  box-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.04),
+    0 24px 56px -36px hsl(0 0% 0% / 0.55);
+}
+
+.cardHairline {
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--auth-cobalt) / 0.55),
+    hsl(var(--auth-aqua) / 0.45),
+    transparent
+  );
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: hsl(var(--auth-cobalt));
+  margin-bottom: var(--space-4);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--auth-cobalt)),
+    hsl(var(--auth-aqua))
+  );
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: hsl(var(--landing-foreground, var(--foreground)));
+  margin: 0 0 var(--space-8);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.headline:has(+ .subheadline) {
+  margin-bottom: var(--space-3);
+}
+
+.subheadline {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: hsl(var(--landing-muted-foreground, var(--muted-foreground)));
+  margin: 0 0 var(--space-8);
+}
+
+.formBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-width: 0;
+  width: 100%;
+}
+
+.secureNote,
+.trustRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding-inline: 2px;
+  font-size: 0.7813rem;
+  line-height: 1.5;
+  text-align: center;
+  text-wrap: pretty;
+  color: hsl(var(--landing-muted-foreground, var(--muted-foreground)));
+}
+
+.secureNote svg,
+.trustRow svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.secureNote svg {
+  color: hsl(var(--score-positive, 142 60% 40%));
+}
+
+.trustRow svg {
+  color: hsl(var(--auth-cobalt));
+}
+
+/* Override flex-start icon nudge for single-line trust icons when roomy */
+@media (min-width: 480px) {
+  .secureNote,
+  .trustRow {
+    align-items: center;
+  }
+
+  .secureNote svg,
+  .trustRow svg {
+    margin-top: 0;
+  }
+}
+
+/* ---------- Centered (forgot / reset password) ---------- */
+
+.centeredPage {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, var(--space-8)) clamp(12px, 4vw, var(--space-6));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  overflow-x: clip;
+  isolation: isolate;
+  box-sizing: border-box;
+}
+
+.centeredPage .themeBar {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top, 0px));
+  right: max(12px, env(safe-area-inset-right, 0px));
+  z-index: 20;
+}
+
+.centeredBg {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.centeredOverlay {
+  display: none;
+}
+
+.centeredInner {
+  width: 100%;
+  max-width: 420px;
+  min-width: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  padding: clamp(24px, 5vw, 44px) clamp(16px, 5vw, 44px);
+  border-radius: calc(var(--landing-radius, var(--radius-lg)) + 4px);
+  border: 1px solid hsl(var(--landing-border, var(--border)));
+  background: hsl(var(--landing-card, var(--card)));
+  box-shadow:
+    0 1px 0 hsl(var(--foreground) / 0.04),
+    0 24px 56px -36px hsl(var(--foreground) / 0.28);
+}
+
+:global(.dark) .centeredInner {
+  background: hsl(var(--landing-card, var(--card)));
+  border-color: hsl(var(--landing-border, var(--border)));
+  box-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.04),
+    0 24px 56px -36px hsl(0 0% 0% / 0.55);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .centeredInner {
+    animation: riseIn 0.55s cubic-bezier(0.21, 0.65, 0.36, 1) both;
+  }
+}
+
+.centeredLogo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-7);
+}
+
+.centeredTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: var(--space-3);
+  color: hsl(var(--landing-foreground, var(--foreground)));
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.centeredSubtitle {
+  text-align: center;
+  color: hsl(var(--landing-muted-foreground, var(--muted-foreground)));
+  margin-bottom: var(--space-8);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.successState {
+  text-align: center;
+  padding: var(--space-8) 0;
+}
+
+.successIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--feedback-success-bg);
+  color: hsl(var(--score-positive));
+}
+
+.successTitle {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+  color: hsl(var(--landing-foreground, var(--foreground)));
+}
+
+.successText {
+  color: hsl(var(--landing-muted-foreground, var(--muted-foreground)));
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.centeredFooter {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-size: 0.9375rem;
+}
+
+.centeredFooter a {
+  color: hsl(var(--auth-cobalt));
+  font-weight: 600;
+}
+
+.centeredFooter a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Mobile / tablet (< lg): form-first, brand panel off ---------- */
+
+@media (max-width: 1023px) {
+  .page {
+    /* Safe areas on notched phones */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .topbar {
+    padding: 12px 16px;
+    gap: var(--space-2);
+  }
+
+  .backLink {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .layout {
+    /* Single column — showcase stays display:none; form owns the viewport */
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: stretch;
+    align-items: start;
+    gap: var(--space-4);
+    padding: 8px 16px 36px;
+  }
+
+  .cardColumn {
+    max-width: none;
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .card {
+    padding: 20px 16px;
+    border-radius: calc(var(--landing-radius, var(--radius-lg)) + 2px);
+  }
+
+  .eyebrow {
+    margin-bottom: var(--space-3);
+  }
+
+  .headline {
+    margin-bottom: var(--space-6);
+  }
+
+  .headline:has(+ .subheadline) {
+    margin-bottom: var(--space-2);
+  }
+
+  .subheadline {
+    margin-bottom: var(--space-6);
+    font-size: 0.9063rem;
+  }
+
+  .formBody {
+    gap: var(--space-5);
+  }
+
+  .secureNote,
+  .trustRow {
+    font-size: 0.75rem;
+  }
+
+  .centeredPage {
+    justify-content: flex-start;
+    padding-top: max(56px, calc(12px + env(safe-area-inset-top, 0px)));
+    padding-bottom: max(24px, env(safe-area-inset-bottom, 0px));
+  }
+
+  .centeredInner {
+    padding: 24px 16px;
+  }
+
+  .centeredTitle {
+    font-size: 1.4rem;
+  }
+
+  .centeredSubtitle {
+    margin-bottom: var(--space-6);
+    font-size: 0.9063rem;
+  }
+}
+
+/* Narrow phones (~375 and below): keep chrome from overflowing */
+@media (max-width: 400px) {
+  .topbar {
+    padding: 10px 12px;
+  }
+
+  .layout {
+    padding-inline: 12px;
+  }
+
+  .card {
+    padding: 18px 14px;
+  }
+
+  .centeredPage {
+    padding-inline: 12px;
+  }
+
+  .centeredInner {
+    padding: 22px 14px;
+  }
+
+  .backLink {
+    padding: 6px 8px;
+  }
+}

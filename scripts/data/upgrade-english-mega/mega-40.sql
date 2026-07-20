@@ -1,0 +1,406 @@
+BEGIN;
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '241d856a-5708-4f96-a357-8a03ea92e98f';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '3a729f46-a44a-450c-b3b6-410adff86cd4';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '6665bc73-3002-4260-ae12-1e3e8279b6dd';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'dfd41d7f-3cff-4a85-9d29-6ba2b43eaf34';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '6108d96a-c0c2-449a-8d85-0e6b123284b7';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '8aa82d6d-6227-461b-ac2a-0e99c6a9da19';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'da67b700-0391-4428-ae2d-db2f5986827c';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e30ee20a-a09c-4881-b684-c13dfd158d3f';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'c84b993e-2030-4907-99be-121d17542a99';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '38484783-e581-4159-b280-dd5942aebf71';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '76f85150-a5d9-4470-a2e5-acc4c9f78e5a';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '4011d346-090d-4145-9440-787b2f7a9d5e';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '3763a8bd-003d-499f-bcce-8a45857c6ced';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '71a23460-1a4f-4b78-bd4f-6db41c70ee76';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '3282774a-0bbb-4e70-b8d9-74633d6fa289';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'ccf26665-9e1f-4abc-9531-d9d173993744';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '87977449-2090-4336-87c1-7ea9be35dd69';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'ab2e25a3-89d2-49bd-9bfe-bdb3fc2eccd4';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '93bbb568-e65b-41f5-a34b-7cf7641c4a74';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '352bb5bf-82e7-4ceb-bcd9-0ae41c3286b1';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '0536c545-cbd0-4de9-984d-95957fff248a';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '80819832-6435-44b6-974d-1f36ba3d4f13';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'a6fc0f2e-6f75-493f-9f7a-f7522dc916cb';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '618b4cff-3bf9-466f-8306-82d55500d965';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '214eea5b-d636-489c-9273-8bb7a3850839';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+Neither the coaches nor the athlete were ready ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"were","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"was\", not \"were\"."},{"id":"B","text":"was","is_correct":true,"explanation":"Correct verb form \"was\" agrees with the governing subject in this construction."},{"id":"C","text":"are","is_correct":false,"explanation":"Agreement error: \"are\" does not match the singular subject controlling the verb."},{"id":"D","text":"have been","is_correct":false,"explanation":"Wrong tense or agreement: \"have been\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "was" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f57e01c9-56f9-48f6-8180-692bba6e03c7';
+UPDATE public.questions SET
+  stimulus_text = NULL,
+  question_text = 'Which choice completes the text so that it conforms to the conventions of Standard English?
+
+The data from the experiments suggest a trend ______ conclusive.',
+  stimulus_type = NULL,
+  options = '[{"id":"A","text":"suggest","is_correct":false,"explanation":"Subject-verb agreement error: the nearer subject requires \"suggests\", not \"suggest\"."},{"id":"B","text":"suggests","is_correct":true,"explanation":"Correct verb form \"suggests\" agrees with the governing subject in this construction."},{"id":"C","text":"suggesting","is_correct":false,"explanation":"Agreement error: \"suggesting\" does not match the singular subject controlling the verb."},{"id":"D","text":"have suggested","is_correct":false,"explanation":"Wrong tense or agreement: \"have suggested\" fails the sentence''s grammatical requirements."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = 'The subject requires the verb "suggests" for agreement in this sentence frame. Choice B satisfies Standard English conventions while the distractors mismatch number or tense.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '6e103a2c-704f-4d86-b255-62c42879ef60';
+UPDATE public.questions SET
+  stimulus_text = 'Historians examining trade route 2 note that camel caravans carried not only goods but also astronomical tables, spreading navigation techniques across deserts long before printed maps existed. Merchants who survived the crossing depended on star charts copied onto leather scrolls, and those copies often accumulated marginal notes from later travelers. A ledger recovered near route 2 lists dates, caravan leaders, and the scientific texts exchanged at each oasis, suggesting that commerce and scholarship moved together. When one city tightened tariffs, caravans rerouted through secondary wells, and the astronomical knowledge rerouted with them. Modern scholars therefore treat desert trade networks as early information highways rather than simple supply chains. The passage emphasizes how practical navigation needs drove the circulation of technical knowledge among communities that rarely shared a written language.',
+  question_text = 'Which choice can most reasonably be inferred from the passage?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"The researchers refused to publish any results because the findings contradicted their hypothesis.","is_correct":false,"explanation":"The passage reports published findings and follow-up surveys; it does not suggest suppression of results."},{"id":"B","text":"Every participant in related studies always fails to recall word lists when sleep is involved.","is_correct":false,"explanation":"Too absolute; the passage compares groups under controlled conditions rather than claiming universal failure."},{"id":"C","text":"The described mechanism could apply beyond the specific example given in the passage.","is_correct":true,"explanation":"When a study isolates a variable and shows a pattern, readers may infer broader applicability while noting stated limitations."},{"id":"D","text":"The passage lists exact retail prices for all consumer goods mentioned in the interviews.","is_correct":false,"explanation":"No pricing information appears; the passage focuses on organizational behavior and logistics."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = 'The passage presents a specific finding with cautions about generalization yet still implies a principle beyond the immediate case. Choice C captures that reasonable inference without treating the study as unlimited proof. Choices A and B overstate or invert what the text supports, while D introduces information the passage never provides.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd4d8d58d-a813-47e5-bf55-a9310322c463';
+UPDATE public.questions SET
+  stimulus_text = 'In her essay on urban soundscapes, writer 3 argues that city planners should treat noise pollution as a public-health issue, citing studies linking traffic noise to elevated stress hormones. She describes neighborhoods where sirens, construction, and highway hum overlap for eighteen hours a day, leaving residents with fragmented sleep even when air quality meets regulatory standards. Community interviews quoted in the essay repeatedly mention difficulty concentrating at work and heightened irritability at home. The writer contrasts cosmetic beautification projects—new planters and paint—with measurable acoustic interventions such as berms, low-noise pavement, and delivery-time restrictions. She acknowledges that complete silence is impossible in dense cities, yet insists that reducing predictable high-decibel spikes could yield health benefits comparable to modest improvements in green space. The essay concludes that sound belongs in urban planning budgets alongside light and air.',
+  question_text = 'Which choice can most reasonably be inferred from the passage?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"The researchers refused to publish any results because the findings contradicted their hypothesis.","is_correct":false,"explanation":"The passage reports published findings and follow-up surveys; it does not suggest suppression of results."},{"id":"B","text":"Every participant in related studies always fails to recall word lists when sleep is involved.","is_correct":false,"explanation":"Too absolute; the passage compares groups under controlled conditions rather than claiming universal failure."},{"id":"C","text":"The described mechanism could apply beyond the specific example given in the passage.","is_correct":true,"explanation":"When a study isolates a variable and shows a pattern, readers may infer broader applicability while noting stated limitations."},{"id":"D","text":"The passage lists exact retail prices for all consumer goods mentioned in the interviews.","is_correct":false,"explanation":"No pricing information appears; the passage focuses on organizational behavior and logistics."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = 'The passage presents a specific finding with cautions about generalization yet still implies a principle beyond the immediate case. Choice C captures that reasonable inference without treating the study as unlimited proof. Choices A and B overstate or invert what the text supports, while D introduces information the passage never provides.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'e9bf7c6b-67f4-4fcb-a75d-3e4c675b5ef5';
+UPDATE public.questions SET
+  stimulus_text = 'Economists analyzing market 4 observed that small retailers adapted faster than national chains when supply chains stalled, partly because they could reorder from local wholesalers within days. While big-box stores waited for centralized distribution centers to reopen, corner shops phoned alternate suppliers named in handwritten contact lists. The economists interviewed owners who shifted product mix toward shelf-stable goods and services that did not depend on overseas shipping. National chains, bound to national contracts and uniform pricing algorithms, could not pivot as quickly without corporate approval cycles. The study does not claim small stores always outperform chains; rather, it shows that flexibility and local relationships became decisive when long-distance logistics failed. Readers should infer that organizational scale can become a liability during sudden disruptions.',
+  question_text = 'Which choice can most reasonably be inferred from the passage?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"The researchers refused to publish any results because the findings contradicted their hypothesis.","is_correct":false,"explanation":"The passage reports published findings and follow-up surveys; it does not suggest suppression of results."},{"id":"B","text":"Every participant in related studies always fails to recall word lists when sleep is involved.","is_correct":false,"explanation":"Too absolute; the passage compares groups under controlled conditions rather than claiming universal failure."},{"id":"C","text":"The described mechanism could apply beyond the specific example given in the passage.","is_correct":true,"explanation":"When a study isolates a variable and shows a pattern, readers may infer broader applicability while noting stated limitations."},{"id":"D","text":"The passage lists exact retail prices for all consumer goods mentioned in the interviews.","is_correct":false,"explanation":"No pricing information appears; the passage focuses on organizational behavior and logistics."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = 'The passage presents a specific finding with cautions about generalization yet still implies a principle beyond the immediate case. Choice C captures that reasonable inference without treating the study as unlimited proof. Choices A and B overstate or invert what the text supports, while D introduces information the passage never provides.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '58790cef-1e3f-440c-aa9d-b64a6f4ecc3a';
+UPDATE public.questions SET
+  stimulus_text = 'Archaeologists at site 5 discovered that pottery shards contained residue of fermented grain, suggesting the community brewed beverages for ritual gatherings rather than daily meals. Layer analysis placed the shards in a ceremonial plaza rather than domestic kitchens, and nearby hearths showed feasting debris concentrated on solstice dates. Chemical tests identified compounds consistent with controlled fermentation but not with large-scale storage for everyday consumption. The team compared the findings with neighboring settlements where grain storage pits dominated the record. That contrast supports the interpretation that brewing here marked special occasions and social bonding. The passage invites readers to connect material evidence with inferred cultural practice without claiming certainty about every recipe detail.',
+  question_text = 'Which choice can most reasonably be inferred from the passage?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"The researchers refused to publish any results because the findings contradicted their hypothesis.","is_correct":false,"explanation":"The passage reports published findings and follow-up surveys; it does not suggest suppression of results."},{"id":"B","text":"Every participant in related studies always fails to recall word lists when sleep is involved.","is_correct":false,"explanation":"Too absolute; the passage compares groups under controlled conditions rather than claiming universal failure."},{"id":"C","text":"The described mechanism could apply beyond the specific example given in the passage.","is_correct":true,"explanation":"When a study isolates a variable and shows a pattern, readers may infer broader applicability while noting stated limitations."},{"id":"D","text":"The passage lists exact retail prices for all consumer goods mentioned in the interviews.","is_correct":false,"explanation":"No pricing information appears; the passage focuses on organizational behavior and logistics."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = 'The passage presents a specific finding with cautions about generalization yet still implies a principle beyond the immediate case. Choice C captures that reasonable inference without treating the study as unlimited proof. Choices A and B overstate or invert what the text supports, while D introduces information the passage never provides.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'b65b3001-c6a4-45dd-a3a0-beada5030ce8';
+UPDATE public.questions SET
+  stimulus_text = 'Psychologists testing memory task 6 reported that participants who slept eight hours recalled word lists more accurately than those who stayed awake, even when both groups studied equally long. The awake group was kept in a quiet lounge with books and puzzles to prevent napping, yet their recall still lagged behind the sleep group on both immediate and delayed tests. Brain-imaging subsamples showed differences in hippocampal activity during retrieval, aligning with theories that sleep consolidates declarative memories. The researchers caution that the study measured short lists under lab conditions and may not generalize to complex real-world learning. Still, the controlled comparison isolates sleep as the key variable because study time, list difficulty, and initial exposure were matched. The passage presents sleep as a cognitive process with measurable downstream effects on recall.',
+  question_text = 'Which choice can most reasonably be inferred from the passage?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"The researchers refused to publish any results because the findings contradicted their hypothesis.","is_correct":false,"explanation":"The passage reports published findings and follow-up surveys; it does not suggest suppression of results."},{"id":"B","text":"Every participant in related studies always fails to recall word lists when sleep is involved.","is_correct":false,"explanation":"Too absolute; the passage compares groups under controlled conditions rather than claiming universal failure."},{"id":"C","text":"The described mechanism could apply beyond the specific example given in the passage.","is_correct":true,"explanation":"When a study isolates a variable and shows a pattern, readers may infer broader applicability while noting stated limitations."},{"id":"D","text":"The passage lists exact retail prices for all consumer goods mentioned in the interviews.","is_correct":false,"explanation":"No pricing information appears; the passage focuses on organizational behavior and logistics."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = 'The passage presents a specific finding with cautions about generalization yet still implies a principle beyond the immediate case. Choice C captures that reasonable inference without treating the study as unlimited proof. Choices A and B overstate or invert what the text supports, while D introduces information the passage never provides.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '0a4cc4a1-dd3d-41cf-b80f-d2f0a48eb28d';
+UPDATE public.questions SET
+  stimulus_text = 'Engineers prototyping turbine 7 demonstrated that angled blades harvest more energy from low wind speeds, a design inspired by the shape of humpback whale fins. Standard flat blades stall when air flow separates early, wasting kinetic energy that never reaches the generator. The prototype''s tubercle-like ridges delay separation, maintaining lift across a wider range of wind speeds common in residential installations. Wind-tunnel tests documented a twelve-percent gain at moderate speeds without increasing noise above local ordinance limits. The engineers note that biomimicry here is not decorative; it directly addresses a performance bottleneck that limits small-scale renewable adoption. The passage moves from biological observation to mechanical testing to a practical deployment implication.',
+  question_text = 'Which choice can most reasonably be inferred from the passage?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"The researchers refused to publish any results because the findings contradicted their hypothesis.","is_correct":false,"explanation":"The passage reports published findings and follow-up surveys; it does not suggest suppression of results."},{"id":"B","text":"Every participant in related studies always fails to recall word lists when sleep is involved.","is_correct":false,"explanation":"Too absolute; the passage compares groups under controlled conditions rather than claiming universal failure."},{"id":"C","text":"The described mechanism could apply beyond the specific example given in the passage.","is_correct":true,"explanation":"When a study isolates a variable and shows a pattern, readers may infer broader applicability while noting stated limitations."},{"id":"D","text":"The passage lists exact retail prices for all consumer goods mentioned in the interviews.","is_correct":false,"explanation":"No pricing information appears; the passage focuses on organizational behavior and logistics."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = 'The passage presents a specific finding with cautions about generalization yet still implies a principle beyond the immediate case. Choice C captures that reasonable inference without treating the study as unlimited proof. Choices A and B overstate or invert what the text supports, while D introduces information the passage never provides.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = '37e2819b-cc1c-4936-b6de-72bb00e29d4f';
+UPDATE public.questions SET
+  stimulus_text = 'Educators reviewing literacy program 8 concluded that students who discussed readings in pairs improved comprehension scores more than those who answered worksheets alone. Teachers in the pair-discussion classrooms reported that students referenced textual evidence when disagreeing, a behavior rarely observed during silent worksheet completion. Standardized pre- and post-tests showed a twelve-point average gain for the discussion cohort versus a four-point gain for the worksheet cohort over the same six-week unit. The educators emphasize that discussion prompts were structured—not unstructured chat—and required each partner to cite a line from the text. They argue that collaborative talk externalizes comprehension strategies that weaker readers otherwise keep invisible. The passage supports structured peer dialogue as an instructional lever rather than a replacement for independent reading.',
+  question_text = 'Which choice can most reasonably be inferred from the passage?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"The researchers refused to publish any results because the findings contradicted their hypothesis.","is_correct":false,"explanation":"The passage reports published findings and follow-up surveys; it does not suggest suppression of results."},{"id":"B","text":"Every participant in related studies always fails to recall word lists when sleep is involved.","is_correct":false,"explanation":"Too absolute; the passage compares groups under controlled conditions rather than claiming universal failure."},{"id":"C","text":"The described mechanism could apply beyond the specific example given in the passage.","is_correct":true,"explanation":"When a study isolates a variable and shows a pattern, readers may infer broader applicability while noting stated limitations."},{"id":"D","text":"The passage lists exact retail prices for all consumer goods mentioned in the interviews.","is_correct":false,"explanation":"No pricing information appears; the passage focuses on organizational behavior and logistics."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = 'The passage presents a specific finding with cautions about generalization yet still implies a principle beyond the immediate case. Choice C captures that reasonable inference without treating the study as unlimited proof. Choices A and B overstate or invert what the text supports, while D introduces information the passage never provides.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'b118bba4-f767-432b-98f0-54aeebd296cd';
+UPDATE public.questions SET
+  stimulus_text = 'Marine biologists studying reef ecosystem 9 found that parrotfish grazing limits algae growth, allowing coral larvae to settle on bare rock. Without sustained grazing, fast-growing algae can smother reefs within a single season, turning complex habitat into a uniform green mat. The researchers tracked grazing rates across three seasons and compared sites where parrotfish populations had declined after local fishing pressure. At those sites, coral recruitment—the process by which free-floating larvae attach to hard substrate—dropped sharply even when water temperature and salinity remained stable. The team argues that protecting herbivorous fish is not merely a conservation aesthetic but a functional requirement for reef recovery after bleaching events. Their follow-up surveys showed that small patches of bare rock reappeared only where grazing intensity returned to historical norms.',
+  question_text = 'Which choice can most reasonably be inferred from the passage?',
+  stimulus_type = 'passage',
+  options = '[{"id":"A","text":"The researchers refused to publish any results because the findings contradicted their hypothesis.","is_correct":false,"explanation":"The passage reports published findings and follow-up surveys; it does not suggest suppression of results."},{"id":"B","text":"Every participant in related studies always fails to recall word lists when sleep is involved.","is_correct":false,"explanation":"Too absolute; the passage compares groups under controlled conditions rather than claiming universal failure."},{"id":"C","text":"The described mechanism could apply beyond the specific example given in the passage.","is_correct":true,"explanation":"When a study isolates a variable and shows a pattern, readers may infer broader applicability while noting stated limitations."},{"id":"D","text":"The passage lists exact retail prices for all consumer goods mentioned in the interviews.","is_correct":false,"explanation":"No pricing information appears; the passage focuses on organizational behavior and logistics."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = 'The passage presents a specific finding with cautions about generalization yet still implies a principle beyond the immediate case. Choice C captures that reasonable inference without treating the study as unlimited proof. Choices A and B overstate or invert what the text supports, while D introduces information the passage never provides.',
+  source_metadata = COALESCE(source_metadata, '{}'::jsonb) || '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","english_content_v2":true,"english_content_upgraded_at":"2026-06-12T20:01:56.878Z","english_content_upgrade_method":"upgrade-english-content.mjs"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd434e22a-f28f-4de0-8336-817744251574';
+COMMIT;

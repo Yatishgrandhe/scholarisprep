@@ -1,0 +1,140 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'After $t=25$ hours, how many miles has the car traveled?',
+  stimulus_text = 'A car''s distance $d$ (miles) after $t$ hours is modeled by $d=3t+22$.',
+  options = '[{"id":"A","text":"$94$","is_correct":false,"explanation":"Uses $t-1$ instead of $t=25$."},{"id":"B","text":"$97$","is_correct":true,"explanation":"**Step 1:** Substitute $t=25$. **Step 2:** $d=3(25)+22=97$."},{"id":"C","text":"$98$","is_correct":false,"explanation":"Adds 1 to the correct distance."},{"id":"D","text":"$25$","is_correct":false,"explanation":"Adds slope and intercept instead of evaluating."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Plug in $t=25$: $d=3(25)+22$.
+**Step 2:** Compute: $d=97$ miles.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a5702ed-b0c4-4c05-b273-c8fa330fc610';
+
+UPDATE public.questions SET
+  question_text = 'For what value of $k$ does the equation $5(x-6)+2k = 172$ have solution $x=38$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$5$","is_correct":false,"explanation":"Substituting this $k$ does not yield $x=38$."},{"id":"B","text":"$6$","is_correct":true,"explanation":"Expand: $5x-30+2k=172$ → $5x=190$ → $x=38$ when $k=6$."},{"id":"C","text":"$7$","is_correct":false,"explanation":"Too large; check substitution."},{"id":"D","text":"$38$","is_correct":false,"explanation":"That is $x$, not $k$."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Substitute $x=38$: $5(38-k)+2k=172$.
+**Step 2:** Simplify: $190-5k+2k=172$ → $190+-3k=172$.
+**Step 3:** Solve for $k$: $-3k=-18$ → $k=6$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a58df60-0d86-4d5d-9a80-c6a3b815037b';
+
+UPDATE public.questions SET
+  question_text = 'What is the positive solution to $x^2 - 10x + 24 = 0$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$3$","is_correct":false,"explanation":"Not a root of the quadratic."},{"id":"B","text":"$10$","is_correct":false,"explanation":"Sum of roots, not a root."},{"id":"C","text":"$6$","is_correct":true,"explanation":"**Step 1:** Factor $(x-4)(x-6)=0$. **Step 2:** Positive root is $6$."},{"id":"D","text":"$11$","is_correct":false,"explanation":"Not a solution."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1:** Factor: $(x-4)(x-6)=0$.
+**Step 2:** Roots $x=4$ and $x=6$.
+**Step 3:** Positive solution: $6$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a670401-e36a-42f5-b6b8-ae09a0776129';
+
+UPDATE public.questions SET
+  question_text = 'A survey of 200 students found that 120 students enjoy watching movies, 80 students enjoy reading books, and 60 students enjoy both. How many of the 200 students enjoy neither watching movies nor reading books?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"20","is_correct":false,"explanation":"Choice A (20…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"40","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"60","is_correct":false,"explanation":"Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"100","is_correct":false,"explanation":"Choice D (100…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A survey of 200 students found that 120 students enjoy watching movies, 80 students enjoy reading books, and 60 students enjoy both. How many of the 200 students enjoy neither watching movies nor reading books?
+
+**Step 2 — Solve.** We can use a Venn diagram to solve this problem.  Let M represent the set of students who enjoy watching movies and B represent the set of students who enjoy reading books.  We are given that |M|=120, |B|=80, and |M∩B|=60.  The number of students who enjoy only watching movies is 120 - 60 = 60.  The number of students who enjoy only reading books is 80 - 60 = 20.  The total number of students who enjoy at least one of these activities is 60 + 20 + 60 = 140. Therefore, 200 - 140 = 60 students enjoy neither.
+
+**Step 3 — Select B.** 40
+
+**Distractor analysis:**
+- **A** (20): Choice A (20…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (60): Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (100): Choice D (100…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":88,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_c8","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a696aab-3f14-4235-83fa-8aa04a48ecc1';
+
+UPDATE public.questions SET
+  question_text = 'If $\log_2 8 = x$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"8","is_correct":false,"explanation":"Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $\log_2 8 = x$, what is the value of $x$?
+
+**Step 2 — Solve.** The equation $\log_2 8 = x$ asks: ''To what power must we raise 2 to get 8?''. Since $2^3 = 8$, the value of $x$ is 3.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (8): Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":776,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_a3","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7b6dbf63-59c9-404b-a2a9-fb1846d76b2c';
+
+UPDATE public.questions SET
+  question_text = 'A circle with a radius of 5 units is inscribed in a square. What is the area, in square units, of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a radius of 5 units is inscribed in a square. What is the area, in square units, of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square. Since the radius of the circle is 5 units, the diameter is 10 units.  Therefore, the side length of the square is 10 units, and the area of the square is 10 * 10 = 100 square units.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":13,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"f41b3483","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7b9e2f43-e270-42d1-9181-f0ae1c2eb045';
+
+UPDATE public.questions SET
+  question_text = 'A store sells bags of apples for $\$3.50$ per bag.  If the store makes a profit of $\$0.75$ per bag, what is the cost, in dollars, of each bag of apples?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$\\$2.75$","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"$\\$3.25$","is_correct":false,"explanation":"Choice B ($\\$3.25$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"$\\$4.25$","is_correct":false,"explanation":"Choice C ($\\$4.25$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"$\\$4.75$","is_correct":false,"explanation":"Choice D ($\\$4.75$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** A store sells bags of apples for $\$3.50$ per bag.  If the store makes a profit of $\$0.75$ per bag, what is the cost, in dollars, of each bag of apples?
+
+**Step 2 — Solve.** The cost of a bag of apples is the selling price minus the profit: $\$3.50 - \$0.75 = \$2.75$.
+
+**Step 3 — Select A.** $\$2.75$
+
+**Distractor analysis:**
+- **B** ($\$3.25$): Choice B ($\$3.25$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** ($\$4.25$): Choice C ($\$4.25$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** ($\$4.75$): Choice D ($\$4.75$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":89,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_c3","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7bf85aaf-0a97-4ca3-a28d-b3f869f2f315';
+
+UPDATE public.questions SET
+  question_text = 'A circle with a radius of 5 is inscribed in a square. What is the area of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a radius of 5 is inscribed in a square. What is the area of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square. Since the radius of the circle is 5, the diameter is 10.  The area of the square is side length squared, or 10^2 = 100.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":712,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7c0d6924-aba3-4ba6-b13b-c44da49508e2';
+
+COMMIT;

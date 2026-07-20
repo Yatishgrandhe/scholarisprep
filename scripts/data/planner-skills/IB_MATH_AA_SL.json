@@ -1,0 +1,156 @@
+{
+  "examType": "IB_MATH_AA_SL",
+  "topics": [
+    "Number & algebra",
+    "Functions",
+    "Geometry & trigonometry",
+    "Statistics & probability",
+    "Calculus",
+    "Exam technique & IA exploration",
+    "Integration & review 7"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_number_algebra",
+      "title": "Number & algebra",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_functions",
+      "title": "Functions",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_geometry_trigonometry",
+      "title": "Geometry & trigonometry",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_statistics_probability",
+      "title": "Statistics & probability",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_calculus",
+      "title": "Calculus",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_exam_technique_ia_exploration",
+      "title": "Exam technique & IA exploration",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_integration_review_7",
+      "title": "Integration & review 7",
+      "sort_order": 7
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_MATH_AA_SL:U1_number_algebra",
+      "unit_code": "U1_number_algebra",
+      "title": "Number & algebra",
+      "topics": [
+        "sequences",
+        "exponentials/logs",
+        "binomial",
+        "proof intro"
+      ],
+      "recommended_hours": 7,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_MATH_AA_SL:U2_functions",
+      "unit_code": "U2_functions",
+      "title": "Functions",
+      "topics": [
+        "graphs",
+        "transformations",
+        "inverse",
+        "composites"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AA_SL:U1_number_algebra"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_SL:U3_geometry_trigonometry",
+      "unit_code": "U3_geometry_trigonometry",
+      "title": "Geometry & trigonometry",
+      "topics": [
+        "triangles",
+        "circular functions",
+        "identities",
+        "3D"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AA_SL:U2_functions"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_SL:U4_statistics_probability",
+      "unit_code": "U4_statistics_probability",
+      "title": "Statistics & probability",
+      "topics": [
+        "descriptive",
+        "bivariate",
+        "probability",
+        "distributions"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AA_SL:U3_geometry_trigonometry"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_SL:U5_calculus",
+      "unit_code": "U5_calculus",
+      "title": "Calculus",
+      "topics": [
+        "limits intuition",
+        "differentiation",
+        "integration",
+        "applications"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AA_SL:U4_statistics_probability"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_SL:U6_exam_technique_ia_exploration",
+      "unit_code": "U6_exam_technique_ia_exploration",
+      "title": "Exam technique & IA exploration",
+      "topics": [
+        "Paper 1 no-GDC fluency",
+        "Paper 2 GDC",
+        "exploration structure"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AA_SL:U5_calculus"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_SL:U7_integration_review_7",
+      "unit_code": "U7_integration_review_7",
+      "title": "Integration & review 7",
+      "topics": [
+        "synthesis",
+        "exam practice"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MATH_AA_SL:U6_exam_technique_ia_exploration"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

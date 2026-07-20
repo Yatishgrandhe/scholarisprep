@@ -1,0 +1,550 @@
+/* Practice pages — flat OnePrep-style surfaces on the shared white canvas. */
+
+.shell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+/* ---- Page header: 22px muted icon + bold title ---- */
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.headerIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  margin-top: 5px;
+  color: hsl(var(--muted-foreground));
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  max-width: 60ch;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.headerMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.metaChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+}
+
+.metaChip strong {
+  color: hsl(var(--foreground));
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.limitBanner {
+  padding: var(--space-4);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+/* ---- Practice-mode cards ---- */
+
+.modeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+@media (max-width: 900px) {
+  .modeGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modeCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  transition: border-color 160ms ease;
+}
+
+.modeCard:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+}
+
+.modeCardFeatured {
+  grid-column: span 1;
+}
+
+.modeCardHead {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.modeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.modeTitle {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 4px;
+  color: hsl(var(--foreground));
+}
+
+.modeDesc {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.modeBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldGroup [data-slot="select-trigger"] {
+  width: 100%;
+  justify-content: space-between;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+  cursor: pointer;
+}
+
+.fieldGroup [data-slot="select-trigger"]:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.25);
+}
+
+.fieldGroup [data-slot="select-trigger"]:focus-visible {
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.25);
+}
+
+.fieldGroup [data-slot="select-value"] {
+  color: hsl(var(--foreground));
+}
+
+.fieldLabel {
+  font-size: 0.75rem;
+  font-weight: 650;
+  color: hsl(var(--muted-foreground));
+}
+
+.quotaNote {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.quotaNote strong {
+  color: hsl(var(--foreground));
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Buttons ---- */
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 0.875rem;
+  font-weight: 650;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.primaryBtn:hover:not(:disabled) {
+  background: hsl(var(--accent));
+}
+
+.primaryBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.outlineBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-size: 0.875rem;
+  font-weight: 650;
+  font-family: var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.outlineBtn:hover:not(:disabled) {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.outlineBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Small outline pill CTA used on link cards */
+.linkRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  font-size: 0.8125rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.linkRow:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.secondaryGrid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+@media (max-width: 640px) {
+  .secondaryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Challenge page: standard empty-state card ---- */
+
+.featureShell {
+  max-width: 800px;
+}
+
+.emptyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-10) var(--space-6);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.emptyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: var(--space-4);
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.emptyTitle {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-2);
+  color: hsl(var(--foreground));
+}
+
+.emptyDesc {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 var(--space-5);
+  max-width: 48ch;
+}
+
+.featureActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.featurePrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.featurePrimary:hover {
+  background: hsl(var(--accent));
+}
+
+.featureSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.featureSecondary:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.tipGrid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .tipGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.tipCard {
+  padding: var(--space-4) var(--space-5);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+  transition: border-color 160ms ease;
+}
+
+.tipCard:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+}
+
+.tipCard strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 6px;
+}
+
+.tipCard strong svg {
+  color: hsl(var(--primary));
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: hsl(var(--primary));
+  text-decoration: none;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+/* ---- Bank page ---- */
+
+.bankContent {
+  min-width: 0;
+}
+
+.emptyChallenge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border-radius: 14px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.emptyChallenge p {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.emptyCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 2.5rem;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.emptyCta:hover {
+  filter: brightness(1.05);
+}
+
+/* ---- Loading skeletons (hub) ---- */
+
+.skel {
+  display: block;
+  border-radius: 12px;
+  background: hsl(var(--muted) / 0.6);
+  animation: skelPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes skelPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.skelHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.skelHeaderIcon {
+  width: 22px;
+  height: 22px;
+  margin-top: 5px;
+  border-radius: 6px;
+}
+
+.skelHeaderText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skelTitle {
+  width: 160px;
+  height: 24px;
+  border-radius: 8px;
+}
+
+.skelSub {
+  width: 320px;
+  max-width: 60vw;
+  height: 14px;
+  border-radius: 6px;
+}
+
+.skelCardLg {
+  height: 280px;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+}
+
+.skelCardSm {
+  height: 150px;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+}

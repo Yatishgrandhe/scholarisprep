@@ -1,0 +1,491 @@
+.section {
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+.headingIcon {
+  color: hsl(var(--muted-foreground));
+}
+
+.viewAll {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.viewAll:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+/* Joined stat strip — one bordered container, hairline dividers */
+.strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid hsl(var(--border));
+  border-radius: 16px;
+  background: hsl(var(--card));
+  overflow: hidden;
+}
+
+.cell {
+  position: relative;
+  min-height: 128px;
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.cell + .cell {
+  border-left: 1px solid hsl(var(--border));
+}
+
+@media (max-width: 900px) {
+  .strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cell:nth-child(3) {
+    border-left: none;
+  }
+
+  .cell:nth-child(n + 3) {
+    border-top: 1px solid hsl(var(--border));
+  }
+}
+
+@media (max-width: 480px) {
+  .strip {
+    grid-template-columns: 1fr;
+  }
+
+  .cell + .cell {
+    border-left: none;
+    border-top: 1px solid hsl(var(--border));
+  }
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  margin: var(--space-2) 0 0;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+.cellAction {
+  margin-top: auto;
+  align-self: flex-end;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.cellAction:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.watermark {
+  position: absolute;
+  right: -8px;
+  bottom: -12px;
+  color: hsl(var(--foreground));
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Today's study plan */
+.studySection {
+  min-width: 0;
+}
+
+.studyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+/* Empty state — centered like OnePrep */
+.studyCardEmpty {
+  align-items: center;
+  text-align: center;
+  padding: var(--space-10) var(--space-6);
+  gap: var(--space-2);
+}
+
+.studyTitle {
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+.studySub {
+  font-size: 0.9375rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  line-height: 1.55;
+  max-width: 36ch;
+}
+
+.studyCta,
+.studyCtaPrimary {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0 var(--space-5);
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.studyCardEmpty .studyCtaPrimary {
+  align-self: center;
+  margin-top: var(--space-3);
+}
+
+.studyCta {
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+.studyCta:hover {
+  background: hsl(var(--muted) / 0.4);
+}
+
+.studyCtaPrimary {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.studyCtaPrimary:hover {
+  background: hsl(var(--accent));
+}
+
+.studyExtraLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  justify-content: center;
+}
+
+.schoMascot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  margin-bottom: var(--space-2);
+}
+
+.taskList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.taskRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.taskBadge {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.taskLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskMeta {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Score cards — white + pastel pair */
+.scoreGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.scoreRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.scoreCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-4) var(--space-5);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  text-decoration: none;
+  color: inherit;
+  min-height: 108px;
+  transition: border-color 160ms ease;
+}
+
+a.scoreCard:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+}
+
+.scoreCardPurple {
+  border-color: transparent;
+  background: hsl(var(--exam-sat) / 0.12);
+}
+
+.scoreCardPurple .scoreLabel,
+.scoreCardPurple .scoreNum {
+  color: hsl(262 50% 38%);
+}
+
+.scoreCardNeutral {
+  border-color: hsl(var(--border));
+  background: hsl(var(--muted) / 0.35);
+}
+
+.scoreCardNeutral .scoreLabel,
+.scoreCardNeutral .scoreNum {
+  color: hsl(var(--foreground));
+}
+
+.scoreCardOrange {
+  border-color: transparent;
+  background: hsl(32 95% 58% / 0.16);
+}
+
+.scoreCardOrange .scoreLabel,
+.scoreCardOrange .scoreNum {
+  color: hsl(28 60% 35%);
+}
+
+:global(.dark) .scoreCardPurple {
+  background: hsl(var(--exam-sat) / 0.16);
+}
+
+:global(.dark) .scoreCardPurple .scoreLabel,
+:global(.dark) .scoreCardPurple .scoreNum {
+  color: hsl(262 80% 82%);
+}
+
+:global(.dark) .scoreCardOrange {
+  background: hsl(32 90% 55% / 0.14);
+}
+
+:global(.dark) .scoreCardOrange .scoreLabel,
+:global(.dark) .scoreCardOrange .scoreNum {
+  color: hsl(34 90% 74%);
+}
+
+.scoreLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.scoreNum {
+  font-size: 2rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  margin: var(--space-2) 0 0;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+.setGoal {
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+}
+
+.setGoal:hover {
+  background: hsl(var(--muted) / 0.5);
+}
+
+@media (max-width: 960px) {
+  .scoreRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .viewAll {
+    min-height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 14px;
+  }
+
+  .cell {
+    min-height: 112px;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .cellAction {
+    min-height: 2.25rem;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .statValue {
+    font-size: 1.625rem;
+  }
+
+  .taskRow {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--space-2) var(--space-3);
+    padding: var(--space-3);
+  }
+
+  .taskBadge {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .taskLabel {
+    grid-column: 2;
+    grid-row: 1;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .taskMeta {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .studyCard {
+    padding: var(--space-4);
+  }
+
+  .studyCardEmpty {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .studyCta,
+  .studyCtaPrimary {
+    width: 100%;
+    min-height: 2.75rem;
+    align-self: stretch;
+  }
+
+  .scoreNum {
+    font-size: 1.625rem;
+  }
+
+  .setGoal {
+    min-height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .scoreRow {
+    grid-template-columns: 1fr;
+  }
+}

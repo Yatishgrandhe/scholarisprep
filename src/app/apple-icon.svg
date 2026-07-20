@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <rect width="180" height="180" rx="40" fill="#ffffff"/>
+  <circle
+    cx="90"
+    cy="90"
+    r="68"
+    stroke="#2563eb"
+    stroke-width="14"
+    stroke-dasharray="340 100"
+    stroke-linecap="round"
+  />
+  <circle cx="90" cy="90" r="22" fill="#2563eb"/>
+</svg>

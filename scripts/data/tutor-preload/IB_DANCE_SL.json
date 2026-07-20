@@ -1,0 +1,49 @@
+{
+  "exam_type": "IB_DANCE_SL",
+  "display_name": "IB Dance SL",
+  "units": [
+    "Composition & improvisation",
+    "Performance skills",
+    "Dance in context / investigation",
+    "Movement analysis",
+    "Choreographic processes",
+    "Presentation & production",
+    "Process journal & documentation"
+  ],
+  "command_terms": [
+    "analyse",
+    "compare",
+    "evaluate",
+    "reflect",
+    "contextualize",
+    "curate",
+    "interpret"
+  ],
+  "misconceptions": [
+    "description without analysis",
+    "weak link between process and intention",
+    "checklist curation"
+  ],
+  "paper_rules": [
+    "Internal Assessment: follow IB command terms; show working where marks require it",
+    "External Assessment: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_composition_improvisation skill focus: motif",
+    "Keep unit_code=U2_performance_skills skill focus: technique",
+    "Keep unit_code=U3_dance_in_context_investigation skill focus: cultures",
+    "Keep unit_code=U4_movement_analysis skill focus: Laban-inspired vocabulary",
+    "Keep unit_code=U5_choreographic_processes skill focus: intent",
+    "Keep unit_code=U6_presentation_production skill focus: staging",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

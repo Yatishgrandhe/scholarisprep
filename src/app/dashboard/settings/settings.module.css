@@ -1,0 +1,565 @@
+/* Settings — flat stacked section cards; shared list/button tokens */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.headerIcon {
+  color: hsl(var(--muted-foreground));
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.subtitle {
+  margin: var(--space-1) 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 760px;
+}
+
+/* Section cards */
+.card {
+  padding: var(--space-5);
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-lg);
+  background: hsl(var(--card));
+  min-width: 0;
+}
+
+.cardTitle {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0 0 var(--space-1);
+  color: hsl(var(--foreground));
+}
+
+.cardDesc {
+  margin: 0 0 var(--space-4);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+  max-width: 56ch;
+}
+
+.examsCard .cardDesc {
+  margin-bottom: var(--space-3);
+}
+
+.hint {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 var(--space-3);
+  line-height: 1.45;
+}
+
+.hint:last-child {
+  margin-bottom: 0;
+}
+
+/* Profile */
+.avatarRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.1);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarMeta {
+  flex: 1;
+  min-width: 0;
+}
+
+.profileName {
+  margin: 0 0 2px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+.profileEmail {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Hairline-divided info list — same shell as ManageExams .list */
+.infoList {
+  margin: 0;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.infoRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid hsl(var(--border));
+}
+
+.infoRow:first-child {
+  border-top: none;
+}
+
+.infoList dt {
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: hsl(var(--muted-foreground));
+}
+
+.infoList dd {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: right;
+  color: hsl(var(--foreground));
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Appearance */
+.themeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  max-width: 420px;
+}
+
+.themeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  color: hsl(var(--foreground));
+  text-align: left;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.themeCard:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+}
+
+.themeCard:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px hsl(var(--background)),
+    0 0 0 4px hsl(var(--ring));
+}
+
+:global(.dark) .themeCard:hover {
+  border-color: hsl(222 14% 34%);
+}
+
+.themeCardActive,
+.themeCardActive:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.06);
+}
+
+.themePreview {
+  position: relative;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid hsl(var(--border));
+  overflow: hidden;
+}
+
+.themePreviewLight {
+  background: #f1f5f9;
+}
+
+.themePreviewDark {
+  background: hsl(222 28% 12%);
+}
+
+.themePreviewSystem {
+  background: #f1f5f9;
+}
+
+.themePreviewSystem::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: hsl(222 28% 12%);
+}
+
+/* Toggles — one bordered container, hairline rows */
+.toggleList {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  max-width: 480px;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid hsl(var(--border));
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.toggleRow:first-child {
+  border-top: none;
+}
+
+.toggleRow:hover {
+  background: hsl(var(--muted) / 0.4);
+}
+
+.toggleRow span:first-child {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.toggleInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggleSwitch {
+  position: relative;
+  width: 44px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+
+.toggleSwitch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  transition: transform var(--transition-fast);
+}
+
+.toggleInput:checked + .toggleSwitch {
+  background: hsl(var(--primary));
+  border-color: hsl(var(--primary));
+}
+
+.toggleInput:checked + .toggleSwitch::after {
+  transform: translateX(18px);
+  border-color: transparent;
+}
+
+.toggleInput:focus-visible + .toggleSwitch {
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.12);
+}
+
+/* Plan */
+.planBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin: 0 0 var(--space-3);
+}
+
+.planActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  align-items: center;
+}
+
+.keyInput {
+  flex: 1 1 16rem;
+  min-width: 0;
+  min-height: 2.5rem;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1.5px solid hsl(var(--border));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-size: 0.875rem;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.keyInput:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.12);
+}
+
+.inlineLink {
+  color: hsl(var(--primary));
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inlineLink:hover {
+  text-decoration: underline;
+}
+
+/* Danger zone */
+.dangerCard {
+  border-color: hsl(var(--destructive) / 0.35);
+  background: hsl(var(--destructive) / 0.04);
+}
+
+.dangerTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: hsl(var(--destructive));
+}
+
+.resetStack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.resetBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1.5px solid hsl(var(--destructive) / 0.35);
+  background: transparent;
+  color: hsl(var(--destructive));
+  font-weight: 650;
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.resetBtn:hover:not(:disabled) {
+  background: hsl(var(--destructive) / 0.1);
+}
+
+.resetBtn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px hsl(var(--background)),
+    0 0 0 4px hsl(var(--ring));
+}
+
+.resetBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Account actions — same outline chrome as ManageExams .switchBtn */
+.logoutBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.5rem;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1.5px solid hsl(var(--border));
+  background: hsl(var(--card));
+  text-decoration: none;
+  color: hsl(var(--foreground));
+  font-weight: 650;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.logoutBtn:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.logoutBtn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px hsl(var(--background)),
+    0 0 0 4px hsl(var(--ring));
+}
+
+:global(.dark) .logoutBtn:hover {
+  border-color: hsl(222 14% 34%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .themeCard,
+  .toggleRow,
+  .toggleSwitch,
+  .toggleSwitch::after,
+  .keyInput,
+  .resetBtn,
+  .logoutBtn {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    gap: var(--space-4);
+  }
+
+  .title {
+    font-size: 1.375rem;
+  }
+
+  .card {
+    padding: var(--space-4);
+  }
+
+  .avatarRow {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .themeGrid {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .themeCard {
+    flex-direction: row;
+    align-items: center;
+    min-height: 52px;
+    gap: var(--space-3);
+  }
+
+  .themePreview {
+    width: 72px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .toggleList {
+    max-width: none;
+  }
+
+  .toggleRow {
+    min-height: 52px;
+    gap: var(--space-3);
+  }
+
+  .infoRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+
+  .infoList dd {
+    text-align: left;
+  }
+
+  .planActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .keyInput {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .resetBtn,
+  .logoutBtn {
+    width: 100%;
+    justify-content: center;
+    min-height: 2.75rem;
+  }
+
+  .resetStack {
+    width: 100%;
+    align-items: stretch;
+  }
+}

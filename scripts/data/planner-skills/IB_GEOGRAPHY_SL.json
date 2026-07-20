@@ -1,0 +1,177 @@
+{
+  "examType": "IB_GEOGRAPHY_SL",
+  "topics": [
+    "Geographic skills & data",
+    "Population & changing places",
+    "Global climate & vulnerability",
+    "Global resource consumption",
+    "Power, places and networks",
+    "Human development & diversity",
+    "Risks and resilience",
+    "Fieldwork / IA skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_geographic_skills_data",
+      "title": "Geographic skills & data",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_population_changing_places",
+      "title": "Population & changing places",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_global_climate_vulnerability",
+      "title": "Global climate & vulnerability",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_global_resource_consumption",
+      "title": "Global resource consumption",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_power_places_and_networks",
+      "title": "Power, places and networks",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_human_development_diversity",
+      "title": "Human development & diversity",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_risks_and_resilience",
+      "title": "Risks and resilience",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_fieldwork_ia_skills",
+      "title": "Fieldwork / IA skills",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_GEOGRAPHY_SL:U1_geographic_skills_data",
+      "unit_code": "U1_geographic_skills_data",
+      "title": "Geographic skills & data",
+      "topics": [
+        "maps",
+        "graphs",
+        "GIS basics",
+        "fieldwork methods"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_GEOGRAPHY_SL:U2_population_changing_places",
+      "unit_code": "U2_population_changing_places",
+      "title": "Population & changing places",
+      "topics": [
+        "demographic transition",
+        "migration",
+        "urbanization",
+        "place identity"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_GEOGRAPHY_SL:U1_geographic_skills_data"
+      ]
+    },
+    {
+      "skill_id": "IB_GEOGRAPHY_SL:U3_global_climate_vulnerability",
+      "unit_code": "U3_global_climate_vulnerability",
+      "title": "Global climate & vulnerability",
+      "topics": [
+        "atmosphere\u2013ocean",
+        "impacts",
+        "adaptation",
+        "mitigation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_GEOGRAPHY_SL:U2_population_changing_places"
+      ]
+    },
+    {
+      "skill_id": "IB_GEOGRAPHY_SL:U4_global_resource_consumption",
+      "unit_code": "U4_global_resource_consumption",
+      "title": "Global resource consumption",
+      "topics": [
+        "water",
+        "energy",
+        "food",
+        "circular economy"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_GEOGRAPHY_SL:U3_global_climate_vulnerability"
+      ]
+    },
+    {
+      "skill_id": "IB_GEOGRAPHY_SL:U5_power_places_and_networks",
+      "unit_code": "U5_power_places_and_networks",
+      "title": "Power, places and networks",
+      "topics": [
+        "global interactions",
+        "superpowers",
+        "flows of capital/labour/ideas"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_GEOGRAPHY_SL:U4_global_resource_consumption"
+      ]
+    },
+    {
+      "skill_id": "IB_GEOGRAPHY_SL:U6_human_development_diversity",
+      "unit_code": "U6_human_development_diversity",
+      "title": "Human development & diversity",
+      "topics": [
+        "development indicators",
+        "inequality",
+        "cultural traits"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_GEOGRAPHY_SL:U5_power_places_and_networks"
+      ]
+    },
+    {
+      "skill_id": "IB_GEOGRAPHY_SL:U7_risks_and_resilience",
+      "unit_code": "U7_risks_and_resilience",
+      "title": "Risks and resilience",
+      "topics": [
+        "hazards",
+        "vulnerability",
+        "disaster risk reduction"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_GEOGRAPHY_SL:U6_human_development_diversity"
+      ]
+    },
+    {
+      "skill_id": "IB_GEOGRAPHY_SL:U8_fieldwork_ia_skills",
+      "unit_code": "U8_fieldwork_ia_skills",
+      "title": "Fieldwork / IA skills",
+      "topics": [
+        "hypothesis",
+        "data collection",
+        "analysis",
+        "evaluation"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_GEOGRAPHY_SL:U7_risks_and_resilience"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

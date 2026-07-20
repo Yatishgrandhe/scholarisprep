@@ -1,0 +1,72 @@
+.card {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+  max-width: 560px;
+  padding: var(--space-6);
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.08) 0%,
+    hsl(var(--card)) 55%
+  );
+  color: hsl(var(--card-foreground));
+  box-shadow: var(--shadow-sm);
+}
+
+.iconWrap {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: hsl(var(--primary) / 0.15);
+  color: hsl(var(--primary));
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 0;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: hsl(var(--primary));
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-display, var(--font-body));
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+.description {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.price {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+.error {
+  font-size: 0.875rem;
+  color: hsl(var(--destructive));
+  margin: 0;
+}

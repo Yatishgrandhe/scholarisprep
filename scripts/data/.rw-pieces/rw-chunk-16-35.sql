@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('ff87c07c-04da-4a24-8cc0-aa75487bc445', 'Which choice completes the text with the most logical transition?', 'Early radio engineers believed that broadcasts could not travel far beyond the horizon because radio waves moved in straight lines. Operators kept receiving signals from stations hundreds of miles away, ______ a puzzle that pointed to an unseen layer of the atmosphere reflecting the waves back to earth.', NULL, '[{"id":"A","text":"yet they kept receiving","is_correct":false,"explanation":"Incorrect: this rewrites the sentence and does not function as a transition phrase in the blank."},{"id":"B","text":"in short,","is_correct":false,"explanation":"Incorrect: the clause introduces new, surprising data rather than summarizing."},{"id":"C","text":"nonetheless,","is_correct":true,"explanation":"Correct: it marks that the far-off signals occurred despite the straight-line prediction."},{"id":"D","text":"consequently,","is_correct":false,"explanation":"Incorrect: receiving distant signals is not a consequence of waves moving in straight lines."}]'::jsonb, 'C', 'Step 1 — Locate the expectation
+Engineers expected signals could not travel far because waves {{yellow:moved in straight lines}}.
+Step 2 — Signal the surprise
+Distant signals defied that expectation, so a concessive contrast like ''nonetheless'' fits.
+Distractor analysis:
+- A: it is not a standalone transition and breaks the sentence structure.
+- B: ''in short'' summarizes, but the clause adds surprising new evidence.
+- D: ''consequently'' implies the distant signals followed from straight-line travel, the opposite of the puzzle.', 'Did the distant signals match or defy the straight-line prediction?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

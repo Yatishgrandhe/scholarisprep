@@ -1,0 +1,8 @@
+{
+  "successfulBatches": 99,
+  "failedBatches": [],
+  "failures": 0,
+  "verify": {
+    "error": "SyntaxError: Expected property name or '}' in JSON at position 2 (line 1 column 3)"
+  }
+}

@@ -1,0 +1,333 @@
+.section {
+  padding: 96px 20px;
+  background: hsl(var(--background));
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.6vw, 48px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: hsl(var(--foreground));
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+
+.title em {
+  font-style: italic;
+  color: hsl(var(--primary));
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+  max-width: 520px;
+  margin: 0 auto;
+  text-wrap: pretty;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cardWide {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(
+    180deg,
+    hsl(var(--card)) 0%,
+    hsl(var(--muted) / 0.35) 100%
+  );
+  overflow: hidden;
+  transition: border-color 220ms ease, box-shadow 220ms ease,
+    transform 220ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.card:hover {
+  border-color: hsl(var(--primary) / 0.45);
+  box-shadow: 0 22px 50px -22px hsl(var(--primary) / 0.3);
+  transform: translateY(-6px);
+}
+
+/* Icon lifts and saturates with the card for a layered hover. */
+.card .cardIcon {
+  transition: transform 220ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    background-color 220ms ease, color 220ms ease;
+}
+
+.card:hover .cardIcon {
+  transform: translateY(-2px) scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card:hover,
+  .card .cardIcon,
+  .card:hover .cardIcon {
+    transition: none;
+    transform: none;
+  }
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  margin-bottom: 2px;
+}
+
+.iconScho {
+  background: hsl(var(--exam-sat) / 0.12);
+  color: hsl(var(--exam-sat));
+}
+
+.iconAnalytics {
+  background: hsl(142 70% 45% / 0.12);
+  color: hsl(142 70% 36%);
+}
+
+.iconRush {
+  background: hsl(32 95% 50% / 0.13);
+  color: hsl(32 90% 42%);
+}
+
+.iconFree {
+  background: hsl(340 80% 55% / 0.11);
+  color: hsl(340 75% 50%);
+}
+
+.iconCalc {
+  background: hsl(200 90% 48% / 0.12);
+  color: hsl(200 85% 42%);
+}
+
+.cardTitle {
+  font-size: 17.5px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: hsl(var(--foreground));
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cardText {
+  font-size: 14px;
+  line-height: 1.65;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 650;
+  color: hsl(var(--primary));
+  text-decoration: none;
+  margin-top: auto;
+  width: fit-content;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Question bank visual */
+.bankVisual {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+}
+
+.bankLine {
+  height: 9px;
+  border-radius: 999px;
+  background: hsl(var(--muted-foreground) / 0.18);
+}
+
+.bankChoices {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.bankChoice {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid hsl(var(--muted-foreground) / 0.35);
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(var(--muted-foreground));
+}
+
+.bankChoiceActive {
+  background: hsl(var(--primary));
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Scho chat mock */
+.chatMock {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 6px;
+}
+
+.chatUser,
+.chatScho {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 8px 12px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.chatUser {
+  align-self: flex-end;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-bottom-right-radius: 4px;
+  font-weight: 600;
+}
+
+.chatScho {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  border-bottom-left-radius: 4px;
+  max-width: 100%;
+}
+
+/* Analytics heat grid */
+.heatGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.heatGrid span {
+  aspect-ratio: 1;
+  border-radius: 6px;
+}
+
+.heatHigh {
+  background: hsl(142 70% 45% / 0.75);
+}
+
+.heatMid {
+  background: hsl(142 70% 45% / 0.35);
+}
+
+.heatLow {
+  background: hsl(32 95% 55% / 0.45);
+}
+
+/* Rush timer */
+.rushTimer {
+  font-family: var(--font-display);
+  font-size: 42px;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
+  color: hsl(32 90% 45%);
+  line-height: 1;
+  margin-top: 4px;
+}
+
+:global(.dark) .card {
+  background: linear-gradient(
+    180deg,
+    hsl(222 26% 13.5%) 0%,
+    hsl(222 28% 11%) 100%
+  );
+  border-color: hsl(0 0% 100% / 0.09);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.05);
+}
+
+:global(.dark) .card:hover {
+  border-color: hsl(var(--primary) / 0.45);
+  box-shadow:
+    inset 0 1px 0 hsl(0 0% 100% / 0.05),
+    0 18px 44px -18px hsl(0 0% 0% / 0.7);
+}
+
+:global(.dark) .bankVisual {
+  background: hsl(222 30% 9%);
+  border-color: hsl(0 0% 100% / 0.08);
+}
+
+:global(.dark) .iconAnalytics {
+  color: hsl(142 65% 55%);
+}
+
+:global(.dark) .iconRush {
+  color: hsl(32 90% 60%);
+}
+
+:global(.dark) .iconFree {
+  color: hsl(340 80% 65%);
+}
+
+:global(.dark) .iconCalc {
+  color: hsl(200 85% 60%);
+}
+
+:global(.dark) .rushTimer {
+  color: hsl(32 90% 60%);
+}

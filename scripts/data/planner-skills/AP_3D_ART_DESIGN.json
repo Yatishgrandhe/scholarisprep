@@ -1,0 +1,77 @@
+{
+  "exam_type": "AP_3D_ART_DESIGN",
+  "skills": [
+    {
+      "id": "AP_3D_ART_DESIGN_U1_inquiry_frame",
+      "unit_code": "U1",
+      "label": "Frame Investigation Question",
+      "description": "Pose a focused sustained-investigation question suited to 3-D design (form, space, structure)."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U1_materials_plan",
+      "unit_code": "U1",
+      "label": "Plan Materials Exploration",
+      "description": "Map materials/processes to try and how to document them."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U2_experiment",
+      "unit_code": "U2",
+      "label": "Experiment Deliberately",
+      "description": "Design trials that test ideas, not only polish."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U2_revise",
+      "unit_code": "U2",
+      "label": "Revise from Critique",
+      "description": "Use feedback to change form, process, or concept."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U3_curate_selected",
+      "unit_code": "U3",
+      "label": "Curate Selected Works",
+      "description": "Choose works that best demonstrate skill and idea range."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U3_document_work",
+      "unit_code": "U3",
+      "label": "Document Works Clearly",
+      "description": "Photograph/present pieces so skill and intent read well."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U4_sustained_series",
+      "unit_code": "U4",
+      "label": "Build Sustained Series",
+      "description": "Show inquiry developing across a related body of work."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U4_synthesize_ideas",
+      "unit_code": "U4",
+      "label": "Synthesize Ideas and Materials",
+      "description": "Unite concept with medium-specific choices."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U5_write_evidence",
+      "unit_code": "U5",
+      "label": "Write Portfolio Evidence",
+      "description": "State inquiry, materials, and processes clearly and briefly."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U5_link_image_idea",
+      "unit_code": "U5",
+      "label": "Link Images to Ideas",
+      "description": "Explain how specific works advance the investigation."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U6_critique",
+      "unit_code": "U6",
+      "label": "Run Structured Critique",
+      "description": "Give/receive critique tied to inquiry and skill goals."
+    },
+    {
+      "id": "AP_3D_ART_DESIGN_U6_portfolio_audit",
+      "unit_code": "U6",
+      "label": "Audit Portfolio Alignment",
+      "description": "Check that images and writing meet portfolio criteria."
+    }
+  ]
+}

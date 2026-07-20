@@ -1,0 +1,59 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.sm {
+  padding: 1px 7px;
+  font-size: 0.6875rem;
+}
+
+.easy {
+  background: hsl(var(--score-positive) / 0.14);
+  color: hsl(142 72% 32%);
+  border-color: hsl(var(--score-positive) / 0.22);
+}
+
+.medium {
+  background: hsl(38 92% 50% / 0.16);
+  color: hsl(32 80% 38%);
+  border-color: hsl(38 92% 50% / 0.28);
+}
+
+.hard {
+  background: hsl(var(--destructive) / 0.12);
+  color: hsl(var(--destructive));
+  border-color: hsl(var(--destructive) / 0.22);
+}
+
+.challenge {
+  background: hsl(262 60% 48% / 0.12);
+  color: hsl(262 55% 38%);
+  border-color: hsl(262 60% 48% / 0.28);
+}
+
+:global(.dark) .easy {
+  color: hsl(142 65% 60%);
+}
+
+:global(.dark) .medium {
+  color: hsl(38 92% 62%);
+}
+
+:global(.dark) .hard {
+  color: hsl(0 80% 70%);
+}
+
+:global(.dark) .challenge {
+  color: hsl(262 70% 72%);
+}

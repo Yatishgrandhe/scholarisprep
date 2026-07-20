@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('d5b90c7f-918f-45d9-8943-96515e511c9a', 'Which choice completes the text with the most logical transition?', 'Coral reefs cover less than one percent of the ocean floor. Yet they provide shelter and food for roughly a quarter of all marine species. ______ scientists often call them the rainforests of the sea.', NULL, '[{"id":"A","text":"For this reason,","is_correct":true,"explanation":"Correct: the nickname follows from reefs supporting so much life despite their small size."},{"id":"B","text":"Nevertheless,","is_correct":false,"explanation":"Wrong: the nickname agrees with the reefs'' richness rather than contrasting it."},{"id":"C","text":"In the meantime,","is_correct":false,"explanation":"Wrong: ''In the meantime'' marks a time gap, not a logical consequence."},{"id":"D","text":"Admittedly,","is_correct":false,"explanation":"Wrong: ''Admittedly'' concedes a point, but no concession is being made."}]'::jsonb, 'A', 'Step 1 — Identify the key fact
+The text notes reefs support {{yellow:roughly a quarter of all marine species}} despite their tiny area.
+Step 2 — Choose the causal transition
+Because that richness explains the nickname, ''For this reason'' links the fact to the name.
+Distractor analysis:
+- B: ''Nevertheless'' marks contrast, but the nickname agrees with the richness.
+- C: ''In the meantime'' marks time, not cause.
+- D: ''Admittedly'' concedes a point, but none is conceded.', 'Why would scientists give reefs that nickname?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

@@ -1,0 +1,164 @@
+{
+  "exam_type": "AP_PHYSICS_1",
+  "display_name": "AP Physics 1: Algebra-Based",
+  "family": "AP",
+  "units": [
+    {
+      "unit_code": "U1_kinematics",
+      "unit_name": "Kinematics",
+      "topics": [
+        "1D motion",
+        "vectors",
+        "projectile motion",
+        "relative velocity"
+      ]
+    },
+    {
+      "unit_code": "U2_dynamics",
+      "unit_name": "Dynamics",
+      "topics": [
+        "Newton's laws",
+        "friction",
+        "systems",
+        "FBD"
+      ]
+    },
+    {
+      "unit_code": "U3_circular_motion_and_gravitation",
+      "unit_name": "Circular Motion and Gravitation",
+      "topics": [
+        "uniform circular motion",
+        "gravitation",
+        "orbits"
+      ]
+    },
+    {
+      "unit_code": "U4_energy",
+      "unit_name": "Energy",
+      "topics": [
+        "work",
+        "kinetic/potential",
+        "conservation",
+        "power"
+      ]
+    },
+    {
+      "unit_code": "U5_momentum",
+      "unit_name": "Momentum",
+      "topics": [
+        "impulse",
+        "collisions",
+        "center of mass"
+      ]
+    },
+    {
+      "unit_code": "U6_simple_harmonic_motion",
+      "unit_name": "Simple Harmonic Motion",
+      "topics": [
+        "springs",
+        "pendulums",
+        "energy in SHM"
+      ]
+    },
+    {
+      "unit_code": "U7_torque_and_rotational_motion",
+      "unit_name": "Torque and Rotational Motion",
+      "topics": [
+        "torque",
+        "rotational kinematics",
+        "angular momentum"
+      ]
+    },
+    {
+      "unit_code": "U8_fluids",
+      "unit_name": "Fluids",
+      "topics": [
+        "density",
+        "pressure",
+        "buoyancy",
+        "continuity/Bernoulli"
+      ]
+    }
+  ],
+  "command_terms": [
+    "justify",
+    "derive",
+    "calculate",
+    "explain",
+    "rank",
+    "describe the experimental procedure",
+    "indicate direction"
+  ],
+  "misconceptions": [
+    "Confusing velocity and acceleration directions",
+    "Treating net force as always in direction of velocity",
+    "Mixing energy and momentum conservation conditions",
+    "Ignoring system definition in work/energy",
+    "Sign errors with Lenz's law / induced current"
+  ],
+  "paper_rules": [
+    "Show symbolic work before plugging numbers",
+    "Include units and significant figures appropriately",
+    "Label free-body and energy bar charts clearly",
+    "FRQ may require experimental design and uncertainty language"
+  ],
+  "calculator": {
+    "policy": "scientific",
+    "notes": "Scientific calculator per exam rules",
+    "section_rules": [
+      {
+        "section": "mcq",
+        "calculator_allowed": true
+      },
+      {
+        "section": "frq",
+        "calculator_allowed": true
+      }
+    ],
+    "per_question_default": true,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "Include **In Desmos.** only when calculator_allowed and a graph/numeric check helps; scientific-only courses: numeric keypad steps, not graphing.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "AP CED-aligned item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Match AP task model for the unit"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": {
+    "title": "AP Physics 1: Algebra-Based equation & lab reminders",
+    "sections": [
+      "Kinematics / dynamics symbol glossary",
+      "Energy, momentum, rotation relations",
+      "Circuit / field equations (as applicable)",
+      "Experimental design checklist (IV/DV, uncertainty)"
+    ]
+  }
+}

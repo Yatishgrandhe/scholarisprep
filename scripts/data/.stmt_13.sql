@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('6353aa1d-d641-4fb6-b5a5-d851a30e05a9', 'Which choice completes the text with the most logical and precise word or phrase?', 'When the young pianist walked onto the stage, the audience fell silent. Critics had praised her technical skill for years, but tonight she played with a new warmth that surprised everyone. The cold precision of her earlier performances was gone. Instead, every note seemed ______, as if she were speaking directly to each listener in the hall.', NULL, '[{"id":"A","text":"mechanical","is_correct":false,"explanation":"Reverse: ''mechanical'' matches the ''cold precision'' she had abandoned, not her new warmth."},{"id":"B","text":"heartfelt","is_correct":true,"explanation":"Correct: ''warmth'' and ''speaking directly to each listener'' point to emotionally sincere, heartfelt playing."},{"id":"C","text":"rushed","is_correct":false,"explanation":"No evidence: nothing suggests she played too fast."},{"id":"D","text":"quiet","is_correct":false,"explanation":"Too narrow: silence describes the audience, not the emotional quality of her notes."}]'::jsonb, 'B', 'Step 1 — Find the clue
+The text says she now played with {{yellow:a new warmth that surprised everyone}} and that the cold precision was gone.
+Step 2 — Match the word
+Warmth that feels like speaking directly to listeners is heartfelt, sincere playing, so ''heartfelt'' fits.
+Distractor analysis:
+- A: ''Mechanical'' describes the cold precision she left behind, the opposite of warmth.
+- C: ''Rushed'' has no support in the passage.
+- D: ''Quiet'' describes the audience''s silence, not the emotional character of the notes.', 'Contrast it with the ''cold precision'' she used to have.', 'Craft and Structure', 'Words in Context', 'reading_writing', 'craft', 'WIC', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

@@ -1,0 +1,117 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'The graph of $y = \frac{1}{x - 2}$ has a vertical asymptote at $x = k$. What is the value of $k$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-2","is_correct":false,"explanation":"Choice A (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"0","is_correct":false,"explanation":"Choice C (0…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"1","is_correct":false,"explanation":"Choice D (1…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** The graph of $y = \frac{1}{x - 2}$ has a vertical asymptote at $x = k$. What is the value of $k$?
+
+**Step 2 — Solve.** A vertical asymptote occurs where the denominator of a rational function equals zero.  In this case, the denominator is $x - 2$, and it equals zero when $x = 2$. Therefore, the value of $k$ is 2.
+
+**Step 3 — Select B.** 2
+
+**Distractor analysis:**
+- **A** (-2): Choice A (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (0): Choice C (0…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (1): Choice D (1…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":614,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_c2","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '12e34e34-f4e4-415b-9e11-7992579333cd';
+
+UPDATE public.questions SET
+  question_text = 'Which value of $x$ satisfies $7x + 8 > 208$ and represents a feasible weight?',
+  stimulus_text = 'A package must weigh more than 208 grams but at most 221 grams to ship.',
+  options = '[{"id":"A","text":"$26$","is_correct":false,"explanation":"Too small: $7(26)+8=190$."},{"id":"B","text":"$27$","is_correct":false,"explanation":"Still below threshold 208."},{"id":"C","text":"$28$","is_correct":false,"explanation":"Borderline; check strict inequality."},{"id":"D","text":"$29$","is_correct":true,"explanation":"**Step 1:** $7x > 200$. **Step 2:** $x > 28.571428571428573$. Smallest integer choice: 29."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Isolate: $7x > 200$.
+**Step 2:** $x > 28.57$.
+**Step 3:** Among choices, $29$ is the smallest valid value.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '12f0a0ca-31fa-4979-ade1-c20647a76cd2';
+
+UPDATE public.questions SET
+  question_text = 'After $t=9$ hours, how many miles has the car traveled?',
+  stimulus_text = 'A car''s distance $d$ (miles) after $t$ hours is modeled by $d=5t+6$.',
+  options = '[{"id":"A","text":"$46$","is_correct":false,"explanation":"Uses $t-1$ instead of $t=9$."},{"id":"B","text":"$51$","is_correct":true,"explanation":"**Step 1:** Substitute $t=9$. **Step 2:** $d=5(9)+6=51$."},{"id":"C","text":"$52$","is_correct":false,"explanation":"Adds 1 to the correct distance."},{"id":"D","text":"$11$","is_correct":false,"explanation":"Adds slope and intercept instead of evaluating."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Plug in $t=9$: $d=5(9)+6$.
+**Step 2:** Compute: $d=51$ miles.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '13189f46-34a9-4144-ae3c-51217df8fcf0';
+
+UPDATE public.questions SET
+  question_text = 'How many milliliters of substance A are in the mixture?',
+  stimulus_text = 'A chemist mixes substances A and B in ratio $4:7$ to make 300 milliliters of solution.',
+  options = '[{"id":"A","text":"$106$","is_correct":false,"explanation":"Underestimates A''s share."},{"id":"B","text":"$108$","is_correct":false,"explanation":"Close but ratio arithmetic is off."},{"id":"C","text":"$109$","is_correct":true,"explanation":"**Step 1:** A''s fraction $\\frac{4}{11}$. **Step 2:** $\\frac{4}{11}×300=109$."},{"id":"D","text":"$300$","is_correct":false,"explanation":"That is the total volume."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1:** A''s share: $\frac{4}{11}$ of 300.
+**Step 2:** $\frac{4}{11}×300=109$ mL.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '1339b1bf-1cf8-417c-a8f7-21ead069bb9b';
+
+UPDATE public.questions SET
+  question_text = 'Which expression is equivalent to $(4x+15)^2 - (4x-15)^2$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$240x$","is_correct":true,"explanation":"**Step 1:** Difference of squares in disguise: $(u+v)(u-v)$ with $u=4x+15$, $v=4x-15$ → $240x$."},{"id":"B","text":"$8x^2$","is_correct":false,"explanation":"Squares each binomial separately — wrong approach."},{"id":"C","text":"$60x$","is_correct":false,"explanation":"Uses $4b$ instead of $4ab$."},{"id":"D","text":"$16x^2+225$","is_correct":false,"explanation":"Adds squares; not equivalent."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Let $u=4x+15$, $v=4x-15$.
+**Step 2:** $u^2-v^2=(u+v)(u-v)=(8x)(30)=240x$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '136a4098-af0d-481f-baa9-615e3f8aa722';
+
+UPDATE public.questions SET
+  question_text = 'If the final reading is 201 when $r=28$, and the process is modeled by $7r+5$, what value of $x$ satisfies $7x+5=201$?',
+  stimulus_text = 'A technician adjusts a sensor reading. First the raw value $r$ is scaled by 7, then 5 is added.',
+  options = '[{"id":"A","text":"$31$","is_correct":false,"explanation":"After subtracting 5, divide by 7; this is too small."},{"id":"B","text":"$32$","is_correct":false,"explanation":"One less than the correct value."},{"id":"C","text":"$33$","is_correct":true,"explanation":"**Step 1:** $7x = 196$. **Step 2:** $x = 33$."},{"id":"D","text":"$7$","is_correct":false,"explanation":"That is the scale factor, not $x$."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1:** Subtract 5: $7x=196$.
+**Step 2:** Divide by 7: $x=33$.
+**Step 3:** Verify: $7(33)+5=201$.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '1374e0d2-f398-4ffd-a57f-3475066edf58';
+
+UPDATE public.questions SET
+  question_text = 'Which choice best evaluates the claim?',
+  stimulus_text = 'A influencer claims "nobody likes the new app" after asking 285 followers who commented on one critical post.',
+  options = '[{"id":"A","text":"The claim overgeneralizes from a biased, non-random sample","is_correct":true,"explanation":"**Step 1:** Sample is self-selected critics. **Step 2:** Cannot support ''nobody''."},{"id":"B","text":"The claim is valid because 40 responses is large","is_correct":false,"explanation":"Size alone does not fix selection bias."},{"id":"C","text":"The claim is valid because social media represents everyone","is_correct":false,"explanation":"Platform users are not the entire population."},{"id":"D","text":"The claim is valid because one post reflects all opinions","is_correct":false,"explanation":"One thread is not representative."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Identify bias: engaged critics only.
+**Step 2:** Absolute claim "nobody" exceeds the evidence.
+**Step 3:** Representative sampling would be needed.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '13acf541-4cf5-4b83-abbb-d9e068355abb';
+
+UPDATE public.questions SET
+  question_text = 'If $x^2 - 9 = 0$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-3","is_correct":false,"explanation":"Choice A (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":false,"explanation":"Choice B (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"-3 or 3","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"9","is_correct":false,"explanation":"Choice D (9…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If $x^2 - 9 = 0$, what is the value of $x$?
+
+**Step 2 — Solve.** We can factor the expression as a difference of squares: $(x+3)(x-3) = 0$. For this product to equal zero, one or both of the factors must equal zero. Therefore, $x + 3 = 0$ or $x - 3 = 0$, which gives us $x = -3$ or $x = 3$.
+
+**Step 3 — Select C.** -3 or 3
+
+**Distractor analysis:**
+- **A** (-3): Choice A (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (3): Choice B (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (9): Choice D (9…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":184,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_b23","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '13dd171e-a2b3-4b4e-910c-9ba731fc4542';
+
+COMMIT;

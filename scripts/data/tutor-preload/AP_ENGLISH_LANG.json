@@ -1,0 +1,41 @@
+{
+  "exam_type": "AP_ENGLISH_LANG",
+  "display_name": "AP English Language and Composition",
+  "command_terms": [
+    "analyze",
+    "evaluate",
+    "synthesize",
+    "argue",
+    "qualify",
+    "refute",
+    "compare",
+    "explain effect",
+    "identify strategy"
+  ],
+  "misconceptions": [
+    "Listing devices without linking to purpose/audience",
+    "Treating synthesis as summary of sources instead of an original position",
+    "Confusing tone with mood or topic",
+    "Assuming longer quotes equal stronger evidence",
+    "Ignoring line of reasoning / only stacking claims"
+  ],
+  "paper_rules": [
+    "MCQ: reading nonfiction passages; select best evidence or rhetorical effect",
+    "FRQ1 Synthesis: use provided sources to build an argument",
+    "FRQ2 Rhetorical analysis: explain how choices advance purpose for audience",
+    "FRQ3 Argument: defend, challenge, or qualify a claim with original reasoning",
+    "Score essays on thesis, evidence/commentary, sophistication where applicable"
+  ],
+  "calculator_policy": "none",
+  "units_summary": [
+    "U1 Rhetorical Situation Foundations (w≈0.11, q=55)",
+    "U2 Claims and Evidence (w≈0.12, q=60)",
+    "U3 Reasoning and Organization (w≈0.11, q=55)",
+    "U4 Audience Purpose and Context (w≈0.11, q=55)",
+    "U5 Style Choices and Effects (w≈0.11, q=55)",
+    "U6 Argument Complexity (w≈0.11, q=55)",
+    "U7 Multiple Perspectives (w≈0.11, q=55)",
+    "U8 Synthesis Across Sources (w≈0.12, q=60)",
+    "U9 Integrated Rhetorical Practice (w≈0.1, q=50)"
+  ]
+}

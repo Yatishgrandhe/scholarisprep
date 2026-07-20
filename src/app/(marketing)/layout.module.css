@@ -1,0 +1,33 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* Offset for the fixed floating navbar */
+  padding-top: 68px;
+}
+
+/*
+ * Home (`/`) renders `<LandingShell className="landing">` with its own
+ * fixed LandingNav + LandingFooter. When that global marker is present
+ * anywhere inside `.shell`, hide the default marketing Navbar/Footer so
+ * we don't double up chrome, and drop the navbar-offset padding so
+ * LandingHero can sit full-bleed under LandingNav.
+ *
+ * IMPORTANT: this file is a CSS Module, so `.landing` must be wrapped in
+ * `:global()` or the selector hashes to a non-existent local class and
+ * the `:has()` never matches.
+ */
+.shell:has(:global(.landing)) > header,
+.shell:has(:global(.landing)) > footer {
+  display: none;
+}
+
+.shell:has(:global(.landing)) > .main {
+  padding-top: 0;
+}

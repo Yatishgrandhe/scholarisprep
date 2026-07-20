@@ -1,0 +1,159 @@
+{
+  "examType": "IB_PHYSICS_SL",
+  "topics": [
+    "Measurements & uncertainties",
+    "Mechanics",
+    "Thermal physics",
+    "Waves",
+    "Electricity & magnetism",
+    "Circular motion & gravitation / atomic / nuclear / energy",
+    "Experimental & IA skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_measurements_uncertainties",
+      "title": "Measurements & uncertainties",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_mechanics",
+      "title": "Mechanics",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_thermal_physics",
+      "title": "Thermal physics",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_waves",
+      "title": "Waves",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_electricity_magnetism",
+      "title": "Electricity & magnetism",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_circular_motion_gravitation_atomic_nuclear_energy",
+      "title": "Circular motion & gravitation / atomic / nuclear / energy",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_experimental_ia_skills",
+      "title": "Experimental & IA skills",
+      "sort_order": 7
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_PHYSICS_SL:U1_measurements_uncertainties",
+      "unit_code": "U1_measurements_uncertainties",
+      "title": "Measurements & uncertainties",
+      "topics": [
+        "SI",
+        "error",
+        "graphs",
+        "vectors"
+      ],
+      "recommended_hours": 7,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_PHYSICS_SL:U2_mechanics",
+      "unit_code": "U2_mechanics",
+      "title": "Mechanics",
+      "topics": [
+        "kinematics",
+        "forces",
+        "momentum",
+        "work energy power",
+        "circular motion"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PHYSICS_SL:U1_measurements_uncertainties"
+      ]
+    },
+    {
+      "skill_id": "IB_PHYSICS_SL:U3_thermal_physics",
+      "unit_code": "U3_thermal_physics",
+      "title": "Thermal physics",
+      "topics": [
+        "temperature",
+        "ideal gas",
+        "internal energy"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PHYSICS_SL:U2_mechanics"
+      ]
+    },
+    {
+      "skill_id": "IB_PHYSICS_SL:U4_waves",
+      "unit_code": "U4_waves",
+      "title": "Waves",
+      "topics": [
+        "SHM",
+        "wave characteristics",
+        "superposition",
+        "diffraction",
+        "Doppler"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PHYSICS_SL:U3_thermal_physics"
+      ]
+    },
+    {
+      "skill_id": "IB_PHYSICS_SL:U5_electricity_magnetism",
+      "unit_code": "U5_electricity_magnetism",
+      "title": "Electricity & magnetism",
+      "topics": [
+        "fields",
+        "circuits",
+        "magnetic fields",
+        "induction"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PHYSICS_SL:U4_waves"
+      ]
+    },
+    {
+      "skill_id": "IB_PHYSICS_SL:U6_circular_motion_gravitation_atomic_nuclear_energy",
+      "unit_code": "U6_circular_motion_gravitation_atomic_nuclear_energy",
+      "title": "Circular motion & gravitation / atomic / nuclear / energy",
+      "topics": [
+        "gravitation",
+        "quantum",
+        "nuclear",
+        "power production"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_PHYSICS_SL:U5_electricity_magnetism"
+      ]
+    },
+    {
+      "skill_id": "IB_PHYSICS_SL:U7_experimental_ia_skills",
+      "unit_code": "U7_experimental_ia_skills",
+      "title": "Experimental & IA skills",
+      "topics": [
+        "design",
+        "data analysis",
+        "evaluation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_PHYSICS_SL:U6_circular_motion_gravitation_atomic_nuclear_energy"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

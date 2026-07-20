@@ -1,0 +1,141 @@
+{
+  "examType": "AP_SPANISH_LIT",
+  "topics": [
+    "Las sociedades en contacto",
+    "La construcción del género",
+    "El tiempo y el espacio",
+    "Las relaciones interpersonales",
+    "La dualidad del ser",
+    "La creación literaria"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_las_sociedades_en_contacto",
+      "title": "Las sociedades en contacto",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_conquista",
+        "U1_S2_identidad",
+        "U1_S3_asimilaci_n",
+        "U1_S4_marginalizaci_n"
+      ],
+      "topics": [
+        "conquista",
+        "identidad",
+        "asimilación",
+        "marginalización"
+      ]
+    },
+    {
+      "unit_code": "U2_la_construcci_n_del_g_nero",
+      "title": "La construcción del género",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_machismo",
+        "U2_S2_tradici_n_ruptura",
+        "U2_S3_sexualidad"
+      ],
+      "topics": [
+        "machismo",
+        "tradición/ruptura",
+        "sexualidad"
+      ]
+    },
+    {
+      "unit_code": "U3_el_tiempo_y_el_espacio",
+      "title": "El tiempo y el espacio",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_linearidad",
+        "U3_S2_ambig_edad_temporal",
+        "U3_S3_espacios_simb_licos"
+      ],
+      "topics": [
+        "linearidad",
+        "ambigüedad temporal",
+        "espacios simbólicos"
+      ]
+    },
+    {
+      "unit_code": "U4_las_relaciones_interpersonales",
+      "title": "Las relaciones interpersonales",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_amistad",
+        "U4_S2_amor",
+        "U4_S3_poder",
+        "U4_S4_comunicaci_n"
+      ],
+      "topics": [
+        "amistad",
+        "amor",
+        "poder",
+        "comunicación"
+      ]
+    },
+    {
+      "unit_code": "U5_la_dualidad_del_ser",
+      "title": "La dualidad del ser",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_m_scara",
+        "U5_S2_espiritualidad",
+        "U5_S3_construcci_n_del_ser"
+      ],
+      "topics": [
+        "máscara",
+        "espiritualidad",
+        "construcción del ser"
+      ]
+    },
+    {
+      "unit_code": "U6_la_creaci_n_literaria",
+      "title": "La creación literaria",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_metaficci_n",
+        "U6_S2_intertextualidad",
+        "U6_S3_proceso_creativo"
+      ],
+      "topics": [
+        "metaficción",
+        "intertextualidad",
+        "proceso creativo"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_las_sociedades_en_contacto": [
+      "U1_S1_conquista",
+      "U1_S2_identidad",
+      "U1_S3_asimilaci_n",
+      "U1_S4_marginalizaci_n"
+    ],
+    "U2_la_construcci_n_del_g_nero": [
+      "U2_S1_machismo",
+      "U2_S2_tradici_n_ruptura",
+      "U2_S3_sexualidad"
+    ],
+    "U3_el_tiempo_y_el_espacio": [
+      "U3_S1_linearidad",
+      "U3_S2_ambig_edad_temporal",
+      "U3_S3_espacios_simb_licos"
+    ],
+    "U4_las_relaciones_interpersonales": [
+      "U4_S1_amistad",
+      "U4_S2_amor",
+      "U4_S3_poder",
+      "U4_S4_comunicaci_n"
+    ],
+    "U5_la_dualidad_del_ser": [
+      "U5_S1_m_scara",
+      "U5_S2_espiritualidad",
+      "U5_S3_construcci_n_del_ser"
+    ],
+    "U6_la_creaci_n_literaria": [
+      "U6_S1_metaficci_n",
+      "U6_S2_intertextualidad",
+      "U6_S3_proceso_creativo"
+    ]
+  }
+}

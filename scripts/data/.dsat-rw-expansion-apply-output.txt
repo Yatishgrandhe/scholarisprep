@@ -1,0 +1,562 @@
+{
+  "subtypes": 13,
+  "targetPerSubtype": 300,
+  "challengedPerSubtype": 25,
+  "expectedTotal": 4225
+}
+{
+  "generated": 4225,
+  "stats": {
+    "bySubtype": {
+      "vocabulary_in_context": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "structure": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "cross_text_response": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "main_idea": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "textual_evidence": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "quantitative_table": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "general": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "prediction": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "implication": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "transition": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "notes_synthesis": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "boundaries": {
+        "standard": 300,
+        "challenged": 25
+      },
+      "form_structure_sense": {
+        "standard": 300,
+        "challenged": 25
+      }
+    },
+    "byDifficulty": {
+      "easy": 1638,
+      "medium": 1365,
+      "hard": 1222
+    },
+    "challenged": 325,
+    "validationFails": 0
+  },
+  "megas": 282
+}
+(node:26819) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26819) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+ok mega-000.sql
+ok mega-001.sql
+ok mega-002.sql
+ok mega-003.sql
+ok mega-004.sql
+ok mega-005.sql
+ok mega-006.sql
+ok mega-007.sql
+ok mega-008.sql
+ok mega-009.sql
+ok mega-010.sql
+ok mega-011.sql
+ok mega-012.sql
+ok mega-013.sql
+ok mega-014.sql
+ok mega-015.sql
+ok mega-016.sql
+ok mega-017.sql
+ok mega-018.sql
+ok mega-019.sql
+ok mega-020.sql
+ok mega-021.sql
+ok mega-022.sql
+ok mega-023.sql
+ok mega-024.sql
+ok mega-025.sql
+ok mega-026.sql
+ok mega-027.sql
+ok mega-028.sql
+ok mega-029.sql
+ok mega-030.sql
+ok mega-031.sql
+ok mega-032.sql
+ok mega-033.sql
+ok mega-034.sql
+ok mega-035.sql
+ok mega-036.sql
+ok mega-037.sql
+ok mega-038.sql
+ok mega-039.sql
+ok mega-040.sql
+ok mega-041.sql
+ok mega-042.sql
+ok mega-043.sql
+ok mega-044.sql
+ok mega-045.sql
+ok mega-046.sql
+ok mega-047.sql
+ok mega-048.sql
+ok mega-049.sql
+ok mega-050.sql
+ok mega-051.sql
+ok mega-052.sql
+ok mega-053.sql
+ok mega-054.sql
+ok mega-055.sql
+ok mega-056.sql
+ok mega-057.sql
+ok mega-058.sql
+ok mega-059.sql
+ok mega-060.sql
+ok mega-061.sql
+ok mega-062.sql
+ok mega-063.sql
+ok mega-064.sql
+ok mega-065.sql
+ok mega-066.sql
+ok mega-067.sql
+ok mega-068.sql
+ok mega-069.sql
+ok mega-070.sql
+ok mega-071.sql
+ok mega-072.sql
+ok mega-073.sql
+ok mega-074.sql
+ok mega-075.sql
+ok mega-076.sql
+ok mega-077.sql
+ok mega-078.sql
+ok mega-079.sql
+ok mega-080.sql
+ok mega-081.sql
+ok mega-082.sql
+ok mega-083.sql
+ok mega-084.sql
+ok mega-085.sql
+ok mega-086.sql
+ok mega-087.sql
+ok mega-088.sql
+ok mega-089.sql
+ok mega-090.sql
+ok mega-091.sql
+ok mega-092.sql
+ok mega-093.sql
+ok mega-094.sql
+ok mega-095.sql
+ok mega-096.sql
+ok mega-097.sql
+ok mega-098.sql
+ok mega-099.sql
+ok mega-100.sql
+ok mega-101.sql
+ok mega-102.sql
+ok mega-103.sql
+ok mega-104.sql
+ok mega-105.sql
+ok mega-106.sql
+ok mega-107.sql
+ok mega-108.sql
+ok mega-109.sql
+ok mega-110.sql
+ok mega-111.sql
+ok mega-112.sql
+ok mega-113.sql
+ok mega-114.sql
+ok mega-115.sql
+ok mega-116.sql
+ok mega-117.sql
+ok mega-118.sql
+ok mega-119.sql
+ok mega-120.sql
+ok mega-121.sql
+ok mega-122.sql
+ok mega-123.sql
+ok mega-124.sql
+ok mega-125.sql
+ok mega-126.sql
+ok mega-127.sql
+ok mega-128.sql
+ok mega-129.sql
+ok mega-130.sql
+ok mega-131.sql
+ok mega-132.sql
+ok mega-133.sql
+ok mega-134.sql
+ok mega-135.sql
+ok mega-136.sql
+ok mega-137.sql
+ok mega-138.sql
+ok mega-139.sql
+ok mega-140.sql
+ok mega-141.sql
+ok mega-142.sql
+ok mega-143.sql
+ok mega-144.sql
+ok mega-145.sql
+ok mega-146.sql
+ok mega-147.sql
+ok mega-148.sql
+ok mega-149.sql
+ok mega-150.sql
+ok mega-151.sql
+ok mega-152.sql
+ok mega-153.sql
+ok mega-154.sql
+ok mega-155.sql
+ok mega-156.sql
+ok mega-157.sql
+ok mega-158.sql
+ok mega-159.sql
+ok mega-160.sql
+ok mega-161.sql
+ok mega-162.sql
+ok mega-163.sql
+ok mega-164.sql
+ok mega-165.sql
+ok mega-166.sql
+ok mega-167.sql
+ok mega-168.sql
+ok mega-169.sql
+ok mega-170.sql
+ok mega-171.sql
+ok mega-172.sql
+ok mega-173.sql
+ok mega-174.sql
+ok mega-175.sql
+ok mega-176.sql
+ok mega-177.sql
+ok mega-178.sql
+ok mega-179.sql
+ok mega-180.sql
+ok mega-181.sql
+ok mega-182.sql
+ok mega-183.sql
+ok mega-184.sql
+ok mega-185.sql
+ok mega-186.sql
+ok mega-187.sql
+ok mega-188.sql
+ok mega-189.sql
+ok mega-190.sql
+ok mega-191.sql
+ok mega-192.sql
+ok mega-193.sql
+ok mega-194.sql
+ok mega-195.sql
+ok mega-196.sql
+ok mega-197.sql
+ok mega-198.sql
+ok mega-199.sql
+ok mega-200.sql
+ok mega-201.sql
+ok mega-202.sql
+ok mega-203.sql
+ok mega-204.sql
+ok mega-205.sql
+ok mega-206.sql
+ok mega-207.sql
+ok mega-208.sql
+ok mega-209.sql
+ok mega-210.sql
+ok mega-211.sql
+ok mega-212.sql
+ok mega-213.sql
+ok mega-214.sql
+ok mega-215.sql
+ok mega-216.sql
+ok mega-217.sql
+ok mega-218.sql
+ok mega-219.sql
+ok mega-220.sql
+ok mega-221.sql
+ok mega-222.sql
+ok mega-223.sql
+ok mega-224.sql
+ok mega-225.sql
+ok mega-226.sql
+ok mega-227.sql
+ok mega-228.sql
+ok mega-229.sql
+ok mega-230.sql
+ok mega-231.sql
+ok mega-232.sql
+ok mega-233.sql
+ok mega-234.sql
+ok mega-235.sql
+ok mega-236.sql
+ok mega-237.sql
+ok mega-238.sql
+ok mega-239.sql
+ok mega-240.sql
+ok mega-241.sql
+ok mega-242.sql
+ok mega-243.sql
+ok mega-244.sql
+ok mega-245.sql
+ok mega-246.sql
+ok mega-247.sql
+ok mega-248.sql
+ok mega-249.sql
+ok mega-250.sql
+ok mega-251.sql
+ok mega-252.sql
+ok mega-253.sql
+ok mega-254.sql
+ok mega-255.sql
+ok mega-256.sql
+ok mega-257.sql
+ok mega-258.sql
+ok mega-259.sql
+ok mega-260.sql
+ok mega-261.sql
+ok mega-262.sql
+ok mega-263.sql
+ok mega-264.sql
+ok mega-265.sql
+ok mega-266.sql
+ok mega-267.sql
+ok mega-268.sql
+ok mega-269.sql
+ok mega-270.sql
+ok mega-271.sql
+ok mega-272.sql
+ok mega-273.sql
+ok mega-274.sql
+ok mega-275.sql
+ok mega-276.sql
+ok mega-277.sql
+ok mega-278.sql
+ok mega-279.sql
+ok mega-280.sql
+ok mega-281.sql
+{
+  "apply": {
+    "ok": 282,
+    "fail": 0,
+    "total": 282
+  },
+  "verify": {
+    "total": [
+      {
+        "cnt": "4225"
+      }
+    ],
+    "bySkill": [
+      {
+        "skill_id": "BOU",
+        "cnt": "325"
+      },
+      {
+        "skill_id": "CID",
+        "cnt": "325"
+      },
+      {
+        "skill_id": "COE",
+        "cnt": "650"
+      },
+      {
+        "skill_id": "CTC",
+        "cnt": "325"
+      },
+      {
+        "skill_id": "FSS",
+        "cnt": "325"
+      },
+      {
+        "skill_id": "INF",
+        "cnt": "975"
+      },
+      {
+        "skill_id": "SYN",
+        "cnt": "325"
+      },
+      {
+        "skill_id": "TRA",
+        "cnt": "325"
+      },
+      {
+        "skill_id": "TSP",
+        "cnt": "325"
+      },
+      {
+        "skill_id": "WIC",
+        "cnt": "325"
+      }
+    ],
+    "bySubtype": [
+      {
+        "rw_subtype": "boundaries",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "cross_text_response",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "form_structure_sense",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "general",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "implication",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "main_idea",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "notes_synthesis",
+        "cnt": "300"
+      },
+      {
+        "rw_subtype": "prediction",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "quantitative_table",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "structure",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "textual_evidence",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "transition",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": "vocabulary_in_context",
+        "cnt": "325"
+      },
+      {
+        "rw_subtype": null,
+        "cnt": "25"
+      }
+    ],
+    "byDifficulty": [
+      {
+        "difficulty": "easy",
+        "cnt": "1638"
+      },
+      {
+        "difficulty": "medium",
+        "cnt": "1365"
+      },
+      {
+        "difficulty": "hard",
+        "cnt": "1222"
+      }
+    ],
+    "blueprint": [
+      {
+        "cnt": "4225"
+      }
+    ],
+    "challenged": [
+      {
+        "rw_subtype": "boundaries",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "cross_text_response",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "form_structure_sense",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "general",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "implication",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "main_idea",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "prediction",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "quantitative_table",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "structure",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "textual_evidence",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "transition",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": "vocabulary_in_context",
+        "cnt": "25"
+      },
+      {
+        "rw_subtype": null,
+        "cnt": "25"
+      }
+    ],
+    "challengedTotal": [
+      {
+        "cnt": "325"
+      }
+    ],
+    "math": [
+      {
+        "cnt": "1713"
+      }
+    ]
+  }
+}

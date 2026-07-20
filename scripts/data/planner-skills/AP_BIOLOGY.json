@@ -1,0 +1,53 @@
+{
+  "exam_type": "AP_BIOLOGY",
+  "skills": [
+    {
+      "id": "ap_biology_U1_chemistry_of_life",
+      "unit_code": "U1_chemistry_of_life",
+      "label": "Chemistry of life",
+      "description": "Practice and review: Chemistry of Life. Topics include Water and macromolecules; Structure–function of biomolecules; Origins of life cues."
+    },
+    {
+      "id": "ap_biology_U2_cell_structure",
+      "unit_code": "U2_cell_structure",
+      "label": "Cell structure and transport",
+      "description": "Practice and review: Cell Structure and Function. Topics include Organelles and compartments; Membrane transport; Cell size and surface area."
+    },
+    {
+      "id": "ap_biology_U3_cellular_energetics",
+      "unit_code": "U3_cellular_energetics",
+      "label": "Cellular energetics",
+      "description": "Practice and review: Cellular Energetics. Topics include Enzyme catalysis; Photosynthesis; Cellular respiration and fitness."
+    },
+    {
+      "id": "ap_biology_U4_cell_communication",
+      "unit_code": "U4_cell_communication",
+      "label": "Cell communication and cycle",
+      "description": "Practice and review: Cell Communication and Cell Cycle. Topics include Signal transduction; Feedback; Mitosis and regulation."
+    },
+    {
+      "id": "ap_biology_U5_heredity",
+      "unit_code": "U5_heredity",
+      "label": "Heredity",
+      "description": "Practice and review: Heredity. Topics include Meiosis and genetic diversity; Mendelian and non-Mendelian inheritance; Environmental effects on phenotype."
+    },
+    {
+      "id": "ap_biology_U6_gene_expression",
+      "unit_code": "U6_gene_expression",
+      "label": "Gene expression and biotech",
+      "description": "Practice and review: Gene Expression and Regulation. Topics include DNA/RNA structure; Transcription and translation; Gene regulation."
+    },
+    {
+      "id": "ap_biology_U7_natural_selection",
+      "unit_code": "U7_natural_selection",
+      "label": "Natural selection and evolution",
+      "description": "Practice and review: Natural Selection. Topics include Evidence for evolution; Natural selection mechanisms; Population genetics."
+    },
+    {
+      "id": "ap_biology_U8_ecology",
+      "unit_code": "U8_ecology",
+      "label": "Ecology",
+      "description": "Practice and review: Ecology. Topics include Energy flow and trophic structure; Population ecology; Community interactions."
+    }
+  ]
+}

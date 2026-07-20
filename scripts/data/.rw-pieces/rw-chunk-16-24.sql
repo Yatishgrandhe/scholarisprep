@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('398085ab-cf3f-4308-a738-ab4144e3132e', 'Which choice completes the text with the most logical transition?', 'The novelist drafted her chapters out of order, writing whichever scene most interested her on a given day. Critics expected the finished book to feel disjointed and hard to follow. ______ readers praised the novel for its seamless flow, unaware of the scattered way it had been composed.', NULL, '[{"id":"A","text":"Therefore,","is_correct":false,"explanation":"Wrong: praise for flow is the opposite of what the critics'' expectation would cause."},{"id":"B","text":"Likewise,","is_correct":false,"explanation":"Wrong: ''Likewise'' adds agreement, but the readers'' reaction opposes the prediction."},{"id":"C","text":"Instead,","is_correct":true,"explanation":"Correct: readers'' praise replaces and contradicts the expected disjointedness."},{"id":"D","text":"Indeed,","is_correct":false,"explanation":"Wrong: ''Indeed'' confirms the prior claim, but the result reverses it."}]'::jsonb, 'C', 'Step 1 — Identify the relationship
+Critics expected the book {{yellow:to feel disjointed and hard to follow}}.
+Step 2 — Match the transition
+Readers instead praised its flow, so a reversal transition that substitutes the opposite outcome is required.
+Distractor analysis:
+- A: ''Therefore'' would make the praise a result of the expectation, but it contradicts it.
+- B: ''Likewise'' signals similarity, yet the outcome is opposite.
+- D: ''Indeed'' intensifies a prior point, but the sentence overturns the prediction.', 'The actual reaction is the reverse of what critics predicted.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

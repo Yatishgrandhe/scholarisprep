@@ -1,0 +1,142 @@
+{
+  "exam_type": "AP_CALCULUS_BC",
+  "display_name": "AP Calculus BC",
+  "command_terms": [
+    "evaluate",
+    "justify",
+    "approximate",
+    "interpret",
+    "determine",
+    "explain",
+    "show convergence"
+  ],
+  "misconceptions": [
+    "Applying ratio/root tests without concluding the correct convergence type",
+    "Mixing polar r(θ) area formulas with Cartesian area",
+    "Confusing conditional vs absolute convergence",
+    "Taylor remainder sign/form errors",
+    "Parametric second derivative formula mistakes"
+  ],
+  "paper_rules": [
+    "Same calc/no-calc section discipline as AB",
+    "Series FRQs need named tests and clear conclusions",
+    "Parametric/polar work must show setup before calculator evaluation when allowed"
+  ],
+  "calculator_policy": {
+    "default": "graphing",
+    "sections": [
+      {
+        "section_id": "mcq_a",
+        "label": "MCQ Part A (no calculator)",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "mcq_b",
+        "label": "MCQ Part B (calculator)",
+        "calculator_allowed": true
+      },
+      {
+        "section_id": "frq_a",
+        "label": "FRQ Part A (calculator)",
+        "calculator_allowed": true
+      },
+      {
+        "section_id": "frq_b",
+        "label": "FRQ Part B (no calculator)",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "Same calculator section split as AB. BC-only topics (series; parametric/polar/vector) appear across MCQ and FRQ."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_limits",
+      "unit_name": "Limits and Continuity",
+      "topics": [
+        "limits and continuity",
+        "asymptotic behavior"
+      ]
+    },
+    {
+      "unit_code": "U2_diff_basics",
+      "unit_name": "Differentiation: Definition and Basic Properties",
+      "topics": [
+        "derivative definition",
+        "rules and higher derivatives"
+      ]
+    },
+    {
+      "unit_code": "U3_diff_advanced",
+      "unit_name": "Differentiation: Composite, Implicit, Inverse",
+      "topics": [
+        "chain rule",
+        "implicit and inverse",
+        "related advanced techniques"
+      ]
+    },
+    {
+      "unit_code": "U4_appl_diff_context",
+      "unit_name": "Contextual Applications of Differentiation",
+      "topics": [
+        "related rates",
+        "linear approximation",
+        "L'Hôpital in context"
+      ]
+    },
+    {
+      "unit_code": "U5_appl_diff_analytic",
+      "unit_name": "Analytical Applications of Differentiation",
+      "topics": [
+        "MVT",
+        "curve analysis",
+        "optimization"
+      ]
+    },
+    {
+      "unit_code": "U6_integration",
+      "unit_name": "Integration and Accumulation of Change",
+      "topics": [
+        "FTC",
+        "advanced antiderivatives",
+        "improper integrals intro"
+      ]
+    },
+    {
+      "unit_code": "U7_diff_eq",
+      "unit_name": "Differential Equations",
+      "topics": [
+        "slope fields",
+        "separable DE",
+        "logistic models"
+      ]
+    },
+    {
+      "unit_code": "U8_appl_int",
+      "unit_name": "Applications of Integration",
+      "topics": [
+        "area and volume",
+        "arc length",
+        "advanced accumulation"
+      ]
+    },
+    {
+      "unit_code": "U9_param_polar_vector",
+      "unit_name": "Parametric, Polar, and Vector-Valued Functions",
+      "topics": [
+        "parametric derivatives and arc length",
+        "polar area and tangents",
+        "vector motion"
+      ]
+    },
+    {
+      "unit_code": "U10_series",
+      "unit_name": "Infinite Sequences and Series",
+      "topics": [
+        "convergence tests",
+        "power series",
+        "Taylor and Maclaurin",
+        "error bounds"
+      ]
+    }
+  ]
+}

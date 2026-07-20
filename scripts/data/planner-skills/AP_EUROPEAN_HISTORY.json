@@ -1,0 +1,113 @@
+{
+  "exam_type": "AP_EUROPEAN_HISTORY",
+  "skills": [
+    {
+      "id": "SK_RENAISSANCE",
+      "unit_code": "U1",
+      "label": "RENAISSANCE",
+      "description": "Renaissance and Exploration c.1450–1648: practice skill for renaissance."
+    },
+    {
+      "id": "SK_EXPLORATION",
+      "unit_code": "U1",
+      "label": "EXPLORATION",
+      "description": "Renaissance and Exploration c.1450–1648: practice skill for exploration."
+    },
+    {
+      "id": "SK_REFORMATION",
+      "unit_code": "U2",
+      "label": "REFORMATION",
+      "description": "Age of Reformation c.1450–1648: practice skill for reformation."
+    },
+    {
+      "id": "SK_RELIGIOUS_WARS",
+      "unit_code": "U2",
+      "label": "RELIGIOUS WARS",
+      "description": "Age of Reformation c.1450–1648: practice skill for religious wars."
+    },
+    {
+      "id": "SK_ABSOLUTISM",
+      "unit_code": "U3",
+      "label": "ABSOLUTISM",
+      "description": "Absolutism and Constitutionalism c.1648–1815: practice skill for absolutism."
+    },
+    {
+      "id": "SK_CONSTITUTIONALISM",
+      "unit_code": "U3",
+      "label": "CONSTITUTIONALISM",
+      "description": "Absolutism and Constitutionalism c.1648–1815: practice skill for constitutionalism."
+    },
+    {
+      "id": "SK_SCI_REV",
+      "unit_code": "U4",
+      "label": "SCI REV",
+      "description": "Scientific Philosophical and Political Developments c.1648–1815: practice skill for sci rev."
+    },
+    {
+      "id": "SK_ENLIGHTENMENT",
+      "unit_code": "U4",
+      "label": "ENLIGHTENMENT",
+      "description": "Scientific Philosophical and Political Developments c.1648–1815: practice skill for enlightenment."
+    },
+    {
+      "id": "SK_FRENCH_REV",
+      "unit_code": "U5",
+      "label": "FRENCH REV",
+      "description": "Conflict Crisis and Reaction in the Late 18th Century: practice skill for french rev."
+    },
+    {
+      "id": "SK_NAPOLEON",
+      "unit_code": "U5",
+      "label": "NAPOLEON",
+      "description": "Conflict Crisis and Reaction in the Late 18th Century: practice skill for napoleon."
+    },
+    {
+      "id": "SK_INDUSTRIALIZATION",
+      "unit_code": "U6",
+      "label": "INDUSTRIALIZATION",
+      "description": "Industrialization and Its Effects c.1815–1914: practice skill for industrialization."
+    },
+    {
+      "id": "SK_CLASS_IDEOLOGY",
+      "unit_code": "U6",
+      "label": "CLASS IDEOLOGY",
+      "description": "Industrialization and Its Effects c.1815–1914: practice skill for class ideology."
+    },
+    {
+      "id": "SK_NATIONALISM",
+      "unit_code": "U7",
+      "label": "NATIONALISM",
+      "description": "19th-Century Perspectives and Political Developments: practice skill for nationalism."
+    },
+    {
+      "id": "SK_IMPERIALISM",
+      "unit_code": "U7",
+      "label": "IMPERIALISM",
+      "description": "19th-Century Perspectives and Political Developments: practice skill for imperialism."
+    },
+    {
+      "id": "SK_WORLD_WARS",
+      "unit_code": "U8",
+      "label": "WORLD WARS",
+      "description": "20th-Century Global Conflicts c.1914–present: practice skill for world wars."
+    },
+    {
+      "id": "SK_TOTALITARIANISM",
+      "unit_code": "U8",
+      "label": "TOTALITARIANISM",
+      "description": "20th-Century Global Conflicts c.1914–present: practice skill for totalitarianism."
+    },
+    {
+      "id": "SK_COLD_WAR_EUROPE",
+      "unit_code": "U9",
+      "label": "COLD WAR EUROPE",
+      "description": "Cold War and Contemporary Europe: practice skill for cold war europe."
+    },
+    {
+      "id": "SK_INTEGRATION_MIGRATION",
+      "unit_code": "U9",
+      "label": "INTEGRATION MIGRATION",
+      "description": "Cold War and Contemporary Europe: practice skill for integration migration."
+    }
+  ]
+}

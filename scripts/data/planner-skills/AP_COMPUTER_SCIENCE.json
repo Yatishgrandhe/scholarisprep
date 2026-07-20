@@ -1,0 +1,153 @@
+{
+  "examType": "AP_COMPUTER_SCIENCE",
+  "topics": [
+    "Primitive Types and Objects",
+    "Boolean Expressions and Control",
+    "Iteration and Arrays",
+    "ArrayList and 2D Arrays",
+    "Classes and Inheritance",
+    "Recursion",
+    "Searching, Sorting, and Ethics"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_primitive_types_and_objects",
+      "title": "Primitive Types and Objects",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_types",
+        "U1_S2_constructors",
+        "U1_S3_references"
+      ],
+      "topics": [
+        "types",
+        "constructors",
+        "references"
+      ]
+    },
+    {
+      "unit_code": "U2_boolean_expressions_and_control",
+      "title": "Boolean Expressions and Control",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_if",
+        "U2_S2_loops",
+        "U2_S3_de_morgan"
+      ],
+      "topics": [
+        "if",
+        "loops",
+        "De Morgan"
+      ]
+    },
+    {
+      "unit_code": "U3_iteration_and_arrays",
+      "title": "Iteration and Arrays",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_1d_arrays",
+        "U3_S2_traversals",
+        "U3_S3_algorithms"
+      ],
+      "topics": [
+        "1D arrays",
+        "traversals",
+        "algorithms"
+      ]
+    },
+    {
+      "unit_code": "U4_arraylist_and_2d_arrays",
+      "title": "ArrayList and 2D Arrays",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_arraylist",
+        "U4_S2_2d",
+        "U4_S3_nested_loops"
+      ],
+      "topics": [
+        "ArrayList",
+        "2D",
+        "nested loops"
+      ]
+    },
+    {
+      "unit_code": "U5_classes_and_inheritance",
+      "title": "Classes and Inheritance",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_encapsulation",
+        "U5_S2_inheritance",
+        "U5_S3_polymorphism"
+      ],
+      "topics": [
+        "encapsulation",
+        "inheritance",
+        "polymorphism"
+      ]
+    },
+    {
+      "unit_code": "U6_recursion",
+      "title": "Recursion",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_base_case",
+        "U6_S2_recursive_algorithms"
+      ],
+      "topics": [
+        "base case",
+        "recursive algorithms"
+      ]
+    },
+    {
+      "unit_code": "U7_searching_sorting_and_ethics",
+      "title": "Searching, Sorting, and Ethics",
+      "sort_order": 7,
+      "skill_ids": [
+        "U7_S1_binary_search",
+        "U7_S2_sorts",
+        "U7_S3_impact_of_computing"
+      ],
+      "topics": [
+        "binary search",
+        "sorts",
+        "impact of computing"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_primitive_types_and_objects": [
+      "U1_S1_types",
+      "U1_S2_constructors",
+      "U1_S3_references"
+    ],
+    "U2_boolean_expressions_and_control": [
+      "U2_S1_if",
+      "U2_S2_loops",
+      "U2_S3_de_morgan"
+    ],
+    "U3_iteration_and_arrays": [
+      "U3_S1_1d_arrays",
+      "U3_S2_traversals",
+      "U3_S3_algorithms"
+    ],
+    "U4_arraylist_and_2d_arrays": [
+      "U4_S1_arraylist",
+      "U4_S2_2d",
+      "U4_S3_nested_loops"
+    ],
+    "U5_classes_and_inheritance": [
+      "U5_S1_encapsulation",
+      "U5_S2_inheritance",
+      "U5_S3_polymorphism"
+    ],
+    "U6_recursion": [
+      "U6_S1_base_case",
+      "U6_S2_recursive_algorithms"
+    ],
+    "U7_searching_sorting_and_ethics": [
+      "U7_S1_binary_search",
+      "U7_S2_sorts",
+      "U7_S3_impact_of_computing"
+    ]
+  }
+}

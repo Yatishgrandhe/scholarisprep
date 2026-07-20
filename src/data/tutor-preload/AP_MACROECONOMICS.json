@@ -1,0 +1,36 @@
+{
+  "exam_type": "AP_MACROECONOMICS",
+  "display_name": "AP Macroeconomics",
+  "command_terms": [
+    "calculate",
+    "draw",
+    "show",
+    "explain",
+    "identify",
+    "determine effect",
+    "compare",
+    "label"
+  ],
+  "misconceptions": [
+    "Shifting AD when the shock is AS (or vice versa)",
+    "Confusing money market with loanable funds market",
+    "Treating Phillips curve as always stable/long-run downward sloping",
+    "Mixing nominal vs real variables",
+    "Drawing forex market without labeling currency axes correctly"
+  ],
+  "paper_rules": [
+    "No calculator; show arithmetic work on FRQs",
+    "FRQs require correctly labeled graphs (axes, curves, equilibria, shifts)",
+    "One long FRQ + two shorter FRQs typical",
+    "State direction of change and show it on the graph when asked to “show”"
+  ],
+  "calculator_policy": "none",
+  "units_summary": [
+    "U1 Basic Economic Concepts (w≈0.05, q=25)",
+    "U2 Economic Indicators and the Business Cycle (w≈0.15, q=75)",
+    "U3 National Income and Price Determination (w≈0.25, q=125)",
+    "U4 Financial Sector (w≈0.2, q=100)",
+    "U5 Long-Run Consequences of Stabilization Policies (w≈0.2, q=100)",
+    "U6 Open Economy International Trade and Finance (w≈0.15, q=75)"
+  ]
+}

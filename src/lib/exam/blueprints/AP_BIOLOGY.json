@@ -1,0 +1,25 @@
+{
+  "examType": "AP_BIOLOGY",
+  "displayName": "AP Biology",
+  "modules": [
+    {
+      "key": "section_1_mcq",
+      "label": "Section I — Multiple Choice",
+      "durationMinutes": 90,
+      "questionCount": 60,
+      "filterSection": "multiple_choice",
+      "questionFormat": "multiple_choice"
+    },
+    {
+      "key": "section_2_frq",
+      "label": "Section II — Free Response",
+      "durationMinutes": 90,
+      "questionCount": 6,
+      "filterSection": "free_response",
+      "questionFormat": "free_response"
+    }
+  ],
+  "totalQuestions": 66,
+  "totalMinutes": 180,
+  "notes": "Scaffold blueprint — replace with CED paper counts when content lands."
+}

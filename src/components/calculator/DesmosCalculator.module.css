@@ -1,0 +1,168 @@
+.window {
+  position: fixed;
+  /* Below reference sheet (110) and pause/modals (100+) so calc never covers dialogs */
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  user-select: none;
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 44px;
+  flex-shrink: 0;
+  padding: 0 8px 0 12px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  touch-action: none;
+}
+
+.titleLeft {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: #374151;
+}
+
+.titleText {
+  font-family: var(--font-body, inherit);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  color: #111827;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dragDots {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.titleActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.iconBtn,
+.iconBtnClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #4b5563;
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    color 140ms ease;
+}
+
+.iconBtn:hover {
+  background: #eef2f7;
+  color: #111827;
+}
+
+.iconBtnClose:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: #fff;
+}
+
+.surface {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  text-align: center;
+  background: #fff;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.overlay p {
+  margin: 0;
+  font-weight: 600;
+  color: #374151;
+}
+
+.overlaySub {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  max-width: 240px;
+}
+
+.spinner {
+  width: 26px;
+  height: 26px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 999px;
+  animation: desmosSpin 0.8s linear infinite;
+}
+
+@keyframes desmosSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.resizeHandle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 18px;
+  height: 18px;
+  cursor: nwse-resize;
+  touch-action: none;
+  background: linear-gradient(
+    135deg,
+    transparent 0 50%,
+    #cbd5e1 50% 60%,
+    transparent 60% 70%,
+    #cbd5e1 70% 80%,
+    transparent 80%
+  );
+}
+
+@media (max-width: 640px) {
+  .window {
+    /* On small screens, keep the panel comfortably within the viewport. */
+    max-width: calc(100vw - 16px);
+  }
+}

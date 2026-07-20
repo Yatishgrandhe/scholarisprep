@@ -1,0 +1,134 @@
+{
+  "exam_type": "AP_PHYSICS",
+  "display_name": "AP Physics (legacy alias)",
+  "family": "AP",
+  "units": [
+    {
+      "unit_code": "U1_mechanics_core",
+      "unit_name": "Mechanics Core",
+      "topics": [
+        "kinematics",
+        "dynamics",
+        "energy",
+        "momentum"
+      ]
+    },
+    {
+      "unit_code": "U2_waves_and_fluids",
+      "unit_name": "Waves and Fluids",
+      "topics": [
+        "SHM",
+        "waves",
+        "fluids"
+      ]
+    },
+    {
+      "unit_code": "U3_electricity_and_magnetism",
+      "unit_name": "Electricity and Magnetism",
+      "topics": [
+        "electrostatics",
+        "circuits",
+        "magnetism"
+      ]
+    },
+    {
+      "unit_code": "U4_thermo_and_modern",
+      "unit_name": "Thermo and Modern",
+      "topics": [
+        "thermo",
+        "optics",
+        "modern physics"
+      ]
+    },
+    {
+      "unit_code": "U5_lab_and_reasoning_skills",
+      "unit_name": "Lab and Reasoning Skills",
+      "topics": [
+        "experimental design",
+        "uncertainty",
+        "argumentation"
+      ]
+    }
+  ],
+  "command_terms": [
+    "justify",
+    "derive",
+    "calculate",
+    "explain",
+    "rank",
+    "describe the experimental procedure",
+    "indicate direction"
+  ],
+  "misconceptions": [
+    "Confusing velocity and acceleration directions",
+    "Treating net force as always in direction of velocity",
+    "Mixing energy and momentum conservation conditions",
+    "Ignoring system definition in work/energy",
+    "Sign errors with Lenz's law / induced current"
+  ],
+  "paper_rules": [
+    "Show symbolic work before plugging numbers",
+    "Include units and significant figures appropriately",
+    "Label free-body and energy bar charts clearly",
+    "FRQ may require experimental design and uncertainty language"
+  ],
+  "calculator": {
+    "policy": "scientific",
+    "notes": "Scientific calculator per exam rules",
+    "section_rules": [
+      {
+        "section": "mcq",
+        "calculator_allowed": true
+      },
+      {
+        "section": "frq",
+        "calculator_allowed": true
+      }
+    ],
+    "per_question_default": true,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "Include **In Desmos.** only when calculator_allowed and a graph/numeric check helps; scientific-only courses: numeric keypad steps, not graphing.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "AP CED-aligned item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Match AP task model for the unit"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": {
+    "title": "AP Physics (legacy alias) equation & lab reminders",
+    "sections": [
+      "Kinematics / dynamics symbol glossary",
+      "Energy, momentum, rotation relations",
+      "Circuit / field equations (as applicable)",
+      "Experimental design checklist (IV/DV, uncertainty)"
+    ]
+  }
+}

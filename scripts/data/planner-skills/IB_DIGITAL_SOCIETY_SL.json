@@ -1,0 +1,158 @@
+{
+  "examType": "IB_DIGITAL_SOCIETY_SL",
+  "topics": [
+    "Introduction to digital society",
+    "Concepts",
+    "Content \u2014 digital well-being & relationships",
+    "Content \u2014 governance & politics",
+    "Content \u2014 economies & environments",
+    "Content \u2014 knowledge & culture",
+    "Inquiry & intervention skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_introduction_to_digital_society",
+      "title": "Introduction to digital society",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_concepts",
+      "title": "Concepts",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_content_digital_well_being_relationships",
+      "title": "Content \u2014 digital well-being & relationships",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_content_governance_politics",
+      "title": "Content \u2014 governance & politics",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_content_economies_environments",
+      "title": "Content \u2014 economies & environments",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_content_knowledge_culture",
+      "title": "Content \u2014 knowledge & culture",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_inquiry_intervention_skills",
+      "title": "Inquiry & intervention skills",
+      "sort_order": 7
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_DIGITAL_SOCIETY_SL:U1_introduction_to_digital_society",
+      "unit_code": "U1_introduction_to_digital_society",
+      "title": "Introduction to digital society",
+      "topics": [
+        "digital systems",
+        "data",
+        "algorithms",
+        "networks"
+      ],
+      "recommended_hours": 7,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_DIGITAL_SOCIETY_SL:U2_concepts",
+      "unit_code": "U2_concepts",
+      "title": "Concepts",
+      "topics": [
+        "change",
+        "expression",
+        "identity",
+        "power",
+        "space",
+        "systems",
+        "values and ethics"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DIGITAL_SOCIETY_SL:U1_introduction_to_digital_society"
+      ]
+    },
+    {
+      "skill_id": "IB_DIGITAL_SOCIETY_SL:U3_content_digital_well_being_relationships",
+      "unit_code": "U3_content_digital_well_being_relationships",
+      "title": "Content \u2014 digital well-being & relationships",
+      "topics": [
+        "identity online",
+        "communities",
+        "health"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DIGITAL_SOCIETY_SL:U2_concepts"
+      ]
+    },
+    {
+      "skill_id": "IB_DIGITAL_SOCIETY_SL:U4_content_governance_politics",
+      "unit_code": "U4_content_governance_politics",
+      "title": "Content \u2014 governance & politics",
+      "topics": [
+        "regulation",
+        "activism",
+        "surveillance"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DIGITAL_SOCIETY_SL:U3_content_digital_well_being_relationships"
+      ]
+    },
+    {
+      "skill_id": "IB_DIGITAL_SOCIETY_SL:U5_content_economies_environments",
+      "unit_code": "U5_content_economies_environments",
+      "title": "Content \u2014 economies & environments",
+      "topics": [
+        "platforms",
+        "labour",
+        "e-waste",
+        "sustainability"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DIGITAL_SOCIETY_SL:U4_content_governance_politics"
+      ]
+    },
+    {
+      "skill_id": "IB_DIGITAL_SOCIETY_SL:U6_content_knowledge_culture",
+      "unit_code": "U6_content_knowledge_culture",
+      "title": "Content \u2014 knowledge & culture",
+      "topics": [
+        "AI",
+        "media",
+        "cultural production"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DIGITAL_SOCIETY_SL:U5_content_economies_environments"
+      ]
+    },
+    {
+      "skill_id": "IB_DIGITAL_SOCIETY_SL:U7_inquiry_intervention_skills",
+      "unit_code": "U7_inquiry_intervention_skills",
+      "title": "Inquiry & intervention skills",
+      "topics": [
+        "research design",
+        "digital methods",
+        "evaluation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_DIGITAL_SOCIETY_SL:U6_content_knowledge_culture"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

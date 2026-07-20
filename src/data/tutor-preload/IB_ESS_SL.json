@@ -1,0 +1,54 @@
+{
+  "exam_type": "IB_ESS_SL",
+  "display_name": "IB Environmental Systems and Societies SL",
+  "units": [
+    "Foundations of ESS",
+    "Ecosystems & ecology",
+    "Biodiversity & conservation",
+    "Water, food & soil",
+    "Atmosphere & climate change",
+    "Human systems & resource use",
+    "Environmental value systems & decision-making",
+    "IA investigation skills"
+  ],
+  "command_terms": [
+    "state",
+    "outline",
+    "describe",
+    "explain",
+    "calculate",
+    "determine",
+    "deduce",
+    "suggest",
+    "discuss",
+    "evaluate",
+    "design"
+  ],
+  "misconceptions": [
+    "confusing precision and accuracy",
+    "skipping significant figures",
+    "command term mismatch"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_foundations_of_ess skill focus: systems",
+    "Keep unit_code=U2_ecosystems_ecology skill focus: energy flow",
+    "Keep unit_code=U3_biodiversity_conservation skill focus: threats",
+    "Keep unit_code=U4_water_food_soil skill focus: hydrology",
+    "Keep unit_code=U5_atmosphere_climate_change skill focus: composition",
+    "Keep unit_code=U6_human_systems_resource_use skill focus: population",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": "Cross-disciplinary Group 3/4 subject"
+}

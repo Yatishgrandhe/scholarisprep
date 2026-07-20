@@ -1,0 +1,132 @@
+{
+  "exam_type": "IB_SPANISH_B_HL",
+  "display_name": "IB Spanish B HL",
+  "family": "IB",
+  "units": [
+    {
+      "unit_code": "U1_identities",
+      "unit_name": "Identities",
+      "topics": [
+        "lifestyles",
+        "health",
+        "beliefs and values",
+        "subcultures"
+      ]
+    },
+    {
+      "unit_code": "U2_experiences",
+      "unit_name": "Experiences",
+      "topics": [
+        "leisure",
+        "customs",
+        "migration",
+        "life stories"
+      ]
+    },
+    {
+      "unit_code": "U3_human_ingenuity",
+      "unit_name": "Human Ingenuity",
+      "topics": [
+        "tech",
+        "entertainment",
+        "artistic expression"
+      ]
+    },
+    {
+      "unit_code": "U4_social_organization",
+      "unit_name": "Social Organization",
+      "topics": [
+        "education",
+        "law",
+        "social relationships",
+        "workplace"
+      ]
+    },
+    {
+      "unit_code": "U5_sharing_the_planet",
+      "unit_name": "Sharing the Planet",
+      "topics": [
+        "environment",
+        "equality",
+        "peace",
+        "globalization"
+      ]
+    },
+    {
+      "unit_code": "U6_language_skills_and_assessment",
+      "unit_name": "Language Skills and Assessment",
+      "topics": [
+        "receptive",
+        "productive",
+        "interactive",
+        "Paper 1/2 / IO"
+      ]
+    }
+  ],
+  "command_terms": [
+    "describe",
+    "explain",
+    "compare",
+    "discuss",
+    "persuade",
+    "narrate"
+  ],
+  "misconceptions": [
+    "Writing below expected CEFR band for level",
+    "Ignoring text-type conventions in Paper 1",
+    "Memorized essays that miss the prompt",
+    "Skipping literary works expectations at HL"
+  ],
+  "paper_rules": [
+    "Spanish B HL: receptive + productive papers; individual oral",
+    "Match register and text type to the task",
+    "Themes organize practice; assessment criteria drive scoring"
+  ],
+  "calculator": {
+    "policy": "none",
+    "notes": "No calculator",
+    "section_rules": [
+      {
+        "section": "all",
+        "calculator_allowed": false
+      }
+    ],
+    "per_question_default": false,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "No Desmos block; calculator not used.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "IB DP item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Respect command terms and paper criteria"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": null
+}

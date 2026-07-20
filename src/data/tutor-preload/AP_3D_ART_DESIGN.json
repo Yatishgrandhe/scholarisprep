@@ -1,0 +1,111 @@
+{
+  "exam_type": "AP_3D_ART_DESIGN",
+  "display_name": "AP 3-D Art and Design",
+  "command_terms": [
+    "investigate",
+    "experiment",
+    "revise",
+    "synthesize",
+    "document",
+    "articulate",
+    "curate",
+    "reflect"
+  ],
+  "misconceptions": [
+    "Treating Selected Works as random best pieces with no skill story",
+    "Sustained Investigation as a theme label without iterative evidence",
+    "Writing that restates the question instead of linking process to images",
+    "Avoiding experimentation to keep every piece 'finished'",
+    "Ignoring 3-D design (form, space, structure)-specific craft while chasing only concept"
+  ],
+  "paper_rules": [
+    "Score comes from digital portfolio: Selected Works and Sustained Investigation (with written evidence)",
+    "Bank is 100% FRQ/process coaching items (portfolio mode) totaling 500",
+    "Demand alignment among inquiry statement, process images, and selected works",
+    "Center 3-D design (form, space, structure) decisions in critique and reflection prompts"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "selected_works",
+        "label": "Selected Works",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "sustained_investigation",
+        "label": "Sustained Investigation",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "Portfolio assessment \u2014 no calculator; practice items are process/writing/critique scaffolds."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1",
+      "unit_name": "Inquiry and Investigation Framing",
+      "quota": 70,
+      "topics": [
+        "sustained investigation questions",
+        "materials exploration plan",
+        "process documentation habits",
+        "volume, mass, and spatial relationships"
+      ]
+    },
+    {
+      "unit_code": "U2",
+      "unit_name": "Practice, Experimentation, Revision",
+      "quota": 90,
+      "topics": [
+        "iterative making cycles",
+        "risk-taking and failed trials",
+        "critique-informed revision",
+        "structure, joinery, and material behavior"
+      ]
+    },
+    {
+      "unit_code": "U3",
+      "unit_name": "Selected Works Curation",
+      "quota": 80,
+      "topics": [
+        "choosing strongest works",
+        "breadth vs depth of skills",
+        "presentation and documentation quality",
+        "written commentary for selected pieces"
+      ]
+    },
+    {
+      "unit_code": "U4",
+      "unit_name": "Sustained Investigation Body of Work",
+      "quota": 110,
+      "topics": [
+        "coherent inquiry through a series",
+        "synthesis of ideas and materials",
+        "evidence of thinking over time",
+        "in-the-round documentation and viewpoint choices"
+      ]
+    },
+    {
+      "unit_code": "U5",
+      "unit_name": "Written Evidence and Articulation",
+      "quota": 80,
+      "topics": [
+        "clear inquiry statements",
+        "describing materials and processes",
+        "linking images to ideas",
+        "concise artist language"
+      ]
+    },
+    {
+      "unit_code": "U6",
+      "unit_name": "Critique, Reflection, and Portfolio Polish",
+      "quota": 70,
+      "topics": [
+        "peer and self critique protocols",
+        "alignment check inquiry\u2194images",
+        "digital submission craft",
+        "scoring-criteria self audit"
+      ]
+    }
+  ]
+}

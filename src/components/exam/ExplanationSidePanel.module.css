@@ -1,0 +1,236 @@
+.panel {
+  flex: 1;
+  overflow: auto;
+  padding: var(--space-3);
+}
+
+.optionTabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: var(--space-3);
+}
+
+.optionTab {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid hsl(var(--border));
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.optionTabActive {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.1);
+}
+
+.optionTab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionTabCorrect {
+  border-color: hsl(var(--score-positive));
+  color: hsl(var(--score-positive));
+}
+
+.optionTabWrong {
+  border-color: hsl(var(--score-negative, 0 72% 51%));
+  color: hsl(var(--score-negative, 0 72% 51%));
+}
+
+.tabIcon {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: hsl(var(--background));
+  border-radius: 999px;
+}
+
+.verdict {
+  border: 1px solid hsl(var(--border));
+  border-radius: 10px;
+  padding: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.verdictRight {
+  border-color: hsl(var(--score-positive) / 0.5);
+  background: hsl(var(--score-positive) / 0.08);
+}
+
+.verdictWrong {
+  border-color: hsl(var(--score-negative, 0 72% 51%) / 0.5);
+  background: hsl(var(--score-negative, 0 72% 51%) / 0.07);
+}
+
+.verdictHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.verdictRight .verdictHead {
+  color: hsl(var(--score-positive));
+}
+
+.verdictWrong .verdictHead {
+  color: hsl(var(--score-negative, 0 72% 51%));
+}
+
+.choiceExplain {
+  margin: var(--space-1) 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: hsl(var(--foreground));
+}
+
+.stepsLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: var(--space-2);
+}
+
+.step {
+  border-left: 2px solid hsl(var(--border));
+  padding-left: var(--space-3);
+}
+
+.correctRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-size: 0.875rem;
+}
+
+.correctBadge {
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: hsl(var(--score-positive) / 0.15);
+  color: hsl(var(--score-positive));
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.report {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.stepHeader {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: var(--space-2);
+}
+
+.stepText {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.blurWrap {
+  position: relative;
+}
+
+.stepLocked .stepText {
+  filter: blur(4px);
+  user-select: none;
+}
+
+.unlockBtn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.optionPreview {
+  padding: 0 var(--space-4) var(--space-3);
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+  margin: 0;
+}
+
+.optionExplain {
+  padding: var(--space-3);
+  border-radius: 12px;
+  background: hsl(var(--muted) / 0.4);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-4);
+}
+
+.askCta {
+  width: 100%;
+  padding: 12px;
+  border: 1px dashed hsl(var(--border));
+  border-radius: 12px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.askCta:hover {
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 10px 12px;
+  }
+
+  .optionTab {
+    width: 36px;
+    height: 36px;
+  }
+
+  .optionExplain,
+  .optionPreview {
+    font-size: 0.8125rem;
+  }
+
+  .askCta {
+    min-height: 44px;
+  }
+
+  .unlockBtn {
+    min-height: 40px;
+    padding: 10px 16px;
+  }
+}

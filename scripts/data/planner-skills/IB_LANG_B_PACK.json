@@ -1,0 +1,181 @@
+{
+  "examType": "IB_LANG_B_PACK",
+  "topics": [
+    "Identities",
+    "Experiences",
+    "Human ingenuity",
+    "Social organization",
+    "Sharing the planet",
+    "Receptive skills",
+    "Productive skills",
+    "Interactive skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_identities",
+      "title": "Identities",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_experiences",
+      "title": "Experiences",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_human_ingenuity",
+      "title": "Human ingenuity",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_social_organization",
+      "title": "Social organization",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_sharing_the_planet",
+      "title": "Sharing the planet",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_receptive_skills",
+      "title": "Receptive skills",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_productive_skills",
+      "title": "Productive skills",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_interactive_skills",
+      "title": "Interactive skills",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_LANG_B_PACK:U1_identities",
+      "unit_code": "U1_identities",
+      "title": "Identities",
+      "topics": [
+        "personal attributes",
+        "lifestyles",
+        "health",
+        "beliefs and values"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_LANG_B_PACK:U2_experiences",
+      "unit_code": "U2_experiences",
+      "title": "Experiences",
+      "topics": [
+        "leisure",
+        "holidays",
+        "life stories",
+        "rites of passage",
+        "migration"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_B_PACK:U1_identities"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_B_PACK:U3_human_ingenuity",
+      "unit_code": "U3_human_ingenuity",
+      "title": "Human ingenuity",
+      "topics": [
+        "entertainment",
+        "artistic expression",
+        "communication and media",
+        "technology"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_B_PACK:U2_experiences"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_B_PACK:U4_social_organization",
+      "unit_code": "U4_social_organization",
+      "title": "Social organization",
+      "topics": [
+        "social relationships",
+        "community",
+        "social engagement",
+        "education",
+        "the working world"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_B_PACK:U3_human_ingenuity"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_B_PACK:U5_sharing_the_planet",
+      "unit_code": "U5_sharing_the_planet",
+      "title": "Sharing the planet",
+      "topics": [
+        "environment",
+        "human rights",
+        "peace and conflict",
+        "equality",
+        "globalization"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_B_PACK:U4_social_organization"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_B_PACK:U6_receptive_skills",
+      "unit_code": "U6_receptive_skills",
+      "title": "Receptive skills",
+      "topics": [
+        "reading strategies",
+        "listening strategies",
+        "text types",
+        "inferencing"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_B_PACK:U5_sharing_the_planet"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_B_PACK:U7_productive_skills",
+      "unit_code": "U7_productive_skills",
+      "title": "Productive skills",
+      "topics": [
+        "writing text types",
+        "oral interaction",
+        "register and audience"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_LANG_B_PACK:U6_receptive_skills"
+      ]
+    },
+    {
+      "skill_id": "IB_LANG_B_PACK:U8_interactive_skills",
+      "unit_code": "U8_interactive_skills",
+      "title": "Interactive skills",
+      "topics": [
+        "conversation management",
+        "cultural nuance",
+        "spontaneous response"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_LANG_B_PACK:U7_productive_skills"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

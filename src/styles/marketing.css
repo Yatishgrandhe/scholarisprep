@@ -1,0 +1,93 @@
+/* Marketing page layout rhythm — vertical padding on sections, horizontal on .container */
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sectionAlt {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
+  background: hsl(var(--muted) / 0.4);
+  border-top: 1px solid hsl(var(--border));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+@media (max-width: 768px) {
+  .section,
+  .sectionAlt {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 56px;
+}
+
+.sectionHeader .section-label {
+  margin-bottom: 14px;
+}
+
+.sectionHeader h2 {
+  margin-bottom: 16px;
+  color: hsl(var(--foreground));
+}
+
+.sectionHeader p {
+  margin-bottom: 0;
+  color: hsl(var(--muted-foreground));
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: hsl(var(--primary));
+}
+
+.marketing-content h3 + p,
+.marketing-content h4 + p {
+  margin-top: 10px;
+}
+
+.marketing-content p + p {
+  margin-top: 12px;
+}
+
+.marketing-content p + a,
+.marketing-content p + button {
+  margin-top: 24px;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-group button,
+  .button-group a {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,419 @@
+.sessionShell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  background: hsl(var(--background));
+  /* Keep chrome clear of notches / home indicator */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.9375rem;
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.bottomLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottomRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 10px;
+  background: hsl(var(--card));
+  cursor: pointer;
+  color: hsl(var(--muted-foreground));
+}
+
+.iconBtn:hover {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.navGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footerBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 10px;
+  background: hsl(var(--card));
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: hsl(var(--foreground));
+}
+
+.footerBtn:hover:not(:disabled) {
+  background: hsl(var(--muted));
+}
+
+.footerBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Secondary outline — demoted vs solid Check primary */
+.askSchoBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 10px;
+  background: hsl(var(--card));
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: hsl(var(--foreground));
+}
+
+.askSchoBtn:hover {
+  background: hsl(var(--muted));
+  border-color: hsl(var(--primary) / 0.35);
+  color: hsl(var(--primary));
+}
+
+/* Remix — cobalt/neutral outline, distinct from Check fill (not a second hue) */
+.remixBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 10px;
+  background: hsl(var(--muted) / 0.45);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: hsl(var(--primary));
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.remixBtn:hover:not(:disabled) {
+  background: hsl(var(--primary) / 0.1);
+  border-color: hsl(var(--primary) / 0.35);
+}
+
+.remixBtn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.remixPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px 6px 11px;
+  border: 1px solid hsl(var(--primary) / 0.3);
+  border-radius: 999px;
+  background: hsl(var(--primary) / 0.08);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: hsl(var(--primary));
+  min-height: 40px;
+}
+
+.remixPill:hover {
+  background: hsl(var(--primary) / 0.14);
+}
+
+.remixDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: hsl(var(--primary));
+  animation: remixPulse 1.8s infinite;
+}
+
+@keyframes remixPulse {
+  0% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.45); }
+  70% { box-shadow: 0 0 0 6px hsl(var(--primary) / 0); }
+  100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0); }
+}
+
+.spin {
+  animation: remixSpin 0.9s linear infinite;
+}
+
+@keyframes remixSpin {
+  to { transform: rotate(360deg); }
+}
+
+.nextBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 10px;
+  background: hsl(var(--card));
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: hsl(var(--foreground));
+}
+
+.nextBtn:hover:not(:disabled) {
+  background: hsl(var(--muted));
+}
+
+.nextBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 10px;
+  background: hsl(var(--primary));
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: hsl(var(--primary-foreground));
+}
+
+.checkBtn:hover:not(:disabled) {
+  background: hsl(var(--accent));
+}
+
+.checkBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rushHud {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsl(var(--primary));
+  white-space: nowrap;
+}
+
+.rushStreak {
+  font-variant-numeric: tabular-nums;
+}
+
+.rushStars {
+  letter-spacing: 0.05em;
+  color: hsl(var(--primary));
+}
+
+.rushTimer {
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Rush top-bar stat cluster */
+.rushStatStrip {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 12px;
+}
+
+.rushStat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.rushStatValue {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  font-variant-numeric: tabular-nums;
+}
+
+.rushStatLabel {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+@media (max-width: 900px) {
+  .rushStatStrip {
+    display: none;
+  }
+}
+
+.infoPopover {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  z-index: 50;
+  width: min(280px, 80vw);
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--popover));
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: hsl(var(--popover-foreground));
+}
+
+.infoWrap {
+  position: relative;
+}
+
+.iconBtn:focus-visible,
+.footerBtn:focus-visible,
+.askSchoBtn:focus-visible,
+.remixBtn:focus-visible,
+.remixPill:focus-visible,
+.nextBtn:focus-visible,
+.checkBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, hsl(var(--primary)) 22%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .remixDot,
+  .spin {
+    animation: none;
+  }
+
+  .shellArea {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   Pinned Ask Scho / Explanation panel — when docked open it should
+   shrink the exam beside it (not overlay it). The panel is fixed at
+   the right edge, so we reserve its width with padding here.
+   ============================================================ */
+.shellArea {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  transition: padding-right 220ms ease;
+}
+
+@media (min-width: 769px) {
+  .shellAreaPushed {
+    padding-right: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottomBar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .bottomLeft,
+  .bottomRight {
+    justify-content: space-between;
+    min-width: 0;
+  }
+
+  .bottomRight {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 6px;
+    padding-bottom: 2px;
+  }
+
+  .bottomRight::-webkit-scrollbar {
+    display: none;
+  }
+
+  .iconBtn {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  .askSchoBtn,
+  .remixBtn,
+  .footerBtn,
+  .nextBtn,
+  .checkBtn,
+  .remixPill {
+    flex-shrink: 0;
+    min-height: 44px;
+    white-space: nowrap;
+  }
+
+  .navGroup {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .askSchoBtn,
+  .remixBtn,
+  .footerBtn,
+  .nextBtn,
+  .checkBtn {
+    padding-inline: 12px;
+    font-size: 0.75rem;
+  }
+
+  .remixPill {
+    padding: 6px 8px;
+    font-size: 0.6875rem;
+    min-height: 40px;
+  }
+
+  .infoPopover {
+    width: min(260px, calc(100vw - 24px));
+    right: 0;
+    left: auto;
+  }
+}

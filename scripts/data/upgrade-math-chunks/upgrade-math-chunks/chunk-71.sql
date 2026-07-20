@@ -1,0 +1,131 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'After $t=36$ hours, how many miles has the car traveled?',
+  stimulus_text = 'A car''s distance $d$ (miles) after $t$ hours is modeled by $d=5t+33$.',
+  options = '[{"id":"A","text":"$208$","is_correct":false,"explanation":"Uses $t-1$ instead of $t=36$."},{"id":"B","text":"$213$","is_correct":true,"explanation":"**Step 1:** Substitute $t=36$. **Step 2:** $d=5(36)+33=213$."},{"id":"C","text":"$214$","is_correct":false,"explanation":"Adds 1 to the correct distance."},{"id":"D","text":"$38$","is_correct":false,"explanation":"Adds slope and intercept instead of evaluating."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Plug in $t=36$: $d=5(36)+33$.
+**Step 2:** Compute: $d=213$ miles.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '61dd938d-ee5c-4c20-8f2e-97eb24da7b25';
+
+UPDATE public.questions SET
+  question_text = 'Which choice best evaluates the claim?',
+  stimulus_text = 'A influencer claims "nobody likes the new app" after asking 210 followers who commented on one critical post.',
+  options = '[{"id":"A","text":"The claim overgeneralizes from a biased, non-random sample","is_correct":true,"explanation":"**Step 1:** Sample is self-selected critics. **Step 2:** Cannot support ''nobody''."},{"id":"B","text":"The claim is valid because 40 responses is large","is_correct":false,"explanation":"Size alone does not fix selection bias."},{"id":"C","text":"The claim is valid because social media represents everyone","is_correct":false,"explanation":"Platform users are not the entire population."},{"id":"D","text":"The claim is valid because one post reflects all opinions","is_correct":false,"explanation":"One thread is not representative."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Identify bias: engaged critics only.
+**Step 2:** Absolute claim "nobody" exceeds the evidence.
+**Step 3:** Representative sampling would be needed.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '61e37ffa-8a2a-4f10-a17a-485189a51242';
+
+UPDATE public.questions SET
+  question_text = 'Which expression is equivalent to $(4x+39)^2 - (4x-39)^2$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$624x$","is_correct":true,"explanation":"**Step 1:** Difference of squares in disguise: $(u+v)(u-v)$ with $u=4x+39$, $v=4x-39$ → $624x$."},{"id":"B","text":"$8x^2$","is_correct":false,"explanation":"Squares each binomial separately — wrong approach."},{"id":"C","text":"$156x$","is_correct":false,"explanation":"Uses $4b$ instead of $4ab$."},{"id":"D","text":"$16x^2+1521$","is_correct":false,"explanation":"Adds squares; not equivalent."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Let $u=4x+39$, $v=4x-39$.
+**Step 2:** $u^2-v^2=(u+v)(u-v)=(8x)(78)=624x$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '624bf57c-734f-49eb-b76e-9f8620691791';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a diameter of 10 centimeters. What is the area of the circle, in square centimeters, in terms of $\pi$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$\\pi$","is_correct":false,"explanation":"Choice A ($\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"$\\pi$","is_correct":false,"explanation":"Choice B ($\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"$5\\pi$","is_correct":false,"explanation":"Choice C ($5\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"$25\\pi$","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** A circle has a diameter of 10 centimeters. What is the area of the circle, in square centimeters, in terms of $\pi$?
+
+**Step 2 — Solve.** The area of a circle is given by the formula $A = \pi r^2$, where r is the radius of the circle. Since the diameter is 10 centimeters, the radius is 5 centimeters.  Therefore, the area of the circle is $A = \pi (5)^2 = 25\pi$ square centimeters.
+
+**Step 3 — Select D.** $25\pi$
+
+**Distractor analysis:**
+- **A** ($\pi$): Choice A ($\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** ($\pi$): Choice B ($\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** ($5\pi$): Choice C ($5\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":815,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_b8","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '629776aa-4c95-4c47-b5b2-8266e05501a7';
+
+UPDATE public.questions SET
+  question_text = 'In the xy-plane, a circle has a radius of 5 and a center at (2, 3).  Which of the following points lies on the circle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"(2, 8)","is_correct":false,"explanation":"Choice A ((2, 8)…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"(7, 3)","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"(2, -2)","is_correct":false,"explanation":"Choice C ((2, -2)…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"(7, 8)","is_correct":false,"explanation":"Choice D ((7, 8)…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** In the xy-plane, a circle has a radius of 5 and a center at (2, 3).  Which of the following points lies on the circle?
+
+**Step 2 — Solve.** The standard form of the equation of a circle with center (h, k) and radius r is (x - h)^2 + (y - k)^2 = r^2.  Substituting the values h = 2, k = 3, and r = 5 into this equation yields (x - 2)^2 + (y - 3)^2 = 25.  Of the given choices, only (7, 3) satisfies this equation: (7 - 2)^2 + (3 - 3)^2 = 25.  Therefore, (7, 3) lies on the circle.
+
+**Step 3 — Select B.** (7, 3)
+
+**Distractor analysis:**
+- **A** ((2, 8)): Choice A ((2, 8)…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** ((2, -2)): Choice C ((2, -2)…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** ((7, 8)): Choice D ((7, 8)…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":235,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_d5","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '62d52d89-ffa6-44d2-88e1-1d85f5003ebe';
+
+UPDATE public.questions SET
+  question_text = 'What is the ladder''s length?',
+  stimulus_text = 'A ladder leans against a wall. The foot is 32 ft from the wall and the top is 39 ft high.',
+  options = '[{"id":"A","text":"$48$","is_correct":false,"explanation":"Too short for the given legs."},{"id":"B","text":"$71$","is_correct":false,"explanation":"Length is not the sum of legs."},{"id":"C","text":"$49$","is_correct":false,"explanation":"Close — check $\\sqrt{${a}^2+${b}^2}$."},{"id":"D","text":"$50$","is_correct":true,"explanation":"**Step 1:** Pythagorean theorem. **Step 2:** $c=\\sqrt{32^2+39^2}=50$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Right triangle: legs 32 and 39.
+**Step 2:** $c=\sqrt{32^2+39^2}=50$ ft.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '62fc2fef-8b15-4292-a7c3-4b9be5bc9ab5';
+
+UPDATE public.questions SET
+  question_text = 'If $x+2y=6$ and $x-2y=4$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"1","is_correct":false,"explanation":"Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":false,"explanation":"Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** If $x+2y=6$ and $x-2y=4$, what is the value of $x$?
+
+**Step 2 — Solve.** We can solve for $x$ by adding the two equations together. Notice that the $y$ terms will cancel out.  $(x+2y) + (x-2y) = 6 + 4$ or $2x = 10$.  Dividing both sides by 2, we get $x = 5$.
+
+**Step 3 — Select D.** 5
+
+**Distractor analysis:**
+- **A** (1): Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (2): Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":617,"opensat_domain":"Algebra","opensat_raw_id":"e54c34a5","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '630d919b-4901-41d8-88cc-3d85b2664797';
+
+UPDATE public.questions SET
+  question_text = 'The expression $(\sqrt{x} + \sqrt{y})(\sqrt{x} - \sqrt{y})$ is equivalent to which of the following?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$\\sqrt{x^2 - y^2}$","is_correct":false,"explanation":"May result from squaring when you should multiply or add."},{"id":"B","text":"$x^2 - y^2$","is_correct":false,"explanation":"May result from squaring when you should multiply or add."},{"id":"C","text":"$x - y$","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"$\\sqrt{x} - \\sqrt{y}$","is_correct":false,"explanation":"Choice D ($\\sqrt{x} - \\sqrt{y}$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** The expression $(\sqrt{x} + \sqrt{y})(\sqrt{x} - \sqrt{y})$ is equivalent to which of the following?
+
+**Step 2 — Solve.** This expression is in the form of the difference of squares: (a + b)(a - b) = a^2 - b^2.  In this case, a = \sqrt{x} and b = \sqrt{y}.  Therefore, (\sqrt{x} + \sqrt{y})(\sqrt{x} - \sqrt{y}) = (\sqrt{x})^2 - (\sqrt{y})^2 = x - y.
+
+**Step 3 — Select C.** $x - y$
+
+**Distractor analysis:**
+- **A** ($\sqrt{x^2 - y^2}$): May result from squaring when you should multiply or add.
+- **B** ($x^2 - y^2$): May result from squaring when you should multiply or add.
+- **D** ($\sqrt{x} - \sqrt{y}$): Choice D ($\sqrt{x} - \sqrt{y}$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"EQS","domain_id":"advanced","opensat_index":696,"opensat_domain":"Advanced Math","opensat_raw_id":"23987fc8","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '632a5ef2-1faf-41a2-ae6b-f21eafb5f793';
+
+COMMIT;

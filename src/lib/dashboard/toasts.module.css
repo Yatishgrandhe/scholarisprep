@@ -1,0 +1,45 @@
+.achievementToast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  box-shadow: var(--shadow-md);
+  min-width: 240px;
+}
+
+.achievementToastIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: hsl(var(--primary) / 0.14);
+  color: hsl(var(--primary));
+  flex-shrink: 0;
+}
+
+.achievementToastBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.achievementToastLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: hsl(var(--muted-foreground));
+}
+
+.achievementToastName {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}

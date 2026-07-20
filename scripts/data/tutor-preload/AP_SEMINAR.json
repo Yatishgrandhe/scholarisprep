@@ -1,0 +1,137 @@
+{
+  "exam_type": "AP_SEMINAR",
+  "display_name": "AP Seminar",
+  "command_terms": [
+    "analyze",
+    "evaluate",
+    "synthesize",
+    "compare",
+    "argue",
+    "defend",
+    "attribute",
+    "qualify"
+  ],
+  "misconceptions": [
+    "Treating summary as analysis of an author's line of reasoning",
+    "Citing a source without explaining how it warrants the claim",
+    "Confusing credibility of a source with agreement with your thesis",
+    "Ignoring counterarguments or alternate perspectives",
+    "Writing a research report instead of an evidence-based argument"
+  ],
+  "paper_rules": [
+    "Course score blends Performance Tasks (team + individual) with the End-of-Course Exam",
+    "EOCE Part A: short answers dissecting a single argument; Part B: timed synthesis essay from sources",
+    "Attribute ideas; paraphrase carefully; distinguish your voice from sources",
+    "Bank MCQ practices argument/source skills; PT work is scaffolded FRQ/process items"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "pt1",
+        "label": "Team Performance Task",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "pt2",
+        "label": "Individual Research-Based Essay",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "eoce_a",
+        "label": "EOCE Part A",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "eoce_b",
+        "label": "EOCE Part B",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "mcq_practice",
+        "label": "Bank MCQ Practice",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "No calculator on any Capstone Seminar task or EOCE section."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1",
+      "unit_name": "Question and Explore",
+      "quota": 50,
+      "topics": [
+        "framing researchable questions",
+        "context and stakeholder lenses",
+        "inquiry paths and scope",
+        "curiosity to claim pipeline"
+      ]
+    },
+    {
+      "unit_code": "U2",
+      "unit_name": "Understand and Analyze Arguments",
+      "quota": 75,
+      "topics": [
+        "claim\u2013evidence\u2013reasoning maps",
+        "line of reasoning",
+        "rhetorical situation",
+        "argument limitations"
+      ]
+    },
+    {
+      "unit_code": "U3",
+      "unit_name": "Evaluate Sources and Perspectives",
+      "quota": 75,
+      "topics": [
+        "credibility and bias checks",
+        "corroboration across sources",
+        "perspective comparison",
+        "ethical use of evidence"
+      ]
+    },
+    {
+      "unit_code": "U4",
+      "unit_name": "Synthesize and Build Arguments",
+      "quota": 75,
+      "topics": [
+        "synthesis across texts",
+        "warranting claims",
+        "counterarguments and concessions",
+        "coherent written arguments"
+      ]
+    },
+    {
+      "unit_code": "U5",
+      "unit_name": "Team Project and Presentation (PT1)",
+      "quota": 75,
+      "topics": [
+        "team inquiry roles",
+        "multimedia presentation design",
+        "oral defense readiness",
+        "collaborative argument quality"
+      ]
+    },
+    {
+      "unit_code": "U6",
+      "unit_name": "Individual Research-Based Essay (PT2)",
+      "quota": 100,
+      "topics": [
+        "stimulus-linked research question",
+        "annotated evidence trail",
+        "individual written argument",
+        "presentation of findings"
+      ]
+    },
+    {
+      "unit_code": "U7",
+      "unit_name": "End-of-Course Exam Strategies",
+      "quota": 50,
+      "topics": [
+        "Part A argument analysis short answers",
+        "Part B source-based essay",
+        "timing and planning",
+        "rubric language alignment"
+      ]
+    }
+  ]
+}

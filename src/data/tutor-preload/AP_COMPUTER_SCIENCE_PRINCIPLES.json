@@ -1,0 +1,111 @@
+{
+  "exam_type": "AP_COMPUTER_SCIENCE_PRINCIPLES",
+  "display_name": "AP Computer Science Principles",
+  "command_terms": [
+    "analyze",
+    "compare",
+    "describe",
+    "explain",
+    "identify",
+    "implement (conceptually)",
+    "evaluate"
+  ],
+  "misconceptions": [
+    "Confusing lossless vs lossy compression tradeoffs",
+    "Assuming the Internet is centrally controlled",
+    "Equating encryption with authentication",
+    "Mixing algorithm correctness with efficiency",
+    "Ignoring bias in data collection and training sets",
+    "Treating Create PT as only code without written response"
+  ],
+  "paper_rules": [
+    "EOCE MCQ may include reading code in a language-agnostic or pseudocode style",
+    "Create PT practice: address purpose, algorithm, and development process prompts",
+    "Cite computing impacts with specific stakeholder effects",
+    "Distinguish data, metadata, and information"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "key": "create_pt",
+        "calculator": "none",
+        "note": "Create Performance Task — project work, not timed calculator section"
+      },
+      {
+        "key": "eoce_mcq",
+        "calculator": "none",
+        "note": "End-of-course MCQ; no calculator"
+      }
+    ],
+    "notes": "No calculator. Assessment includes Create Performance Task plus timed end-of-course MCQ (~120 min EOCE)."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_creative_development",
+      "unit_name": "Creative Development",
+      "unit_order": 1,
+      "weight_hint": 0.12,
+      "quota": 60,
+      "topics": [
+        "Program design and development",
+        "Collaboration",
+        "Documentation and testing",
+        "Iterative design"
+      ]
+    },
+    {
+      "unit_code": "U2_data",
+      "unit_name": "Data",
+      "unit_order": 2,
+      "weight_hint": 0.2,
+      "quota": 100,
+      "topics": [
+        "Binary and data representation",
+        "Data compression",
+        "Extracting information from data",
+        "Metadata and bias"
+      ]
+    },
+    {
+      "unit_code": "U3_algorithms_programming",
+      "unit_name": "Algorithms and Programming",
+      "unit_order": 3,
+      "weight_hint": 0.33,
+      "quota": 165,
+      "topics": [
+        "Variables and algorithms",
+        "Control structures",
+        "Lists and procedures",
+        "Searching/sorting concepts",
+        "Simulations"
+      ]
+    },
+    {
+      "unit_code": "U4_computing_systems_networks",
+      "unit_name": "Computing Systems and Networks",
+      "unit_order": 4,
+      "weight_hint": 0.13,
+      "quota": 65,
+      "topics": [
+        "Internet structure",
+        "Fault tolerance",
+        "Protocols and packets",
+        "Parallel and distributed computing"
+      ]
+    },
+    {
+      "unit_code": "U5_impact_of_computing",
+      "unit_name": "Impact of Computing",
+      "unit_order": 5,
+      "weight_hint": 0.22,
+      "quota": 110,
+      "topics": [
+        "Beneficial and harmful effects",
+        "Digital divide",
+        "Privacy and security",
+        "Legal and ethical concerns"
+      ]
+    }
+  ]
+}

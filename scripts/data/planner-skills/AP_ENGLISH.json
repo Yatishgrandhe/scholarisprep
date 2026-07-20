@@ -1,0 +1,129 @@
+{
+  "examType": "AP_ENGLISH",
+  "topics": [
+    "Rhetorical Situation",
+    "Claims and Evidence",
+    "Reasoning and Organization",
+    "Style and Conventions",
+    "Synthesis Writing",
+    "Argument and Rhetorical Analysis"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_rhetorical_situation",
+      "title": "Rhetorical Situation",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_exigency",
+        "U1_S2_audience",
+        "U1_S3_purpose",
+        "U1_S4_context"
+      ],
+      "topics": [
+        "exigency",
+        "audience",
+        "purpose",
+        "context"
+      ]
+    },
+    {
+      "unit_code": "U2_claims_and_evidence",
+      "title": "Claims and Evidence",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_thesis",
+        "U2_S2_evidence_selection",
+        "U2_S3_commentary"
+      ],
+      "topics": [
+        "thesis",
+        "evidence selection",
+        "commentary"
+      ]
+    },
+    {
+      "unit_code": "U3_reasoning_and_organization",
+      "title": "Reasoning and Organization",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_line_of_reasoning",
+        "U3_S2_methods_of_development"
+      ],
+      "topics": [
+        "line of reasoning",
+        "methods of development"
+      ]
+    },
+    {
+      "unit_code": "U4_style_and_conventions",
+      "title": "Style and Conventions",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_diction",
+        "U4_S2_syntax",
+        "U4_S3_tone"
+      ],
+      "topics": [
+        "diction",
+        "syntax",
+        "tone"
+      ]
+    },
+    {
+      "unit_code": "U5_synthesis_writing",
+      "title": "Synthesis Writing",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_source_integration",
+        "U5_S2_conversation_among_sources"
+      ],
+      "topics": [
+        "source integration",
+        "conversation among sources"
+      ]
+    },
+    {
+      "unit_code": "U6_argument_and_rhetorical_analysis",
+      "title": "Argument and Rhetorical Analysis",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_argument_frq",
+        "U6_S2_rhetorical_analysis_frq"
+      ],
+      "topics": [
+        "argument FRQ",
+        "rhetorical analysis FRQ"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_rhetorical_situation": [
+      "U1_S1_exigency",
+      "U1_S2_audience",
+      "U1_S3_purpose",
+      "U1_S4_context"
+    ],
+    "U2_claims_and_evidence": [
+      "U2_S1_thesis",
+      "U2_S2_evidence_selection",
+      "U2_S3_commentary"
+    ],
+    "U3_reasoning_and_organization": [
+      "U3_S1_line_of_reasoning",
+      "U3_S2_methods_of_development"
+    ],
+    "U4_style_and_conventions": [
+      "U4_S1_diction",
+      "U4_S2_syntax",
+      "U4_S3_tone"
+    ],
+    "U5_synthesis_writing": [
+      "U5_S1_source_integration",
+      "U5_S2_conversation_among_sources"
+    ],
+    "U6_argument_and_rhetorical_analysis": [
+      "U6_S1_argument_frq",
+      "U6_S2_rhetorical_analysis_frq"
+    ]
+  }
+}

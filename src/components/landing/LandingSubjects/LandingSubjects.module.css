@@ -1,0 +1,306 @@
+.section {
+  position: relative;
+  padding: 76px 0;
+  background: hsl(var(--muted) / 0.25);
+  border-top: 1px solid hsl(var(--border) / 0.7);
+  border-bottom: 1px solid hsl(var(--border) / 0.7);
+}
+
+.inner {
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+}
+
+/* ---------- Heading ---------- */
+
+.heading {
+  text-align: center;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.kicker {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: hsl(var(--primary));
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+  margin: 0;
+  text-wrap: balance;
+}
+
+.title em {
+  font-style: italic;
+  color: hsl(var(--primary));
+}
+
+.subtitle {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* ---------- Program chips (SAT / ACT / AP / IB) ---------- */
+
+.programGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 720px) {
+  .programGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.programCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  transition: border-color 200ms ease, box-shadow 200ms ease,
+    transform 200ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.programCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px -20px hsl(0 0% 0% / 0.22);
+}
+
+.programDot {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--program-tone);
+}
+
+.programName {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 400;
+  color: hsl(var(--foreground));
+}
+
+.programDetail {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.toneSat {
+  --program-tone: hsl(var(--exam-sat));
+}
+
+.toneSat:hover {
+  border-color: hsl(var(--exam-sat) / 0.5);
+}
+
+.toneAct {
+  --program-tone: hsl(var(--exam-act));
+}
+
+.toneAct:hover {
+  border-color: hsl(var(--exam-act) / 0.5);
+}
+
+.toneAp {
+  --program-tone: hsl(var(--exam-ap));
+}
+
+.toneAp:hover {
+  border-color: hsl(var(--exam-ap) / 0.5);
+}
+
+.toneIb {
+  --program-tone: hsl(var(--exam-ib));
+}
+
+.toneIb:hover {
+  border-color: hsl(var(--exam-ib) / 0.5);
+}
+
+/* ---------- Domain chips ---------- */
+
+.domainBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.domainKicker {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  text-align: center;
+}
+
+.domainRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 760px;
+}
+
+.domainChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  font-size: 12.5px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  white-space: nowrap;
+}
+
+.domainChip svg {
+  color: hsl(var(--primary));
+  flex-shrink: 0;
+}
+
+/* ---------- Stats ---------- */
+
+.statsRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding-top: 8px;
+  border-top: 1px solid hsl(var(--border) / 0.6);
+  width: 100%;
+  max-width: 560px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding-top: 20px;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  color: hsl(var(--foreground));
+}
+
+.statLabel {
+  font-size: 11.5px;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Courses teaser ---------- */
+
+.teaser {
+  font-size: 13.5px;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  text-align: center;
+}
+
+.teaserLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color: hsl(var(--primary));
+  text-decoration: none;
+  border-bottom: 1px solid hsl(var(--primary) / 0.35);
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.teaserLink:hover {
+  border-color: hsl(var(--primary));
+}
+
+.teaserLink svg {
+  transition: transform 180ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.teaserLink:hover svg {
+  transform: translateX(2px);
+}
+
+/* ---------- Dark mode ---------- */
+
+:global(.dark) .programCard {
+  background: hsl(var(--card));
+  border-color: hsl(0 0% 100% / 0.08);
+}
+
+:global(.dark) .programCard:hover {
+  box-shadow: 0 18px 40px -20px hsl(0 0% 0% / 0.6);
+}
+
+:global(.dark) .domainChip {
+  background: hsl(var(--muted) / 0.4);
+  border-color: hsl(0 0% 100% / 0.08);
+}
+
+/* ---------- Reduced motion / small screens ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .programCard,
+  .kicker,
+  .title,
+  .subtitle,
+  .domainKicker,
+  .domainChip,
+  .statsRow,
+  .teaser {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .statsRow {
+    gap: 24px;
+  }
+}

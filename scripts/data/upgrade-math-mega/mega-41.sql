@@ -1,0 +1,587 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 cm. A chord of the circle is 8 cm long. What is the distance, in cm, from the center of the circle to the chord?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 cm. A chord of the circle is 8 cm long. What is the distance, in cm, from the center of the circle to the chord?
+
+**Step 2 — Solve.** Draw a radius from the center of the circle to each endpoint of the chord. This creates an isosceles triangle with a base of 8 cm and two sides of 5 cm. Draw the altitude from the center of the circle to the chord. This altitude bisects the base of the isosceles triangle, creating two right triangles with a hypotenuse of 5 cm and a leg of 4 cm. Using the Pythagorean Theorem, the other leg of the right triangle (which is the distance from the center of the circle to the chord) is  cm.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":372,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_e3","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '76761afb-e091-4d3d-8935-1fca1fa54d21';
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 centimeters. What is the circumference of the circle, in centimeters?  (Express your answer in terms of $\pi$.)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$\\pi$","is_correct":false,"explanation":"Choice A ($\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"$5 \\pi$","is_correct":false,"explanation":"Choice B ($5 \\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"$10 \\pi$","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"$25 \\pi$","is_correct":false,"explanation":"Choice D ($25 \\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 centimeters. What is the circumference of the circle, in centimeters?  (Express your answer in terms of $\pi$.)
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula $C = 2 \pi r$, where $r$ is the radius. Substituting 5 for $r$, we get $C = 2 \pi (5)$, or $C = 10 \pi$.
+
+**Step 3 — Select C.** $10 \pi$
+
+**Distractor analysis:**
+- **A** ($\pi$): Choice A ($\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** ($5 \pi$): Choice B ($5 \pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** ($25 \pi$): Choice D ($25 \pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":176,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a7","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '767d90d1-b597-4cf5-a74d-1ea1e9902a4b';
+UPDATE public.questions SET
+  question_text = 'If the original price is $210$, what is the final price after both changes?',
+  stimulus_text = 'A retail price is increased by 25% and then discounted by 15%.',
+  options = '[{"id":"A","text":"$224$","is_correct":true,"explanation":"**Step 1:** $210×1.25=263$. **Step 2:** $263×0.85=224$."},{"id":"B","text":"$210$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$263$","is_correct":false,"explanation":"Only applies the markup."},{"id":"D","text":"$234$","is_correct":false,"explanation":"Adds 10 without reason."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Markup: $210×(1+25/100)=263$.
+**Step 2:** Discount: $263×(1-15/100)=224$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '76a60ccb-6d04-4151-aa51-231acc53eaae';
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 centimeters. What is the circumference of the circle in centimeters?  (Express your answer in terms of \pi.)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5\\pi","is_correct":false,"explanation":"Choice A (5\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"25\\pi","is_correct":false,"explanation":"Choice C (25\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"50\\pi","is_correct":false,"explanation":"Choice D (50\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 centimeters. What is the circumference of the circle in centimeters?  (Express your answer in terms of \pi.)
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula C = 2\pi r, where r is the radius of the circle.  Substituting 5 for r, we get C = 2\pi(5) = 10\pi.
+
+**Step 3 — Select B.** 10\pi
+
+**Distractor analysis:**
+- **A** (5\pi): Choice A (5\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (25\pi): Choice C (25\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (50\pi): Choice D (50\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":706,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_55","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '76ca8d43-0e45-4560-b64c-9f5bbcb1efdf';
+UPDATE public.questions SET
+  question_text = 'A circle with a radius of 5 centimeters is inscribed in a square. What is the area, in square centimeters, of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a radius of 5 centimeters is inscribed in a square. What is the area, in square centimeters, of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square. Since the radius of the circle is 5 centimeters, the diameter is 10 centimeters. Therefore, the side length of the square is 10 centimeters, and the area of the square is (10 cm)(10 cm) = 100 square centimeters.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":547,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '76d2ad80-64f0-4ab8-8d48-e49027f3c41d';
+UPDATE public.questions SET
+  question_text = 'What is the measure of the adjacent interior angle?',
+  stimulus_text = 'An exterior angle of a triangle measures 126°.',
+  options = '[{"id":"A","text":"$126°$","is_correct":false,"explanation":"That is the exterior angle."},{"id":"B","text":"$54°$","is_correct":true,"explanation":"**Step 1:** Linear pair sums to 180°. **Step 2:** $180-126=54°$."},{"id":"C","text":"$64°$","is_correct":false,"explanation":"Does not satisfy linear pair."},{"id":"D","text":"$90°$","is_correct":false,"explanation":"Not necessarily 90°."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Exterior and interior form a linear pair.
+**Step 2:** $180°-126°=54°$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '76fc7465-61d1-4753-b573-eb0391ad16dd';
+UPDATE public.questions SET
+  question_text = 'Which value of $x$ satisfies $5x + 5 > 157$ and represents a feasible weight?',
+  stimulus_text = 'A package must weigh more than 157 grams but at most 170 grams to ship.',
+  options = '[{"id":"A","text":"$28$","is_correct":false,"explanation":"Too small: $5(28)+5=145$."},{"id":"B","text":"$29$","is_correct":false,"explanation":"Still below threshold 157."},{"id":"C","text":"$30$","is_correct":false,"explanation":"Borderline; check strict inequality."},{"id":"D","text":"$31$","is_correct":true,"explanation":"**Step 1:** $5x > 152$. **Step 2:** $x > 30.4$. Smallest integer choice: 31."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Isolate: $5x > 152$.
+**Step 2:** $x > 30.40$.
+**Step 3:** Among choices, $31$ is the smallest valid value.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '772ddb90-f484-4c28-97f7-9345d7cf7ab6';
+UPDATE public.questions SET
+  question_text = 'For what value of \(k\) does the equation \(x^2+6x+k=0\) have exactly one solution? ',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"9","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"6","is_correct":false,"explanation":"Choice B (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"3","is_correct":false,"explanation":"Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"0","is_correct":false,"explanation":"Choice D (0…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** For what value of \(k\) does the equation \(x^2+6x+k=0\) have exactly one solution? 
+
+**Step 2 — Solve.** A quadratic equation has exactly one solution if and only if its discriminant is equal to 0.  The discriminant of the quadratic equation \(ax^2 + bx + c = 0\) is \(b^2 - 4ac\).  In this case, the discriminant is \(6^2 - 4 \cdot 1 \cdot k = 36 - 4k\).  Setting the discriminant equal to 0 gives \(36 - 4k = 0\). Solving for \(k\) gives \(k = 9\).
+
+**Step 3 — Select A.** 9
+
+**Distractor analysis:**
+- **B** (6): Choice B (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (3): Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (0): Choice D (0…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":226,"opensat_domain":"Advanced Math","opensat_raw_id":"f66432b2","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7750f514-248a-4ccc-b81d-948933937a23';
+
+UPDATE public.questions SET
+  question_text = 'If $2x + 3y = 12$ and $x - y = 1$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $2x + 3y = 12$ and $x - y = 1$, what is the value of $x$?
+
+**Step 2 — Solve.** We can solve this system of equations using elimination. Multiplying the second equation by 3, we get $3x - 3y = 3$. Adding this equation to the first equation, we get $5x = 15$. Dividing both sides by 5 gives us $x = 3$.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":1025,"opensat_domain":"Algebra","opensat_raw_id":"12d8c11d","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '77943afe-7ec9-4d96-9751-e5b42d782092';
+UPDATE public.questions SET
+  question_text = 'The function $f(x)$ is defined by $f(x) = \frac{x^2 - 4}{x - 2}$. For what value(s) of $x$ is $f(x)$ undefined?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"x = 2","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"x = -2","is_correct":false,"explanation":"Choice B (x = -2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"x = 2, x = -2","is_correct":false,"explanation":"Choice C (x = 2, x = -2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"All values of x","is_correct":false,"explanation":"Choice D (All values of x…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** The function $f(x)$ is defined by $f(x) = \frac{x^2 - 4}{x - 2}$. For what value(s) of $x$ is $f(x)$ undefined?
+
+**Step 2 — Solve.** A function is undefined when the denominator of a fraction equals zero.  In this case, the denominator is  x - 2.  Solving for x, we find that x = 2 makes the denominator equal to zero, making the function undefined at that point. Therefore, the function f(x) is undefined for x = 2.
+
+**Step 3 — Select A.** x = 2
+
+**Distractor analysis:**
+- **B** (x = -2): Choice B (x = -2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (x = 2, x = -2): Choice C (x = 2, x = -2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (All values of x): Choice D (All values of x…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":35,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_5","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '77bdf78d-fd50-4fb9-87cf-56d7ac94adbf';
+UPDATE public.questions SET
+  question_text = 'After $t=43$ hours, how many miles has the car traveled?',
+  stimulus_text = 'A car''s distance $d$ (miles) after $t$ hours is modeled by $d=3t+40$.',
+  options = '[{"id":"A","text":"$166$","is_correct":false,"explanation":"Uses $t-1$ instead of $t=43$."},{"id":"B","text":"$169$","is_correct":true,"explanation":"**Step 1:** Substitute $t=43$. **Step 2:** $d=3(43)+40=169$."},{"id":"C","text":"$170$","is_correct":false,"explanation":"Adds 1 to the correct distance."},{"id":"D","text":"$43$","is_correct":false,"explanation":"Adds slope and intercept instead of evaluating."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Plug in $t=43$: $d=3(43)+40$.
+**Step 2:** Compute: $d=169$ miles.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '77cd3825-c3aa-479c-960b-da35b1864ec8';
+UPDATE public.questions SET
+  question_text = 'The height of a projectile is $h(t)=2(t-49)^2+51$, where $t$ is seconds. What is $h(52)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$51$","is_correct":false,"explanation":"That is the minimum height at the vertex."},{"id":"B","text":"$69$","is_correct":true,"explanation":"**Step 1:** $h(52)=2(52-49)^2+51=2(9)+51=69$."},{"id":"C","text":"$67$","is_correct":false,"explanation":"Subtracts $a$ incorrectly."},{"id":"D","text":"$53$","is_correct":false,"explanation":"Adds coefficient and constant."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Substitute $t=52$: $h(52)=2(52-49)^2+51$.
+**Step 2:** $(52-49)^2=9$ → $h(52)=69$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '77dd66a0-cfc8-48b8-8882-fa94869b628a';
+UPDATE public.questions SET
+  question_text = 'A bakery has 120 cakes on display.  Of those cakes, 25% are chocolate, 30% are vanilla, and the rest are strawberry. How many strawberry cakes are on display?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"36","is_correct":false,"explanation":"Choice A (36…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"48","is_correct":false,"explanation":"Choice B (48…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"60","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"72","is_correct":false,"explanation":"Choice D (72…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A bakery has 120 cakes on display.  Of those cakes, 25% are chocolate, 30% are vanilla, and the rest are strawberry. How many strawberry cakes are on display?
+
+**Step 2 — Solve.** First, we need to find the total percentage of chocolate and vanilla cakes: 25% + 30% = 55%. This means 55% of the cakes are either chocolate or vanilla.  The remaining cakes must be strawberry: 100% - 55% = 45%.  To find the number of strawberry cakes, we multiply the total number of cakes by 45%: 120 cakes * 0.45 = 54 cakes.  The closest answer choice to 54 cakes is 60, so the answer is C.
+
+**Step 3 — Select C.** 60
+
+**Distractor analysis:**
+- **A** (36): Choice A (36…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (48): Choice B (48…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (72): Choice D (72…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":980,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"28f140fd","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '77deadf1-7698-4989-ac1e-99e479d6e224';
+UPDATE public.questions SET
+  question_text = 'Which expression is equivalent to $(4x+9)^2 - (4x-9)^2$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$144x$","is_correct":true,"explanation":"**Step 1:** Difference of squares in disguise: $(u+v)(u-v)$ with $u=4x+9$, $v=4x-9$ → $144x$."},{"id":"B","text":"$8x^2$","is_correct":false,"explanation":"Squares each binomial separately — wrong approach."},{"id":"C","text":"$36x$","is_correct":false,"explanation":"Uses $4b$ instead of $4ab$."},{"id":"D","text":"$16x^2+81$","is_correct":false,"explanation":"Adds squares; not equivalent."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Let $u=4x+9$, $v=4x-9$.
+**Step 2:** $u^2-v^2=(u+v)(u-v)=(8x)(18)=144x$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '77ec2aec-d55b-4114-af00-e911ae7ff850';
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 cm. What is the circumference of the circle, in terms of pi?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5\\pi","is_correct":false,"explanation":"Choice A (5\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"25\\pi","is_correct":false,"explanation":"Choice C (25\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"50\\pi","is_correct":false,"explanation":"Choice D (50\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 cm. What is the circumference of the circle, in terms of pi?
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula C = 2πr, where r is the radius.  Substituting 5 for r, we get C = 2π(5) = 10π.
+
+**Step 3 — Select B.** 10\pi
+
+**Distractor analysis:**
+- **A** (5\pi): Choice A (5\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (25\pi): Choice C (25\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (50\pi): Choice D (50\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":360,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"f42c912f","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '77f63ef4-b164-4f72-b479-2a823b784ea0';
+UPDATE public.questions SET
+  question_text = 'A circle is inscribed in a square with side length 8. What is the area of the circle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"8\\pi","is_correct":false,"explanation":"Choice A (8\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"16\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"32\\pi","is_correct":false,"explanation":"Choice C (32\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"64\\pi","is_correct":false,"explanation":"Choice D (64\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle is inscribed in a square with side length 8. What is the area of the circle?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square, which is 8. Therefore, the radius of the circle is 4. The area of the circle is $\pi r^2 = \pi(4)^2 = 16\pi$.
+
+**Step 3 — Select B.** 16\pi
+
+**Distractor analysis:**
+- **A** (8\pi): Choice A (8\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (32\pi): Choice C (32\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (64\pi): Choice D (64\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":82,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"e55931d8","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '78e0e285-9b6e-45c0-9979-70bcf2fd8e3a';
+
+UPDATE public.questions SET
+  question_text = 'If $3x + 2y = 10$ and $x - 2y = 2$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $3x + 2y = 10$ and $x - 2y = 2$, what is the value of $x$?
+
+**Step 2 — Solve.** We can add the two equations together to eliminate $y$: \begin{align*} 3x + 2y &= 10 \\ + \\ x - 2y &= 2 \\ \hline 4x &= 12  \\ \end{align*} Dividing both sides by 4, we find that $x = 3$.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":11,"opensat_domain":"Algebra","opensat_raw_id":"random_id_b12","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '78e99de2-dea7-4275-b6e4-46768e338364';
+UPDATE public.questions SET
+  question_text = 'If $x + y = 5$ and $x - y = 3$, what is the value of $x^2 - y^2$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"15","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"25","is_correct":false,"explanation":"Choice B (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"36","is_correct":false,"explanation":"Choice C (36…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"45","is_correct":false,"explanation":"Choice D (45…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** If $x + y = 5$ and $x - y = 3$, what is the value of $x^2 - y^2$?
+
+**Step 2 — Solve.** We can use the difference of squares factorization: $x^2 - y^2 = (x + y)(x - y)$.  Substituting the given values, we have $(x + y)(x - y) = (5)(3) = 15$.
+
+**Step 3 — Select A.** 15
+
+**Distractor analysis:**
+- **B** (25): Choice B (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (36): Choice C (36…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (45): Choice D (45…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":368,"opensat_domain":"Algebra","opensat_raw_id":"25c21c5b","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '791ec3b3-d425-4d34-bf53-76c5ca8b8f92';
+UPDATE public.questions SET
+  question_text = 'How many milliliters of substance A are in the mixture?',
+  stimulus_text = 'A chemist mixes substances A and B in ratio $5:6$ to make 126 milliliters of solution.',
+  options = '[{"id":"A","text":"$54$","is_correct":false,"explanation":"Underestimates A''s share."},{"id":"B","text":"$56$","is_correct":false,"explanation":"Close but ratio arithmetic is off."},{"id":"C","text":"$57$","is_correct":true,"explanation":"**Step 1:** A''s fraction $\\frac{5}{11}$. **Step 2:** $\\frac{5}{11}×126=57$."},{"id":"D","text":"$126$","is_correct":false,"explanation":"That is the total volume."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1:** A''s share: $\frac{5}{11}$ of 126.
+**Step 2:** $\frac{5}{11}×126=57$ mL.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '799103fa-ac05-4307-ac28-187d3b94b596';
+UPDATE public.questions SET
+  question_text = 'If $x+y=5$ and $x-y=1$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $x+y=5$ and $x-y=1$, what is the value of $x$?
+
+**Step 2 — Solve.** Adding the two equations together, we eliminate $y$ and get $2x = 6$. Dividing both sides by 2, we find $x = 3$.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":158,"opensat_domain":"Algebra","opensat_raw_id":"28b0f83f","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '799a2960-2d55-48dc-ace9-a9649f43a836';
+UPDATE public.questions SET
+  question_text = 'The equation $2x^2 + 3x - 5 = 0$ can be factored as $(2x + 5)(x - 1) = 0$. What are the solutions to this equation?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-5/2 and 1","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"-5/2 and -1","is_correct":false,"explanation":"Choice B (-5/2 and -1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"5/2 and 1","is_correct":false,"explanation":"Choice C (5/2 and 1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5/2 and -1","is_correct":false,"explanation":"Choice D (5/2 and -1…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** The equation $2x^2 + 3x - 5 = 0$ can be factored as $(2x + 5)(x - 1) = 0$. What are the solutions to this equation?
+
+**Step 2 — Solve.** The equation $(2x + 5)(x - 1) = 0$ is true only if one or both of the factors is equal to zero. Setting $2x + 5 = 0$ and solving for x yields $x = -5/2$. Setting $x - 1 = 0$ and solving for x yields $x = 1$. Therefore, the solutions to the equation are -5/2 and 1.
+
+**Step 3 — Select A.** -5/2 and 1
+
+**Distractor analysis:**
+- **B** (-5/2 and -1): Choice B (-5/2 and -1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (5/2 and 1): Choice C (5/2 and 1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5/2 and -1): Choice D (5/2 and -1…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":509,"opensat_domain":"Algebra","opensat_raw_id":"45a109a3","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '79cc3067-f353-40fb-8776-5ede1e16648e';
+UPDATE public.questions SET
+  question_text = 'If $x + 2y = 5$ and $x - 2y = 1$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"1","is_correct":false,"explanation":"Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":false,"explanation":"Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"3","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"4","is_correct":false,"explanation":"Choice D (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If $x + 2y = 5$ and $x - 2y = 1$, what is the value of $x$?
+
+**Step 2 — Solve.** Adding the two equations together eliminates the $y$ terms and gives us $2x = 6$. Dividing both sides by 2, we get $x = 3$.
+
+**Step 3 — Select C.** 3
+
+**Distractor analysis:**
+- **A** (1): Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (2): Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (4): Choice D (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":781,"opensat_domain":"Algebra","opensat_raw_id":"random_id_c3","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '79ee38a1-3902-4a05-ac1b-83ee2a643206';
+UPDATE public.questions SET
+  question_text = 'The equation $2x + 3 = 12$ is equivalent to which of the following equations?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"x + 3 = 6","is_correct":false,"explanation":"Adds quantities that should be multiplied or compares unrelated terms."},{"id":"B","text":"2x = 9","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"x = 9/2","is_correct":false,"explanation":"Choice C (x = 9/2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"x = 6","is_correct":false,"explanation":"Choice D (x = 6…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** The equation $2x + 3 = 12$ is equivalent to which of the following equations?
+
+**Step 2 — Solve.** Subtracting 3 from both sides of the equation $2x + 3 = 12$ gives us $2x = 9$. Therefore, the equation $2x + 3 = 12$ is equivalent to the equation $2x = 9$.
+
+**Step 3 — Select B.** 2x = 9
+
+**Distractor analysis:**
+- **A** (x + 3 = 6): Adds quantities that should be multiplied or compares unrelated terms.
+- **C** (x = 9/2): Choice C (x = 9/2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (x = 6): Choice D (x = 6…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":680,"opensat_domain":"Algebra","opensat_raw_id":"e29f31f4","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a21bd87-3f7e-494b-a43e-4bf8ab77e25f';
+UPDATE public.questions SET
+  question_text = 'A rectangle has a length of 8 centimeters and a width of 5 centimeters. What is the area of the rectangle, in square centimeters?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"13","is_correct":false,"explanation":"Choice A (13…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"26","is_correct":false,"explanation":"Choice B (26…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"40","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"64","is_correct":false,"explanation":"Choice D (64…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A rectangle has a length of 8 centimeters and a width of 5 centimeters. What is the area of the rectangle, in square centimeters?
+
+**Step 2 — Solve.** The area of a rectangle is calculated by multiplying the length and width. Therefore, the area of the rectangle is 8 cm * 5 cm = 40 square centimeters.
+
+**Step 3 — Select C.** 40
+
+**Distractor analysis:**
+- **A** (13): Choice A (13…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (26): Choice B (26…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (64): Choice D (64…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"ARE","domain_id":"geometry","opensat_index":584,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c3","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a2508d1-a1fd-48e9-a47b-2a8a537afd8a';
+
+UPDATE public.questions SET
+  question_text = 'After $t=25$ hours, how many miles has the car traveled?',
+  stimulus_text = 'A car''s distance $d$ (miles) after $t$ hours is modeled by $d=3t+22$.',
+  options = '[{"id":"A","text":"$94$","is_correct":false,"explanation":"Uses $t-1$ instead of $t=25$."},{"id":"B","text":"$97$","is_correct":true,"explanation":"**Step 1:** Substitute $t=25$. **Step 2:** $d=3(25)+22=97$."},{"id":"C","text":"$98$","is_correct":false,"explanation":"Adds 1 to the correct distance."},{"id":"D","text":"$25$","is_correct":false,"explanation":"Adds slope and intercept instead of evaluating."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Plug in $t=25$: $d=3(25)+22$.
+**Step 2:** Compute: $d=97$ miles.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a5702ed-b0c4-4c05-b273-c8fa330fc610';
+UPDATE public.questions SET
+  question_text = 'For what value of $k$ does the equation $5(x-6)+2k = 172$ have solution $x=38$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$5$","is_correct":false,"explanation":"Substituting this $k$ does not yield $x=38$."},{"id":"B","text":"$6$","is_correct":true,"explanation":"Expand: $5x-30+2k=172$ → $5x=190$ → $x=38$ when $k=6$."},{"id":"C","text":"$7$","is_correct":false,"explanation":"Too large; check substitution."},{"id":"D","text":"$38$","is_correct":false,"explanation":"That is $x$, not $k$."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Substitute $x=38$: $5(38-k)+2k=172$.
+**Step 2:** Simplify: $190-5k+2k=172$ → $190+-3k=172$.
+**Step 3:** Solve for $k$: $-3k=-18$ → $k=6$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a58df60-0d86-4d5d-9a80-c6a3b815037b';
+UPDATE public.questions SET
+  question_text = 'What is the positive solution to $x^2 - 10x + 24 = 0$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$3$","is_correct":false,"explanation":"Not a root of the quadratic."},{"id":"B","text":"$10$","is_correct":false,"explanation":"Sum of roots, not a root."},{"id":"C","text":"$6$","is_correct":true,"explanation":"**Step 1:** Factor $(x-4)(x-6)=0$. **Step 2:** Positive root is $6$."},{"id":"D","text":"$11$","is_correct":false,"explanation":"Not a solution."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1:** Factor: $(x-4)(x-6)=0$.
+**Step 2:** Roots $x=4$ and $x=6$.
+**Step 3:** Positive solution: $6$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a670401-e36a-42f5-b6b8-ae09a0776129';
+UPDATE public.questions SET
+  question_text = 'A survey of 200 students found that 120 students enjoy watching movies, 80 students enjoy reading books, and 60 students enjoy both. How many of the 200 students enjoy neither watching movies nor reading books?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"20","is_correct":false,"explanation":"Choice A (20…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"40","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"60","is_correct":false,"explanation":"Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"100","is_correct":false,"explanation":"Choice D (100…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A survey of 200 students found that 120 students enjoy watching movies, 80 students enjoy reading books, and 60 students enjoy both. How many of the 200 students enjoy neither watching movies nor reading books?
+
+**Step 2 — Solve.** We can use a Venn diagram to solve this problem.  Let M represent the set of students who enjoy watching movies and B represent the set of students who enjoy reading books.  We are given that |M|=120, |B|=80, and |M∩B|=60.  The number of students who enjoy only watching movies is 120 - 60 = 60.  The number of students who enjoy only reading books is 80 - 60 = 20.  The total number of students who enjoy at least one of these activities is 60 + 20 + 60 = 140. Therefore, 200 - 140 = 60 students enjoy neither.
+
+**Step 3 — Select B.** 40
+
+**Distractor analysis:**
+- **A** (20): Choice A (20…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (60): Choice C (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (100): Choice D (100…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":88,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_c8","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7a696aab-3f14-4235-83fa-8aa04a48ecc1';
+UPDATE public.questions SET
+  question_text = 'If $\log_2 8 = x$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"8","is_correct":false,"explanation":"Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $\log_2 8 = x$, what is the value of $x$?
+
+**Step 2 — Solve.** The equation $\log_2 8 = x$ asks: ''To what power must we raise 2 to get 8?''. Since $2^3 = 8$, the value of $x$ is 3.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (8): Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":776,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_a3","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7b6dbf63-59c9-404b-a2a9-fb1846d76b2c';
+UPDATE public.questions SET
+  question_text = 'A circle with a radius of 5 units is inscribed in a square. What is the area, in square units, of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a radius of 5 units is inscribed in a square. What is the area, in square units, of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square. Since the radius of the circle is 5 units, the diameter is 10 units.  Therefore, the side length of the square is 10 units, and the area of the square is 10 * 10 = 100 square units.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":13,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"f41b3483","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7b9e2f43-e270-42d1-9181-f0ae1c2eb045';
+UPDATE public.questions SET
+  question_text = 'A store sells bags of apples for $\$3.50$ per bag.  If the store makes a profit of $\$0.75$ per bag, what is the cost, in dollars, of each bag of apples?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$\\$2.75$","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"$\\$3.25$","is_correct":false,"explanation":"Choice B ($\\$3.25$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"$\\$4.25$","is_correct":false,"explanation":"Choice C ($\\$4.25$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"$\\$4.75$","is_correct":false,"explanation":"Choice D ($\\$4.75$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** A store sells bags of apples for $\$3.50$ per bag.  If the store makes a profit of $\$0.75$ per bag, what is the cost, in dollars, of each bag of apples?
+
+**Step 2 — Solve.** The cost of a bag of apples is the selling price minus the profit: $\$3.50 - \$0.75 = \$2.75$.
+
+**Step 3 — Select A.** $\$2.75$
+
+**Distractor analysis:**
+- **B** ($\$3.25$): Choice B ($\$3.25$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** ($\$4.25$): Choice C ($\$4.25$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** ($\$4.75$): Choice D ($\$4.75$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":89,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_c3","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7bf85aaf-0a97-4ca3-a28d-b3f869f2f315';
+UPDATE public.questions SET
+  question_text = 'A circle with a radius of 5 is inscribed in a square. What is the area of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a radius of 5 is inscribed in a square. What is the area of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square. Since the radius of the circle is 5, the diameter is 10.  The area of the square is side length squared, or 10^2 = 100.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":712,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7c0d6924-aba3-4ba6-b13b-c44da49508e2';
+
+UPDATE public.questions SET
+  question_text = 'A regular hexagon is inscribed in a circle with a radius of 6.  What is the perimeter of the hexagon?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"12","is_correct":false,"explanation":"Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"18","is_correct":false,"explanation":"Choice B (18…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"24","is_correct":false,"explanation":"Choice C (24…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"36","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** A regular hexagon is inscribed in a circle with a radius of 6.  What is the perimeter of the hexagon?
+
+**Step 2 — Solve.** A regular hexagon can be divided into 6 equilateral triangles, each with a side length equal to the radius of the circle. The perimeter of the hexagon is 6 times the side length of one of these triangles, so the perimeter is 6 * 6 = 36.
+
+**Step 3 — Select D.** 36
+
+**Distractor analysis:**
+- **A** (12): Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (18): Choice B (18…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (24): Choice C (24…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":539,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c9","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7c50e585-88bf-4a1c-acd8-b3d408a68cb0';
+UPDATE public.questions SET
+  question_text = 'Which value of $x$ satisfies $6x + 6 > 309$ and represents a feasible weight?',
+  stimulus_text = 'A package must weigh more than 309 grams but at most 322 grams to ship.',
+  options = '[{"id":"A","text":"$48$","is_correct":false,"explanation":"Too small: $6(48)+6=294$."},{"id":"B","text":"$49$","is_correct":false,"explanation":"Still below threshold 309."},{"id":"C","text":"$50$","is_correct":false,"explanation":"Borderline; check strict inequality."},{"id":"D","text":"$51$","is_correct":true,"explanation":"**Step 1:** $6x > 303$. **Step 2:** $x > 50.5$. Smallest integer choice: 51."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Isolate: $6x > 303$.
+**Step 2:** $x > 50.50$.
+**Step 3:** Among choices, $51$ is the smallest valid value.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '7c513a3e-3d0d-46b7-94d5-f0cab25439b1';
+UPDATE public.questions SET
+  question_text = 'The function *f* is defined by *f*(x) = 2x² – 3x + 5.  What is the value of *f*(–2)?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-19","is_correct":false,"explanation":"Choice A (-19…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"-9","is_correct":false,"explanation":"Choice B (-9…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"19","is_correct":false,"explanation":"Choice C (19…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"29","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** The function *f* is defined by *f*(x) = 2x² – 3x + 5.  What is the value of *f*(–2)?
+
+**Step 2 — Solve.** To find *f*(–2), we substitute –2 for *x* in the function.  *f*(–2) = 2(–2)² – 3(–2) + 5 = 2(4) + 6 + 5 = 8 + 6 + 5 = 19.
+
+**Step 3 — Select D.** 29
+
+**Distractor analysis:**
+- **A** (-19): Choice A (-19…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (-9): Choice B (-9…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (19): Choice C (19…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":633,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_d4","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7c89c712-4f47-4269-be3d-6aed653119c5';
+COMMIT;

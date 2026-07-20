@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('73805e30-0ce5-4874-965f-cbbf561871a1', 'Which choice completes the text with the most logical transition?', 'The ancient Roman city of Pompeii was buried under volcanic ash in 79 CE. The ash sealed buildings, streets, and even loaves of bread in place. ______ archaeologists today can study Roman daily life in remarkable detail.', NULL, '[{"id":"A","text":"As a result,","is_correct":true,"explanation":"Correct: the preservation by ash is the cause that lets archaeologists study the city in detail."},{"id":"B","text":"Nevertheless,","is_correct":false,"explanation":"Incorrect: the detailed study follows from the preservation, not in spite of it."},{"id":"C","text":"In contrast,","is_correct":false,"explanation":"Incorrect: there is no contrast; the second sentence is a consequence of the first."},{"id":"D","text":"Meanwhile,","is_correct":false,"explanation":"Incorrect: ''Meanwhile'' marks simultaneous events, but the sentences are cause and effect."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The ash {{yellow:sealed buildings, streets, and even loaves of bread in place}}, which directly enables detailed study today.
+Step 2 — Choose the transition
+Because the preservation causes the present-day detailed research, a cause-effect transition like ''As a result'' fits.
+Distractor analysis:
+- B: ''Nevertheless'' implies the study happens despite the preservation, reversing the logic.
+- C: ''In contrast'' wrongly signals opposition between two facts that agree.
+- D: ''Meanwhile'' suggests concurrent events rather than the result of the burial.', 'Is the final sentence an outcome produced by the ash sealing the city?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

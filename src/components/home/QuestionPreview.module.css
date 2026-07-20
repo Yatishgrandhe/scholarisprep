@@ -1,0 +1,145 @@
+.section {
+  overflow: visible;
+}
+
+.examLayout {
+  display: grid;
+  gap: 0;
+  border: 1px solid hsl(var(--border));
+  border-radius: 16px;
+  overflow: hidden;
+  background: hsl(var(--card));
+}
+
+@media (min-width: 768px) {
+  .examLayout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stimulus {
+  padding: 2rem;
+  background: hsl(var(--muted) / 0.35);
+  border-bottom: 1px solid hsl(var(--border));
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+  .stimulus {
+    border-bottom: none;
+    border-right: 1px solid hsl(var(--border));
+  }
+}
+
+.stimulusLabel {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem;
+}
+
+.question {
+  padding: 2rem;
+}
+
+.questionText {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+  color: hsl(var(--foreground));
+}
+
+.options {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  border: 1.5px solid hsl(var(--border));
+  border-radius: 12px;
+  background: hsl(var(--background));
+  font-size: 0.9375rem;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.option:hover:not(:disabled) {
+  border-color: hsl(var(--primary) / 0.45);
+  background: hsl(var(--muted) / 0.5);
+}
+
+.selected {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+}
+
+.correct {
+  border-color: hsl(var(--score-positive));
+  background: hsl(var(--score-positive) / 0.1);
+}
+
+.incorrect {
+  border-color: hsl(var(--destructive));
+  background: hsl(var(--destructive) / 0.08);
+}
+
+.optionId {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: hsl(var(--muted));
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.revealBtn {
+  width: 100%;
+}
+
+.explanation {
+  padding: 1rem;
+  background: hsl(var(--muted) / 0.4);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  border-left: 3px solid hsl(var(--primary));
+  animation: slideIn 0.3s ease;
+}
+
+.explanation strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+}
+
+.explanation p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

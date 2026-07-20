@@ -1,0 +1,47 @@
+/* The page wraps this in a flat panel — no chrome of its own. */
+.section {
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--font-body);
+  margin: 0 0 2px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+.sub {
+  margin: 0 0 var(--space-4);
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: hsl(var(--muted) / 0.6);
+}
+
+.cell[data-level="1"] {
+  background: hsl(var(--primary) / 0.22);
+}
+
+.cell[data-level="2"] {
+  background: hsl(var(--primary) / 0.42);
+}
+
+.cell[data-level="3"] {
+  background: hsl(var(--primary) / 0.62);
+}
+
+.cell[data-level="4"] {
+  background: hsl(var(--primary) / 0.88);
+}

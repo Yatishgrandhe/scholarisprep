@@ -1,0 +1,333 @@
+{
+  "generated_at": "2026-06-13T00:00:00.000Z",
+  "label": "Digital SAT TRA (Transitions) format research — College Board alignment audit",
+  "project_id": "aioyzumxxsepbnfivvdd",
+  "READY_FOR_TRA_FIX": true,
+  "summary": "Hard TRA items (94/325) were mis-specified as participial-phrase completion items. College Board, Erica Meltzer, and Master Manual §8 all require transition WORDS/PHRASES in a two-sentence passage with ______ at the start of sentence 2. Easy/medium (231 rows) already match option format; hard needs full option + passage structure rewrite.",
+  "db_counts": {
+    "total_tra": 325,
+    "by_difficulty": { "easy": 126, "medium": 105, "hard": 94 },
+    "challenged_hard": 25
+  },
+  "correct_format_spec": {
+    "source_authority": [
+      "College Board Digital SAT — Expression of Ideas / Transitions",
+      "docs/dsat-rw-master-manual.md Section 8",
+      "Erica Meltzer (The Critical Reader) — three categories: continuation, cause-effect, contrast",
+      "OnePrep / Bluebook — stem always: Which choice completes the text with the most logical transition?"
+    ],
+    "passage_structure": {
+      "sentences": "2–3 sentences (occasionally 4 on real tests; Master Manual caps at 3)",
+      "word_count": "50–80 words (Master Manual §8)",
+      "blank_placement": "Second sentence MUST begin with blank followed by comma: '. ______ transition, rest of sentence…'",
+      "blank_token": "______ (six underscores) or _______ (seven) — consistent with existing easy/medium bank",
+      "relationship": "Single unambiguous logical link between sentence immediately before blank and sentence containing blank",
+      "read_strategy": "Read full passage first; identify relationship (contrast / cause-effect / addition / example) BEFORE looking at choices"
+    },
+    "option_structure": {
+      "type": "Transition word or short phrase ONLY — never a participial clause or sentence continuation",
+      "format": "Capitalized transition + trailing comma when blank is at sentence start (e.g., 'However,', 'Still,', 'Consequently,')",
+      "word_count": "1–3 words per option (≈8–20 characters); all four options same structural class",
+      "categories": {
+        "contrast_concession": ["However,", "Nevertheless,", "Nonetheless,", "Yet,", "Still,", "Even so,", "In contrast,", "Conversely,", "Admittedly,"],
+        "cause_effect": ["Therefore,", "Thus,", "Consequently,", "Accordingly,", "Hence,", "As a result,"],
+        "addition_emphasis": ["Moreover,", "Furthermore,", "In addition,", "Similarly,", "Likewise,", "Indeed,", "In fact,"],
+        "example_specification": ["For instance,", "For example,", "Specifically,", "Notably,", "To illustrate,"]
+      },
+      "distractor_engineering": {
+        "synonym_trap": "Second option from SAME category as correct (e.g., Furthermore + Moreover)",
+        "category_shift": "Transition from WRONG category (e.g., However when passage needs Therefore)",
+        "register_clash": "Informal/colloquial (Anyway,", "Totally,", "By the way,", "So like,")
+      },
+      "stem": "Which choice completes the text with the most logical transition?"
+    },
+    "difficulty_scaling": {
+      "easy": {
+        "passage": "Obvious contrast/cause/addition; common transitions (However, Therefore, Moreover, For example)",
+        "options": "Four distinct categories OR one synonym trap; student identifies category at a glance",
+        "example_relationship": "Trial failed → second trial succeeded = contrast (Still/However)"
+      },
+      "medium": {
+        "passage": "Relationship requires reading both sentences; less common but still standard transitions",
+        "options": "Synonym trap more likely (Nevertheless vs Nonetheless); category shift distractor plausible",
+        "example_relationship": "General claim → specific finding = For instance / Specifically"
+      },
+      "hard": {
+        "passage": "Subtle or inverted relationship; may use less familiar transitions (Still, Accordingly, Admittedly, In contrast)",
+        "options": "STILL transition tokens — NOT longer phrases. Hard = finer distinction within/between categories, unfamiliar word in correct category (Meltzer: Still as contradictor), or competing transitions of same type on rare outliers",
+        "what_hard_is_NOT": "Participial openers (Blurring the sharp contrast…), clausal continuations, 10+ word options, or sentence-completion frames"
+      },
+      "challenged": {
+        "passage": "Longer authentic prose (8–10 sentences) but blank placement rule unchanged",
+        "options": "Transition word + second sentence of rationale per mkChallengedOpts pattern — NOT participial phrases"
+      }
+    }
+  },
+  "web_research_findings": {
+    "erica_meltzer_critical_reader": {
+      "url": "https://thecriticalreader.com/how-to-work-through-transition-questions-on-the-digital-sat/",
+      "key_points": [
+        "~5 transition questions per RW module on digital SAT",
+        "Three main categories: continuation, cause-and-effect, contrast",
+        "Read passage fully before choices; determine relationship in own words first",
+        "Hard items may use unfamiliar transitions (e.g., Still as contradictor) — still single-word category markers",
+        "Minutiae like nonetheless vs nevertheless are NOT tested; category membership is"
+      ]
+    },
+    "fiveable_dsat_guide": {
+      "url": "https://fiveable.me/digital-sat/unit-7/transitions/study-guide/PcIPLi9LThVoVhDp",
+      "key_points": [
+        "2–4 sentences; blank at beginning of second or third sentence",
+        "Four answer choices are real transition words/phrases representing different logical relationships",
+        "Example: 'Researchers found… ______ gardens located near…' → A) For instance,"
+      ]
+    },
+    "strategic_test_prep": {
+      "url": "https://www.strategictestprep.com/post/how-to-master-sat-transition-questions-on-the-digital-sat",
+      "key_points": [
+        "Always tests relationship between sentence BEFORE blank and sentence CONTAINING blank",
+        "Four relationships: Addition, Cause-Effect, Contrast, Example/Emphasis",
+        "Hard = unfamiliar words (Accordingly, Admittedly) — test by inserting into simple sentence"
+      ]
+    },
+    "test_innovators": {
+      "url": "https://testinnovators.com/blog/digital-sat-reading-writing-transitions/",
+      "key_points": [
+        "2–3 sentence passages; must read carefully for inter-sentence logic",
+        "Hard trap: picking For example when passage already gave an example — need Similarly"
+      ]
+    },
+    "one_prep_hard_examples": {
+      "url": "https://tutorone.ca/practice-test/SAT-Transitions-%28Hard%29---English---Real-Collegeboard-Questions/",
+      "key_points": [
+        "Hard College Board items still use transition words; difficulty is nuanced relationship + precise transition selection",
+        "Progressive easy → medium → hard tiers all test transition vocabulary, not clausal completion"
+      ]
+    }
+  },
+  "codebase_root_cause": {
+    "mis_specification_chain": [
+      {
+        "file": "scripts/upgrade-english-content.mjs",
+        "line_ref": "header comment L7",
+        "issue": "Explicitly documents intent: 'TRA hard rows with single-word transitions → long participial/clausal phrases'"
+      },
+      {
+        "file": "scripts/lib/english-rw-templates.mjs",
+        "function": "longTraOptions()",
+        "issue": "HARD_TRA_* pools are participial phrases (Blurring the sharp contrast…, Drawing the logical consequence…) — structurally BOU/FSS-style clause inserts, not TRA transitions"
+      },
+      {
+        "file": "scripts/lib/dsat-rw-blueprint.mjs",
+        "constants": ["HARD_TRA_OPTION_MIN_WORDS = 10", "SIMPLE_TRANSITIONS rejection"],
+        "issue": "Validation REQUIRES hard options ≥10 words and REJECTS simple transitions — directly contradicts College Board format"
+      },
+      {
+        "file": "scripts/lib/dsat-rw-blueprint.mjs",
+        "function": "forceSubtype() TRA branch",
+        "issue": "Hard TRA uses longPassage (6–8 sentences) + longTraOptions; appends '______ the subsequent section…' at END of truncated passage instead of two-sentence blank-at-start structure"
+      },
+      {
+        "file": "scripts/regenerate-tra-bou-phase2.mjs",
+        "function": "regenerateTra()",
+        "issue": "Lines 243–249: difficulty==='hard' routes to longTraOptions + balanceOptionLengths (pads distractors with '. as.' fragments)"
+      },
+      {
+        "file": "scripts/lib/english-rw-regen.mjs",
+        "function": "regenerateTraQuestion()",
+        "issue": "Lines 398–408: identical hard path — longTraOptions for all hard/challenged"
+      },
+      {
+        "file": "docs/english-rw-regeneration-spec.md",
+        "line_ref": "L76",
+        "issue": "Codifies wrong spec: 'TRA hard: longTraOptions() participial frames'"
+      }
+    ],
+    "master_manual_alignment": {
+      "section_8_correct": [
+        "Two or three sentences, 50–80 words",
+        "Second sentence begins with blank _______ followed by comma",
+        "Categories: Addition/Emphasis, Contrast/Concession, Cause/Effect, Exemplification",
+        "Distractors: Synonym Trap, Category Shift, Register Clash"
+      ],
+      "section_8_missing": "No difficulty matrix for TRA — internal tooling invented 'participial hard' tier not in manual"
+    },
+    "easy_medium_generator_is_correct": {
+      "file": "scripts/regenerate-tra-bou-phase2.mjs",
+      "function": "pickTraSet() + TRA_SETS",
+      "note": "Easy/medium path already produces correct transition tokens with named distractor formulas — reuse this for hard with harder transition vocabulary"
+    }
+  },
+  "db_audit": {
+    "queried_at": "2026-06-13",
+    "sample_size": 21,
+    "aggregate_stats": {
+      "blank_after_period_rate": {
+        "easy": "126/126 (100%)",
+        "medium": "105/105 (100%)",
+        "hard": "0/94 (0%)"
+      },
+      "participial_option_rows": {
+        "easy": 0,
+        "medium": 0,
+        "hard": 69
+      },
+      "avg_max_option_chars": {
+        "easy": 16,
+        "medium": 16,
+        "hard": 107
+      },
+      "avg_passage_words": {
+        "easy": 55,
+        "medium": 55,
+        "hard": 80
+      },
+      "simple_transition_in_any_option_hard": 0
+    },
+    "hard_item_defects": [
+      "Missing ______ blank entirely — passages are truncated 4-sentence LONG_PASSAGES ending mid-clause",
+      "Options are 8–14 word participial phrases, not transition words",
+      "balanceOptionLengths() corrupts options (e.g., '…policy implications,. as.' / '…cause and effect,. in ways.')",
+      "Logical relationship between sentences not tested — student picks rhetorical meta-phrases",
+      "Same LONG_PASSAGE templates recycled; blank-at-end design from forceSubtype() lost during regen",
+      "Challenged subset (25) uses correct transition tokens but bloated two-sentence option padding",
+      "Passage corruption: orphan fragments ('a.', 'according.') from padToSentenceRange / trimToWordRange"
+    ],
+    "easy_medium_status": "Option format CORRECT (However, Still, etc. + comma). Passage has proper '. ______' placement. Minor issue: identical boilerplate passage across many rows (regen artifact) — content refresh still needed but format is valid.",
+    "sample_ids": {
+      "good_easy": "c6beddbd-7753-4f9c-b0b0-0d1d7056fd7d",
+      "good_medium": "8c3c0e19-a41c-4478-9ff1-5c36c29f17e0",
+      "bad_hard_participial": "2da303e3-7344-4aeb-bb47-4d194f92ea51",
+      "bad_hard_padding_corrupt": "39b14efa-baaf-4d0e-8146-e774b5b8bc67",
+      "good_challenged_transition_word": "669b4318-0e89-45b9-9fc4-8563736ac4fb"
+    }
+  },
+  "examples": {
+    "good_easy": {
+      "passage": "The first trial failed to detect a statistically reliable effect despite adequate sample size. ______ the second trial, which enrolled more participants and extended the observation window, showed a clear pattern consistent with the researchers' hypothesis.",
+      "options": ["However,", "Nevertheless,", "Thus,", "By the way,"],
+      "correct": "However,",
+      "why_good": "Two sentences; blank at start of sentence 2 + comma; options are transition tokens from distinct categories"
+    },
+    "good_hard_college_board_style": {
+      "passage": "For more than two thousand years, Euclid's text was the paradigm of mathematical argumentation and reasoning. ______ by the 20th century, mathematicians were no longer willing to ground mathematics in this intuitive geometric foundation.",
+      "options": ["Similarly,", "Nevertheless,", "Therefore,", "For instance,"],
+      "correct": "Nevertheless,",
+      "why_good": "Hard = subtle contrast across time periods; options remain short transitions; Nevertheless is less obvious than However but same category",
+    },
+    "bad_hard_current_bank": {
+      "passage": "Marine biologists studying reef ecosystem 3225 found that parrotfish grazing limits algae growth… At those sites, coral recruitment dropped sharply even when water temperature",
+      "options": [
+        "Blurring the sharp contrast the passage has drawn between the two claims,",
+        "Complicating the binary the author has established in the opening paragraphs,",
+        "Building directly on the mechanism described above in the preceding analysis,",
+        "Adding a parallel example that deepens the same point about methodological limits,"
+      ],
+      "why_bad": [
+        "No ______ blank in passage",
+        "Options are participial clause inserts, not transitions",
+        "Tests meta-rhetorical vocabulary, not inter-sentence logic",
+        "Passage truncated mid-sentence — ungrammatical even with 'correct' option inserted"
+      ]
+    },
+    "bad_hard_padding_artifact": {
+      "option_corrupt": "Extending the author's line of reasoning further into the policy implications,. as.",
+      "why_bad": "balanceOptionLengths() padDistractorToChars appended fragment after hard trim — produces nonsense punctuation"
+    }
+  },
+  "fix_formula": {
+    "scope": "All 325 TRA platform questions (skill_id=TRA, rw_subtype=transition)",
+    "phases": [
+      {
+        "phase": 1,
+        "target": "Code + validation",
+        "actions": [
+          "Deprecate longTraOptions() for TRA — keep function only if repurposed for non-TRA types",
+          "Add TRA_HARD_SETS to english-rw-regen.mjs with less common transitions: Admittedly, In contrast, Conversely, Even so, Accordingly, Hence, Likewise, Notably, To illustrate",
+          "Remove HARD_TRA_OPTION_MIN_WORDS gate for transition subtype; add TRA_OPTION_MAX_WORDS = 4 and reject participial-pattern options",
+          "Update validateDsatRwQuestion: hard TRA must pass SIMPLE_TRANSITIONS or transition-token regex, not fail it",
+          "Update docs/english-rw-regeneration-spec.md L76 and skills.md TRA hard notes",
+          "Add validateTraPassageStructure(): requires /.\\s+______/ and 50–80 words and 2–3 sentences"
+        ]
+      },
+      {
+        "phase": 2,
+        "target": "Regenerate 94 hard (+ verify 231 easy/medium)",
+        "actions": [
+          "Use regenerateTra() easy/medium branch for ALL difficulties — pickTraSet() with tier-specific pools",
+          "Hard pool: include Still, Admittedly, Accordingly, In contrast, Conversely, Even so, Hence, Likewise, Notably",
+          "Rebuild stimulus: two-sentence templates (50–80 words) with '. ______' at sentence 2 start — NOT longPassage truncation",
+          "Derive transition kind from passage logic (contrast/cause/addition/example), not from corrupt existing correct option",
+          "Challenged (25): transition word options via ensureTwoSentenceOption ONLY on explanations, not participial inserts",
+          "Do NOT call balanceOptionLengths on TRA — use padTransition() width padding (≤15% char spread) per existing easy path"
+        ]
+      },
+      {
+        "phase": 3,
+        "target": "Easy/medium content refresh (optional but recommended)",
+        "actions": [
+          "Replace identical boilerplate passage (trial failed / second trial) with topic-rotated 2-sentence stimuli",
+          "Ensure passage logic matches assigned correct transition category"
+        ]
+      },
+      {
+        "phase": 4,
+        "target": "Apply + audit",
+        "actions": [
+          "Script: scripts/fix-tra-format.mjs (or extend regenerate-tra-bou-phase2.mjs with --tra-only --fix-hard)",
+          "SQL filter: skill_id='TRA' AND source_metadata->>'rw_subtype'='transition' AND is_platform_question=true",
+          "Post-apply gates: 100% blank_after_period; 0% participial options; avg option len ≤20 chars; 0% spread violations"
+        ]
+      }
+    ],
+    "regen_pseudocode": "if (difficulty === 'hard') { options = pickTraSet(traKindFromPassage(stimulus), index, TRA_HARD_SETS); } else { options = pickTraSet(..., TRA_SETS); } stimulus = buildTwoSentenceTraPassage(topic, kind, 50, 80); // never longTraOptions, never balanceOptionLengths",
+    "files_to_modify": [
+      "scripts/lib/english-rw-templates.mjs",
+      "scripts/lib/english-rw-regen.mjs",
+      "scripts/regenerate-tra-bou-phase2.mjs",
+      "scripts/lib/dsat-rw-blueprint.mjs",
+      "docs/english-rw-regeneration-spec.md"
+    ]
+  },
+  "spelling_audit_approach": {
+    "scope": "Full English RW bank (4225 questions) — stimulus_text, question_text, options[].text, explanation",
+    "phase_1_extract": {
+      "sql": "SELECT id, skill_id, difficulty, stimulus_text, question_text, options, explanation FROM questions WHERE section = 'reading_writing' AND is_platform_question = true",
+      "output": "scripts/data/.english-spell-audit/corpus.jsonl"
+    },
+    "phase_2_mechanical_flags": {
+      "patterns": [
+        "Orphan single-letter tokens: /\\s[a-z]\\./ (e.g., 'a.', 'according.')",
+        "Double punctuation: /,\\./  /;\\./  /\\.\\s+\\./",
+        "Truncated words at passage end (no terminal punctuation)",
+        "Repeated boilerplate clauses: 'within limits the authors explicitly acknowledge'"
+      ],
+      "note": "TRA hard audit found multiple mechanical corruption patterns from padding — run before spell-check"
+    },
+    "phase_3_dictionary_check": {
+      "tool_options": [
+        "npx cspell lint --words-only (add project wordlist for Tier-2/3 SAT vocab)",
+        "hunspell -l via CLI on extracted plain text",
+        "LanguageTool API batch (academic English mode)"
+      ],
+      "wordlist_additions": "TIER23_WORDS from english-rw-templates.mjs + domain terms (parrotfish, cortisol, hieroglyphic, etc.)",
+      "fields": "Tokenize options separately (short transitions may flag — whitelist TRANSITION_LEXICON)"
+    },
+    "phase_4_human_review_queue": {
+      "priority": ["hard TRA passages with truncation", "challenged literature passages", "CTC Text 1/2 blocks"],
+      "output": "scripts/data/.english-spell-audit/flagged.json sorted by severity"
+    },
+    "phase_5_apply": {
+      "method": "Batch SQL UPDATE for confirmed typos only; regenerate items with structural corruption (orphan fragments)",
+      "validation": "Re-run mechanical flags — target 0 orphan-fragment matches post-fix"
+    }
+  },
+  "key_findings": [
+    "College Board TRA items ALWAYS use transition words/phrases (However, Still, Consequently) — never participial clause completions",
+    "Master Manual §8 specifies blank at START of sentence 2 + comma; hard tier is NOT defined as longer options",
+    "231/325 easy+medium rows already have correct option format; 94 hard rows are structurally wrong (69 participial, 25 challenged with transition words but bad passages)",
+    "Root cause: upgrade-english-content.mjs + longTraOptions() + HARD_TRA_OPTION_MIN_WORDS validation enforces the inverse of real SAT format",
+    "Hard DB passages have 0% blank markers vs 100% for easy/medium — passages are truncated LONG_PASSAGES, not two-sentence TRA stimuli",
+    "Fix: unify all tiers on pickTraSet() transition tokens; rebuild hard passages; remove longTraOptions from TRA pipeline"
+  ]
+}

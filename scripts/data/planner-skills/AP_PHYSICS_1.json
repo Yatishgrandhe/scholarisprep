@@ -1,0 +1,189 @@
+{
+  "examType": "AP_PHYSICS_1",
+  "topics": [
+    "Kinematics",
+    "Dynamics",
+    "Circular Motion and Gravitation",
+    "Energy",
+    "Momentum",
+    "Simple Harmonic Motion",
+    "Torque and Rotational Motion",
+    "Fluids"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_kinematics",
+      "title": "Kinematics",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_1d_motion",
+        "U1_S2_vectors",
+        "U1_S3_projectile_motion",
+        "U1_S4_relative_velocity"
+      ],
+      "topics": [
+        "1D motion",
+        "vectors",
+        "projectile motion",
+        "relative velocity"
+      ]
+    },
+    {
+      "unit_code": "U2_dynamics",
+      "title": "Dynamics",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_newton_s_laws",
+        "U2_S2_friction",
+        "U2_S3_systems",
+        "U2_S4_fbd"
+      ],
+      "topics": [
+        "Newton's laws",
+        "friction",
+        "systems",
+        "FBD"
+      ]
+    },
+    {
+      "unit_code": "U3_circular_motion_and_gravitation",
+      "title": "Circular Motion and Gravitation",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_uniform_circular_motion",
+        "U3_S2_gravitation",
+        "U3_S3_orbits"
+      ],
+      "topics": [
+        "uniform circular motion",
+        "gravitation",
+        "orbits"
+      ]
+    },
+    {
+      "unit_code": "U4_energy",
+      "title": "Energy",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_work",
+        "U4_S2_kinetic_potential",
+        "U4_S3_conservation",
+        "U4_S4_power"
+      ],
+      "topics": [
+        "work",
+        "kinetic/potential",
+        "conservation",
+        "power"
+      ]
+    },
+    {
+      "unit_code": "U5_momentum",
+      "title": "Momentum",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_impulse",
+        "U5_S2_collisions",
+        "U5_S3_center_of_mass"
+      ],
+      "topics": [
+        "impulse",
+        "collisions",
+        "center of mass"
+      ]
+    },
+    {
+      "unit_code": "U6_simple_harmonic_motion",
+      "title": "Simple Harmonic Motion",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_springs",
+        "U6_S2_pendulums",
+        "U6_S3_energy_in_shm"
+      ],
+      "topics": [
+        "springs",
+        "pendulums",
+        "energy in SHM"
+      ]
+    },
+    {
+      "unit_code": "U7_torque_and_rotational_motion",
+      "title": "Torque and Rotational Motion",
+      "sort_order": 7,
+      "skill_ids": [
+        "U7_S1_torque",
+        "U7_S2_rotational_kinematics",
+        "U7_S3_angular_momentum"
+      ],
+      "topics": [
+        "torque",
+        "rotational kinematics",
+        "angular momentum"
+      ]
+    },
+    {
+      "unit_code": "U8_fluids",
+      "title": "Fluids",
+      "sort_order": 8,
+      "skill_ids": [
+        "U8_S1_density",
+        "U8_S2_pressure",
+        "U8_S3_buoyancy",
+        "U8_S4_continuity_bernoulli"
+      ],
+      "topics": [
+        "density",
+        "pressure",
+        "buoyancy",
+        "continuity/Bernoulli"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_kinematics": [
+      "U1_S1_1d_motion",
+      "U1_S2_vectors",
+      "U1_S3_projectile_motion",
+      "U1_S4_relative_velocity"
+    ],
+    "U2_dynamics": [
+      "U2_S1_newton_s_laws",
+      "U2_S2_friction",
+      "U2_S3_systems",
+      "U2_S4_fbd"
+    ],
+    "U3_circular_motion_and_gravitation": [
+      "U3_S1_uniform_circular_motion",
+      "U3_S2_gravitation",
+      "U3_S3_orbits"
+    ],
+    "U4_energy": [
+      "U4_S1_work",
+      "U4_S2_kinetic_potential",
+      "U4_S3_conservation",
+      "U4_S4_power"
+    ],
+    "U5_momentum": [
+      "U5_S1_impulse",
+      "U5_S2_collisions",
+      "U5_S3_center_of_mass"
+    ],
+    "U6_simple_harmonic_motion": [
+      "U6_S1_springs",
+      "U6_S2_pendulums",
+      "U6_S3_energy_in_shm"
+    ],
+    "U7_torque_and_rotational_motion": [
+      "U7_S1_torque",
+      "U7_S2_rotational_kinematics",
+      "U7_S3_angular_momentum"
+    ],
+    "U8_fluids": [
+      "U8_S1_density",
+      "U8_S2_pressure",
+      "U8_S3_buoyancy",
+      "U8_S4_continuity_bernoulli"
+    ]
+  }
+}

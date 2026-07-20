@@ -1,0 +1,965 @@
+/* ============================================================
+   Tutor (Scho) — minimal flat OnePrep-style chat
+   Flat surfaces, hairline borders, no shadows/gradients/blur.
+   ============================================================ */
+
+/* ---- Two-pane layout: hairline rail + open canvas ---- */
+
+.chatLayout {
+  display: flex;
+  align-items: stretch;
+  height: calc(100dvh - 9rem);
+  min-height: 520px;
+}
+
+/* Left rail — plain column with a hairline right border, no card box */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 280px;
+  min-width: 280px;
+  min-height: 0;
+  padding: 0 var(--space-4) 0 0;
+  border-right: 1px solid hsl(var(--border));
+  background: transparent;
+}
+
+.sidebarCollapsed {
+  width: 56px;
+  min-width: 56px;
+  overflow: hidden;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Solid cobalt "+ New chat" button — slick rounded-rect, full width */
+.newChatBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  width: 100%;
+  min-height: 2.6rem;
+  padding: 0 var(--space-4);
+  border: none;
+  border-radius: 12px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.newChatBtn:hover {
+  background: hsl(var(--accent));
+}
+
+.newChatBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.collapseBtn {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: hsl(var(--muted-foreground));
+  font-size: 1.1rem;
+  border-radius: 10px;
+  padding: 0.25rem 0.45rem;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.collapseBtn:hover {
+  background: hsl(var(--muted) / 0.5);
+  color: hsl(var(--foreground));
+}
+
+.emptyHint {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+}
+
+.starter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.starterChips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.starterChip {
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.starterChip:hover {
+  background: hsl(var(--muted));
+  border-color: hsl(var(--primary));
+}
+
+/* History — plain truncated text rows */
+.convoList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Each history entry is a row: a full-width select button + a hover-revealed
+   delete button. The row owns the hover/active background so both children
+   share one surface. */
+.convoRow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border-radius: 10px;
+  padding-right: 4px;
+  transition: background 150ms ease;
+}
+
+.convoRow:hover {
+  background: hsl(var(--muted) / 0.5);
+}
+
+.convoRowActive,
+.convoRowActive:hover {
+  background: hsl(var(--muted));
+}
+
+.convoItem {
+  flex: 1;
+  min-width: 0;
+  display: block;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  text-align: left;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+}
+
+.convoRowActive .convoItem {
+  font-weight: 600;
+}
+
+.convoActive {
+  flex: 1;
+  min-width: 0;
+  display: block;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: hsl(var(--muted));
+  text-align: left;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+}
+
+.convoTitle {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.convoDelete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.convoRow:hover .convoDelete,
+.convoRowActive .convoDelete,
+.convoDelete:focus-visible {
+  opacity: 1;
+}
+
+.convoDelete:hover {
+  background: hsl(var(--destructive) / 0.12);
+  color: hsl(var(--destructive));
+}
+
+/* Touch devices have no hover — keep delete affordance always visible. */
+@media (hover: none) {
+  .convoDelete {
+    opacity: 1;
+  }
+}
+
+/* ---- Main pane ---- */
+
+.chatMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-left: var(--space-5);
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 0 0 var(--space-3);
+  border-bottom: 1px solid hsl(var(--border));
+  flex-shrink: 0;
+}
+
+.chatHeaderMain {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.chatTitle {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.contextBadge {
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--muted-foreground));
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) 2px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ---- Empty state: mascot circle + suggestion rows ---- */
+
+.emptyState {
+  margin: auto;
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-6) 0;
+}
+
+.emptyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  margin-bottom: var(--space-4);
+}
+
+.emptyLead {
+  margin: 0 0 var(--space-5);
+  font-size: 1rem;
+  font-weight: 550;
+  color: hsl(var(--foreground));
+  text-align: center;
+}
+
+/* Suggestions read as a clean, edge-to-edge list of rows separated by
+   hairlines — bold lead, muted description, chevron pinned right. */
+.suggestionList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid hsl(var(--border));
+}
+
+.suggestionRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 15px 8px;
+  border: none;
+  border-bottom: 1px solid hsl(var(--border));
+  border-radius: 0;
+  background: transparent;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: background 150ms ease, padding-left 150ms ease;
+}
+
+.suggestionRow:hover {
+  background: hsl(var(--muted) / 0.4);
+  padding-left: 12px;
+}
+
+.suggestionRow:hover .suggestionChevron {
+  color: hsl(var(--primary));
+  transform: translateX(2px);
+}
+
+.suggestionLead {
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.suggestionText {
+  flex: 1;
+  min-width: 0;
+  color: hsl(var(--muted-foreground));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.suggestionChevron {
+  display: flex;
+  flex-shrink: 0;
+  color: hsl(var(--muted-foreground));
+  transition: color 150ms ease, transform 150ms ease;
+}
+
+/* ---- Messages: cobalt user bubbles, plain assistant text ---- */
+
+.rowUser {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rowAssistant {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.avatar {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: 2px;
+  border-radius: 999px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.bubbleUser {
+  max-width: min(85%, 34rem);
+  padding: 10px 16px;
+  border-radius: 16px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+/* Assistant = plain text block on the canvas, no bubble chrome */
+.bubbleAssistant {
+  max-width: min(100%, 42rem);
+  min-width: 0;
+  padding: 3px 0 0;
+  border: none;
+  background: transparent;
+  color: hsl(var(--foreground));
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.bubbleAssistant :global(a) {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.bubbleAssistant :global(a:hover) {
+  color: hsl(var(--accent));
+}
+
+.bubbleAssistant :global(code) {
+  font-size: 0.85em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.bubbleAssistant :global(p) {
+  margin: 0 0 0.6rem;
+}
+
+.bubbleAssistant :global(p:last-child),
+.bubbleAssistant :global(:last-child) {
+  margin-bottom: 0;
+}
+
+.bubbleAssistant :global(:first-child) {
+  margin-top: 0;
+}
+
+/* Headings — slightly tighter and bolder than body for clear hierarchy */
+.bubbleAssistant :global(h1),
+.bubbleAssistant :global(h2),
+.bubbleAssistant :global(h3),
+.bubbleAssistant :global(h4) {
+  margin: 1rem 0 0.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+.bubbleAssistant :global(h1) {
+  font-size: 1.15rem;
+}
+.bubbleAssistant :global(h2) {
+  font-size: 1.05rem;
+}
+.bubbleAssistant :global(h3),
+.bubbleAssistant :global(h4) {
+  font-size: 0.975rem;
+}
+
+.bubbleAssistant :global(strong) {
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+/* Lists — comfortable indent and row rhythm */
+.bubbleAssistant :global(ul),
+.bubbleAssistant :global(ol) {
+  margin: 0 0 0.6rem;
+  padding-left: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.bubbleAssistant :global(li) {
+  margin: 0;
+  padding-left: 0.15rem;
+}
+
+.bubbleAssistant :global(li::marker) {
+  color: hsl(var(--primary));
+}
+
+.bubbleAssistant :global(li > ul),
+.bubbleAssistant :global(li > ol) {
+  margin: 0.3rem 0 0;
+}
+
+/* Blockquote — cobalt rule + muted text */
+.bubbleAssistant :global(blockquote) {
+  margin: 0.6rem 0;
+  padding: 0.15rem 0 0.15rem 0.85rem;
+  border-left: 3px solid hsl(var(--primary) / 0.5);
+  color: hsl(var(--muted-foreground));
+}
+
+/* Tables — scroll wide GFM grids; radius on wrapper (collapse breaks table radius) */
+.tableWrap {
+  width: 100%;
+  max-width: 100%;
+  margin: 0.6rem 0;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid hsl(var(--border));
+}
+
+.bubbleAssistant :global(table) {
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.bubbleAssistant :global(th),
+.bubbleAssistant :global(td) {
+  padding: 0.4rem 0.65rem;
+  border-bottom: 1px solid hsl(var(--border));
+  border-right: 1px solid hsl(var(--border));
+  text-align: left;
+}
+
+.bubbleAssistant :global(th:last-child),
+.bubbleAssistant :global(td:last-child) {
+  border-right: none;
+}
+
+.bubbleAssistant :global(tr:last-child td) {
+  border-bottom: none;
+}
+
+.bubbleAssistant :global(thead th) {
+  background: hsl(var(--muted) / 0.6);
+  font-weight: 650;
+}
+
+.bubbleAssistant :global(hr) {
+  margin: 0.85rem 0;
+  border: none;
+  border-top: 1px solid hsl(var(--border));
+}
+
+/* KaTeX — let wide display equations scroll instead of overflowing the bubble */
+.bubbleAssistant :global(.katex-display) {
+  margin: 0.55rem 0;
+  padding: 2px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.bubbleAssistant :global(.katex) {
+  font-size: 1.02em;
+}
+
+.bubbleAssistant :global(h1:first-child),
+.bubbleAssistant :global(h2:first-child),
+.bubbleAssistant :global(h3:first-child) {
+  margin-top: 0;
+}
+
+.plainAssistant {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.bubbleAssistant :global(pre) {
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: hsl(var(--muted));
+}
+
+.bubbleAssistant :global(pre code) {
+  background: transparent;
+  padding: 0;
+}
+
+/* ---- Typing indicator: three muted dots, flat ---- */
+
+.typingBubble {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.typingLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+.typingLabel::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  border: 2px solid hsl(var(--muted-foreground) / 0.35);
+  border-top-color: hsl(var(--primary));
+  animation: tutorSpin 0.7s linear infinite;
+}
+
+@keyframes tutorSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.typingDots {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.typingDots span {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: hsl(var(--muted-foreground));
+  animation: tutorDot 1.2s ease-in-out infinite;
+}
+
+.typingDots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.typingDots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes tutorDot {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+/* ---- Composer: rounded light-gray bar, circular dark send ---- */
+
+.composer {
+  flex-shrink: 0;
+  padding-top: var(--space-3);
+}
+
+/* The composer fill is the SAME color as the page behind it (--background),
+   and the textarea is transparent on top — so the text box and everything
+   around it read as one continuous surface, only delineated by a hairline
+   border + focus ring. Identical logic in light and dark. */
+.inputArea {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 9px 10px 9px 12px;
+  border-radius: 22px;
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+/* Quiet focus: just firm up the hairline border — no cobalt glow/ring. */
+.inputArea:focus-within {
+  border-color: hsl(var(--muted-foreground) / 0.4);
+  box-shadow: none;
+}
+
+/* The "+" and send buttons must not paint their own box on hover that breaks
+   the single-surface look — keep their hover fills inside the rounded bar. */
+.inputArea .iconBtn:hover {
+  background: hsl(var(--muted) / 0.6);
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.iconBtn:hover {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.iconBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.textarea {
+  flex: 1;
+  resize: none;
+  min-height: 2.25rem;
+  max-height: 9rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: hsl(var(--foreground));
+  font: inherit;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.sendBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 150ms ease, opacity 150ms ease;
+}
+
+.sendBtn:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+.sendBtn:disabled {
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+:global(.dark) .sendBtn {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+:global(.dark) .sendBtn:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+:global(.dark) .sendBtn:disabled {
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  opacity: 1;
+}
+
+.disclaimer {
+  margin: var(--space-2) 0 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.charCount {
+  margin: 0;
+  padding: 0 0.75rem 4px;
+  font-size: 0.7rem;
+  color: hsl(var(--muted-foreground));
+  text-align: right;
+}
+
+.charCountWarn {
+  color: hsl(var(--exam-jamb));
+}
+
+/* ---- Embedded chat (lesson sheet / exam side panel) ---- */
+
+.embeddedChat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 320px;
+}
+
+.embeddedChat .messages {
+  padding: var(--space-4) 16px;
+}
+
+/* Anchor the composer to the bottom of the side panel with its own padding and
+   a hairline divider so the input never sits flush against the panel edge. */
+.embeddedChat .composer {
+  padding: var(--space-3) 16px calc(var(--space-3) + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+}
+
+/* ---- Loading skeletons (flat, subtle pulse) ---- */
+
+.skel {
+  background: hsl(var(--muted) / 0.8);
+  border-radius: 10px;
+  animation: tutorSkelPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes tutorSkelPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skelTitle {
+  width: 180px;
+  height: 30px;
+}
+
+.skelPill {
+  height: 2.5rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.skelRow {
+  height: 38px;
+}
+
+.skelMessages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4) 2px;
+  overflow: hidden;
+}
+
+.skelMsgUser {
+  width: min(45%, 280px);
+  height: 44px;
+  border-radius: 16px;
+  align-self: flex-end;
+}
+
+.skelMsgAssistant {
+  width: min(70%, 420px);
+  height: 72px;
+  border-radius: 16px;
+}
+
+.skelComposer {
+  height: 52px;
+  border-radius: 24px;
+  flex-shrink: 0;
+}
+
+/* ---- Async loading states (auth-gated data pulled after first paint) ---- */
+
+.convoSkeletonList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 2px;
+}
+
+.convoSkeleton {
+  height: 38px;
+  border-radius: 10px;
+}
+
+.messagesLoading {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  color: hsl(var(--muted-foreground));
+}
+
+/* ---- Mobile: rail stacks above the chat ---- */
+
+@media (max-width: 900px) {
+  .chatLayout {
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    padding: 0 0 var(--space-3);
+    border-right: none;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .sidebarCollapsed {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .convoList {
+    flex: none;
+    max-height: 160px;
+  }
+
+  .chatMain {
+    padding-left: 0;
+    padding-top: var(--space-4);
+    min-height: 65vh;
+  }
+}

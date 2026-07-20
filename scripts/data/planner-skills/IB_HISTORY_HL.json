@@ -1,0 +1,174 @@
+{
+  "examType": "IB_HISTORY_HL",
+  "topics": [
+    "Historical skills & source work",
+    "Prescribed subject themes",
+    "World history topic 1",
+    "World history topic 2",
+    "World history topic 3",
+    "Regional study depth",
+    "Essay construction",
+    "Internal assessment skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_historical_skills_source_work",
+      "title": "Historical skills & source work",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_prescribed_subject_themes",
+      "title": "Prescribed subject themes",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_world_history_topic_1",
+      "title": "World history topic 1",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_world_history_topic_2",
+      "title": "World history topic 2",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_world_history_topic_3",
+      "title": "World history topic 3",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_regional_study_depth",
+      "title": "Regional study depth",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_essay_construction",
+      "title": "Essay construction",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_internal_assessment_skills",
+      "title": "Internal assessment skills",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_HISTORY_HL:U1_historical_skills_source_work",
+      "unit_code": "U1_historical_skills_source_work",
+      "title": "Historical skills & source work",
+      "topics": [
+        "OPVL",
+        "utility",
+        "perspective",
+        "corroboration"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_HISTORY_HL:U2_prescribed_subject_themes",
+      "unit_code": "U2_prescribed_subject_themes",
+      "title": "Prescribed subject themes",
+      "topics": [
+        "move to global war",
+        "rights and protest",
+        "conflict and intervention"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_HISTORY_HL:U1_historical_skills_source_work"
+      ]
+    },
+    {
+      "skill_id": "IB_HISTORY_HL:U3_world_history_topic_1",
+      "unit_code": "U3_world_history_topic_1",
+      "title": "World history topic 1",
+      "topics": [
+        "society and economy",
+        "causes of change",
+        "consequences"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_HISTORY_HL:U2_prescribed_subject_themes"
+      ]
+    },
+    {
+      "skill_id": "IB_HISTORY_HL:U4_world_history_topic_2",
+      "unit_code": "U4_world_history_topic_2",
+      "title": "World history topic 2",
+      "topics": [
+        "authoritarian states",
+        "origins",
+        "methods of control",
+        "impact"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_HISTORY_HL:U3_world_history_topic_1"
+      ]
+    },
+    {
+      "skill_id": "IB_HISTORY_HL:U5_world_history_topic_3",
+      "unit_code": "U5_world_history_topic_3",
+      "title": "World history topic 3",
+      "topics": [
+        "independence movements",
+        "cold war tensions",
+        "superpower rivalry"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_HISTORY_HL:U4_world_history_topic_2"
+      ]
+    },
+    {
+      "skill_id": "IB_HISTORY_HL:U6_regional_study_depth",
+      "unit_code": "U6_regional_study_depth",
+      "title": "Regional study depth",
+      "topics": [
+        "political developments",
+        "economic change",
+        "social/cultural shifts"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_HISTORY_HL:U5_world_history_topic_3"
+      ]
+    },
+    {
+      "skill_id": "IB_HISTORY_HL:U7_essay_construction",
+      "unit_code": "U7_essay_construction",
+      "title": "Essay construction",
+      "topics": [
+        "thesis",
+        "evidence selection",
+        "historiography awareness"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_HISTORY_HL:U6_regional_study_depth"
+      ]
+    },
+    {
+      "skill_id": "IB_HISTORY_HL:U8_internal_assessment_skills",
+      "unit_code": "U8_internal_assessment_skills",
+      "title": "Internal assessment skills",
+      "topics": [
+        "research question",
+        "investigation structure",
+        "reflection"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_HISTORY_HL:U7_essay_construction"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

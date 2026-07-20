@@ -1,0 +1,149 @@
+{
+  "exam_type": "AP_MICROECONOMICS",
+  "skills": [
+    {
+      "id": "U1_basic_econ_s1",
+      "unit_code": "U1_basic_econ",
+      "label": "Scarcity trade-offs",
+      "description": "Practice Scarcity trade-offs in Basic Economic Concepts with exam-style items and feedback."
+    },
+    {
+      "id": "U1_basic_econ_s2",
+      "unit_code": "U1_basic_econ",
+      "label": "PPC shifts",
+      "description": "Practice PPC shifts in Basic Economic Concepts with exam-style items and feedback."
+    },
+    {
+      "id": "U1_basic_econ_s3",
+      "unit_code": "U1_basic_econ",
+      "label": "Comparative advantage",
+      "description": "Practice Comparative advantage in Basic Economic Concepts with exam-style items and feedback."
+    },
+    {
+      "id": "U1_basic_econ_s4",
+      "unit_code": "U1_basic_econ",
+      "label": "Marginal decision rules",
+      "description": "Practice Marginal decision rules in Basic Economic Concepts with exam-style items and feedback."
+    },
+    {
+      "id": "U2_supply_demand_s1",
+      "unit_code": "U2_supply_demand",
+      "label": "Shift vs movement",
+      "description": "Practice Shift vs movement in Supply and Demand with exam-style items and feedback."
+    },
+    {
+      "id": "U2_supply_demand_s2",
+      "unit_code": "U2_supply_demand",
+      "label": "Elasticity calculations",
+      "description": "Practice Elasticity calculations in Supply and Demand with exam-style items and feedback."
+    },
+    {
+      "id": "U2_supply_demand_s3",
+      "unit_code": "U2_supply_demand",
+      "label": "Surplus and shortage",
+      "description": "Practice Surplus and shortage in Supply and Demand with exam-style items and feedback."
+    },
+    {
+      "id": "U2_supply_demand_s4",
+      "unit_code": "U2_supply_demand",
+      "label": "Price controls graphs",
+      "description": "Practice Price controls graphs in Supply and Demand with exam-style items and feedback."
+    },
+    {
+      "id": "U3_production_costs_s1",
+      "unit_code": "U3_production_costs",
+      "label": "Cost curve sketching",
+      "description": "Practice Cost curve sketching in Production, Cost, and Perfect Competition with exam-style items and feedback."
+    },
+    {
+      "id": "U3_production_costs_s2",
+      "unit_code": "U3_production_costs",
+      "label": "Shut-down vs exit",
+      "description": "Practice Shut-down vs exit in Production, Cost, and Perfect Competition with exam-style items and feedback."
+    },
+    {
+      "id": "U3_production_costs_s3",
+      "unit_code": "U3_production_costs",
+      "label": "Perfect competition long run",
+      "description": "Practice Perfect competition long run in Production, Cost, and Perfect Competition with exam-style items and feedback."
+    },
+    {
+      "id": "U3_production_costs_s4",
+      "unit_code": "U3_production_costs",
+      "label": "Profit rectangles",
+      "description": "Practice Profit rectangles in Production, Cost, and Perfect Competition with exam-style items and feedback."
+    },
+    {
+      "id": "U4_imperfect_comp_s1",
+      "unit_code": "U4_imperfect_comp",
+      "label": "Monopoly DWL",
+      "description": "Practice Monopoly DWL in Imperfect Competition with exam-style items and feedback."
+    },
+    {
+      "id": "U4_imperfect_comp_s2",
+      "unit_code": "U4_imperfect_comp",
+      "label": "Collusion games",
+      "description": "Practice Collusion games in Imperfect Competition with exam-style items and feedback."
+    },
+    {
+      "id": "U4_imperfect_comp_s3",
+      "unit_code": "U4_imperfect_comp",
+      "label": "Product differentiation",
+      "description": "Practice Product differentiation in Imperfect Competition with exam-style items and feedback."
+    },
+    {
+      "id": "U4_imperfect_comp_s4",
+      "unit_code": "U4_imperfect_comp",
+      "label": "Price discrimination",
+      "description": "Practice Price discrimination in Imperfect Competition with exam-style items and feedback."
+    },
+    {
+      "id": "U5_factor_markets_s1",
+      "unit_code": "U5_factor_markets",
+      "label": "MRP hiring rule",
+      "description": "Practice MRP hiring rule in Factor Markets with exam-style items and feedback."
+    },
+    {
+      "id": "U5_factor_markets_s2",
+      "unit_code": "U5_factor_markets",
+      "label": "Labor market graphs",
+      "description": "Practice Labor market graphs in Factor Markets with exam-style items and feedback."
+    },
+    {
+      "id": "U5_factor_markets_s3",
+      "unit_code": "U5_factor_markets",
+      "label": "Monopsony wage gap",
+      "description": "Practice Monopsony wage gap in Factor Markets with exam-style items and feedback."
+    },
+    {
+      "id": "U5_factor_markets_s4",
+      "unit_code": "U5_factor_markets",
+      "label": "Factor demand shifts",
+      "description": "Practice Factor demand shifts in Factor Markets with exam-style items and feedback."
+    },
+    {
+      "id": "U6_market_failure_s1",
+      "unit_code": "U6_market_failure",
+      "label": "Pigouvian tax graphs",
+      "description": "Practice Pigouvian tax graphs in Market Failure and the Role of Government with exam-style items and feedback."
+    },
+    {
+      "id": "U6_market_failure_s2",
+      "unit_code": "U6_market_failure",
+      "label": "Public good free-rider",
+      "description": "Practice Public good free-rider in Market Failure and the Role of Government with exam-style items and feedback."
+    },
+    {
+      "id": "U6_market_failure_s3",
+      "unit_code": "U6_market_failure",
+      "label": "Inequality measures",
+      "description": "Practice Inequality measures in Market Failure and the Role of Government with exam-style items and feedback."
+    },
+    {
+      "id": "U6_market_failure_s4",
+      "unit_code": "U6_market_failure",
+      "label": "Regulation trade-offs",
+      "description": "Practice Regulation trade-offs in Market Failure and the Role of Government with exam-style items and feedback."
+    }
+  ]
+}

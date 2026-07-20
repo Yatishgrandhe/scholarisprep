@@ -1,0 +1,117 @@
+{
+  "examType": "AP_PHYSICS",
+  "topics": [
+    "Mechanics Core",
+    "Waves and Fluids",
+    "Electricity and Magnetism",
+    "Thermo and Modern",
+    "Lab and Reasoning Skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_mechanics_core",
+      "title": "Mechanics Core",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_kinematics",
+        "U1_S2_dynamics",
+        "U1_S3_energy",
+        "U1_S4_momentum"
+      ],
+      "topics": [
+        "kinematics",
+        "dynamics",
+        "energy",
+        "momentum"
+      ]
+    },
+    {
+      "unit_code": "U2_waves_and_fluids",
+      "title": "Waves and Fluids",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_shm",
+        "U2_S2_waves",
+        "U2_S3_fluids"
+      ],
+      "topics": [
+        "SHM",
+        "waves",
+        "fluids"
+      ]
+    },
+    {
+      "unit_code": "U3_electricity_and_magnetism",
+      "title": "Electricity and Magnetism",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_electrostatics",
+        "U3_S2_circuits",
+        "U3_S3_magnetism"
+      ],
+      "topics": [
+        "electrostatics",
+        "circuits",
+        "magnetism"
+      ]
+    },
+    {
+      "unit_code": "U4_thermo_and_modern",
+      "title": "Thermo and Modern",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_thermo",
+        "U4_S2_optics",
+        "U4_S3_modern_physics"
+      ],
+      "topics": [
+        "thermo",
+        "optics",
+        "modern physics"
+      ]
+    },
+    {
+      "unit_code": "U5_lab_and_reasoning_skills",
+      "title": "Lab and Reasoning Skills",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_experimental_design",
+        "U5_S2_uncertainty",
+        "U5_S3_argumentation"
+      ],
+      "topics": [
+        "experimental design",
+        "uncertainty",
+        "argumentation"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_mechanics_core": [
+      "U1_S1_kinematics",
+      "U1_S2_dynamics",
+      "U1_S3_energy",
+      "U1_S4_momentum"
+    ],
+    "U2_waves_and_fluids": [
+      "U2_S1_shm",
+      "U2_S2_waves",
+      "U2_S3_fluids"
+    ],
+    "U3_electricity_and_magnetism": [
+      "U3_S1_electrostatics",
+      "U3_S2_circuits",
+      "U3_S3_magnetism"
+    ],
+    "U4_thermo_and_modern": [
+      "U4_S1_thermo",
+      "U4_S2_optics",
+      "U4_S3_modern_physics"
+    ],
+    "U5_lab_and_reasoning_skills": [
+      "U5_S1_experimental_design",
+      "U5_S2_uncertainty",
+      "U5_S3_argumentation"
+    ]
+  }
+}

@@ -1,0 +1,162 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'If $2x + 3 = 11$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"5","is_correct":false,"explanation":"Choice C (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"7","is_correct":false,"explanation":"Choice D (7…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $2x + 3 = 11$, what is the value of $x$?
+
+**Step 2 — Solve.** To solve for $x$, we first subtract 3 from both sides of the equation: $2x + 3 - 3 = 11 - 3$, or $2x = 8$. Then, we divide both sides of the equation by 2: $\frac{2x}{2} = \frac{8}{2}$, or $x = 4$.
+
+**Step 3 — Select B.** 4
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (5): Choice C (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (7): Choice D (7…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":342,"opensat_domain":"Algebra","opensat_raw_id":"a4321a76","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f2e71314-5eca-4120-8d16-0fe1b3993148';
+
+UPDATE public.questions SET
+  question_text = 'If  \(2x + 3y = 12\) and  \(x - 2y = -1\), what is the value of  \(x + y\) ?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"3","is_correct":false,"explanation":"Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":false,"explanation":"Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"5","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"6","is_correct":false,"explanation":"Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If  \(2x + 3y = 12\) and  \(x - 2y = -1\), what is the value of  \(x + y\) ?
+
+**Step 2 — Solve.** To solve for \(x + y\), we can add the two equations together.  Adding the left-hand sides, we get \((2x + 3y) + (x - 2y) = 3x + y\). Adding the right-hand sides, we get \(12 + (-1) = 11\).  Therefore, \(3x + y = 11\).  Since the problem asks for the value of \(x + y\), we can divide both sides of this equation by 3 to get \(x + y = \frac{11}{3}\), or 3.67.
+
+**Step 3 — Select C.** 5
+
+**Distractor analysis:**
+- **A** (3): Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (4): Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (6): Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":296,"opensat_domain":"Algebra","opensat_raw_id":"84b5125c","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f339aceb-0040-4007-a482-9cf34f9098f7';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 units.  What is the circumference of the circle, in units?  (Express your answer in terms of \pi.)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5\\pi","is_correct":false,"explanation":"Choice A (5\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"25\\pi","is_correct":false,"explanation":"Choice C (25\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"50\\pi","is_correct":false,"explanation":"Choice D (50\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 units.  What is the circumference of the circle, in units?  (Express your answer in terms of \pi.)
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula $C = 2\pi r$, where r is the radius of the circle.  Substituting 5 for r, we get  C = 2\pi (5) = 10\pi.
+
+**Step 3 — Select B.** 10\pi
+
+**Distractor analysis:**
+- **A** (5\pi): Choice A (5\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (25\pi): Choice C (25\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (50\pi): Choice D (50\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":607,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"981d5815","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f33b25e0-c069-4df8-9f74-f93e02cd3f1f';
+
+UPDATE public.questions SET
+  question_text = 'A store sells two types of cookies: chocolate chip and peanut butter.  The store sold 30 chocolate chip cookies and 40 peanut butter cookies.  If the store sold a total of 80 cookies, what percentage of the cookies sold were chocolate chip?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"15%","is_correct":false,"explanation":"Choice A (15%…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"25%","is_correct":false,"explanation":"Choice B (25%…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"37.5%","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"62.5%","is_correct":false,"explanation":"Choice D (62.5%…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A store sells two types of cookies: chocolate chip and peanut butter.  The store sold 30 chocolate chip cookies and 40 peanut butter cookies.  If the store sold a total of 80 cookies, what percentage of the cookies sold were chocolate chip?
+
+**Step 2 — Solve.** The store sold 30 chocolate chip cookies out of a total of 80 cookies.  This represents 30/80 = 0.375, or 37.5% of the cookies sold.
+
+**Step 3 — Select C.** 37.5%
+
+**Distractor analysis:**
+- **A** (15%): Choice A (15%…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (25%): Choice B (25%…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (62.5%): Choice D (62.5%…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"PER","domain_id":"psda","opensat_index":486,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_a7","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f348d934-1e71-4865-884e-1c17f9c2db64';
+
+UPDATE public.questions SET
+  question_text = 'A circle with radius 5 is inscribed in a square.  What is the area of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with radius 5 is inscribed in a square.  What is the area of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square.  Since the radius of the circle is 5, the diameter is 10.  Therefore, the area of the square is 10^2 = 100.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":278,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a2","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f35403f8-7973-43b1-9d43-59357f522104';
+
+UPDATE public.questions SET
+  question_text = 'What is the solution to the equation $2x-3 = 15$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"6","is_correct":false,"explanation":"Choice A (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"9","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"12","is_correct":false,"explanation":"Choice C (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"18","is_correct":false,"explanation":"Choice D (18…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** What is the solution to the equation $2x-3 = 15$?
+
+**Step 2 — Solve.** To solve for $x$, we add 3 to both sides of the equation: $2x - 3 + 3 = 15 + 3$. This gives us $2x = 18$. Dividing both sides by 2, we get $x = 9$.
+
+**Step 3 — Select B.** 9
+
+**Distractor analysis:**
+- **A** (6): Choice A (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (12): Choice C (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (18): Choice D (18…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":735,"opensat_domain":"Algebra","opensat_raw_id":"1d6df679","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f3541564-7b88-440c-9776-a4cd6e3ea4e9';
+
+UPDATE public.questions SET
+  question_text = 'In a right triangle, one angle measures 30 degrees, and the side opposite that angle has a length of 10. What is the length of the hypotenuse of the triangle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5","is_correct":false,"explanation":"Choice A (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10\\sqrt{3}","is_correct":false,"explanation":"Choice B (10\\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"20","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"10\\sqrt{2}","is_correct":false,"explanation":"Choice D (10\\sqrt{2}…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** In a right triangle, one angle measures 30 degrees, and the side opposite that angle has a length of 10. What is the length of the hypotenuse of the triangle?
+
+**Step 2 — Solve.** In a 30-60-90 triangle, the hypotenuse is twice the length of the shorter leg. Since the shorter leg has a length of 10, the hypotenuse has a length of 2(10) = 20.
+
+**Step 3 — Select C.** 20
+
+**Distractor analysis:**
+- **A** (5): Choice A (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (10\sqrt{3}): Choice B (10\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (10\sqrt{2}): Choice D (10\sqrt{2}…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RIG","domain_id":"geometry","opensat_index":494,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c8","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f397c4b7-4ed1-4369-b1f4-0804e8ea0b62';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 units. A chord of the circle is 8 units long. What is the distance, in units, from the center of the circle to the chord?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"1","is_correct":false,"explanation":"Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 units. A chord of the circle is 8 units long. What is the distance, in units, from the center of the circle to the chord?
+
+**Step 2 — Solve.** Draw a diagram of the circle with the chord and the radius to the midpoint of the chord. This creates a right triangle where the hypotenuse is the radius, one leg is half the length of the chord, and the other leg is the distance from the center to the chord.  Using the Pythagorean Theorem, we have 5² = 4² + d² where d is the distance from the center to the chord. Solving for d gives us d = 3.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (1): Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":7,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f3f07283-e7e7-4bb2-9617-1c21d527c253';
+
+COMMIT;

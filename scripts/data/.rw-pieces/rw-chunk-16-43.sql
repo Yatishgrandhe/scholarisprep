@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('4d4460ce-4bf9-4adf-b9df-28b0d2036ea9', 'Which choice completes the text with the most logical transition?', 'Researchers expected the desert plant to wither during the long drought, since it has shallow roots and thin leaves. The plant not only survived but flowered, ______ drawing water from a fog that rolls in along the coast each morning.', NULL, '[{"id":"A","text":"in contrast,","is_correct":false,"explanation":"Incorrect: the clause explains how the plant survived, not an opposing idea."},{"id":"B","text":"nevertheless,","is_correct":false,"explanation":"Incorrect: the clause gives the reason for survival rather than conceding a contrast."},{"id":"C","text":"for","is_correct":true,"explanation":"Correct: it introduces the explanation for the plant''s surprising survival, the morning fog."},{"id":"D","text":"otherwise,","is_correct":false,"explanation":"Incorrect: the fog is the actual cause, not an alternative outcome."}]'::jsonb, 'C', 'Step 1 — Find the surprise to explain
+Despite expectations of withering, the plant {{yellow:not only survived but flowered}}, and the clause says why.
+Step 2 — Choose the causal explanation
+''For'' introduces the reason: it draws water from the coastal fog.
+Distractor analysis:
+- A: ''in contrast'' would set up opposition, but the clause explains the survival.
+- B: ''nevertheless'' marks concession, yet the clause supplies a cause.
+- D: ''otherwise'' names an alternative result, not the reason behind the survival.', 'The clause tells you how the plant managed to survive.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

@@ -1,0 +1,28 @@
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-10);
+}
+
+.category {
+  padding: var(--space-2) var(--space-4);
+  background: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+}
+
+.featuredCard {
+  margin-bottom: var(--space-10);
+}
+
+.cardLink {
+  display: block;
+  height: 100%;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,49 @@
+{
+  "exam_type": "IB_CLASSICAL_LANG_SL",
+  "display_name": "IB Classical Languages SL",
+  "units": [
+    "Language foundations",
+    "Unseen translation skills",
+    "Set text comprehension",
+    "Literary devices & genre",
+    "Historical & cultural context",
+    "Composition / style analysis",
+    "Comparative reading",
+    "Exam technique"
+  ],
+  "command_terms": [
+    "identify",
+    "interpret",
+    "analyse",
+    "evaluate",
+    "compare",
+    "produce"
+  ],
+  "misconceptions": [
+    "ignoring audience/purpose",
+    "translating idiom literally",
+    "wrong text-type conventions"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_language_foundations skill focus: morphology",
+    "Keep unit_code=U2_unseen_translation_skills skill focus: sense units",
+    "Keep unit_code=U3_set_text_comprehension skill focus: close reading",
+    "Keep unit_code=U4_literary_devices_genre skill focus: epic",
+    "Keep unit_code=U5_historical_cultural_context skill focus: institutions",
+    "Keep unit_code=U6_composition_style_analysis skill focus: register",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

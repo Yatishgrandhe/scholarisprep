@@ -1,0 +1,130 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  letter-spacing: 0.01em;
+}
+
+.input {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.85rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: hsl(var(--foreground));
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--border));
+  border-radius: 0.65rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input::placeholder {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.input:focus {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px color-mix(in srgb, hsl(var(--primary)) 18%, transparent);
+}
+
+.input:disabled {
+  opacity: 0.9;
+  cursor: default;
+}
+
+.inputCorrect {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.16);
+}
+
+.inputWrong {
+  border-color: hsl(var(--destructive));
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.14);
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.resultCorrect {
+  color: #15803d;
+}
+
+.resultWrong {
+  color: hsl(var(--destructive));
+}
+
+.answerValue {
+  display: inline-flex;
+  align-items: center;
+}
+
+.help {
+  margin-top: 0.15rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.55rem;
+  background: hsl(var(--muted));
+  padding: 0.1rem 0.25rem;
+  max-width: 540px;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  padding: 0.55rem 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  list-style: none;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.directions {
+  margin: 0;
+  padding: 0 0.85rem 0.7rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: hsl(var(--muted-foreground));
+}
+
+.directions li {
+  list-style: disc;
+}
+
+@media (max-width: 480px) {
+  .input {
+    max-width: 100%;
+    /* ≥16px prevents iOS focus zoom */
+    font-size: 1.125rem;
+    padding: 0.9rem 0.95rem;
+    min-height: 48px;
+  }
+
+  .help {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('fed04c54-2ec8-4049-9156-4a5f4ee033ec', 'Which choice completes the text with the most logical transition?', 'Some plants release chemical signals into the air when insects begin eating their leaves. These airborne signals warn neighboring plants of the threat. ______ the neighbors begin producing bitter compounds before any insect even reaches them.', NULL, '[{"id":"A","text":"In response,","is_correct":true,"explanation":"Correct: it shows the neighbors'' defensive reaction follows directly from receiving the warning."},{"id":"B","text":"Nonetheless,","is_correct":false,"explanation":"Wrong: ''Nonetheless'' marks contrast, but the neighbors act in line with the warning."},{"id":"C","text":"For instance,","is_correct":false,"explanation":"Wrong: the neighbors'' reaction is not an example of the warning signal."},{"id":"D","text":"In comparison,","is_correct":false,"explanation":"Wrong: nothing is being compared between two like things here."}]'::jsonb, 'A', 'Step 1 — Identify the warning
+The text states the signals {{yellow:warn neighboring plants of the threat}}, and the final sentence describes what those neighbors then do.
+Step 2 — Choose the reaction transition
+Because the neighbors make bitter compounds after being warned, ''In response'' captures the cause-and-reaction link.
+Distractor analysis:
+- B: ''Nonetheless'' signals contrast, but the action follows logically.
+- C: ''For instance'' needs an example, but a reaction is described.
+- D: ''In comparison'' needs two compared items, which are absent.', 'What do the neighbors do after they receive the warning?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

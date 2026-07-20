@@ -1,0 +1,146 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 2px solid hsl(var(--border));
+  border-radius: var(--radius-md);
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+  text-align: left;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.option:hover:not(:disabled) {
+  border-color: hsl(var(--primary));
+}
+
+.selected {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+}
+
+.correct {
+  border-color: hsl(var(--score-positive));
+  background: hsl(var(--score-positive) / 0.12);
+}
+
+.incorrect {
+  border-color: hsl(var(--score-negative));
+  background: hsl(var(--score-negative) / 0.1);
+}
+
+.eliminated {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+.label {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  border: 2px solid hsl(var(--border));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: hsl(var(--foreground));
+}
+
+.selected .label {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Darker green/red so the white letter stays readable in BOTH themes. The
+   default --score-positive/-negative are bright enough that white text on them
+   fails contrast (especially in dark mode); these darker shades pass AA. */
+.correct .label {
+  border-color: hsl(142 72% 29%);
+  background: hsl(142 72% 29%);
+  color: #ffffff;
+}
+
+.incorrect .label {
+  border-color: hsl(0 74% 42%);
+  background: hsl(0 74% 42%);
+  color: #ffffff;
+}
+
+.text {
+  flex: 1;
+  padding-top: 2px;
+  font-family: var(--font-serif);
+}
+
+.eliminateBtn {
+  flex-shrink: 0;
+  padding: var(--space-1);
+  border: none;
+  background: none;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.eliminateBtn:hover {
+  color: hsl(var(--destructive));
+}
+
+@media (max-width: 768px) {
+  .list {
+    gap: 10px;
+  }
+
+  .option {
+    min-height: 48px;
+    padding: 12px 14px;
+    gap: 12px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .label {
+    width: 32px;
+    height: 32px;
+    font-size: 0.875rem;
+  }
+
+  .text {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+  }
+
+  .eliminateBtn {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .option {
+    padding: 11px 12px;
+  }
+
+  .text {
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "exam_type": "AP_HUMAN_GEOGRAPHY",
+  "skills": [
+    {
+      "id": "SK_MAPS_SCALE",
+      "unit_code": "U1",
+      "label": "MAPS SCALE",
+      "description": "Thinking Geographically: practice skill for maps scale."
+    },
+    {
+      "id": "SK_SPATIAL_CONCEPTS",
+      "unit_code": "U1",
+      "label": "SPATIAL CONCEPTS",
+      "description": "Thinking Geographically: practice skill for spatial concepts."
+    },
+    {
+      "id": "SK_DEMOGRAPHICS",
+      "unit_code": "U2",
+      "label": "DEMOGRAPHICS",
+      "description": "Population and Migration: practice skill for demographics."
+    },
+    {
+      "id": "SK_MIGRATION",
+      "unit_code": "U2",
+      "label": "MIGRATION",
+      "description": "Population and Migration: practice skill for migration."
+    },
+    {
+      "id": "SK_CULTURE_DIFFUSION",
+      "unit_code": "U3",
+      "label": "CULTURE DIFFUSION",
+      "description": "Cultural Patterns and Processes: practice skill for culture diffusion."
+    },
+    {
+      "id": "SK_LANGUAGE_RELIGION",
+      "unit_code": "U3",
+      "label": "LANGUAGE RELIGION",
+      "description": "Cultural Patterns and Processes: practice skill for language religion."
+    },
+    {
+      "id": "SK_STATE_BOUNDARY",
+      "unit_code": "U4",
+      "label": "STATE BOUNDARY",
+      "description": "Political Patterns and Processes: practice skill for state boundary."
+    },
+    {
+      "id": "SK_DEVOLUTION_SUPRANATIONAL",
+      "unit_code": "U4",
+      "label": "DEVOLUTION SUPRANATIONAL",
+      "description": "Political Patterns and Processes: practice skill for devolution supranational."
+    },
+    {
+      "id": "SK_AG_SYSTEMS",
+      "unit_code": "U5",
+      "label": "AG SYSTEMS",
+      "description": "Agriculture and Rural Land Use: practice skill for ag systems."
+    },
+    {
+      "id": "SK_VON_THUNEN",
+      "unit_code": "U5",
+      "label": "VON THUNEN",
+      "description": "Agriculture and Rural Land Use: practice skill for von thunen."
+    },
+    {
+      "id": "SK_URBAN_MODELS",
+      "unit_code": "U6",
+      "label": "URBAN MODELS",
+      "description": "Cities and Urban Land Use: practice skill for urban models."
+    },
+    {
+      "id": "SK_URBAN_SUSTAINABILITY",
+      "unit_code": "U6",
+      "label": "URBAN SUSTAINABILITY",
+      "description": "Cities and Urban Land Use: practice skill for urban sustainability."
+    },
+    {
+      "id": "SK_DEVELOPMENT_MEASURES",
+      "unit_code": "U7",
+      "label": "DEVELOPMENT MEASURES",
+      "description": "Industrial and Economic Development: practice skill for development measures."
+    },
+    {
+      "id": "SK_INDUSTRY_TRADE",
+      "unit_code": "U7",
+      "label": "INDUSTRY TRADE",
+      "description": "Industrial and Economic Development: practice skill for industry trade."
+    }
+  ]
+}

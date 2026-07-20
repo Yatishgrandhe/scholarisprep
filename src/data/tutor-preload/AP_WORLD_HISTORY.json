@@ -1,0 +1,142 @@
+{
+  "exam_type": "AP_WORLD_HISTORY",
+  "display_name": "AP World History: Modern",
+  "command_terms": [
+    "identify",
+    "describe",
+    "explain",
+    "compare",
+    "contextualize",
+    "argue with evidence"
+  ],
+  "misconceptions": [
+    "Eurocentric narratives that ignore parallel developments elsewhere",
+    "Treating trade networks as purely economic without cultural effects",
+    "DBQ document dumping without sourcing or grouping",
+    "Periodization errors across 1200–1450 / 1450–1750 / 1750–1900 / 1900–present",
+    "Vague outside evidence that could fit any era"
+  ],
+  "paper_rules": [
+    "Use global or cross-regional comparisons when prompts ask for them",
+    "DBQ/LEQ scoring emphasizes thesis, contextualization, evidence, and reasoning",
+    "SAQ parts must each earn a discrete point with specific historical content"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "mcq",
+        "label": "Multiple Choice",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "saq",
+        "label": "Short Answer",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "dbq",
+        "label": "Document-Based Question",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "leq",
+        "label": "Long Essay Question",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "No calculator. Modern course spans c.1200–present across nine units."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_global_tapestry",
+      "unit_name": "The Global Tapestry (c.1200–1450)",
+      "topics": [
+        "state building in Afro-Eurasia",
+        "belief systems",
+        "East Asian developments",
+        "Americas and Africa before 1450"
+      ]
+    },
+    {
+      "unit_code": "U2_networks_exchange",
+      "unit_name": "Networks of Exchange (c.1200–1450)",
+      "topics": [
+        "Silk Roads",
+        "Indian Ocean and Trans-Saharan trade",
+        "cultural consequences of connectivity",
+        "Mongol exchange"
+      ]
+    },
+    {
+      "unit_code": "U3_land_empires",
+      "unit_name": "Land-Based Empires (c.1450–1750)",
+      "topics": [
+        "gunpowder empires",
+        "imperial administration",
+        "belief and art in empires",
+        "comparisons across Eurasia"
+      ]
+    },
+    {
+      "unit_code": "U4_transoceanic",
+      "unit_name": "Transoceanic Interconnections (c.1450–1750)",
+      "topics": [
+        "maritime exploration",
+        "Columbian Exchange",
+        "Atlantic system",
+        "resistance and syncretism"
+      ]
+    },
+    {
+      "unit_code": "U5_revolutions",
+      "unit_name": "Revolutions (c.1750–1900)",
+      "topics": [
+        "Enlightenment and Atlantic revolutions",
+        "Industrial Revolution",
+        "nationalism",
+        "reform and migration"
+      ]
+    },
+    {
+      "unit_code": "U6_industrial_consequences",
+      "unit_name": "Consequences of Industrialization (c.1750–1900)",
+      "topics": [
+        "imperialism",
+        "economic imperialism",
+        "indigenous responses",
+        "global migration patterns"
+      ]
+    },
+    {
+      "unit_code": "U7_global_conflict",
+      "unit_name": "Global Conflict (c.1900–present)",
+      "topics": [
+        "world wars",
+        "economy between wars",
+        "mass atrocities",
+        "causation of global conflict"
+      ]
+    },
+    {
+      "unit_code": "U8_cold_war_decolon",
+      "unit_name": "Cold War and Decolonization (c.1900–present)",
+      "topics": [
+        "Cold War competition",
+        "decolonization pathways",
+        "proxy conflicts",
+        "end of empires"
+      ]
+    },
+    {
+      "unit_code": "U9_globalization",
+      "unit_name": "Globalization (c.1900–present)",
+      "topics": [
+        "technology and economy",
+        "global institutions",
+        "environment",
+        "cultural globalization and resistance"
+      ]
+    }
+  ]
+}

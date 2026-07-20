@@ -1,0 +1,154 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A group of friends went to a restaurant for dinner. The total bill came to \$120.  They wanted to split the bill evenly, but one of the friends left without paying.  If the remaining friends each paid \$15, how many friends were originally in the group?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"7","is_correct":false,"explanation":"Choice A (7…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"8","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"9","is_correct":false,"explanation":"Choice C (9…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"10","is_correct":false,"explanation":"Choice D (10…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A group of friends went to a restaurant for dinner. The total bill came to \$120.  They wanted to split the bill evenly, but one of the friends left without paying.  If the remaining friends each paid \$15, how many friends were originally in the group?
+
+**Step 2 — Solve.** Since the remaining friends each paid $15, and the total bill was $120, there were $120/\$15 = 8 friends in the group originally.
+
+**Step 3 — Select B.** 8
+
+**Distractor analysis:**
+- **A** (7): Choice A (7…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (9): Choice C (9…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (10): Choice D (10…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":328,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"52678a95","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '60709e4c-43ec-4314-9938-9bc6184a1dec';
+
+UPDATE public.questions SET
+  question_text = 'A store sells two types of cookies: chocolate chip and peanut butter.  On a particular day, the store sold 180 chocolate chip cookies. If the ratio of chocolate chip cookies to peanut butter cookies sold that day was 5:3, how many peanut butter cookies did the store sell?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"60","is_correct":false,"explanation":"Choice A (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"90","is_correct":false,"explanation":"Choice B (90…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"108","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"180","is_correct":false,"explanation":"Choice D (180…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A store sells two types of cookies: chocolate chip and peanut butter.  On a particular day, the store sold 180 chocolate chip cookies. If the ratio of chocolate chip cookies to peanut butter cookies sold that day was 5:3, how many peanut butter cookies did the store sell?
+
+**Step 2 — Solve.** The ratio 5:3 means that for every 5 chocolate chip cookies sold, 3 peanut butter cookies were sold. We can set up a proportion:  \frac{5}{3} = \frac{180}{x}.  Cross-multiplying gives 5x = 540.  Dividing both sides by 5 gives $x = 108$.
+
+**Step 3 — Select C.** 108
+
+**Distractor analysis:**
+- **A** (60): Choice A (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (90): Choice B (90…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (180): Choice D (180…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":404,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"54f587b2","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '608dbed5-9fb0-4763-acc5-5287f73edc56';
+
+UPDATE public.questions SET
+  question_text = 'A circle with a radius of 5 is inscribed in a square. What is the area of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a radius of 5 is inscribed in a square. What is the area of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square. Since the radius of the circle is 5, the diameter is 10. Therefore, the side length of the square is 10, and the area of the square is 10^2 = 100.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":530,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_e4","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '60a5bd7e-cb30-411f-90f3-da95e089fccd';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 centimeters.  What is the circumference of the circle, in centimeters?  (Express your answer in terms of pi.)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5\\pi","is_correct":false,"explanation":"Choice A (5\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"25\\pi","is_correct":false,"explanation":"Choice C (25\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"50\\pi","is_correct":false,"explanation":"Choice D (50\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 centimeters.  What is the circumference of the circle, in centimeters?  (Express your answer in terms of pi.)
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula C = 2πr, where r is the radius.  Substituting 5 for r gives C = 2π(5) = 10π.
+
+**Step 3 — Select B.** 10\pi
+
+**Distractor analysis:**
+- **A** (5\pi): Choice A (5\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (25\pi): Choice C (25\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (50\pi): Choice D (50\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":710,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c9","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '60d1b8c8-3349-4f01-8308-b51cd3953bb1';
+
+UPDATE public.questions SET
+  question_text = 'If $x$ is a real number, and $x^2 - 4x + 4 = 0$, what is the value of $x + 1$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"1","is_correct":false,"explanation":"Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":false,"explanation":"Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"3","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"4","is_correct":false,"explanation":"Choice D (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If $x$ is a real number, and $x^2 - 4x + 4 = 0$, what is the value of $x + 1$?
+
+**Step 2 — Solve.** The equation $x^2 - 4x + 4 = 0$ factors as $(x-2)^2 = 0$. This tells us that $x - 2 = 0$, or $x = 2$.  Therefore, $x + 1 = 2 + 1 = 3$.
+
+**Step 3 — Select C.** 3
+
+**Distractor analysis:**
+- **A** (1): Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (2): Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (4): Choice D (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":987,"opensat_domain":"Algebra","opensat_raw_id":"3d985142","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '60dab1d0-93f9-49c5-b960-efdd249064e8';
+
+UPDATE public.questions SET
+  question_text = 'If the original price is $240$, what is the final price after both changes?',
+  stimulus_text = 'A retail price is increased by 25% and then discounted by 10%.',
+  options = '[{"id":"A","text":"$270$","is_correct":true,"explanation":"**Step 1:** $240×1.25=300$. **Step 2:** $300×0.9=270$."},{"id":"B","text":"$240$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$300$","is_correct":false,"explanation":"Only applies the markup."},{"id":"D","text":"$280$","is_correct":false,"explanation":"Adds 10 without reason."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Markup: $240×(1+25/100)=300$.
+**Step 2:** Discount: $300×(1-10/100)=270$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6136877f-d80e-4ab0-a265-8b8d57d588a2';
+
+UPDATE public.questions SET
+  question_text = 'A rectangular prism has a volume of 72 cubic centimeters. If the length of the prism is 6 centimeters and the width is 4 centimeters, what is the height of the prism, in centimeters?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"3","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"4","is_correct":false,"explanation":"Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"6","is_correct":false,"explanation":"Choice C (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"12","is_correct":false,"explanation":"Choice D (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** A rectangular prism has a volume of 72 cubic centimeters. If the length of the prism is 6 centimeters and the width is 4 centimeters, what is the height of the prism, in centimeters?
+
+**Step 2 — Solve.** The volume of a rectangular prism is given by the formula $V = lwh$, where $l$ is the length, $w$ is the width, and $h$ is the height. We are given that the volume $V = 72$, the length $l = 6$, and the width $w = 4$.  Substituting these values into the formula, we get $72 = 6 \cdot 4 \cdot h$.  Simplifying the equation, we get $72 = 24h$.  Dividing both sides by 24, we get $h = 3$.
+
+**Step 3 — Select A.** 3
+
+**Distractor analysis:**
+- **B** (4): Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (6): Choice C (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (12): Choice D (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":941,"opensat_domain":"Advanced Math","opensat_raw_id":"14f4c19a","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '61846405-736a-442a-bdfe-df45f329e862';
+
+UPDATE public.questions SET
+  question_text = 'A rectangle has a length of 12 meters and a width of 5 meters. What is the area of the rectangle, in square meters?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"17","is_correct":false,"explanation":"Choice A (17…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"34","is_correct":false,"explanation":"Choice B (34…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"60","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"72","is_correct":false,"explanation":"Choice D (72…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A rectangle has a length of 12 meters and a width of 5 meters. What is the area of the rectangle, in square meters?
+
+**Step 2 — Solve.** The area of a rectangle is calculated by multiplying its length and width.  In this case, the area is 12 meters * 5 meters = 60 square meters.
+
+**Step 3 — Select C.** 60
+
+**Distractor analysis:**
+- **A** (17): Choice A (17…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (34): Choice B (34…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (72): Choice D (72…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"ARE","domain_id":"geometry","opensat_index":1002,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c1","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.064Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '61ab4904-b5b2-4836-9b24-7f0d248239f2';
+
+COMMIT;

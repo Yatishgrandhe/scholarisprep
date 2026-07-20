@@ -1,0 +1,121 @@
+.wrap {
+  max-width: 880px;
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 750;
+  margin: 0 0 var(--space-1);
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+.sub {
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 var(--space-4);
+  line-height: 1.55;
+  font-size: 0.9375rem;
+}
+
+.filters {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .filters {
+    grid-template-columns: 1fr 180px;
+  }
+}
+
+.input {
+  min-height: 2.5rem;
+  padding: 0 var(--space-3);
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.12);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid hsl(var(--border));
+  transition: background 160ms ease;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: hsl(var(--muted) / 0.4);
+}
+
+.name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+}
+
+.loc {
+  margin: 2px 0 0;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--muted-foreground));
+}
+
+@media (max-width: 480px) {
+  .row {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .scores {
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .input {
+    min-height: 2.75rem;
+  }
+}

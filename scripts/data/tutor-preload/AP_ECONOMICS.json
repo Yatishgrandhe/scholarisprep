@@ -1,0 +1,129 @@
+{
+  "exam_type": "AP_ECONOMICS",
+  "display_name": "AP Microeconomics (legacy alias)",
+  "family": "AP",
+  "units": [
+    {
+      "unit_code": "U1_basic_economic_concepts",
+      "unit_name": "Basic Economic Concepts",
+      "topics": [
+        "scarcity",
+        "PPC",
+        "comparative advantage"
+      ]
+    },
+    {
+      "unit_code": "U2_supply_and_demand",
+      "unit_name": "Supply and Demand",
+      "topics": [
+        "elasticity",
+        "markets",
+        "surplus"
+      ]
+    },
+    {
+      "unit_code": "U3_production_and_costs",
+      "unit_name": "Production and Costs",
+      "topics": [
+        "short/long run",
+        "cost curves"
+      ]
+    },
+    {
+      "unit_code": "U4_perfect_competition",
+      "unit_name": "Perfect Competition",
+      "topics": [
+        "profit max",
+        "efficiency"
+      ]
+    },
+    {
+      "unit_code": "U5_imperfect_competition",
+      "unit_name": "Imperfect Competition",
+      "topics": [
+        "monopoly",
+        "oligopoly",
+        "monopolistic"
+      ]
+    },
+    {
+      "unit_code": "U6_factor_markets_and_market_failure",
+      "unit_name": "Factor Markets and Market Failure",
+      "topics": [
+        "labor markets",
+        "externalities",
+        "public goods"
+      ]
+    }
+  ],
+  "command_terms": [
+    "calculate",
+    "show graphically",
+    "explain",
+    "determine"
+  ],
+  "misconceptions": [
+    "Confusing shift vs movement",
+    "Mislabeling axes on graphs",
+    "Mixing accounting vs economic profit"
+  ],
+  "paper_rules": [
+    "Graph labeling required on FRQ",
+    "Show work for calculations"
+  ],
+  "calculator": {
+    "policy": "none",
+    "notes": "No calculator",
+    "section_rules": [
+      {
+        "section": "all",
+        "calculator_allowed": false
+      }
+    ],
+    "per_question_default": false,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "No Desmos block; calculator not used.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "AP CED-aligned item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Match AP task model for the unit"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": {
+    "title": "AP Economics graph checklist",
+    "sections": [
+      "Axis labels",
+      "Curves and shifts",
+      "Areas (CS/PS/DWL)",
+      "Formulas for elasticity/profit"
+    ]
+  }
+}

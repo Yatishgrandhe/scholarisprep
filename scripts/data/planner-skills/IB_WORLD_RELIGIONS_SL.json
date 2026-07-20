@@ -1,0 +1,171 @@
+{
+  "examType": "IB_WORLD_RELIGIONS_SL",
+  "topics": [
+    "Introduction to the study of religion",
+    "Worldview themes",
+    "Religious experience & ritual",
+    "Ethics and moral living",
+    "Sacred texts and authority",
+    "Religion and society",
+    "Comparative skills",
+    "Paper technique & IA"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_introduction_to_the_study_of_religion",
+      "title": "Introduction to the study of religion",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_worldview_themes",
+      "title": "Worldview themes",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_religious_experience_ritual",
+      "title": "Religious experience & ritual",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_ethics_and_moral_living",
+      "title": "Ethics and moral living",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_sacred_texts_and_authority",
+      "title": "Sacred texts and authority",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_religion_and_society",
+      "title": "Religion and society",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_comparative_skills",
+      "title": "Comparative skills",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_paper_technique_ia",
+      "title": "Paper technique & IA",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_WORLD_RELIGIONS_SL:U1_introduction_to_the_study_of_religion",
+      "unit_code": "U1_introduction_to_the_study_of_religion",
+      "title": "Introduction to the study of religion",
+      "topics": [
+        "definitions",
+        "approaches",
+        "phenomenology"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_WORLD_RELIGIONS_SL:U2_worldview_themes",
+      "unit_code": "U2_worldview_themes",
+      "title": "Worldview themes",
+      "topics": [
+        "ultimate reality",
+        "human nature",
+        "meaning and purpose"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_WORLD_RELIGIONS_SL:U1_introduction_to_the_study_of_religion"
+      ]
+    },
+    {
+      "skill_id": "IB_WORLD_RELIGIONS_SL:U3_religious_experience_ritual",
+      "unit_code": "U3_religious_experience_ritual",
+      "title": "Religious experience & ritual",
+      "topics": [
+        "worship",
+        "rites of passage",
+        "mysticism"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_WORLD_RELIGIONS_SL:U2_worldview_themes"
+      ]
+    },
+    {
+      "skill_id": "IB_WORLD_RELIGIONS_SL:U4_ethics_and_moral_living",
+      "unit_code": "U4_ethics_and_moral_living",
+      "title": "Ethics and moral living",
+      "topics": [
+        "codes",
+        "virtue",
+        "social justice"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_WORLD_RELIGIONS_SL:U3_religious_experience_ritual"
+      ]
+    },
+    {
+      "skill_id": "IB_WORLD_RELIGIONS_SL:U5_sacred_texts_and_authority",
+      "unit_code": "U5_sacred_texts_and_authority",
+      "title": "Sacred texts and authority",
+      "topics": [
+        "canon",
+        "interpretation",
+        "leadership"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_WORLD_RELIGIONS_SL:U4_ethics_and_moral_living"
+      ]
+    },
+    {
+      "skill_id": "IB_WORLD_RELIGIONS_SL:U6_religion_and_society",
+      "unit_code": "U6_religion_and_society",
+      "title": "Religion and society",
+      "topics": [
+        "secularization",
+        "pluralism",
+        "conflict and dialogue"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_WORLD_RELIGIONS_SL:U5_sacred_texts_and_authority"
+      ]
+    },
+    {
+      "skill_id": "IB_WORLD_RELIGIONS_SL:U7_comparative_skills",
+      "unit_code": "U7_comparative_skills",
+      "title": "Comparative skills",
+      "topics": [
+        "similarities",
+        "differences",
+        "context sensitivity"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_WORLD_RELIGIONS_SL:U6_religion_and_society"
+      ]
+    },
+    {
+      "skill_id": "IB_WORLD_RELIGIONS_SL:U8_paper_technique_ia",
+      "unit_code": "U8_paper_technique_ia",
+      "title": "Paper technique & IA",
+      "topics": [
+        "stimulus response",
+        "investigation structure"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_WORLD_RELIGIONS_SL:U7_comparative_skills"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

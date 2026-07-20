@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('8ad73f46-00a4-41a0-9e94-c3d4d08f3922', 'Which choice completes the text with the most logical transition?', 'The composer Clara Schumann was a celebrated concert pianist across nineteenth-century Europe. She performed demanding works from memory at a time when most pianists read from sheet music. ______ she composed her own piano pieces and songs.', NULL, '[{"id":"A","text":"Moreover,","is_correct":true,"explanation":"Correct: composing is an additional accomplishment that builds on her achievements as a performer."},{"id":"B","text":"However,","is_correct":false,"explanation":"Incorrect: composing does not contrast with her performing; it adds to her talents."},{"id":"C","text":"Therefore,","is_correct":false,"explanation":"Incorrect: her composing is not caused by her playing from memory."},{"id":"D","text":"In contrast,","is_correct":false,"explanation":"Incorrect: ''In contrast'' signals opposition, but both facts praise her abilities."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The text notes she {{yellow:performed demanding works from memory}}, and the final sentence adds another talent: composing.
+Step 2 — Choose the transition
+Because composing is a further accomplishment on top of her performing, an additive transition like ''Moreover'' fits.
+Distractor analysis:
+- B: ''However'' implies a contrast that does not exist between her two talents.
+- C: ''Therefore'' suggests composing resulted from her memory playing, which is unsupported.
+- D: ''In contrast'' wrongly opposes two complementary achievements.', 'Does composing add to her list of talents rather than oppose them?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

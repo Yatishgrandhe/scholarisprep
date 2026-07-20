@@ -1,0 +1,147 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'What is the value of the missing score $x$?',
+  stimulus_text = 'Scores: 23, 27, 31, 35, and one score $x$ is missing. The mean is 27.4.',
+  options = '[{"id":"A","text":"$19$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$21$","is_correct":true,"explanation":"**Step 1:** Sum needed $=27.4×5=137$. **Step 2:** $x=137-116=21$."},{"id":"C","text":"$23$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$27$","is_correct":false,"explanation":"Confuses mean with missing value."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Total sum $=27.4×5=137$.
+**Step 2:** $x=137-116=21$.
+**Step 3:** Verify mean.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.074Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd1e20317-6ebc-4b40-9e00-0c2be4fad1fc';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 centimeters. What is the circumference of the circle, in centimeters? (Use 3.14 for *\pi*)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"15.7","is_correct":false,"explanation":"Choice A (15.7…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"31.4","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"62.8","is_correct":false,"explanation":"Choice C (62.8…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"157","is_correct":false,"explanation":"Choice D (157…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 centimeters. What is the circumference of the circle, in centimeters? (Use 3.14 for *\pi*)
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula *C = 2πr*, where *r* is the radius.  Substituting 5 for *r* and 3.14 for *π*, we get *C = 2(3.14)(5) = 31.4*.
+
+**Step 3 — Select B.** 31.4
+
+**Distractor analysis:**
+- **A** (15.7): Choice A (15.7…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (62.8): Choice C (62.8…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (157): Choice D (157…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":613,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a4","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.074Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd2060f1b-1279-4e25-816b-7ae7e6eea9e3';
+
+UPDATE public.questions SET
+  question_text = 'A circle with a diameter of 10 inches is inscribed in a square. What is the area, in square inches, of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a diameter of 10 inches is inscribed in a square. What is the area, in square inches, of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square. Since the diameter is 10 inches, the side length of the square is also 10 inches. The area of a square is found by squaring the side length, so the area of the square is 10^2 = 100 square inches.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":555,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"d04919d8","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.074Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd247f8a1-0c8b-4140-86ba-e9d815c526ee';
+
+UPDATE public.questions SET
+  question_text = 'If $3x + 2y = 12$ and $x - 2y = 4$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":false,"explanation":"Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"6","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"8","is_correct":false,"explanation":"Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If $3x + 2y = 12$ and $x - 2y = 4$, what is the value of $x$?
+
+**Step 2 — Solve.** To solve for *x*, we can add the two equations together.  Notice that the *y* terms cancel out.  This gives us  $3x + 2y + (x - 2y) = 12 + 4$, or $4x = 16$. Dividing both sides by 4, we get $x = 4$.
+
+**Step 3 — Select C.** 6
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (4): Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (8): Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":216,"opensat_domain":"Algebra","opensat_raw_id":"random_id_d9","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.074Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd2959234-231a-4251-886d-62754c64764f';
+
+UPDATE public.questions SET
+  question_text = 'If $2x + 3y = 12$ and $x - y = 1$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $2x + 3y = 12$ and $x - y = 1$, what is the value of $x$?
+
+**Step 2 — Solve.** To solve for x, we can use elimination.  Multiplying the second equation by 3, we get $3x - 3y = 3$.  Adding this equation to the first equation, we get $5x = 15$.  Dividing both sides by 5 gives us $x = 3$.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":919,"opensat_domain":"Algebra","opensat_raw_id":"random_id_a2","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.074Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd2a8a573-ef5f-46e7-af00-6d5834c7306c';
+
+UPDATE public.questions SET
+  question_text = 'A survey of 200 students found that 120 students prefer pizza, 80 students prefer burgers, and 50 students prefer both. How many students prefer neither pizza nor burgers?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"20","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"30","is_correct":false,"explanation":"Choice B (30…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"50","is_correct":false,"explanation":"Choice C (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"70","is_correct":false,"explanation":"Choice D (70…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** A survey of 200 students found that 120 students prefer pizza, 80 students prefer burgers, and 50 students prefer both. How many students prefer neither pizza nor burgers?
+
+**Step 2 — Solve.** Let P represent the set of students who prefer pizza and B represent the set of students who prefer burgers. We are given that |P| = 120, |B| = 80, and |P \cap B| = 50.  We want to find |P'' \cap B''|, the number of students who prefer neither.  We can use the following formula: |P'' \cap B''| = |U| - |P \cup B| = |U| - (|P| + |B| - |P \cap B|). Since there are 200 students surveyed, we know |U| = 200.  Substituting the given values into the formula, we get |P'' \cap B''| = 200 - (120 + 80 - 50) = 200 - 150 = 50.  Therefore, the number of students who prefer neither pizza nor burgers is 50.
+
+**Step 3 — Select A.** 20
+
+**Distractor analysis:**
+- **B** (30): Choice B (30…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (50): Choice C (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (70): Choice D (70…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":60,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_c3","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.074Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd2d2f8e0-8ffd-4274-b52c-324eb0ae75da';
+
+UPDATE public.questions SET
+  question_text = 'A store is selling a new video game for \$50.  The store also offers a discount if customers purchase two of the same video game.  If a customer buys two of the same video game, the price of the second video game is discounted by 20%.  What is the total cost, in dollars, of purchasing two of the same video game at this store? ',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"80","is_correct":false,"explanation":"Choice A (80…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"90","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"100","is_correct":false,"explanation":"Choice C (100…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"110","is_correct":false,"explanation":"Choice D (110…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A store is selling a new video game for \$50.  The store also offers a discount if customers purchase two of the same video game.  If a customer buys two of the same video game, the price of the second video game is discounted by 20%.  What is the total cost, in dollars, of purchasing two of the same video game at this store? 
+
+**Step 2 — Solve.** The discount on the second video game is 20% of \$50, or \$10. The customer pays \$40 for the second video game and \$50 for the first, so the total cost is \$90.
+
+**Step 3 — Select B.** 90
+
+**Distractor analysis:**
+- **A** (80): Choice A (80…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (100): Choice C (100…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (110): Choice D (110…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":213,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_8","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.074Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd2e7163c-4d4e-4552-832c-a31328d1f781';
+
+UPDATE public.questions SET
+  question_text = 'Which expression is equivalent to $(4x+12)^2 - (4x-12)^2$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$192x$","is_correct":true,"explanation":"**Step 1:** Difference of squares in disguise: $(u+v)(u-v)$ with $u=4x+12$, $v=4x-12$ → $192x$."},{"id":"B","text":"$8x^2$","is_correct":false,"explanation":"Squares each binomial separately — wrong approach."},{"id":"C","text":"$48x$","is_correct":false,"explanation":"Uses $4b$ instead of $4ab$."},{"id":"D","text":"$16x^2+144$","is_correct":false,"explanation":"Adds squares; not equivalent."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Let $u=4x+12$, $v=4x-12$.
+**Step 2:** $u^2-v^2=(u+v)(u-v)=(8x)(24)=192x$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.074Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'd31ceae3-24fd-4d4e-a771-2db0cf47266b';
+
+COMMIT;

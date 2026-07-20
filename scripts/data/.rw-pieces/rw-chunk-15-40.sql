@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('ca5c2b8e-d870-4084-a6e1-f5a4165dfdb3', 'Which choice completes the text with the most logical transition?', 'During the Industrial Revolution, factories drew huge numbers of workers into rapidly growing cities. Housing and sanitation systems could not keep pace with this sudden influx. ______ overcrowding and disease became common problems in many urban neighborhoods.', NULL, '[{"id":"A","text":"Consequently,","is_correct":true,"explanation":"Correctly marks overcrowding and disease as the result of housing failing to keep pace."},{"id":"B","text":"Nevertheless,","is_correct":false,"explanation":"Signals contrast, but the sentence follows logically from the strained systems."},{"id":"C","text":"For instance,","is_correct":false,"explanation":"Introduces an example, yet the sentence states a consequence of the influx."},{"id":"D","text":"Likewise,","is_correct":false,"explanation":"Implies a parallel point, but the sentence gives an effect, not a comparison."}]'::jsonb, 'A', 'Step 1 — Find the relationship
+The text says {{yellow:Housing and sanitation systems could not keep pace with this sudden influx}}, and the final sentence describes the problems that followed.
+Step 2 — Match the transition
+Because overcrowding and disease result from the overwhelmed systems, a cause-and-effect transition fits.
+Distractor analysis:
+- B: "Nevertheless" signals contrast, but the sentence follows from the strained systems.
+- C: "For instance" introduces an example, yet the sentence gives a result.
+- D: "Likewise" implies a comparison, which the sentence does not make.', 'Ask whether overcrowding results from the strained systems or contrasts with them.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

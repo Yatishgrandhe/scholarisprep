@@ -1,0 +1,167 @@
+{
+  "exam_type": "AP_US_HISTORY",
+  "skills": [
+    {
+      "id": "P1_1491_1607_s1",
+      "unit_code": "P1_1491_1607",
+      "label": "Precontact diversity",
+      "description": "Practice Precontact diversity in Period 1: 1491–1607 with exam-style items and feedback."
+    },
+    {
+      "id": "P1_1491_1607_s2",
+      "unit_code": "P1_1491_1607",
+      "label": "Columbian Exchange impacts",
+      "description": "Practice Columbian Exchange impacts in Period 1: 1491–1607 with exam-style items and feedback."
+    },
+    {
+      "id": "P1_1491_1607_s3",
+      "unit_code": "P1_1491_1607",
+      "label": "Early colonial motives",
+      "description": "Practice Early colonial motives in Period 1: 1491–1607 with exam-style items and feedback."
+    },
+    {
+      "id": "P2_1607_1754_s1",
+      "unit_code": "P2_1607_1754",
+      "label": "Regional colony comparison",
+      "description": "Practice Regional colony comparison in Period 2: 1607–1754 with exam-style items and feedback."
+    },
+    {
+      "id": "P2_1607_1754_s2",
+      "unit_code": "P2_1607_1754",
+      "label": "Atlantic world labor systems",
+      "description": "Practice Atlantic world labor systems in Period 2: 1607–1754 with exam-style items and feedback."
+    },
+    {
+      "id": "P2_1607_1754_s3",
+      "unit_code": "P2_1607_1754",
+      "label": "Great Awakening effects",
+      "description": "Practice Great Awakening effects in Period 2: 1607–1754 with exam-style items and feedback."
+    },
+    {
+      "id": "P3_1754_1800_s1",
+      "unit_code": "P3_1754_1800",
+      "label": "Causes of Revolution",
+      "description": "Practice Causes of Revolution in Period 3: 1754–1800 with exam-style items and feedback."
+    },
+    {
+      "id": "P3_1754_1800_s2",
+      "unit_code": "P3_1754_1800",
+      "label": "Constitutional compromises",
+      "description": "Practice Constitutional compromises in Period 3: 1754–1800 with exam-style items and feedback."
+    },
+    {
+      "id": "P3_1754_1800_s3",
+      "unit_code": "P3_1754_1800",
+      "label": "Federalist debates",
+      "description": "Practice Federalist debates in Period 3: 1754–1800 with exam-style items and feedback."
+    },
+    {
+      "id": "P4_1800_1848_s1",
+      "unit_code": "P4_1800_1848",
+      "label": "Expansion politics",
+      "description": "Practice Expansion politics in Period 4: 1800–1848 with exam-style items and feedback."
+    },
+    {
+      "id": "P4_1800_1848_s2",
+      "unit_code": "P4_1800_1848",
+      "label": "Market Revolution change",
+      "description": "Practice Market Revolution change in Period 4: 1800–1848 with exam-style items and feedback."
+    },
+    {
+      "id": "P4_1800_1848_s3",
+      "unit_code": "P4_1800_1848",
+      "label": "Antebellum reform",
+      "description": "Practice Antebellum reform in Period 4: 1800–1848 with exam-style items and feedback."
+    },
+    {
+      "id": "P5_1844_1877_s1",
+      "unit_code": "P5_1844_1877",
+      "label": "Sectional crisis timeline",
+      "description": "Practice Sectional crisis timeline in Period 5: 1844–1877 with exam-style items and feedback."
+    },
+    {
+      "id": "P5_1844_1877_s2",
+      "unit_code": "P5_1844_1877",
+      "label": "Civil War turning points",
+      "description": "Practice Civil War turning points in Period 5: 1844–1877 with exam-style items and feedback."
+    },
+    {
+      "id": "P5_1844_1877_s3",
+      "unit_code": "P5_1844_1877",
+      "label": "Reconstruction outcomes",
+      "description": "Practice Reconstruction outcomes in Period 5: 1844–1877 with exam-style items and feedback."
+    },
+    {
+      "id": "P6_1865_1898_s1",
+      "unit_code": "P6_1865_1898",
+      "label": "Industrialization effects",
+      "description": "Practice Industrialization effects in Period 6: 1865–1898 with exam-style items and feedback."
+    },
+    {
+      "id": "P6_1865_1898_s2",
+      "unit_code": "P6_1865_1898",
+      "label": "Gilded Age politics",
+      "description": "Practice Gilded Age politics in Period 6: 1865–1898 with exam-style items and feedback."
+    },
+    {
+      "id": "P6_1865_1898_s3",
+      "unit_code": "P6_1865_1898",
+      "label": "Westward settlement conflicts",
+      "description": "Practice Westward settlement conflicts in Period 6: 1865–1898 with exam-style items and feedback."
+    },
+    {
+      "id": "P7_1890_1945_s1",
+      "unit_code": "P7_1890_1945",
+      "label": "Progressive reforms",
+      "description": "Practice Progressive reforms in Period 7: 1890–1945 with exam-style items and feedback."
+    },
+    {
+      "id": "P7_1890_1945_s2",
+      "unit_code": "P7_1890_1945",
+      "label": "Interwar economy",
+      "description": "Practice Interwar economy in Period 7: 1890–1945 with exam-style items and feedback."
+    },
+    {
+      "id": "P7_1890_1945_s3",
+      "unit_code": "P7_1890_1945",
+      "label": "WWII mobilization",
+      "description": "Practice WWII mobilization in Period 7: 1890–1945 with exam-style items and feedback."
+    },
+    {
+      "id": "P8_1945_1980_s1",
+      "unit_code": "P8_1945_1980",
+      "label": "Containment strategy",
+      "description": "Practice Containment strategy in Period 8: 1945–1980 with exam-style items and feedback."
+    },
+    {
+      "id": "P8_1945_1980_s2",
+      "unit_code": "P8_1945_1980",
+      "label": "Civil rights strategies",
+      "description": "Practice Civil rights strategies in Period 8: 1945–1980 with exam-style items and feedback."
+    },
+    {
+      "id": "P8_1945_1980_s3",
+      "unit_code": "P8_1945_1980",
+      "label": "1960s social movements",
+      "description": "Practice 1960s social movements in Period 8: 1945–1980 with exam-style items and feedback."
+    },
+    {
+      "id": "P9_1980_present_s1",
+      "unit_code": "P9_1980_present",
+      "label": "Reagan-era shifts",
+      "description": "Practice Reagan-era shifts in Period 9: 1980–Present with exam-style items and feedback."
+    },
+    {
+      "id": "P9_1980_present_s2",
+      "unit_code": "P9_1980_present",
+      "label": "Post-Cold War foreign policy",
+      "description": "Practice Post-Cold War foreign policy in Period 9: 1980–Present with exam-style items and feedback."
+    },
+    {
+      "id": "P9_1980_present_s3",
+      "unit_code": "P9_1980_present",
+      "label": "Immigration and tech change",
+      "description": "Practice Immigration and tech change in Period 9: 1980–Present with exam-style items and feedback."
+    }
+  ]
+}

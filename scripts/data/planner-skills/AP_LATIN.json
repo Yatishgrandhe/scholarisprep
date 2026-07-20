@@ -1,0 +1,177 @@
+{
+  "examType": "AP_LATIN",
+  "topics": [
+    "Vergil Aeneid Book 1",
+    "Vergil Aeneid Book 2",
+    "Vergil Aeneid Book 4",
+    "Vergil Aeneid Book 6",
+    "Caesar Gallic War Book 1",
+    "Caesar Gallic War Book 4",
+    "Caesar Gallic War Book 5–6 selections",
+    "Sight Reading and Context"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_vergil_aeneid_book_1",
+      "title": "Vergil Aeneid Book 1",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_epic_opening",
+        "U1_S2_storm",
+        "U1_S3_carthage",
+        "U1_S4_sight_translation_skills"
+      ],
+      "topics": [
+        "epic opening",
+        "storm",
+        "Carthage",
+        "sight translation skills"
+      ]
+    },
+    {
+      "unit_code": "U2_vergil_aeneid_book_2",
+      "title": "Vergil Aeneid Book 2",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_fall_of_troy",
+        "U2_S2_laoco_n",
+        "U2_S3_aeneas_narrative"
+      ],
+      "topics": [
+        "fall of Troy",
+        "Laocoön",
+        "Aeneas narrative"
+      ]
+    },
+    {
+      "unit_code": "U3_vergil_aeneid_book_4",
+      "title": "Vergil Aeneid Book 4",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_dido",
+        "U3_S2_pathos",
+        "U3_S3_divine_interference"
+      ],
+      "topics": [
+        "Dido",
+        "pathos",
+        "divine interference"
+      ]
+    },
+    {
+      "unit_code": "U4_vergil_aeneid_book_6",
+      "title": "Vergil Aeneid Book 6",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_underworld",
+        "U4_S2_prophecy",
+        "U4_S3_roman_destiny"
+      ],
+      "topics": [
+        "underworld",
+        "prophecy",
+        "Roman destiny"
+      ]
+    },
+    {
+      "unit_code": "U5_caesar_gallic_war_book_1",
+      "title": "Caesar Gallic War Book 1",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_helvetii",
+        "U5_S2_oratio_obliqua",
+        "U5_S3_campaign_narrative"
+      ],
+      "topics": [
+        "Helvetii",
+        "oratio obliqua",
+        "campaign narrative"
+      ]
+    },
+    {
+      "unit_code": "U6_caesar_gallic_war_book_4",
+      "title": "Caesar Gallic War Book 4",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_britain",
+        "U6_S2_bridge",
+        "U6_S3_ethnography"
+      ],
+      "topics": [
+        "Britain",
+        "bridge",
+        "ethnography"
+      ]
+    },
+    {
+      "unit_code": "U7_caesar_gallic_war_book_5_6_selections",
+      "title": "Caesar Gallic War Book 5–6 selections",
+      "sort_order": 7,
+      "skill_ids": [
+        "U7_S1_winter_camps",
+        "U7_S2_german_customs"
+      ],
+      "topics": [
+        "winter camps",
+        "German customs"
+      ]
+    },
+    {
+      "unit_code": "U8_sight_reading_and_context",
+      "title": "Sight Reading and Context",
+      "sort_order": 8,
+      "skill_ids": [
+        "U8_S1_unseen_prose_poetry",
+        "U8_S2_figures_of_speech",
+        "U8_S3_meter_basics"
+      ],
+      "topics": [
+        "unseen prose/poetry",
+        "figures of speech",
+        "meter basics"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_vergil_aeneid_book_1": [
+      "U1_S1_epic_opening",
+      "U1_S2_storm",
+      "U1_S3_carthage",
+      "U1_S4_sight_translation_skills"
+    ],
+    "U2_vergil_aeneid_book_2": [
+      "U2_S1_fall_of_troy",
+      "U2_S2_laoco_n",
+      "U2_S3_aeneas_narrative"
+    ],
+    "U3_vergil_aeneid_book_4": [
+      "U3_S1_dido",
+      "U3_S2_pathos",
+      "U3_S3_divine_interference"
+    ],
+    "U4_vergil_aeneid_book_6": [
+      "U4_S1_underworld",
+      "U4_S2_prophecy",
+      "U4_S3_roman_destiny"
+    ],
+    "U5_caesar_gallic_war_book_1": [
+      "U5_S1_helvetii",
+      "U5_S2_oratio_obliqua",
+      "U5_S3_campaign_narrative"
+    ],
+    "U6_caesar_gallic_war_book_4": [
+      "U6_S1_britain",
+      "U6_S2_bridge",
+      "U6_S3_ethnography"
+    ],
+    "U7_caesar_gallic_war_book_5_6_selections": [
+      "U7_S1_winter_camps",
+      "U7_S2_german_customs"
+    ],
+    "U8_sight_reading_and_context": [
+      "U8_S1_unseen_prose_poetry",
+      "U8_S2_figures_of_speech",
+      "U8_S3_meter_basics"
+    ]
+  }
+}

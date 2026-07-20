@@ -1,0 +1,148 @@
+/* Live Graph Spark chart — theme tokens inherit from hero / try sections. */
+
+.root {
+  --spark-x: var(--hero-cobalt, var(--try-cobalt, 221 83% 53%));
+  --spark-a: var(--hero-teal, var(--try-teal, 168 47% 42%));
+  --spark-grid: var(--hero-border, var(--try-border, 213 26% 86%));
+  --spark-axis: var(--hero-ink-faint, var(--try-ink-faint, 217 15% 55%));
+  --spark-zero: var(--hero-ink-soft, var(--try-ink-soft, 217 19% 38%));
+  --spark-surface: var(--hero-surface, var(--try-surface, 0 0% 100%));
+  --spark-ink: var(--hero-ink, var(--try-ink, 222 47% 11%));
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+:global(.dark) .root {
+  --spark-x: var(--hero-cobalt, var(--try-cobalt, 217 91% 65%));
+  --spark-a: var(--hero-teal, var(--try-teal, 168 45% 52%));
+  --spark-grid: var(--hero-border, var(--try-border, 217 28% 22%));
+  --spark-axis: var(--hero-ink-faint, var(--try-ink-faint, 215 12% 55%));
+  --spark-zero: var(--hero-ink-soft, var(--try-ink-soft, 215 18% 72%));
+  --spark-surface: var(--hero-surface, var(--try-surface, 220 36% 11%));
+  --spark-ink: var(--hero-ink, var(--try-ink, 210 40% 96%));
+}
+
+.rootTry {
+  gap: 6px;
+}
+
+.chart {
+  width: 100%;
+  min-height: var(--spark-chart-h, 168px);
+  border-radius: 10px;
+  border: 1px solid hsl(var(--spark-grid));
+  background:
+    linear-gradient(
+      180deg,
+      hsl(var(--spark-x) / 0.05) 0%,
+      hsl(var(--spark-surface)) 48%
+    );
+  padding: 2px 0 0;
+  overflow: hidden;
+}
+
+.rootTry .chart {
+  min-height: 148px;
+  border-radius: 12px;
+  padding: 4px 2px 0;
+}
+
+.chart :global(.recharts-cartesian-axis-tick-value) {
+  font-variant-numeric: tabular-nums;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 0 2px 2px;
+}
+
+.legX,
+.legA,
+.legOmega {
+  font-size: 10px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.legX {
+  color: hsl(var(--spark-x));
+}
+
+.legA {
+  color: hsl(var(--spark-a));
+}
+
+.legX::before,
+.legA::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 2.5px;
+  border-radius: 2px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background: currentColor;
+}
+
+.legOmega {
+  margin-left: auto;
+  color: hsl(var(--spark-axis));
+  font-weight: 650;
+}
+
+.rootTry .legX,
+.rootTry .legA,
+.rootTry .legOmega {
+  font-size: 11px;
+}
+
+.tooltip {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid hsl(var(--spark-grid));
+  background: hsl(var(--spark-surface));
+  box-shadow: 0 8px 22px hsl(222 47% 11% / 0.12);
+  min-width: 110px;
+}
+
+.tooltipLabel {
+  margin: 0 0 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: hsl(var(--spark-axis));
+  font-variant-numeric: tabular-nums;
+}
+
+.tooltipList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tooltipList li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tooltipList strong {
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--spark-ink));
+}
+
+@media (max-width: 640px) {
+  .legOmega {
+    margin-left: 0;
+  }
+}

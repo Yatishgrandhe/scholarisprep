@@ -1,0 +1,723 @@
+/* Centered, score-first hero with Bluebook mock */
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background: hsl(var(--background));
+  padding: 28px 20px 0;
+}
+
+/* ---------- Background layers ---------- */
+
+.aurora {
+  position: absolute;
+  top: -340px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 760px;
+  background:
+    radial-gradient(
+      42% 48% at 38% 38%,
+      hsl(var(--primary) / 0.16) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      38% 44% at 64% 32%,
+      hsl(var(--exam-sat) / 0.13) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      30% 36% at 52% 60%,
+      hsl(var(--primary) / 0.08) 0%,
+      transparent 70%
+    );
+  filter: blur(8px);
+  pointer-events: none;
+  animation: auroraDrift 14s ease-in-out infinite alternate;
+}
+
+@keyframes auroraDrift {
+  from {
+    transform: translateX(-54%) rotate(-2deg);
+  }
+  to {
+    transform: translateX(-46%) rotate(2deg);
+  }
+}
+
+.gridLines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(hsl(var(--border) / 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.55) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 0%,
+    black 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ---------- Layout ---------- */
+
+.inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1060px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 72px;
+}
+
+/* ---------- Announce pill ---------- */
+
+.announce {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 14px 6px 6px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 999px;
+  background: hsl(var(--card) / 0.8);
+  backdrop-filter: blur(8px);
+  font-size: 12.5px;
+  font-weight: 550;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+.announceTag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--exam-sat)) 130%
+  );
+  color: hsl(var(--primary-foreground));
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.announceArrow {
+  opacity: 0.55;
+}
+
+/* ---------- Headline ---------- */
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 7vw, 82px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: hsl(var(--foreground));
+  margin-bottom: 22px;
+  text-wrap: balance;
+}
+
+.headlineScore {
+  position: relative;
+  font-style: italic;
+  background: linear-gradient(
+    120deg,
+    hsl(var(--primary)) 20%,
+    hsl(var(--exam-sat)) 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: 0.06em;
+}
+
+.headlineScore::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  right: 4%;
+  bottom: 0.02em;
+  height: 0.085em;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--primary) / 0.85),
+    hsl(var(--exam-sat) / 0.85)
+  );
+  transform-origin: left center;
+  animation: underlineGrow 0.9s 0.5s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+@keyframes underlineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.subtitle {
+  font-size: clamp(15px, 1.9vw, 17.5px);
+  line-height: 1.75;
+  color: hsl(var(--muted-foreground));
+  max-width: 620px;
+  margin: 0 0 34px;
+  text-wrap: pretty;
+}
+
+/* ---------- CTAs ---------- */
+
+.ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.primaryCta {
+  height: 54px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--exam-sat)) 140%
+  );
+  color: hsl(var(--primary-foreground));
+  text-decoration: none;
+  box-shadow:
+    0 2px 12px hsl(var(--primary) / 0.3),
+    inset 0 1px 0 hsl(0 0% 100% / 0.18);
+  transition: transform 170ms ease, box-shadow 170ms ease, filter 170ms ease;
+}
+
+.primaryCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px hsl(var(--primary) / 0.4);
+  filter: brightness(1.05);
+  text-decoration: none;
+}
+
+.primaryCta:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.secondaryCta {
+  height: 54px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.7);
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease,
+    transform 160ms ease;
+}
+
+.secondaryCta:hover {
+  border-color: hsl(var(--primary) / 0.45);
+  background: hsl(var(--card));
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.playDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--primary) / 0.12);
+  color: hsl(var(--primary));
+}
+
+.trustLine {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 72px;
+}
+
+/* ---------- Bluebook mock ---------- */
+
+.mockStage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  perspective: 1400px;
+}
+
+.mockWrap {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  padding: 28px 20px;
+}
+
+.mockWindow {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow:
+    0 1px 2px hsl(var(--foreground) / 0.05),
+    0 30px 70px -24px hsl(var(--foreground) / 0.28),
+    0 0 0 8px hsl(var(--background) / 0.45);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  text-align: left;
+}
+
+.mockChrome {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.55);
+}
+
+.chromeDots {
+  display: inline-flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.chromeDots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: hsl(var(--border));
+}
+
+.chromeDots i:nth-child(1) {
+  background: #f5655b;
+}
+
+.chromeDots i:nth-child(2) {
+  background: #f6bd4f;
+}
+
+.chromeDots i:nth-child(3) {
+  background: #43c465;
+}
+
+.chromeTitle {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chromeTimer {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+  font-size: 11.5px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.mockBody {
+  display: grid;
+  gap: 22px;
+  padding: 28px 24px;
+}
+
+@media (min-width: 720px) {
+  .mockBody {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 32px;
+    padding: 32px 32px;
+  }
+}
+
+.mockQuestion {
+  min-width: 0;
+}
+
+.mockQBadgeRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.mockQBadge {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.mockQMark {
+  font-size: 11.5px;
+  font-weight: 550;
+  color: hsl(var(--muted-foreground));
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+
+.mockStem {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: hsl(var(--foreground));
+  margin: 0 0 14px;
+}
+
+.mockBlank {
+  display: inline-block;
+  min-width: 56px;
+  border-bottom: 2px solid hsl(var(--foreground) / 0.55);
+  transform: translateY(2px);
+}
+
+.mockPrompt {
+  font-size: 12.5px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: hsl(var(--foreground) / 0.85);
+  margin: 0;
+}
+
+.mockOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mockOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 10px;
+  background: hsl(var(--background));
+}
+
+.mockOptionLetter {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid hsl(var(--muted-foreground) / 0.5);
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+  color: hsl(var(--muted-foreground));
+}
+
+.mockOptionText {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+.mockOptionSelected {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.07);
+  box-shadow: 0 0 0 1px hsl(var(--primary));
+}
+
+.mockOptionSelected .mockOptionLetter {
+  background: hsl(var(--primary));
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.mockOptionEliminated {
+  opacity: 0.45;
+}
+
+.mockOptionEliminated .mockOptionText {
+  text-decoration: line-through;
+}
+
+.mockFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-top: 1px solid hsl(var(--border));
+  font-size: 12px;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted) / 0.35);
+}
+
+.mockNext {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ---------- Floating chips ---------- */
+
+.floatChip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px -14px hsl(var(--foreground) / 0.25);
+  white-space: nowrap;
+}
+
+.chipScore {
+  top: -22px;
+  left: -34px;
+  animation: floatA 6s ease-in-out infinite;
+}
+
+.chipScho {
+  bottom: -20px;
+  right: -38px;
+  animation: floatB 7s ease-in-out infinite;
+}
+
+@keyframes floatA {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes floatB {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.chipIcon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: hsl(142 70% 45% / 0.14);
+  color: hsl(142 70% 38%);
+}
+
+.chipIconScho {
+  background: hsl(var(--exam-sat) / 0.14);
+  color: hsl(var(--exam-sat));
+}
+
+.chipText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.chipText strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.chipText small {
+  font-size: 11px;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  max-width: 220px;
+  white-space: normal;
+}
+
+/* ---------- Stats row ---------- */
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 0;
+  margin-top: 80px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.stat {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 24px;
+}
+
+.stat + .stat {
+  border-left: 1px solid hsl(var(--border));
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 30px);
+  color: hsl(var(--foreground));
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ---------- Responsive & motion ---------- */
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 20px;
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .primaryCta,
+  .secondaryCta {
+    justify-content: center;
+  }
+
+  .mockWrap {
+    padding: 24px 8px;
+  }
+
+  .chipScore {
+    top: -8px;
+    left: 8px;
+  }
+
+  .chipScho {
+    bottom: -8px;
+    right: 8px;
+  }
+
+  .chipText small {
+    max-width: 150px;
+  }
+
+  .statsRow {
+    margin-top: 52px;
+  }
+
+  .stat {
+    min-width: 45%;
+  }
+
+  .stat:nth-child(odd) {
+    border-left: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora,
+  .chipScore,
+  .chipScho {
+    animation: none;
+  }
+
+  .headlineScore::after {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
+
+/* ---------- Dark mode tweaks ---------- */
+
+:global(.dark) .aurora {
+  background:
+    radial-gradient(
+      42% 48% at 38% 38%,
+      hsl(var(--primary) / 0.22) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      38% 44% at 64% 32%,
+      hsl(var(--exam-sat) / 0.18) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      30% 36% at 52% 60%,
+      hsl(var(--primary) / 0.1) 0%,
+      transparent 70%
+    );
+}
+
+:global(.dark) .mockWindow {
+  box-shadow:
+    0 1px 2px hsl(0 0% 0% / 0.3),
+    0 30px 70px -24px hsl(0 0% 0% / 0.6),
+    0 0 0 8px hsl(var(--background) / 0.45);
+}

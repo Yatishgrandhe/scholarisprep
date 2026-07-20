@@ -1,0 +1,679 @@
+{
+  "generated_at": "2026-06-13T11:25:16.377Z",
+  "mode": "apply",
+  "priority_count": 21,
+  "updated_count": 20,
+  "results": [
+    {
+      "external_id": "poetry-wic-easy-001",
+      "status": "no_patch",
+      "id": "914455a7-403a-4b22-ac1d-1b33d2b52301"
+    },
+    {
+      "id": "750aff3c-eddc-4e09-9d98-680807553845",
+      "external_id": "poetry-wic-medium-001",
+      "rw_subtype": "vocabulary_in_context",
+      "before": {
+        "word_lens": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "word_spread_pct": 0,
+        "char_spread_pct": 22.2
+      },
+      "after": {
+        "word_lens": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "word_spread_pct": 0,
+        "char_spread_pct": 22.2
+      },
+      "validation": {
+        "ok": false,
+        "reasons": [
+          "passage_word_count:49"
+        ],
+        "rwSubtype": "vocabulary_in_context",
+        "rwFormat": "passage_mc"
+      },
+      "pre_existing_passage_issue": true,
+      "status": "ok"
+    },
+    {
+      "id": "8e103cde-d682-4826-a108-22e242647f5d",
+      "external_id": "poetry-tsp-easy-001",
+      "rw_subtype": "structure",
+      "before": {
+        "word_lens": [
+          11,
+          12,
+          10,
+          9
+        ],
+        "word_spread_pct": 28.6,
+        "char_spread_pct": 21.5
+      },
+      "after": {
+        "word_lens": [
+          11,
+          12,
+          10,
+          9
+        ],
+        "word_spread_pct": 28.6,
+        "char_spread_pct": 21.5
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "structure",
+        "rwFormat": "passage_mc"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "4312fec0-5e16-4202-9fb0-576909516ff5",
+      "external_id": "poetry-tsp-medium-001",
+      "rw_subtype": "structure",
+      "before": {
+        "word_lens": [
+          17,
+          14,
+          13,
+          13
+        ],
+        "word_spread_pct": 28.1,
+        "char_spread_pct": 16.8
+      },
+      "after": {
+        "word_lens": [
+          17,
+          14,
+          13,
+          13
+        ],
+        "word_spread_pct": 28.1,
+        "char_spread_pct": 16.8
+      },
+      "validation": {
+        "ok": false,
+        "reasons": [
+          "passage_word_count:62"
+        ],
+        "rwSubtype": "structure",
+        "rwFormat": "passage_mc"
+      },
+      "pre_existing_passage_issue": true,
+      "status": "ok"
+    },
+    {
+      "id": "1da266a2-b100-4eaa-8142-e8278e6ece9f",
+      "external_id": "poetry-cid-easy-001",
+      "rw_subtype": "main_idea",
+      "before": {
+        "word_lens": [
+          11,
+          12,
+          11,
+          13
+        ],
+        "word_spread_pct": 17,
+        "char_spread_pct": 41.8
+      },
+      "after": {
+        "word_lens": [
+          11,
+          12,
+          11,
+          13
+        ],
+        "word_spread_pct": 17,
+        "char_spread_pct": 41.8
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "main_idea",
+        "rwFormat": "passage_mc"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "9ac54261-7e42-4261-813d-b649a5af7baf",
+      "external_id": "poetry-cid-medium-001",
+      "rw_subtype": "main_idea",
+      "before": {
+        "word_lens": [
+          11,
+          14,
+          12,
+          12
+        ],
+        "word_spread_pct": 24.5,
+        "char_spread_pct": 25
+      },
+      "after": {
+        "word_lens": [
+          11,
+          14,
+          12,
+          12
+        ],
+        "word_spread_pct": 24.5,
+        "char_spread_pct": 25
+      },
+      "validation": {
+        "ok": false,
+        "reasons": [
+          "passage_word_count:65"
+        ],
+        "rwSubtype": "main_idea",
+        "rwFormat": "passage_mc"
+      },
+      "pre_existing_passage_issue": true,
+      "status": "ok"
+    },
+    {
+      "id": "69f6cf95-62e6-4a4c-9443-24ecbece46c6",
+      "external_id": "syn-easy-001",
+      "rw_subtype": "notes_synthesis",
+      "before": {
+        "word_lens": [
+          28,
+          26,
+          30,
+          28
+        ],
+        "word_spread_pct": 14.3,
+        "char_spread_pct": 17.4
+      },
+      "after": {
+        "word_lens": [
+          28,
+          26,
+          30,
+          28
+        ],
+        "word_spread_pct": 14.3,
+        "char_spread_pct": 17.4
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "notes_synthesis",
+        "rwFormat": "bullet_notes"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "084bbc6e-33cf-42d8-8512-e1c045f7ae79",
+      "external_id": "syn-easy-002",
+      "rw_subtype": "notes_synthesis",
+      "before": {
+        "word_lens": [
+          23,
+          26,
+          24,
+          24
+        ],
+        "word_spread_pct": 12.4,
+        "char_spread_pct": 24.2
+      },
+      "after": {
+        "word_lens": [
+          23,
+          26,
+          24,
+          24
+        ],
+        "word_spread_pct": 12.4,
+        "char_spread_pct": 24.2
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "notes_synthesis",
+        "rwFormat": "bullet_notes"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "1a901e1e-f920-44f2-9909-c77132b720d4",
+      "external_id": "syn-medium-001",
+      "rw_subtype": "notes_synthesis",
+      "before": {
+        "word_lens": [
+          28,
+          24,
+          26,
+          24
+        ],
+        "word_spread_pct": 15.7,
+        "char_spread_pct": 14
+      },
+      "after": {
+        "word_lens": [
+          28,
+          24,
+          26,
+          24
+        ],
+        "word_spread_pct": 15.7,
+        "char_spread_pct": 14
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "notes_synthesis",
+        "rwFormat": "bullet_notes"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "d97c1e17-b267-4aa5-a09e-6956f92af504",
+      "external_id": "syn-medium-002",
+      "rw_subtype": "notes_synthesis",
+      "before": {
+        "word_lens": [
+          22,
+          25,
+          23,
+          24
+        ],
+        "word_spread_pct": 12.8,
+        "char_spread_pct": 23
+      },
+      "after": {
+        "word_lens": [
+          22,
+          25,
+          23,
+          24
+        ],
+        "word_spread_pct": 12.8,
+        "char_spread_pct": 23
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "notes_synthesis",
+        "rwFormat": "bullet_notes"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "61e3dec9-063c-448f-9414-30c589027b01",
+      "external_id": "syn-hard-001",
+      "rw_subtype": "notes_synthesis",
+      "before": {
+        "word_lens": [
+          33,
+          31,
+          25,
+          25
+        ],
+        "word_spread_pct": 28.1,
+        "char_spread_pct": 31.3
+      },
+      "after": {
+        "word_lens": [
+          33,
+          31,
+          25,
+          25
+        ],
+        "word_spread_pct": 28.1,
+        "char_spread_pct": 31.3
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "notes_synthesis",
+        "rwFormat": "bullet_notes"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "still_high_spread"
+    },
+    {
+      "id": "7723d326-83bf-47eb-91cd-6ceca00e0806",
+      "external_id": "syn-hard-002",
+      "rw_subtype": "notes_synthesis",
+      "before": {
+        "word_lens": [
+          32,
+          28,
+          28,
+          25
+        ],
+        "word_spread_pct": 24.8,
+        "char_spread_pct": 23.2
+      },
+      "after": {
+        "word_lens": [
+          32,
+          28,
+          28,
+          25
+        ],
+        "word_spread_pct": 24.8,
+        "char_spread_pct": 23.2
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "notes_synthesis",
+        "rwFormat": "bullet_notes"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "41e0177c-ce2a-4c55-a310-5fde4336ccda",
+      "external_id": "coe-quant-easy-001",
+      "rw_subtype": "quantitative_table",
+      "before": {
+        "word_lens": [
+          21,
+          24,
+          22,
+          22
+        ],
+        "word_spread_pct": 13.5,
+        "char_spread_pct": 12.6
+      },
+      "after": {
+        "word_lens": [
+          21,
+          24,
+          22,
+          22
+        ],
+        "word_spread_pct": 13.5,
+        "char_spread_pct": 12.6
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "quantitative_table",
+        "rwFormat": "table_chart"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "62c749d2-c178-4282-be6a-70db29f3a3f6",
+      "external_id": "coe-quant-easy-002",
+      "rw_subtype": "quantitative_table",
+      "before": {
+        "word_lens": [
+          25,
+          21,
+          25,
+          24
+        ],
+        "word_spread_pct": 16.8,
+        "char_spread_pct": 4.3
+      },
+      "after": {
+        "word_lens": [
+          25,
+          21,
+          25,
+          24
+        ],
+        "word_spread_pct": 16.8,
+        "char_spread_pct": 4.3
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "quantitative_table",
+        "rwFormat": "table_chart"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "e99cb520-25b7-4684-8b45-a18f3d62dad9",
+      "external_id": "coe-quant-easy-003",
+      "rw_subtype": "quantitative_table",
+      "before": {
+        "word_lens": [
+          20,
+          21,
+          22,
+          19
+        ],
+        "word_spread_pct": 14.6,
+        "char_spread_pct": 8.7
+      },
+      "after": {
+        "word_lens": [
+          20,
+          27,
+          26,
+          23
+        ],
+        "word_spread_pct": 29.2,
+        "char_spread_pct": 28.9
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "quantitative_table",
+        "rwFormat": "table_chart"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "22a2cf7e-0b15-4ec8-a6c3-8c7c3983078d",
+      "external_id": "coe-quant-medium-001",
+      "rw_subtype": "quantitative_table",
+      "before": {
+        "word_lens": [
+          23,
+          21,
+          22,
+          21
+        ],
+        "word_spread_pct": 9.2,
+        "char_spread_pct": 19.6
+      },
+      "after": {
+        "word_lens": [
+          23,
+          21,
+          22,
+          21
+        ],
+        "word_spread_pct": 9.2,
+        "char_spread_pct": 19.6
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "quantitative_table",
+        "rwFormat": "table_chart"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "612892fe-36ce-47a7-a5ac-6522ed608e85",
+      "external_id": "coe-quant-medium-002",
+      "rw_subtype": "quantitative_table",
+      "before": {
+        "word_lens": [
+          25,
+          21,
+          28,
+          27
+        ],
+        "word_spread_pct": 27.7,
+        "char_spread_pct": 13.3
+      },
+      "after": {
+        "word_lens": [
+          25,
+          21,
+          28,
+          27
+        ],
+        "word_spread_pct": 27.7,
+        "char_spread_pct": 13.3
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "quantitative_table",
+        "rwFormat": "table_chart"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "90e21404-4884-42e4-869d-42bd2593c117",
+      "external_id": "coe-quant-medium-003",
+      "rw_subtype": "quantitative_table",
+      "before": {
+        "word_lens": [
+          26,
+          23,
+          24,
+          21
+        ],
+        "word_spread_pct": 21.3,
+        "char_spread_pct": 32.4
+      },
+      "after": {
+        "word_lens": [
+          26,
+          23,
+          24,
+          21
+        ],
+        "word_spread_pct": 21.3,
+        "char_spread_pct": 32.4
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "quantitative_table",
+        "rwFormat": "table_chart"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "1594b3ff-43f8-4dac-a4cd-1458233de2ab",
+      "external_id": "coe-quant-hard-001",
+      "rw_subtype": "quantitative_table",
+      "before": {
+        "word_lens": [
+          29,
+          22,
+          22,
+          23
+        ],
+        "word_spread_pct": 29.2,
+        "char_spread_pct": 26.4
+      },
+      "after": {
+        "word_lens": [
+          29,
+          22,
+          22,
+          23
+        ],
+        "word_spread_pct": 29.2,
+        "char_spread_pct": 26.4
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "quantitative_table",
+        "rwFormat": "table_chart"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    },
+    {
+      "id": "ab2e6ca9-3dce-44e5-bf08-e12f030cfe8b",
+      "external_id": "coe-quant-hard-002",
+      "rw_subtype": "quantitative_table",
+      "before": {
+        "word_lens": [
+          35,
+          22,
+          20,
+          25
+        ],
+        "word_spread_pct": 58.8,
+        "char_spread_pct": 66
+      },
+      "after": {
+        "word_lens": [
+          35,
+          30,
+          24,
+          29
+        ],
+        "word_spread_pct": 37.3,
+        "char_spread_pct": 50
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "quantitative_table",
+        "rwFormat": "table_chart"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "still_high_spread"
+    },
+    {
+      "id": "76063638-8c15-4f36-a5c1-e44edf50375e",
+      "external_id": "coe-quant-hard-003",
+      "rw_subtype": "quantitative_table",
+      "before": {
+        "word_lens": [
+          20,
+          23,
+          19,
+          23
+        ],
+        "word_spread_pct": 18.8,
+        "char_spread_pct": 6.9
+      },
+      "after": {
+        "word_lens": [
+          20,
+          23,
+          19,
+          23
+        ],
+        "word_spread_pct": 18.8,
+        "char_spread_pct": 6.9
+      },
+      "validation": {
+        "ok": true,
+        "reasons": [],
+        "rwSubtype": "quantitative_table",
+        "rwFormat": "table_chart"
+      },
+      "pre_existing_passage_issue": false,
+      "status": "ok"
+    }
+  ]
+}

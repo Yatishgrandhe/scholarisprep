@@ -1,0 +1,9 @@
+/* Homepage layout helpers — colors/spacing from globals + marketing.css */
+.homePage {
+  background: hsl(var(--background));
+}
+
+.homePage .homeContainer {
+  width: min(1120px, 100% - 3rem);
+  margin-inline: auto;
+}

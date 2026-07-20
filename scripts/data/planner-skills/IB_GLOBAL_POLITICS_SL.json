@@ -1,0 +1,156 @@
+{
+  "examType": "IB_GLOBAL_POLITICS_SL",
+  "topics": [
+    "Power, sovereignty and international relations",
+    "Human rights",
+    "Development",
+    "Peace and conflict",
+    "Political issues case studies",
+    "Engagement activity skills",
+    "Essay & stimulus response technique"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_power_sovereignty_and_international_relations",
+      "title": "Power, sovereignty and international relations",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_human_rights",
+      "title": "Human rights",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_development",
+      "title": "Development",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_peace_and_conflict",
+      "title": "Peace and conflict",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_political_issues_case_studies",
+      "title": "Political issues case studies",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_engagement_activity_skills",
+      "title": "Engagement activity skills",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_essay_stimulus_response_technique",
+      "title": "Essay & stimulus response technique",
+      "sort_order": 7
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_GLOBAL_POLITICS_SL:U1_power_sovereignty_and_international_relations",
+      "unit_code": "U1_power_sovereignty_and_international_relations",
+      "title": "Power, sovereignty and international relations",
+      "topics": [
+        "types of power",
+        "legitimacy",
+        "IGOs",
+        "non-state actors"
+      ],
+      "recommended_hours": 7,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_GLOBAL_POLITICS_SL:U2_human_rights",
+      "unit_code": "U2_human_rights",
+      "title": "Human rights",
+      "topics": [
+        "codification",
+        "monitoring",
+        "protection",
+        "contested rights"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_GLOBAL_POLITICS_SL:U1_power_sovereignty_and_international_relations"
+      ]
+    },
+    {
+      "skill_id": "IB_GLOBAL_POLITICS_SL:U3_development",
+      "unit_code": "U3_development",
+      "title": "Development",
+      "topics": [
+        "models",
+        "factors",
+        "pathways",
+        "sustainable development"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_GLOBAL_POLITICS_SL:U2_human_rights"
+      ]
+    },
+    {
+      "skill_id": "IB_GLOBAL_POLITICS_SL:U4_peace_and_conflict",
+      "unit_code": "U4_peace_and_conflict",
+      "title": "Peace and conflict",
+      "topics": [
+        "causes",
+        "parties",
+        "resolution",
+        "post-conflict"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_GLOBAL_POLITICS_SL:U3_development"
+      ]
+    },
+    {
+      "skill_id": "IB_GLOBAL_POLITICS_SL:U5_political_issues_case_studies",
+      "unit_code": "U5_political_issues_case_studies",
+      "title": "Political issues case studies",
+      "topics": [
+        "case analysis method",
+        "stakeholders",
+        "outcomes"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_GLOBAL_POLITICS_SL:U4_peace_and_conflict"
+      ]
+    },
+    {
+      "skill_id": "IB_GLOBAL_POLITICS_SL:U6_engagement_activity_skills",
+      "unit_code": "U6_engagement_activity_skills",
+      "title": "Engagement activity skills",
+      "topics": [
+        "local\u2013global links",
+        "reflection",
+        "evidence"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_GLOBAL_POLITICS_SL:U5_political_issues_case_studies"
+      ]
+    },
+    {
+      "skill_id": "IB_GLOBAL_POLITICS_SL:U7_essay_stimulus_response_technique",
+      "unit_code": "U7_essay_stimulus_response_technique",
+      "title": "Essay & stimulus response technique",
+      "topics": [
+        "definitions",
+        "perspectives",
+        "evaluation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_GLOBAL_POLITICS_SL:U6_engagement_activity_skills"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

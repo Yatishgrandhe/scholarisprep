@@ -1,0 +1,129 @@
+{
+  "examType": "AP_ECONOMICS",
+  "topics": [
+    "Basic Economic Concepts",
+    "Supply and Demand",
+    "Production and Costs",
+    "Perfect Competition",
+    "Imperfect Competition",
+    "Factor Markets and Market Failure"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_basic_economic_concepts",
+      "title": "Basic Economic Concepts",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_scarcity",
+        "U1_S2_ppc",
+        "U1_S3_comparative_advantage"
+      ],
+      "topics": [
+        "scarcity",
+        "PPC",
+        "comparative advantage"
+      ]
+    },
+    {
+      "unit_code": "U2_supply_and_demand",
+      "title": "Supply and Demand",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_elasticity",
+        "U2_S2_markets",
+        "U2_S3_surplus"
+      ],
+      "topics": [
+        "elasticity",
+        "markets",
+        "surplus"
+      ]
+    },
+    {
+      "unit_code": "U3_production_and_costs",
+      "title": "Production and Costs",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_short_long_run",
+        "U3_S2_cost_curves"
+      ],
+      "topics": [
+        "short/long run",
+        "cost curves"
+      ]
+    },
+    {
+      "unit_code": "U4_perfect_competition",
+      "title": "Perfect Competition",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_profit_max",
+        "U4_S2_efficiency"
+      ],
+      "topics": [
+        "profit max",
+        "efficiency"
+      ]
+    },
+    {
+      "unit_code": "U5_imperfect_competition",
+      "title": "Imperfect Competition",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_monopoly",
+        "U5_S2_oligopoly",
+        "U5_S3_monopolistic"
+      ],
+      "topics": [
+        "monopoly",
+        "oligopoly",
+        "monopolistic"
+      ]
+    },
+    {
+      "unit_code": "U6_factor_markets_and_market_failure",
+      "title": "Factor Markets and Market Failure",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_labor_markets",
+        "U6_S2_externalities",
+        "U6_S3_public_goods"
+      ],
+      "topics": [
+        "labor markets",
+        "externalities",
+        "public goods"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_basic_economic_concepts": [
+      "U1_S1_scarcity",
+      "U1_S2_ppc",
+      "U1_S3_comparative_advantage"
+    ],
+    "U2_supply_and_demand": [
+      "U2_S1_elasticity",
+      "U2_S2_markets",
+      "U2_S3_surplus"
+    ],
+    "U3_production_and_costs": [
+      "U3_S1_short_long_run",
+      "U3_S2_cost_curves"
+    ],
+    "U4_perfect_competition": [
+      "U4_S1_profit_max",
+      "U4_S2_efficiency"
+    ],
+    "U5_imperfect_competition": [
+      "U5_S1_monopoly",
+      "U5_S2_oligopoly",
+      "U5_S3_monopolistic"
+    ],
+    "U6_factor_markets_and_market_failure": [
+      "U6_S1_labor_markets",
+      "U6_S2_externalities",
+      "U6_S3_public_goods"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('53435f7d-7ce0-4216-ad05-8810e489e42f', 'Which choice completes the text with the most logical transition?', 'The young inventor designed a water filter from cheap, locally available materials. She hoped it could help villages without access to clean wells. ______ she tested it carefully before sharing the design with the community.', NULL, '[{"id":"A","text":"Therefore,","is_correct":true,"explanation":"Correct: because the filter was meant to help real villages, she logically tested it first to be sure it worked."},{"id":"B","text":"However,","is_correct":false,"explanation":"Incorrect: testing it does not contrast with her goal; it follows sensibly from it."},{"id":"C","text":"For example,","is_correct":false,"explanation":"Incorrect: the testing is not an example of her hope to help villages."},{"id":"D","text":"In contrast,","is_correct":false,"explanation":"Incorrect: ''In contrast'' signals opposition, but careful testing aligns with her purpose."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+She hoped the filter {{yellow:could help villages without access to clean wells}}, so testing it carefully is a logical follow-through on that goal.
+Step 2 — Choose the transition
+Because the careful testing results from her wish to truly help people, a cause-effect transition like ''Therefore'' fits.
+Distractor analysis:
+- B: ''However'' implies a contrast, but testing supports rather than opposes her goal.
+- C: ''For example'' wrongly frames the testing as an instance of her hope.
+- D: ''In contrast'' signals opposition that the supportive action does not create.', 'Does she test the filter because she wants it to genuinely help villages?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

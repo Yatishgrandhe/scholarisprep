@@ -1,0 +1,609 @@
+/* ---- Layout ---------------------------------------------------------- */
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.courseScope {
+  margin: 0;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.courseScope strong {
+  color: hsl(var(--foreground));
+  font-weight: 650;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Flat panel ------------------------------------------------------- */
+.panel {
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  padding: var(--space-5);
+  min-width: 0;
+}
+
+.cardHead {
+  margin-bottom: var(--space-4);
+}
+
+.cardTitle {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.cardSub {
+  margin: var(--space-1) 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.empty {
+  font-size: 0.9375rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  padding: var(--space-4) 0;
+}
+
+/* ---- Stat strip (reuses analytics-stats classes, streak tone) -------- */
+.valueStreak {
+  color: hsl(var(--exam-jamb));
+}
+
+/* ---- Activity trend -------------------------------------------------- */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+  margin: 0 0 var(--space-4);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.legendIconGood {
+  color: hsl(var(--score-positive));
+}
+
+.legendIconBad {
+  color: hsl(var(--destructive));
+}
+
+.legendNum {
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+.legendWord {
+  font-size: 0.9375rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ---- Weak topics ----------------------------------------------------- */
+.weakHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.weakTitle {
+  font-family: var(--font-body);
+  font-size: 1.375rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: hsl(var(--foreground));
+  margin: 0;
+  max-width: 36ch;
+}
+
+.pill {
+  flex-shrink: 0;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.pill:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.weakList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.weakRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+}
+
+.weakRow + .weakRow {
+  border-top: 1px solid hsl(var(--border));
+}
+
+.weakIndex {
+  font-size: 1.375rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--muted-foreground) / 0.5);
+  min-width: 34px;
+}
+
+.weakInfo {
+  min-width: 0;
+}
+
+.weakMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+}
+
+.tagNeedsWork {
+  color: hsl(var(--destructive));
+  font-weight: 700;
+}
+
+.tagGettingThere {
+  color: hsl(var(--exam-jamb));
+  font-weight: 700;
+}
+
+.metaSep {
+  color: hsl(var(--muted-foreground) / 0.6);
+}
+
+.weakTopic {
+  margin: 2px 0 0;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.weakSide {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+.ringWrap {
+  position: relative;
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.ringTrack {
+  stroke: hsl(var(--border));
+}
+
+.ringValue {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+.ringUnit {
+  font-size: 0.625rem;
+  font-weight: 600;
+  margin-left: 1px;
+  color: hsl(var(--muted-foreground));
+}
+
+.rowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.rowLink:hover {
+  color: hsl(var(--foreground));
+}
+
+@media (max-width: 560px) {
+  .weakRow {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .weakSide {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+}
+
+/* ---- Accuracy by topic (slider) ------------------------------------- */
+.thresholds {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: 0 0 var(--space-5);
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.threshItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.threshDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.accList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.accRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px auto;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.accLabel {
+  min-width: 0;
+}
+
+.accName {
+  font-size: 0.9375rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.accAttempts {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: 2px;
+}
+
+.accTrack {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--destructive)) 0 58%,
+    hsl(var(--exam-jamb)) 58% 84%,
+    hsl(var(--score-positive)) 84% 100%
+  );
+}
+
+.accKnob {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid hsl(var(--card));
+  box-shadow: 0 0 0 1px hsl(var(--border));
+  transform: translate(-50%, -50%);
+}
+
+.accPct {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  justify-self: end;
+}
+
+.accPctNum {
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+.accPctUnit {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+@media (max-width: 520px) {
+  .accRow {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .accTrack {
+    grid-column: 1 / -1;
+    order: 3;
+  }
+}
+
+/* ---- Time share by difficulty --------------------------------------- */
+.timeWrap {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.donut {
+  position: relative;
+  width: 168px;
+  height: 168px;
+}
+
+.donutCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.donutValue {
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+.donutLabel {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.timeList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.timeRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.timeDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.timeName {
+  font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+}
+
+.timeRight {
+  text-align: right;
+}
+
+.timeBig {
+  font-size: 1.375rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+  line-height: 1.1;
+}
+
+.timeAvg {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 560px) {
+  .timeWrap {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .timeList {
+    width: 100%;
+  }
+}
+
+/* ---- Practice activity heatmap -------------------------------------- */
+.heatHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.heatActive {
+  margin: var(--space-1) 0 0;
+  font-size: 0.9375rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.heatActiveDay {
+  color: hsl(var(--cobalt));
+  font-weight: 650;
+}
+
+.heatTotal {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.heatTotalNum {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+.heatTotalWord {
+  font-size: 0.9375rem;
+  color: hsl(var(--muted-foreground));
+  margin-left: 6px;
+}
+
+.months {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+}
+
+.month {
+  min-width: 0;
+}
+
+.monthName {
+  font-size: 0.8125rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+  margin: 0 0 6px;
+}
+
+.dowRow {
+  display: grid;
+  grid-template-columns: repeat(7, 14px);
+  gap: 3px;
+  margin-bottom: 4px;
+}
+
+.dow {
+  font-size: 0.5625rem;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+}
+
+.dowMon {
+  color: hsl(var(--cobalt));
+}
+
+.monthGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 14px);
+  grid-auto-rows: 14px;
+  gap: 3px;
+}
+
+.day {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: hsl(var(--muted) / 0.5);
+}
+
+.dayEmpty {
+  background: transparent;
+}
+
+.day[data-level="1"] {
+  background: hsl(214 95% 85%);
+}
+.day[data-level="2"] {
+  background: hsl(214 90% 68%);
+}
+.day[data-level="3"] {
+  background: hsl(217 91% 55%);
+}
+.day[data-level="4"] {
+  background: hsl(221 83% 40%);
+}
+
+.heatLegend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: var(--space-5);
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.heatLegendCell {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+}
+
+/* ---- Loading --------------------------------------------------------- */
+.loading {
+  font-size: 0.9375rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  padding: var(--space-4) 0;
+}

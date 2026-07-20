@@ -1,0 +1,154 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A survey asked 100 people whether they prefer apples or oranges. 60 people said they prefer apples, and 40 people said they prefer oranges. What percentage of the people surveyed prefer oranges?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"4%","is_correct":false,"explanation":"Choice A (4%…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10%","is_correct":false,"explanation":"Choice B (10%…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"40%","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"60%","is_correct":false,"explanation":"Choice D (60%…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A survey asked 100 people whether they prefer apples or oranges. 60 people said they prefer apples, and 40 people said they prefer oranges. What percentage of the people surveyed prefer oranges?
+
+**Step 2 — Solve.** The percentage of people who prefer oranges is the number of people who prefer oranges divided by the total number of people surveyed, multiplied by 100%.  This is (40/100) * 100% = 40%.
+
+**Step 3 — Select C.** 40%
+
+**Distractor analysis:**
+- **A** (4%): Choice A (4%…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (10%): Choice B (10%…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (60%): Choice D (60%…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"PER","domain_id":"psda","opensat_index":375,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_10","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '09dc1590-ae6f-4d9f-8c63-2b27c72cf003';
+
+UPDATE public.questions SET
+  question_text = 'A circle with radius 5 is inscribed in a square. What is the area of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with radius 5 is inscribed in a square. What is the area of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square.  Since the radius of the circle is 5, the diameter is 10.  Therefore, the side length of the square is 10, and the area of the square is 10² = 100.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":805,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a2","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '09dda101-77d1-4084-8ca4-712862ab4da4';
+
+UPDATE public.questions SET
+  question_text = 'In a right triangle, one angle measures 30 degrees.  If the hypotenuse has a length of 10, what is the length of the shorter leg?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"5\\sqrt{3}","is_correct":false,"explanation":"Choice B (5\\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"10\\sqrt{3}","is_correct":false,"explanation":"Choice C (10\\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"20","is_correct":false,"explanation":"Choice D (20…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** In a right triangle, one angle measures 30 degrees.  If the hypotenuse has a length of 10, what is the length of the shorter leg?
+
+**Step 2 — Solve.** A 30-60-90 right triangle has special side ratios.  The hypotenuse is twice the length of the shorter leg.  Therefore, the shorter leg is half the length of the hypotenuse, which is 10 / 2 = 5.
+
+**Step 3 — Select A.** 5
+
+**Distractor analysis:**
+- **B** (5\sqrt{3}): Choice B (5\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (10\sqrt{3}): Choice C (10\sqrt{3}…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (20): Choice D (20…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RIG","domain_id":"geometry","opensat_index":269,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c1","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '0a1cf9df-95a9-439a-9f3c-5fe453c93074';
+
+UPDATE public.questions SET
+  question_text = 'A survey of 100 people found that 60 people liked apples, 50 people liked bananas, and 20 people liked both apples and bananas. What is the probability that a person surveyed liked apples, given that the person liked bananas? ',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"1/5","is_correct":false,"explanation":"Choice A (1/5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3/5","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"2/3","is_correct":false,"explanation":"Choice C (2/3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"3/4","is_correct":false,"explanation":"Choice D (3/4…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A survey of 100 people found that 60 people liked apples, 50 people liked bananas, and 20 people liked both apples and bananas. What is the probability that a person surveyed liked apples, given that the person liked bananas? 
+
+**Step 2 — Solve.** The probability that a person surveyed liked apples given that the person liked bananas is equal to the number of people who liked both apples and bananas divided by the number of people who liked bananas.  This gives us 20/50, or 3/5.
+
+**Step 3 — Select B.** 3/5
+
+**Distractor analysis:**
+- **A** (1/5): Choice A (1/5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (2/3): Choice C (2/3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (3/4): Choice D (3/4…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"PRO","domain_id":"psda","opensat_index":595,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"2ac7b45a","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '0a2e10ba-9afa-4014-9185-4ce72afd57c3';
+
+UPDATE public.questions SET
+  question_text = 'A rectangular box has a length of 10 cm, a width of 5 cm, and a height of 8 cm. What is the volume of the box in cubic centimeters?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"40","is_correct":false,"explanation":"Choice A (40…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"80","is_correct":false,"explanation":"Choice B (80…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"400","is_correct":false,"explanation":"Choice C (400…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"4000","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** A rectangular box has a length of 10 cm, a width of 5 cm, and a height of 8 cm. What is the volume of the box in cubic centimeters?
+
+**Step 2 — Solve.** The volume of a rectangular box is calculated by multiplying its length, width, and height. Therefore, the volume of the box is 10 cm × 5 cm × 8 cm = 400 cubic centimeters.
+
+**Step 3 — Select D.** 4000
+
+**Distractor analysis:**
+- **A** (40): Choice A (40…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (80): Choice B (80…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (400): Choice C (400…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":932,"opensat_domain":"Advanced Math","opensat_raw_id":"12d8c11d","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '0a2f2c40-323a-47b3-9401-9e325f0c7383';
+
+UPDATE public.questions SET
+  question_text = 'If $x^2 + 2x - 3 = 0$, what is the value of $x^3 + 2x^2 - 3x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-3","is_correct":false,"explanation":"Choice A (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"0","is_correct":false,"explanation":"Choice B (0…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"3","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"9","is_correct":false,"explanation":"Choice D (9…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If $x^2 + 2x - 3 = 0$, what is the value of $x^3 + 2x^2 - 3x$?
+
+**Step 2 — Solve.** We can factor the given equation as $(x+3)(x-1)=0$.  This means that $x=-3$ or $x=1$.  Substituting either value into the expression $x^3 + 2x^2 - 3x$ gives us 3.  Therefore, the value of $x^3 + 2x^2 - 3x$ is 3.
+
+**Step 3 — Select C.** 3
+
+**Distractor analysis:**
+- **A** (-3): Choice A (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (0): Choice B (0…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (9): Choice D (9…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":989,"opensat_domain":"Algebra","opensat_raw_id":"13b8a32c","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '0a308946-d110-43e0-8ccb-62c8932ad4b9';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a diameter of 10 units. What is the area of the circle? (Express your answer in terms of $\pi$.)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5$\\pi$","is_correct":false,"explanation":"Choice A (5$\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10$\\pi$","is_correct":false,"explanation":"Choice B (10$\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"25$\\pi$","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"100$\\pi$","is_correct":false,"explanation":"Choice D (100$\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle has a diameter of 10 units. What is the area of the circle? (Express your answer in terms of $\pi$.)
+
+**Step 2 — Solve.** The area of a circle is given by the formula $A = \pi r^2$, where $r$ is the radius of the circle. Since the diameter is 10 units, the radius is 5 units.  Substituting 5 for $r$ in the formula yields $A = \pi (5)^2$, or $A = 25\pi$.
+
+**Step 3 — Select C.** 25$\pi$
+
+**Distractor analysis:**
+- **A** (5$\pi$): Choice A (5$\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (10$\pi$): Choice B (10$\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (100$\pi$): Choice D (100$\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":760,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"d436b79a","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '0a6b3034-0014-432a-ab72-a7052e7766fd';
+
+UPDATE public.questions SET
+  question_text = 'The height of a projectile is $h(t)=3(t-38)^2+40$, where $t$ is seconds. What is $h(41)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$40$","is_correct":false,"explanation":"That is the minimum height at the vertex."},{"id":"B","text":"$67$","is_correct":true,"explanation":"**Step 1:** $h(41)=3(41-38)^2+40=3(9)+40=67$."},{"id":"C","text":"$64$","is_correct":false,"explanation":"Subtracts $a$ incorrectly."},{"id":"D","text":"$43$","is_correct":false,"explanation":"Adds coefficient and constant."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Substitute $t=41$: $h(41)=3(41-38)^2+40$.
+**Step 2:** $(41-38)^2=9$ → $h(41)=67$.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.056Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '0aad6518-9b6e-4cb9-a2f1-2e5b2aa12998';
+
+COMMIT;

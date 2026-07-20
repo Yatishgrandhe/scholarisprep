@@ -1,0 +1,175 @@
+.hero {
+  position: relative;
+  padding-top: clamp(80px, 11vw, 128px);
+  padding-bottom: clamp(56px, 7vw, 88px);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      55% 85% at 50% 0%,
+      var(--accent-light, hsl(var(--primary) / 0.1)) 0%,
+      transparent 75%
+    ),
+    hsl(var(--background));
+  border-bottom: 1px solid hsl(var(--border) / 0.6);
+}
+
+/* Faint grid backdrop, masked to fade toward the edges — matches the homepage
+   hero language so every marketing page shares the same texture. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(hsl(var(--foreground) / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(115% 80% at 50% 0%, black 35%, transparent 75%);
+  -webkit-mask-image: radial-gradient(115% 80% at 50% 0%, black 35%, transparent 75%);
+}
+
+.hero.default {
+  --accent: hsl(var(--primary));
+  --accent-light: hsl(var(--primary) / 0.1);
+}
+
+.hero.sat {
+  --accent: var(--sat-color);
+  --accent-light: #ede9fe;
+}
+
+.hero.act {
+  --accent: var(--act-color);
+  --accent-light: #fce7f3;
+}
+
+.hero.jamb {
+  --accent: var(--jamb-color);
+  --accent-light: #fef3c7;
+}
+
+:global(.dark) .hero.sat {
+  --accent-light: hsl(var(--exam-sat) / 0.18);
+}
+
+:global(.dark) .hero.act {
+  --accent-light: hsl(var(--exam-act) / 0.18);
+}
+
+:global(.dark) .hero.jamb {
+  --accent-light: hsl(var(--exam-jamb) / 0.18);
+}
+
+.heroDecorClip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heroDecor {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  color: var(--accent);
+}
+
+.heroShape {
+  width: 100%;
+  height: 100%;
+}
+
+.heroInner {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--accent-light, hsl(var(--primary) / 0.1));
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: var(--space-5);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-5);
+  color: hsl(var(--foreground));
+  text-wrap: balance;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.0625rem, 1.6vw, 1.1875rem);
+  color: hsl(var(--muted-foreground));
+  margin-bottom: var(--space-8);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.heroCta {
+  min-width: 10.5rem;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  background: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  opacity: 1 !important;
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  overflow: visible;
+  width: 100%;
+}
+
+.sectionAlt {
+  background: hsl(var(--muted) / 0.4);
+  border-top: 1px solid hsl(var(--border));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+.sectionInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.sectionTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 32px;
+  color: hsl(var(--foreground));
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  width: 100%;
+}

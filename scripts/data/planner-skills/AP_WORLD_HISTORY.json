@@ -1,0 +1,167 @@
+{
+  "exam_type": "AP_WORLD_HISTORY",
+  "skills": [
+    {
+      "id": "U1_global_tapestry_s1",
+      "unit_code": "U1_global_tapestry",
+      "label": "Compare state systems",
+      "description": "Practice Compare state systems in The Global Tapestry (c.1200–1450) with exam-style items and feedback."
+    },
+    {
+      "id": "U1_global_tapestry_s2",
+      "unit_code": "U1_global_tapestry",
+      "label": "Belief system continuity",
+      "description": "Practice Belief system continuity in The Global Tapestry (c.1200–1450) with exam-style items and feedback."
+    },
+    {
+      "id": "U1_global_tapestry_s3",
+      "unit_code": "U1_global_tapestry",
+      "label": "Regional political structures",
+      "description": "Practice Regional political structures in The Global Tapestry (c.1200–1450) with exam-style items and feedback."
+    },
+    {
+      "id": "U2_networks_exchange_s1",
+      "unit_code": "U2_networks_exchange",
+      "label": "Trade network comparison",
+      "description": "Practice Trade network comparison in Networks of Exchange (c.1200–1450) with exam-style items and feedback."
+    },
+    {
+      "id": "U2_networks_exchange_s2",
+      "unit_code": "U2_networks_exchange",
+      "label": "Technology diffusion",
+      "description": "Practice Technology diffusion in Networks of Exchange (c.1200–1450) with exam-style items and feedback."
+    },
+    {
+      "id": "U2_networks_exchange_s3",
+      "unit_code": "U2_networks_exchange",
+      "label": "Mongol connectivity effects",
+      "description": "Practice Mongol connectivity effects in Networks of Exchange (c.1200–1450) with exam-style items and feedback."
+    },
+    {
+      "id": "U3_land_empires_s1",
+      "unit_code": "U3_land_empires",
+      "label": "Imperial governance tools",
+      "description": "Practice Imperial governance tools in Land-Based Empires (c.1450–1750) with exam-style items and feedback."
+    },
+    {
+      "id": "U3_land_empires_s2",
+      "unit_code": "U3_land_empires",
+      "label": "Gunpowder empire parallels",
+      "description": "Practice Gunpowder empire parallels in Land-Based Empires (c.1450–1750) with exam-style items and feedback."
+    },
+    {
+      "id": "U3_land_empires_s3",
+      "unit_code": "U3_land_empires",
+      "label": "Religious policy contrasts",
+      "description": "Practice Religious policy contrasts in Land-Based Empires (c.1450–1750) with exam-style items and feedback."
+    },
+    {
+      "id": "U4_transoceanic_s1",
+      "unit_code": "U4_transoceanic",
+      "label": "Maritime empire motives",
+      "description": "Practice Maritime empire motives in Transoceanic Interconnections (c.1450–1750) with exam-style items and feedback."
+    },
+    {
+      "id": "U4_transoceanic_s2",
+      "unit_code": "U4_transoceanic",
+      "label": "Columbian Exchange impacts",
+      "description": "Practice Columbian Exchange impacts in Transoceanic Interconnections (c.1450–1750) with exam-style items and feedback."
+    },
+    {
+      "id": "U4_transoceanic_s3",
+      "unit_code": "U4_transoceanic",
+      "label": "Atlantic labor systems",
+      "description": "Practice Atlantic labor systems in Transoceanic Interconnections (c.1450–1750) with exam-style items and feedback."
+    },
+    {
+      "id": "U5_revolutions_s1",
+      "unit_code": "U5_revolutions",
+      "label": "Revolutionary causation",
+      "description": "Practice Revolutionary causation in Revolutions (c.1750–1900) with exam-style items and feedback."
+    },
+    {
+      "id": "U5_revolutions_s2",
+      "unit_code": "U5_revolutions",
+      "label": "Industrial change factors",
+      "description": "Practice Industrial change factors in Revolutions (c.1750–1900) with exam-style items and feedback."
+    },
+    {
+      "id": "U5_revolutions_s3",
+      "unit_code": "U5_revolutions",
+      "label": "Nationalism forms",
+      "description": "Practice Nationalism forms in Revolutions (c.1750–1900) with exam-style items and feedback."
+    },
+    {
+      "id": "U6_industrial_consequences_s1",
+      "unit_code": "U6_industrial_consequences",
+      "label": "Imperial motives and methods",
+      "description": "Practice Imperial motives and methods in Consequences of Industrialization (c.1750–1900) with exam-style items and feedback."
+    },
+    {
+      "id": "U6_industrial_consequences_s2",
+      "unit_code": "U6_industrial_consequences",
+      "label": "Economic dependency patterns",
+      "description": "Practice Economic dependency patterns in Consequences of Industrialization (c.1750–1900) with exam-style items and feedback."
+    },
+    {
+      "id": "U6_industrial_consequences_s3",
+      "unit_code": "U6_industrial_consequences",
+      "label": "Migration push-pull",
+      "description": "Practice Migration push-pull in Consequences of Industrialization (c.1750–1900) with exam-style items and feedback."
+    },
+    {
+      "id": "U7_global_conflict_s1",
+      "unit_code": "U7_global_conflict",
+      "label": "WW causation chains",
+      "description": "Practice WW causation chains in Global Conflict (c.1900–present) with exam-style items and feedback."
+    },
+    {
+      "id": "U7_global_conflict_s2",
+      "unit_code": "U7_global_conflict",
+      "label": "Total war features",
+      "description": "Practice Total war features in Global Conflict (c.1900–present) with exam-style items and feedback."
+    },
+    {
+      "id": "U7_global_conflict_s3",
+      "unit_code": "U7_global_conflict",
+      "label": "Atrocity historical context",
+      "description": "Practice Atrocity historical context in Global Conflict (c.1900–present) with exam-style items and feedback."
+    },
+    {
+      "id": "U8_cold_war_decolon_s1",
+      "unit_code": "U8_cold_war_decolon",
+      "label": "Bipolar competition",
+      "description": "Practice Bipolar competition in Cold War and Decolonization (c.1900–present) with exam-style items and feedback."
+    },
+    {
+      "id": "U8_cold_war_decolon_s2",
+      "unit_code": "U8_cold_war_decolon",
+      "label": "Decolonization strategies",
+      "description": "Practice Decolonization strategies in Cold War and Decolonization (c.1900–present) with exam-style items and feedback."
+    },
+    {
+      "id": "U8_cold_war_decolon_s3",
+      "unit_code": "U8_cold_war_decolon",
+      "label": "Nonalignment",
+      "description": "Practice Nonalignment in Cold War and Decolonization (c.1900–present) with exam-style items and feedback."
+    },
+    {
+      "id": "U9_globalization_s1",
+      "unit_code": "U9_globalization",
+      "label": "Global economic institutions",
+      "description": "Practice Global economic institutions in Globalization (c.1900–present) with exam-style items and feedback."
+    },
+    {
+      "id": "U9_globalization_s2",
+      "unit_code": "U9_globalization",
+      "label": "Environmental challenges",
+      "description": "Practice Environmental challenges in Globalization (c.1900–present) with exam-style items and feedback."
+    },
+    {
+      "id": "U9_globalization_s3",
+      "unit_code": "U9_globalization",
+      "label": "Cultural exchange vs backlash",
+      "description": "Practice Cultural exchange vs backlash in Globalization (c.1900–present) with exam-style items and feedback."
+    }
+  ]
+}

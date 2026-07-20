@@ -1,0 +1,140 @@
+{
+  "exam_type": "AP_COMPUTER_SCIENCE",
+  "display_name": "AP Computer Science A (legacy alias)",
+  "family": "AP",
+  "units": [
+    {
+      "unit_code": "U1_primitive_types_and_objects",
+      "unit_name": "Primitive Types and Objects",
+      "topics": [
+        "types",
+        "constructors",
+        "references"
+      ]
+    },
+    {
+      "unit_code": "U2_boolean_expressions_and_control",
+      "unit_name": "Boolean Expressions and Control",
+      "topics": [
+        "if",
+        "loops",
+        "De Morgan"
+      ]
+    },
+    {
+      "unit_code": "U3_iteration_and_arrays",
+      "unit_name": "Iteration and Arrays",
+      "topics": [
+        "1D arrays",
+        "traversals",
+        "algorithms"
+      ]
+    },
+    {
+      "unit_code": "U4_arraylist_and_2d_arrays",
+      "unit_name": "ArrayList and 2D Arrays",
+      "topics": [
+        "ArrayList",
+        "2D",
+        "nested loops"
+      ]
+    },
+    {
+      "unit_code": "U5_classes_and_inheritance",
+      "unit_name": "Classes and Inheritance",
+      "topics": [
+        "encapsulation",
+        "inheritance",
+        "polymorphism"
+      ]
+    },
+    {
+      "unit_code": "U6_recursion",
+      "unit_name": "Recursion",
+      "topics": [
+        "base case",
+        "recursive algorithms"
+      ]
+    },
+    {
+      "unit_code": "U7_searching_sorting_and_ethics",
+      "unit_name": "Searching, Sorting, and Ethics",
+      "topics": [
+        "binary search",
+        "sorts",
+        "impact of computing"
+      ]
+    }
+  ],
+  "command_terms": [
+    "trace",
+    "write",
+    "complete",
+    "determine output",
+    "identify error"
+  ],
+  "misconceptions": [
+    "Off-by-one in loops/arrays",
+    "Confusing object references with primitives",
+    "Ignoring inheritance dispatch"
+  ],
+  "paper_rules": [
+    "Java subset; free-response requires working code segments",
+    "Comment intent when helpful"
+  ],
+  "calculator": {
+    "policy": "none",
+    "notes": "No calculator",
+    "section_rules": [
+      {
+        "section": "all",
+        "calculator_allowed": false
+      }
+    ],
+    "per_question_default": false,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "No Desmos block; calculator not used.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "AP CED-aligned item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Match AP task model for the unit"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": {
+    "title": "Java subset quick reference",
+    "sections": [
+      "Primitive vs reference",
+      "Array/ArrayList idioms",
+      "Inheritance dispatch",
+      "Common loop patterns"
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "exam_type": "AP_CHEMISTRY",
+  "display_name": "AP Chemistry",
+  "command_terms": [
+    "calculate",
+    "describe",
+    "determine",
+    "draw",
+    "explain",
+    "identify",
+    "justify",
+    "predict"
+  ],
+  "misconceptions": [
+    "Confusing K with rate",
+    "Treating ΔG° and ΔG as interchangeable",
+    "Misassigning oxidation numbers in redox",
+    "Ignoring limiting reactant in stoichiometry",
+    "Assuming stronger IMF always means higher boiling point without structure check",
+    "Buffer calculations without ICE or Henderson setup"
+  ],
+  "paper_rules": [
+    "Show work with units; box final numerical answers",
+    "Particulate diagrams must match stoichiometry and states",
+    "Use equation sheet symbols consistently",
+    "FRQ multi-part: answers often build — keep earlier results available"
+  ],
+  "calculator_policy": {
+    "default": "scientific",
+    "sections": [
+      {
+        "key": "mcq",
+        "calculator": "scientific",
+        "note": "Scientific calculator per exam rules"
+      },
+      {
+        "key": "frq",
+        "calculator": "scientific",
+        "note": "Scientific calculator; show setups"
+      }
+    ],
+    "notes": "Scientific calculator allowed per exam rules. Emphasize dimensional analysis and significant reasoning over button-mashing."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_atomic_structure",
+      "unit_name": "Atomic Structure and Properties",
+      "unit_order": 1,
+      "weight_hint": 0.08,
+      "quota": 40,
+      "topics": [
+        "Moles and mass spectrometry",
+        "Electron configuration",
+        "Photoelectron spectroscopy cues",
+        "Periodic trends"
+      ]
+    },
+    {
+      "unit_code": "U2_compound_structure",
+      "unit_name": "Molecular and Ionic Compound Structure and Properties",
+      "unit_order": 2,
+      "weight_hint": 0.08,
+      "quota": 40,
+      "topics": [
+        "Bond types",
+        "Lewis structures and VSEPR",
+        "Lattice energy cues"
+      ]
+    },
+    {
+      "unit_code": "U3_imf_properties",
+      "unit_name": "Intermolecular Forces and Properties",
+      "unit_order": 3,
+      "weight_hint": 0.2,
+      "quota": 100,
+      "topics": [
+        "IMFs and properties",
+        "Ideal gas and deviations",
+        "Solutions and spectroscopy",
+        "Kinetic molecular theory"
+      ]
+    },
+    {
+      "unit_code": "U4_chemical_reactions",
+      "unit_name": "Chemical Reactions",
+      "unit_order": 4,
+      "weight_hint": 0.09,
+      "quota": 45,
+      "topics": [
+        "Net ionic equations",
+        "Stoichiometry",
+        "Titrations and redox intro"
+      ]
+    },
+    {
+      "unit_code": "U5_kinetics",
+      "unit_name": "Kinetics",
+      "unit_order": 5,
+      "weight_hint": 0.09,
+      "quota": 45,
+      "topics": [
+        "Rate laws",
+        "Mechanisms and catalysts",
+        "Collision theory and energy profiles"
+      ]
+    },
+    {
+      "unit_code": "U6_thermodynamics",
+      "unit_name": "Thermodynamics",
+      "unit_order": 6,
+      "weight_hint": 0.09,
+      "quota": 45,
+      "topics": [
+        "Enthalpy and calorimetry",
+        "Bond enthalpies",
+        "Heat transfer"
+      ]
+    },
+    {
+      "unit_code": "U7_equilibrium",
+      "unit_name": "Equilibrium",
+      "unit_order": 7,
+      "weight_hint": 0.09,
+      "quota": 45,
+      "topics": [
+        "K and Q",
+        "Le Châtelier",
+        "Solubility equilibrium"
+      ]
+    },
+    {
+      "unit_code": "U8_acids_bases",
+      "unit_name": "Acids and Bases",
+      "unit_order": 8,
+      "weight_hint": 0.14,
+      "quota": 70,
+      "topics": [
+        "pH and Ka/Kb",
+        "Buffers and titrations",
+        "Acid–base molecular view"
+      ]
+    },
+    {
+      "unit_code": "U9_applications_thermo",
+      "unit_name": "Applications of Thermodynamics",
+      "unit_order": 9,
+      "weight_hint": 0.14,
+      "quota": 70,
+      "topics": [
+        "Entropy and Gibbs free energy",
+        "Electrochemistry",
+        "Coupled processes"
+      ]
+    }
+  ]
+}

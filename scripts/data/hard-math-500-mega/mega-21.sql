@@ -1,0 +1,235 @@
+BEGIN;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('c5ddb747-3dc2-4f4d-9478-d38836104ac4', 'How many tasks did the first worker complete?', 'Two workers split tasks in ratio $6:7$ over 54 hours at 5 tasks/hour combined.', NULL, '[{"id":"A","text":"$1615$","is_correct":false,"explanation":"Underestimates A''s share of the total."},{"id":"B","text":"$1618$","is_correct":false,"explanation":"Close but ratio arithmetic is off."},{"id":"C","text":"$1620$","is_correct":true,"explanation":"Correct (C). **Step 1:** Total $=5×54×(6+7)=3510$. **Step 2:** A''s share $\\frac{6}{13}×3510=1620$."},{"id":"D","text":"$3510$","is_correct":false,"explanation":"That is the combined total, not worker A''s count."}]'::jsonb, 'C', '**Step 1:** Combined output $=5×54×(6+7)=3510$ tasks.
+**Step 2:** A''s fraction $\frac{6}{13}$.
+**Step 3:** $\frac{6}{13}×3510=1620$ tasks.
+
+**Distractor analysis:**
+- **A** ($1615$): Underestimates A''s share of the total.
+- **B** ($1618$): Close but ratio arithmetic is off.
+- **D** ($3510$): That is the combined total, not worker A''s count.', NULL, 'Problem-Solving and Data Analysis', 'Ratios, rates, and proportions', 'math', 'psda', 'RAT', 'RAT', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"RAT","insert_index":70}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('8bff56cd-e702-491c-99e3-7f6c0163b4ad', 'How many tasks did the first worker complete?', 'Two workers split tasks in ratio $7:8$ over 55 hours at 3 tasks/hour combined.', NULL, '[{"id":"A","text":"$1150$","is_correct":false,"explanation":"Underestimates A''s share of the total."},{"id":"B","text":"$1153$","is_correct":false,"explanation":"Close but ratio arithmetic is off."},{"id":"C","text":"$1155$","is_correct":true,"explanation":"Correct (C). **Step 1:** Total $=3×55×(7+8)=2475$. **Step 2:** A''s share $\\frac{7}{15}×2475=1155$."},{"id":"D","text":"$2475$","is_correct":false,"explanation":"That is the combined total, not worker A''s count."}]'::jsonb, 'C', '**Step 1:** Combined output $=3×55×(7+8)=2475$ tasks.
+**Step 2:** A''s fraction $\frac{7}{15}$.
+**Step 3:** $\frac{7}{15}×2475=1155$ tasks.
+
+**Distractor analysis:**
+- **A** ($1150$): Underestimates A''s share of the total.
+- **B** ($1153$): Close but ratio arithmetic is off.
+- **D** ($2475$): That is the combined total, not worker A''s count.', NULL, 'Problem-Solving and Data Analysis', 'Ratios, rates, and proportions', 'math', 'psda', 'RAT', 'RAT', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"RAT","insert_index":71}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('8fac39ba-8525-4404-bebf-b00945bb2a0b', 'If the original price is $900$, what is the final price after both changes?', 'A price is marked up 25%, then discounted 20% on the new price.', NULL, '[{"id":"A","text":"$900$","is_correct":true,"explanation":"Correct (A). **Step 1:** $900×1.25=1125$. **Step 2:** $1125×0.8=900$."},{"id":"B","text":"$900$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$1125$","is_correct":false,"explanation":"Choice C ($1125$…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"D","text":"$945$","is_correct":false,"explanation":"Subtracting percentages directly is invalid for sequential changes."}]'::jsonb, 'A', '**Step 1:** Markup: $900×(1+25/100)=1125$.
+**Step 2:** Discount on new price: $1125×(1-20/100)=900$.
+**Step 3:** Do not net the percents — order matters.
+
+**Distractor analysis:**
+- **B** ($900$): Ignores both percent changes.
+- **C** ($1125$): Choice C ($1125$…) reflects a common misread or arithmetic slip — re-check each operation.
+- **D** ($945$): Subtracting percentages directly is invalid for sequential changes.', NULL, 'Problem-Solving and Data Analysis', 'Percentages', 'math', 'psda', 'PER', 'PER', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"PER","insert_index":72}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('caf49600-70ce-4623-a5b2-8e10a24d4ad4', 'If the original price is $915$, what is the final price after both changes?', 'A price is marked up 30%, then discounted 25% on the new price.', NULL, '[{"id":"A","text":"$893$","is_correct":true,"explanation":"Correct (A). **Step 1:** $915×1.3=1190$. **Step 2:** $1190×0.75=893$."},{"id":"B","text":"$915$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$1190$","is_correct":false,"explanation":"Choice C ($1190$…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"D","text":"$961$","is_correct":false,"explanation":"Subtracting percentages directly is invalid for sequential changes."}]'::jsonb, 'A', '**Step 1:** Markup: $915×(1+30/100)=1190$.
+**Step 2:** Discount on new price: $1190×(1-25/100)=893$.
+**Step 3:** Do not net the percents — order matters.
+
+**Distractor analysis:**
+- **B** ($915$): Ignores both percent changes.
+- **C** ($1190$): Choice C ($1190$…) reflects a common misread or arithmetic slip — re-check each operation.
+- **D** ($961$): Subtracting percentages directly is invalid for sequential changes.', NULL, 'Problem-Solving and Data Analysis', 'Percentages', 'math', 'psda', 'PER', 'PER', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"PER","insert_index":73}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('a48a7c6c-0c9a-42a7-99de-b4b51d674c6c', 'If the original price is $930$, what is the final price after both changes?', 'A price is marked up 35%, then discounted 15% on the new price.', NULL, '[{"id":"A","text":"$1068$","is_correct":true,"explanation":"Correct (A). **Step 1:** $930×1.35=1256$. **Step 2:** $1256×0.85=1068$."},{"id":"B","text":"$930$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$1256$","is_correct":false,"explanation":"Choice C ($1256$…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"D","text":"$1116$","is_correct":false,"explanation":"Subtracting percentages directly is invalid for sequential changes."}]'::jsonb, 'A', '**Step 1:** Markup: $930×(1+35/100)=1256$.
+**Step 2:** Discount on new price: $1256×(1-15/100)=1068$.
+**Step 3:** Do not net the percents — order matters.
+
+**Distractor analysis:**
+- **B** ($930$): Ignores both percent changes.
+- **C** ($1256$): Choice C ($1256$…) reflects a common misread or arithmetic slip — re-check each operation.
+- **D** ($1116$): Subtracting percentages directly is invalid for sequential changes.', NULL, 'Problem-Solving and Data Analysis', 'Percentages', 'math', 'psda', 'PER', 'PER', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"PER","insert_index":74}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('b2f761a7-0aca-4396-b63b-021f57478d9d', 'If the original price is $945$, what is the final price after both changes?', 'A price is marked up 40%, then discounted 20% on the new price.', NULL, '[{"id":"A","text":"$1058$","is_correct":true,"explanation":"Correct (A). **Step 1:** $945×1.4=1323$. **Step 2:** $1323×0.8=1058$."},{"id":"B","text":"$945$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$1323$","is_correct":false,"explanation":"Choice C ($1323$…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"D","text":"$1134$","is_correct":false,"explanation":"Subtracting percentages directly is invalid for sequential changes."}]'::jsonb, 'A', '**Step 1:** Markup: $945×(1+40/100)=1323$.
+**Step 2:** Discount on new price: $1323×(1-20/100)=1058$.
+**Step 3:** Do not net the percents — order matters.
+
+**Distractor analysis:**
+- **B** ($945$): Ignores both percent changes.
+- **C** ($1323$): Choice C ($1323$…) reflects a common misread or arithmetic slip — re-check each operation.
+- **D** ($1134$): Subtracting percentages directly is invalid for sequential changes.', NULL, 'Problem-Solving and Data Analysis', 'Percentages', 'math', 'psda', 'PER', 'PER', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"PER","insert_index":75}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('957ff73a-31da-461f-ac70-92eca66de6ad', 'If the original price is $960$, what is the final price after both changes?', 'A price is marked up 25%, then discounted 25% on the new price.', NULL, '[{"id":"A","text":"$900$","is_correct":true,"explanation":"Correct (A). **Step 1:** $960×1.25=1200$. **Step 2:** $1200×0.75=900$."},{"id":"B","text":"$960$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$1200$","is_correct":false,"explanation":"Choice C ($1200$…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"D","text":"$960$","is_correct":false,"explanation":"Subtracting percentages directly is invalid for sequential changes."}]'::jsonb, 'A', '**Step 1:** Markup: $960×(1+25/100)=1200$.
+**Step 2:** Discount on new price: $1200×(1-25/100)=900$.
+**Step 3:** Do not net the percents — order matters.
+
+**Distractor analysis:**
+- **B** ($960$): Ignores both percent changes.
+- **C** ($1200$): Choice C ($1200$…) reflects a common misread or arithmetic slip — re-check each operation.
+- **D** ($960$): Subtracting percentages directly is invalid for sequential changes.', NULL, 'Problem-Solving and Data Analysis', 'Percentages', 'math', 'psda', 'PER', 'PER', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"PER","insert_index":76}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('fd403134-5636-41a3-839f-0d9c7dafa9f3', 'If the original price is $975$, what is the final price after both changes?', 'A price is marked up 30%, then discounted 15% on the new price.', NULL, '[{"id":"A","text":"$1078$","is_correct":true,"explanation":"Correct (A). **Step 1:** $975×1.3=1268$. **Step 2:** $1268×0.85=1078$."},{"id":"B","text":"$975$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$1268$","is_correct":false,"explanation":"Choice C ($1268$…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"D","text":"$1121$","is_correct":false,"explanation":"Subtracting percentages directly is invalid for sequential changes."}]'::jsonb, 'A', '**Step 1:** Markup: $975×(1+30/100)=1268$.
+**Step 2:** Discount on new price: $1268×(1-15/100)=1078$.
+**Step 3:** Do not net the percents — order matters.
+
+**Distractor analysis:**
+- **B** ($975$): Ignores both percent changes.
+- **C** ($1268$): Choice C ($1268$…) reflects a common misread or arithmetic slip — re-check each operation.
+- **D** ($1121$): Subtracting percentages directly is invalid for sequential changes.', NULL, 'Problem-Solving and Data Analysis', 'Percentages', 'math', 'psda', 'PER', 'PER', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"PER","insert_index":77}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('1fe7c4d8-e6bd-4631-a67f-b52386321eb9', 'If the original price is $990$, what is the final price after both changes?', 'A price is marked up 35%, then discounted 20% on the new price.', NULL, '[{"id":"A","text":"$1070$","is_correct":true,"explanation":"Correct (A). **Step 1:** $990×1.35=1337$. **Step 2:** $1337×0.8=1070$."},{"id":"B","text":"$990$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$1337$","is_correct":false,"explanation":"Choice C ($1337$…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"D","text":"$1139$","is_correct":false,"explanation":"Subtracting percentages directly is invalid for sequential changes."}]'::jsonb, 'A', '**Step 1:** Markup: $990×(1+35/100)=1337$.
+**Step 2:** Discount on new price: $1337×(1-20/100)=1070$.
+**Step 3:** Do not net the percents — order matters.
+
+**Distractor analysis:**
+- **B** ($990$): Ignores both percent changes.
+- **C** ($1337$): Choice C ($1337$…) reflects a common misread or arithmetic slip — re-check each operation.
+- **D** ($1139$): Subtracting percentages directly is invalid for sequential changes.', NULL, 'Problem-Solving and Data Analysis', 'Percentages', 'math', 'psda', 'PER', 'PER', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"PER","insert_index":78}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('96a64a77-955e-4aed-99e3-4af0b6316669', 'If the original price is $1005$, what is the final price after both changes?', 'A price is marked up 40%, then discounted 25% on the new price.', NULL, '[{"id":"A","text":"$1055$","is_correct":true,"explanation":"Correct (A). **Step 1:** $1005×1.4=1407$. **Step 2:** $1407×0.75=1055$."},{"id":"B","text":"$1005$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$1407$","is_correct":false,"explanation":"Choice C ($1407$…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"D","text":"$1156$","is_correct":false,"explanation":"Subtracting percentages directly is invalid for sequential changes."}]'::jsonb, 'A', '**Step 1:** Markup: $1005×(1+40/100)=1407$.
+**Step 2:** Discount on new price: $1407×(1-25/100)=1055$.
+**Step 3:** Do not net the percents — order matters.
+
+**Distractor analysis:**
+- **B** ($1005$): Ignores both percent changes.
+- **C** ($1407$): Choice C ($1407$…) reflects a common misread or arithmetic slip — re-check each operation.
+- **D** ($1156$): Subtracting percentages directly is invalid for sequential changes.', NULL, 'Problem-Solving and Data Analysis', 'Percentages', 'math', 'psda', 'PER', 'PER', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"PER","insert_index":79}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('db9d1d32-1057-44ac-be11-5eb4f1d0b825', 'What is the missing score $x$?', 'Five test scores: 7, 11, 15, 19, and one score $x$ is unknown. The mean is 11.2.', NULL, '[{"id":"A","text":"$1$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$4$","is_correct":true,"explanation":"Correct (B). **Step 1:** Sum needed $=11.2×5=56$. **Step 2:** $x=4$."},{"id":"C","text":"$7$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$11$","is_correct":false,"explanation":"Confuses mean with the missing value."}]'::jsonb, 'B', '**Step 1:** Total sum $=11.2×5=56$.
+**Step 2:** Known sum $=52$.
+**Step 3:** $x=56-52=4$.
+**Step 4:** Verify mean.
+
+**Distractor analysis:**
+- **A** ($1$): Pulls the mean down too far.
+- **C** ($7$): Too high for the given mean.
+- **D** ($11$): Confuses mean with the missing value.', NULL, 'Problem-Solving and Data Analysis', 'One-variable data', 'math', 'psda', 'OIA', 'OIA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"OIA","insert_index":80}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('7c031c78-c1a1-4017-8310-a6678bc3e8e6', 'What is the missing score $x$?', 'Five test scores: 8, 12, 16, 20, and one score $x$ is unknown. The mean is 12.2.', NULL, '[{"id":"A","text":"$2$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$5$","is_correct":true,"explanation":"Correct (B). **Step 1:** Sum needed $=12.2×5=61$. **Step 2:** $x=5$."},{"id":"C","text":"$8$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$12$","is_correct":false,"explanation":"Confuses mean with the missing value."}]'::jsonb, 'B', '**Step 1:** Total sum $=12.2×5=61$.
+**Step 2:** Known sum $=56$.
+**Step 3:** $x=61-56=5$.
+**Step 4:** Verify mean.
+
+**Distractor analysis:**
+- **A** ($2$): Pulls the mean down too far.
+- **C** ($8$): Too high for the given mean.
+- **D** ($12$): Confuses mean with the missing value.', NULL, 'Problem-Solving and Data Analysis', 'One-variable data', 'math', 'psda', 'OIA', 'OIA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"OIA","insert_index":81}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('1e20ebcf-026c-47b9-b635-92c1b992d70e', 'What is the missing score $x$?', 'Five test scores: 9, 13, 17, 21, and one score $x$ is unknown. The mean is 13.2.', NULL, '[{"id":"A","text":"$3$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$6$","is_correct":true,"explanation":"Correct (B). **Step 1:** Sum needed $=13.2×5=66$. **Step 2:** $x=6$."},{"id":"C","text":"$9$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$13$","is_correct":false,"explanation":"Confuses mean with the missing value."}]'::jsonb, 'B', '**Step 1:** Total sum $=13.2×5=66$.
+**Step 2:** Known sum $=60$.
+**Step 3:** $x=66-60=6$.
+**Step 4:** Verify mean.
+
+**Distractor analysis:**
+- **A** ($3$): Pulls the mean down too far.
+- **C** ($9$): Too high for the given mean.
+- **D** ($13$): Confuses mean with the missing value.', NULL, 'Problem-Solving and Data Analysis', 'One-variable data', 'math', 'psda', 'OIA', 'OIA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"OIA","insert_index":82}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('c1b1d5ed-d21c-4e91-8055-c62b9f2e6bc3', 'What is the missing score $x$?', 'Five test scores: 10, 14, 18, 22, and one score $x$ is unknown. The mean is 14.2.', NULL, '[{"id":"A","text":"$4$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$7$","is_correct":true,"explanation":"Correct (B). **Step 1:** Sum needed $=14.2×5=71$. **Step 2:** $x=7$."},{"id":"C","text":"$10$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$14$","is_correct":false,"explanation":"Confuses mean with the missing value."}]'::jsonb, 'B', '**Step 1:** Total sum $=14.2×5=71$.
+**Step 2:** Known sum $=64$.
+**Step 3:** $x=71-64=7$.
+**Step 4:** Verify mean.
+
+**Distractor analysis:**
+- **A** ($4$): Pulls the mean down too far.
+- **C** ($10$): Too high for the given mean.
+- **D** ($14$): Confuses mean with the missing value.', NULL, 'Problem-Solving and Data Analysis', 'One-variable data', 'math', 'psda', 'OIA', 'OIA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"OIA","insert_index":83}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('76c83138-c662-41a4-a7d2-74f83e2d1010', 'What is the missing score $x$?', 'Five test scores: 11, 15, 19, 23, and one score $x$ is unknown. The mean is 15.2.', NULL, '[{"id":"A","text":"$5$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$8$","is_correct":true,"explanation":"Correct (B). **Step 1:** Sum needed $=15.2×5=76$. **Step 2:** $x=8$."},{"id":"C","text":"$11$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$15$","is_correct":false,"explanation":"Confuses mean with the missing value."}]'::jsonb, 'B', '**Step 1:** Total sum $=15.2×5=76$.
+**Step 2:** Known sum $=68$.
+**Step 3:** $x=76-68=8$.
+**Step 4:** Verify mean.
+
+**Distractor analysis:**
+- **A** ($5$): Pulls the mean down too far.
+- **C** ($11$): Too high for the given mean.
+- **D** ($15$): Confuses mean with the missing value.', NULL, 'Problem-Solving and Data Analysis', 'One-variable data', 'math', 'psda', 'OIA', 'OIA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"OIA","insert_index":84}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('d62a6df9-ac91-483c-87ce-2768a353b4fe', 'What is the missing score $x$?', 'Five test scores: 12, 16, 20, 24, and one score $x$ is unknown. The mean is 16.2.', NULL, '[{"id":"A","text":"$6$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$9$","is_correct":true,"explanation":"Correct (B). **Step 1:** Sum needed $=16.2×5=81$. **Step 2:** $x=9$."},{"id":"C","text":"$12$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$16$","is_correct":false,"explanation":"Confuses mean with the missing value."}]'::jsonb, 'B', '**Step 1:** Total sum $=16.2×5=81$.
+**Step 2:** Known sum $=72$.
+**Step 3:** $x=81-72=9$.
+**Step 4:** Verify mean.
+
+**Distractor analysis:**
+- **A** ($6$): Pulls the mean down too far.
+- **C** ($12$): Too high for the given mean.
+- **D** ($16$): Confuses mean with the missing value.', NULL, 'Problem-Solving and Data Analysis', 'One-variable data', 'math', 'psda', 'OIA', 'OIA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"OIA","insert_index":85}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('0da02dce-eeea-4f84-96c6-f30ec79abe89', 'What is the missing score $x$?', 'Five test scores: 13, 17, 21, 25, and one score $x$ is unknown. The mean is 17.2.', NULL, '[{"id":"A","text":"$7$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$10$","is_correct":true,"explanation":"Correct (B). **Step 1:** Sum needed $=17.2×5=86$. **Step 2:** $x=10$."},{"id":"C","text":"$13$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$17$","is_correct":false,"explanation":"Confuses mean with the missing value."}]'::jsonb, 'B', '**Step 1:** Total sum $=17.2×5=86$.
+**Step 2:** Known sum $=76$.
+**Step 3:** $x=86-76=10$.
+**Step 4:** Verify mean.
+
+**Distractor analysis:**
+- **A** ($7$): Pulls the mean down too far.
+- **C** ($13$): Too high for the given mean.
+- **D** ($17$): Confuses mean with the missing value.', NULL, 'Problem-Solving and Data Analysis', 'One-variable data', 'math', 'psda', 'OIA', 'OIA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"OIA","insert_index":86}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('e4dd7fda-970b-4560-9feb-cac63dc2ff9b', 'What is the missing score $x$?', 'Five test scores: 14, 18, 22, 26, and one score $x$ is unknown. The mean is 18.2.', NULL, '[{"id":"A","text":"$8$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$11$","is_correct":true,"explanation":"Correct (B). **Step 1:** Sum needed $=18.2×5=91$. **Step 2:** $x=11$."},{"id":"C","text":"$14$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$18$","is_correct":false,"explanation":"Confuses mean with the missing value."}]'::jsonb, 'B', '**Step 1:** Total sum $=18.2×5=91$.
+**Step 2:** Known sum $=80$.
+**Step 3:** $x=91-80=11$.
+**Step 4:** Verify mean.
+
+**Distractor analysis:**
+- **A** ($8$): Pulls the mean down too far.
+- **C** ($14$): Too high for the given mean.
+- **D** ($18$): Confuses mean with the missing value.', NULL, 'Problem-Solving and Data Analysis', 'One-variable data', 'math', 'psda', 'OIA', 'OIA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"OIA","insert_index":87}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('1534fbc7-b796-4cbd-a2bf-fe027068c398', 'Which equation models the line, and what does the slope represent?', 'A line models cost vs. units, passing through $(11,42)$ and $(19,74)$.', NULL, '[{"id":"A","text":"$y=4x-2$; cost increases $4$ per unit","is_correct":true,"explanation":"Correct (A). **Step 1:** Slope $=\\frac{74-42}{19-11}=4$. **Step 2:** $y=4x-2$."},{"id":"B","text":"$y=3x+-2$; cost decreases per unit","is_correct":false,"explanation":"Choice B ($y=3x+-2$; cost decreases per unit…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"C","text":"$y=74$; fixed total cost","is_correct":false,"explanation":"That is a single point''s $y$-value, not the line."},{"id":"D","text":"$y=\\frac{74}{19}x$; average cost per unit from origin","is_correct":false,"explanation":"Slope from origin is not the line''s slope."}]'::jsonb, 'A', '**Step 1:** Slope $=\frac{32}{8}=4$.
+**Step 2:** $y=4x-2$.
+**Step 3:** Slope $4$ = dollars per additional unit.
+**Step 4:** Check both points.
+
+**Distractor analysis:**
+- **B** ($y=3x+-2$; cost decreases per unit): Choice B ($y=3x+-2$; cost decreases per unit…) reflects a common misread or arithmetic slip — re-check each operation.
+- **C** ($y=74$; fixed total cost): That is a single point''s $y$-value, not the line.
+- **D** ($y=\frac{74}{19}x$; average cost per unit from origin): Slope from origin is not the line''s slope.', NULL, 'Problem-Solving and Data Analysis', 'Two-variable data', 'math', 'psda', 'TVA', 'TVA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"TVA","insert_index":88}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('7962b051-6881-4ebc-84d4-686bbc262ef3', 'Which equation models the line, and what does the slope represent?', 'A line models cost vs. units, passing through $(12,46)$ and $(20,78)$.', NULL, '[{"id":"A","text":"$y=4x-2$; cost increases $4$ per unit","is_correct":true,"explanation":"Correct (A). **Step 1:** Slope $=\\frac{78-46}{20-12}=4$. **Step 2:** $y=4x-2$."},{"id":"B","text":"$y=3x+-2$; cost decreases per unit","is_correct":false,"explanation":"Choice B ($y=3x+-2$; cost decreases per unit…) reflects a common misread or arithmetic slip — re-check each operation."},{"id":"C","text":"$y=78$; fixed total cost","is_correct":false,"explanation":"That is a single point''s $y$-value, not the line."},{"id":"D","text":"$y=\\frac{78}{20}x$; average cost per unit from origin","is_correct":false,"explanation":"Slope from origin is not the line''s slope."}]'::jsonb, 'A', '**Step 1:** Slope $=\frac{32}{8}=4$.
+**Step 2:** $y=4x-2$.
+**Step 3:** Slope $4$ = dollars per additional unit.
+**Step 4:** Check both points.
+
+**Distractor analysis:**
+- **B** ($y=3x+-2$; cost decreases per unit): Choice B ($y=3x+-2$; cost decreases per unit…) reflects a common misread or arithmetic slip — re-check each operation.
+- **C** ($y=78$; fixed total cost): That is a single point''s $y$-value, not the line.
+- **D** ($y=\frac{78}{20}x$; average cost per unit from origin): Slope from origin is not the line''s slope.', NULL, 'Problem-Solving and Data Analysis', 'Two-variable data', 'math', 'psda', 'TVA', 'TVA', 'hard'::public.difficulty, true, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"hard_content_v2":true,"explanation_v2":true,"generator":"generate-hard-math.mjs","hard_content_version":"hard_content_v2","hard_content_at":"2026-06-12T20:29:24.627Z","skill":"TVA","insert_index":89}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;
+
+COMMIT;

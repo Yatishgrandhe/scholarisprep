@@ -1,0 +1,513 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  max-height: 100dvh;
+  overflow: hidden;
+  background: #fff;
+  color: #1f2937;
+  font-family: var(--font-body);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.topLeft,
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.topRight {
+  justify-content: flex-end;
+}
+
+.topCenter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.goBackBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: #374151;
+  flex-shrink: 0;
+}
+
+.goBackBtn:hover {
+  background: #f3f4f6;
+}
+
+.goBackLabel {
+  white-space: nowrap;
+}
+
+.passageBtnShort {
+  display: none;
+}
+
+.passageBtnFull {
+  display: inline;
+  white-space: nowrap;
+}
+
+.directionsWrap {
+  position: relative;
+}
+
+.directionsBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: #374151;
+}
+
+.directionsBtn:hover {
+  background: #f9fafb;
+}
+
+.directionsMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 40;
+  width: min(360px, 80vw);
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #4b5563;
+}
+
+.directionsMenu p {
+  margin: 0;
+}
+
+.timer {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1rem;
+  min-width: 3.5rem;
+  text-align: center;
+  color: #111827;
+}
+
+.timerHidden {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: #9ca3af;
+}
+
+.iconBtn,
+.textBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: #6b7280;
+}
+
+.iconBtn:hover,
+.textBtn:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.textBtnActive {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* Tool-button label — collapses to an icon-only button when the top bar is tight
+   so Calculator/Reference never overflow into the centered timer. */
+.btnLabel {
+  white-space: nowrap;
+}
+
+.highlightBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #dbeafe;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: #1d4ed8;
+}
+
+.highlightBtn:hover {
+  background: #bfdbfe;
+}
+
+.highlightBtnActive {
+  background: #2563eb;
+  color: #fff;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 4px;
+}
+
+.stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #374151;
+  font-variant-numeric: tabular-nums;
+}
+
+.statFlame {
+  color: #f97316;
+}
+
+.statOrb {
+  color: #2563eb;
+}
+
+.body {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.leftRail {
+  flex-shrink: 0;
+  width: 264px;
+  border-right: 1px solid #e5e7eb;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.main {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  /* icon-only tool buttons so the top bar never overlaps the timer */
+  .btnLabel {
+    display: none;
+  }
+  .textBtn,
+  .highlightBtn {
+    padding: 6px 8px;
+  }
+  .topBar {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .leftRail {
+    display: none;
+  }
+}
+
+.bottomBar {
+  flex-shrink: 0;
+  padding: 12px 20px 16px;
+  background: transparent;
+}
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
+}
+
+/* ============================================================
+   Dark mode — the exam shell is hard-coded light by default
+   (Bluebook paper). These overrides repaint every chrome surface
+   with theme tokens so the whole page reads as dark when toggled.
+   ============================================================ */
+:global(.dark) .shell {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .topBar {
+  background: hsl(var(--card));
+  border-bottom-color: hsl(var(--border));
+}
+
+:global(.dark) .goBackBtn,
+:global(.dark) .directionsBtn,
+:global(.dark) .stat {
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .directionsBtn {
+  background: hsl(var(--card));
+  border-color: hsl(var(--border));
+}
+
+:global(.dark) .goBackBtn:hover,
+:global(.dark) .directionsBtn:hover,
+:global(.dark) .iconBtn:hover,
+:global(.dark) .textBtn:hover {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .directionsMenu {
+  background: hsl(var(--popover));
+  border-color: hsl(var(--border));
+  color: hsl(var(--popover-foreground));
+}
+
+:global(.dark) .timer {
+  color: hsl(var(--foreground));
+}
+
+:global(.dark) .iconBtn,
+:global(.dark) .textBtn {
+  color: hsl(var(--muted-foreground));
+}
+
+:global(.dark) .textBtnActive {
+  background: hsl(var(--primary) / 0.18);
+  color: hsl(var(--primary));
+}
+
+:global(.dark) .highlightBtn {
+  background: hsl(var(--primary) / 0.18);
+  color: hsl(var(--primary));
+}
+
+:global(.dark) .highlightBtn:hover {
+  background: hsl(var(--primary) / 0.28);
+}
+
+:global(.dark) .highlightBtnActive {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+:global(.dark) .leftRail {
+  background: hsl(var(--card));
+  border-right-color: hsl(var(--border));
+}
+
+:global(.dark) .bottomInner {
+  background: hsl(var(--card));
+  border-color: hsl(var(--border));
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .shell {
+    max-height: 100dvh;
+    height: 100dvh;
+  }
+
+  .topBar {
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 10px;
+    padding-top: max(8px, env(safe-area-inset-top));
+    gap: 6px 8px;
+    row-gap: 8px;
+  }
+
+  /* Timer row first — always visible, never clipped by tools */
+  .topCenter {
+    order: -1;
+    flex: 1 1 100%;
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  :global(.dark) .topCenter {
+    border-bottom-color: hsl(var(--border));
+  }
+
+  .topLeft,
+  .topRight {
+    flex: 1 1 0;
+    min-width: 0;
+    gap: 4px;
+  }
+
+  .topLeft {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .topLeft::-webkit-scrollbar {
+    display: none;
+  }
+
+  .topRight {
+    justify-content: flex-end;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .topRight::-webkit-scrollbar {
+    display: none;
+  }
+
+  .goBackLabel {
+    display: none;
+  }
+
+  .goBackBtn {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+    justify-content: center;
+  }
+
+  .directionsBtn {
+    min-height: 40px;
+    padding: 8px 10px;
+    white-space: nowrap;
+  }
+
+  .directionsMenu {
+    width: min(calc(100vw - 20px), 360px);
+    max-height: min(50vh, 280px);
+    overflow-y: auto;
+  }
+
+  .timer,
+  .timerHidden {
+    font-size: 0.9375rem;
+    min-width: 3.25rem;
+  }
+
+  .iconBtn,
+  .textBtn,
+  .highlightBtn {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .passageBtnFull {
+    display: none;
+  }
+
+  .passageBtnShort {
+    display: inline;
+  }
+
+  .stats {
+    display: none;
+  }
+
+  .bottomBar {
+    padding: 8px 10px max(10px, env(safe-area-inset-bottom));
+  }
+
+  .bottomInner {
+    padding: 8px 10px;
+    border-radius: 12px;
+    gap: 8px;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .body {
+    min-height: 0;
+  }
+
+  .main {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .topBar {
+    padding: 6px 8px;
+    padding-top: max(6px, env(safe-area-inset-top));
+  }
+
+  .directionsBtn {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+
+  .bottomBar {
+    padding: 6px 8px max(8px, env(safe-area-inset-bottom));
+  }
+
+  .bottomInner {
+    padding: 8px;
+    border-radius: 10px;
+  }
+}

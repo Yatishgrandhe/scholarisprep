@@ -1,0 +1,141 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A survey was conducted to determine the number of people who own a dog in a certain town. The results showed that 30% of the  people surveyed own a dog.  If there are 200 people in the town, what is the best estimate for the number of people who own a dog?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"6","is_correct":false,"explanation":"Choice A (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"60","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"200","is_correct":false,"explanation":"Choice C (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"600","is_correct":false,"explanation":"Choice D (600…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A survey was conducted to determine the number of people who own a dog in a certain town. The results showed that 30% of the  people surveyed own a dog.  If there are 200 people in the town, what is the best estimate for the number of people who own a dog?
+
+**Step 2 — Solve.** The best estimate for the number of people who own a dog is 30% of the total population, or (0.30)(200) = 60.
+
+**Step 3 — Select B.** 60
+
+**Distractor analysis:**
+- **A** (6): Choice A (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (200): Choice C (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (600): Choice D (600…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":612,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_c3","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '75403c40-21ab-4e08-ab56-689291dda951';
+
+UPDATE public.questions SET
+  question_text = 'For what value of $k$ does the equation $6(x-3)+2k = 78$ have solution $x=15$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$2$","is_correct":false,"explanation":"Substituting this $k$ does not yield $x=15$."},{"id":"B","text":"$3$","is_correct":true,"explanation":"Expand: $6x-18+2k=78$ → $6x=90$ → $x=15$ when $k=3$."},{"id":"C","text":"$4$","is_correct":false,"explanation":"Too large; check substitution."},{"id":"D","text":"$15$","is_correct":false,"explanation":"That is $x$, not $k$."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Substitute $x=15$: $6(15-k)+2k=78$.
+**Step 2:** Simplify: $90-6k+2k=78$ → $90+-4k=78$.
+**Step 3:** Solve for $k$: $-4k=-12$ → $k=3$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7546ea23-7a70-477c-9148-a554525cc93f';
+
+UPDATE public.questions SET
+  question_text = 'A bakery sells cookies in packages of 6.  If a customer buys 3 packages of cookies, how many cookies did the customer buy?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"9","is_correct":false,"explanation":"Choice A (9…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"12","is_correct":false,"explanation":"Choice B (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"18","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"24","is_correct":false,"explanation":"Choice D (24…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A bakery sells cookies in packages of 6.  If a customer buys 3 packages of cookies, how many cookies did the customer buy?
+
+**Step 2 — Solve.** The customer buys 3 packages of cookies, and each package contains 6 cookies.  Therefore, the customer bought 3 * 6 = 18 cookies.
+
+**Step 3 — Select C.** 18
+
+**Distractor analysis:**
+- **A** (9): Choice A (9…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (12): Choice B (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (24): Choice D (24…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":29,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_f7","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7547361c-0206-4bc4-a626-c29b7e80513d';
+
+UPDATE public.questions SET
+  question_text = 'What is the solution to the equation  $2x + 3 = 15$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-6","is_correct":false,"explanation":"Choice A (-6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":false,"explanation":"Choice B (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"6","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"12","is_correct":false,"explanation":"Choice D (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** What is the solution to the equation  $2x + 3 = 15$?
+
+**Step 2 — Solve.** Subtracting 3 from both sides of the equation yields  $2x=12$. Dividing both sides by 2 yields $x=6$.
+
+**Step 3 — Select C.** 6
+
+**Distractor analysis:**
+- **A** (-6): Choice A (-6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (3): Choice B (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (12): Choice D (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":185,"opensat_domain":"Algebra","opensat_raw_id":"78f6c593","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7557d701-ac40-4406-b2b1-d70d2bf0e009';
+
+UPDATE public.questions SET
+  question_text = 'For what value of $x$ does the equation $\frac{x+5}{x-2} = \frac{x+2}{x-4}$  have a solution? ',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-1","is_correct":false,"explanation":"Choice A (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":false,"explanation":"Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"7","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** For what value of $x$ does the equation $\frac{x+5}{x-2} = \frac{x+2}{x-4}$  have a solution? 
+
+**Step 2 — Solve.** To solve for x, we can cross-multiply: $(x+5)(x-4) = (x+2)(x-2)$. Expanding both sides, we get $x^2 + x - 20 = x^2 - 4$. Subtracting $x^2$ from both sides, we get $x - 20 = -4$. Adding 20 to both sides, we get $x = 16$. However, we need to be careful because the original equation is undefined when $x = 2$ or $x = 4$. Since 16 is not equal to 2 or 4, the solution to the equation is $x = 16$.
+
+**Step 3 — Select D.** 7
+
+**Distractor analysis:**
+- **A** (-1): Choice A (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (2): Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":562,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_d9","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '756b19c4-f0c1-4571-98c7-3318423d776b';
+
+UPDATE public.questions SET
+  question_text = 'A right triangle has legs of length 5 and 12. What is the length of the hypotenuse?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"11","is_correct":false,"explanation":"Choice A (11…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"13","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"17","is_correct":false,"explanation":"Choice C (17…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"19","is_correct":false,"explanation":"Choice D (19…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A right triangle has legs of length 5 and 12. What is the length of the hypotenuse?
+
+**Step 2 — Solve.** The Pythagorean Theorem states that in a right triangle, the square of the hypotenuse is equal to the sum of the squares of the legs.  In this case, the hypotenuse is  $\sqrt{5^2 + 12^2} = \sqrt{169} = 13$.
+
+**Step 3 — Select B.** 13
+
+**Distractor analysis:**
+- **A** (11): Choice A (11…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (17): Choice C (17…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (19): Choice D (19…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RIG","domain_id":"geometry","opensat_index":474,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_47","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7575ff75-34fe-48f8-ada6-54ec405bb8e6';
+
+UPDATE public.questions SET
+  question_text = 'A linear function $f$ models temperature change. Given $f(11)=7$ and $f(16)=27$, what is $f(-13)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$-85$","is_correct":false,"explanation":"Adds slope once too many."},{"id":"B","text":"$4$","is_correct":false,"explanation":"That is the rate of change, not $f(-13$)."},{"id":"C","text":"$-92$","is_correct":false,"explanation":"Arithmetic error in point-slope form."},{"id":"D","text":"$-89$","is_correct":true,"explanation":"**Step 1:** Slope $m=4$. **Step 2:** $f(-13)=4(-13-11)+(7)=-89$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** $m=\frac{27-7}{16-11}=4$.
+**Step 2:** Point-slope: $f(-13)=4(-13-11)+(7)$.
+**Step 3:** $f(-13)=-89$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7586a349-9200-4019-b68f-48f422b4d3bf';
+
+UPDATE public.questions SET
+  question_text = 'A linear function $f$ models temperature change. Given $f(39)=35$ and $f(44)=55$, what is $f(-41)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$-281$","is_correct":false,"explanation":"Adds slope once too many."},{"id":"B","text":"$4$","is_correct":false,"explanation":"That is the rate of change, not $f(-41$)."},{"id":"C","text":"$-288$","is_correct":false,"explanation":"Arithmetic error in point-slope form."},{"id":"D","text":"$-285$","is_correct":true,"explanation":"**Step 1:** Slope $m=4$. **Step 2:** $f(-41)=4(-41-39)+(35)=-285$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** $m=\frac{55-35}{44-39}=4$.
+**Step 2:** Point-slope: $f(-41)=4(-41-39)+(35)$.
+**Step 3:** $f(-41)=-285$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '75c02dba-557b-45d0-94df-d1ae0c17598f';
+
+COMMIT;

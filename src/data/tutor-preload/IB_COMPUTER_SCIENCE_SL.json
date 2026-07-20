@@ -1,0 +1,53 @@
+{
+  "exam_type": "IB_COMPUTER_SCIENCE_SL",
+  "display_name": "IB Computer Science SL",
+  "units": [
+    "System fundamentals",
+    "Computer organization",
+    "Networks",
+    "Computational thinking & problem-solving",
+    "Programming constructs",
+    "Abstract data structures",
+    "Case study & IA skills"
+  ],
+  "command_terms": [
+    "state",
+    "outline",
+    "describe",
+    "explain",
+    "calculate",
+    "determine",
+    "deduce",
+    "suggest",
+    "discuss",
+    "evaluate",
+    "design"
+  ],
+  "misconceptions": [
+    "confusing precision and accuracy",
+    "skipping significant figures",
+    "command term mismatch"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_system_fundamentals skill focus: planning",
+    "Keep unit_code=U2_computer_organization skill focus: architecture",
+    "Keep unit_code=U3_networks skill focus: protocols",
+    "Keep unit_code=U4_computational_thinking_problem_solving skill focus: decomposition",
+    "Keep unit_code=U5_programming_constructs skill focus: variables",
+    "Keep unit_code=U6_abstract_data_structures skill focus: stacks",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

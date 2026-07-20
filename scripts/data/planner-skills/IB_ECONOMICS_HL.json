@@ -1,0 +1,179 @@
+{
+  "examType": "IB_ECONOMICS_HL",
+  "topics": [
+    "Introduction to economics",
+    "Microeconomics \u2014 demand & supply",
+    "Market failure",
+    "Theory of the firm (HL emphasis)",
+    "Macroeconomics \u2014 measurement",
+    "Macroeconomic models & policy",
+    "International economics",
+    "Development economics"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_introduction_to_economics",
+      "title": "Introduction to economics",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_microeconomics_demand_supply",
+      "title": "Microeconomics \u2014 demand & supply",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_market_failure",
+      "title": "Market failure",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_theory_of_the_firm_hl_emphasis",
+      "title": "Theory of the firm (HL emphasis)",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_macroeconomics_measurement",
+      "title": "Macroeconomics \u2014 measurement",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_macroeconomic_models_policy",
+      "title": "Macroeconomic models & policy",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_international_economics",
+      "title": "International economics",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_development_economics",
+      "title": "Development economics",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_ECONOMICS_HL:U1_introduction_to_economics",
+      "unit_code": "U1_introduction_to_economics",
+      "title": "Introduction to economics",
+      "topics": [
+        "scarcity",
+        "choice",
+        "PPC",
+        "economic systems"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_ECONOMICS_HL:U2_microeconomics_demand_supply",
+      "unit_code": "U2_microeconomics_demand_supply",
+      "title": "Microeconomics \u2014 demand & supply",
+      "topics": [
+        "elasticity",
+        "market equilibrium",
+        "government intervention"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ECONOMICS_HL:U1_introduction_to_economics"
+      ]
+    },
+    {
+      "skill_id": "IB_ECONOMICS_HL:U3_market_failure",
+      "unit_code": "U3_market_failure",
+      "title": "Market failure",
+      "topics": [
+        "externalities",
+        "public goods",
+        "common pool",
+        "asymmetric information"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ECONOMICS_HL:U2_microeconomics_demand_supply"
+      ]
+    },
+    {
+      "skill_id": "IB_ECONOMICS_HL:U4_theory_of_the_firm_hl_emphasis",
+      "unit_code": "U4_theory_of_the_firm_hl_emphasis",
+      "title": "Theory of the firm (HL emphasis)",
+      "topics": [
+        "costs",
+        "revenues",
+        "market structures",
+        "efficiency"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ECONOMICS_HL:U3_market_failure"
+      ]
+    },
+    {
+      "skill_id": "IB_ECONOMICS_HL:U5_macroeconomics_measurement",
+      "unit_code": "U5_macroeconomics_measurement",
+      "title": "Macroeconomics \u2014 measurement",
+      "topics": [
+        "GDP",
+        "inflation",
+        "unemployment",
+        "equity"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ECONOMICS_HL:U4_theory_of_the_firm_hl_emphasis"
+      ]
+    },
+    {
+      "skill_id": "IB_ECONOMICS_HL:U6_macroeconomic_models_policy",
+      "unit_code": "U6_macroeconomic_models_policy",
+      "title": "Macroeconomic models & policy",
+      "topics": [
+        "AD/AS",
+        "fiscal",
+        "monetary",
+        "supply-side"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ECONOMICS_HL:U5_macroeconomics_measurement"
+      ]
+    },
+    {
+      "skill_id": "IB_ECONOMICS_HL:U7_international_economics",
+      "unit_code": "U7_international_economics",
+      "title": "International economics",
+      "topics": [
+        "trade",
+        "exchange rates",
+        "balance of payments",
+        "protectionism"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ECONOMICS_HL:U6_macroeconomic_models_policy"
+      ]
+    },
+    {
+      "skill_id": "IB_ECONOMICS_HL:U8_development_economics",
+      "unit_code": "U8_development_economics",
+      "title": "Development economics",
+      "topics": [
+        "indicators",
+        "barriers",
+        "strategies",
+        "aid and debt"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_ECONOMICS_HL:U7_international_economics"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

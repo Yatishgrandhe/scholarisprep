@@ -1,0 +1,59 @@
+{
+  "exam_type": "AP_STATISTICS",
+  "skills": [
+    {
+      "id": "ap_statistics_U1_one_variable_data",
+      "unit_code": "U1_one_variable_data",
+      "label": "One-variable displays and summaries",
+      "description": "Practice and review: Exploring One-Variable Data. Topics include Distributions and displays; Center, spread, shape; Percentiles and z-scores."
+    },
+    {
+      "id": "ap_statistics_U2_two_variable_data",
+      "unit_code": "U2_two_variable_data",
+      "label": "Bivariate association and regression",
+      "description": "Practice and review: Exploring Two-Variable Data. Topics include Scatterplots and association; Linear regression and residuals; Correlation vs causation."
+    },
+    {
+      "id": "ap_statistics_U3_collecting_data",
+      "unit_code": "U3_collecting_data",
+      "label": "Sampling and experimental design",
+      "description": "Practice and review: Collecting Data. Topics include Sampling methods and bias; Experiments vs observational studies; Blocking, blinding, confounding."
+    },
+    {
+      "id": "ap_statistics_U4_probability",
+      "unit_code": "U4_probability",
+      "label": "Probability and random variables",
+      "description": "Practice and review: Probability, Random Variables, and Probability Distributions. Topics include Probability rules; Discrete random variables; Binomial and geometric models."
+    },
+    {
+      "id": "ap_statistics_U5_sampling_distributions",
+      "unit_code": "U5_sampling_distributions",
+      "label": "Sampling distributions",
+      "description": "Practice and review: Sampling Distributions. Topics include Sampling variability; Mean and proportion sampling distributions; Central limit theorem intuition."
+    },
+    {
+      "id": "ap_statistics_U6_inference_proportions",
+      "unit_code": "U6_inference_proportions",
+      "label": "Inference for proportions",
+      "description": "Practice and review: Inference for Categorical Data: Proportions. Topics include Confidence intervals for proportions; Significance tests for proportions; Conditions and errors."
+    },
+    {
+      "id": "ap_statistics_U7_inference_means",
+      "unit_code": "U7_inference_means",
+      "label": "Inference for means",
+      "description": "Practice and review: Inference for Quantitative Data: Means. Topics include t-intervals and t-tests; Two-sample means; Paired data."
+    },
+    {
+      "id": "ap_statistics_U8_chi_square",
+      "unit_code": "U8_chi_square",
+      "label": "Chi-square inference",
+      "description": "Practice and review: Inference for Categorical Data: Chi-Square. Topics include Goodness of fit; Homogeneity and independence; Expected counts and conditions."
+    },
+    {
+      "id": "ap_statistics_U9_inference_slopes",
+      "unit_code": "U9_inference_slopes",
+      "label": "Inference for regression slope",
+      "description": "Practice and review: Inference for Quantitative Data: Slopes. Topics include Inference for regression slope; Conditions and residual checks; Interval vs test for slope."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "exam_type": "AP_PSYCHOLOGY",
+  "display_name": "AP Psychology",
+  "command_terms": [
+    "identify",
+    "describe",
+    "explain",
+    "apply",
+    "compare",
+    "evaluate evidence"
+  ],
+  "misconceptions": [
+    "Confusing correlation with causation in research summaries",
+    "Mixing classical and operant conditioning contingencies",
+    "Overgeneralizing a single study to all populations",
+    "Equating reliability with validity",
+    "Treating personality theories as interchangeable without evidence cues"
+  ],
+  "paper_rules": [
+    "AAQ responses should cite study features (method, variables, ethics, statistics) from the provided article",
+    "EBQ responses must use provided sources as evidence, not only prior knowledge",
+    "Use precise psychological vocabulary; avoid pop-psych shortcuts"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "mcq",
+        "label": "Multiple Choice",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "aaq",
+        "label": "Article Analysis Question",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "ebq",
+        "label": "Evidence-Based Question",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "No calculator. Newer CED-style FRQs emphasize research literacy."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_scientific_foundations",
+      "unit_name": "Scientific Foundations of Psychology",
+      "topics": [
+        "research methods",
+        "ethics",
+        "statistics in psychology",
+        "psychological perspectives"
+      ]
+    },
+    {
+      "unit_code": "U2_biological_bases",
+      "unit_name": "Biological Bases of Behavior",
+      "topics": [
+        "neurons and nervous system",
+        "brain structures",
+        "sensation and perception",
+        "states of consciousness"
+      ]
+    },
+    {
+      "unit_code": "U3_cognition",
+      "unit_name": "Cognition",
+      "topics": [
+        "memory systems",
+        "thinking and problem solving",
+        "intelligence",
+        "language"
+      ]
+    },
+    {
+      "unit_code": "U4_development_learning",
+      "unit_name": "Development and Learning",
+      "topics": [
+        "lifespan development",
+        "classical and operant conditioning",
+        "observational learning",
+        "motivation"
+      ]
+    },
+    {
+      "unit_code": "U5_social_personality",
+      "unit_name": "Social Psychology and Personality",
+      "topics": [
+        "attribution and attitudes",
+        "group influence",
+        "personality theories",
+        "emotion and stress basics"
+      ]
+    },
+    {
+      "unit_code": "U6_mental_physical_health",
+      "unit_name": "Mental and Physical Health",
+      "topics": [
+        "psychological disorders",
+        "treatment approaches",
+        "health psychology",
+        "well-being"
+      ]
+    }
+  ]
+}

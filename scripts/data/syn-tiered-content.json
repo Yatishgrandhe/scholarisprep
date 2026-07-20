@@ -1,0 +1,1037 @@
+[
+  {
+    "key": "Tikal's Water Supply",
+    "notes": "Tikal's Water Supply\n• The Maya civilization constructed elaborate water management systems, including reservoirs and canals.\n• The city of Tikal possessed a major reservoir system paved with plaster.\n• Plaster lining prevented water from seeping into the porous limestone bedrock.\n• The system at Tikal was designed to collect rainwater during the intense tropical wet season.\n• This stored water sustained the city's population of over 60,000 residents during the prolonged dry season.\n• Archaeologists dated major plaster phases to the Late Classic period.",
+    "tiers": {
+      "easy": {
+        "goal": "specify what the plaster lining at Tikal prevented",
+        "correct": "The plaster lining at Tikal prevented water from seeping into the porous limestone bedrock.",
+        "distractors": [
+          {
+            "text": "The plaster lining at Tikal was applied during the Late Classic period by Maya builders.",
+            "trap": "Goal_Under_Specification",
+            "why": "States a true dating detail but never says what the lining prevented."
+          },
+          {
+            "text": "The plaster lining at Tikal allowed rainwater to drain quickly into the surrounding bedrock.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the documented fact, since the lining stopped seepage rather than enabling it."
+          },
+          {
+            "text": "The plaster lining at Tikal protected the reservoir from contamination by tropical floodwaters.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Imports a contamination claim the notes never make."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "explain the relationship between Tikal's wet season and its dry season",
+        "correct": "Tikal's reservoir system collected rainwater during the intense tropical wet season so that the stored water could sustain residents through the prolonged dry season.",
+        "distractors": [
+          {
+            "text": "Tikal's reservoir system collected rainwater during both the wet season and the dry season to supply the city year-round.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the notes, which say collection occurred during the wet season only."
+          },
+          {
+            "text": "Tikal's reservoir system stored water during the dry season and released it for farming when the wet season returned.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the sequence of which season filled the reservoir."
+          },
+          {
+            "text": "Tikal's reservoir system collected rainwater during the intense tropical wet season across the wider Maya world.",
+            "trap": "Goal_Under_Specification",
+            "why": "Names the wet season but omits the dry-season role that the relationship requires."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "convey the scale of Tikal's water system while acknowledging the engineering challenge its builders had to overcome",
+        "correct": "Tikal's plaster-paved reservoir system, which Maya engineers dated to the Late Classic period, sustained the city's population of more than 60,000 residents through the prolonged dry season precisely because the plaster lining kept collected rainwater from seeping into the porous limestone bedrock.",
+        "distractors": [
+          {
+            "text": "Tikal's reservoir system sustained the city's population of more than 60,000 residents through the prolonged dry season, an engineering achievement made possible by an elaborate network of canals that diverted water from nearby rivers directly into the heart of the city.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Invents river-diverting canals that the notes never attribute to Tikal."
+          },
+          {
+            "text": "Tikal's reservoir system sustained the city's population of more than 60,000 residents through the prolonged dry season once Maya engineers had finally overcome the porous limestone bedrock's persistent tendency to absorb and steadily drain away the stored rainwater.",
+            "trap": "Goal_Under_Specification",
+            "why": "Gestures at the challenge but omits the plaster solution that explains how it was overcome."
+          },
+          {
+            "text": "Tikal's plaster-paved reservoir system sustained the city's population of more than 60,000 residents through the dry season because the porous limestone bedrock beneath the city naturally trapped and held the collected rainwater securely in place.",
+            "trap": "Truth_without_Goal",
+            "why": "Credits the porous bedrock with retaining water, the opposite of the documented seepage problem."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "Biomimetic Wind Turbine",
+    "notes": "Biomimetic Wind Turbine\n• Engineers modeled blade ridges on humpback whale fin tubercles.\n• Wind-tunnel tests showed twelve-percent efficiency gains at moderate wind speeds.\n• Flat-blade designs underperformed at identical speeds in controlled comparisons.\n• Field monitoring confirmed gains persisted across seasonal wind variability.\n• Overnight noise levels remained within residential ordinance limits.",
+    "tiers": {
+      "easy": {
+        "goal": "specify what natural feature the turbine blade ridges were modeled on",
+        "correct": "The turbine's blade ridges were modeled on the tubercles found on humpback whale fins.",
+        "distractors": [
+          {
+            "text": "The turbine's blade ridges produced twelve-percent efficiency gains at moderate wind speeds.",
+            "trap": "Goal_Under_Specification",
+            "why": "Reports an efficiency result instead of naming the natural model."
+          },
+          {
+            "text": "The turbine's blade ridges were modeled on the streamlined flippers of dolphins.",
+            "trap": "Truth_without_Goal",
+            "why": "Names the wrong animal, since the notes specify humpback whale fins."
+          },
+          {
+            "text": "The turbine's blade ridges were modeled on the wing feathers of soaring seabirds.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Introduces a seabird model absent from the notes."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note a difference between the tubercle-ridged blades and the flat-blade design",
+        "correct": "In controlled comparisons at identical wind speeds, the tubercle-ridged blades produced twelve-percent efficiency gains while the flat-blade designs underperformed.",
+        "distractors": [
+          {
+            "text": "In controlled comparisons, both the tubercle-ridged blades and the flat-blade designs achieved twelve-percent efficiency gains at moderate speeds.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the notes by crediting the flat blades with matching gains."
+          },
+          {
+            "text": "The tubercle-ridged blades produced twelve-percent efficiency gains at moderate wind speeds in wind-tunnel tests.",
+            "trap": "Goal_Under_Specification",
+            "why": "Describes only the ridged blades and never contrasts them with the flat design."
+          },
+          {
+            "text": "The tubercle-ridged blades outperformed the flat-blade designs mainly because they ran more quietly overnight.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Invents a causal link between noise and performance the notes never draw."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "present the turbine's demonstrated benefits while acknowledging that its advantage was confirmed beyond the laboratory",
+        "correct": "In controlled wind-tunnel tests, the tubercle-ridged blades modeled on humpback whale fins delivered twelve-percent efficiency gains over flat designs at moderate speeds, and subsequent field monitoring confirmed that those gains persisted across seasonal wind variability while overnight noise stayed within residential limits.",
+        "distractors": [
+          {
+            "text": "In controlled wind-tunnel tests, the tubercle-ridged blades delivered twelve-percent efficiency gains over the flat designs at moderate speeds, gains that the engineers now expect will grow substantially larger as the turbines are eventually scaled up to full commercial size.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Adds a projection about scaling that the notes do not support."
+          },
+          {
+            "text": "Field monitoring of the installed turbines confirmed that the tubercle-ridged blades' efficiency advantage persisted across seasonal wind variability, and the overnight noise produced by the spinning blades stayed comfortably within the local residential ordinance limits.",
+            "trap": "Goal_Under_Specification",
+            "why": "Confirms the field result but omits the wind-tunnel benefit the goal asks to present first."
+          },
+          {
+            "text": "In controlled wind-tunnel tests the tubercle-ridged blades delivered twelve-percent efficiency gains over the flat designs, though later field monitoring found that this advantage faded once the turbines were exposed to the ordinary seasonal variability of real-world wind.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the field finding, which confirmed rather than undercut the gains."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "Coral Reef Survey",
+    "notes": "Coral Reef Survey\n• Sites with depleted parrotfish biomass showed sharply reduced coral recruitment.\n• Temperature and salinity remained stable across compared sites.\n• Bare rock patches reappeared only where herbivore populations recovered.\n• Policy briefs recommend no-take zones sized to herbivore home ranges.\n• Authors caution that local reef geology still influences settlement success.",
+    "tiers": {
+      "easy": {
+        "goal": "specify what condition accompanied sites with depleted parrotfish biomass",
+        "correct": "Sites with depleted parrotfish biomass showed sharply reduced coral recruitment.",
+        "distractors": [
+          {
+            "text": "Sites with depleted parrotfish biomass were studied while temperature and salinity remained stable.",
+            "trap": "Goal_Under_Specification",
+            "why": "States a control condition rather than what accompanied the depleted sites."
+          },
+          {
+            "text": "Sites with depleted parrotfish biomass showed a sharp increase in coral recruitment.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the finding, since recruitment was reduced where parrotfish were depleted."
+          },
+          {
+            "text": "Sites with depleted parrotfish biomass showed rising water temperatures that stressed the coral.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Adds a temperature cause the notes explicitly rule out as stable."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note the relationship between herbivore populations and coral settlement surfaces",
+        "correct": "Bare rock patches suitable for coral settlement reappeared only where herbivore populations had recovered.",
+        "distractors": [
+          {
+            "text": "Bare rock patches reappeared across all surveyed sites regardless of whether herbivore populations recovered.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the note that bare patches returned only where herbivores recovered."
+          },
+          {
+            "text": "Herbivore populations recovered most quickly at sites where temperature and salinity stayed stable.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Links herbivore recovery to stable conditions, a connection the notes never make."
+          },
+          {
+            "text": "Herbivore populations recovered at several of the surveyed reef sites over the study period.",
+            "trap": "Goal_Under_Specification",
+            "why": "Mentions recovery but omits the resulting bare-rock surfaces the relationship requires."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "recommend a management approach supported by the findings while acknowledging a limitation the authors raise",
+        "correct": "Because both coral recruitment and the bare settlement surfaces it depends on returned only at sites where herbivore populations had recovered, the study's authors recommend establishing no-take zones sized to herbivore home ranges, though they caution that local reef geology still influences settlement success.",
+        "distractors": [
+          {
+            "text": "Because coral recruitment returned only at the sites where herbivore populations had recovered, the study's authors recommend no-take zones sized to herbivore home ranges, a protective measure they say will reliably restore any degraded reef regardless of its underlying geology.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Dismisses the geology caveat by overstating the recommendation's reach."
+          },
+          {
+            "text": "On the strength of the survey's findings, the study's authors recommend establishing no-take zones carefully sized to match the home ranges of each reef's herbivore populations in order to protect the specific reef sites that the survey examined.",
+            "trap": "Goal_Under_Specification",
+            "why": "Gives the recommendation but omits the geology limitation the goal requires."
+          },
+          {
+            "text": "Because stable temperature and salinity were what actually drove the observed coral recruitment, the study's authors recommend no-take zones while cautioning that the reef's herbivore populations ultimately play only a minor, supporting role in recovery.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the findings by crediting stable conditions and downplaying herbivores."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "Memory Consolidation Study",
+    "notes": "Memory Consolidation Study\n• Participants who slept eight hours recalled word lists more accurately than those kept awake.\n• Both groups studied for equal duration under matched conditions.\n• Hippocampal imaging subsamples showed differential activation during retrieval.\n• Authors plan replication with longer study materials.\n• Lab conditions may limit generalization to classroom learning.",
+    "tiers": {
+      "easy": {
+        "goal": "specify which group recalled the word lists more accurately",
+        "correct": "Participants who slept eight hours recalled the word lists more accurately than those who were kept awake.",
+        "distractors": [
+          {
+            "text": "Participants who were kept awake recalled the word lists more accurately than those who slept eight hours.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the result by crediting the sleep-deprived group."
+          },
+          {
+            "text": "Both groups studied the word lists for equal duration under matched conditions.",
+            "trap": "Goal_Under_Specification",
+            "why": "Describes the study design instead of identifying the more accurate group."
+          },
+          {
+            "text": "Participants who slept eight hours recalled the word lists more accurately because of their stronger hippocampal activation.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Asserts a causal explanation the imaging note does not establish."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note what was held constant between the two groups even as their recall differed",
+        "correct": "Although the sleep group recalled the lists more accurately, both groups had studied for equal duration under matched conditions.",
+        "distractors": [
+          {
+            "text": "Although the sleep group recalled the lists more accurately, the two groups studied for different durations under varying conditions.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the note that study duration and conditions were matched."
+          },
+          {
+            "text": "The two groups studied the word lists for equal duration under matched conditions during the experiment.",
+            "trap": "Goal_Under_Specification",
+            "why": "States the constant but omits the differing recall it was meant to contrast with."
+          },
+          {
+            "text": "Both groups studied for equal duration, yet the sleep group's advantage grew larger with longer word lists.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Imports a longer-list result the notes only list as a planned future study."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "report the study's central finding while acknowledging a constraint the authors place on it",
+        "correct": "Although both groups had studied the word lists for an equal duration under matched conditions, the participants who slept eight hours afterward recalled the lists more accurately than those kept awake, a result the authors caution may not generalize well from controlled lab conditions to real classroom learning.",
+        "distractors": [
+          {
+            "text": "Although both groups studied for an equal duration under matched conditions, the participants who slept eight hours recalled the word lists more accurately than those kept awake, a finding the authors say applies directly and immediately to everyday classroom learning.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the caution by claiming direct classroom application."
+          },
+          {
+            "text": "Although both groups studied for an equal duration under matched conditions, the participants who slept eight hours recalled the lists more accurately than those kept awake, and hippocampal imaging of subsamples showed clearly differential activation during retrieval.",
+            "trap": "Goal_Under_Specification",
+            "why": "Adds an imaging detail but never states the generalization limitation the goal requires."
+          },
+          {
+            "text": "The participants who slept eight hours recalled the word lists more accurately than those kept awake despite the equal study time, a finding the authors say they have already confirmed in completed classroom replications using longer study materials.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Claims completed classroom replications, though the notes describe them only as planned."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "Literacy Intervention",
+    "notes": "Literacy Intervention\n• Structured pair-discussion protocols replaced silent worksheets in treatment classrooms.\n• Comprehension scores rose twelve points versus a four-point gain in control cohorts.\n• Teachers observed students citing textual evidence during disagreements.\n• Scripted prompts required paraphrasing a counterargument before advancing a claim.\n• District coaches recorded higher engagement during observed lessons.",
+    "tiers": {
+      "easy": {
+        "goal": "specify what replaced silent worksheets in the treatment classrooms",
+        "correct": "In the treatment classrooms, structured pair-discussion protocols replaced the silent worksheets.",
+        "distractors": [
+          {
+            "text": "In the treatment classrooms, comprehension scores rose twelve points over the course of the study.",
+            "trap": "Goal_Under_Specification",
+            "why": "Reports an outcome instead of naming what replaced the worksheets."
+          },
+          {
+            "text": "In the treatment classrooms, silent worksheets replaced the previous pair-discussion protocols.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the change described in the notes."
+          },
+          {
+            "text": "In the treatment classrooms, structured pair-discussion protocols replaced teacher-led lectures.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Names lectures as the replaced activity, which the notes never mention."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note the difference in comprehension gains between the treatment and control groups",
+        "correct": "Comprehension scores rose twelve points in the treatment classrooms, compared with a four-point gain in the control cohorts.",
+        "distractors": [
+          {
+            "text": "Comprehension scores rose four points in the treatment classrooms, compared with a twelve-point gain in the control cohorts.",
+            "trap": "Truth_without_Goal",
+            "why": "Swaps the two gains, crediting the control group with the larger rise."
+          },
+          {
+            "text": "Comprehension scores rose twelve points in the treatment classrooms over the course of the study.",
+            "trap": "Goal_Under_Specification",
+            "why": "Gives the treatment gain without the control comparison the difference requires."
+          },
+          {
+            "text": "Comprehension scores rose twelve points in the treatment classrooms, a gain driven mainly by higher student engagement.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Asserts engagement as the cause, a link the notes do not establish."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "explain how the intervention's design produced its measured gains by pointing to a specific feature of the protocol",
+        "correct": "The structured protocol, whose scripted prompts required students to paraphrase a counterargument before advancing a claim of their own, coincided with a twelve-point comprehension gain and with teachers' observations of students citing textual evidence during their classroom disagreements.",
+        "distractors": [
+          {
+            "text": "After the structured pair-discussion protocols replaced the silent worksheets, the treatment classrooms posted a twelve-point comprehension gain, and teachers observed their students citing textual evidence during disagreements far more frequently than they had before.",
+            "trap": "Goal_Under_Specification",
+            "why": "Reports the gain but omits the scripted paraphrasing feature the explanation calls for."
+          },
+          {
+            "text": "The structured protocol let students advance their own claims freely before they were ever required to consider or paraphrase a single counterargument, a design that nonetheless coincided with a twelve-point comprehension gain in the treatment classrooms.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the scripted sequence, which required paraphrasing a counterargument first."
+          },
+          {
+            "text": "The structured protocol's scripted paraphrasing prompts coincided with a twelve-point comprehension gain that the researchers now confidently expect will hold across every subject area and grade level taught throughout the district.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Adds a cross-subject generalization the notes never make."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "Ada Lovelace and Early Computing",
+    "notes": "Ada Lovelace and Early Computing\n• Ada Lovelace was a 19th-century English mathematician who worked with Charles Babbage.\n• She wrote notes describing how a computing engine could manipulate symbols, not only numbers.\n• Her notes included an algorithm for Bernoulli numbers, often cited as early programming.\n• Historians debate how much of the notes reflect her independent insight versus Babbage's ideas.\n• Recent scholarship emphasizes her conceptual leap beyond mere calculation.",
+    "tiers": {
+      "easy": {
+        "goal": "specify which mathematician Ada Lovelace worked with",
+        "correct": "Ada Lovelace, a 19th-century English mathematician, worked with Charles Babbage.",
+        "distractors": [
+          {
+            "text": "Ada Lovelace was a 19th-century English mathematician whose notes are widely studied today.",
+            "trap": "Goal_Under_Specification",
+            "why": "True but never names the collaborator the goal asks for."
+          },
+          {
+            "text": "Ada Lovelace worked alongside Howard Florey on a 19th-century computing engine.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Names a collaborator who appears in no note."
+          },
+          {
+            "text": "Ada Lovelace built a computing engine independently, without working with any collaborator.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the note that she worked with Babbage."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "explain what made Lovelace's notes notable beyond ordinary calculation",
+        "correct": "Her notes described how a computing engine could manipulate symbols, not only numbers, and included an algorithm for Bernoulli numbers often cited as early programming.",
+        "distractors": [
+          {
+            "text": "Her notes included an algorithm for Bernoulli numbers, which historians agree was entirely her own independent insight.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Asserts independent authorship that the notes say historians debate."
+          },
+          {
+            "text": "Her notes described a computing engine that could manipulate numbers but never symbols.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the note that the engine could manipulate symbols, not only numbers."
+          },
+          {
+            "text": "Her notes are remembered chiefly because she was a 19th-century English mathematician.",
+            "trap": "Goal_Under_Specification",
+            "why": "States a biographical fact without explaining what made the notes notable."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "present recent scholarly emphasis on Lovelace's contribution while acknowledging an unresolved debate about it",
+        "correct": "Recent scholarship emphasizes Ada Lovelace's conceptual leap beyond mere calculation, such as her description of how a computing engine could manipulate symbols rather than only numbers, even as historians continue to debate how much of her notes reflect her own independent insight versus Babbage's ideas.",
+        "distractors": [
+          {
+            "text": "Recent scholarship emphasizes Ada Lovelace's conceptual leap beyond mere calculation and has, in the process, finally settled the long-standing question of exactly how much of her insight she owed to Charles Babbage's earlier ideas about the engine.",
+            "trap": "Truth_without_Goal",
+            "why": "Claims the debate is settled when the notes say it continues."
+          },
+          {
+            "text": "Although historians once debated the origins of her notes, recent scholarship has now concluded that every idea contained within them, including the celebrated algorithm for Bernoulli numbers, was in fact entirely the work of Charles Babbage alone.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Attributes the work entirely to Babbage, a claim absent from the notes."
+          },
+          {
+            "text": "Recent scholarship emphasizes Ada Lovelace's conceptual leap beyond mere calculation, particularly her striking insight that a computing engine could be made to manipulate abstract symbols and not only numbers, which is a central reason her work is still studied today.",
+            "trap": "Goal_Under_Specification",
+            "why": "Highlights the emphasis but omits the required acknowledgment of the debate."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "Darwin's Finches Study",
+    "notes": "Darwin's Finches Study\n• Researchers measured beak depth across drought and wet seasons on Daphne Major.\n• Medium ground finches with deeper beaks survived better during drought when large seeds dominated.\n• Beak traits shifted measurably within a few generations after rainfall patterns changed.\n• The team cautions that extrapolation to all species requires additional field seasons.\n• Findings illustrate natural selection acting on heritable variation in a wild population.",
+    "tiers": {
+      "easy": {
+        "goal": "specify where the researchers measured beak depth",
+        "correct": "The researchers measured beak depth across seasons on Daphne Major.",
+        "distractors": [
+          {
+            "text": "The researchers measured beak depth across drought and wet seasons over many generations of study.",
+            "trap": "Goal_Under_Specification",
+            "why": "Describes the timing but never states the location the goal asks for."
+          },
+          {
+            "text": "The researchers measured beak depth in a controlled laboratory rather than in the wild.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the note describing a wild population on Daphne Major."
+          },
+          {
+            "text": "The researchers measured beak depth on Daphne Major using satellite tracking equipment.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Adds a method that appears in no note."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note the relationship between drought conditions and finch survival",
+        "correct": "During drought, when large seeds dominated, medium ground finches with deeper beaks survived better than others.",
+        "distractors": [
+          {
+            "text": "During drought, medium ground finches with shallower beaks survived better as large seeds dominated.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the note that deeper beaks aided survival."
+          },
+          {
+            "text": "During drought, large seeds dominated the island, changing the available food supply.",
+            "trap": "Goal_Under_Specification",
+            "why": "Describes the food shift but omits the survival relationship the goal requires."
+          },
+          {
+            "text": "During drought, deeper-beaked finches survived better because researchers supplemented their diet with large seeds.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Invents a diet-supplementation detail not in the notes."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "present the study's significance for natural selection while noting the team's stated limitation",
+        "correct": "By documenting how medium ground finches with deeper beaks survived drought better when large seeds dominated and how those beak traits shifted measurably within a few generations, the findings vividly illustrate natural selection acting on heritable variation in a wild population, though the team cautions that extrapolating the result to all species will require additional field seasons.",
+        "distractors": [
+          {
+            "text": "Because medium ground finches with deeper beaks survived drought better and their beak traits shifted within just a few generations, the team concludes that the result extends confidently to all bird species without any need for further field study.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the team's caution that extrapolation needs more field seasons."
+          },
+          {
+            "text": "Because the finches' beak traits shifted measurably within only a few generations of the drought, the team proved that drought has now permanently fixed deeper beaks in every finch population across the world, regardless of local rainfall or food supply.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Overstates a global, permanent result the notes never claim."
+          },
+          {
+            "text": "By tracking beak depth across both drought and wet seasons on Daphne Major, the findings illustrate natural selection acting on heritable variation in a real, free-living wild population rather than in any controlled laboratory setting.",
+            "trap": "Goal_Under_Specification",
+            "why": "States the significance but omits the team's stated limitation."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "Decipherment of Hieroglyphs",
+    "notes": "Decipherment of Hieroglyphs\n• The Rosetta Stone (196 BCE) presents the same decree in hieroglyphic, Demotic, and Greek scripts.\n• Scholar Jean-François Champollion compared Greek names to hieroglyphic spellings.\n• He argued hieroglyphs could represent sounds, not only ideas.\n• Earlier scholars assumed hieroglyphs were purely symbolic picture writing.\n• Champollion's 1822 letter announced a breakthrough in reading Egyptian texts.",
+    "tiers": {
+      "easy": {
+        "goal": "specify which three scripts appear on the Rosetta Stone",
+        "correct": "The Rosetta Stone presents the same decree in hieroglyphic, Demotic, and Greek scripts.",
+        "distractors": [
+          {
+            "text": "The Rosetta Stone, created in 196 BCE, presents the same decree in several different scripts.",
+            "trap": "Goal_Under_Specification",
+            "why": "Mentions multiple scripts but never names the three the goal requires."
+          },
+          {
+            "text": "The Rosetta Stone presents the same decree in hieroglyphic, Demotic, and Latin scripts.",
+            "trap": "Truth_without_Goal",
+            "why": "Replaces Greek with Latin, contradicting the note."
+          },
+          {
+            "text": "The Rosetta Stone presents three decrees, each written by Champollion in a different language.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Invents authorship and multiple decrees not in the notes."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note how Champollion's view of hieroglyphs differed from that of earlier scholars",
+        "correct": "Whereas earlier scholars assumed hieroglyphs were purely symbolic picture writing, Champollion argued they could represent sounds, not only ideas.",
+        "distractors": [
+          {
+            "text": "Like earlier scholars, Champollion argued that hieroglyphs were purely symbolic picture writing.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses Champollion's view to match the earlier scholars he disagreed with."
+          },
+          {
+            "text": "Earlier scholars assumed hieroglyphs were purely symbolic, a view they held for many centuries.",
+            "trap": "Goal_Under_Specification",
+            "why": "Describes only the earlier view without contrasting Champollion's."
+          },
+          {
+            "text": "Champollion argued hieroglyphs could represent sounds, which is why earlier scholars abandoned the Greek script.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Adds a claim about abandoning Greek that appears in no note."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "explain how Champollion reached and announced his breakthrough in reading Egyptian texts",
+        "correct": "By systematically comparing the Greek versions of royal names on the Rosetta Stone to their corresponding hieroglyphic spellings, Champollion argued that hieroglyphs could represent sounds and not only ideas, and his 1822 letter announced this hard-won breakthrough in the reading of ancient Egyptian texts.",
+        "distractors": [
+          {
+            "text": "Champollion's celebrated 1822 letter announced to the scholarly world that Egyptian hieroglyphs were in fact a purely symbolic picture writing, thereby confirming the very assumption that earlier generations of scholars had long held about the ancient script.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts his argument that hieroglyphs could represent sounds."
+          },
+          {
+            "text": "By comparing the Demotic names inscribed on the stone to their Greek spellings, Champollion proved in his 1822 letter that the Rosetta Stone's three different scripts had each been used to record an entirely separate royal decree rather than one shared text.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Fabricates different decrees and the wrong script comparison."
+          },
+          {
+            "text": "Champollion's celebrated 1822 letter announced to the scholarly world that he had at last achieved a long-sought breakthrough in the reading of ancient Egyptian texts written in the hieroglyphic script, a feat that had eluded earlier scholars for centuries.",
+            "trap": "Goal_Under_Specification",
+            "why": "Names the announcement but omits how the breakthrough was reached."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "Agricultural Intensification",
+    "notes": "Agricultural Intensification\n• High-yield wheat varieties expanded production in South Asia during the 1960s–70s.\n• Irrigation and fertilizer use rose alongside new seed strains.\n• Yields increased, yet smallholders sometimes could not afford inputs.\n• Water-table depletion emerged in regions with heavy pumping.\n• Historians debate whether gains outweighed ecological and equity costs.",
+    "tiers": {
+      "easy": {
+        "goal": "specify where and when high-yield wheat varieties expanded production",
+        "correct": "High-yield wheat varieties expanded production in South Asia during the 1960s and 1970s.",
+        "distractors": [
+          {
+            "text": "High-yield wheat varieties expanded production substantially after new seed strains were introduced.",
+            "trap": "Goal_Under_Specification",
+            "why": "Omits the place and decades the goal requires."
+          },
+          {
+            "text": "High-yield wheat varieties expanded production in South Asia during the 1990s and 2000s.",
+            "trap": "Truth_without_Goal",
+            "why": "States the wrong decades, contradicting the note."
+          },
+          {
+            "text": "High-yield wheat varieties expanded production across South Asia after irrigation eliminated all water-table depletion.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Claims depletion was eliminated, the opposite of the notes."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note a drawback that accompanied the rise in yields",
+        "correct": "Although yields increased, smallholders sometimes could not afford the new inputs that the higher production required.",
+        "distractors": [
+          {
+            "text": "Yields increased as irrigation and fertilizer use rose alongside new seed strains.",
+            "trap": "Goal_Under_Specification",
+            "why": "Reports the gains but names no accompanying drawback."
+          },
+          {
+            "text": "Yields increased, and smallholders found the new inputs more affordable than ever before.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the note that smallholders sometimes could not afford inputs."
+          },
+          {
+            "text": "Yields increased, but historians now agree the gains clearly outweighed every ecological cost.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Asserts a settled conclusion the notes say historians debate."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "summarize both the gains and the contested costs of the wheat expansion",
+        "correct": "Although the new seed strains, expanded irrigation, and heavier fertilizer use raised wheat yields across South Asia, smallholders sometimes could not afford the required inputs and water-table depletion emerged in heavily pumped regions, leaving historians to debate whether the gains outweighed the ecological and equity costs.",
+        "distractors": [
+          {
+            "text": "The new high-yield seed strains raised wheat production across South Asia so dramatically that historians have now firmly concluded the agricultural gains decisively outweighed any of the program's accompanying ecological and equity costs.",
+            "trap": "Truth_without_Goal",
+            "why": "Treats the debate as resolved when the notes say it continues."
+          },
+          {
+            "text": "Although wheat yields rose sharply at first, the steady spread of water-table depletion ultimately proved that the new high-yield varieties had failed, and agricultural production eventually collapsed across the whole of South Asia.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Invents a collapse in production that no note supports."
+          },
+          {
+            "text": "The introduction of new seed strains, along with greatly expanded irrigation and heavier fertilizer use, raised wheat yields substantially throughout South Asia during the agriculturally transformative decades of the 1960s and 1970s.",
+            "trap": "Goal_Under_Specification",
+            "why": "Reports the gains but omits the contested costs the goal requires."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "Alexander Fleming and Penicillin",
+    "notes": "Alexander Fleming and Penicillin\n• Fleming observed mold inhibiting bacterial growth on a contaminated petri dish in 1928.\n• He identified the mold as Penicillium and named the antibacterial substance penicillin.\n• Initial extracts were unstable and difficult to mass-produce.\n• Howard Florey and Ernst Chain later developed methods to purify and scale production.\n• Penicillin became widely available to Allied forces during World War II.",
+    "tiers": {
+      "easy": {
+        "goal": "specify what Fleming observed on the contaminated petri dish in 1928",
+        "correct": "In 1928, Fleming observed mold inhibiting bacterial growth on a contaminated petri dish.",
+        "distractors": [
+          {
+            "text": "In 1928, Fleming made an observation on a petri dish that would prove historically important.",
+            "trap": "Goal_Under_Specification",
+            "why": "Alludes to the observation without stating what he actually saw."
+          },
+          {
+            "text": "In 1928, Fleming observed bacteria overwhelming and destroying the mold on a petri dish.",
+            "trap": "Truth_without_Goal",
+            "why": "Reverses the note, in which the mold inhibited the bacteria."
+          },
+          {
+            "text": "In 1928, Fleming observed mold on a petri dish and immediately mass-produced a stable antibiotic.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Claims immediate mass production that the notes say came later and was difficult."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note the relationship between Fleming's early extracts and the later work of Florey and Chain",
+        "correct": "Because Fleming's initial extracts were unstable and hard to mass-produce, Howard Florey and Ernst Chain later developed methods to purify and scale production.",
+        "distractors": [
+          {
+            "text": "Fleming's initial extracts were already stable and easy to mass-produce, so Florey and Chain simply distributed them.",
+            "trap": "Truth_without_Goal",
+            "why": "Contradicts the note that early extracts were unstable and hard to produce."
+          },
+          {
+            "text": "Howard Florey and Ernst Chain later developed methods to purify and scale penicillin production.",
+            "trap": "Goal_Under_Specification",
+            "why": "States their work but omits its relationship to Fleming's unstable extracts."
+          },
+          {
+            "text": "Florey and Chain purified penicillin only after discovering the mold themselves on a separate petri dish.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Credits them with the discovery, which the notes attribute to Fleming."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "trace penicillin's development from discovery through an early obstacle to its wartime availability",
+        "correct": "After Alexander Fleming named penicillin in 1928, the substance's unstable initial extracts proved difficult to mass-produce until Howard Florey and Ernst Chain developed methods to purify and scale it, ultimately making the antibiotic widely available to Allied forces during World War II.",
+        "distractors": [
+          {
+            "text": "Penicillin became widely available to Allied forces during World War II only after Alexander Fleming, working entirely on his own, had perfected a stable and easily mass-produced extract of the new antibiotic back in 1928, well before any other researchers became involved.",
+            "trap": "Truth_without_Goal",
+            "why": "Credits Fleming with the scaling that the notes attribute to Florey and Chain."
+          },
+          {
+            "text": "Howard Florey and Ernst Chain discovered penicillin themselves and, facing no real production obstacles of any kind, were able to distribute the finished antibiotic to Allied forces throughout the later years of World War II.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Erases the documented instability obstacle and misattributes the discovery."
+          },
+          {
+            "text": "In 1928, Alexander Fleming identified the Penicillium mold growing on a contaminated petri dish and gave the name penicillin to the antibacterial substance that the mold was visibly producing against the surrounding bacteria.",
+            "trap": "Goal_Under_Specification",
+            "why": "Covers the discovery but omits the obstacle and wartime availability the goal requires."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "• Writers and artists centered Black urban experience in 1920s Harlem.",
+    "notes": "• Writers and artists centered Black urban experience in 1920s Harlem.\n• Langston Hughes used jazz rhythms in poetry.\n• Zora Neale Hurston collected folklore.\n• Patronage from white supporters created tensions.\n• The movement influenced later civil-rights culture.",
+    "tiers": {
+      "easy": {
+        "goal": "specify which writer used jazz rhythms in poetry",
+        "correct": "Langston Hughes used jazz rhythms in his poetry.",
+        "distractors": [
+          {
+            "text": "Zora Neale Hurston used jazz rhythms in her poetry.",
+            "trap": "Truth_without_Goal",
+            "why": "The notes credit jazz rhythms to Hughes, not Hurston, who collected folklore."
+          },
+          {
+            "text": "Langston Hughes traveled across Europe collecting jazz recordings.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "The notes never mention travel or jazz recordings, only jazz rhythms in poetry."
+          },
+          {
+            "text": "A writer in 1920s Harlem worked in a notable artistic style.",
+            "trap": "Goal_Under_Specification",
+            "why": "It names no writer and no jazz rhythms, so it does not specify who used them."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note a difference between the contributions of Langston Hughes and Zora Neale Hurston",
+        "correct": "While Langston Hughes brought jazz rhythms into his poetry, Zora Neale Hurston instead collected folklore.",
+        "distractors": [
+          {
+            "text": "Both Langston Hughes and Zora Neale Hurston collected folklore during the movement.",
+            "trap": "Truth_without_Goal",
+            "why": "Folklore collection is attributed only to Hurston, not Hughes, so it states no real difference."
+          },
+          {
+            "text": "Langston Hughes and Zora Neale Hurston both centered Black urban experience in their work.",
+            "trap": "Goal_Under_Specification",
+            "why": "It notes a shared theme rather than a difference between their contributions."
+          },
+          {
+            "text": "Langston Hughes used jazz rhythms, while Zora Neale Hurston rejected white patronage outright.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "The notes say patronage created tensions but never say Hurston rejected it outright."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "explain the movement's lasting cultural impact while acknowledging a tension it involved",
+        "correct": "Although patronage from white supporters created real tensions within the movement, the Harlem writers and artists who centered Black urban experience in their work, figures such as Langston Hughes and Zora Neale Hurston, went on to shape and influence the later culture of the civil-rights era.",
+        "distractors": [
+          {
+            "text": "By centering Black urban experience in their poetry and folklore, the writers and artists of the movement went on to influence the later culture of the civil-rights era while facing no internal tensions of any kind along the way.",
+            "trap": "Truth_without_Goal",
+            "why": "It denies the documented patronage tensions, contradicting a bullet."
+          },
+          {
+            "text": "The movement's jazz-influenced poetry and carefully collected folklore went on to shape not only the later American civil-rights era but also cultural and artistic movements all across the wider world for generations afterward.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "It adds a worldwide reach the notes never claim and omits the required tension."
+          },
+          {
+            "text": "Patronage extended by sympathetic white supporters created notable tensions among the various writers and artists of the movement as they navigated the competing expectations that such financial support inevitably brought with it.",
+            "trap": "Goal_Under_Specification",
+            "why": "It states only the tension and omits the lasting cultural impact the goal requires."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "• Alfred Wegener proposed continental drift in 1912.",
+    "notes": "• Alfred Wegener proposed continental drift in 1912.\n• Geologists initially rejected the idea lacking a mechanism.\n• Mid-ocean ridge mapping later revealed seafloor spreading.\n• Magnetic striping supported periodic reversals.\n• Plate tectonics unified earthquake, volcano, and mountain patterns.",
+    "tiers": {
+      "easy": {
+        "goal": "specify when Alfred Wegener proposed continental drift",
+        "correct": "Alfred Wegener proposed continental drift in 1912.",
+        "distractors": [
+          {
+            "text": "Alfred Wegener proposed continental drift after seafloor spreading was mapped.",
+            "trap": "Truth_without_Goal",
+            "why": "The notes place Wegener's proposal in 1912, before the later ridge mapping, reversing the sequence."
+          },
+          {
+            "text": "Alfred Wegener proposed continental drift in 1912 after winning over skeptical geologists.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "The notes say geologists initially rejected the idea, not that he won them over first."
+          },
+          {
+            "text": "A scientist proposed a major theory about the movement of continents.",
+            "trap": "Goal_Under_Specification",
+            "why": "It gives neither the name nor the date, so it fails to specify when the proposal occurred."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note a relationship between mid-ocean ridge mapping and magnetic striping",
+        "correct": "Mid-ocean ridge mapping revealed seafloor spreading, and magnetic striping further supported the idea of periodic reversals.",
+        "distractors": [
+          {
+            "text": "Mid-ocean ridge mapping and magnetic striping both led geologists to initially reject continental drift.",
+            "trap": "Truth_without_Goal",
+            "why": "The notes tie the initial rejection to a missing mechanism, not to ridge mapping or striping."
+          },
+          {
+            "text": "Magnetic striping revealed seafloor spreading, while mid-ocean ridge mapping supported periodic reversals.",
+            "trap": "Truth_without_Goal",
+            "why": "It swaps the two findings, crediting each with the other's evidence."
+          },
+          {
+            "text": "Mid-ocean ridge mapping and magnetic striping each contributed evidence about the seafloor.",
+            "trap": "Goal_Under_Specification",
+            "why": "It is too vague to state the specific relationship between the two findings."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "explain why continental drift was initially rejected yet later accepted, using specific evidence",
+        "correct": "Geologists initially rejected Alfred Wegener's 1912 proposal of continental drift because it lacked a convincing mechanism, but the idea later won acceptance once mid-ocean ridge mapping revealed seafloor spreading and magnetic striping along the ridges supported the existence of periodic magnetic reversals.",
+        "distractors": [
+          {
+            "text": "Geologists enthusiastically embraced Alfred Wegener's theory of continental drift in 1912, just as soon as the detailed mapping of the mid-ocean ridges first revealed the previously unknown process of seafloor spreading to them.",
+            "trap": "Truth_without_Goal",
+            "why": "It reverses the sequence, since the ridge mapping came after the 1912 proposal, not at it."
+          },
+          {
+            "text": "Continental drift was at first rejected for lacking a mechanism but was eventually confirmed at the very moment that plate tectonics finally unified the global patterns of earthquakes, volcanoes, and mountain ranges into one theory.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "It skips the seafloor spreading and striping evidence and conflates acceptance with the later unifying theory."
+          },
+          {
+            "text": "Geologists initially rejected Alfred Wegener's bold 1912 proposal of continental drift largely because the idea, as he first presented it, lacked any clear physical mechanism to explain how the massive continents could possibly move across the globe.",
+            "trap": "Goal_Under_Specification",
+            "why": "It explains only the rejection and omits the later evidence that won acceptance."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "• Parisian painters exhibited independently after Salon rejections in 1874.",
+    "notes": "• Parisian painters exhibited independently after Salon rejections in 1874.\n• Artists captured fleeting light with visible brushstrokes.\n• Monet's series paintings tracked atmospheric changes.\n• Critics initially mocked the sketch-like surfaces.\n• Dealers later marketed Impressionism to bourgeois collectors.",
+    "tiers": {
+      "easy": {
+        "goal": "specify when Parisian painters first exhibited independently",
+        "correct": "Parisian painters exhibited independently after Salon rejections in 1874.",
+        "distractors": [
+          {
+            "text": "Parisian painters exhibited independently only after dealers marketed their work to collectors.",
+            "trap": "Truth_without_Goal",
+            "why": "The notes show the independent exhibition came in 1874, before dealers marketed the work."
+          },
+          {
+            "text": "Parisian painters exhibited independently in 1874 after the Salon praised their bold style.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "The notes say the painters faced Salon rejections, not Salon praise."
+          },
+          {
+            "text": "A group of painters chose to display their work outside official channels.",
+            "trap": "Goal_Under_Specification",
+            "why": "It omits the year, so it does not specify when the independent exhibition occurred."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note a similarity between the painters' brushwork and Monet's series paintings",
+        "correct": "Both the painters' visible brushstrokes and Monet's series paintings worked to capture fleeting light and atmospheric changes.",
+        "distractors": [
+          {
+            "text": "Both the painters' visible brushstrokes and Monet's series paintings were marketed by dealers to bourgeois collectors.",
+            "trap": "Truth_without_Goal",
+            "why": "The notes tie marketing to dealers generally, not to brushstrokes and series paintings as a shared trait."
+          },
+          {
+            "text": "Both the painters' visible brushstrokes and Monet's series paintings were mocked by critics as too polished.",
+            "trap": "Truth_without_Goal",
+            "why": "Critics mocked the surfaces as sketch-like, not as too polished."
+          },
+          {
+            "text": "Both the painters and Monet produced notable works during the period.",
+            "trap": "Goal_Under_Specification",
+            "why": "It is too vague to name the shared concern with light that the goal requires."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "explain how the movement gained acceptance despite an early hostile reception",
+        "correct": "Although critics had initially mocked the sketch-like surfaces created by the painters' visible brushstrokes, dealers later marketed Impressionism to bourgeois collectors, helping a style that the official Salon had once rejected gradually gain wide acceptance among the public.",
+        "distractors": [
+          {
+            "text": "Although critics had at first mocked the movement's sketch-like surfaces, Monet's celebrated series paintings tracking subtle atmospheric changes eventually silenced every last one of the style's once numerous and deeply hostile critics.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "The notes never say the series paintings silenced critics or won them over."
+          },
+          {
+            "text": "Dealers began marketing Impressionism to bourgeois collectors only after the critics of the day had already warmly welcomed and openly praised the sketch-like surfaces produced by the painters' loose and highly visible brushstrokes.",
+            "trap": "Truth_without_Goal",
+            "why": "It reverses the documented hostile reception, since critics mocked the surfaces."
+          },
+          {
+            "text": "Some years after the Parisian painters first exhibited their work independently of the Salon, dealers began actively marketing the new Impressionist style to the bourgeois collectors who could afford to purchase such fashionable paintings.",
+            "trap": "Goal_Under_Specification",
+            "why": "It states only the marketing and omits the early hostile reception the goal requires."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "• The United States pledged billions for European reconstruction after World War II.",
+    "notes": "• The United States pledged billions for European reconstruction after World War II.\n• Aid required purchases of many goods from US suppliers.\n• Program aimed to stabilize democracies against Soviet influence.\n• Recipient nations modernized industry and infrastructure.\n• Historians debate economic strings attached to humanitarian framing.",
+    "tiers": {
+      "easy": {
+        "goal": "specify what the United States pledged for after World War II",
+        "correct": "After World War II, the United States pledged billions for European reconstruction.",
+        "distractors": [
+          {
+            "text": "After World War II, the United States pledged billions for the modernization of its own industry.",
+            "trap": "Truth_without_Goal",
+            "why": "The notes say the pledge was for European reconstruction, while recipient nations modernized their industry."
+          },
+          {
+            "text": "After World War II, the United States pledged billions to rebuild Soviet infrastructure.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "The notes describe stabilizing democracies against Soviet influence, not rebuilding Soviet infrastructure."
+          },
+          {
+            "text": "The United States made a major financial commitment in the postwar years.",
+            "trap": "Goal_Under_Specification",
+            "why": "It does not specify that the pledge was for European reconstruction."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note a relationship between the aid's purchase requirement and its political aim",
+        "correct": "The aid required purchases of many goods from US suppliers while also aiming to stabilize democracies against Soviet influence.",
+        "distractors": [
+          {
+            "text": "The aid required purchases from US suppliers in order to modernize American infrastructure.",
+            "trap": "Truth_without_Goal",
+            "why": "The notes say recipient nations, not the United States, modernized industry and infrastructure."
+          },
+          {
+            "text": "The aid aimed to stabilize democracies against Soviet influence by ending all purchase requirements.",
+            "trap": "Truth_without_Goal",
+            "why": "It contradicts the note that aid required purchases of goods from US suppliers."
+          },
+          {
+            "text": "The aid had both economic and political dimensions after the war.",
+            "trap": "Goal_Under_Specification",
+            "why": "It is too vague to name the purchase requirement and the political aim specifically."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "summarize the program's benefits while acknowledging a point of historical debate",
+        "correct": "While the recipient nations used the program to modernize their industry and rebuild their infrastructure after the war, historians continue to debate the economic strings attached to the aid, including its requirement that recipients purchase many goods from United States suppliers, beneath its humanitarian framing.",
+        "distractors": [
+          {
+            "text": "The recipient nations modernized their industry and infrastructure under the program, and historians now broadly agree that the generous postwar aid was offered with no meaningful economic strings attached to it whatsoever.",
+            "trap": "Truth_without_Goal",
+            "why": "It contradicts the note that historians debate the strings attached to the humanitarian framing."
+          },
+          {
+            "text": "The program modernized the recipient nations even as it required them to purchase many goods from United States suppliers, a transparently exploitative arrangement that historians have long since agreed to reject as purely cynical.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "The notes record an ongoing debate, not a settled verdict that the arrangement was exploitative."
+          },
+          {
+            "text": "Under the terms of the postwar program, the various recipient nations of Western Europe were able to modernize their industry and substantially rebuild the infrastructure that years of war had badly damaged across the continent.",
+            "trap": "Goal_Under_Specification",
+            "why": "It states only a benefit and omits the historical debate the goal requires."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "• Bacteria use CRISPR sequences to remember viral DNA.",
+    "notes": "• Bacteria use CRISPR sequences to remember viral DNA.\n• Cas proteins cut matching sequences during reinfection.\n• Scientists adapted the system to edit genomes in labs.\n• Early applications targeted disease-causing mutations.\n• Ethicists warn about off-target and germline implications.",
+    "tiers": {
+      "easy": {
+        "goal": "specify how bacteria use CRISPR sequences",
+        "correct": "Bacteria use CRISPR sequences to remember viral DNA.",
+        "distractors": [
+          {
+            "text": "Bacteria use CRISPR sequences to cut matching sequences during reinfection.",
+            "trap": "Truth_without_Goal",
+            "why": "The notes attribute the cutting to Cas proteins, not to the CRISPR sequences themselves."
+          },
+          {
+            "text": "Bacteria use CRISPR sequences to edit the genomes of other organisms.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "The notes say scientists, not bacteria, adapted the system to edit genomes in labs."
+          },
+          {
+            "text": "Bacteria rely on a built-in system to respond to viruses.",
+            "trap": "Goal_Under_Specification",
+            "why": "It is too vague to specify that the sequences are used to remember viral DNA."
+          }
+        ]
+      },
+      "medium": {
+        "goal": "note the relationship between CRISPR sequences and Cas proteins in bacteria",
+        "correct": "Bacteria use CRISPR sequences to remember viral DNA, and Cas proteins then cut the matching sequences during reinfection.",
+        "distractors": [
+          {
+            "text": "Bacteria use Cas proteins to remember viral DNA, and CRISPR sequences cut it during reinfection.",
+            "trap": "Truth_without_Goal",
+            "why": "It swaps the roles, since CRISPR sequences remember and Cas proteins cut."
+          },
+          {
+            "text": "CRISPR sequences and Cas proteins both target disease-causing mutations in bacteria.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "Targeting disease-causing mutations describes lab applications by scientists, not bacterial defense."
+          },
+          {
+            "text": "Both CRISPR sequences and Cas proteins play a part in the bacterial system.",
+            "trap": "Goal_Under_Specification",
+            "why": "It is too vague to state how the two elements relate."
+          }
+        ]
+      },
+      "hard": {
+        "goal": "describe the promise of CRISPR-based gene editing while noting an ethical caution",
+        "correct": "Scientists adapted the bacterial CRISPR system to edit genomes in the laboratory, with early applications aimed at correcting disease-causing mutations, even as ethicists continue to warn about the technology's off-target effects and its troubling implications for the human germline.",
+        "distractors": [
+          {
+            "text": "Scientists adapted the bacterial system to edit genomes and to target disease-causing mutations directly, a powerful gene-editing process that ethicists have now confirmed to be entirely free of any off-target or germline risks.",
+            "trap": "Truth_without_Goal",
+            "why": "It contradicts the note that ethicists warn about off-target and germline implications."
+          },
+          {
+            "text": "Scientists adapted the bacterial CRISPR system to edit genomes in the laboratory and have, in only a few short years, already used it to cure the great majority of inherited germline diseases in human patients around the world.",
+            "trap": "Unwarranted_Synthesis",
+            "why": "The notes mention early applications and warnings, not that diseases have already been cured."
+          },
+          {
+            "text": "Scientists adapted the naturally occurring bacterial CRISPR system to edit genomes in the laboratory, where the earliest applications of the powerful new tool were aimed specifically at correcting dangerous disease-causing genetic mutations.",
+            "trap": "Goal_Under_Specification",
+            "why": "It describes the promise but omits the ethical caution the goal requires."
+          }
+        ]
+      }
+    }
+  }
+]

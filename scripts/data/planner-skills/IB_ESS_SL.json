@@ -1,0 +1,179 @@
+{
+  "examType": "IB_ESS_SL",
+  "topics": [
+    "Foundations of ESS",
+    "Ecosystems & ecology",
+    "Biodiversity & conservation",
+    "Water, food & soil",
+    "Atmosphere & climate change",
+    "Human systems & resource use",
+    "Environmental value systems & decision-making",
+    "IA investigation skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_foundations_of_ess",
+      "title": "Foundations of ESS",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_ecosystems_ecology",
+      "title": "Ecosystems & ecology",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_biodiversity_conservation",
+      "title": "Biodiversity & conservation",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_water_food_soil",
+      "title": "Water, food & soil",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_atmosphere_climate_change",
+      "title": "Atmosphere & climate change",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_human_systems_resource_use",
+      "title": "Human systems & resource use",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_environmental_value_systems_decision_making",
+      "title": "Environmental value systems & decision-making",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_ia_investigation_skills",
+      "title": "IA investigation skills",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_ESS_SL:U1_foundations_of_ess",
+      "unit_code": "U1_foundations_of_ess",
+      "title": "Foundations of ESS",
+      "topics": [
+        "systems",
+        "models",
+        "sustainability",
+        "perspectives"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_ESS_SL:U2_ecosystems_ecology",
+      "unit_code": "U2_ecosystems_ecology",
+      "title": "Ecosystems & ecology",
+      "topics": [
+        "energy flow",
+        "productivity",
+        "succession",
+        "biomes"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ESS_SL:U1_foundations_of_ess"
+      ]
+    },
+    {
+      "skill_id": "IB_ESS_SL:U3_biodiversity_conservation",
+      "unit_code": "U3_biodiversity_conservation",
+      "title": "Biodiversity & conservation",
+      "topics": [
+        "threats",
+        "IUCN",
+        "strategies",
+        "hotspots"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ESS_SL:U2_ecosystems_ecology"
+      ]
+    },
+    {
+      "skill_id": "IB_ESS_SL:U4_water_food_soil",
+      "unit_code": "U4_water_food_soil",
+      "title": "Water, food & soil",
+      "topics": [
+        "hydrology",
+        "agriculture",
+        "soil degradation",
+        "food systems"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ESS_SL:U3_biodiversity_conservation"
+      ]
+    },
+    {
+      "skill_id": "IB_ESS_SL:U5_atmosphere_climate_change",
+      "unit_code": "U5_atmosphere_climate_change",
+      "title": "Atmosphere & climate change",
+      "topics": [
+        "composition",
+        "ozone",
+        "GHGs",
+        "mitigation/adaptation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ESS_SL:U4_water_food_soil"
+      ]
+    },
+    {
+      "skill_id": "IB_ESS_SL:U6_human_systems_resource_use",
+      "unit_code": "U6_human_systems_resource_use",
+      "title": "Human systems & resource use",
+      "topics": [
+        "population",
+        "energy",
+        "waste",
+        "urban systems"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ESS_SL:U5_atmosphere_climate_change"
+      ]
+    },
+    {
+      "skill_id": "IB_ESS_SL:U7_environmental_value_systems_decision_making",
+      "unit_code": "U7_environmental_value_systems_decision_making",
+      "title": "Environmental value systems & decision-making",
+      "topics": [
+        "EVS",
+        "EIAs",
+        "stakeholders"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ESS_SL:U6_human_systems_resource_use"
+      ]
+    },
+    {
+      "skill_id": "IB_ESS_SL:U8_ia_investigation_skills",
+      "unit_code": "U8_ia_investigation_skills",
+      "title": "IA investigation skills",
+      "topics": [
+        "research question",
+        "method",
+        "analysis",
+        "evaluation"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_ESS_SL:U7_environmental_value_systems_decision_making"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

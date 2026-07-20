@@ -1,0 +1,54 @@
+{
+  "exam_type": "IB_DESIGN_TECHNOLOGY_SL",
+  "display_name": "IB Design Technology SL",
+  "units": [
+    "Human factors & ergonomics",
+    "Resource management & sustainable production",
+    "Modelling",
+    "Raw materials to final product",
+    "Innovation & design",
+    "Classic design & user-centred design",
+    "Commercial production & marketing",
+    "Design project / IA skills"
+  ],
+  "command_terms": [
+    "state",
+    "outline",
+    "describe",
+    "explain",
+    "calculate",
+    "determine",
+    "deduce",
+    "suggest",
+    "discuss",
+    "evaluate",
+    "design"
+  ],
+  "misconceptions": [
+    "confusing precision and accuracy",
+    "skipping significant figures",
+    "command term mismatch"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_human_factors_ergonomics skill focus: anthropometrics",
+    "Keep unit_code=U2_resource_management_sustainable_production skill focus: LCA",
+    "Keep unit_code=U3_modelling skill focus: conceptual",
+    "Keep unit_code=U4_raw_materials_to_final_product skill focus: properties",
+    "Keep unit_code=U5_innovation_design skill focus: drivers",
+    "Keep unit_code=U6_classic_design_user_centred_design skill focus: case studies",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

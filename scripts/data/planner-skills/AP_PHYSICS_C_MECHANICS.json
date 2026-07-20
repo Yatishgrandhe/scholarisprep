@@ -1,0 +1,153 @@
+{
+  "examType": "AP_PHYSICS_C_MECHANICS",
+  "topics": [
+    "Kinematics",
+    "Newton's Laws of Motion",
+    "Work, Energy, and Power",
+    "Systems of Particles and Linear Momentum",
+    "Rotation",
+    "Oscillations",
+    "Gravitation"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_kinematics",
+      "title": "Kinematics",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_1d_2d_kinematics",
+        "U1_S2_calculus_derivatives_of_motion"
+      ],
+      "topics": [
+        "1D/2D kinematics",
+        "calculus derivatives of motion"
+      ]
+    },
+    {
+      "unit_code": "U2_newton_s_laws_of_motion",
+      "title": "Newton's Laws of Motion",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_forces",
+        "U2_S2_systems",
+        "U2_S3_variable_mass_intro"
+      ],
+      "topics": [
+        "forces",
+        "systems",
+        "variable mass intro"
+      ]
+    },
+    {
+      "unit_code": "U3_work_energy_and_power",
+      "title": "Work, Energy, and Power",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_work_integrals",
+        "U3_S2_potential_energy",
+        "U3_S3_conservation"
+      ],
+      "topics": [
+        "work integrals",
+        "potential energy",
+        "conservation"
+      ]
+    },
+    {
+      "unit_code": "U4_systems_of_particles_and_linear_momentum",
+      "title": "Systems of Particles and Linear Momentum",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_cm",
+        "U4_S2_impulse_momentum",
+        "U4_S3_collisions"
+      ],
+      "topics": [
+        "CM",
+        "impulse-momentum",
+        "collisions"
+      ]
+    },
+    {
+      "unit_code": "U5_rotation",
+      "title": "Rotation",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_rigid_body",
+        "U5_S2_torque",
+        "U5_S3_angular_momentum",
+        "U5_S4_rolling"
+      ],
+      "topics": [
+        "rigid body",
+        "torque",
+        "angular momentum",
+        "rolling"
+      ]
+    },
+    {
+      "unit_code": "U6_oscillations",
+      "title": "Oscillations",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_shm_differential_equations",
+        "U6_S2_energy"
+      ],
+      "topics": [
+        "SHM differential equations",
+        "energy"
+      ]
+    },
+    {
+      "unit_code": "U7_gravitation",
+      "title": "Gravitation",
+      "sort_order": 7,
+      "skill_ids": [
+        "U7_S1_newton_s_law",
+        "U7_S2_orbits",
+        "U7_S3_kepler"
+      ],
+      "topics": [
+        "Newton's law",
+        "orbits",
+        "Kepler"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_kinematics": [
+      "U1_S1_1d_2d_kinematics",
+      "U1_S2_calculus_derivatives_of_motion"
+    ],
+    "U2_newton_s_laws_of_motion": [
+      "U2_S1_forces",
+      "U2_S2_systems",
+      "U2_S3_variable_mass_intro"
+    ],
+    "U3_work_energy_and_power": [
+      "U3_S1_work_integrals",
+      "U3_S2_potential_energy",
+      "U3_S3_conservation"
+    ],
+    "U4_systems_of_particles_and_linear_momentum": [
+      "U4_S1_cm",
+      "U4_S2_impulse_momentum",
+      "U4_S3_collisions"
+    ],
+    "U5_rotation": [
+      "U5_S1_rigid_body",
+      "U5_S2_torque",
+      "U5_S3_angular_momentum",
+      "U5_S4_rolling"
+    ],
+    "U6_oscillations": [
+      "U6_S1_shm_differential_equations",
+      "U6_S2_energy"
+    ],
+    "U7_gravitation": [
+      "U7_S1_newton_s_law",
+      "U7_S2_orbits",
+      "U7_S3_kepler"
+    ]
+  }
+}

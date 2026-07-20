@@ -1,0 +1,113 @@
+{
+  "exam_type": "AP_ENGLISH_LIT",
+  "skills": [
+    {
+      "id": "SK_CHAR_SETTING",
+      "unit_code": "U1",
+      "label": "CHAR SETTING",
+      "description": "Short Fiction Foundations: practice skill for char setting."
+    },
+    {
+      "id": "SK_NARRATION_PLOT",
+      "unit_code": "U1",
+      "label": "NARRATION PLOT",
+      "description": "Short Fiction Foundations: practice skill for narration plot."
+    },
+    {
+      "id": "SK_SPEAKER_IMAGERY",
+      "unit_code": "U2",
+      "label": "SPEAKER IMAGERY",
+      "description": "Poetry Foundations: practice skill for speaker imagery."
+    },
+    {
+      "id": "SK_SOUND_STRUCTURE",
+      "unit_code": "U2",
+      "label": "SOUND STRUCTURE",
+      "description": "Poetry Foundations: practice skill for sound structure."
+    },
+    {
+      "id": "SK_DRAMA_STRUCTURE",
+      "unit_code": "U3",
+      "label": "DRAMA STRUCTURE",
+      "description": "Longer Fiction and Drama Foundations: practice skill for drama structure."
+    },
+    {
+      "id": "SK_THEME_EMERGENCE",
+      "unit_code": "U3",
+      "label": "THEME EMERGENCE",
+      "description": "Longer Fiction and Drama Foundations: practice skill for theme emergence."
+    },
+    {
+      "id": "SK_UNRELIABLE_NARRATOR",
+      "unit_code": "U4",
+      "label": "UNRELIABLE NARRATOR",
+      "description": "Short Fiction Complexity: practice skill for unreliable narrator."
+    },
+    {
+      "id": "SK_SYMBOL_AMBIGUITY",
+      "unit_code": "U4",
+      "label": "SYMBOL AMBIGUITY",
+      "description": "Short Fiction Complexity: practice skill for symbol ambiguity."
+    },
+    {
+      "id": "SK_POETIC_FORM",
+      "unit_code": "U5",
+      "label": "POETIC FORM",
+      "description": "Poetry Complexity: practice skill for poetic form."
+    },
+    {
+      "id": "SK_IRONY_CONCEIT",
+      "unit_code": "U5",
+      "label": "IRONY CONCEIT",
+      "description": "Poetry Complexity: practice skill for irony conceit."
+    },
+    {
+      "id": "SK_MOTIF_FOIL",
+      "unit_code": "U6",
+      "label": "MOTIF FOIL",
+      "description": "Longer Works Complexity: practice skill for motif foil."
+    },
+    {
+      "id": "SK_TRAGIC_SOCIAL",
+      "unit_code": "U6",
+      "label": "TRAGIC SOCIAL",
+      "description": "Longer Works Complexity: practice skill for tragic social."
+    },
+    {
+      "id": "SK_MULTIPLE_MEANINGS",
+      "unit_code": "U7",
+      "label": "MULTIPLE MEANINGS",
+      "description": "Short Fiction Interpretation: practice skill for multiple meanings."
+    },
+    {
+      "id": "SK_NARRATIVE_DISTANCE",
+      "unit_code": "U7",
+      "label": "NARRATIVE DISTANCE",
+      "description": "Short Fiction Interpretation: practice skill for narrative distance."
+    },
+    {
+      "id": "SK_TONE_SHIFT",
+      "unit_code": "U8",
+      "label": "TONE SHIFT",
+      "description": "Poetry Interpretation: practice skill for tone shift."
+    },
+    {
+      "id": "SK_ALLUSION_COMPRESSION",
+      "unit_code": "U8",
+      "label": "ALLUSION COMPRESSION",
+      "description": "Poetry Interpretation: practice skill for allusion compression."
+    },
+    {
+      "id": "SK_OPEN_LIT_ARGUMENT",
+      "unit_code": "U9",
+      "label": "OPEN LIT ARGUMENT",
+      "description": "Longer Works and Open Response: practice skill for open lit argument."
+    },
+    {
+      "id": "SK_EVIDENCE_SELECTION",
+      "unit_code": "U9",
+      "label": "EVIDENCE SELECTION",
+      "description": "Longer Works and Open Response: practice skill for evidence selection."
+    }
+  ]
+}

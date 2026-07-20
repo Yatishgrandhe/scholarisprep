@@ -1,0 +1,242 @@
+[
+  {
+    "id": "00dbe391-fe15-48b7-8a6b-14cd899c80e9",
+    "question_text": "The equation $(x - 3)^2 + (y - 3)^2 = 9$ defines a circle in the $xy$-plane. What is the radius of the circle?",
+    "stimulus_text": null,
+    "stimulus_type": null,
+    "question_type": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "$3$",
+        "is_correct": true,
+        "explanation": "Correct. In standard form $(x - h)^2 + (y - k)^2 = r^2$, the right side is $r^2 = 9$, so $r = \\sqrt{9} = 3$."
+      },
+      {
+        "id": "B",
+        "text": "$9$",
+        "is_correct": false,
+        "explanation": "This is $r^2$; the radius is its square root."
+      },
+      {
+        "id": "C",
+        "text": "$5$",
+        "is_correct": false,
+        "explanation": "The radius is $\\sqrt{r^2}$, not half of $r^2$."
+      },
+      {
+        "id": "D",
+        "text": "$6$",
+        "is_correct": false,
+        "explanation": "This is the diameter, not the radius."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation": "**Goal.** The equation $(x - 3)^2 + (y - 3)^2 = 9$ defines a circle in the $xy$-plane. What is the radius of the circle?\n\n**Step 1.** Compare with $(x - h)^2 + (y - k)^2 = r^2$.\n**Step 2.** The right-hand side is $r^2 = 9$.\n**Step 3.** So $r = \\sqrt{9} = 3$.\n\n**Answer: A)** $3$\n\n**Why the other choices are wrong:**\n- **B)** $9$ — This is $r^2$; the radius is its square root.\n- **C)** $5$ — The radius is $\\sqrt{r^2}$, not half of $r^2$.\n- **D)** $6$ — This is the diameter, not the radius.",
+    "has_figure": false,
+    "calculator_allowed": true,
+    "desmos_recommended": false,
+    "source_metadata": "{\"original\":true,\"generator\":\"dsat-math-rebuild.mjs\",\"rebuild_version\":\"dsat_math_rebuild_v2\",\"math_format\":\"circle_svg\",\"math_skill\":\"CIR\",\"tier\":\"easy\",\"question_variant\":\"direct\",\"regenerated_on\":\"2026-06-14\"}",
+    "converted": false
+  },
+  {
+    "id": "04558070-1d8a-43f1-a9b4-0ef0e3e834be",
+    "question_text": "A circle has a radius of 24. What is the circumference of the circle, in terms of $\\pi$?",
+    "stimulus_text": null,
+    "stimulus_type": null,
+    "question_type": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "$24\\pi$",
+        "is_correct": false,
+        "explanation": "This uses $\\pi r$ (one radius) instead of $2\\pi r$."
+      },
+      {
+        "id": "B",
+        "text": "$48\\pi$",
+        "is_correct": true,
+        "explanation": "Correct. Circumference $= 2\\pi r = 2\\pi(24) = 48\\pi$."
+      },
+      {
+        "id": "C",
+        "text": "$96\\pi$",
+        "is_correct": false,
+        "explanation": "This uses $4\\pi r$ — twice the correct circumference."
+      },
+      {
+        "id": "D",
+        "text": "$576\\pi$",
+        "is_correct": false,
+        "explanation": "This is the area $\\pi r^2$, not the circumference."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation": "**Goal.** A circle has a radius of 24. What is the circumference of the circle, in terms of $\\pi$?\n\n**Step 1.** Circumference of a circle is $2\\pi r$.\n**Step 2.** Substitute $r = 24$: $2\\pi(24)$.\n**Step 3.** $= 48\\pi$.\n\n**Answer: B)** $48\\pi$\n\n**Why the other choices are wrong:**\n- **A)** $24\\pi$ — This uses $\\pi r$ (one radius) instead of $2\\pi r$.\n- **C)** $96\\pi$ — This uses $4\\pi r$ — twice the correct circumference.\n- **D)** $576\\pi$ — This is the area $\\pi r^2$, not the circumference.",
+    "has_figure": false,
+    "calculator_allowed": true,
+    "desmos_recommended": false,
+    "source_metadata": "{\"original\":true,\"generator\":\"dsat-math-rebuild.mjs\",\"rebuild_version\":\"dsat_math_rebuild_v2\",\"math_format\":\"circle_svg\",\"math_skill\":\"CIR\",\"tier\":\"easy\",\"question_variant\":\"direct\",\"regenerated_on\":\"2026-06-14\"}",
+    "converted": false
+  },
+  {
+    "id": "083227a3-5ad9-4f75-842c-a81c4aa309ed",
+    "question_text": "A circle has a radius of 19. What is the area of the circle, in terms of $\\pi$?",
+    "stimulus_text": null,
+    "stimulus_type": null,
+    "question_type": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "$1444\\pi$",
+        "is_correct": false,
+        "explanation": "This squares the diameter instead of the radius."
+      },
+      {
+        "id": "B",
+        "text": "$19\\pi$",
+        "is_correct": false,
+        "explanation": "This uses $\\pi r$ instead of $\\pi r^2$."
+      },
+      {
+        "id": "C",
+        "text": "$361\\pi$",
+        "is_correct": true,
+        "explanation": "Correct. Area $= \\pi r^2 = \\pi(19)^2 = 361\\pi$."
+      },
+      {
+        "id": "D",
+        "text": "$38\\pi$",
+        "is_correct": false,
+        "explanation": "This is the circumference $2\\pi r$, not the area."
+      }
+    ],
+    "correct_answer": "C",
+    "explanation": "**Goal.** A circle has a radius of 19. What is the area of the circle, in terms of $\\pi$?\n\n**Step 1.** Area of a circle is $\\pi r^2$.\n**Step 2.** Substitute $r = 19$: $\\pi (19)^2$.\n**Step 3.** $= 361\\pi$.\n\n**Answer: C)** $361\\pi$\n\n**Why the other choices are wrong:**\n- **A)** $1444\\pi$ — This squares the diameter instead of the radius.\n- **B)** $19\\pi$ — This uses $\\pi r$ instead of $\\pi r^2$.\n- **D)** $38\\pi$ — This is the circumference $2\\pi r$, not the area.",
+    "has_figure": false,
+    "calculator_allowed": true,
+    "desmos_recommended": false,
+    "source_metadata": "{\"original\":true,\"generator\":\"dsat-math-rebuild.mjs\",\"rebuild_version\":\"dsat_math_rebuild_v2\",\"math_format\":\"circle_svg\",\"math_skill\":\"CIR\",\"tier\":\"easy\",\"question_variant\":\"direct\",\"regenerated_on\":\"2026-06-14\"}",
+    "converted": false
+  },
+  {
+    "id": "0a7fae43-3ad3-41bd-b394-242020ec0e55",
+    "question_text": "The equation $(x + 1)^2 + (y - 2)^2 = 9$ defines a circle in the $xy$-plane. What is the radius of the circle?",
+    "stimulus_text": null,
+    "stimulus_type": null,
+    "question_type": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "$9$",
+        "is_correct": false,
+        "explanation": "This is $r^2$; the radius is its square root."
+      },
+      {
+        "id": "B",
+        "text": "$5$",
+        "is_correct": false,
+        "explanation": "The radius is $\\sqrt{r^2}$, not half of $r^2$."
+      },
+      {
+        "id": "C",
+        "text": "$6$",
+        "is_correct": false,
+        "explanation": "This is the diameter, not the radius."
+      },
+      {
+        "id": "D",
+        "text": "$3$",
+        "is_correct": true,
+        "explanation": "Correct. In standard form $(x - h)^2 + (y - k)^2 = r^2$, the right side is $r^2 = 9$, so $r = \\sqrt{9} = 3$."
+      }
+    ],
+    "correct_answer": "D",
+    "explanation": "**Goal.** The equation $(x + 1)^2 + (y - 2)^2 = 9$ defines a circle in the $xy$-plane. What is the radius of the circle?\n\n**Step 1.** Compare with $(x - h)^2 + (y - k)^2 = r^2$.\n**Step 2.** The right-hand side is $r^2 = 9$.\n**Step 3.** So $r = \\sqrt{9} = 3$.\n\n**Answer: D)** $3$\n\n**Why the other choices are wrong:**\n- **A)** $9$ — This is $r^2$; the radius is its square root.\n- **B)** $5$ — The radius is $\\sqrt{r^2}$, not half of $r^2$.\n- **C)** $6$ — This is the diameter, not the radius.",
+    "has_figure": false,
+    "calculator_allowed": true,
+    "desmos_recommended": false,
+    "source_metadata": "{\"original\":true,\"generator\":\"dsat-math-rebuild.mjs\",\"rebuild_version\":\"dsat_math_rebuild_v2\",\"math_format\":\"circle_svg\",\"math_skill\":\"CIR\",\"tier\":\"easy\",\"question_variant\":\"direct\",\"regenerated_on\":\"2026-06-14\"}",
+    "converted": false
+  },
+  {
+    "id": "0a80b043-fcd5-4727-bdd1-c9ae60272007",
+    "question_text": "A circle has a radius of 8. What is the area of the circle, in terms of $\\pi$?",
+    "stimulus_text": null,
+    "stimulus_type": null,
+    "question_type": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "$8\\pi$",
+        "is_correct": false,
+        "explanation": "This uses $\\pi r$ instead of $\\pi r^2$."
+      },
+      {
+        "id": "B",
+        "text": "$256\\pi$",
+        "is_correct": false,
+        "explanation": "This squares the diameter instead of the radius."
+      },
+      {
+        "id": "C",
+        "text": "$16\\pi$",
+        "is_correct": false,
+        "explanation": "This is the circumference $2\\pi r$, not the area."
+      },
+      {
+        "id": "D",
+        "text": "$64\\pi$",
+        "is_correct": true,
+        "explanation": "Correct. Area $= \\pi r^2 = \\pi(8)^2 = 64\\pi$."
+      }
+    ],
+    "correct_answer": "D",
+    "explanation": "**Goal.** A circle has a radius of 8. What is the area of the circle, in terms of $\\pi$?\n\n**Step 1.** Area of a circle is $\\pi r^2$.\n**Step 2.** Substitute $r = 8$: $\\pi (8)^2$.\n**Step 3.** $= 64\\pi$.\n\n**Answer: D)** $64\\pi$\n\n**Why the other choices are wrong:**\n- **A)** $8\\pi$ — This uses $\\pi r$ instead of $\\pi r^2$.\n- **B)** $256\\pi$ — This squares the diameter instead of the radius.\n- **C)** $16\\pi$ — This is the circumference $2\\pi r$, not the area.",
+    "has_figure": false,
+    "calculator_allowed": true,
+    "desmos_recommended": false,
+    "source_metadata": "{\"original\":true,\"generator\":\"dsat-math-rebuild.mjs\",\"rebuild_version\":\"dsat_math_rebuild_v2\",\"math_format\":\"circle_svg\",\"math_skill\":\"CIR\",\"tier\":\"easy\",\"question_variant\":\"direct\",\"regenerated_on\":\"2026-06-14\"}",
+    "converted": false
+  },
+  {
+    "id": "0bf660b2-7699-4563-a770-03d7aedcab45",
+    "question_text": "A circle has a radius of 3. What is the circumference of the circle, in terms of $\\pi$?",
+    "stimulus_text": null,
+    "stimulus_type": null,
+    "question_type": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "$12\\pi$",
+        "is_correct": false,
+        "explanation": "This uses $4\\pi r$ — twice the correct circumference."
+      },
+      {
+        "id": "B",
+        "text": "$6\\pi$",
+        "is_correct": true,
+        "explanation": "Correct. Circumference $= 2\\pi r = 2\\pi(3) = 6\\pi$."
+      },
+      {
+        "id": "C",
+        "text": "$3\\pi$",
+        "is_correct": false,
+        "explanation": "This uses $\\pi r$ (one radius) instead of $2\\pi r$."
+      },
+      {
+        "id": "D",
+        "text": "$9\\pi$",
+        "is_correct": false,
+        "explanation": "This is the area $\\pi r^2$, not the circumference."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation": "**Goal.** A circle has a radius of 3. What is the circumference of the circle, in terms of $\\pi$?\n\n**Step 1.** Circumference of a circle is $2\\pi r$.\n**Step 2.** Substitute $r = 3$: $2\\pi(3)$.\n**Step 3.** $= 6\\pi$.\n\n**Answer: B)** $6\\pi$\n\n**Why the other choices are wrong:**\n- **A)** $12\\pi$ — This uses $4\\pi r$ — twice the correct circumference.\n- **C)** $3\\pi$ — This uses $\\pi r$ (one radius) instead of $2\\pi r$.\n- **D)** $9\\pi$ — This is the area $\\pi r^2$, not the circumference.",
+    "has_figure": false,
+    "calculator_allowed": true,
+    "desmos_recommended": false,
+    "source_metadata": "{\"original\":true,\"generator\":\"dsat-math-rebuild.mjs\",\"rebuild_version\":\"dsat_math_rebuild_v2\",\"math_format\":\"circle_svg\",\"math_skill\":\"CIR\",\"tier\":\"easy\",\"question_variant\":\"direct\",\"regenerated_on\":\"2026-06-14\"}",
+    "converted": false
+  }
+]

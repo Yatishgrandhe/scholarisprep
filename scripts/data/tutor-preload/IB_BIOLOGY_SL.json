@@ -1,0 +1,53 @@
+{
+  "exam_type": "IB_BIOLOGY_SL",
+  "display_name": "IB Biology SL",
+  "units": [
+    "Cell biology",
+    "Molecular biology",
+    "Genetics",
+    "Ecology",
+    "Evolution & biodiversity",
+    "Human physiology",
+    "Experimental & IA skills"
+  ],
+  "command_terms": [
+    "state",
+    "outline",
+    "describe",
+    "explain",
+    "calculate",
+    "determine",
+    "deduce",
+    "suggest",
+    "discuss",
+    "evaluate",
+    "design"
+  ],
+  "misconceptions": [
+    "confusing precision and accuracy",
+    "skipping significant figures",
+    "command term mismatch"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_cell_biology skill focus: ultrastructure",
+    "Keep unit_code=U2_molecular_biology skill focus: water",
+    "Keep unit_code=U3_genetics skill focus: genes",
+    "Keep unit_code=U4_ecology skill focus: species",
+    "Keep unit_code=U5_evolution_biodiversity skill focus: evidence",
+    "Keep unit_code=U6_human_physiology skill focus: digestion",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

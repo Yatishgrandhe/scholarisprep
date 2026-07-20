@@ -1,0 +1,3732 @@
+{
+  "version": 1,
+  "updated": "2026-07-16",
+  "description": "Exhaustive AP (~40 official + 4 legacy aliases) and IB DP (SL/HL + Core + language packs) course catalog for Scholaris expansion.",
+  "form_ids": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J"
+  ],
+  "stats": {
+    "ap_primary": 39,
+    "ap_legacy": 4,
+    "ib": 51,
+    "total": 94
+  },
+  "courses": [
+    {
+      "exam_type": "AP_SEMINAR",
+      "display_name": "AP Seminar",
+      "family": "AP",
+      "category": "Capstone",
+      "short_code": "AP_SEMINAR",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Performance Tasks",
+        "End-of-Course Exam"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.4,
+        "frq": 0.6
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 120
+      },
+      "exam_duration_minutes": 120,
+      "total_questions_full_exam": null,
+      "passing_score": 3,
+      "has_stimulus": false,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "scaffold",
+      "notes": "Performance tasks + EOCE"
+    },
+    {
+      "exam_type": "AP_ART_HISTORY",
+      "display_name": "AP Art History",
+      "family": "AP",
+      "category": "Arts",
+      "short_code": "AP_ART_HISTORY",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 80,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_MUSIC_THEORY",
+      "display_name": "AP Music Theory",
+      "family": "AP",
+      "category": "Arts",
+      "short_code": "AP_MUSIC_THEORY",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response",
+        "Sight Singing"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.45,
+        "frq": 0.55
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 160
+      },
+      "exam_duration_minutes": 160,
+      "total_questions_full_exam": 75,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_2D_ART_DESIGN",
+      "display_name": "AP 2-D Art and Design",
+      "family": "AP",
+      "category": "Arts",
+      "short_code": "AP_2D_ART_DESIGN",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Selected Works",
+        "Sustained Investigation"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {},
+      "exam_duration_minutes": null,
+      "total_questions_full_exam": null,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "portfolio"
+    },
+    {
+      "exam_type": "AP_3D_ART_DESIGN",
+      "display_name": "AP 3-D Art and Design",
+      "family": "AP",
+      "category": "Arts",
+      "short_code": "AP_3D_ART_DESIGN",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Selected Works",
+        "Sustained Investigation"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {},
+      "exam_duration_minutes": null,
+      "total_questions_full_exam": null,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "portfolio"
+    },
+    {
+      "exam_type": "AP_DRAWING",
+      "display_name": "AP Drawing",
+      "family": "AP",
+      "category": "Arts",
+      "short_code": "AP_DRAWING",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Selected Works",
+        "Sustained Investigation"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {},
+      "exam_duration_minutes": null,
+      "total_questions_full_exam": null,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "portfolio"
+    },
+    {
+      "exam_type": "AP_ENGLISH_LANG",
+      "display_name": "AP English Language and Composition",
+      "family": "AP",
+      "category": "English",
+      "short_code": "AP_ENGLISH_LANG",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.45,
+        "frq": 0.55
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 195
+      },
+      "exam_duration_minutes": 195,
+      "total_questions_full_exam": 45,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_ENGLISH_LIT",
+      "display_name": "AP English Literature and Composition",
+      "family": "AP",
+      "category": "English",
+      "short_code": "AP_ENGLISH_LIT",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.45,
+        "frq": 0.55
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 55,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_AFRICAN_AMERICAN_STUDIES",
+      "display_name": "AP African American Studies",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_AFRICAN_AMERICAN_STUDIES",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.6,
+        "frq": 0.4
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 60,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_COMPARATIVE_GOVERNMENT",
+      "display_name": "AP Comparative Government and Politics",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_COMPARATIVE_GOVERNMENT",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 150
+      },
+      "exam_duration_minutes": 150,
+      "total_questions_full_exam": 55,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_EUROPEAN_HISTORY",
+      "display_name": "AP European History",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_EUROPEAN_HISTORY",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Short Answer",
+        "DBQ",
+        "Long Essay"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.4,
+        "frq": 0.6
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 195
+      },
+      "exam_duration_minutes": 195,
+      "total_questions_full_exam": 55,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_HUMAN_GEOGRAPHY",
+      "display_name": "AP Human Geography",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_HUMAN_GEOGRAPHY",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 135
+      },
+      "exam_duration_minutes": 135,
+      "total_questions_full_exam": 60,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_MACROECONOMICS",
+      "display_name": "AP Macroeconomics",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_MACROECONOMICS",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.66,
+        "frq": 0.34
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 130
+      },
+      "exam_duration_minutes": 130,
+      "total_questions_full_exam": 60,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_MICROECONOMICS",
+      "display_name": "AP Microeconomics",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_MICROECONOMICS",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.66,
+        "frq": 0.34
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 130
+      },
+      "exam_duration_minutes": 130,
+      "total_questions_full_exam": 60,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_PSYCHOLOGY",
+      "display_name": "AP Psychology",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_PSYCHOLOGY",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.67,
+        "frq": 0.33
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 120
+      },
+      "exam_duration_minutes": 120,
+      "total_questions_full_exam": 100,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_US_GOVERNMENT",
+      "display_name": "AP United States Government and Politics",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_US_GOVERNMENT",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 55,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_US_HISTORY",
+      "display_name": "AP United States History",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_US_HISTORY",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Short Answer",
+        "DBQ",
+        "Long Essay"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.4,
+        "frq": 0.6
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 195
+      },
+      "exam_duration_minutes": 195,
+      "total_questions_full_exam": 55,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_WORLD_HISTORY",
+      "display_name": "AP World History: Modern",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_WORLD_HISTORY",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Short Answer",
+        "DBQ",
+        "Long Essay"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.4,
+        "frq": 0.6
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 195
+      },
+      "exam_duration_minutes": 195,
+      "total_questions_full_exam": 55,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_CALCULUS_AB",
+      "display_name": "AP Calculus AB",
+      "family": "AP",
+      "category": "Math and Computer Science",
+      "short_code": "AP_CALCULUS_AB",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "MCQ Part A (no calc)",
+        "MCQ Part B (calc)",
+        "FRQ Part A (calc)",
+        "FRQ Part B (no calc)"
+      ],
+      "calculator_policy": "graphing",
+      "calculator_notes": "Part A MCQ no calculator; Part B MCQ + FRQ Part A graphing; FRQ Part B no calc",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 195
+      },
+      "exam_duration_minutes": 195,
+      "total_questions_full_exam": 51,
+      "passing_score": 3,
+      "has_stimulus": false,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_CALCULUS_BC",
+      "display_name": "AP Calculus BC",
+      "family": "AP",
+      "category": "Math and Computer Science",
+      "short_code": "AP_CALCULUS_BC",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "MCQ Part A (no calc)",
+        "MCQ Part B (calc)",
+        "FRQ Part A (calc)",
+        "FRQ Part B (no calc)"
+      ],
+      "calculator_policy": "graphing",
+      "calculator_notes": "Same calculator section split as AB",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 195
+      },
+      "exam_duration_minutes": 195,
+      "total_questions_full_exam": 51,
+      "passing_score": 3,
+      "has_stimulus": false,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_PRECALCULUS",
+      "display_name": "AP Precalculus",
+      "family": "AP",
+      "category": "Math and Computer Science",
+      "short_code": "AP_PRECALCULUS",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "graphing",
+      "calculator_notes": "Graphing calculator required for designated parts",
+      "question_mix": {
+        "mcq": 0.625,
+        "frq": 0.375
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 40,
+      "passing_score": 3,
+      "has_stimulus": false,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_STATISTICS",
+      "display_name": "AP Statistics",
+      "family": "AP",
+      "category": "Math and Computer Science",
+      "short_code": "AP_STATISTICS",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "graphing",
+      "calculator_notes": "Graphing calculator expected on nearly all items",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 40,
+      "passing_score": 3,
+      "has_stimulus": false,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_COMPUTER_SCIENCE_A",
+      "display_name": "AP Computer Science A",
+      "family": "AP",
+      "category": "Math and Computer Science",
+      "short_code": "AP_COMPUTER_SCIENCE_A",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 40,
+      "passing_score": 3,
+      "has_stimulus": false,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_COMPUTER_SCIENCE_PRINCIPLES",
+      "display_name": "AP Computer Science Principles",
+      "family": "AP",
+      "category": "Math and Computer Science",
+      "short_code": "AP_COMPUTER_SCIENCE_PRINCIPLES",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Create Performance Task",
+        "End-of-Course Multiple Choice"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.7,
+        "frq": 0.3
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 120
+      },
+      "exam_duration_minutes": 120,
+      "total_questions_full_exam": 70,
+      "passing_score": 3,
+      "has_stimulus": false,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "scaffold"
+    },
+    {
+      "exam_type": "AP_BIOLOGY",
+      "display_name": "AP Biology",
+      "family": "AP",
+      "category": "Sciences",
+      "short_code": "AP_BIOLOGY",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "Four-function allowed on some items historically; default none unless CED says otherwise",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 60,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_CHEMISTRY",
+      "display_name": "AP Chemistry",
+      "family": "AP",
+      "category": "Sciences",
+      "short_code": "AP_CHEMISTRY",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "Scientific calculator per exam rules",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 195
+      },
+      "exam_duration_minutes": 195,
+      "total_questions_full_exam": 60,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_ENVIRONMENTAL_SCIENCE",
+      "display_name": "AP Environmental Science",
+      "family": "AP",
+      "category": "Sciences",
+      "short_code": "AP_ENVIRONMENTAL_SCIENCE",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.6,
+        "frq": 0.4
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 160
+      },
+      "exam_duration_minutes": 160,
+      "total_questions_full_exam": 80,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_PHYSICS_1",
+      "display_name": "AP Physics 1: Algebra-Based",
+      "family": "AP",
+      "category": "Sciences",
+      "short_code": "AP_PHYSICS_1",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "Scientific calculator per exam rules",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 50,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_PHYSICS_2",
+      "display_name": "AP Physics 2: Algebra-Based",
+      "family": "AP",
+      "category": "Sciences",
+      "short_code": "AP_PHYSICS_2",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "Scientific calculator per exam rules",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 50,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_PHYSICS_C_MECHANICS",
+      "display_name": "AP Physics C: Mechanics",
+      "family": "AP",
+      "category": "Sciences",
+      "short_code": "AP_PHYSICS_C_MECHANICS",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "Scientific calculator per exam rules",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 90
+      },
+      "exam_duration_minutes": 90,
+      "total_questions_full_exam": 35,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_PHYSICS_C_EM",
+      "display_name": "AP Physics C: Electricity and Magnetism",
+      "family": "AP",
+      "category": "Sciences",
+      "short_code": "AP_PHYSICS_C_EM",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "Scientific calculator per exam rules",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 90
+      },
+      "exam_duration_minutes": 90,
+      "total_questions_full_exam": 35,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_CHINESE",
+      "display_name": "AP Chinese Language and Culture",
+      "family": "AP",
+      "category": "World Languages and Cultures",
+      "short_code": "AP_CHINESE",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 120
+      },
+      "exam_duration_minutes": 120,
+      "total_questions_full_exam": 70,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_FRENCH",
+      "display_name": "AP French Language and Culture",
+      "family": "AP",
+      "category": "World Languages and Cultures",
+      "short_code": "AP_FRENCH",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 140
+      },
+      "exam_duration_minutes": 140,
+      "total_questions_full_exam": 65,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_GERMAN",
+      "display_name": "AP German Language and Culture",
+      "family": "AP",
+      "category": "World Languages and Cultures",
+      "short_code": "AP_GERMAN",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 140
+      },
+      "exam_duration_minutes": 140,
+      "total_questions_full_exam": 65,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_ITALIAN",
+      "display_name": "AP Italian Language and Culture",
+      "family": "AP",
+      "category": "World Languages and Cultures",
+      "short_code": "AP_ITALIAN",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 140
+      },
+      "exam_duration_minutes": 140,
+      "total_questions_full_exam": 65,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_JAPANESE",
+      "display_name": "AP Japanese Language and Culture",
+      "family": "AP",
+      "category": "World Languages and Cultures",
+      "short_code": "AP_JAPANESE",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 120
+      },
+      "exam_duration_minutes": 120,
+      "total_questions_full_exam": 70,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_LATIN",
+      "display_name": "AP Latin",
+      "family": "AP",
+      "category": "World Languages and Cultures",
+      "short_code": "AP_LATIN",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 50,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_SPANISH_LANG",
+      "display_name": "AP Spanish Language and Culture",
+      "family": "AP",
+      "category": "World Languages and Cultures",
+      "short_code": "AP_SPANISH_LANG",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 140
+      },
+      "exam_duration_minutes": 140,
+      "total_questions_full_exam": 65,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_SPANISH_LIT",
+      "display_name": "AP Spanish Literature and Culture",
+      "family": "AP",
+      "category": "World Languages and Cultures",
+      "short_code": "AP_SPANISH_LIT",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 65,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard"
+    },
+    {
+      "exam_type": "AP_PHYSICS",
+      "display_name": "AP Physics (legacy alias)",
+      "family": "AP",
+      "category": "Sciences",
+      "short_code": "AP_PHYSICS",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "Scientific calculator per exam rules",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 50,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": true,
+      "bank_mode": "standard",
+      "aliases_to": "AP_PHYSICS_1",
+      "notes": "Legacy coarse enum — prefer AP_PHYSICS_1/2/C_*"
+    },
+    {
+      "exam_type": "AP_ENGLISH",
+      "display_name": "AP English Language (legacy alias)",
+      "family": "AP",
+      "category": "English",
+      "short_code": "AP_ENGLISH",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.45,
+        "frq": 0.55
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 195
+      },
+      "exam_duration_minutes": 195,
+      "total_questions_full_exam": 45,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": true,
+      "bank_mode": "standard",
+      "aliases_to": "AP_ENGLISH_LANG",
+      "notes": "Legacy coarse enum — prefer AP_ENGLISH_LANG / AP_ENGLISH_LIT"
+    },
+    {
+      "exam_type": "AP_ECONOMICS",
+      "display_name": "AP Microeconomics (legacy alias)",
+      "family": "AP",
+      "category": "History and Social Sciences",
+      "short_code": "AP_ECONOMICS",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.66,
+        "frq": 0.34
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 130
+      },
+      "exam_duration_minutes": 130,
+      "total_questions_full_exam": 60,
+      "passing_score": 3,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": true,
+      "bank_mode": "standard",
+      "aliases_to": "AP_MICROECONOMICS",
+      "notes": "Legacy coarse enum — prefer AP_MICROECONOMICS / AP_MACROECONOMICS"
+    },
+    {
+      "exam_type": "AP_COMPUTER_SCIENCE",
+      "display_name": "AP Computer Science A (legacy alias)",
+      "family": "AP",
+      "category": "Math and Computer Science",
+      "short_code": "AP_COMPUTER_SCIENCE",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.5,
+        "frq": 0.5
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 5
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": 40,
+      "passing_score": 3,
+      "has_stimulus": false,
+      "stimulus_types": [],
+      "legacy": true,
+      "bank_mode": "standard",
+      "aliases_to": "AP_COMPUTER_SCIENCE_A",
+      "notes": "Legacy coarse enum — prefer AP_COMPUTER_SCIENCE_A / CSP"
+    },
+    {
+      "exam_type": "IB_ENG_A_LIT_SL",
+      "display_name": "IB English A: Literature SL",
+      "family": "IB",
+      "category": "Group 1",
+      "short_code": "IB_ENG_A_LIT_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 240
+      },
+      "exam_duration_minutes": 240,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 1,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_ENG_A_LIT_HL",
+      "display_name": "IB English A: Literature HL",
+      "family": "IB",
+      "category": "Group 1",
+      "short_code": "IB_ENG_A_LIT_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 300
+      },
+      "exam_duration_minutes": 300,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 1,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_ENG_A_LAL_SL",
+      "display_name": "IB English A: Language and Literature SL",
+      "family": "IB",
+      "category": "Group 1",
+      "short_code": "IB_ENG_A_LAL_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 240
+      },
+      "exam_duration_minutes": 240,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 1,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_ENG_A_LAL_HL",
+      "display_name": "IB English A: Language and Literature HL",
+      "family": "IB",
+      "category": "Group 1",
+      "short_code": "IB_ENG_A_LAL_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 300
+      },
+      "exam_duration_minutes": 300,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 1,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_LANG_A_LIT_PACK",
+      "display_name": "IB Language A: Literature (other languages)",
+      "family": "IB",
+      "category": "Group 1",
+      "short_code": "IB_LANG_A_LIT_PACK",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 240
+      },
+      "exam_duration_minutes": 240,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "scaffold",
+      "notes": "Template pack — language param for non-English Lit A",
+      "ib_group": 1,
+      "language_pack": true
+    },
+    {
+      "exam_type": "IB_LANG_A_LAL_PACK",
+      "display_name": "IB Language A: Language and Literature (other languages)",
+      "family": "IB",
+      "category": "Group 1",
+      "short_code": "IB_LANG_A_LAL_PACK",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 240
+      },
+      "exam_duration_minutes": 240,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "scaffold",
+      "notes": "Template pack — language param for non-English L&L A",
+      "ib_group": 1,
+      "language_pack": true
+    },
+    {
+      "exam_type": "IB_ENG_B_SL",
+      "display_name": "IB English B SL",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_ENG_B_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 210
+      },
+      "exam_duration_minutes": 210,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 2,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_ENG_B_HL",
+      "display_name": "IB English B HL",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_ENG_B_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 2,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_SPANISH_B_SL",
+      "display_name": "IB Spanish B SL",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_SPANISH_B_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 210
+      },
+      "exam_duration_minutes": 210,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 2,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_SPANISH_B_HL",
+      "display_name": "IB Spanish B HL",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_SPANISH_B_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 2,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_FRENCH_B_SL",
+      "display_name": "IB French B SL",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_FRENCH_B_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 210
+      },
+      "exam_duration_minutes": 210,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 2,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_FRENCH_B_HL",
+      "display_name": "IB French B HL",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_FRENCH_B_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 2,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_LANG_B_PACK",
+      "display_name": "IB Language B (other languages)",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_LANG_B_PACK",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 210
+      },
+      "exam_duration_minutes": 210,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "scaffold",
+      "notes": "Template pack for Language B beyond Eng/Spa/Fre",
+      "ib_group": 2,
+      "language_pack": true
+    },
+    {
+      "exam_type": "IB_LANG_AB_INITIO_PACK",
+      "display_name": "IB Language ab initio",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_LANG_AB_INITIO_PACK",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "scaffold",
+      "notes": "ab initio SL template — language param",
+      "ib_group": 2,
+      "level": "SL",
+      "language_pack": true
+    },
+    {
+      "exam_type": "IB_CLASSICAL_LANG_SL",
+      "display_name": "IB Classical Languages SL",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_CLASSICAL_LANG_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 2,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_CLASSICAL_LANG_HL",
+      "display_name": "IB Classical Languages HL",
+      "family": "IB",
+      "category": "Group 2",
+      "short_code": "IB_CLASSICAL_LANG_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 240
+      },
+      "exam_duration_minutes": 240,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 2,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_HISTORY_SL",
+      "display_name": "IB History SL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_HISTORY_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.2,
+        "frq": 0.8
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_HISTORY_HL",
+      "display_name": "IB History HL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_HISTORY_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.2,
+        "frq": 0.8
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_ECONOMICS_SL",
+      "display_name": "IB Economics SL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_ECONOMICS_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_ECONOMICS_HL",
+      "display_name": "IB Economics HL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_ECONOMICS_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_PSYCHOLOGY_SL",
+      "display_name": "IB Psychology SL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_PSYCHOLOGY_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_PSYCHOLOGY_HL",
+      "display_name": "IB Psychology HL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_PSYCHOLOGY_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_BUSINESS_MANAGEMENT_SL",
+      "display_name": "IB Business Management SL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_BUSINESS_MANAGEMENT_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_BUSINESS_MANAGEMENT_HL",
+      "display_name": "IB Business Management HL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_BUSINESS_MANAGEMENT_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_GEOGRAPHY_SL",
+      "display_name": "IB Geography SL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_GEOGRAPHY_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_GEOGRAPHY_HL",
+      "display_name": "IB Geography HL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_GEOGRAPHY_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_GLOBAL_POLITICS_SL",
+      "display_name": "IB Global Politics SL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_GLOBAL_POLITICS_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_GLOBAL_POLITICS_HL",
+      "display_name": "IB Global Politics HL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_GLOBAL_POLITICS_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_PHILOSOPHY_SL",
+      "display_name": "IB Philosophy SL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_PHILOSOPHY_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_PHILOSOPHY_HL",
+      "display_name": "IB Philosophy HL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_PHILOSOPHY_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0,
+        "frq": 1
+      },
+      "question_formats": [
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_ANTHROPOLOGY_SL",
+      "display_name": "IB Social and Cultural Anthropology SL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_ANTHROPOLOGY_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_ANTHROPOLOGY_HL",
+      "display_name": "IB Social and Cultural Anthropology HL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_ANTHROPOLOGY_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.25,
+        "frq": 0.75
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_WORLD_RELIGIONS_SL",
+      "display_name": "IB World Religions SL",
+      "family": "IB",
+      "category": "Group 3",
+      "short_code": "IB_WORLD_RELIGIONS_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 3,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_BIOLOGY_SL",
+      "display_name": "IB Biology SL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_BIOLOGY_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_BIOLOGY_HL",
+      "display_name": "IB Biology HL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_BIOLOGY_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "HL Paper 3 typically included; calculator per paper rules",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_CHEMISTRY_SL",
+      "display_name": "IB Chemistry SL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_CHEMISTRY_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_CHEMISTRY_HL",
+      "display_name": "IB Chemistry HL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_CHEMISTRY_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "HL Paper 3 typically included; calculator per paper rules",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_PHYSICS_SL",
+      "display_name": "IB Physics SL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_PHYSICS_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_PHYSICS_HL",
+      "display_name": "IB Physics HL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_PHYSICS_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "scientific",
+      "calculator_notes": "HL Paper 3 typically included; calculator per paper rules",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_COMPUTER_SCIENCE_SL",
+      "display_name": "IB Computer Science SL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_COMPUTER_SCIENCE_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+      "question_mix": {
+        "mcq": 0.4,
+        "frq": 0.6
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_COMPUTER_SCIENCE_HL",
+      "display_name": "IB Computer Science HL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_COMPUTER_SCIENCE_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "HL Paper 3 typically included; calculator per paper rules",
+      "question_mix": {
+        "mcq": 0.4,
+        "frq": 0.6
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_DESIGN_TECHNOLOGY_SL",
+      "display_name": "IB Design Technology SL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_DESIGN_TECHNOLOGY_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_DESIGN_TECHNOLOGY_HL",
+      "display_name": "IB Design Technology HL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_DESIGN_TECHNOLOGY_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "HL Paper 3 typically included; calculator per paper rules",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_SEHS_SL",
+      "display_name": "IB Sports, Exercise and Health Science SL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_SEHS_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_SEHS_HL",
+      "display_name": "IB Sports, Exercise and Health Science HL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_SEHS_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "HL Paper 3 typically included; calculator per paper rules",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 4,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_ESS_SL",
+      "display_name": "IB Environmental Systems and Societies SL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_ESS_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "notes": "Cross-disciplinary Group 3/4 subject",
+      "ib_group": 4,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_ESS_HL",
+      "display_name": "IB Environmental Systems and Societies HL",
+      "family": "IB",
+      "category": "Group 4",
+      "short_code": "IB_ESS_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "none",
+      "calculator_notes": "No calculator",
+      "question_mix": {
+        "mcq": 0.35,
+        "frq": 0.65
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 270
+      },
+      "exam_duration_minutes": 270,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "notes": "Cross-disciplinary Group 3/4 subject",
+      "ib_group": 4,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_MATH_AA_SL",
+      "display_name": "IB Mathematics: Analysis and Approaches SL",
+      "family": "IB",
+      "category": "Group 5",
+      "short_code": "IB_MATH_AA_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1 (no GDC)",
+        "Paper 2 (GDC)"
+      ],
+      "calculator_policy": "graphing",
+      "calculator_notes": "Paper 1 no GDC; Paper 2 GDC → Desmos graphing when allowed",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 5,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_MATH_AA_HL",
+      "display_name": "IB Mathematics: Analysis and Approaches HL",
+      "family": "IB",
+      "category": "Group 5",
+      "short_code": "IB_MATH_AA_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1 (no GDC)",
+        "Paper 2 (GDC)",
+        "Paper 3 (GDC)"
+      ],
+      "calculator_policy": "graphing",
+      "calculator_notes": "Paper 1 no GDC; Papers 2/3 GDC",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 300
+      },
+      "exam_duration_minutes": 300,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 5,
+      "level": "HL"
+    },
+    {
+      "exam_type": "IB_MATH_AI_SL",
+      "display_name": "IB Mathematics: Applications and Interpretation SL",
+      "family": "IB",
+      "category": "Group 5",
+      "short_code": "IB_MATH_AI_SL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2"
+      ],
+      "calculator_policy": "graphing",
+      "calculator_notes": "Technology-required papers → graphing when allowed",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 180
+      },
+      "exam_duration_minutes": 180,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 5,
+      "level": "SL"
+    },
+    {
+      "exam_type": "IB_MATH_AI_HL",
+      "display_name": "IB Mathematics: Applications and Interpretation HL",
+      "family": "IB",
+      "category": "Group 5",
+      "short_code": "IB_MATH_AI_HL",
+      "units": [],
+      "form_count": 10,
+      "sections": [
+        "Paper 1",
+        "Paper 2",
+        "Paper 3"
+      ],
+      "calculator_policy": "graphing",
+      "calculator_notes": "Technology-required; GDC/Desmos when paper allows",
+      "question_mix": {
+        "mcq": 0.3,
+        "frq": 0.7
+      },
+      "question_formats": [
+        "multiple_choice",
+        "free_response",
+        "short_answer"
+      ],
+      "score_range": {
+        "min": 1,
+        "max": 7
+      },
+      "time_limits": {
+        "total_minutes": 300
+      },
+      "exam_duration_minutes": 300,
+      "total_questions_full_exam": null,
+      "passing_score": 4,
+      "has_stimulus": true,
+      "stimulus_types": [],
+      "legacy": false,
+      "bank_mode": "standard",
+      "ib_group": 5,
+      "level": "HL"
+    }
+  ]
+}

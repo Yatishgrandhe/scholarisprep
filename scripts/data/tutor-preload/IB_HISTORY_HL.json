@@ -1,0 +1,54 @@
+{
+  "exam_type": "IB_HISTORY_HL",
+  "display_name": "IB History HL",
+  "units": [
+    "Historical skills & source work",
+    "Prescribed subject themes",
+    "World history topic 1",
+    "World history topic 2",
+    "World history topic 3",
+    "Regional study depth",
+    "Essay construction",
+    "Internal assessment skills"
+  ],
+  "command_terms": [
+    "define",
+    "describe",
+    "explain",
+    "analyse",
+    "compare",
+    "contrast",
+    "discuss",
+    "evaluate",
+    "to what extent",
+    "examine"
+  ],
+  "misconceptions": [
+    "narrative without analysis",
+    "sources taken at face value",
+    "ignoring historiography"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it",
+    "Paper 3: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_historical_skills_source_work skill focus: OPVL",
+    "Keep unit_code=U2_prescribed_subject_themes skill focus: move to global war",
+    "Keep unit_code=U3_world_history_topic_1 skill focus: society and economy",
+    "Keep unit_code=U4_world_history_topic_2 skill focus: authoritarian states",
+    "Keep unit_code=U5_world_history_topic_3 skill focus: independence movements",
+    "Keep unit_code=U6_regional_study_depth skill focus: political developments",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

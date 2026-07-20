@@ -1,0 +1,109 @@
+{
+  "exam_type": "IB_LANG_A_LIT_PACK",
+  "display_name": "IB Language A: Literature (other languages)",
+  "family": "IB",
+  "units": [
+    {
+      "unit_code": "U1_readers_writers_and_texts",
+      "unit_name": "Readers, Writers and Texts",
+      "topics": [
+        "reader response",
+        "authorial choices",
+        "literary forms"
+      ]
+    },
+    {
+      "unit_code": "U2_time_and_space",
+      "unit_name": "Time and Space",
+      "topics": [
+        "cultural context",
+        "historical setting",
+        "intercultural reading"
+      ]
+    },
+    {
+      "unit_code": "U3_intertextuality_connecting_texts",
+      "unit_name": "Intertextuality: Connecting Texts",
+      "topics": [
+        "allusion",
+        "genre conversation",
+        "comparative links"
+      ]
+    },
+    {
+      "unit_code": "U4_assessment_skills",
+      "unit_name": "Assessment Skills",
+      "topics": [
+        "Paper 1 unseen",
+        "Paper 2 comparative",
+        "HL essay / IO prep"
+      ]
+    }
+  ],
+  "command_terms": [
+    "analyse",
+    "compare",
+    "evaluate",
+    "discuss",
+    "explore",
+    "comment on"
+  ],
+  "misconceptions": [
+    "Plot summary without literary analysis",
+    "Ignoring authorial choices / stylistic features",
+    "Weak thesis that does not address the guiding question",
+    "Overgeneralizing from one extract"
+  ],
+  "paper_rules": [
+    "SL: Paper 1 guided analysis + Paper 2 comparative; IO required",
+    "Use precise literary terminology; quote and unpack",
+    "Contextual comments must serve the argument"
+  ],
+  "calculator": {
+    "policy": "none",
+    "notes": "No calculator",
+    "section_rules": [
+      {
+        "section": "all",
+        "calculator_allowed": false
+      }
+    ],
+    "per_question_default": false,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "No Desmos block; calculator not used.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "IB DP item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Respect command terms and paper criteria"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": null
+}

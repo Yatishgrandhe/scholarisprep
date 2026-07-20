@@ -1,0 +1,151 @@
+{
+  "exam_type": "AP_LATIN",
+  "display_name": "AP Latin",
+  "family": "AP",
+  "units": [
+    {
+      "unit_code": "U1_vergil_aeneid_book_1",
+      "unit_name": "Vergil Aeneid Book 1",
+      "topics": [
+        "epic opening",
+        "storm",
+        "Carthage",
+        "sight translation skills"
+      ]
+    },
+    {
+      "unit_code": "U2_vergil_aeneid_book_2",
+      "unit_name": "Vergil Aeneid Book 2",
+      "topics": [
+        "fall of Troy",
+        "Laocoön",
+        "Aeneas narrative"
+      ]
+    },
+    {
+      "unit_code": "U3_vergil_aeneid_book_4",
+      "unit_name": "Vergil Aeneid Book 4",
+      "topics": [
+        "Dido",
+        "pathos",
+        "divine interference"
+      ]
+    },
+    {
+      "unit_code": "U4_vergil_aeneid_book_6",
+      "unit_name": "Vergil Aeneid Book 6",
+      "topics": [
+        "underworld",
+        "prophecy",
+        "Roman destiny"
+      ]
+    },
+    {
+      "unit_code": "U5_caesar_gallic_war_book_1",
+      "unit_name": "Caesar Gallic War Book 1",
+      "topics": [
+        "Helvetii",
+        "oratio obliqua",
+        "campaign narrative"
+      ]
+    },
+    {
+      "unit_code": "U6_caesar_gallic_war_book_4",
+      "unit_name": "Caesar Gallic War Book 4",
+      "topics": [
+        "Britain",
+        "bridge",
+        "ethnography"
+      ]
+    },
+    {
+      "unit_code": "U7_caesar_gallic_war_book_5_6_selections",
+      "unit_name": "Caesar Gallic War Book 5–6 selections",
+      "topics": [
+        "winter camps",
+        "German customs"
+      ]
+    },
+    {
+      "unit_code": "U8_sight_reading_and_context",
+      "unit_name": "Sight Reading and Context",
+      "topics": [
+        "unseen prose/poetry",
+        "figures of speech",
+        "meter basics"
+      ]
+    }
+  ],
+  "command_terms": [
+    "translate",
+    "analyze style",
+    "identify figure",
+    "scan",
+    "contextualize"
+  ],
+  "misconceptions": [
+    "Guessing from English cognates without grammar",
+    "Ignoring case endings in sight passages",
+    "Style questions answered with plot only"
+  ],
+  "paper_rules": [
+    "Syllabus readings + sight Latin",
+    "Support answers with Latin text citations",
+    "Know required figures of speech and meter basics for poetry"
+  ],
+  "calculator": {
+    "policy": "none",
+    "notes": "No calculator",
+    "section_rules": [
+      {
+        "section": "all",
+        "calculator_allowed": false
+      }
+    ],
+    "per_question_default": false,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "No Desmos block; calculator not used.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "AP CED-aligned item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Match AP task model for the unit"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": {
+    "title": "AP Latin grammar & figures sheet",
+    "sections": [
+      "Case uses",
+      "Common subordinate clauses",
+      "Figures of speech",
+      "Dactylic hexameter basics"
+    ]
+  }
+}

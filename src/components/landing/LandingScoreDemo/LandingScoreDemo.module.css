@@ -1,0 +1,52 @@
+/* Landing chrome around the shared home/ScoreDemo panel — glow backdrop +
+   GSAP entrance target. ScoreDemo's own section (padding, borders, gauge,
+   slider) is left untouched; matches the LandingLiveDemo shell pattern. */
+
+.demoShell {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.demoGlow {
+  position: absolute;
+  top: -160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1100px;
+  height: 560px;
+  background:
+    radial-gradient(
+      42% 55% at 30% 35%,
+      hsl(var(--primary) / 0.12) 0%,
+      transparent 72%
+    ),
+    radial-gradient(
+      42% 55% at 72% 55%,
+      hsl(var(--exam-sat) / 0.1) 0%,
+      transparent 72%
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+
+:global(.dark) .demoGlow {
+  background:
+    radial-gradient(
+      42% 55% at 30% 35%,
+      hsl(var(--primary) / 0.2) 0%,
+      transparent 72%
+    ),
+    radial-gradient(
+      42% 55% at 72% 55%,
+      hsl(var(--exam-sat) / 0.18) 0%,
+      transparent 72%
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demoShell {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "exam_type": "AP_CALCULUS_BC",
+  "skills": [
+    {
+      "id": "U1_limits_s1",
+      "unit_code": "U1_limits",
+      "label": "Limit evaluation fluency",
+      "description": "Practice Limit evaluation fluency in Limits and Continuity with exam-style items and feedback."
+    },
+    {
+      "id": "U1_limits_s2",
+      "unit_code": "U1_limits",
+      "label": "Continuity arguments",
+      "description": "Practice Continuity arguments in Limits and Continuity with exam-style items and feedback."
+    },
+    {
+      "id": "U2_diff_basics_s1",
+      "unit_code": "U2_diff_basics",
+      "label": "Definition of derivative",
+      "description": "Practice Definition of derivative in Differentiation: Definition and Basic Properties with exam-style items and feedback."
+    },
+    {
+      "id": "U2_diff_basics_s2",
+      "unit_code": "U2_diff_basics",
+      "label": "Derivative rule toolkit",
+      "description": "Practice Derivative rule toolkit in Differentiation: Definition and Basic Properties with exam-style items and feedback."
+    },
+    {
+      "id": "U3_diff_advanced_s1",
+      "unit_code": "U3_diff_advanced",
+      "label": "Chain rule mastery",
+      "description": "Practice Chain rule mastery in Differentiation: Composite, Implicit, Inverse with exam-style items and feedback."
+    },
+    {
+      "id": "U3_diff_advanced_s2",
+      "unit_code": "U3_diff_advanced",
+      "label": "Implicit/inverse derivatives",
+      "description": "Practice Implicit/inverse derivatives in Differentiation: Composite, Implicit, Inverse with exam-style items and feedback."
+    },
+    {
+      "id": "U4_appl_diff_context_s1",
+      "unit_code": "U4_appl_diff_context",
+      "label": "Related rates modeling",
+      "description": "Practice Related rates modeling in Contextual Applications of Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U4_appl_diff_context_s2",
+      "unit_code": "U4_appl_diff_context",
+      "label": "Local linearization",
+      "description": "Practice Local linearization in Contextual Applications of Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U5_appl_diff_analytic_s1",
+      "unit_code": "U5_appl_diff_analytic",
+      "label": "Extreme value justification",
+      "description": "Practice Extreme value justification in Analytical Applications of Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U5_appl_diff_analytic_s2",
+      "unit_code": "U5_appl_diff_analytic",
+      "label": "Concavity and points of inflection",
+      "description": "Practice Concavity and points of inflection in Analytical Applications of Differentiation with exam-style items and feedback."
+    },
+    {
+      "id": "U6_integration_s1",
+      "unit_code": "U6_integration",
+      "label": "FTC with accumulation",
+      "description": "Practice FTC with accumulation in Integration and Accumulation of Change with exam-style items and feedback."
+    },
+    {
+      "id": "U6_integration_s2",
+      "unit_code": "U6_integration",
+      "label": "Integration technique choice",
+      "description": "Practice Integration technique choice in Integration and Accumulation of Change with exam-style items and feedback."
+    },
+    {
+      "id": "U7_diff_eq_s1",
+      "unit_code": "U7_diff_eq",
+      "label": "Separable solutions",
+      "description": "Practice Separable solutions in Differential Equations with exam-style items and feedback."
+    },
+    {
+      "id": "U7_diff_eq_s2",
+      "unit_code": "U7_diff_eq",
+      "label": "Logistic interpretation",
+      "description": "Practice Logistic interpretation in Differential Equations with exam-style items and feedback."
+    },
+    {
+      "id": "U8_appl_int_s1",
+      "unit_code": "U8_appl_int",
+      "label": "Volume setup",
+      "description": "Practice Volume setup in Applications of Integration with exam-style items and feedback."
+    },
+    {
+      "id": "U8_appl_int_s2",
+      "unit_code": "U8_appl_int",
+      "label": "Arc length integrals",
+      "description": "Practice Arc length integrals in Applications of Integration with exam-style items and feedback."
+    },
+    {
+      "id": "U9_param_polar_vector_s1",
+      "unit_code": "U9_param_polar_vector",
+      "label": "Parametric dy/dx and speed",
+      "description": "Practice Parametric dy/dx and speed in Parametric, Polar, and Vector-Valued Functions with exam-style items and feedback."
+    },
+    {
+      "id": "U9_param_polar_vector_s2",
+      "unit_code": "U9_param_polar_vector",
+      "label": "Polar area",
+      "description": "Practice Polar area in Parametric, Polar, and Vector-Valued Functions with exam-style items and feedback."
+    },
+    {
+      "id": "U9_param_polar_vector_s3",
+      "unit_code": "U9_param_polar_vector",
+      "label": "Vector velocity/acceleration",
+      "description": "Practice Vector velocity/acceleration in Parametric, Polar, and Vector-Valued Functions with exam-style items and feedback."
+    },
+    {
+      "id": "U10_series_s1",
+      "unit_code": "U10_series",
+      "label": "Convergence tests",
+      "description": "Practice Convergence tests in Infinite Sequences and Series with exam-style items and feedback."
+    },
+    {
+      "id": "U10_series_s2",
+      "unit_code": "U10_series",
+      "label": "Taylor polynomial approx",
+      "description": "Practice Taylor polynomial approx in Infinite Sequences and Series with exam-style items and feedback."
+    },
+    {
+      "id": "U10_series_s3",
+      "unit_code": "U10_series",
+      "label": "Lagrange error bound",
+      "description": "Practice Lagrange error bound in Infinite Sequences and Series with exam-style items and feedback."
+    }
+  ]
+}

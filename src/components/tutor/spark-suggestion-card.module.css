@@ -1,0 +1,75 @@
+/* Spark suggestion card — shown inline in tutor chat when keywords match. */
+
+.card {
+  max-width: min(100%, 26rem);
+  padding: 0.85rem 1rem;
+  border: 1px solid hsl(var(--primary) / 0.2);
+  border-radius: var(--radius-md);
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.06),
+    hsl(var(--muted) / 0.4)
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  color: hsl(var(--primary));
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 0.8125rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+  flex: 1;
+}
+
+.dismiss {
+  background: none;
+  border: none;
+  padding: 0 0.3rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.dismiss:hover {
+  color: hsl(var(--foreground));
+  background: hsl(var(--muted) / 0.5);
+}
+
+.description {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.tryBtn {
+  align-self: flex-start;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--primary-foreground));
+  background: hsl(var(--primary));
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.tryBtn:hover {
+  filter: brightness(1.08);
+}

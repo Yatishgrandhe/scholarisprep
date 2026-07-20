@@ -1,0 +1,9 @@
+{
+  "ok": [],
+  "fail": [
+    {
+      "batch": "000",
+      "error": "HTTP 401: {\"message\":\"Unauthorized\"}"
+    }
+  ]
+}

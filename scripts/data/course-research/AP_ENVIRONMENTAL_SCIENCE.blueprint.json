@@ -1,0 +1,437 @@
+{
+  "exam_type": "AP_ENVIRONMENTAL_SCIENCE",
+  "display_name": "AP Environmental Science",
+  "family": "AP",
+  "version": 2,
+  "bank_quota_total": 500,
+  "units": [
+    {
+      "unit_code": "U1_ecosystems",
+      "unit_name": "The Living World: Ecosystems",
+      "unit_order": 1,
+      "exam_weight": "6-8%",
+      "topics": [
+        "Introduction to Ecosystems",
+        "Terrestrial Biomes",
+        "Aquatic Biomes",
+        "The Carbon Cycle",
+        "The Nitrogen Cycle",
+        "The Phosphorus Cycle",
+        "The Hydrologic (Water) Cycle",
+        "Primary Productivity",
+        "Trophic Levels",
+        "Energy Flow and the 10% Rule",
+        "Food Chains and Food Webs"
+      ],
+      "skills": [
+        "1.A Describe environmental concepts and processes",
+        "1.B Explain environmental concepts and processes",
+        "2.B Explain relationships between characteristics of environmental concepts represented visually",
+        "6.C Calculate an accurate numeric answer with appropriate units"
+      ],
+      "big_ideas": ["ENG-1 Energy Transfer"],
+      "enduring_understanding": "Energy flow and biogeochemical cycles are fundamental to ecosystem function",
+      "learning_objectives": [
+        "Identify abiotic and biotic factors in ecosystems",
+        "Describe energy flow through trophic levels",
+        "Explain biogeochemical cycles (carbon, nitrogen, phosphorus, water)",
+        "Calculate primary productivity and energy transfer efficiency",
+        "Interpret food webs and ecological pyramids"
+      ],
+      "weight_hint": 0.07,
+      "quota": 35
+    },
+    {
+      "unit_code": "U2_biodiversity",
+      "unit_name": "The Living World: Biodiversity",
+      "unit_order": 2,
+      "exam_weight": "6-8%",
+      "topics": [
+        "Levels of Biodiversity",
+        "Ecosystem Services",
+        "Island Biogeography",
+        "Ecological Tolerance",
+        "Ecological Niches",
+        "Indicator Species",
+        "Biodiversity Hotspots",
+        "Threats to Biodiversity"
+      ],
+      "skills": [
+        "1.A Describe environmental concepts and processes",
+        "1.B Explain environmental concepts and processes",
+        "2.A Describe characteristics of environmental concepts represented visually"
+      ],
+      "big_ideas": ["EIN-1 Interactions Between Different Species and the Environment"],
+      "enduring_understanding": "Biodiversity is essential for ecosystem stability and human well-being",
+      "learning_objectives": [
+        "Compare species richness vs genetic diversity",
+        "Explain ecosystem services (provisioning, regulating, cultural, supporting)",
+        "Apply island biogeography theory to habitat fragmentation",
+        "Describe ecological tolerance and limiting factors",
+        "Evaluate strategies for biodiversity conservation"
+      ],
+      "weight_hint": 0.07,
+      "quota": 35
+    },
+    {
+      "unit_code": "U3_populations",
+      "unit_name": "Populations",
+      "unit_order": 3,
+      "exam_weight": "10-15%",
+      "topics": [
+        "Generalist vs Specialist Species",
+        "r-Selected and K-Selected Species",
+        "Survivorship Curves",
+        "Population Growth Models",
+        "Carrying Capacity",
+        "Human Population Growth",
+        "Demographic Transition Model",
+        "Total Fertility Rate",
+        "Age Structure Diagrams",
+        "Impacts of Population Growth"
+      ],
+      "skills": [
+        "1.B Explain environmental concepts and processes",
+        "2.A Describe characteristics of environmental concepts represented visually",
+        "2.B Explain relationships between characteristics of environmental concepts represented visually",
+        "6.C Calculate an accurate numeric answer with appropriate units"
+      ],
+      "big_ideas": ["EIN-1", "STB-1 Sustainability"],
+      "enduring_understanding": "Population dynamics are governed by resource availability and environmental limits",
+      "learning_objectives": [
+        "Compare exponential vs logistic growth models",
+        "Interpret age structure diagrams and survivorship curves",
+        "Analyze the demographic transition model",
+        "Calculate population growth rate and doubling time",
+        "Evaluate human population impacts on resource consumption"
+      ],
+      "weight_hint": 0.12,
+      "quota": 60
+    },
+    {
+      "unit_code": "U4_earth_systems",
+      "unit_name": "Earth Systems and Resources",
+      "unit_order": 4,
+      "exam_weight": "10-15%",
+      "topics": [
+        "Plate Tectonics",
+        "Soil Formation and Composition",
+        "Soil Erosion and Degradation",
+        "Atmospheric Structure and Composition",
+        "Climate Basics and Patterns",
+        "Watersheds and Drainage Basins",
+        "Solar Intensity and Insolation",
+        "Global Atmospheric Circulation",
+        "Ocean Currents and Climate",
+        "El Niño and La Niña"
+      ],
+      "skills": [
+        "1.B Explain environmental concepts and processes",
+        "2.B Explain relationships between characteristics of environmental concepts represented visually"
+      ],
+      "big_ideas": ["ERT-1 Interactions Between Earth Systems"],
+      "enduring_understanding": "Earth systems interact through complex feedbacks that shape the environment",
+      "learning_objectives": [
+        "Explain plate tectonics and natural hazards",
+        "Describe soil horizons and factors affecting soil formation",
+        "Analyze the relationship between solar intensity and latitude",
+        "Explain global atmospheric and ocean circulation patterns",
+        "Interpret climate data from graphs and maps"
+      ],
+      "weight_hint": 0.12,
+      "quota": 60
+    },
+    {
+      "unit_code": "U5_land_water_use",
+      "unit_name": "Land and Water Use",
+      "unit_order": 5,
+      "exam_weight": "10-15%",
+      "topics": [
+        "The Tragedy of the Commons",
+        "Clearcutting and Sustainable Forestry",
+        "Conventional and Organic Agriculture",
+        "Integrated Pest Management",
+        "Cattle Ranching and Overgrazing",
+        "Mining and Mountaintop Removal",
+        "Urbanization and Urban Sprawl",
+        "Aquaculture",
+        "Overfishing and Fisheries Management",
+        "Water Resource Use and Allocation",
+        "Dams and Water Diversion"
+      ],
+      "skills": [
+        "1.B Explain environmental concepts and processes",
+        "6.C Calculate an accurate numeric answer with appropriate units",
+        "8.F Propose a solution to an environmental problem"
+      ],
+      "big_ideas": ["STB-1 Sustainability", "EIN-1"],
+      "enduring_understanding": "Human land and water use creates environmental tradeoffs that require sustainable solutions",
+      "learning_objectives": [
+        "Explain the tragedy of the commons with real-world examples",
+        "Compare environmental impacts of different agricultural methods",
+        "Evaluate the costs and benefits of dam construction",
+        "Analyze the environmental effects of urbanization",
+        "Propose sustainable land and water management strategies"
+      ],
+      "weight_hint": 0.12,
+      "quota": 60
+    },
+    {
+      "unit_code": "U6_energy",
+      "unit_name": "Energy Resources and Consumption",
+      "unit_order": 6,
+      "exam_weight": "10-15%",
+      "topics": [
+        "Fossil Fuels (Coal, Oil, Natural Gas)",
+        "Nuclear Energy",
+        "Solar Energy",
+        "Wind Energy",
+        "Hydropower",
+        "Biomass and Biofuels",
+        "Geothermal Energy",
+        "Hydrogen Fuel Cells",
+        "Energy Conservation and Efficiency",
+        "Energy Units and Conversions (kWh, Joules, BTU)",
+        "Peak Oil and Energy Transition"
+      ],
+      "skills": [
+        "1.B Explain environmental concepts and processes",
+        "6.C Calculate an accurate numeric answer with appropriate units",
+        "8.F Propose a solution to an environmental problem"
+      ],
+      "big_ideas": ["ENG-1 Energy Transfer", "STB-1 Sustainability"],
+      "enduring_understanding": "Energy resource selection involves environmental, economic, and social tradeoffs",
+      "learning_objectives": [
+        "Compare environmental impacts of fossil fuels vs renewable energy sources",
+        "Calculate energy consumption and conversion between units",
+        "Explain how nuclear fission generates energy",
+        "Evaluate the sustainability of different energy sources",
+        "Analyze strategies for reducing energy consumption"
+      ],
+      "weight_hint": 0.12,
+      "quota": 60
+    },
+    {
+      "unit_code": "U7_atmospheric_pollution",
+      "unit_name": "Atmospheric Pollution",
+      "unit_order": 7,
+      "exam_weight": "7-10%",
+      "topics": [
+        "Primary and Secondary Air Pollutants",
+        "Photochemical Smog",
+        "Sulfur Dioxide and Acid Deposition",
+        "Nitrogen Oxides and Acid Rain",
+        "Particulate Matter and Health Effects",
+        "Ground-Level Ozone",
+        "Indoor Air Pollution",
+        "Noise Pollution",
+        "Pollution Reduction Strategies",
+        "Catalytic Converters and Scrubbers",
+        "Clean Air Act"
+      ],
+      "skills": [
+        "1.B Explain environmental concepts and processes",
+        "2.B Explain relationships between characteristics of environmental concepts represented visually",
+        "8.F Propose a solution to an environmental problem"
+      ],
+      "big_ideas": ["ENG-1", "ERT-1"],
+      "enduring_understanding": "Air pollutants have significant impacts on human health and ecosystems",
+      "learning_objectives": [
+        "Distinguish between primary and secondary pollutants",
+        "Explain the formation of photochemical smog and acid deposition",
+        "Evaluate the effectiveness of pollution control technologies",
+        "Analyze the health effects of different air pollutants",
+        "Assess the impact of air quality regulations"
+      ],
+      "weight_hint": 0.09,
+      "quota": 45
+    },
+    {
+      "unit_code": "U8_aquatic_terrestrial_pollution",
+      "unit_name": "Aquatic and Terrestrial Pollution",
+      "unit_order": 8,
+      "exam_weight": "7-10%",
+      "topics": [
+        "Point vs Nonpoint Source Pollution",
+        "Bioaccumulation and Biomagnification",
+        "Thermal Pollution",
+        "Eutrophication",
+        "Sewage Treatment",
+        "Solid Waste Disposal (Landfill, Incineration)",
+        "Hazardous Waste and Superfund Sites",
+        "Plastic Pollution",
+        "Remediation Technologies",
+        "LD50 and Dose-Response Curves",
+        "Endocrine Disruptors"
+      ],
+      "skills": [
+        "1.B Explain environmental concepts and processes",
+        "2.B Explain relationships between characteristics of environmental concepts represented visually",
+        "6.C Calculate an accurate numeric answer with appropriate units",
+        "8.F Propose a solution to an environmental problem"
+      ],
+      "big_ideas": ["EIN-1", "ERT-1"],
+      "enduring_understanding": "Pollution in aquatic and terrestrial systems has cascading ecological effects",
+      "learning_objectives": [
+        "Distinguish point vs nonpoint source pollution with examples",
+        "Explain bioaccumulation and biomagnification in food chains",
+        "Describe the process of eutrophication",
+        "Interpret dose-response curves and LD50 values",
+        "Evaluate pollution remediation and prevention strategies"
+      ],
+      "weight_hint": 0.09,
+      "quota": 45
+    },
+    {
+      "unit_code": "U9_global_change",
+      "unit_name": "Global Change",
+      "unit_order": 9,
+      "exam_weight": "15-20%",
+      "topics": [
+        "Ozone Depletion and the Ozone Layer",
+        "The Greenhouse Effect and Greenhouse Gases",
+        "Climate Change Causes and Effects",
+        "Sea Level Rise",
+        "Ocean Acidification",
+        "Invasive Species",
+        "Human Impacts on Biodiversity",
+        "Endangered Species Act",
+        "Invasive Species Case Studies",
+        "Environmental Justice",
+        "Mitigation vs Adaptation Strategies",
+        "Carbon Footprint and Offsets",
+        "Paris Agreement and International Cooperation"
+      ],
+      "skills": [
+        "1.B Explain environmental concepts and processes",
+        "2.B Explain relationships between characteristics of environmental concepts represented visually",
+        "6.C Calculate an accurate numeric answer with appropriate units",
+        "8.F Propose a solution to an environmental problem"
+      ],
+      "big_ideas": ["ENG-1", "ERT-1", "EIN-1", "STB-1"],
+      "enduring_understanding": "Global environmental changes require coordinated local and international responses",
+      "learning_objectives": [
+        "Explain the difference between ozone depletion and climate change",
+        "Analyze the role of greenhouse gases in global warming",
+        "Evaluate the causes and consequences of climate change",
+        "Describe the impacts of invasive species on ecosystems",
+        "Propose mitigation and adaptation strategies for global change",
+        "Analyze environmental justice issues"
+      ],
+      "weight_hint": 0.2,
+      "quota": 100
+    }
+  ],
+  "calculator_policy": {
+    "default": "scientific",
+    "sections": [
+      {
+        "key": "mcq",
+        "calculator": "scientific",
+        "calculator_allowed": true,
+        "note": "Scientific calculator permitted"
+      },
+      {
+        "key": "frq",
+        "calculator": "scientific",
+        "calculator_allowed": true,
+        "note": "Scientific calculator permitted for calculations"
+      }
+    ],
+    "notes": "Scientific calculator allowed on all sections. Students should be proficient with dimensional analysis, unit conversions, and quantitative reasoning."
+  },
+  "question_mix": {
+    "mcq_ratio": 0.6,
+    "frq_ratio": 0.4,
+    "mcq_target": 300,
+    "frq_target": 200
+  },
+  "unit_test": {
+    "questions_per_variant": 14,
+    "time_minutes": 35,
+    "variants": 2,
+    "mcq_count": 10,
+    "frq_count": 4
+  },
+  "full_exam_forms": {
+    "form_ids": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+    "section_map": [
+      {
+        "section": "Section I Multiple Choice",
+        "format": "multiple_choice",
+        "slots": 80,
+        "calculator": "scientific",
+        "time_minutes": 90
+      },
+      {
+        "section": "Section II Free Response",
+        "format": "free_response",
+        "slots": 3,
+        "calculator": "scientific",
+        "time_minutes": 70
+      }
+    ],
+    "notes": "Official: ~80 MCQ + 3 FRQ; ~160 minutes total. Calculator permitted."
+  },
+  "scho_preload": {
+    "command_terms": ["calculate", "describe", "explain", "identify", "propose", "justify", "evaluate", "compare", "determine", "design"],
+    "misconceptions": [
+      "Confusing weather with climate",
+      "Assuming all greenhouse gases are pollutants in the same way",
+      "Mixing point vs nonpoint source pollution",
+      "Treating renewable as always low-impact",
+      "Ignoring tradeoffs in energy and land-use solutions",
+      "Misreading age-structure diagrams",
+      "Confusing ozone depletion with climate change",
+      "Assuming bioaccumulation only affects top predators",
+      "Confusing primary vs secondary pollutants",
+      "Ignoring that carbon cycle has both natural and anthropogenic fluxes"
+    ],
+    "paper_rules": [
+      "FRQ often includes a quantitative calculation part — show dimensional analysis",
+      "Propose solutions that are specific and feasible",
+      "Link human activity → environmental effect → consequence",
+      "Use precise environmental science vocabulary",
+      "Reference specific environmental case studies and data"
+    ],
+    "explanation_standards": [
+      "Goal: process, impact, or calculated quantity",
+      "Steps: identify system → cause/effect chain → quantify if needed → evaluate solution",
+      "FRQ: label parts; answer the verb asked",
+      "Include units on all calculations"
+    ]
+  },
+  "planner_skills": {
+    "U1_ecosystems": "Ecosystems and cycles",
+    "U2_biodiversity": "Biodiversity and ecosystem services",
+    "U3_populations": "Population dynamics",
+    "U4_earth_systems": "Earth systems and resources",
+    "U5_land_water_use": "Land and water use",
+    "U6_energy": "Energy resources",
+    "U7_atmospheric_pollution": "Atmospheric pollution",
+    "U8_aquatic_terrestrial_pollution": "Aquatic/terrestrial pollution",
+    "U9_global_change": "Global change"
+  },
+  "remix_cues": [
+    "Change geographic case study keeping unit skill",
+    "Swap energy source comparison tables",
+    "Remix FRQ solution proposals with new constraints",
+    "Vary pollution pathway (air ↔ water ↔ soil)",
+    "Update with current environmental data and case studies",
+    "Vary the scale of analysis (local → regional → global)"
+  ],
+  "reference_sheet": {
+    "enabled": true,
+    "title": "APES quantitative reference",
+    "outline": [
+      "Dimensional analysis and metric prefixes",
+      "Percent change; rule-of-70 doubling-time cue",
+      "Productivity: GPP/NPP relationship sketch",
+      "Half-life and LD50 conceptual reading",
+      "Energy units conversion (kWh, J, BTU)",
+      "Population growth rate calculations",
+      "Dose-response curve interpretation",
+      "Energy efficiency calculations"
+    ]
+  }
+}

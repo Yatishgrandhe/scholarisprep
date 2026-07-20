@@ -1,0 +1,33 @@
+{
+  "generated": 9,
+  "validated": 9,
+  "byDifficulty": {
+    "easy": 3,
+    "medium": 3,
+    "hard": 3
+  },
+  "replaceCount": 9,
+  "replaceIds": [
+    "ac32fcb3-219c-4f79-8eb0-673d10fa3d84",
+    "2c10c2ec-c91d-4f64-afb8-78dae6294f08",
+    "5aa02c23-a1d6-4a15-a442-1a9cc08e38b4",
+    "8a14c349-4dac-422b-a1b6-bb49a344fa82",
+    "7825dbff-9de1-4965-b644-c91a8c7e09fe",
+    "c9957304-8c8a-484d-a487-7928993ff12b",
+    "0274ae0d-af9d-4837-be06-da0c684bdbb1",
+    "e54e1456-647e-4e1f-a5fc-b86be59b6794",
+    "ddc9e789-2aad-4679-9e82-215fb4b2c288"
+  ],
+  "external_ids": [
+    "coe-quant-easy-001",
+    "coe-quant-easy-002",
+    "coe-quant-easy-003",
+    "coe-quant-medium-001",
+    "coe-quant-medium-002",
+    "coe-quant-medium-003",
+    "coe-quant-hard-001",
+    "coe-quant-hard-002",
+    "coe-quant-hard-003"
+  ],
+  "fails": []
+}

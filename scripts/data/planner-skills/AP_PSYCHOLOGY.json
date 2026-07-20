@@ -1,0 +1,149 @@
+{
+  "exam_type": "AP_PSYCHOLOGY",
+  "skills": [
+    {
+      "id": "U1_scientific_foundations_s1",
+      "unit_code": "U1_scientific_foundations",
+      "label": "Identify research design",
+      "description": "Practice Identify research design in Scientific Foundations of Psychology with exam-style items and feedback."
+    },
+    {
+      "id": "U1_scientific_foundations_s2",
+      "unit_code": "U1_scientific_foundations",
+      "label": "Ethics scenarios",
+      "description": "Practice Ethics scenarios in Scientific Foundations of Psychology with exam-style items and feedback."
+    },
+    {
+      "id": "U1_scientific_foundations_s3",
+      "unit_code": "U1_scientific_foundations",
+      "label": "Interpret descriptive stats",
+      "description": "Practice Interpret descriptive stats in Scientific Foundations of Psychology with exam-style items and feedback."
+    },
+    {
+      "id": "U1_scientific_foundations_s4",
+      "unit_code": "U1_scientific_foundations",
+      "label": "Match perspectives to claims",
+      "description": "Practice Match perspectives to claims in Scientific Foundations of Psychology with exam-style items and feedback."
+    },
+    {
+      "id": "U2_biological_bases_s1",
+      "unit_code": "U2_biological_bases",
+      "label": "Neuron signaling",
+      "description": "Practice Neuron signaling in Biological Bases of Behavior with exam-style items and feedback."
+    },
+    {
+      "id": "U2_biological_bases_s2",
+      "unit_code": "U2_biological_bases",
+      "label": "Brain region functions",
+      "description": "Practice Brain region functions in Biological Bases of Behavior with exam-style items and feedback."
+    },
+    {
+      "id": "U2_biological_bases_s3",
+      "unit_code": "U2_biological_bases",
+      "label": "Thresholds and adaptation",
+      "description": "Practice Thresholds and adaptation in Biological Bases of Behavior with exam-style items and feedback."
+    },
+    {
+      "id": "U2_biological_bases_s4",
+      "unit_code": "U2_biological_bases",
+      "label": "Sleep and drugs overview",
+      "description": "Practice Sleep and drugs overview in Biological Bases of Behavior with exam-style items and feedback."
+    },
+    {
+      "id": "U3_cognition_s1",
+      "unit_code": "U3_cognition",
+      "label": "Encoding storage retrieval",
+      "description": "Practice Encoding storage retrieval in Cognition with exam-style items and feedback."
+    },
+    {
+      "id": "U3_cognition_s2",
+      "unit_code": "U3_cognition",
+      "label": "Heuristics and biases",
+      "description": "Practice Heuristics and biases in Cognition with exam-style items and feedback."
+    },
+    {
+      "id": "U3_cognition_s3",
+      "unit_code": "U3_cognition",
+      "label": "Intelligence theories",
+      "description": "Practice Intelligence theories in Cognition with exam-style items and feedback."
+    },
+    {
+      "id": "U3_cognition_s4",
+      "unit_code": "U3_cognition",
+      "label": "Language acquisition cues",
+      "description": "Practice Language acquisition cues in Cognition with exam-style items and feedback."
+    },
+    {
+      "id": "U4_development_learning_s1",
+      "unit_code": "U4_development_learning",
+      "label": "Stage vs continuity claims",
+      "description": "Practice Stage vs continuity claims in Development and Learning with exam-style items and feedback."
+    },
+    {
+      "id": "U4_development_learning_s2",
+      "unit_code": "U4_development_learning",
+      "label": "Conditioning schedules",
+      "description": "Practice Conditioning schedules in Development and Learning with exam-style items and feedback."
+    },
+    {
+      "id": "U4_development_learning_s3",
+      "unit_code": "U4_development_learning",
+      "label": "Observational learning",
+      "description": "Practice Observational learning in Development and Learning with exam-style items and feedback."
+    },
+    {
+      "id": "U4_development_learning_s4",
+      "unit_code": "U4_development_learning",
+      "label": "Drive and incentives",
+      "description": "Practice Drive and incentives in Development and Learning with exam-style items and feedback."
+    },
+    {
+      "id": "U5_social_personality_s1",
+      "unit_code": "U5_social_personality",
+      "label": "Attribution errors",
+      "description": "Practice Attribution errors in Social Psychology and Personality with exam-style items and feedback."
+    },
+    {
+      "id": "U5_social_personality_s2",
+      "unit_code": "U5_social_personality",
+      "label": "Conformity and obedience",
+      "description": "Practice Conformity and obedience in Social Psychology and Personality with exam-style items and feedback."
+    },
+    {
+      "id": "U5_social_personality_s3",
+      "unit_code": "U5_social_personality",
+      "label": "Trait vs psychodynamic views",
+      "description": "Practice Trait vs psychodynamic views in Social Psychology and Personality with exam-style items and feedback."
+    },
+    {
+      "id": "U5_social_personality_s4",
+      "unit_code": "U5_social_personality",
+      "label": "Emotion theories",
+      "description": "Practice Emotion theories in Social Psychology and Personality with exam-style items and feedback."
+    },
+    {
+      "id": "U6_mental_physical_health_s1",
+      "unit_code": "U6_mental_physical_health",
+      "label": "DSM-style category cues",
+      "description": "Practice DSM-style category cues in Mental and Physical Health with exam-style items and feedback."
+    },
+    {
+      "id": "U6_mental_physical_health_s2",
+      "unit_code": "U6_mental_physical_health",
+      "label": "Therapy modality match",
+      "description": "Practice Therapy modality match in Mental and Physical Health with exam-style items and feedback."
+    },
+    {
+      "id": "U6_mental_physical_health_s3",
+      "unit_code": "U6_mental_physical_health",
+      "label": "Stress and coping",
+      "description": "Practice Stress and coping in Mental and Physical Health with exam-style items and feedback."
+    },
+    {
+      "id": "U6_mental_physical_health_s4",
+      "unit_code": "U6_mental_physical_health",
+      "label": "Evidence for treatments",
+      "description": "Practice Evidence for treatments in Mental and Physical Health with exam-style items and feedback."
+    }
+  ]
+}

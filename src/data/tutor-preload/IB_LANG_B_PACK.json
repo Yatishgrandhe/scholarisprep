@@ -1,0 +1,46 @@
+{
+  "exam_type": "IB_LANG_B_PACK",
+  "display_name": "IB Language B (other languages)",
+  "units": [
+    "Identities",
+    "Experiences",
+    "Human ingenuity",
+    "Social organization",
+    "Sharing the planet",
+    "Receptive skills",
+    "Productive skills",
+    "Interactive skills"
+  ],
+  "command_terms": [
+    "identify",
+    "analyse",
+    "evaluate",
+    "compare"
+  ],
+  "misconceptions": [
+    "literal translation is always best",
+    "all text types use the same register"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_identities skill focus: personal attributes",
+    "Keep unit_code=U2_experiences skill focus: leisure",
+    "Keep unit_code=U3_human_ingenuity skill focus: entertainment",
+    "Keep unit_code=U4_social_organization skill focus: social relationships",
+    "Keep unit_code=U5_sharing_the_planet skill focus: environment",
+    "Keep unit_code=U6_receptive_skills skill focus: reading strategies",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": "Template pack for Language B beyond Eng/Spa/Fre"
+}

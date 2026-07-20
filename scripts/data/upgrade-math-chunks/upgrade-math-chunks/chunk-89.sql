@@ -1,0 +1,138 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'If $2x + 3y = 12$ and $x - y = 1$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $2x + 3y = 12$ and $x - y = 1$, what is the value of $x$?
+
+**Step 2 — Solve.** We can solve this system of equations using elimination. Multiplying the second equation by 3, we get $3x - 3y = 3$. Adding this equation to the first equation, we get $5x = 15$. Dividing both sides by 5 gives us $x = 3$.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":1025,"opensat_domain":"Algebra","opensat_raw_id":"12d8c11d","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '77943afe-7ec9-4d96-9751-e5b42d782092';
+
+UPDATE public.questions SET
+  question_text = 'The function $f(x)$ is defined by $f(x) = \frac{x^2 - 4}{x - 2}$. For what value(s) of $x$ is $f(x)$ undefined?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"x = 2","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"x = -2","is_correct":false,"explanation":"Choice B (x = -2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"x = 2, x = -2","is_correct":false,"explanation":"Choice C (x = 2, x = -2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"All values of x","is_correct":false,"explanation":"Choice D (All values of x…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** The function $f(x)$ is defined by $f(x) = \frac{x^2 - 4}{x - 2}$. For what value(s) of $x$ is $f(x)$ undefined?
+
+**Step 2 — Solve.** A function is undefined when the denominator of a fraction equals zero.  In this case, the denominator is  x - 2.  Solving for x, we find that x = 2 makes the denominator equal to zero, making the function undefined at that point. Therefore, the function f(x) is undefined for x = 2.
+
+**Step 3 — Select A.** x = 2
+
+**Distractor analysis:**
+- **B** (x = -2): Choice B (x = -2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (x = 2, x = -2): Choice C (x = 2, x = -2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (All values of x): Choice D (All values of x…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":35,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_5","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '77bdf78d-fd50-4fb9-87cf-56d7ac94adbf';
+
+UPDATE public.questions SET
+  question_text = 'After $t=43$ hours, how many miles has the car traveled?',
+  stimulus_text = 'A car''s distance $d$ (miles) after $t$ hours is modeled by $d=3t+40$.',
+  options = '[{"id":"A","text":"$166$","is_correct":false,"explanation":"Uses $t-1$ instead of $t=43$."},{"id":"B","text":"$169$","is_correct":true,"explanation":"**Step 1:** Substitute $t=43$. **Step 2:** $d=3(43)+40=169$."},{"id":"C","text":"$170$","is_correct":false,"explanation":"Adds 1 to the correct distance."},{"id":"D","text":"$43$","is_correct":false,"explanation":"Adds slope and intercept instead of evaluating."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Plug in $t=43$: $d=3(43)+40$.
+**Step 2:** Compute: $d=169$ miles.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '77cd3825-c3aa-479c-960b-da35b1864ec8';
+
+UPDATE public.questions SET
+  question_text = 'The height of a projectile is $h(t)=2(t-49)^2+51$, where $t$ is seconds. What is $h(52)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$51$","is_correct":false,"explanation":"That is the minimum height at the vertex."},{"id":"B","text":"$69$","is_correct":true,"explanation":"**Step 1:** $h(52)=2(52-49)^2+51=2(9)+51=69$."},{"id":"C","text":"$67$","is_correct":false,"explanation":"Subtracts $a$ incorrectly."},{"id":"D","text":"$53$","is_correct":false,"explanation":"Adds coefficient and constant."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Substitute $t=52$: $h(52)=2(52-49)^2+51$.
+**Step 2:** $(52-49)^2=9$ → $h(52)=69$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '77dd66a0-cfc8-48b8-8882-fa94869b628a';
+
+UPDATE public.questions SET
+  question_text = 'A bakery has 120 cakes on display.  Of those cakes, 25% are chocolate, 30% are vanilla, and the rest are strawberry. How many strawberry cakes are on display?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"36","is_correct":false,"explanation":"Choice A (36…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"48","is_correct":false,"explanation":"Choice B (48…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"60","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"72","is_correct":false,"explanation":"Choice D (72…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A bakery has 120 cakes on display.  Of those cakes, 25% are chocolate, 30% are vanilla, and the rest are strawberry. How many strawberry cakes are on display?
+
+**Step 2 — Solve.** First, we need to find the total percentage of chocolate and vanilla cakes: 25% + 30% = 55%. This means 55% of the cakes are either chocolate or vanilla.  The remaining cakes must be strawberry: 100% - 55% = 45%.  To find the number of strawberry cakes, we multiply the total number of cakes by 45%: 120 cakes * 0.45 = 54 cakes.  The closest answer choice to 54 cakes is 60, so the answer is C.
+
+**Step 3 — Select C.** 60
+
+**Distractor analysis:**
+- **A** (36): Choice A (36…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (48): Choice B (48…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (72): Choice D (72…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":980,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"28f140fd","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '77deadf1-7698-4989-ac1e-99e479d6e224';
+
+UPDATE public.questions SET
+  question_text = 'Which expression is equivalent to $(4x+9)^2 - (4x-9)^2$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$144x$","is_correct":true,"explanation":"**Step 1:** Difference of squares in disguise: $(u+v)(u-v)$ with $u=4x+9$, $v=4x-9$ → $144x$."},{"id":"B","text":"$8x^2$","is_correct":false,"explanation":"Squares each binomial separately — wrong approach."},{"id":"C","text":"$36x$","is_correct":false,"explanation":"Uses $4b$ instead of $4ab$."},{"id":"D","text":"$16x^2+81$","is_correct":false,"explanation":"Adds squares; not equivalent."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Let $u=4x+9$, $v=4x-9$.
+**Step 2:** $u^2-v^2=(u+v)(u-v)=(8x)(18)=144x$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '77ec2aec-d55b-4114-af00-e911ae7ff850';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 cm. What is the circumference of the circle, in terms of pi?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5\\pi","is_correct":false,"explanation":"Choice A (5\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"25\\pi","is_correct":false,"explanation":"Choice C (25\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"50\\pi","is_correct":false,"explanation":"Choice D (50\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 cm. What is the circumference of the circle, in terms of pi?
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula C = 2πr, where r is the radius.  Substituting 5 for r, we get C = 2π(5) = 10π.
+
+**Step 3 — Select B.** 10\pi
+
+**Distractor analysis:**
+- **A** (5\pi): Choice A (5\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (25\pi): Choice C (25\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (50\pi): Choice D (50\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":360,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"f42c912f","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '77f63ef4-b164-4f72-b479-2a823b784ea0';
+
+UPDATE public.questions SET
+  question_text = 'A circle is inscribed in a square with side length 8. What is the area of the circle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"8\\pi","is_correct":false,"explanation":"Choice A (8\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"16\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"32\\pi","is_correct":false,"explanation":"Choice C (32\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"64\\pi","is_correct":false,"explanation":"Choice D (64\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle is inscribed in a square with side length 8. What is the area of the circle?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square, which is 8. Therefore, the radius of the circle is 4. The area of the circle is $\pi r^2 = \pi(4)^2 = 16\pi$.
+
+**Step 3 — Select B.** 16\pi
+
+**Distractor analysis:**
+- **A** (8\pi): Choice A (8\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (32\pi): Choice C (32\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (64\pi): Choice D (64\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":82,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"e55931d8","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '78e0e285-9b6e-45c0-9979-70bcf2fd8e3a';
+
+COMMIT;

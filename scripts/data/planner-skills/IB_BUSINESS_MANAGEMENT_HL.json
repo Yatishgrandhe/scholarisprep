@@ -1,0 +1,183 @@
+{
+  "examType": "IB_BUSINESS_MANAGEMENT_HL",
+  "topics": [
+    "Introduction to business management",
+    "Human resource management",
+    "Finance and accounts",
+    "Marketing",
+    "Operations management",
+    "Business strategy toolkit",
+    "Case study application",
+    "Internal assessment skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_introduction_to_business_management",
+      "title": "Introduction to business management",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_human_resource_management",
+      "title": "Human resource management",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_finance_and_accounts",
+      "title": "Finance and accounts",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_marketing",
+      "title": "Marketing",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_operations_management",
+      "title": "Operations management",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_business_strategy_toolkit",
+      "title": "Business strategy toolkit",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_case_study_application",
+      "title": "Case study application",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_internal_assessment_skills",
+      "title": "Internal assessment skills",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_BUSINESS_MANAGEMENT_HL:U1_introduction_to_business_management",
+      "unit_code": "U1_introduction_to_business_management",
+      "title": "Introduction to business management",
+      "topics": [
+        "stakeholders",
+        "objectives",
+        "growth",
+        "multinationals"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_BUSINESS_MANAGEMENT_HL:U2_human_resource_management",
+      "unit_code": "U2_human_resource_management",
+      "title": "Human resource management",
+      "topics": [
+        "organization",
+        "leadership",
+        "motivation",
+        "employer\u2013employee relations"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_BUSINESS_MANAGEMENT_HL:U1_introduction_to_business_management"
+      ]
+    },
+    {
+      "skill_id": "IB_BUSINESS_MANAGEMENT_HL:U3_finance_and_accounts",
+      "unit_code": "U3_finance_and_accounts",
+      "title": "Finance and accounts",
+      "topics": [
+        "sources of finance",
+        "costs",
+        "final accounts",
+        "ratio analysis",
+        "investment appraisal"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_BUSINESS_MANAGEMENT_HL:U2_human_resource_management"
+      ]
+    },
+    {
+      "skill_id": "IB_BUSINESS_MANAGEMENT_HL:U4_marketing",
+      "unit_code": "U4_marketing",
+      "title": "Marketing",
+      "topics": [
+        "marketing planning",
+        "product",
+        "price",
+        "promotion",
+        "place",
+        "e-commerce"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_BUSINESS_MANAGEMENT_HL:U3_finance_and_accounts"
+      ]
+    },
+    {
+      "skill_id": "IB_BUSINESS_MANAGEMENT_HL:U5_operations_management",
+      "unit_code": "U5_operations_management",
+      "title": "Operations management",
+      "topics": [
+        "production methods",
+        "lean production",
+        "quality",
+        "location",
+        "crisis management"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_BUSINESS_MANAGEMENT_HL:U4_marketing"
+      ]
+    },
+    {
+      "skill_id": "IB_BUSINESS_MANAGEMENT_HL:U6_business_strategy_toolkit",
+      "unit_code": "U6_business_strategy_toolkit",
+      "title": "Business strategy toolkit",
+      "topics": [
+        "SWOT",
+        "STEEPLE",
+        "Ansoff",
+        "Boston matrix",
+        "decision trees"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_BUSINESS_MANAGEMENT_HL:U5_operations_management"
+      ]
+    },
+    {
+      "skill_id": "IB_BUSINESS_MANAGEMENT_HL:U7_case_study_application",
+      "unit_code": "U7_case_study_application",
+      "title": "Case study application",
+      "topics": [
+        "data extraction",
+        "recommendations",
+        "evaluation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_BUSINESS_MANAGEMENT_HL:U6_business_strategy_toolkit"
+      ]
+    },
+    {
+      "skill_id": "IB_BUSINESS_MANAGEMENT_HL:U8_internal_assessment_skills",
+      "unit_code": "U8_internal_assessment_skills",
+      "title": "Internal assessment skills",
+      "topics": [
+        "research proposal",
+        "supporting documents",
+        "analysis and evaluation"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_BUSINESS_MANAGEMENT_HL:U7_case_study_application"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

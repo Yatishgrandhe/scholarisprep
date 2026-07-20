@@ -1,0 +1,171 @@
+{
+  "examType": "IB_MUSIC_HL",
+  "topics": [
+    "Exploring music in context",
+    "Experimenting with music",
+    "Presenting music",
+    "Contemporary music-making",
+    "Music for sociocultural & political expression",
+    "Music for listening & analysis",
+    "HL composing & performing extension",
+    "Portfolio & documentation skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_exploring_music_in_context",
+      "title": "Exploring music in context",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_experimenting_with_music",
+      "title": "Experimenting with music",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_presenting_music",
+      "title": "Presenting music",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_contemporary_music_making",
+      "title": "Contemporary music-making",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_music_for_sociocultural_political_expression",
+      "title": "Music for sociocultural & political expression",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_music_for_listening_analysis",
+      "title": "Music for listening & analysis",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_hl_composing_performing_extension",
+      "title": "HL composing & performing extension",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_portfolio_documentation_skills",
+      "title": "Portfolio & documentation skills",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_MUSIC_HL:U1_exploring_music_in_context",
+      "unit_code": "U1_exploring_music_in_context",
+      "title": "Exploring music in context",
+      "topics": [
+        "areas of inquiry",
+        "conventions",
+        "contexts"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_MUSIC_HL:U2_experimenting_with_music",
+      "unit_code": "U2_experimenting_with_music",
+      "title": "Experimenting with music",
+      "topics": [
+        "creating",
+        "performing",
+        "production techniques"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MUSIC_HL:U1_exploring_music_in_context"
+      ]
+    },
+    {
+      "skill_id": "IB_MUSIC_HL:U3_presenting_music",
+      "unit_code": "U3_presenting_music",
+      "title": "Presenting music",
+      "topics": [
+        "programme notes",
+        "performance communication",
+        "composition presentation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MUSIC_HL:U2_experimenting_with_music"
+      ]
+    },
+    {
+      "skill_id": "IB_MUSIC_HL:U4_contemporary_music_making",
+      "unit_code": "U4_contemporary_music_making",
+      "title": "Contemporary music-making",
+      "topics": [
+        "fusion",
+        "technology",
+        "audience"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MUSIC_HL:U3_presenting_music"
+      ]
+    },
+    {
+      "skill_id": "IB_MUSIC_HL:U5_music_for_sociocultural_political_expression",
+      "unit_code": "U5_music_for_sociocultural_political_expression",
+      "title": "Music for sociocultural & political expression",
+      "topics": [
+        "identity",
+        "protest",
+        "ritual"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MUSIC_HL:U4_contemporary_music_making"
+      ]
+    },
+    {
+      "skill_id": "IB_MUSIC_HL:U6_music_for_listening_analysis",
+      "unit_code": "U6_music_for_listening_analysis",
+      "title": "Music for listening & analysis",
+      "topics": [
+        "elements",
+        "structure",
+        "score/audio analysis"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MUSIC_HL:U5_music_for_sociocultural_political_expression"
+      ]
+    },
+    {
+      "skill_id": "IB_MUSIC_HL:U7_hl_composing_performing_extension",
+      "unit_code": "U7_hl_composing_performing_extension",
+      "title": "HL composing & performing extension",
+      "topics": [
+        "stylistic techniques",
+        "refinement"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MUSIC_HL:U6_music_for_listening_analysis"
+      ]
+    },
+    {
+      "skill_id": "IB_MUSIC_HL:U8_portfolio_documentation_skills",
+      "unit_code": "U8_portfolio_documentation_skills",
+      "title": "Portfolio & documentation skills",
+      "topics": [
+        "evidence",
+        "reflection",
+        "process journal"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_MUSIC_HL:U7_hl_composing_performing_extension"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

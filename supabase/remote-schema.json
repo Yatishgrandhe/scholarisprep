@@ -1,0 +1,32 @@
+{
+  "project_ref": "aioyzumxxsepbnfivvdd",
+  "synced_via": "Supabase MCP list_tables",
+  "tables": [
+    "profiles",
+    "organizations",
+    "subscriptions",
+    "courses",
+    "lessons",
+    "questions",
+    "question_attempts",
+    "exam_sessions",
+    "study_plans",
+    "enrollments",
+    "lesson_progress",
+    "tutor_conversations",
+    "tutor_messages",
+    "diagnostic_results",
+    "user_streaks",
+    "achievements",
+    "user_achievements",
+    "content_reports",
+    "practice_sessions",
+    "practice_attempts"
+  ],
+  "storage_buckets": [
+    { "id": "avatars", "public": true },
+    { "id": "course-thumbnails", "public": true },
+    { "id": "lesson-videos", "public": false },
+    { "id": "course-documents", "public": false }
+  ]
+}

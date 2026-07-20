@@ -1,0 +1,42 @@
+{
+  "rw_count": 900,
+  "rw_fails": 0,
+  "rw_by_subtype": {
+    "vocabulary_in_context": 122,
+    "structure": 122,
+    "cross_text_response": 122,
+    "main_idea": 122,
+    "textual_evidence": 122,
+    "quantitative_table": 121,
+    "general": 121,
+    "transition": 12,
+    "boundaries": 12,
+    "form_structure_sense": 12,
+    "notes_synthesis": 12
+  },
+  "math_count": 900,
+  "math_fails": 0,
+  "math_by_skill": {
+    "LIN": 59,
+    "LIF": 59,
+    "LEQ": 58,
+    "SYS": 58,
+    "INE": 58,
+    "NRM": 58,
+    "NRE": 20,
+    "EQS": 58,
+    "RAT": 58,
+    "PER": 58,
+    "OIA": 58,
+    "TVA": 58,
+    "PRO": 58,
+    "IEE": 16,
+    "EVA": 1,
+    "ARE": 58,
+    "LIN_G": 35,
+    "RIG": 58,
+    "CIR": 14
+  },
+  "total": 1800,
+  "chunks": 45
+}

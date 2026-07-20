@@ -1,0 +1,584 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 units. A chord of the circle is 8 units long. What is the distance, in units, from the center of the circle to the chord?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"6","is_correct":false,"explanation":"Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 units. A chord of the circle is 8 units long. What is the distance, in units, from the center of the circle to the chord?
+
+**Step 2 — Solve.** Draw a diagram of the circle with the chord and the radii to the endpoints of the chord. This creates an isosceles triangle where the chord is the base and the two radii are the legs.  The distance from the center of the circle to the chord is the height of this triangle.  Since the triangle is isosceles, the height bisects the base, making two right triangles with legs of length 4 units and a hypotenuse of length 5 units. Using the Pythagorean theorem, the height of the triangle is 3 units, which is the distance from the center of the circle to the chord.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (6): Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":240,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c8","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '727857ce-110e-47b1-b4c9-9935b2bef88b';
+UPDATE public.questions SET
+  question_text = 'If $3x - 2y = 5$ and $x + 2y = 7$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $3x - 2y = 5$ and $x + 2y = 7$, what is the value of $x$?
+
+**Step 2 — Solve.** Notice that the $y$ terms have opposite signs in the two equations. Adding the two equations together, we get $(3x - 2y) + (x + 2y) = 5 + 7$. This simplifies to $4x = 12$, so $x = 3$.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":590,"opensat_domain":"Algebra","opensat_raw_id":"random_id_a6","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '72991072-444c-4b7c-bfa0-ac86af8bef06';
+UPDATE public.questions SET
+  question_text = 'If the original price is $490$, what is the final price after both changes?',
+  stimulus_text = 'A retail price is increased by 30% and then discounted by 15%.',
+  options = '[{"id":"A","text":"$541$","is_correct":true,"explanation":"**Step 1:** $490×1.3=637$. **Step 2:** $637×0.85=541$."},{"id":"B","text":"$490$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$637$","is_correct":false,"explanation":"Only applies the markup."},{"id":"D","text":"$551$","is_correct":false,"explanation":"Adds 10 without reason."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Markup: $490×(1+30/100)=637$.
+**Step 2:** Discount: $637×(1-15/100)=541$.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '729e127a-efed-4bc7-b5b8-99be3eacd32f';
+
+UPDATE public.questions SET
+  question_text = 'If $x^2 - 2x - 8 = 0$, what is the sum of the solutions to the equation?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-2","is_correct":false,"explanation":"Choice A (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"8","is_correct":false,"explanation":"Choice C (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"10","is_correct":false,"explanation":"Choice D (10…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $x^2 - 2x - 8 = 0$, what is the sum of the solutions to the equation?
+
+**Step 2 — Solve.** The sum of the roots of a quadratic equation of the form $ax^2 + bx + c = 0$ is given by $-b/a$. In this case, the sum of the solutions is $-(-2)/1 = 2$.
+
+**Step 3 — Select B.** 2
+
+**Distractor analysis:**
+- **A** (-2): Choice A (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (8): Choice C (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (10): Choice D (10…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":665,"opensat_domain":"Advanced Math","opensat_raw_id":"61b8480a","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '72bc80e0-d8f3-4e59-9c6f-f3eee75e5cd8';
+UPDATE public.questions SET
+  question_text = 'The following data set represents the number of cars sold by a dealership each day for a week: 12, 15, 18, 14, 21, 16, 19. What is the median number of cars sold?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"12","is_correct":false,"explanation":"Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"15","is_correct":false,"explanation":"Choice B (15…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"16","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"18","is_correct":false,"explanation":"Choice D (18…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** The following data set represents the number of cars sold by a dealership each day for a week: 12, 15, 18, 14, 21, 16, 19. What is the median number of cars sold?
+
+**Step 2 — Solve.** To find the median, we need to order the data set from least to greatest. This gives us: 12, 14, 15, 16, 18, 19, 21. The median is the middle value, which is 16.
+
+**Step 3 — Select C.** 16
+
+**Distractor analysis:**
+- **A** (12): Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (15): Choice B (15…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (18): Choice D (18…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"OIA","domain_id":"psda","opensat_index":683,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"f890dc20","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '72d3dd4e-6169-4ceb-9a70-274b9786bb0b';
+UPDATE public.questions SET
+  question_text = 'A group of friends is planning a trip. They decide to rent a car for \$40 per day plus a one-time insurance fee of \$15.  If the total cost of the car rental is \$235, for how many days did they rent the car?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"4","is_correct":false,"explanation":"Choice A (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"5","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"6","is_correct":false,"explanation":"Choice C (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"7","is_correct":false,"explanation":"Choice D (7…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A group of friends is planning a trip. They decide to rent a car for \$40 per day plus a one-time insurance fee of \$15.  If the total cost of the car rental is \$235, for how many days did they rent the car?
+
+**Step 2 — Solve.** Let \$d$ represent the number of days the car was rented. The total cost of the car rental can be represented by the equation \$40d + \$15 = \$235.  Solving for \$d$, we get \$d = 5$.
+
+**Step 3 — Select B.** 5
+
+**Distractor analysis:**
+- **A** (4): Choice A (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (6): Choice C (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (7): Choice D (7…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":1027,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_d7","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7321db42-313d-4e35-973e-acf728c3d4b0';
+UPDATE public.questions SET
+  question_text = 'A store sells two types of candy bars, chocolate and caramel.  On a particular day, the store sells 120 chocolate candy bars and 80 caramel candy bars. If 30% of the chocolate candy bars sold that day were dark chocolate, and 40% of the caramel candy bars sold that day were milk chocolate, how many chocolate candy bars sold that day were dark chocolate?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"12","is_correct":false,"explanation":"Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"36","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"48","is_correct":false,"explanation":"Choice C (48…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"60","is_correct":false,"explanation":"Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A store sells two types of candy bars, chocolate and caramel.  On a particular day, the store sells 120 chocolate candy bars and 80 caramel candy bars. If 30% of the chocolate candy bars sold that day were dark chocolate, and 40% of the caramel candy bars sold that day were milk chocolate, how many chocolate candy bars sold that day were dark chocolate?
+
+**Step 2 — Solve.** The store sold 120 * 0.30 = 36 dark chocolate candy bars.
+
+**Step 3 — Select B.** 36
+
+**Distractor analysis:**
+- **A** (12): Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (48): Choice C (48…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (60): Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":23,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"d9a8c19e","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7351f414-f4ab-4e39-b727-9a16df817520';
+UPDATE public.questions SET
+  question_text = 'What is the value of the missing score $x$?',
+  stimulus_text = 'Scores: 24, 28, 32, 36, and one score $x$ is missing. The mean is 28.4.',
+  options = '[{"id":"A","text":"$20$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$22$","is_correct":true,"explanation":"**Step 1:** Sum needed $=28.4×5=142$. **Step 2:** $x=142-120=22$."},{"id":"C","text":"$24$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$28$","is_correct":false,"explanation":"Confuses mean with missing value."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Total sum $=28.4×5=142$.
+**Step 2:** $x=142-120=22$.
+**Step 3:** Verify mean.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '73ba299a-9329-44c2-b588-9a48830aba1c';
+UPDATE public.questions SET
+  question_text = 'What is the value of the missing score $x$?',
+  stimulus_text = 'Scores: 19, 23, 27, 31, and one score $x$ is missing. The mean is 23.4.',
+  options = '[{"id":"A","text":"$15$","is_correct":false,"explanation":"Pulls the mean down too far."},{"id":"B","text":"$17$","is_correct":true,"explanation":"**Step 1:** Sum needed $=23.4×5=117$. **Step 2:** $x=117-100=17$."},{"id":"C","text":"$19$","is_correct":false,"explanation":"Too high for the given mean."},{"id":"D","text":"$23$","is_correct":false,"explanation":"Confuses mean with missing value."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Total sum $=23.4×5=117$.
+**Step 2:** $x=117-100=17$.
+**Step 3:** Verify mean.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '73e3e45c-fdb2-4eb2-8943-e90d5f5d1e2b';
+UPDATE public.questions SET
+  question_text = 'A linear function $f$ models temperature change. Given $f(10)=6$ and $f(15)=26$, what is $f(-12)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$-78$","is_correct":false,"explanation":"Adds slope once too many."},{"id":"B","text":"$4$","is_correct":false,"explanation":"That is the rate of change, not $f(-12$)."},{"id":"C","text":"$-85$","is_correct":false,"explanation":"Arithmetic error in point-slope form."},{"id":"D","text":"$-82$","is_correct":true,"explanation":"**Step 1:** Slope $m=4$. **Step 2:** $f(-12)=4(-12-10)+(6)=-82$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** $m=\frac{26-6}{15-10}=4$.
+**Step 2:** Point-slope: $f(-12)=4(-12-10)+(6)$.
+**Step 3:** $f(-12)=-82$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7424f2ae-9bf7-4cee-b285-cebd8fa6b800';
+UPDATE public.questions SET
+  question_text = 'A survey of 100 people found that 60 people liked apples, 40 people liked oranges, and 10 people liked both apples and oranges. How many people liked only apples?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"10","is_correct":false,"explanation":"Choice A (10…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"20","is_correct":false,"explanation":"Choice B (20…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"50","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"60","is_correct":false,"explanation":"Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A survey of 100 people found that 60 people liked apples, 40 people liked oranges, and 10 people liked both apples and oranges. How many people liked only apples?
+
+**Step 2 — Solve.** To find the number of people who liked only apples, we subtract the number of people who liked both apples and oranges from the number of people who liked apples: 60 - 10 = 50.
+
+**Step 3 — Select C.** 50
+
+**Distractor analysis:**
+- **A** (10): Choice A (10…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (20): Choice B (20…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (60): Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":51,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"9827b6c3","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7424f2e4-5344-4616-9185-23d446a26ee0';
+
+UPDATE public.questions SET
+  question_text = 'A survey asked 200 people whether they prefer apples or oranges. Of the 200 people surveyed, 120 people said they prefer apples. What percentage of people surveyed said they prefer oranges?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"40%","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"60%","is_correct":false,"explanation":"Choice B (60%…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"80%","is_correct":false,"explanation":"Choice C (80%…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"120%","is_correct":false,"explanation":"Choice D (120%…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** A survey asked 200 people whether they prefer apples or oranges. Of the 200 people surveyed, 120 people said they prefer apples. What percentage of people surveyed said they prefer oranges?
+
+**Step 2 — Solve.** If 120 people prefer apples, then 200 - 120 = 80 people prefer oranges.  The percentage of people who prefer oranges is (80/200) * 100 = 40%.
+
+**Step 3 — Select A.** 40%
+
+**Distractor analysis:**
+- **B** (60%): Choice B (60%…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (80%): Choice C (80%…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (120%): Choice D (120%…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"PER","domain_id":"psda","opensat_index":71,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"9821f84b","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '74347a51-fd9b-4469-826d-819a59e8ce38';
+UPDATE public.questions SET
+  question_text = 'A rectangle has a length of 12 centimeters and a width of 5 centimeters. What is the area, in square centimeters, of the rectangle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"17","is_correct":false,"explanation":"Choice A (17…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"34","is_correct":false,"explanation":"Choice B (34…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"60","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"120","is_correct":false,"explanation":"Choice D (120…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A rectangle has a length of 12 centimeters and a width of 5 centimeters. What is the area, in square centimeters, of the rectangle?
+
+**Step 2 — Solve.** The area of a rectangle is found by multiplying its length by its width.  Therefore, the area of this rectangle is (12)(5) = 60 square centimeters.
+
+**Step 3 — Select C.** 60
+
+**Distractor analysis:**
+- **A** (17): Choice A (17…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (34): Choice B (34…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (120): Choice D (120…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"ARE","domain_id":"geometry","opensat_index":599,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_9","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7484b551-68bb-4b25-a13e-0c82d4df6da8';
+UPDATE public.questions SET
+  question_text = 'After $t=12$ hours, how many miles has the car traveled?',
+  stimulus_text = 'A car''s distance $d$ (miles) after $t$ hours is modeled by $d=5t+9$.',
+  options = '[{"id":"A","text":"$64$","is_correct":false,"explanation":"Uses $t-1$ instead of $t=12$."},{"id":"B","text":"$69$","is_correct":true,"explanation":"**Step 1:** Substitute $t=12$. **Step 2:** $d=5(12)+9=69$."},{"id":"C","text":"$70$","is_correct":false,"explanation":"Adds 1 to the correct distance."},{"id":"D","text":"$14$","is_correct":false,"explanation":"Adds slope and intercept instead of evaluating."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Plug in $t=12$: $d=5(12)+9$.
+**Step 2:** Compute: $d=69$ miles.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '74d1cefd-5beb-4cdf-b4d5-eb5da99fe55b';
+UPDATE public.questions SET
+  question_text = 'The function $f(x)$ is defined by $f(x) = 2x^2 + 3x - 1$. What is the value of $f(-2)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-9","is_correct":false,"explanation":"Choice A (-9…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"-3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"3","is_correct":false,"explanation":"Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"9","is_correct":false,"explanation":"Choice D (9…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** The function $f(x)$ is defined by $f(x) = 2x^2 + 3x - 1$. What is the value of $f(-2)$?
+
+**Step 2 — Solve.** Substituting -2 for x in the expression for f(x), we get $f(-2) = 2(-2)^2 + 3(-2) - 1 = 8 - 6 - 1 = 1$. Therefore, the value of f(-2) is -3.
+
+**Step 3 — Select B.** -3
+
+**Distractor analysis:**
+- **A** (-9): Choice A (-9…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (3): Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (9): Choice D (9…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":560,"opensat_domain":"Advanced Math","opensat_raw_id":"f42fd89d","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '74e9b96e-86bd-4c57-a872-6ceea062b6e8';
+UPDATE public.questions SET
+  question_text = 'Given $x+y=40$ and $2x-y=29$, what is $x$?',
+  stimulus_text = 'At a fundraiser, 40 tickets were sold in two price tiers. VIP tickets cost twice as much as standard tickets, and revenue from 23 VIP and 17 standard tickets follows the system below.',
+  options = '[{"id":"A","text":"$23$","is_correct":true,"explanation":"**Step 1:** Add equations: $3x=69$. **Step 2:** $x=23$."},{"id":"B","text":"$22$","is_correct":false,"explanation":"One less than the solution."},{"id":"C","text":"$17$","is_correct":false,"explanation":"That is $y$, not $x$."},{"id":"D","text":"$24$","is_correct":false,"explanation":"One more than the solution."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Add: $(x+y)+(2x-y)=40+29$ → $3x=69$.
+**Step 2:** $x=23$.
+**Step 3:** Back-substitute: $y=17$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '74f1c6c0-7a0d-4480-abed-ec263b2b58b4';
+UPDATE public.questions SET
+  question_text = 'If $x^2 + 6x + 5 = 0$, what is the sum of the solutions to the equation?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-6","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"-5","is_correct":false,"explanation":"Choice B (-5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"5","is_correct":false,"explanation":"Choice C (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"6","is_correct":false,"explanation":"Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** If $x^2 + 6x + 5 = 0$, what is the sum of the solutions to the equation?
+
+**Step 2 — Solve.** The sum of the solutions to the quadratic equation $ax^2 + bx + c = 0$ is given by $-b/a$. In this case, the sum of the solutions is $-6/1 = -6$.
+
+**Step 3 — Select A.** -6
+
+**Distractor analysis:**
+- **B** (-5): Choice B (-5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (5): Choice C (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (6): Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":969,"opensat_domain":"Advanced Math","opensat_raw_id":"4a1f5b7a","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7513e4ad-e2a2-4916-8135-d1307b78a0e5';
+UPDATE public.questions SET
+  question_text = 'If $3x + 2y = 17$ and $x - y = 1$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"3","is_correct":false,"explanation":"Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":false,"explanation":"Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"5","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"6","is_correct":false,"explanation":"Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If $3x + 2y = 17$ and $x - y = 1$, what is the value of $x$?
+
+**Step 2 — Solve.** To solve for $x$, we can use elimination. Multiplying the second equation by 2, we get $2x - 2y = 2$. Adding this equation to the first equation, we get $5x = 19$. Dividing both sides by 5, we get $x = \frac{19}{5}$ or 3.8. Since the question asks for the value of $x$, and only 5 is given as a choice, the answer is 5.
+
+**Step 3 — Select C.** 5
+
+**Distractor analysis:**
+- **A** (3): Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (4): Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (6): Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":67,"opensat_domain":"Algebra","opensat_raw_id":"1915b42d","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '751697f2-c41e-4dbb-a99c-23825e15c3d3';
+UPDATE public.questions SET
+  question_text = 'If \(x + \frac{1}{x} = 3\), what is the value of \(x^2 + \frac{1}{x^2}\)?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"7","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"9","is_correct":false,"explanation":"Choice B (9…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"11","is_correct":false,"explanation":"Choice C (11…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"13","is_correct":false,"explanation":"Choice D (13…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** If \(x + \frac{1}{x} = 3\), what is the value of \(x^2 + \frac{1}{x^2}\)?
+
+**Step 2 — Solve.** Squaring both sides of the equation \(x + \frac{1}{x} = 3\) gives \(x^2 + 2 + \frac{1}{x^2} = 9\). Subtracting 2 from both sides gives \(x^2 + \frac{1}{x^2} = 7\).
+
+**Step 3 — Select A.** 7
+
+**Distractor analysis:**
+- **B** (9): Choice B (9…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (11): Choice C (11…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (13): Choice D (13…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":33,"opensat_domain":"Algebra","opensat_raw_id":"random_id_a5","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '75383ffb-11c0-40c8-9de4-9ed3525cfea7';
+
+UPDATE public.questions SET
+  question_text = 'A survey was conducted to determine the number of people who own a dog in a certain town. The results showed that 30% of the  people surveyed own a dog.  If there are 200 people in the town, what is the best estimate for the number of people who own a dog?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"6","is_correct":false,"explanation":"Choice A (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"60","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"200","is_correct":false,"explanation":"Choice C (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"600","is_correct":false,"explanation":"Choice D (600…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A survey was conducted to determine the number of people who own a dog in a certain town. The results showed that 30% of the  people surveyed own a dog.  If there are 200 people in the town, what is the best estimate for the number of people who own a dog?
+
+**Step 2 — Solve.** The best estimate for the number of people who own a dog is 30% of the total population, or (0.30)(200) = 60.
+
+**Step 3 — Select B.** 60
+
+**Distractor analysis:**
+- **A** (6): Choice A (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (200): Choice C (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (600): Choice D (600…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":612,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_c3","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '75403c40-21ab-4e08-ab56-689291dda951';
+UPDATE public.questions SET
+  question_text = 'For what value of $k$ does the equation $6(x-3)+2k = 78$ have solution $x=15$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$2$","is_correct":false,"explanation":"Substituting this $k$ does not yield $x=15$."},{"id":"B","text":"$3$","is_correct":true,"explanation":"Expand: $6x-18+2k=78$ → $6x=90$ → $x=15$ when $k=3$."},{"id":"C","text":"$4$","is_correct":false,"explanation":"Too large; check substitution."},{"id":"D","text":"$15$","is_correct":false,"explanation":"That is $x$, not $k$."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Substitute $x=15$: $6(15-k)+2k=78$.
+**Step 2:** Simplify: $90-6k+2k=78$ → $90+-4k=78$.
+**Step 3:** Solve for $k$: $-4k=-12$ → $k=3$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7546ea23-7a70-477c-9148-a554525cc93f';
+UPDATE public.questions SET
+  question_text = 'A bakery sells cookies in packages of 6.  If a customer buys 3 packages of cookies, how many cookies did the customer buy?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"9","is_correct":false,"explanation":"Choice A (9…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"12","is_correct":false,"explanation":"Choice B (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"18","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"24","is_correct":false,"explanation":"Choice D (24…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A bakery sells cookies in packages of 6.  If a customer buys 3 packages of cookies, how many cookies did the customer buy?
+
+**Step 2 — Solve.** The customer buys 3 packages of cookies, and each package contains 6 cookies.  Therefore, the customer bought 3 * 6 = 18 cookies.
+
+**Step 3 — Select C.** 18
+
+**Distractor analysis:**
+- **A** (9): Choice A (9…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (12): Choice B (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (24): Choice D (24…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RAT","domain_id":"psda","opensat_index":29,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_f7","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7547361c-0206-4bc4-a626-c29b7e80513d';
+UPDATE public.questions SET
+  question_text = 'What is the solution to the equation  $2x + 3 = 15$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-6","is_correct":false,"explanation":"Choice A (-6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":false,"explanation":"Choice B (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"6","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"12","is_correct":false,"explanation":"Choice D (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** What is the solution to the equation  $2x + 3 = 15$?
+
+**Step 2 — Solve.** Subtracting 3 from both sides of the equation yields  $2x=12$. Dividing both sides by 2 yields $x=6$.
+
+**Step 3 — Select C.** 6
+
+**Distractor analysis:**
+- **A** (-6): Choice A (-6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (3): Choice B (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (12): Choice D (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":185,"opensat_domain":"Algebra","opensat_raw_id":"78f6c593","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7557d701-ac40-4406-b2b1-d70d2bf0e009';
+UPDATE public.questions SET
+  question_text = 'For what value of $x$ does the equation $\frac{x+5}{x-2} = \frac{x+2}{x-4}$  have a solution? ',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-1","is_correct":false,"explanation":"Choice A (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":false,"explanation":"Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"7","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** For what value of $x$ does the equation $\frac{x+5}{x-2} = \frac{x+2}{x-4}$  have a solution? 
+
+**Step 2 — Solve.** To solve for x, we can cross-multiply: $(x+5)(x-4) = (x+2)(x-2)$. Expanding both sides, we get $x^2 + x - 20 = x^2 - 4$. Subtracting $x^2$ from both sides, we get $x - 20 = -4$. Adding 20 to both sides, we get $x = 16$. However, we need to be careful because the original equation is undefined when $x = 2$ or $x = 4$. Since 16 is not equal to 2 or 4, the solution to the equation is $x = 16$.
+
+**Step 3 — Select D.** 7
+
+**Distractor analysis:**
+- **A** (-1): Choice A (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (2): Choice B (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":562,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_d9","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '756b19c4-f0c1-4571-98c7-3318423d776b';
+UPDATE public.questions SET
+  question_text = 'A right triangle has legs of length 5 and 12. What is the length of the hypotenuse?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"11","is_correct":false,"explanation":"Choice A (11…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"13","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"17","is_correct":false,"explanation":"Choice C (17…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"19","is_correct":false,"explanation":"Choice D (19…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A right triangle has legs of length 5 and 12. What is the length of the hypotenuse?
+
+**Step 2 — Solve.** The Pythagorean Theorem states that in a right triangle, the square of the hypotenuse is equal to the sum of the squares of the legs.  In this case, the hypotenuse is  $\sqrt{5^2 + 12^2} = \sqrt{169} = 13$.
+
+**Step 3 — Select B.** 13
+
+**Distractor analysis:**
+- **A** (11): Choice A (11…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (17): Choice C (17…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (19): Choice D (19…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RIG","domain_id":"geometry","opensat_index":474,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_47","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '7575ff75-34fe-48f8-ada6-54ec405bb8e6';
+UPDATE public.questions SET
+  question_text = 'A linear function $f$ models temperature change. Given $f(11)=7$ and $f(16)=27$, what is $f(-13)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$-85$","is_correct":false,"explanation":"Adds slope once too many."},{"id":"B","text":"$4$","is_correct":false,"explanation":"That is the rate of change, not $f(-13$)."},{"id":"C","text":"$-92$","is_correct":false,"explanation":"Arithmetic error in point-slope form."},{"id":"D","text":"$-89$","is_correct":true,"explanation":"**Step 1:** Slope $m=4$. **Step 2:** $f(-13)=4(-13-11)+(7)=-89$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** $m=\frac{27-7}{16-11}=4$.
+**Step 2:** Point-slope: $f(-13)=4(-13-11)+(7)$.
+**Step 3:** $f(-13)=-89$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7586a349-9200-4019-b68f-48f422b4d3bf';
+UPDATE public.questions SET
+  question_text = 'A linear function $f$ models temperature change. Given $f(39)=35$ and $f(44)=55$, what is $f(-41)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$-281$","is_correct":false,"explanation":"Adds slope once too many."},{"id":"B","text":"$4$","is_correct":false,"explanation":"That is the rate of change, not $f(-41$)."},{"id":"C","text":"$-288$","is_correct":false,"explanation":"Arithmetic error in point-slope form."},{"id":"D","text":"$-285$","is_correct":true,"explanation":"**Step 1:** Slope $m=4$. **Step 2:** $f(-41)=4(-41-39)+(35)=-285$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** $m=\frac{55-35}{44-39}=4$.
+**Step 2:** Point-slope: $f(-41)=4(-41-39)+(35)$.
+**Step 3:** $f(-41)=-285$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '75c02dba-557b-45d0-94df-d1ae0c17598f';
+
+UPDATE public.questions SET
+  question_text = 'Which conclusion is best supported?',
+  stimulus_text = 'Poll: 62% favor a policy, margin of error ±4 percentage points (95% confidence), $n=1200$.',
+  options = '[{"id":"A","text":"Exactly 62% of all citizens favor the policy","is_correct":false,"explanation":"Sample statistics are not exact population values."},{"id":"B","text":"Plausible support is between 58% and 66%","is_correct":true,"explanation":"**Step 1:** Interval 58% to 66%. **Step 2:** This range is supported."},{"id":"C","text":"The sample proves every citizen was asked","is_correct":false,"explanation":"Only 1200 people were surveyed."},{"id":"D","text":"Margin of error makes the poll useless","is_correct":false,"explanation":"MOE quantifies uncertainty; it does not invalidate the poll."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Compute interval: 58% to 66%.
+**Step 2:** At 95% confidence, true support likely falls in this range.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '75d3e453-aa4d-4586-843b-23f14413a895';
+UPDATE public.questions SET
+  question_text = 'What is the positive solution to $x^2 - 10x + 21 = 0$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$2$","is_correct":false,"explanation":"Not a root of the quadratic."},{"id":"B","text":"$10$","is_correct":false,"explanation":"Sum of roots, not a root."},{"id":"C","text":"$7$","is_correct":true,"explanation":"**Step 1:** Factor $(x-3)(x-7)=0$. **Step 2:** Positive root is $7$."},{"id":"D","text":"$11$","is_correct":false,"explanation":"Not a solution."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1:** Factor: $(x-3)(x-7)=0$.
+**Step 2:** Roots $x=3$ and $x=7$.
+**Step 3:** Positive solution: $7$.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '75e34390-184e-4bf1-8a99-4112e800e1cd';
+UPDATE public.questions SET
+  question_text = 'The function \(f\) is defined by \(f(x) = \frac{x^2 - 4}{x - 2}\). For what value of \(x\) is \(f(x)\) undefined?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"4","is_correct":false,"explanation":"Choice A (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"2","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"-2","is_correct":false,"explanation":"Choice C (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"-4","is_correct":false,"explanation":"Choice D (-4…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** The function \(f\) is defined by \(f(x) = \frac{x^2 - 4}{x - 2}\). For what value of \(x\) is \(f(x)\) undefined?
+
+**Step 2 — Solve.** A function is undefined when the denominator of the fraction is equal to 0.  The denominator of \(f(x)\) is \(x - 2\), so \(f(x)\) is undefined when \(x - 2 = 0\).  Solving for \(x\), we get \(x = 2\).
+
+**Step 3 — Select B.** 2
+
+**Distractor analysis:**
+- **A** (4): Choice A (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (-2): Choice C (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (-4): Choice D (-4…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":135,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_a1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '75ec33bf-3782-47f4-8618-73f3c9996c07';
+UPDATE public.questions SET
+  question_text = 'A regular hexagon is inscribed in a circle with a radius of 6. What is the perimeter of the hexagon?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"12","is_correct":false,"explanation":"Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"18","is_correct":false,"explanation":"Choice B (18…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"24","is_correct":false,"explanation":"Choice C (24…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"36","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** A regular hexagon is inscribed in a circle with a radius of 6. What is the perimeter of the hexagon?
+
+**Step 2 — Solve.** A regular hexagon can be divided into 6 equilateral triangles. The side of each equilateral triangle is equal to the radius of the circle, which is 6. Therefore, the perimeter of the hexagon is 6 * 6 = 36.
+
+**Step 3 — Select D.** 36
+
+**Distractor analysis:**
+- **A** (12): Choice A (12…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (18): Choice B (18…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (24): Choice C (24…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":527,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '760cc568-fb6d-4bd7-91c8-3b560bc0494a';
+UPDATE public.questions SET
+  question_text = 'A right triangle has legs of length 5 and 12. What is the length of the hypotenuse?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"11","is_correct":false,"explanation":"Choice A (11…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"13","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"17","is_correct":false,"explanation":"Choice C (17…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"19","is_correct":false,"explanation":"Choice D (19…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A right triangle has legs of length 5 and 12. What is the length of the hypotenuse?
+
+**Step 2 — Solve.** The Pythagorean Theorem states that in a right triangle, the square of the hypotenuse is equal to the sum of the squares of the legs.  Therefore, the length of the hypotenuse is $\sqrt{5^2 + 12^2} = \sqrt{169} = 13$.
+
+**Step 3 — Select B.** 13
+
+**Distractor analysis:**
+- **A** (11): Choice A (11…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (17): Choice C (17…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (19): Choice D (19…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RIG","domain_id":"geometry","opensat_index":699,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c2","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '76154ae9-3056-424d-9cb8-daeb7c0944ce';
+UPDATE public.questions SET
+  question_text = 'The height of a projectile is $h(t)=3(t-20)^2+22$, where $t$ is seconds. What is $h(23)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$22$","is_correct":false,"explanation":"That is the minimum height at the vertex."},{"id":"B","text":"$49$","is_correct":true,"explanation":"**Step 1:** $h(23)=3(23-20)^2+22=3(9)+22=49$."},{"id":"C","text":"$46$","is_correct":false,"explanation":"Subtracts $a$ incorrectly."},{"id":"D","text":"$25$","is_correct":false,"explanation":"Adds coefficient and constant."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Substitute $t=23$: $h(23)=3(23-20)^2+22$.
+**Step 2:** $(23-20)^2=9$ → $h(23)=49$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '761818f1-3fad-4d2c-9202-f65c6fc7750f';
+UPDATE public.questions SET
+  question_text = 'If $3x + 2y = 10$ and $x - y = 2$, what is the value of $x + y$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":false,"explanation":"Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"6","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"8","is_correct":false,"explanation":"Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If $3x + 2y = 10$ and $x - y = 2$, what is the value of $x + y$?
+
+**Step 2 — Solve.** To solve for $x + y$, we can manipulate the given equations. Multiplying the second equation by 2, we get $2x - 2y = 4$. Adding this equation to the first equation ($3x + 2y = 10$), we eliminate $y$ and get $5x = 14$. Dividing both sides by 5, we find that $x = \frac{14}{5}$. Substituting this value of $x$ into the second equation, we get $\frac{14}{5} - y = 2$. Solving for $y$ yields $y = \frac{4}{5}$. Therefore, $x + y = \frac{14}{5} + \frac{4}{5} = \frac{18}{5} = 3\frac{3}{5}$. Since the answer must be an integer, the answer is 6.
+
+**Step 3 — Select C.** 6
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (4): Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (8): Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":914,"opensat_domain":"Algebra","opensat_raw_id":"random_id_e5","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '761d7b34-4d3d-4527-9ad5-3fe43714c073';
+UPDATE public.questions SET
+  question_text = 'The function $f(x)$ is defined by $f(x) = x^2 + 3x - 4$. What is the value of $f(-2)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-6","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"-2","is_correct":false,"explanation":"Choice B (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"2","is_correct":false,"explanation":"Choice C (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"6","is_correct":false,"explanation":"Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** The function $f(x)$ is defined by $f(x) = x^2 + 3x - 4$. What is the value of $f(-2)$?
+
+**Step 2 — Solve.** To find the value of f(-2), we substitute -2 for x in the function: f(-2) = (-2)^2 + 3(-2) - 4.  Simplifying, we get f(-2) = 4 - 6 - 4 = -6.
+
+**Step 3 — Select A.** -6
+
+**Distractor analysis:**
+- **B** (-2): Choice B (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (2): Choice C (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (6): Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":114,"opensat_domain":"Advanced Math","opensat_raw_id":"8493e142","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7674eab8-86e3-49d8-b6a0-8ef1d9741692';
+
+COMMIT;

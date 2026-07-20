@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('6ff623f0-4b65-4a56-b755-918e8480dbb1', 'Which choice completes the text with the most logical and precise word or phrase?', 'The defense attorney did not deny that her client had been present at the scene. Instead, she chipped away at the prosecution''s timeline, noting a clock that ran fast, a witness who had been drinking, and a streetlight reportedly out for repairs. She offered no grand alternative theory. Her strategy was simply to ______ the certainty the jury was being asked to accept.', NULL, '[{"id":"A","text":"undermine","is_correct":true,"explanation":"Correct: chipping away at the timeline''s reliability weakens the certainty the jury was asked to accept."},{"id":"B","text":"confirm","is_correct":false,"explanation":"She is attacking the prosecution''s certainty, not supporting it."},{"id":"C","text":"summarize","is_correct":false,"explanation":"She does more than restate; she actively casts doubt on the certainty."},{"id":"D","text":"exaggerate","is_correct":false,"explanation":"She reduces confidence in the case rather than overstating it."}]'::jsonb, 'A', 'Step 1 — Find the clue
+She spent her effort {{yellow:chipping away at the prosecution''s timeline}} by exposing flaws.
+Step 2 — Match the word
+Weakening the jury''s certainty by exposing flaws is to undermine it.
+Distractor analysis:
+- B: "Confirm" reverses her aim; she attacks the certainty.
+- C: "Summarize" ignores that she actively raises doubts, not merely recaps.
+- D: "Exaggerate" misdirects; she diminishes confidence rather than inflating anything.', 'By exposing flaws in the timeline, what was she doing to the jury''s certainty?', 'Craft and Structure', 'Words in Context', 'reading_writing', 'craft', 'WIC', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

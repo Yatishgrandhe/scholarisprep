@@ -1,0 +1,727 @@
+/**
+ * Platform Admin shell theme — scoped to `.adminShell`.
+ * Brand: Scholaris navy + cobalt (+ aqua accents). No purple.
+ * Shared classes for page agents: .adminPage, .adminHeader*, .adminCard*, .adminTable*, etc.
+ */
+
+.adminShell {
+  /* ── Layout ─────────────────────────────────────── */
+  --admin-sidebar-width: 268px;
+  --admin-content-max: 1280px;
+  --admin-main-pad-x: var(--space-8);
+  --admin-main-pad-y: var(--space-8);
+  --admin-section-gap: var(--space-8);
+  --admin-block-gap: var(--space-6);
+
+  /* ── Surfaces (cool slate, cobalt-tinted — not warm cream) ── */
+  --admin-canvas: 220 28% 97%;
+  --admin-surface: 220 24% 99%;
+  --admin-surface-raised: 220 20% 100%;
+  --admin-surface-muted: 220 18% 94%;
+  --admin-ink: 222 28% 12%;
+  --admin-ink-muted: 220 12% 40%;
+  --admin-border: 220 16% 86%;
+  --admin-border-strong: 220 14% 78%;
+
+  /* ── Brand accents (existing Scholaris) ─────────── */
+  --admin-accent: 221 83% 53%; /* cobalt #2563eb */
+  --admin-accent-deep: 224 76% 48%;
+  --admin-accent-soft: 221 83% 53% / 0.1;
+  --admin-aqua: 187 92% 42%; /* #06b6d4 family */
+  --admin-navy: 220 55% 16%;
+
+  /* ── Sidebar (deep navy rail) ───────────────────── */
+  --admin-sidebar-bg: 220 52% 14%;
+  --admin-sidebar-fg: 210 40% 98%;
+  --admin-sidebar-fg-muted: 215 22% 72%;
+  --admin-sidebar-border: 210 40% 98% / 0.1;
+  --admin-sidebar-hover: 210 40% 98% / 0.07;
+  --admin-sidebar-active: 221 83% 53% / 0.22;
+  --admin-sidebar-active-fg: 210 100% 98%;
+  --admin-badge-bg: 221 83% 53% / 0.22;
+  --admin-badge-fg: 210 90% 88%;
+
+  /* ── Elevation & radius ─────────────────────────── */
+  --admin-radius: 20px;
+  --admin-radius-sm: 14px;
+  --admin-radius-lg: 24px;
+  --admin-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.65) inset,
+    0 12px 40px -28px hsl(222 40% 12% / 0.28);
+  --admin-shadow-sm: 0 1px 2px hsl(222 30% 12% / 0.06);
+
+  /* ── Type ───────────────────────────────────────── */
+  --admin-font: var(--font-body);
+  --admin-font-mono: var(--font-mono);
+  --admin-title-size: 1.625rem;
+  --admin-title-weight: 750;
+  --admin-label-size: 0.6875rem;
+
+  /* ── Button / toolbar rhythm ────────────────────── */
+  --admin-control-gap: var(--space-4);
+  --admin-btn-gap: var(--space-3);
+  --admin-control-min-h: 3rem;
+  --admin-btn-min-h: 2.875rem;
+  --admin-btn-min-h-sm: 2.375rem;
+  --admin-icon-size-sm: 2.75rem;
+  --admin-icon-size-lg: 3.5rem;
+
+  /* Bridge into shared dashboard sidebar CSS vars (AdminSidebar reuses module) */
+  --dashboard-sidebar-width: var(--admin-sidebar-width);
+  --dashboard-sidebar-bg: var(--admin-sidebar-bg);
+  --dashboard-sidebar-fg: var(--admin-sidebar-fg);
+  --dashboard-sidebar-fg-muted: var(--admin-sidebar-fg-muted);
+  --dashboard-sidebar-border: var(--admin-sidebar-border);
+  --dashboard-sidebar-hover: var(--admin-sidebar-hover);
+  --dashboard-sidebar-active: var(--admin-sidebar-active);
+  --dashboard-avatar-bg: 221 55% 28%;
+  --dashboard-avatar-fg: 210 40% 96%;
+
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: hsl(var(--admin-canvas));
+  color: hsl(var(--admin-ink));
+  font-family: var(--admin-font);
+}
+
+.dark .adminShell {
+  --admin-canvas: 222 28% 8%;
+  --admin-surface: 222 24% 11%;
+  --admin-surface-raised: 222 22% 13%;
+  --admin-surface-muted: 222 18% 15%;
+  --admin-ink: 210 30% 96%;
+  --admin-ink-muted: 215 14% 68%;
+  --admin-border: 220 14% 22%;
+  --admin-border-strong: 220 12% 30%;
+  --admin-accent-soft: 221 83% 58% / 0.16;
+  --admin-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.04) inset,
+    0 16px 48px -28px hsl(0 0% 0% / 0.55);
+  --admin-shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.35);
+  --admin-sidebar-bg: 222 42% 9%;
+}
+
+/* ── Content column ──────────────────────────────── */
+
+.adminContentShell {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  margin-left: var(--admin-sidebar-width);
+  display: flex;
+  flex-direction: column;
+  background: hsl(var(--admin-canvas));
+}
+
+.adminCanvas {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      900px 420px at 12% -8%,
+      hsl(var(--admin-accent) / 0.07),
+      transparent 55%
+    ),
+    radial-gradient(
+      700px 380px at 92% 0%,
+      hsl(var(--admin-aqua) / 0.05),
+      transparent 50%
+    ),
+    linear-gradient(
+      180deg,
+      hsl(var(--admin-canvas)) 0%,
+      hsl(var(--admin-surface-muted) / 0.35) 100%
+    );
+  opacity: 1;
+}
+
+.adminCanvas::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      hsl(var(--admin-border) / 0.35) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      hsl(var(--admin-border) / 0.35) 1px,
+      transparent 1px
+    );
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, hsl(0 0% 0% / 0.35), transparent 72%);
+  opacity: 0.45;
+}
+
+.dark .adminCanvas::after {
+  opacity: 0.2;
+}
+
+.adminMain {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--admin-main-pad-y) var(--admin-main-pad-x) var(--space-8);
+  overflow-x: hidden;
+}
+
+.adminMain > * {
+  width: 100%;
+  max-width: var(--admin-content-max);
+  margin-inline: auto;
+}
+
+.adminPageBody {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .adminShell {
+    --admin-main-pad-x: var(--space-5);
+    --admin-main-pad-y: var(--space-5);
+  }
+}
+
+/* ── Shared page primitives (agents 3–5) ─────────── */
+
+.adminPage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--admin-section-gap);
+}
+
+.adminHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--admin-control-gap, var(--space-4));
+  margin-bottom: 0;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid hsl(var(--admin-border) / 0.85);
+}
+
+.adminHeaderMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.adminHeaderTitle {
+  margin: 0 0 var(--space-2);
+  font-family: var(--admin-font);
+  font-size: var(--admin-title-size);
+  font-weight: var(--admin-title-weight);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: hsl(var(--admin-ink));
+  text-wrap: balance;
+}
+
+.adminHeaderSubtitle {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: hsl(var(--admin-ink-muted));
+}
+
+.adminHeaderActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--admin-control-gap, var(--space-3));
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.adminHeaderActions > * {
+  flex-shrink: 0;
+}
+
+.adminHeaderActions button,
+.adminHeaderActions [data-slot="button"] {
+  min-height: var(--admin-btn-min-h, 2.5rem);
+  white-space: nowrap;
+}
+
+.adminEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: var(--space-2);
+  font-size: var(--admin-label-size);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: hsl(var(--admin-accent-deep));
+}
+
+.adminCard {
+  padding: var(--space-7) var(--space-8);
+  border-radius: var(--admin-radius);
+  border: 1px solid hsl(var(--admin-border) / 0.9);
+  background: linear-gradient(
+    165deg,
+    hsl(var(--admin-surface-raised)) 0%,
+    hsl(var(--admin-surface)) 100%
+  );
+  box-shadow: var(--admin-shadow);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.adminCard:hover {
+  border-color: hsl(var(--admin-accent) / 0.28);
+}
+
+.adminCardTitle {
+  margin: 0 0 var(--space-5);
+  font-size: var(--admin-label-size);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: hsl(var(--admin-ink-muted));
+}
+
+.adminCardFlush {
+  padding: 0;
+  overflow: hidden;
+}
+
+.adminStatGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: var(--space-6);
+}
+
+.adminStat {
+  padding: var(--space-6) var(--space-7);
+  border-radius: var(--admin-radius);
+  border: 1px solid hsl(var(--admin-border) / 0.9);
+  background: hsl(var(--admin-surface-raised));
+  box-shadow: var(--admin-shadow-sm);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.adminStat:hover {
+  border-color: hsl(var(--admin-accent) / 0.35);
+  box-shadow: var(--admin-shadow);
+  transform: translateY(-1px);
+}
+
+.adminStatValue {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  color: hsl(var(--admin-ink));
+  font-family: var(--admin-font);
+}
+
+.adminStatLabel {
+  margin: 0.3rem 0 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--admin-ink-muted));
+}
+
+.adminStatMeta {
+  margin: 0.35rem 0 0;
+  font-size: 0.75rem;
+  color: hsl(var(--admin-ink-muted));
+  line-height: 1.4;
+}
+
+.adminToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--admin-control-gap, var(--space-4));
+  align-items: flex-end;
+  margin-bottom: var(--space-6);
+}
+
+.adminToolbarField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: min(100%, 12rem);
+}
+
+.adminToolbarLabel {
+  font-size: var(--admin-label-size);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: hsl(var(--admin-ink-muted));
+}
+
+.adminToolbar input,
+.adminToolbar select,
+.adminField {
+  box-sizing: border-box;
+  min-height: var(--admin-control-min-h, 3rem);
+  padding: 0.65rem 1rem;
+  border: 1px solid hsl(var(--admin-border));
+  border-radius: var(--admin-radius-sm);
+  font-size: 0.875rem;
+  font-family: var(--admin-font);
+  background: hsl(var(--admin-surface-raised));
+  color: hsl(var(--admin-ink));
+  min-width: min(100%, 12rem);
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.adminToolbar button,
+.adminToolbar [data-slot="button"] {
+  flex-shrink: 0;
+  min-height: var(--admin-control-min-h, 2.75rem);
+  white-space: nowrap;
+}
+
+.adminActionRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--admin-control-gap, var(--space-3));
+  min-width: 0;
+}
+
+.adminActionRow button,
+.adminActionRow [data-slot="button"],
+.adminActionRow [data-slot="alert-dialog-trigger"] {
+  flex-shrink: 0;
+  min-height: var(--admin-btn-min-h, 2.5rem);
+  white-space: nowrap;
+}
+
+.adminToolbar input:focus-visible,
+.adminToolbar select:focus-visible,
+.adminField:focus-visible {
+  outline: none;
+  border-color: hsl(var(--admin-accent));
+  box-shadow: 0 0 0 3px hsl(var(--admin-accent) / 0.14);
+}
+
+.adminTableWrap {
+  border: 1px solid hsl(var(--admin-border) / 0.9);
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  background: hsl(var(--admin-surface-raised));
+  box-shadow: var(--admin-shadow-sm);
+}
+
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.adminTable thead th {
+  padding: 0.95rem 1.25rem;
+  text-align: left;
+  font-size: var(--admin-label-size);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: hsl(var(--admin-ink-muted));
+  background: hsl(var(--admin-surface-muted) / 0.65);
+  border-bottom: 1px solid hsl(var(--admin-border));
+}
+
+.adminTable tbody td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid hsl(var(--admin-border) / 0.75);
+  color: hsl(var(--admin-ink));
+  vertical-align: middle;
+}
+
+.adminTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.adminTable tbody tr:hover td {
+  background: hsl(var(--admin-accent-soft));
+}
+
+/* shadcn Table inside admin wrappers */
+/* shadcn Table — all admin list pages (scoped to shell + explicit wrap) */
+.adminShell [data-slot="table-container"],
+.adminTableWrap [data-slot="table-container"] {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.adminShell [data-slot="table"],
+.adminTableWrap [data-slot="table"] {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.adminShell [data-slot="table-head"],
+.adminTableWrap [data-slot="table-head"] {
+  height: auto;
+  min-height: 2.75rem;
+  padding: 0.9rem 1.25rem;
+  font-size: var(--admin-label-size);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: hsl(var(--admin-ink-muted));
+  background: hsl(var(--admin-surface-muted) / 0.55);
+  white-space: nowrap;
+  border-bottom: 1px solid hsl(var(--admin-border));
+  vertical-align: middle;
+}
+
+.adminShell [data-slot="table-cell"],
+.adminTableWrap [data-slot="table-cell"] {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid hsl(var(--admin-border) / 0.72);
+  color: hsl(var(--admin-ink));
+  vertical-align: middle;
+  font-variant-numeric: tabular-nums;
+}
+
+.adminShell
+  [data-slot="table-body"]
+  [data-slot="table-row"]:last-child
+  [data-slot="table-cell"],
+.adminTableWrap
+  [data-slot="table-body"]
+  [data-slot="table-row"]:last-child
+  [data-slot="table-cell"] {
+  border-bottom: none;
+}
+
+.adminShell [data-slot="table-row"],
+.adminTableWrap [data-slot="table-row"] {
+  border-bottom: none;
+  transition: background 140ms ease;
+}
+
+.adminShell [data-slot="table-row"]:hover,
+.adminTableWrap [data-slot="table-row"]:hover {
+  background: transparent;
+}
+
+.adminShell [data-slot="table-row"]:hover [data-slot="table-cell"],
+.adminTableWrap [data-slot="table-row"]:hover [data-slot="table-cell"] {
+  background: hsl(var(--admin-accent-soft));
+}
+
+.adminShell [data-slot="table-header"] [data-slot="table-row"],
+.adminTableWrap [data-slot="table-header"] [data-slot="table-row"] {
+  border-bottom: 1px solid hsl(var(--admin-border));
+}
+
+.adminTableWrap [data-slot="table-header"] th,
+.adminTableWrap thead th {
+  background: hsl(var(--admin-surface-muted) / 0.55);
+}
+
+.adminEmpty {
+  padding: var(--space-10) var(--space-4);
+  text-align: center;
+  color: hsl(var(--admin-ink-muted));
+  font-size: 0.875rem;
+}
+
+.adminMuted {
+  color: hsl(var(--admin-ink-muted));
+}
+
+.adminMono {
+  font-family: var(--admin-font-mono);
+  font-size: 0.8125rem;
+}
+
+.adminDivider {
+  height: 1px;
+  margin: var(--space-5) 0;
+  border: none;
+  background: hsl(var(--admin-border));
+}
+
+.adminGrid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .adminGrid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .adminHeaderActions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .adminToolbarField {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .adminToolbar input,
+  .adminToolbar select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .adminToolbar button,
+  .adminToolbar [data-slot="button"] {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .adminActionRow button,
+  .adminActionRow [data-slot="button"],
+  .adminActionRow [data-slot="alert-dialog-trigger"] {
+    flex: 1 1 calc(50% - var(--admin-control-gap, var(--space-3)));
+    justify-content: center;
+  }
+}
+
+/* ── Admin buttons (shadcn Button inside shell) ─────────────────────────── */
+
+.adminShell [data-slot="button"] {
+  border-radius: var(--admin-radius-sm);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  padding-inline: 1.25rem;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
+.adminShell [data-slot="button"]:not([class*="h-8"]):not([class*="h-9"]):not([class*="size-"]) {
+  min-height: var(--admin-btn-min-h);
+  padding-block: 0.65rem;
+}
+
+.adminShell [data-slot="button"][class*="h-9"],
+.adminShell [data-slot="button"][class*="h-8"] {
+  min-height: var(--admin-btn-min-h-sm);
+}
+
+.adminShell [data-slot="button"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px hsl(var(--admin-accent) / 0.18);
+}
+
+.adminShell .actions [data-slot="button"],
+.adminShell [data-slot="table-cell"] [data-slot="button"] {
+  min-height: var(--admin-btn-min-h-sm);
+  padding-inline: 1rem;
+  padding-block: 0.45rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--admin-radius-sm);
+}
+
+/* ── Admin badges (role, plan, status pills) ─────────────────────────────── */
+
+.adminShell [data-slot="badge"] {
+  height: auto;
+  min-height: 2rem;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+/* ── Spacing utilities ──────────────────────────────────────────────────── */
+
+.adminSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--admin-block-gap, var(--space-5));
+  margin-bottom: var(--admin-section-gap);
+}
+
+.adminSection:last-child {
+  margin-bottom: 0;
+}
+
+.adminStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--admin-block-gap, var(--space-5));
+}
+
+/* ── Admin mobile tables (card rows) ─────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .adminShell .responsiveTable [data-slot="table-container"] {
+    overflow: visible;
+  }
+
+  .adminShell .responsiveTable tr,
+  .adminShell .responsiveTable [data-slot="table-row"] {
+    margin-bottom: var(--space-4);
+    padding: var(--space-5);
+    border: 1px solid hsl(var(--admin-border) / 0.9);
+    border-radius: var(--admin-radius);
+    background: hsl(var(--admin-surface-raised));
+    box-shadow: var(--admin-shadow-sm);
+  }
+
+  .adminShell .responsiveTable td,
+  .adminShell .responsiveTable [data-slot="table-cell"] {
+    padding: var(--space-2) 0;
+    border-bottom: none;
+    background: transparent !important;
+  }
+
+  .adminShell .responsiveTable td::before,
+  .adminShell .responsiveTable [data-slot="table-cell"]::before {
+    color: hsl(var(--admin-ink-muted));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .adminStat,
+  .adminCard {
+    transition: none;
+  }
+
+  .adminStat:hover,
+  .adminCard:hover {
+    transform: none;
+  }
+
+  .adminShell [data-slot="button"] {
+    transition: none;
+  }
+}

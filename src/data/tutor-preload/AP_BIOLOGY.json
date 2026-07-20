@@ -1,0 +1,146 @@
+{
+  "exam_type": "AP_BIOLOGY",
+  "display_name": "AP Biology",
+  "command_terms": [
+    "calculate",
+    "describe",
+    "explain",
+    "identify",
+    "justify",
+    "make a claim",
+    "predict",
+    "represent"
+  ],
+  "misconceptions": [
+    "Treating natural selection as goal-directed",
+    "Confusing gene expression with inheritance of acquired traits",
+    "Mixing mitosis outcomes with meiosis products",
+    "Assuming enzymes are consumed in reactions",
+    "Equating correlation in ecological data with causation",
+    "Ignoring null hypotheses in experimental design FRQs"
+  ],
+  "paper_rules": [
+    "Science Practices: experimental design, data analysis, argumentation",
+    "FRQ: claim–evidence–reasoning; label graphs and units",
+    "Use formula/constants sheet outline for chi-square, water potential, etc.",
+    "Do not invent data; show setup for calculations"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "key": "mcq",
+        "calculator": "four_function_sometimes",
+        "note": "Historically four-function sometimes allowed; treat default as none unless item flags calculator_allowed"
+      },
+      {
+        "key": "frq",
+        "calculator": "four_function_sometimes",
+        "note": "Same policy on FRQ quantitative items"
+      }
+    ],
+    "notes": "Default none. Four-function calculators have historically been allowed on some administrations — check current CED/exam instructions; flag quantitative items with calculator_allowed when appropriate."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_chemistry_of_life",
+      "unit_name": "Chemistry of Life",
+      "unit_order": 1,
+      "weight_hint": 0.09,
+      "quota": 45,
+      "topics": [
+        "Water and macromolecules",
+        "Structure–function of biomolecules",
+        "Origins of life cues"
+      ]
+    },
+    {
+      "unit_code": "U2_cell_structure",
+      "unit_name": "Cell Structure and Function",
+      "unit_order": 2,
+      "weight_hint": 0.11,
+      "quota": 55,
+      "topics": [
+        "Organelles and compartments",
+        "Membrane transport",
+        "Cell size and surface area"
+      ]
+    },
+    {
+      "unit_code": "U3_cellular_energetics",
+      "unit_name": "Cellular Energetics",
+      "unit_order": 3,
+      "weight_hint": 0.14,
+      "quota": 70,
+      "topics": [
+        "Enzyme catalysis",
+        "Photosynthesis",
+        "Cellular respiration and fitness"
+      ]
+    },
+    {
+      "unit_code": "U4_cell_communication",
+      "unit_name": "Cell Communication and Cell Cycle",
+      "unit_order": 4,
+      "weight_hint": 0.12,
+      "quota": 60,
+      "topics": [
+        "Signal transduction",
+        "Feedback",
+        "Mitosis and regulation",
+        "Cancer connections"
+      ]
+    },
+    {
+      "unit_code": "U5_heredity",
+      "unit_name": "Heredity",
+      "unit_order": 5,
+      "weight_hint": 0.09,
+      "quota": 45,
+      "topics": [
+        "Meiosis and genetic diversity",
+        "Mendelian and non-Mendelian inheritance",
+        "Environmental effects on phenotype"
+      ]
+    },
+    {
+      "unit_code": "U6_gene_expression",
+      "unit_name": "Gene Expression and Regulation",
+      "unit_order": 6,
+      "weight_hint": 0.14,
+      "quota": 70,
+      "topics": [
+        "DNA/RNA structure",
+        "Transcription and translation",
+        "Gene regulation",
+        "Biotechnology tools"
+      ]
+    },
+    {
+      "unit_code": "U7_natural_selection",
+      "unit_name": "Natural Selection",
+      "unit_order": 7,
+      "weight_hint": 0.17,
+      "quota": 85,
+      "topics": [
+        "Evidence for evolution",
+        "Natural selection mechanisms",
+        "Population genetics",
+        "Speciation and phylogeny"
+      ]
+    },
+    {
+      "unit_code": "U8_ecology",
+      "unit_name": "Ecology",
+      "unit_order": 8,
+      "weight_hint": 0.14,
+      "quota": 70,
+      "topics": [
+        "Energy flow and trophic structure",
+        "Population ecology",
+        "Community interactions",
+        "Biodiversity and disruptions"
+      ]
+    }
+  ]
+}

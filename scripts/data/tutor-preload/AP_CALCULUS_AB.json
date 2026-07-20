@@ -1,0 +1,113 @@
+{
+  "exam_type": "AP_CALCULUS_AB",
+  "display_name": "AP Calculus AB",
+  "command_terms": [
+    "evaluate",
+    "justify",
+    "approximate",
+    "interpret",
+    "determine",
+    "explain"
+  ],
+  "misconceptions": [
+    "Confusing average rate of change with instantaneous rate",
+    "Dropping the chain rule on compositions",
+    "Treating FTC as only antiderivative lookup without accumulation meaning",
+    "Misreading calculator graphs without checking window/mode",
+    "Forgetting units and contextual meaning on applied FRQs"
+  ],
+  "paper_rules": [
+    "Show supporting work; calculator answers alone rarely earn full credit",
+    "Use proper limit, derivative, and integral notation",
+    "On calculator sections, report intermediate values to required accuracy"
+  ],
+  "calculator_policy": {
+    "default": "graphing",
+    "sections": [
+      {
+        "section_id": "mcq_a",
+        "label": "MCQ Part A (no calculator)",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "mcq_b",
+        "label": "MCQ Part B (calculator)",
+        "calculator_allowed": true
+      },
+      {
+        "section_id": "frq_a",
+        "label": "FRQ Part A (calculator)",
+        "calculator_allowed": true
+      },
+      {
+        "section_id": "frq_b",
+        "label": "FRQ Part B (no calculator)",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "Graphing calculator allowed only on MCQ Part B and FRQ Part A. MCQ Part A and FRQ Part B are no-calculator."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_limits",
+      "unit_name": "Limits and Continuity",
+      "topics": [
+        "limit definitions and estimation",
+        "algebraic limit evaluation",
+        "continuity and IVT",
+        "infinite limits and asymptotes"
+      ]
+    },
+    {
+      "unit_code": "U2_differentiation",
+      "unit_name": "Differentiation",
+      "topics": [
+        "derivative definition",
+        "basic rules",
+        "composite implicit inverse",
+        "higher-order derivatives"
+      ]
+    },
+    {
+      "unit_code": "U3_appl_diff",
+      "unit_name": "Applications of Differentiation",
+      "topics": [
+        "related rates",
+        "linearization",
+        "L'Hôpital",
+        "MVT and curve analysis",
+        "optimization"
+      ]
+    },
+    {
+      "unit_code": "U4_integration",
+      "unit_name": "Integration and Accumulation",
+      "topics": [
+        "antiderivatives",
+        "definite integrals and FTC",
+        "substitution",
+        "accumulation functions"
+      ]
+    },
+    {
+      "unit_code": "U5_diff_eq",
+      "unit_name": "Differential Equations",
+      "topics": [
+        "slope fields",
+        "separable DE",
+        "exponential models",
+        "particular solutions"
+      ]
+    },
+    {
+      "unit_code": "U6_appl_int",
+      "unit_name": "Applications of Integration",
+      "topics": [
+        "area between curves",
+        "volumes (disk/washer/slice)",
+        "average value",
+        "particle motion with integrals"
+      ]
+    }
+  ]
+}

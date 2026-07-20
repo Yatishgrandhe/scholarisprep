@@ -1,0 +1,59 @@
+{
+  "exam_type": "AP_ENVIRONMENTAL_SCIENCE",
+  "skills": [
+    {
+      "id": "ap_environmental_science_U1_ecosystems",
+      "unit_code": "U1_ecosystems",
+      "label": "Ecosystems and cycles",
+      "description": "Practice and review: The Living World: Ecosystems. Topics include Energy flow; Biogeochemical cycles; Trophic relationships."
+    },
+    {
+      "id": "ap_environmental_science_U2_biodiversity",
+      "unit_code": "U2_biodiversity",
+      "label": "Biodiversity and ecosystem services",
+      "description": "Practice and review: The Living World: Biodiversity. Topics include Levels of biodiversity; Ecosystem services; Island biogeography and ecological tolerance."
+    },
+    {
+      "id": "ap_environmental_science_U3_populations",
+      "unit_code": "U3_populations",
+      "label": "Population dynamics",
+      "description": "Practice and review: Populations. Topics include Generalist vs specialist; Survivorship and growth models; Human population dynamics."
+    },
+    {
+      "id": "ap_environmental_science_U4_earth_systems",
+      "unit_code": "U4_earth_systems",
+      "label": "Earth systems and resources",
+      "description": "Practice and review: Earth Systems and Resources. Topics include Plate tectonics and soil; Atmosphere and climate basics; Watersheds and solar intensity."
+    },
+    {
+      "id": "ap_environmental_science_U5_land_water_use",
+      "unit_code": "U5_land_water_use",
+      "label": "Land and water use",
+      "description": "Practice and review: Land and Water Use. Topics include Agriculture and forestry; Mining and urbanization; Fisheries and water resources."
+    },
+    {
+      "id": "ap_environmental_science_U6_energy",
+      "unit_code": "U6_energy",
+      "label": "Energy resources",
+      "description": "Practice and review: Energy Resources and Consumption. Topics include Fossil fuels; Nuclear energy; Renewables."
+    },
+    {
+      "id": "ap_environmental_science_U7_atmospheric_pollution",
+      "unit_code": "U7_atmospheric_pollution",
+      "label": "Atmospheric pollution",
+      "description": "Practice and review: Atmospheric Pollution. Topics include Air pollutants; Photochemical smog and acid deposition; Noise and indoor air."
+    },
+    {
+      "id": "ap_environmental_science_U8_aquatic_terrestrial_pollution",
+      "unit_code": "U8_aquatic_terrestrial_pollution",
+      "label": "Aquatic/terrestrial pollution",
+      "description": "Practice and review: Aquatic and Terrestrial Pollution. Topics include Sources and effects of pollution; Bioaccumulation; Waste disposal and remediation."
+    },
+    {
+      "id": "ap_environmental_science_U9_global_change",
+      "unit_code": "U9_global_change",
+      "label": "Global change",
+      "description": "Practice and review: Global Change. Topics include Ozone depletion; Climate change causes and effects; Invasive species."
+    }
+  ]
+}

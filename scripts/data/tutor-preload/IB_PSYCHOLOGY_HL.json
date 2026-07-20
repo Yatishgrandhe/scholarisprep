@@ -1,0 +1,54 @@
+{
+  "exam_type": "IB_PSYCHOLOGY_HL",
+  "display_name": "IB Psychology HL",
+  "units": [
+    "Research methodology",
+    "Biological approach",
+    "Cognitive approach",
+    "Sociocultural approach",
+    "Abnormal psychology",
+    "Health / human relationships / developmental options",
+    "HL extension \u2014 approaches in depth",
+    "IA experimental skills"
+  ],
+  "command_terms": [
+    "define",
+    "describe",
+    "explain",
+    "analyse",
+    "compare",
+    "contrast",
+    "discuss",
+    "evaluate",
+    "to what extent",
+    "examine"
+  ],
+  "misconceptions": [
+    "assuming one study proves a theory",
+    "ignoring ethics/culture",
+    "TEACUP ignored"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it",
+    "Paper 3: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_research_methodology skill focus: experiments",
+    "Keep unit_code=U2_biological_approach skill focus: brain and behaviour",
+    "Keep unit_code=U3_cognitive_approach skill focus: models of memory",
+    "Keep unit_code=U4_sociocultural_approach skill focus: social identity",
+    "Keep unit_code=U5_abnormal_psychology skill focus: normality",
+    "Keep unit_code=U6_health_human_relationships_developmental_options skill focus: stress",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

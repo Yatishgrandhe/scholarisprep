@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('0e219dde-ffef-463a-aa51-b806df64838b', 'Which choice completes the text with the most logical transition?', 'Solar panels convert sunlight directly into electricity using layers of silicon. Because they have no moving parts, they require very little maintenance. ______ they can keep generating power for twenty-five years or more.', NULL, '[{"id":"A","text":"As a result,","is_correct":true,"explanation":"Correct: the long lifespan follows from the panels having no moving parts and low maintenance."},{"id":"B","text":"Still,","is_correct":false,"explanation":"Incorrect: the long lifespan agrees with the low-maintenance point rather than contrasting it."},{"id":"C","text":"In contrast,","is_correct":false,"explanation":"Incorrect: there is no opposition; the durability is a consequence."},{"id":"D","text":"For instance,","is_correct":false,"explanation":"Incorrect: the lifespan is an effect of the design, not an example of low maintenance."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The panels {{yellow:require very little maintenance}}, which leads to their decades-long working life.
+Step 2 — Choose the transition
+Because the long lifespan is an outcome of the low-maintenance design, a cause-effect transition like ''As a result'' fits.
+Distractor analysis:
+- B: ''Still'' implies a concession or contrast that the sentences do not contain.
+- C: ''In contrast'' wrongly signals opposition between consistent ideas.
+- D: ''For instance'' frames the lifespan as an example rather than a result.', 'Is the long lifespan a consequence of having no moving parts?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

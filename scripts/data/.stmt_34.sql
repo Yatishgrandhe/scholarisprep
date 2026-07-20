@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('1227bcae-9e87-49af-b947-d440304a45a0', 'Which choice completes the text with the most logical and precise word or phrase?', 'After the storm, volunteers arrived to help the flooded neighborhood. They handed out food and blankets to strangers without asking for anything in return. Reporters described the workers as ______ people, willing to give their time and supplies freely to those in need.', NULL, '[{"id":"A","text":"generous","is_correct":true,"explanation":"Correct: the text says they gave food, blankets, time, and supplies freely without asking anything in return, which is generous."},{"id":"B","text":"greedy","is_correct":false,"explanation":"Incorrect: greedy reverses giving freely without asking for anything in return."},{"id":"C","text":"shy","is_correct":false,"explanation":"Incorrect: shyness is not described; the focus is on giving to strangers."},{"id":"D","text":"wealthy","is_correct":false,"explanation":"Incorrect: wealth is not stated; the volunteers are defined by what they give, not what they own."}]'::jsonb, 'A', 'Step 1 — Find the clue
+The text says volunteers gave food and blankets {{yellow:without asking for anything in return}} and gave their time and supplies freely.
+Step 2 — Match the word
+People who give freely without expecting anything back are generous.
+Distractor analysis:
+- B: ''greedy'' is the opposite of giving freely.
+- C: ''shy'' has no support; they actively helped strangers.
+- D: ''wealthy'' is unsupported; the text describes giving, not riches.', 'They gave time and supplies freely without asking for anything in return.', 'Craft and Structure', 'Words in Context', 'reading_writing', 'craft', 'WIC', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

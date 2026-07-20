@@ -1,0 +1,266 @@
+/* Masterclass — flat minimal (OnePrep-style). Gradients only on covers. */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+/* ── Page header: muted icon + bold title ───────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.headerIcon {
+  color: hsl(var(--muted-foreground));
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: hsl(var(--foreground));
+}
+
+.statusPill {
+  margin-left: auto;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.5);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
+}
+
+/* ── Explainer callout ──────────────────────────────────────────── */
+.callout {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--primary) / 0.35);
+  background: hsl(var(--card));
+}
+
+.calloutIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: var(--space-3);
+  border-radius: 10px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.calloutTitle {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+.calloutText {
+  margin: 0;
+  max-width: 64ch;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+}
+
+.calloutActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 2.5rem;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.primaryBtn:hover {
+  background: hsl(var(--accent));
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 2.5rem;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: transparent;
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.secondaryBtn:hover {
+  background: hsl(var(--muted) / 0.5);
+}
+
+/* ── Sections ───────────────────────────────────────────────────── */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.sectionLabel {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+/* ── Rollout timeline ───────────────────────────────────────────── */
+.timelineTrack {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .timelineTrack {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timelineStep {
+  padding: var(--space-4);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.timelineStepActive {
+  border-color: hsl(var(--primary) / 0.45);
+}
+
+.stepPhase {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+
+.stepLabel {
+  display: block;
+  margin-bottom: 2px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+}
+
+.stepDesc {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ── Workshop cards (course-card system) ────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  overflow: hidden;
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 200px;
+  padding: 20px;
+}
+
+.coverIcon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: inline-flex;
+  color: hsl(0 0% 100% / 0.92);
+}
+
+.coverTitle {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: hsl(0 0% 100%);
+}
+
+.cardBody {
+  padding: 20px;
+}
+
+.cardDesc {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ── Footer disclaimer ──────────────────────────────────────────── */
+.disclaimer {
+  margin: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}

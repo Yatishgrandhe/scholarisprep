@@ -1,0 +1,122 @@
+{
+  "exam_type": "AP_RESEARCH",
+  "display_name": "AP Research",
+  "command_terms": [
+    "inquire",
+    "justify",
+    "methodologize",
+    "analyze",
+    "interpret",
+    "synthesize",
+    "reflect",
+    "defend"
+  ],
+  "misconceptions": [
+    "Choosing a topic that is too broad to answer in one year",
+    "Collecting sources without a clear gap or purpose",
+    "Method that cannot actually answer the stated question",
+    "Reporting results without linking back to the research question",
+    "Treating the presentation as a script reading rather than a defense"
+  ],
+  "paper_rules": [
+    "Score is portfolio-based: academic paper plus presentation and oral defense",
+    "Bank is 100% FRQ/process scaffolds (bank_mode scaffold) totaling 500 practice items",
+    "Emphasize alignment: question \u2194 method \u2194 evidence \u2194 claim",
+    "Require process reflection and ethical awareness in coaching prompts"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "academic_paper",
+        "label": "Academic Paper Scaffolds",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "presentation",
+        "label": "Presentation and Oral Defense",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "No calculator; quantitative projects may use tools off-exam during research but bank items assume none."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1",
+      "unit_name": "Research Question and Purpose",
+      "quota": 60,
+      "topics": [
+        "narrowing a researchable question",
+        "purpose and significance",
+        "feasibility and ethics gate",
+        "inquiry log habits"
+      ]
+    },
+    {
+      "unit_code": "U2",
+      "unit_name": "Literature and Contextual Review",
+      "quota": 70,
+      "topics": [
+        "search strategies",
+        "annotated bibliography discipline",
+        "gap identification",
+        "scholarly conversation mapping"
+      ]
+    },
+    {
+      "unit_code": "U3",
+      "unit_name": "Method Design and Data Plan",
+      "quota": 80,
+      "topics": [
+        "method selection rationale",
+        "sampling and instruments",
+        "limitations and bias",
+        "IRB/ethics awareness"
+      ]
+    },
+    {
+      "unit_code": "U4",
+      "unit_name": "Analysis and Interpretation",
+      "quota": 80,
+      "topics": [
+        "organizing findings",
+        "linking evidence to claims",
+        "alternate explanations",
+        "visual/table storytelling"
+      ]
+    },
+    {
+      "unit_code": "U5",
+      "unit_name": "Academic Paper Craft",
+      "quota": 110,
+      "topics": [
+        "IMRaD-style structure choices",
+        "citation integrity",
+        "voice and scholarly tone",
+        "revision for clarity"
+      ]
+    },
+    {
+      "unit_code": "U6",
+      "unit_name": "Presentation and Oral Defense",
+      "quota": 60,
+      "topics": [
+        "slide/story arc",
+        "defending method choices",
+        "answering probing questions",
+        "reflecting on process"
+      ]
+    },
+    {
+      "unit_code": "U7",
+      "unit_name": "Process Portfolio and Reflection",
+      "quota": 40,
+      "topics": [
+        "process documentation",
+        "iteration evidence",
+        "peer and mentor feedback loops",
+        "Capstone readiness checklist"
+      ]
+    }
+  ]
+}

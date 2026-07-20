@@ -1,0 +1,98 @@
+/* Landing theme — scoped design tokens for the marketing home page.
+ *
+ * `.landing` is the theme root new landing sections should render inside
+ * (see LandingShell.tsx). It aliases the global surface/text/brand tokens
+ * from globals.css so landing sections stay in sync with the rest of the
+ * site, and layers on a cool cobalt/aqua/navy "atmosphere" palette for hero
+ * gradients, glows, and dividers. No purple in any background token here —
+ * `--exam-sat` purple stays confined to exam-specific chrome elsewhere.
+ *
+ * This file is additive: it does not touch `.section` / `.container` from
+ * marketing.css, so pages that haven't migrated to the landing system yet
+ * are unaffected.
+ */
+
+.landing {
+  /* ---- Aliases: bridge to global tokens (globals.css) ---- */
+  --landing-background: var(--background);
+  --landing-foreground: var(--foreground);
+  --landing-card: var(--card);
+  --landing-card-foreground: var(--card-foreground);
+  --landing-muted: var(--muted);
+  --landing-muted-foreground: var(--muted-foreground);
+  --landing-primary: var(--primary);
+  --landing-primary-foreground: var(--primary-foreground);
+  --landing-accent: var(--accent);
+  --landing-accent-foreground: var(--accent-foreground);
+  --landing-border: var(--border);
+  --landing-ring: var(--ring);
+  --landing-radius: var(--radius-lg);
+  --landing-radius-sm: var(--radius-md);
+  overflow-x: clip;
+  max-width: 100%;
+  --landing-shadow-sm: var(--shadow-sm);
+  --landing-shadow-md: var(--shadow-md);
+  --landing-shadow-lg: var(--shadow-lg);
+
+  /* ---- Cobalt / aqua / navy atmosphere (hero + section backdrops) ----
+   * Raw HSL triplets (no hsl() wrapper) to match the convention used by
+   * globals.css tokens — consume as hsl(var(--landing-x)).
+   */
+  --landing-navy-950: 224 47% 6%;
+  --landing-navy-900: 223 45% 10%;
+  --landing-navy-800: 222 42% 15%;
+  --landing-navy-700: 221 38% 21%;
+  --landing-cobalt-600: 224 76% 48%;
+  --landing-cobalt-500: 221 83% 53%;
+  --landing-cobalt-400: 217 91% 60%;
+  --landing-aqua-500: 189 94% 43%;
+  --landing-aqua-400: 187 92% 55%;
+  --landing-aqua-300: 187 85% 69%;
+
+  /* Glow / gradient stops used by hero atmosphere layers */
+  --landing-glow-strong: var(--landing-cobalt-400);
+  --landing-glow-soft: var(--landing-aqua-400);
+  --landing-atmosphere-gradient: radial-gradient(
+      120% 120% at 15% 0%,
+      hsl(var(--landing-cobalt-400) / 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      100% 100% at 85% 10%,
+      hsl(var(--landing-aqua-400) / 0.16),
+      transparent 55%
+    );
+  --landing-divider: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--landing-border)),
+    transparent
+  );
+
+  background: hsl(var(--landing-background));
+  color: hsl(var(--landing-foreground));
+}
+
+.dark .landing {
+  --landing-navy-950: 224 55% 4%;
+  --landing-navy-900: 223 48% 7%;
+  --landing-navy-800: 222 44% 11%;
+  --landing-navy-700: 221 40% 16%;
+  --landing-cobalt-600: 224 80% 55%;
+  --landing-cobalt-500: 221 83% 58%;
+  --landing-cobalt-400: 217 91% 65%;
+  --landing-aqua-500: 189 90% 48%;
+  --landing-aqua-400: 187 88% 58%;
+  --landing-aqua-300: 187 80% 68%;
+
+  --landing-atmosphere-gradient: radial-gradient(
+      120% 120% at 15% 0%,
+      hsl(var(--landing-cobalt-400) / 0.32),
+      transparent 62%
+    ),
+    radial-gradient(
+      100% 100% at 85% 10%,
+      hsl(var(--landing-aqua-400) / 0.22),
+      transparent 58%
+    );
+}

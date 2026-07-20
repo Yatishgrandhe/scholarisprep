@@ -1,0 +1,34 @@
+{
+  "exam_type": "AP_AFRICAN_AMERICAN_STUDIES",
+  "display_name": "AP African American Studies",
+  "command_terms": [
+    "analyze",
+    "compare",
+    "contextualize",
+    "evaluate",
+    "explain continuity",
+    "explain change",
+    "interpret source",
+    "synthesize"
+  ],
+  "misconceptions": [
+    "Treating diaspora history as only U.S.-centered",
+    "Equating resistance only with armed revolt",
+    "Assuming a single monolithic “African American experience”",
+    "Ignoring African agency before and during the Atlantic trade",
+    "Separating culture/arts from political history"
+  ],
+  "paper_rules": [
+    "MCQ often stimulus-based (texts, images, data, maps)",
+    "FRQs require sourcing, contextualization, and evidence-based claims",
+    "Attend to continuity/change and comparison across regions/eras",
+    "Interdisciplinary lenses (history, literature, arts, social science) may appear"
+  ],
+  "calculator_policy": "none",
+  "units_summary": [
+    "U1 Origins of the African Diaspora (w≈0.25, q=125)",
+    "U2 Freedom Enslavement and Resistance (w≈0.25, q=125)",
+    "U3 The Practice of Freedom (w≈0.25, q=125)",
+    "U4 Movements and Debates (w≈0.25, q=125)"
+  ]
+}

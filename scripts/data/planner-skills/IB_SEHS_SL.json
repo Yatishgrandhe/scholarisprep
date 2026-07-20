@@ -1,0 +1,153 @@
+{
+  "examType": "IB_SEHS_SL",
+  "topics": [
+    "Anatomy",
+    "Exercise physiology",
+    "Energy systems & nutrition",
+    "Movement analysis",
+    "Skill in sport",
+    "Measurement & evaluation of performance",
+    "IA experimental investigation"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_anatomy",
+      "title": "Anatomy",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_exercise_physiology",
+      "title": "Exercise physiology",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_energy_systems_nutrition",
+      "title": "Energy systems & nutrition",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_movement_analysis",
+      "title": "Movement analysis",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_skill_in_sport",
+      "title": "Skill in sport",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_measurement_evaluation_of_performance",
+      "title": "Measurement & evaluation of performance",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_ia_experimental_investigation",
+      "title": "IA experimental investigation",
+      "sort_order": 7
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_SEHS_SL:U1_anatomy",
+      "unit_code": "U1_anatomy",
+      "title": "Anatomy",
+      "topics": [
+        "skeletal",
+        "muscular",
+        "structure\u2013function"
+      ],
+      "recommended_hours": 7,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_SEHS_SL:U2_exercise_physiology",
+      "unit_code": "U2_exercise_physiology",
+      "title": "Exercise physiology",
+      "topics": [
+        "cardiorespiratory",
+        "energy systems",
+        "acute responses"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_SEHS_SL:U1_anatomy"
+      ]
+    },
+    {
+      "skill_id": "IB_SEHS_SL:U3_energy_systems_nutrition",
+      "unit_code": "U3_energy_systems_nutrition",
+      "title": "Energy systems & nutrition",
+      "topics": [
+        "ATP pathways",
+        "macronutrients",
+        "hydration"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_SEHS_SL:U2_exercise_physiology"
+      ]
+    },
+    {
+      "skill_id": "IB_SEHS_SL:U4_movement_analysis",
+      "unit_code": "U4_movement_analysis",
+      "title": "Movement analysis",
+      "topics": [
+        "biomechanics",
+        "Newton laws",
+        "levers",
+        "angular motion"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_SEHS_SL:U3_energy_systems_nutrition"
+      ]
+    },
+    {
+      "skill_id": "IB_SEHS_SL:U5_skill_in_sport",
+      "unit_code": "U5_skill_in_sport",
+      "title": "Skill in sport",
+      "topics": [
+        "skill classification",
+        "information processing",
+        "learning theories"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_SEHS_SL:U4_movement_analysis"
+      ]
+    },
+    {
+      "skill_id": "IB_SEHS_SL:U6_measurement_evaluation_of_performance",
+      "unit_code": "U6_measurement_evaluation_of_performance",
+      "title": "Measurement & evaluation of performance",
+      "topics": [
+        "fitness components",
+        "tests",
+        "error"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_SEHS_SL:U5_skill_in_sport"
+      ]
+    },
+    {
+      "skill_id": "IB_SEHS_SL:U7_ia_experimental_investigation",
+      "unit_code": "U7_ia_experimental_investigation",
+      "title": "IA experimental investigation",
+      "topics": [
+        "design",
+        "data",
+        "evaluation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_SEHS_SL:U6_measurement_evaluation_of_performance"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "exam_type": "AP_MICROECONOMICS",
+  "display_name": "AP Microeconomics",
+  "command_terms": [
+    "define",
+    "calculate",
+    "graph",
+    "explain",
+    "compare",
+    "analyze",
+    "evaluate"
+  ],
+  "misconceptions": [
+    "Confusing a shift of demand/supply with a movement along the curve",
+    "Treating accounting profit as economic profit",
+    "Assuming monopolies always earn positive economic profit in the long run",
+    "Mixing up MRC/MRP hiring rules with product-market MR=MC",
+    "Labeling deadweight loss areas incorrectly on market graphs"
+  ],
+  "paper_rules": [
+    "FRQs require labeled axes, curves, and equilibrium points when graphs are requested",
+    "Show work for any numerical steps; partial credit follows clear economic reasoning",
+    "Use correct surplus/shortage and efficiency language"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "mcq",
+        "label": "Multiple Choice",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "frq",
+        "label": "Free Response",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "No calculator on any section. Graph sketching and qualitative analysis are required."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_basic_econ",
+      "unit_name": "Basic Economic Concepts",
+      "topics": [
+        "scarcity and opportunity cost",
+        "PPC and comparative advantage",
+        "economic systems",
+        "marginal analysis"
+      ]
+    },
+    {
+      "unit_code": "U2_supply_demand",
+      "unit_name": "Supply and Demand",
+      "topics": [
+        "demand and supply curves",
+        "elasticity",
+        "market equilibrium",
+        "government interventions",
+        "consumer and producer surplus"
+      ]
+    },
+    {
+      "unit_code": "U3_production_costs",
+      "unit_name": "Production, Cost, and Perfect Competition",
+      "topics": [
+        "production functions",
+        "short-run and long-run costs",
+        "profit maximization",
+        "perfect competition outcomes"
+      ]
+    },
+    {
+      "unit_code": "U4_imperfect_comp",
+      "unit_name": "Imperfect Competition",
+      "topics": [
+        "monopoly",
+        "monopolistic competition",
+        "oligopoly and game theory",
+        "price discrimination"
+      ]
+    },
+    {
+      "unit_code": "U5_factor_markets",
+      "unit_name": "Factor Markets",
+      "topics": [
+        "derived demand for labor",
+        "MRC and MRP",
+        "monopsony",
+        "capital and land markets"
+      ]
+    },
+    {
+      "unit_code": "U6_market_failure",
+      "unit_name": "Market Failure and the Role of Government",
+      "topics": [
+        "externalities",
+        "public goods",
+        "asymmetric information",
+        "income distribution and taxes"
+      ]
+    }
+  ]
+}

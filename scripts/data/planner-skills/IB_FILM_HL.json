@@ -1,0 +1,174 @@
+{
+  "examType": "IB_FILM_HL",
+  "topics": [
+    "Reading film",
+    "Contextualizing film",
+    "Exploring film production roles",
+    "Collaborative film project",
+    "Film portfolio skills",
+    "Textual analysis",
+    "Comparative study / HL extension",
+    "Screenplay & production documentation"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_reading_film",
+      "title": "Reading film",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_contextualizing_film",
+      "title": "Contextualizing film",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_exploring_film_production_roles",
+      "title": "Exploring film production roles",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_collaborative_film_project",
+      "title": "Collaborative film project",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_film_portfolio_skills",
+      "title": "Film portfolio skills",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_textual_analysis",
+      "title": "Textual analysis",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_comparative_study_hl_extension",
+      "title": "Comparative study / HL extension",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_screenplay_production_documentation",
+      "title": "Screenplay & production documentation",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_FILM_HL:U1_reading_film",
+      "unit_code": "U1_reading_film",
+      "title": "Reading film",
+      "topics": [
+        "shot language",
+        "editing",
+        "sound",
+        "narrative"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_FILM_HL:U2_contextualizing_film",
+      "unit_code": "U2_contextualizing_film",
+      "title": "Contextualizing film",
+      "topics": [
+        "genre",
+        "history",
+        "representation",
+        "audience"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_FILM_HL:U1_reading_film"
+      ]
+    },
+    {
+      "skill_id": "IB_FILM_HL:U3_exploring_film_production_roles",
+      "unit_code": "U3_exploring_film_production_roles",
+      "title": "Exploring film production roles",
+      "topics": [
+        "direction",
+        "cinematography",
+        "editing",
+        "sound design"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_FILM_HL:U2_contextualizing_film"
+      ]
+    },
+    {
+      "skill_id": "IB_FILM_HL:U4_collaborative_film_project",
+      "unit_code": "U4_collaborative_film_project",
+      "title": "Collaborative film project",
+      "topics": [
+        "pitch",
+        "production",
+        "post",
+        "reflection"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_FILM_HL:U3_exploring_film_production_roles"
+      ]
+    },
+    {
+      "skill_id": "IB_FILM_HL:U5_film_portfolio_skills",
+      "unit_code": "U5_film_portfolio_skills",
+      "title": "Film portfolio skills",
+      "topics": [
+        "experiments",
+        "reels",
+        "critical reflection"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_FILM_HL:U4_collaborative_film_project"
+      ]
+    },
+    {
+      "skill_id": "IB_FILM_HL:U6_textual_analysis",
+      "unit_code": "U6_textual_analysis",
+      "title": "Textual analysis",
+      "topics": [
+        "micro/macro features",
+        "cultural context"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_FILM_HL:U5_film_portfolio_skills"
+      ]
+    },
+    {
+      "skill_id": "IB_FILM_HL:U7_comparative_study_hl_extension",
+      "unit_code": "U7_comparative_study_hl_extension",
+      "title": "Comparative study / HL extension",
+      "topics": [
+        "two films",
+        "theory lenses"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_FILM_HL:U6_textual_analysis"
+      ]
+    },
+    {
+      "skill_id": "IB_FILM_HL:U8_screenplay_production_documentation",
+      "unit_code": "U8_screenplay_production_documentation",
+      "title": "Screenplay & production documentation",
+      "topics": [
+        "formatting",
+        "intent",
+        "evaluation"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_FILM_HL:U7_comparative_study_hl_extension"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

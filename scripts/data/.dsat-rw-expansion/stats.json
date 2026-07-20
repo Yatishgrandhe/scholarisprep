@@ -1,0 +1,63 @@
+{
+  "bySubtype": {
+    "vocabulary_in_context": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "structure": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "cross_text_response": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "main_idea": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "textual_evidence": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "quantitative_table": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "general": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "prediction": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "implication": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "transition": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "notes_synthesis": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "boundaries": {
+      "standard": 300,
+      "challenged": 25
+    },
+    "form_structure_sense": {
+      "standard": 300,
+      "challenged": 25
+    }
+  },
+  "byDifficulty": {
+    "easy": 1638,
+    "medium": 1365,
+    "hard": 1222
+  },
+  "challenged": 325,
+  "validationFails": 0
+}

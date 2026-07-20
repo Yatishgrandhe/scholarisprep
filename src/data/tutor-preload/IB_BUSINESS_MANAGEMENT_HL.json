@@ -1,0 +1,54 @@
+{
+  "exam_type": "IB_BUSINESS_MANAGEMENT_HL",
+  "display_name": "IB Business Management HL",
+  "units": [
+    "Introduction to business management",
+    "Human resource management",
+    "Finance and accounts",
+    "Marketing",
+    "Operations management",
+    "Business strategy toolkit",
+    "Case study application",
+    "Internal assessment skills"
+  ],
+  "command_terms": [
+    "define",
+    "describe",
+    "explain",
+    "analyse",
+    "compare",
+    "contrast",
+    "discuss",
+    "evaluate",
+    "to what extent",
+    "examine"
+  ],
+  "misconceptions": [
+    "skipping command terms",
+    "memorizing without application",
+    "ignoring markscheme language"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it",
+    "Paper 3: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_introduction_to_business_management skill focus: stakeholders",
+    "Keep unit_code=U2_human_resource_management skill focus: organization",
+    "Keep unit_code=U3_finance_and_accounts skill focus: sources of finance",
+    "Keep unit_code=U4_marketing skill focus: marketing planning",
+    "Keep unit_code=U5_operations_management skill focus: production methods",
+    "Keep unit_code=U6_business_strategy_toolkit skill focus: SWOT",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

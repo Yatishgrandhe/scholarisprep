@@ -1,0 +1,53 @@
+{
+  "exam_type": "IB_WORLD_RELIGIONS_SL",
+  "display_name": "IB World Religions SL",
+  "units": [
+    "Introduction to the study of religion",
+    "Worldview themes",
+    "Religious experience & ritual",
+    "Ethics and moral living",
+    "Sacred texts and authority",
+    "Religion and society",
+    "Comparative skills",
+    "Paper technique & IA"
+  ],
+  "command_terms": [
+    "define",
+    "describe",
+    "explain",
+    "analyse",
+    "compare",
+    "contrast",
+    "discuss",
+    "evaluate",
+    "to what extent",
+    "examine"
+  ],
+  "misconceptions": [
+    "skipping command terms",
+    "memorizing without application",
+    "ignoring markscheme language"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "No calculator",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_introduction_to_the_study_of_religion skill focus: definitions",
+    "Keep unit_code=U2_worldview_themes skill focus: ultimate reality",
+    "Keep unit_code=U3_religious_experience_ritual skill focus: worship",
+    "Keep unit_code=U4_ethics_and_moral_living skill focus: codes",
+    "Keep unit_code=U5_sacred_texts_and_authority skill focus: canon",
+    "Keep unit_code=U6_religion_and_society skill focus: secularization",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

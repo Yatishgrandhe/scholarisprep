@@ -1,0 +1,1673 @@
+/* ── Study plan views — flat cards, hairline rows, cobalt accents ── */
+
+.pageShell {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-4) var(--space-8);
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* Flat panel: card bg, 1px border, 16px radius, no shadow. */
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: var(--space-5);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.headerRow {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.progressPanel {
+  flex: 1;
+  min-width: 240px;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: hsl(var(--muted-foreground));
+}
+
+.progressBar {
+  height: 6px;
+  border-radius: 999px;
+  background: hsl(var(--muted));
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  transition: width 300ms ease;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ── Week navigation ── */
+.weekNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.weekNavBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.weekNavBtn:hover:not(:disabled) {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.weekNavBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.weekTitle {
+  text-align: center;
+  min-width: 200px;
+}
+
+.weekTheme {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.weekSub {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+  margin: 2px 0 0;
+}
+
+/* ── Days grid ── */
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+@media (max-width: 1100px) {
+  .daysGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .daysGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dayColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-height: 100px;
+  padding: var(--space-3);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.dayLabel {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid hsl(var(--border) / 0.7);
+}
+
+/* ── Task rows ── */
+.taskCard {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2) 10px;
+  border-radius: 12px;
+  background: hsl(var(--muted) / 0.4);
+  transition: opacity 150ms ease;
+}
+
+.taskCardDone {
+  opacity: 0.6;
+}
+
+.taskCheck {
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: hsl(var(--primary));
+}
+
+.taskBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.taskBadge {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  margin-bottom: 4px;
+}
+
+.taskTopic {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  line-height: 1.35;
+  margin: 0;
+}
+
+.taskMeta {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  margin: 2px 0 0;
+}
+
+/* ── Empty + loading states ── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-12) var(--space-6);
+  border: 1.5px dashed hsl(var(--border));
+  border-radius: 20px;
+  background: hsl(var(--card));
+}
+
+.emptyStateDeleted {
+  border-style: solid;
+  border-color: hsl(var(--border));
+  background:
+    linear-gradient(
+      180deg,
+      hsl(var(--muted) / 0.22) 0%,
+      hsl(var(--card)) 42%
+    );
+}
+
+.emptyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: var(--space-4);
+  border-radius: 999px;
+  background: hsl(var(--primary) / 0.12);
+  color: hsl(var(--primary));
+}
+
+.emptyTitle {
+  font-family: var(--font-body);
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-2);
+  color: hsl(var(--foreground));
+}
+
+.emptyText {
+  color: hsl(var(--muted-foreground));
+  max-width: 42ch;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.emptyActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  width: 100%;
+}
+
+.emptyPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 2.875rem;
+  padding: 0 1.625rem;
+  border: none;
+  border-radius: 999px;
+  background: hsl(222 47% 11%);
+  color: hsl(0 0% 100%);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.emptyPrimaryBtn:hover {
+  background: hsl(222 47% 18%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px hsl(222 47% 11% / 0.22);
+}
+
+.emptyPrimaryBtn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px hsl(var(--ring) / 0.45),
+    0 8px 22px hsl(222 47% 11% / 0.18);
+}
+
+.emptyPrimaryBtn:active {
+  transform: translateY(0);
+}
+
+.emptyPrimaryBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+:global(.dark) .emptyPrimaryBtn {
+  background: hsl(0 0% 100% / 0.94);
+  color: hsl(222 47% 11%);
+}
+
+:global(.dark) .emptyPrimaryBtn:hover {
+  background: hsl(0 0% 100%);
+  box-shadow: 0 8px 22px hsl(0 0% 0% / 0.28);
+}
+
+.loadingOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-16);
+  text-align: center;
+  border: 1px solid hsl(var(--border));
+  border-radius: 16px;
+  background: hsl(var(--card));
+}
+
+.loadingIcon {
+  color: hsl(var(--primary));
+}
+
+.loadingText {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+/* ── Dialog form ── */
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.modalField label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: hsl(var(--foreground));
+}
+
+.modalField input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 10px;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font: inherit;
+}
+
+.modalField input:focus {
+  outline: 2px solid hsl(var(--primary) / 0.35);
+  outline-offset: 1px;
+  border-color: hsl(var(--primary));
+}
+
+.modalField input {
+  height: 2.75rem;
+  border-radius: 12px;
+  background: hsl(var(--muted) / 0.3);
+}
+
+.modalField input[type="date"] {
+  color-scheme: light dark;
+}
+
+.modalFooter {
+  gap: var(--space-2);
+}
+
+/* ── Shared stats / lists (BySubject, Tasks, TodaysTasksPanel) ── */
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.grid2 > * {
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardTitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 var(--space-3);
+}
+
+.statValue {
+  font-family: var(--font-body);
+  font-size: 2rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+.statSub {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: var(--space-2) 0 0;
+  line-height: 1.45;
+}
+
+.mutedText {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.planLink {
+  font-weight: 600;
+  color: hsl(var(--primary));
+  text-decoration: none;
+}
+
+.planLink:hover {
+  text-decoration: underline;
+}
+
+/* Hairline-divided task rows. */
+.taskList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px 2px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.taskItem + .taskItem {
+  border-top: 1px solid hsl(var(--border) / 0.7);
+}
+
+.taskItem input {
+  accent-color: hsl(var(--primary));
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.taskItem label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  cursor: pointer;
+}
+
+.taskDone {
+  text-decoration: line-through;
+  color: hsl(var(--muted-foreground));
+}
+
+.taskMinutes {
+  margin-left: auto;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
+}
+
+/* ── Subject tabs (segmented control on Tabs primitives) ── */
+.subjectTabs {
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+  height: auto !important;
+  padding: 4px !important;
+  gap: 4px !important;
+  border-radius: 12px !important;
+  background: hsl(var(--muted) / 0.5) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.subjectTab {
+  flex: 0 1 auto !important;
+  height: 36px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  border: 1px solid transparent !important;
+  font-size: 0.8125rem !important;
+  font-weight: 650 !important;
+  color: hsl(var(--muted-foreground)) !important;
+  box-shadow: none !important;
+}
+
+.subjectTab::after {
+  display: none !important;
+}
+
+.subjectTab[data-active] {
+  background: hsl(var(--card)) !important;
+  color: hsl(var(--foreground)) !important;
+  border-color: hsl(var(--border)) !important;
+  box-shadow: none !important;
+}
+
+.subjectTabDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: var(--space-2);
+}
+
+.sectionGap {
+  margin-top: var(--space-5);
+}
+
+/* ───────────── OnePrep-style dated plan (rebuilt StudyPlanView) ───────────── */
+
+.pageTitle {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+.pageSub {
+  margin: 4px 0 0;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Override the legacy headerRow to a simple title/actions split. */
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.headerActions {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Rounded pill action buttons. */
+.ghostBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 2.75rem;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.ghostBtn:hover {
+  background: hsl(var(--muted) / 0.5);
+  border-color: hsl(var(--muted-foreground) / 0.4);
+}
+
+.ghostBtn:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.ghostBtnDanger {
+  color: hsl(var(--destructive));
+  border-color: hsl(var(--destructive) / 0.35);
+}
+
+.ghostBtnDanger:hover {
+  background: hsl(var(--destructive) / 0.1);
+  border-color: hsl(var(--destructive) / 0.55);
+  color: hsl(var(--destructive));
+}
+
+/* Week navigation with circular arrows. */
+.weekNav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.weekNavBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.weekNavBtn:hover:not(:disabled) {
+  background: hsl(var(--muted) / 0.5);
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+.weekNavBtn:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.weekNavBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.weekTitle {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.weekTheme {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.weekSub {
+  margin: 2px 0 0;
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Day list — vertical, dated rows. */
+.dayList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.restNote {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  text-align: center;
+  padding: var(--space-6) 0;
+}
+
+.dayRow {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: start;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  border-radius: 18px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.dayRowToday {
+  border-color: hsl(var(--primary) / 0.55);
+  box-shadow: 0 0 0 1px hsl(var(--primary) / 0.35);
+}
+
+.dayChip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 16px;
+  padding: 12px 6px;
+  background: hsl(var(--muted) / 0.45);
+  height: fit-content;
+}
+
+.dayChipNum {
+  font-size: 1.5rem;
+  font-weight: 750;
+  line-height: 1;
+  color: hsl(var(--foreground));
+}
+
+.dayChipMonth {
+  font-size: 0.6875rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: hsl(var(--muted-foreground));
+}
+
+.dayChipWeekday {
+  margin-top: 2px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+}
+
+.dayTasks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+/* Task row. */
+.taskRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.taskRow:hover {
+  border-color: hsl(var(--muted-foreground) / 0.35);
+}
+
+.taskRowDone {
+  opacity: 0.62;
+}
+
+.taskCheck {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  border: 1.5px solid hsl(var(--muted-foreground) / 0.5);
+  background: transparent;
+  color: hsl(var(--primary-foreground));
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.taskCheck:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.taskRowDone .taskCheck,
+.taskCheck[aria-pressed="true"] {
+  background: hsl(var(--primary));
+  border-color: hsl(var(--primary));
+}
+
+.taskBody {
+  flex: 1 1 240px;
+  min-width: 220px;
+}
+
+.taskTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.taskIcon {
+  color: hsl(var(--primary));
+  flex-shrink: 0;
+}
+
+.taskTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+}
+
+.taskTag {
+  display: inline-flex;
+  align-items: center;
+  height: 1.375rem;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.tagReading { background: hsl(214 95% 93%); color: hsl(214 80% 38%); }
+.tagWriting { background: hsl(262 90% 94%); color: hsl(262 70% 48%); }
+.tagMath { background: hsl(152 70% 90%); color: hsl(152 60% 30%); }
+.tagAdvanced { background: hsl(38 96% 90%); color: hsl(32 80% 40%); }
+.tagGeometry { background: hsl(346 90% 94%); color: hsl(346 70% 48%); }
+.tagProblem { background: hsl(190 85% 90%); color: hsl(192 70% 33%); }
+.tagVocab { background: hsl(220 14% 92%); color: hsl(220 14% 38%); }
+.tagChallenge { background: hsl(43 96% 88%); color: hsl(36 85% 38%); }
+.tagExam { background: hsl(0 90% 94%); color: hsl(0 72% 48%); }
+.tagDefault { background: hsl(var(--muted) / 0.6); color: hsl(var(--muted-foreground)); }
+
+:global(.dark) .tagReading { background: hsl(214 70% 22%); color: hsl(214 90% 80%); }
+:global(.dark) .tagWriting { background: hsl(262 50% 26%); color: hsl(262 90% 84%); }
+:global(.dark) .tagMath { background: hsl(152 45% 20%); color: hsl(152 70% 75%); }
+:global(.dark) .tagAdvanced { background: hsl(34 55% 24%); color: hsl(38 90% 75%); }
+:global(.dark) .tagGeometry { background: hsl(346 50% 26%); color: hsl(346 90% 82%); }
+:global(.dark) .tagProblem { background: hsl(192 55% 20%); color: hsl(190 80% 75%); }
+:global(.dark) .tagVocab { background: hsl(220 14% 28%); color: hsl(220 14% 80%); }
+:global(.dark) .tagChallenge { background: hsl(38 55% 24%); color: hsl(43 90% 75%); }
+:global(.dark) .tagExam { background: hsl(0 50% 28%); color: hsl(0 90% 84%); }
+
+.overdue {
+  display: inline-flex;
+  align-items: center;
+  height: 1.25rem;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  background: hsl(0 85% 94%);
+  color: hsl(0 72% 46%);
+}
+
+:global(.dark) .overdue {
+  background: hsl(0 50% 26%);
+  color: hsl(0 90% 82%);
+}
+
+.taskMeta {
+  margin: 6px 0 0;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.taskNote {
+  margin: 6px 0 0;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: hsl(var(--muted-foreground));
+}
+
+.taskActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  margin-left: auto;
+  padding-left: var(--space-2);
+}
+
+.watchBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 2.5rem;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.watchBtn:hover {
+  background: hsl(var(--muted) / 0.5);
+  border-color: hsl(var(--muted-foreground) / 0.4);
+}
+
+.watchBtn:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.startBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 2.5rem;
+  min-width: 96px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: none;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    filter 150ms ease,
+    transform 150ms ease;
+}
+
+.startBtn:hover {
+  background: hsl(var(--accent));
+  filter: none;
+}
+
+.startBtn:active {
+  filter: brightness(0.94);
+  transform: translateY(1px);
+}
+
+.startBtn:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.5);
+  outline-offset: 2px;
+}
+
+.startBtnDone {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.startBtnDone:hover {
+  background: hsl(var(--muted) / 0.85);
+  border-color: hsl(var(--muted-foreground) / 0.45);
+  color: hsl(var(--foreground));
+}
+
+/* ───────────── Video popup (custom modal, portalled to <body>) ───────────── */
+.videoOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  background: hsl(220 45% 4% / 0.72);
+  backdrop-filter: blur(4px);
+  animation: videoOverlayIn 160ms ease;
+}
+
+@keyframes videoOverlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.videoModal {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: 18px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 24px 60px -20px hsl(220 45% 4% / 0.7);
+  animation: videoModalIn 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes videoModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.videoHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.videoHeadText {
+  min-width: 0;
+}
+
+.videoTitle {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+.videoSub {
+  margin: 4px 0 0;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.videoClose {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.videoClose:hover {
+  background: hsl(var(--muted) / 0.5);
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--muted-foreground) / 0.5);
+}
+
+.videoFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.videoFrame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.videoFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+.videoBtnGhost,
+.videoBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 2.75rem;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    opacity 160ms ease;
+}
+
+.videoBtnGhost {
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.videoBtnGhost:hover {
+  background: hsl(var(--muted) / 0.4);
+  border-color: hsl(var(--muted-foreground) / 0.5);
+}
+
+.videoBtnPrimary {
+  border: 1px solid transparent;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.videoBtnPrimary:hover {
+  background: hsl(var(--accent));
+  opacity: 1;
+}
+
+@media (max-width: 560px) {
+  .videoFooter {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 640px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .headerActions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .ghostBtn {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .dayRow {
+    grid-template-columns: 56px 1fr;
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+  .taskRow {
+    flex-wrap: wrap;
+  }
+  .thumbBtn {
+    width: 100%;
+    height: 168px;
+  }
+  .taskBody {
+    flex-basis: 60%;
+    min-width: 0;
+  }
+  .taskActions {
+    width: 100%;
+    justify-content: stretch;
+    padding-left: 0;
+    gap: var(--space-2);
+  }
+
+  .watchBtn,
+  .startBtn {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .weekNav {
+    padding: var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .weekNavBtn {
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+  }
+
+  .weekTheme {
+    font-size: 0.9375rem;
+  }
+
+  .pageShell {
+    padding: 0 0 var(--space-6);
+  }
+
+  .panel {
+    padding: var(--space-4);
+  }
+
+  .emptyState {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .emptyPrimaryBtn,
+  .emptyStateBtn {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+
+  .planDialog[data-slot] {
+    max-width: calc(100vw - 24px);
+    padding: var(--space-4);
+  }
+
+  .planDialog [data-slot$="dialog-footer"] {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .planDialog [data-slot$="dialog-footer"] :is(button, a) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .chooserDialog {
+    max-width: calc(100vw - 24px);
+    padding: var(--space-4);
+  }
+
+  .videoOverlay {
+    padding: var(--space-3);
+    align-items: flex-end;
+  }
+
+  .videoModal {
+    padding: var(--space-4);
+    border-radius: 16px 16px 0 0;
+    max-height: min(92dvh, 100%);
+  }
+}
+
+/* ───────────── Lesson video thumbnail + study-mode chooser ───────────── */
+
+.thumbBtn {
+  position: relative;
+  flex-shrink: 0;
+  width: 128px;
+  height: 72px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.5);
+  cursor: pointer;
+  padding: 0;
+  display: block;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbPlay,
+.thumbPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.thumbPlay {
+  background: hsl(0 0% 0% / 0.28);
+}
+
+.thumbPlaceholder {
+  color: hsl(var(--muted-foreground));
+}
+
+.thumbBtn:hover .thumbPlay {
+  background: hsl(0 0% 0% / 0.42);
+}
+
+/* Study-mode chooser modal (Question bank / Question Rush). */
+.chooserGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.chooserCard {
+  display: block;
+  padding: var(--space-4);
+  border-radius: 14px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  text-decoration: none;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.chooserCard:hover {
+  border-color: hsl(var(--primary) / 0.6);
+  background: hsl(var(--muted) / 0.35);
+}
+
+.chooserHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chooserName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.chooserBadge {
+  display: inline-flex;
+  align-items: center;
+  height: 1.25rem;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  background: hsl(214 95% 93%);
+  color: hsl(214 80% 38%);
+}
+
+:global(.dark) .chooserBadge {
+  background: hsl(214 70% 24%);
+  color: hsl(214 90% 82%);
+}
+
+.chooserDesc {
+  margin: 6px 0 12px;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.chooserContinue {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 2.25rem;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: hsl(222 47% 11%);
+  color: hsl(0 0% 100%);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  transition: background-color 150ms ease;
+}
+
+.chooserCard:hover .chooserContinue {
+  background: hsl(222 47% 20%);
+}
+
+:global(.dark) .chooserContinue {
+  background: hsl(0 0% 100% / 0.92);
+  color: hsl(222 47% 11%);
+}
+
+:global(.dark) .chooserCard:hover .chooserContinue {
+  background: hsl(0 0% 100%);
+  color: hsl(222 47% 11%);
+}
+
+/* Shared dialog + empty-state action buttons */
+.emptyStateBtn,
+.dialogBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 2.5rem;
+  padding: 0 var(--space-5);
+  border-radius: 11px;
+  border: none;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background-color 150ms ease, filter 150ms ease;
+}
+
+.emptyStateBtn:hover,
+.dialogBtnPrimary:hover:not(:disabled) {
+  background: hsl(var(--accent));
+}
+
+.emptyStateBtn:focus-visible,
+.dialogBtnPrimary:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.5);
+  outline-offset: 2px;
+}
+
+.dialogBtnPrimary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.dialogBtnCancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0 var(--space-4);
+  border-radius: 11px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.dialogBtnCancel:hover {
+  background: hsl(var(--muted) / 0.55);
+  border-color: hsl(var(--muted-foreground) / 0.45);
+  color: hsl(var(--foreground));
+}
+
+.dialogBtnCancel:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.dialogBtnDestructive {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0 var(--space-4);
+  border-radius: 11px;
+  border: none;
+  background: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: filter 150ms ease;
+}
+
+.dialogBtnDestructive:hover:not(:disabled) {
+  filter: brightness(0.94);
+}
+
+.dialogBtnDestructive:focus-visible {
+  outline: 2px solid hsl(var(--destructive) / 0.5);
+  outline-offset: 2px;
+}
+
+.dialogBtnDestructive:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.chooserDialog {
+  width: 100%;
+  max-width: 640px;
+  padding: var(--space-6);
+  gap: var(--space-5);
+  border-radius: 18px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+}
+
+/* ───────────── Study-plan dialogs (edit / regenerate / delete) ─────────────
+   Scoped overrides for the base-ui dialog/alert-dialog popups used here. The
+   shared primitives render a near-invisible `bg-popover` surface and stitch the
+   footer on with negative margins, which left these popups looking unfinished.
+   These rules give them a solid card, balanced padding, and a clean footer.
+   Specificity is bumped via [data-slot] so they win over the utility classes
+   without needing !important. */
+.planDialog[data-slot] {
+  width: 100%;
+  max-width: 440px;
+  padding: var(--space-5);
+  gap: var(--space-4);
+  border-radius: 18px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  box-shadow:
+    0 1px 2px hsl(0 0% 0% / 0.2),
+    0 24px 60px -28px hsl(0 0% 0% / 0.6);
+}
+
+.planDialog [data-slot$="dialog-header"] {
+  display: flex;
+  flex-direction: column;
+  place-items: start;
+  gap: var(--space-2);
+  text-align: left;
+}
+
+.planDialog [data-slot$="dialog-title"] {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: hsl(var(--foreground));
+}
+
+.planDialog [data-slot$="dialog-description"] {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  text-align: left;
+  text-wrap: pretty;
+  color: hsl(var(--muted-foreground));
+}
+
+.planDialog [data-slot$="dialog-footer"] {
+  margin: 0;
+  padding: var(--space-4) 0 0;
+  border: 0;
+  border-top: 1px solid hsl(var(--border));
+  border-radius: 0;
+  background: transparent;
+  gap: var(--space-2);
+}
+
+.planDialogFooter {
+  flex-direction: row;
+  justify-content: flex-end;
+  background: transparent !important;
+}
+
+.planDialog [data-slot$="alert-dialog-footer"] {
+  margin: 0;
+  padding: var(--space-4) 0 0;
+  border: 0;
+  border-top: 1px solid hsl(var(--border));
+  border-radius: 0;
+  background: transparent !important;
+  gap: var(--space-2);
+}
+
+/* Keep the footer actions comfortable but compact, proportional to the dialog.
+   Targets the rendered <button> / link inside the footer of all three popups. */
+.planDialog [data-slot$="dialog-footer"] :is(button, a) {
+  height: auto;
+  min-height: 2.5rem;
+  padding: 0 var(--space-4);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 650;
+  min-width: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.planDialogCancel {
+  border: 1px solid hsl(var(--border)) !important;
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+.planDialogCancel:hover {
+  background: hsl(var(--muted) / 0.45) !important;
+  border-color: hsl(var(--muted-foreground) / 0.35) !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.planDialogCancel:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.4) !important;
+}
+
+.planDialogPrimary {
+  border: none !important;
+  background: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+}
+
+.planDialogPrimary:hover:not(:disabled) {
+  background: hsl(var(--accent)) !important;
+  opacity: 1 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.planDialogPrimary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.45) !important;
+}
+
+.planDialogPrimary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.planDialogDestructive {
+  border: 1px solid hsl(var(--destructive) / 0.55) !important;
+  background: hsl(var(--destructive)) !important;
+  color: hsl(var(--destructive-foreground)) !important;
+}
+
+.planDialogDestructive:hover:not(:disabled) {
+  background: hsl(var(--destructive) / 0.9) !important;
+  opacity: 1 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px hsl(var(--destructive) / 0.28) !important;
+}
+
+.planDialogDestructive:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px hsl(var(--destructive) / 0.35),
+    0 6px 18px hsl(var(--destructive) / 0.22) !important;
+}
+
+.planDialogDestructive:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* The edit form already has its own field styling; keep the fields sized in
+   proportion to the slimmer dialog. */
+.planDialog .modalForm {
+  gap: var(--space-4);
+  margin: var(--space-1) 0;
+}
+
+.planDialog .modalField label {
+  font-size: 0.8125rem;
+  margin-bottom: var(--space-2);
+}
+
+.planDialog .modalField input {
+  height: 2.75rem;
+  padding: 0 var(--space-3);
+  font-size: 0.9375rem;
+  border-radius: 11px;
+}

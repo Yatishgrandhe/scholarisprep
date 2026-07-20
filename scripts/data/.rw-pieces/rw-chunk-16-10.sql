@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('00da07c2-4b7f-4743-82af-6de790417381', 'Which choice completes the text with the most logical transition?', 'In the nineteenth century, lighthouse keepers often lived in complete isolation for months at a time. They tended the lamp through every night and kept detailed logs of passing ships and storms. ______ many keepers kept gardens, raised animals, and taught themselves new skills to fill the long days.', NULL, '[{"id":"A","text":"By contrast,","is_correct":false,"explanation":"Wrong: the gardening sentence does not oppose the description of their duties."},{"id":"B","text":"In addition,","is_correct":true,"explanation":"Correct: it adds further activities to the list of what keepers did during their isolation."},{"id":"C","text":"Consequently,","is_correct":false,"explanation":"Wrong: gardening is not a direct result of tending the lamp or keeping logs."},{"id":"D","text":"Instead,","is_correct":false,"explanation":"Wrong: ''Instead'' replaces one idea with another, but these activities are added, not substituted."}]'::jsonb, 'B', 'Step 1 — Note the listed duties
+The second sentence describes keepers who {{yellow:kept detailed logs of passing ships and storms}}, and the final sentence names still more activities.
+Step 2 — Choose the additive transition
+Because gardening and teaching themselves are extra things keepers did, ''In addition'' fits.
+Distractor analysis:
+- A: ''By contrast'' needs opposition, but the ideas accumulate.
+- C: ''Consequently'' marks a result, but these are separate pastimes, not effects.
+- D: ''Instead'' replaces the prior idea, but nothing is being replaced.', 'Are the new activities replacing the duties or piling on top of them?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

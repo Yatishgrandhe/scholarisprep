@@ -1,0 +1,53 @@
+"use client";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
+import QuestionPreview from "@/components/home/QuestionPreview";
+import styles from "./LandingLiveDemo.module.css";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+/**
+ * Landing chrome shell around the existing `QuestionPreview` demo.
+ * Adds a cobalt glow + grid backdrop consistent with the hero atmosphere
+ * and a one-shot scroll entrance, without touching `QuestionPreview`
+ * itself so its `#live-demo` anchor (used by the hero secondary CTA)
+ * stays intact.
+ */
+export function LandingLiveDemo() {
+  const reducedMotion = useReducedMotion();
+  const shellRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      if (reducedMotion || !shellRef.current) return;
+
+      gsap.set(shellRef.current, { autoAlpha: 0, y: 32 });
+      gsap.to(shellRef.current, {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.75,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: shellRef.current,
+          start: "top 82%",
+          once: true,
+        },
+      });
+    },
+    { scope: shellRef, dependencies: [reducedMotion] },
+  );
+
+  return (
+    <div ref={shellRef} className={styles.demoShell}>
+      <div className={styles.demoGlow} aria-hidden />
+      <div className={styles.demoGrid} aria-hidden />
+      <QuestionPreview />
+    </div>
+  );
+}
+
+export default LandingLiveDemo;

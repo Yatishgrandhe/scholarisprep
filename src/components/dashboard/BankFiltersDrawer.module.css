@@ -1,0 +1,174 @@
+/* Bank filters drawer — flat panel, hairline border, no blur or shadows. */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: hsl(var(--foreground) / 0.3);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.drawer {
+  width: min(340px, 92vw);
+  height: 100%;
+  background: hsl(var(--card));
+  border-left: 1px solid hsl(var(--border));
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.header h2 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+.close {
+  border: none;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.close:hover {
+  background: hsl(var(--muted) / 0.4);
+  color: hsl(var(--foreground));
+}
+
+.body {
+  flex: 1;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  overflow: auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 650;
+  color: hsl(var(--muted-foreground));
+}
+
+.field select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+  appearance: auto;
+  -webkit-appearance: menulist;
+}
+
+.field select:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.25);
+}
+
+.field select:focus-visible {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.25);
+}
+
+.field select option {
+  color: hsl(var(--foreground));
+  background: hsl(var(--card));
+}
+
+.fieldToggle {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 650;
+  color: hsl(var(--muted-foreground));
+}
+
+.fieldToggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: hsl(262 70% 46%);
+  cursor: pointer;
+}
+
+.fieldHint {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.4;
+}
+
+.footer {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid hsl(var(--border));
+}
+
+.reset,
+.apply {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-weight: 650;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.reset {
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.reset:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.apply {
+  border: none;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  transition: background-color 160ms ease;
+}
+
+.apply:hover {
+  background: hsl(var(--accent));
+}

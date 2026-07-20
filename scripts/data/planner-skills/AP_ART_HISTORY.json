@@ -1,0 +1,125 @@
+{
+  "exam_type": "AP_ART_HISTORY",
+  "skills": [
+    {
+      "id": "AP_ART_HISTORY_U1_identify_context",
+      "unit_code": "U1",
+      "label": "Identify Context",
+      "description": "Place a work in time, culture, and function."
+    },
+    {
+      "id": "AP_ART_HISTORY_U1_compare_function",
+      "unit_code": "U1",
+      "label": "Compare Function",
+      "description": "Explain how purpose shapes form across works."
+    },
+    {
+      "id": "AP_ART_HISTORY_U2_visual_analyze",
+      "unit_code": "U2",
+      "label": "Visual Analysis",
+      "description": "Describe form, composition, and materials precisely."
+    },
+    {
+      "id": "AP_ART_HISTORY_U2_patron_purpose",
+      "unit_code": "U2",
+      "label": "Patron and Purpose",
+      "description": "Connect commissioning contexts to artistic choices."
+    },
+    {
+      "id": "AP_ART_HISTORY_U3_style_continuity",
+      "unit_code": "U3",
+      "label": "Style Continuity/Change",
+      "description": "Track what persists and what shifts across periods."
+    },
+    {
+      "id": "AP_ART_HISTORY_U3_cross_cultural",
+      "unit_code": "U3",
+      "label": "Cross-Cultural Exchange",
+      "description": "Explain influence, appropriation, or dialogue across cultures."
+    },
+    {
+      "id": "AP_ART_HISTORY_U4_modern_context",
+      "unit_code": "U4",
+      "label": "Modern Contexts",
+      "description": "Link works to modernity, nation, or market forces."
+    },
+    {
+      "id": "AP_ART_HISTORY_U4_compare_works",
+      "unit_code": "U4",
+      "label": "Compare Works",
+      "description": "Build a thesis-driven comparison using visual evidence."
+    },
+    {
+      "id": "AP_ART_HISTORY_U5_materials_meaning",
+      "unit_code": "U5",
+      "label": "Materials and Meaning",
+      "description": "Show how medium and technique carry cultural meaning."
+    },
+    {
+      "id": "AP_ART_HISTORY_U5_sacred_space",
+      "unit_code": "U5",
+      "label": "Sacred Space",
+      "description": "Interpret spatial and ritual relationships."
+    },
+    {
+      "id": "AP_ART_HISTORY_U6_power_object",
+      "unit_code": "U6",
+      "label": "Power and Display",
+      "description": "Analyze how objects assert authority or identity."
+    },
+    {
+      "id": "AP_ART_HISTORY_U6_diaspora_link",
+      "unit_code": "U6",
+      "label": "Diaspora and Trade Links",
+      "description": "Trace movement of people, goods, and styles."
+    },
+    {
+      "id": "AP_ART_HISTORY_U7_architecture_read",
+      "unit_code": "U7",
+      "label": "Read Architecture",
+      "description": "Analyze plan, elevation, ornament, and use."
+    },
+    {
+      "id": "AP_ART_HISTORY_U7_portable_arts",
+      "unit_code": "U7",
+      "label": "Portable Arts",
+      "description": "Interpret manuscripts, metalwork, textiles, or luxury objects."
+    },
+    {
+      "id": "AP_ART_HISTORY_U8_iconography",
+      "unit_code": "U8",
+      "label": "Iconography",
+      "description": "Decode symbols and narrative programs."
+    },
+    {
+      "id": "AP_ART_HISTORY_U8_trade_exchange",
+      "unit_code": "U8",
+      "label": "Trade and Exchange",
+      "description": "Connect artworks to routes and cultural contact."
+    },
+    {
+      "id": "AP_ART_HISTORY_U9_ritual_object",
+      "unit_code": "U9",
+      "label": "Ritual Object",
+      "description": "Explain ceremonial use and community meaning."
+    },
+    {
+      "id": "AP_ART_HISTORY_U9_contact_change",
+      "unit_code": "U9",
+      "label": "Contact and Change",
+      "description": "Analyze transformation under encounter or colonization."
+    },
+    {
+      "id": "AP_ART_HISTORY_U10_contemporary_claim",
+      "unit_code": "U10",
+      "label": "Contemporary Claims",
+      "description": "Articulate how recent works address identity or politics."
+    },
+    {
+      "id": "AP_ART_HISTORY_U10_global_network",
+      "unit_code": "U10",
+      "label": "Global Networks",
+      "description": "Situate works in biennials, markets, and media circuits."
+    }
+  ]
+}

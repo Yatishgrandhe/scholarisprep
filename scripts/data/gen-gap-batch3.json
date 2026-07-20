@@ -1,0 +1,298 @@
+[
+  {
+    "skill": "LIF",
+    "difficulty": "hard",
+    "question": {
+      "stimulus_text": null,
+      "stimulus_type": null,
+      "question_text": "A linear function $f$ satisfies $f(3) = 0$ and $f(7) = 8$. What is the value of $f(-4)$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$-14$",
+          "is_correct": true,
+          "explanation": "Slope $m = \\frac{8-(0)}{7-3} = 2$. Then $f(-4) = 2(-4-3)+(0) = -14$."
+        },
+        {
+          "id": "B",
+          "text": "$-12$",
+          "is_correct": false,
+          "explanation": "This adds 2 to the correct value."
+        },
+        {
+          "id": "C",
+          "text": "$2$",
+          "is_correct": false,
+          "explanation": "That is the slope, not $f(-4)$."
+        },
+        {
+          "id": "D",
+          "text": "$-18$",
+          "is_correct": false,
+          "explanation": "This subtracts 4 from the correct value."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Slope $m = \\frac{8-(0)}{7-3} = 2$. Using point-slope from $(3, 0)$: $f(-4) = 2(-4-3)+(0) = -14$."
+    }
+  },
+  {
+    "skill": "LIF",
+    "difficulty": "hard",
+    "question": {
+      "stimulus_text": null,
+      "stimulus_type": null,
+      "question_text": "A linear function $f$ satisfies $f(4) = 1$ and $f(8) = 9$. What is the value of $f(-5)$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$-17$",
+          "is_correct": true,
+          "explanation": "Slope $m = \\frac{9-(1)}{8-4} = 2$. Then $f(-5) = 2(-5-4)+(1) = -17$."
+        },
+        {
+          "id": "B",
+          "text": "$-15$",
+          "is_correct": false,
+          "explanation": "This adds 2 to the correct value."
+        },
+        {
+          "id": "C",
+          "text": "$2$",
+          "is_correct": false,
+          "explanation": "That is the slope, not $f(-5)$."
+        },
+        {
+          "id": "D",
+          "text": "$-21$",
+          "is_correct": false,
+          "explanation": "This subtracts 4 from the correct value."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Slope $m = \\frac{9-(1)}{8-4} = 2$. Using point-slope from $(4, 1)$: $f(-5) = 2(-5-4)+(1) = -17$."
+    }
+  },
+  {
+    "skill": "LIF",
+    "difficulty": "hard",
+    "question": {
+      "stimulus_text": null,
+      "stimulus_type": null,
+      "question_text": "A linear function $f$ satisfies $f(5) = 2$ and $f(9) = 10$. What is the value of $f(-6)$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$-20$",
+          "is_correct": true,
+          "explanation": "Slope $m = \\frac{10-(2)}{9-5} = 2$. Then $f(-6) = 2(-6-5)+(2) = -20$."
+        },
+        {
+          "id": "B",
+          "text": "$-18$",
+          "is_correct": false,
+          "explanation": "This adds 2 to the correct value."
+        },
+        {
+          "id": "C",
+          "text": "$2$",
+          "is_correct": false,
+          "explanation": "That is the slope, not $f(-6)$."
+        },
+        {
+          "id": "D",
+          "text": "$-24$",
+          "is_correct": false,
+          "explanation": "This subtracts 4 from the correct value."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Slope $m = \\frac{10-(2)}{9-5} = 2$. Using point-slope from $(5, 2)$: $f(-6) = 2(-6-5)+(2) = -20$."
+    }
+  },
+  {
+    "skill": "LIF",
+    "difficulty": "hard",
+    "question": {
+      "stimulus_text": null,
+      "stimulus_type": null,
+      "question_text": "A linear function $f$ satisfies $f(6) = 3$ and $f(10) = 11$. What is the value of $f(-7)$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$-23$",
+          "is_correct": true,
+          "explanation": "Slope $m = \\frac{11-(3)}{10-6} = 2$. Then $f(-7) = 2(-7-6)+(3) = -23$."
+        },
+        {
+          "id": "B",
+          "text": "$-21$",
+          "is_correct": false,
+          "explanation": "This adds 2 to the correct value."
+        },
+        {
+          "id": "C",
+          "text": "$2$",
+          "is_correct": false,
+          "explanation": "That is the slope, not $f(-7)$."
+        },
+        {
+          "id": "D",
+          "text": "$-27$",
+          "is_correct": false,
+          "explanation": "This subtracts 4 from the correct value."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Slope $m = \\frac{11-(3)}{10-6} = 2$. Using point-slope from $(6, 3)$: $f(-7) = 2(-7-6)+(3) = -23$."
+    }
+  },
+  {
+    "skill": "RAT",
+    "difficulty": "easy",
+    "question": {
+      "stimulus_text": null,
+      "stimulus_type": null,
+      "question_text": "In a mixture, the ratio of ingredient A to ingredient B is $3:4$. If the mixture contains 10 units total, how many units are ingredient A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$2$",
+          "is_correct": false,
+          "explanation": "Too small; check $\\frac{${a}}{${a + b}} \\times ${total}$."
+        },
+        {
+          "id": "B",
+          "text": "$4$",
+          "is_correct": true,
+          "explanation": "$\\frac{3}{7} \\times 10 = 4$."
+        },
+        {
+          "id": "C",
+          "text": "$7$",
+          "is_correct": false,
+          "explanation": "Too large."
+        },
+        {
+          "id": "D",
+          "text": "$10$",
+          "is_correct": false,
+          "explanation": "That is the total mixture, not just ingredient A."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Ingredient A is $\\frac{3}{7}$ of the mixture: $\\frac{3}{7} \\times 10 = 4$ units."
+    }
+  },
+  {
+    "skill": "RAT",
+    "difficulty": "easy",
+    "question": {
+      "stimulus_text": null,
+      "stimulus_type": null,
+      "question_text": "In a mixture, the ratio of ingredient A to ingredient B is $4:5$. If the mixture contains 20 units total, how many units are ingredient A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$7$",
+          "is_correct": false,
+          "explanation": "Too small; check $\\frac{${a}}{${a + b}} \\times ${total}$."
+        },
+        {
+          "id": "B",
+          "text": "$9$",
+          "is_correct": true,
+          "explanation": "$\\frac{4}{9} \\times 20 = 9$."
+        },
+        {
+          "id": "C",
+          "text": "$12$",
+          "is_correct": false,
+          "explanation": "Too large."
+        },
+        {
+          "id": "D",
+          "text": "$20$",
+          "is_correct": false,
+          "explanation": "That is the total mixture, not just ingredient A."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Ingredient A is $\\frac{4}{9}$ of the mixture: $\\frac{4}{9} \\times 20 = 9$ units."
+    }
+  },
+  {
+    "skill": "RAT",
+    "difficulty": "easy",
+    "question": {
+      "stimulus_text": null,
+      "stimulus_type": null,
+      "question_text": "In a mixture, the ratio of ingredient A to ingredient B is $5:6$. If the mixture contains 30 units total, how many units are ingredient A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$12$",
+          "is_correct": false,
+          "explanation": "Too small; check $\\frac{${a}}{${a + b}} \\times ${total}$."
+        },
+        {
+          "id": "B",
+          "text": "$14$",
+          "is_correct": true,
+          "explanation": "$\\frac{5}{11} \\times 30 = 14$."
+        },
+        {
+          "id": "C",
+          "text": "$17$",
+          "is_correct": false,
+          "explanation": "Too large."
+        },
+        {
+          "id": "D",
+          "text": "$30$",
+          "is_correct": false,
+          "explanation": "That is the total mixture, not just ingredient A."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Ingredient A is $\\frac{5}{11}$ of the mixture: $\\frac{5}{11} \\times 30 = 14$ units."
+    }
+  },
+  {
+    "skill": "RAT",
+    "difficulty": "easy",
+    "question": {
+      "stimulus_text": null,
+      "stimulus_type": null,
+      "question_text": "In a mixture, the ratio of ingredient A to ingredient B is $6:7$. If the mixture contains 40 units total, how many units are ingredient A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$16$",
+          "is_correct": false,
+          "explanation": "Too small; check $\\frac{${a}}{${a + b}} \\times ${total}$."
+        },
+        {
+          "id": "B",
+          "text": "$18$",
+          "is_correct": true,
+          "explanation": "$\\frac{6}{13} \\times 40 = 18$."
+        },
+        {
+          "id": "C",
+          "text": "$21$",
+          "is_correct": false,
+          "explanation": "Too large."
+        },
+        {
+          "id": "D",
+          "text": "$40$",
+          "is_correct": false,
+          "explanation": "That is the total mixture, not just ingredient A."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Ingredient A is $\\frac{6}{13}$ of the mixture: $\\frac{6}{13} \\times 40 = 18$ units."
+    }
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "025a3af6-cf36-47d3-85e0-e92c9664536b",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "0edcaf8c-0389-4bf9-b4be-9e4090fa3919",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "2d96ffe6-d661-471a-a452-a044f3243bd2",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "3b078954-59eb-470a-901c-51e54374fd84",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "438d1032-ca63-4d67-9f2c-20208528359f",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "46c23198-ec96-46c9-9042-cecf43c07f28",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "521d6cf8-9874-43ba-b43c-72a12f737d7f",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "5e713b31-8799-428e-84c8-c89bda1c1a32",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "70176a88-5d8e-47ee-a178-0fdc8e1af505",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "788bef64-b72c-4fe4-af2c-ce385ab8b26d",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "82316e7c-465b-4747-b4d4-fd381f9decae",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "987b2e60-f769-4a8c-97cd-ae8f913b6783",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "9e13c85a-4b4d-4fd5-947f-30887a3d711a",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "b46ce247-fa24-4634-bd72-cd21c6259ea7",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "d2ee2f29-e347-49af-be11-093d5321a115",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "d86a33c0-cd05-4a4d-8483-e38ab71be0c9",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  },
+  {
+    "id": "e55fa3ac-ee40-4d6b-9753-6103417c6cc4",
+    "skill_id": "CID",
+    "field": "stimulus_text",
+    "bad": "doubled word",
+    "good": "single",
+    "snippet": "The The"
+  }
+]

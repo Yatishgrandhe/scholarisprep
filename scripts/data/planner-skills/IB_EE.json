@@ -1,0 +1,170 @@
+{
+  "examType": "IB_EE",
+  "topics": [
+    "Topic selection & RQ design",
+    "Research methods by subject",
+    "Source evaluation & academic honesty",
+    "Argument & structure",
+    "Analysis & evaluation",
+    "Formal presentation",
+    "Reflection & RPPF",
+    "Subject-group exemplars practice"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_topic_selection_rq_design",
+      "title": "Topic selection & RQ design",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_research_methods_by_subject",
+      "title": "Research methods by subject",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_source_evaluation_academic_honesty",
+      "title": "Source evaluation & academic honesty",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_argument_structure",
+      "title": "Argument & structure",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_analysis_evaluation",
+      "title": "Analysis & evaluation",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_formal_presentation",
+      "title": "Formal presentation",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_reflection_rppf",
+      "title": "Reflection & RPPF",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_subject_group_exemplars_practice",
+      "title": "Subject-group exemplars practice",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_EE:U1_topic_selection_rq_design",
+      "unit_code": "U1_topic_selection_rq_design",
+      "title": "Topic selection & RQ design",
+      "topics": [
+        "feasibility",
+        "focus",
+        "subject fit"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_EE:U2_research_methods_by_subject",
+      "unit_code": "U2_research_methods_by_subject",
+      "title": "Research methods by subject",
+      "topics": [
+        "primary/secondary",
+        "ethics",
+        "data"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_EE:U1_topic_selection_rq_design"
+      ]
+    },
+    {
+      "skill_id": "IB_EE:U3_source_evaluation_academic_honesty",
+      "unit_code": "U3_source_evaluation_academic_honesty",
+      "title": "Source evaluation & academic honesty",
+      "topics": [
+        "citation",
+        "paraphrase",
+        "AI use policy awareness"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_EE:U2_research_methods_by_subject"
+      ]
+    },
+    {
+      "skill_id": "IB_EE:U4_argument_structure",
+      "unit_code": "U4_argument_structure",
+      "title": "Argument & structure",
+      "topics": [
+        "chapters",
+        "line of argument",
+        "counterclaims"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_EE:U3_source_evaluation_academic_honesty"
+      ]
+    },
+    {
+      "skill_id": "IB_EE:U5_analysis_evaluation",
+      "unit_code": "U5_analysis_evaluation",
+      "title": "Analysis & evaluation",
+      "topics": [
+        "criteria B/C skills",
+        "depth vs breadth"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_EE:U4_argument_structure"
+      ]
+    },
+    {
+      "skill_id": "IB_EE:U6_formal_presentation",
+      "unit_code": "U6_formal_presentation",
+      "title": "Formal presentation",
+      "topics": [
+        "abstract",
+        "format",
+        "tables/figures"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_EE:U5_analysis_evaluation"
+      ]
+    },
+    {
+      "skill_id": "IB_EE:U7_reflection_rppf",
+      "unit_code": "U7_reflection_rppf",
+      "title": "Reflection & RPPF",
+      "topics": [
+        "interim",
+        "final",
+        "supervisor dialogue"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_EE:U6_formal_presentation"
+      ]
+    },
+    {
+      "skill_id": "IB_EE:U8_subject_group_exemplars_practice",
+      "unit_code": "U8_subject_group_exemplars_practice",
+      "title": "Subject-group exemplars practice",
+      "topics": [
+        "Group 1\u20136 scaffolds",
+        "World Studies"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_EE:U7_reflection_rppf"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

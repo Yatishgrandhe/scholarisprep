@@ -1,0 +1,175 @@
+{
+  "examType": "IB_DESIGN_TECHNOLOGY_SL",
+  "topics": [
+    "Human factors & ergonomics",
+    "Resource management & sustainable production",
+    "Modelling",
+    "Raw materials to final product",
+    "Innovation & design",
+    "Classic design & user-centred design",
+    "Commercial production & marketing",
+    "Design project / IA skills"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_human_factors_ergonomics",
+      "title": "Human factors & ergonomics",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_resource_management_sustainable_production",
+      "title": "Resource management & sustainable production",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_modelling",
+      "title": "Modelling",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_raw_materials_to_final_product",
+      "title": "Raw materials to final product",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_innovation_design",
+      "title": "Innovation & design",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_classic_design_user_centred_design",
+      "title": "Classic design & user-centred design",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_commercial_production_marketing",
+      "title": "Commercial production & marketing",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_design_project_ia_skills",
+      "title": "Design project / IA skills",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_DESIGN_TECHNOLOGY_SL:U1_human_factors_ergonomics",
+      "unit_code": "U1_human_factors_ergonomics",
+      "title": "Human factors & ergonomics",
+      "topics": [
+        "anthropometrics",
+        "psychology",
+        "physiological factors"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_DESIGN_TECHNOLOGY_SL:U2_resource_management_sustainable_production",
+      "unit_code": "U2_resource_management_sustainable_production",
+      "title": "Resource management & sustainable production",
+      "topics": [
+        "LCA",
+        "circular economy",
+        "clean tech"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_DESIGN_TECHNOLOGY_SL:U1_human_factors_ergonomics"
+      ]
+    },
+    {
+      "skill_id": "IB_DESIGN_TECHNOLOGY_SL:U3_modelling",
+      "unit_code": "U3_modelling",
+      "title": "Modelling",
+      "topics": [
+        "conceptual",
+        "graphical",
+        "physical",
+        "CAD"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_DESIGN_TECHNOLOGY_SL:U2_resource_management_sustainable_production"
+      ]
+    },
+    {
+      "skill_id": "IB_DESIGN_TECHNOLOGY_SL:U4_raw_materials_to_final_product",
+      "unit_code": "U4_raw_materials_to_final_product",
+      "title": "Raw materials to final product",
+      "topics": [
+        "properties",
+        "manufacturing techniques",
+        "quality"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_DESIGN_TECHNOLOGY_SL:U3_modelling"
+      ]
+    },
+    {
+      "skill_id": "IB_DESIGN_TECHNOLOGY_SL:U5_innovation_design",
+      "unit_code": "U5_innovation_design",
+      "title": "Innovation & design",
+      "topics": [
+        "drivers",
+        "strategies",
+        "invention vs innovation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_DESIGN_TECHNOLOGY_SL:U4_raw_materials_to_final_product"
+      ]
+    },
+    {
+      "skill_id": "IB_DESIGN_TECHNOLOGY_SL:U6_classic_design_user_centred_design",
+      "unit_code": "U6_classic_design_user_centred_design",
+      "title": "Classic design & user-centred design",
+      "topics": [
+        "case studies",
+        "UCD cycle",
+        "inclusive design"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_DESIGN_TECHNOLOGY_SL:U5_innovation_design"
+      ]
+    },
+    {
+      "skill_id": "IB_DESIGN_TECHNOLOGY_SL:U7_commercial_production_marketing",
+      "unit_code": "U7_commercial_production_marketing",
+      "title": "Commercial production & marketing",
+      "topics": [
+        "scale",
+        "JIT",
+        "market research",
+        "branding"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_DESIGN_TECHNOLOGY_SL:U6_classic_design_user_centred_design"
+      ]
+    },
+    {
+      "skill_id": "IB_DESIGN_TECHNOLOGY_SL:U8_design_project_ia_skills",
+      "unit_code": "U8_design_project_ia_skills",
+      "title": "Design project / IA skills",
+      "topics": [
+        "brief",
+        "research",
+        "development",
+        "evaluation"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_DESIGN_TECHNOLOGY_SL:U7_commercial_production_marketing"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

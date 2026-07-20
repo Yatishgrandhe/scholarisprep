@@ -1,0 +1,113 @@
+{
+  "exam_type": "AP_ENGLISH_LANG",
+  "skills": [
+    {
+      "id": "SK_RHET_SITUATION",
+      "unit_code": "U1",
+      "label": "RHET SITUATION",
+      "description": "Rhetorical Situation Foundations: practice skill for rhet situation."
+    },
+    {
+      "id": "SK_EXIGENCE_AUDIENCE",
+      "unit_code": "U1",
+      "label": "EXIGENCE AUDIENCE",
+      "description": "Rhetorical Situation Foundations: practice skill for exigence audience."
+    },
+    {
+      "id": "SK_CLAIM_TYPES",
+      "unit_code": "U2",
+      "label": "CLAIM TYPES",
+      "description": "Claims and Evidence: practice skill for claim types."
+    },
+    {
+      "id": "SK_EVIDENCE_COMMENTARY",
+      "unit_code": "U2",
+      "label": "EVIDENCE COMMENTARY",
+      "description": "Claims and Evidence: practice skill for evidence commentary."
+    },
+    {
+      "id": "SK_LINE_OF_REASONING",
+      "unit_code": "U3",
+      "label": "LINE OF REASONING",
+      "description": "Reasoning and Organization: practice skill for line of reasoning."
+    },
+    {
+      "id": "SK_METHODS_DEVELOPMENT",
+      "unit_code": "U3",
+      "label": "METHODS DEVELOPMENT",
+      "description": "Reasoning and Organization: practice skill for methods development."
+    },
+    {
+      "id": "SK_AUDIENCE_PURPOSE",
+      "unit_code": "U4",
+      "label": "AUDIENCE PURPOSE",
+      "description": "Audience Purpose and Context: practice skill for audience purpose."
+    },
+    {
+      "id": "SK_CONTEXT_CONSTRAINTS",
+      "unit_code": "U4",
+      "label": "CONTEXT CONSTRAINTS",
+      "description": "Audience Purpose and Context: practice skill for context constraints."
+    },
+    {
+      "id": "SK_DICTION_SYNTAX",
+      "unit_code": "U5",
+      "label": "DICTION SYNTAX",
+      "description": "Style Choices and Effects: practice skill for diction syntax."
+    },
+    {
+      "id": "SK_TONE_EFFECT",
+      "unit_code": "U5",
+      "label": "TONE EFFECT",
+      "description": "Style Choices and Effects: practice skill for tone effect."
+    },
+    {
+      "id": "SK_COUNTERARGUMENT",
+      "unit_code": "U6",
+      "label": "COUNTERARGUMENT",
+      "description": "Argument Complexity: practice skill for counterargument."
+    },
+    {
+      "id": "SK_QUALIFY_CLAIM",
+      "unit_code": "U6",
+      "label": "QUALIFY CLAIM",
+      "description": "Argument Complexity: practice skill for qualify claim."
+    },
+    {
+      "id": "SK_MULTIPLE_VIEWPOINTS",
+      "unit_code": "U7",
+      "label": "MULTIPLE VIEWPOINTS",
+      "description": "Multiple Perspectives: practice skill for multiple viewpoints."
+    },
+    {
+      "id": "SK_BIAS_ANALYSIS",
+      "unit_code": "U7",
+      "label": "BIAS ANALYSIS",
+      "description": "Multiple Perspectives: practice skill for bias analysis."
+    },
+    {
+      "id": "SK_SYNTHESIS_POSITION",
+      "unit_code": "U8",
+      "label": "SYNTHESIS POSITION",
+      "description": "Synthesis Across Sources: practice skill for synthesis position."
+    },
+    {
+      "id": "SK_SOURCE_ATTRIBUTION",
+      "unit_code": "U8",
+      "label": "SOURCE ATTRIBUTION",
+      "description": "Synthesis Across Sources: practice skill for source attribution."
+    },
+    {
+      "id": "SK_TIMED_RHET_ANALYSIS",
+      "unit_code": "U9",
+      "label": "TIMED RHET ANALYSIS",
+      "description": "Integrated Rhetorical Practice: practice skill for timed rhet analysis."
+    },
+    {
+      "id": "SK_TIMED_ARGUMENT",
+      "unit_code": "U9",
+      "label": "TIMED ARGUMENT",
+      "description": "Integrated Rhetorical Practice: practice skill for timed argument."
+    }
+  ]
+}

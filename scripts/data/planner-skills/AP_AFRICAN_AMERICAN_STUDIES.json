@@ -1,0 +1,77 @@
+{
+  "exam_type": "AP_AFRICAN_AMERICAN_STUDIES",
+  "skills": [
+    {
+      "id": "SK_AFRICAN_SOCIETIES",
+      "unit_code": "U1",
+      "label": "AFRICAN SOCIETIES",
+      "description": "Origins of the African Diaspora: practice skill for african societies."
+    },
+    {
+      "id": "SK_DIASPORA_ORIGINS",
+      "unit_code": "U1",
+      "label": "DIASPORA ORIGINS",
+      "description": "Origins of the African Diaspora: practice skill for diaspora origins."
+    },
+    {
+      "id": "SK_TRADE_NETWORKS",
+      "unit_code": "U1",
+      "label": "TRADE NETWORKS",
+      "description": "Origins of the African Diaspora: practice skill for trade networks."
+    },
+    {
+      "id": "SK_ENSLAVEMENT_SYSTEMS",
+      "unit_code": "U2",
+      "label": "ENSLAVEMENT SYSTEMS",
+      "description": "Freedom Enslavement and Resistance: practice skill for enslavement systems."
+    },
+    {
+      "id": "SK_RESISTANCE",
+      "unit_code": "U2",
+      "label": "RESISTANCE",
+      "description": "Freedom Enslavement and Resistance: practice skill for resistance."
+    },
+    {
+      "id": "SK_ABOLITION",
+      "unit_code": "U2",
+      "label": "ABOLITION",
+      "description": "Freedom Enslavement and Resistance: practice skill for abolition."
+    },
+    {
+      "id": "SK_FREEDOM_PRACTICE",
+      "unit_code": "U3",
+      "label": "FREEDOM PRACTICE",
+      "description": "The Practice of Freedom: practice skill for freedom practice."
+    },
+    {
+      "id": "SK_MIGRATION_INSTITUTIONS",
+      "unit_code": "U3",
+      "label": "MIGRATION INSTITUTIONS",
+      "description": "The Practice of Freedom: practice skill for migration institutions."
+    },
+    {
+      "id": "SK_ARTS_INTELLECT",
+      "unit_code": "U3",
+      "label": "ARTS INTELLECT",
+      "description": "The Practice of Freedom: practice skill for arts intellect."
+    },
+    {
+      "id": "SK_MOVEMENT_STRATEGIES",
+      "unit_code": "U4",
+      "label": "MOVEMENT STRATEGIES",
+      "description": "Movements and Debates: practice skill for movement strategies."
+    },
+    {
+      "id": "SK_GLOBAL_BLACK_FREEDOM",
+      "unit_code": "U4",
+      "label": "GLOBAL BLACK FREEDOM",
+      "description": "Movements and Debates: practice skill for global black freedom."
+    },
+    {
+      "id": "SK_CONTEMPORARY_DEBATES",
+      "unit_code": "U4",
+      "label": "CONTEMPORARY DEBATES",
+      "description": "Movements and Debates: practice skill for contemporary debates."
+    }
+  ]
+}

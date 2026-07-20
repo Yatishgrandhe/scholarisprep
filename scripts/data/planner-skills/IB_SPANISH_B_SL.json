@@ -1,0 +1,150 @@
+{
+  "examType": "IB_SPANISH_B_SL",
+  "topics": [
+    "Identities",
+    "Experiences",
+    "Human Ingenuity",
+    "Social Organization",
+    "Sharing the Planet",
+    "Language Skills and Assessment"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_identities",
+      "title": "Identities",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_lifestyles",
+        "U1_S2_health",
+        "U1_S3_beliefs_and_values",
+        "U1_S4_subcultures"
+      ],
+      "topics": [
+        "lifestyles",
+        "health",
+        "beliefs and values",
+        "subcultures"
+      ]
+    },
+    {
+      "unit_code": "U2_experiences",
+      "title": "Experiences",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_leisure",
+        "U2_S2_customs",
+        "U2_S3_migration",
+        "U2_S4_life_stories"
+      ],
+      "topics": [
+        "leisure",
+        "customs",
+        "migration",
+        "life stories"
+      ]
+    },
+    {
+      "unit_code": "U3_human_ingenuity",
+      "title": "Human Ingenuity",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_tech",
+        "U3_S2_entertainment",
+        "U3_S3_artistic_expression"
+      ],
+      "topics": [
+        "tech",
+        "entertainment",
+        "artistic expression"
+      ]
+    },
+    {
+      "unit_code": "U4_social_organization",
+      "title": "Social Organization",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_education",
+        "U4_S2_law",
+        "U4_S3_social_relationships",
+        "U4_S4_workplace"
+      ],
+      "topics": [
+        "education",
+        "law",
+        "social relationships",
+        "workplace"
+      ]
+    },
+    {
+      "unit_code": "U5_sharing_the_planet",
+      "title": "Sharing the Planet",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_environment",
+        "U5_S2_equality",
+        "U5_S3_peace",
+        "U5_S4_globalization"
+      ],
+      "topics": [
+        "environment",
+        "equality",
+        "peace",
+        "globalization"
+      ]
+    },
+    {
+      "unit_code": "U6_language_skills_and_assessment",
+      "title": "Language Skills and Assessment",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_receptive",
+        "U6_S2_productive",
+        "U6_S3_interactive",
+        "U6_S4_paper_1_2_io"
+      ],
+      "topics": [
+        "receptive",
+        "productive",
+        "interactive",
+        "Paper 1/2 / IO"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_identities": [
+      "U1_S1_lifestyles",
+      "U1_S2_health",
+      "U1_S3_beliefs_and_values",
+      "U1_S4_subcultures"
+    ],
+    "U2_experiences": [
+      "U2_S1_leisure",
+      "U2_S2_customs",
+      "U2_S3_migration",
+      "U2_S4_life_stories"
+    ],
+    "U3_human_ingenuity": [
+      "U3_S1_tech",
+      "U3_S2_entertainment",
+      "U3_S3_artistic_expression"
+    ],
+    "U4_social_organization": [
+      "U4_S1_education",
+      "U4_S2_law",
+      "U4_S3_social_relationships",
+      "U4_S4_workplace"
+    ],
+    "U5_sharing_the_planet": [
+      "U5_S1_environment",
+      "U5_S2_equality",
+      "U5_S3_peace",
+      "U5_S4_globalization"
+    ],
+    "U6_language_skills_and_assessment": [
+      "U6_S1_receptive",
+      "U6_S2_productive",
+      "U6_S3_interactive",
+      "U6_S4_paper_1_2_io"
+    ]
+  }
+}

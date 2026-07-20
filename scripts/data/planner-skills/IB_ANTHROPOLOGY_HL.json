@@ -1,0 +1,175 @@
+{
+  "examType": "IB_ANTHROPOLOGY_HL",
+  "topics": [
+    "The practice of anthropology",
+    "Belonging",
+    "Classifying the world",
+    "Communication, expression and technology",
+    "Conflict",
+    "Development & inequality",
+    "Health, illness and healing",
+    "Engaging with ethnography / IA"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_the_practice_of_anthropology",
+      "title": "The practice of anthropology",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_belonging",
+      "title": "Belonging",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_classifying_the_world",
+      "title": "Classifying the world",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_communication_expression_and_technology",
+      "title": "Communication, expression and technology",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_conflict",
+      "title": "Conflict",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_development_inequality",
+      "title": "Development & inequality",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_health_illness_and_healing",
+      "title": "Health, illness and healing",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_engaging_with_ethnography_ia",
+      "title": "Engaging with ethnography / IA",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_ANTHROPOLOGY_HL:U1_the_practice_of_anthropology",
+      "unit_code": "U1_the_practice_of_anthropology",
+      "title": "The practice of anthropology",
+      "topics": [
+        "fieldwork",
+        "ethnography",
+        "ethics",
+        "positionality"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_ANTHROPOLOGY_HL:U2_belonging",
+      "unit_code": "U2_belonging",
+      "title": "Belonging",
+      "topics": [
+        "identity",
+        "kinship",
+        "community",
+        "exclusion"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ANTHROPOLOGY_HL:U1_the_practice_of_anthropology"
+      ]
+    },
+    {
+      "skill_id": "IB_ANTHROPOLOGY_HL:U3_classifying_the_world",
+      "unit_code": "U3_classifying_the_world",
+      "title": "Classifying the world",
+      "topics": [
+        "classification systems",
+        "symbolism",
+        "worldviews"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ANTHROPOLOGY_HL:U2_belonging"
+      ]
+    },
+    {
+      "skill_id": "IB_ANTHROPOLOGY_HL:U4_communication_expression_and_technology",
+      "unit_code": "U4_communication_expression_and_technology",
+      "title": "Communication, expression and technology",
+      "topics": [
+        "language",
+        "media",
+        "material culture"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ANTHROPOLOGY_HL:U3_classifying_the_world"
+      ]
+    },
+    {
+      "skill_id": "IB_ANTHROPOLOGY_HL:U5_conflict",
+      "unit_code": "U5_conflict",
+      "title": "Conflict",
+      "topics": [
+        "violence",
+        "resistance",
+        "negotiation",
+        "power"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ANTHROPOLOGY_HL:U4_communication_expression_and_technology"
+      ]
+    },
+    {
+      "skill_id": "IB_ANTHROPOLOGY_HL:U6_development_inequality",
+      "unit_code": "U6_development_inequality",
+      "title": "Development & inequality",
+      "topics": [
+        "aid",
+        "globalization",
+        "colonial legacies"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ANTHROPOLOGY_HL:U5_conflict"
+      ]
+    },
+    {
+      "skill_id": "IB_ANTHROPOLOGY_HL:U7_health_illness_and_healing",
+      "unit_code": "U7_health_illness_and_healing",
+      "title": "Health, illness and healing",
+      "topics": [
+        "medical systems",
+        "body",
+        "well-being"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_ANTHROPOLOGY_HL:U6_development_inequality"
+      ]
+    },
+    {
+      "skill_id": "IB_ANTHROPOLOGY_HL:U8_engaging_with_ethnography_ia",
+      "unit_code": "U8_engaging_with_ethnography_ia",
+      "title": "Engaging with ethnography / IA",
+      "topics": [
+        "observation",
+        "analysis",
+        "critical reflection"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_ANTHROPOLOGY_HL:U7_health_illness_and_healing"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

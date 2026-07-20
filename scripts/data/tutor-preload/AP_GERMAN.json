@@ -1,0 +1,133 @@
+{
+  "exam_type": "AP_GERMAN",
+  "display_name": "AP German Language and Culture",
+  "family": "AP",
+  "units": [
+    {
+      "unit_code": "U1_families_and_communities",
+      "unit_name": "Families and Communities",
+      "topics": [
+        "family structures",
+        "customs",
+        "citizenship",
+        "education"
+      ]
+    },
+    {
+      "unit_code": "U2_personal_and_public_identities",
+      "unit_name": "Personal and Public Identities",
+      "topics": [
+        "identity",
+        "alienation",
+        "nationalism",
+        "heroes"
+      ]
+    },
+    {
+      "unit_code": "U3_beauty_and_aesthetics",
+      "unit_name": "Beauty and Aesthetics",
+      "topics": [
+        "ideals of beauty",
+        "arts",
+        "architecture",
+        "fashion"
+      ]
+    },
+    {
+      "unit_code": "U4_science_and_technology",
+      "unit_name": "Science and Technology",
+      "topics": [
+        "discovery",
+        "ethics of tech",
+        "health",
+        "innovation"
+      ]
+    },
+    {
+      "unit_code": "U5_contemporary_life",
+      "unit_name": "Contemporary Life",
+      "topics": [
+        "education",
+        "leisure",
+        "travel",
+        "work"
+      ]
+    },
+    {
+      "unit_code": "U6_global_challenges",
+      "unit_name": "Global Challenges",
+      "topics": [
+        "environment",
+        "human rights",
+        "peace",
+        "economic issues"
+      ]
+    }
+  ],
+  "command_terms": [
+    "interpret",
+    "compare",
+    "persuade",
+    "narrate",
+    "exchange information",
+    "present cultural comparison"
+  ],
+  "misconceptions": [
+    "Translating word-for-word instead of negotiating meaning",
+    "Ignoring register/audience in interpersonal tasks",
+    "Overlooking cultural products/practices/perspectives",
+    "Leaving audio/print details unused in interpretive answers"
+  ],
+  "paper_rules": [
+    "AP German Language and Culture: interpretive (print/audio) + interpersonal + presentational modes",
+    "Stay in target language for productive tasks unless directions say otherwise",
+    "Use course themes as scaffolding, not as essay titles alone"
+  ],
+  "calculator": {
+    "policy": "none",
+    "notes": "No calculator",
+    "section_rules": [
+      {
+        "section": "all",
+        "calculator_allowed": false
+      }
+    ],
+    "per_question_default": false,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "No Desmos block; calculator not used.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "AP CED-aligned item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Match AP task model for the unit"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": null
+}

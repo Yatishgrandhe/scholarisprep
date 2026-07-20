@@ -1,0 +1,1180 @@
+/* ── Study Planner — flat OnePrep-style landing, wizard, upload, skeleton ── */
+
+.pageShell {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 var(--space-4) var(--space-8);
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* ── Decorative kanban illustration (pure CSS) ── */
+.illustration {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 360px;
+  margin: var(--space-2) auto 0;
+}
+
+.illoCard {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.illoCardMid {
+  transform: translateY(-8px);
+}
+
+.illoBar {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.illoBarBlue {
+  width: 72%;
+  background: hsl(213 94% 84%);
+}
+
+.illoBarPurple {
+  width: 60%;
+  background: hsl(262 85% 86%);
+}
+
+.illoBarGreen {
+  width: 78%;
+  background: hsl(142 56% 82%);
+}
+
+.illoBarYellow {
+  width: 56%;
+  background: hsl(48 95% 80%);
+}
+
+.illoBarRed {
+  width: 68%;
+  background: hsl(0 86% 87%);
+}
+
+.illoLine {
+  display: block;
+  height: 6px;
+  width: 88%;
+  border-radius: 999px;
+  background: hsl(var(--muted));
+}
+
+.illoLineShort {
+  display: block;
+  height: 6px;
+  width: 52%;
+  border-radius: 999px;
+  background: hsl(var(--muted));
+}
+
+/* ── Centered hero ── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-body);
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.heroSub {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+  max-width: 52ch;
+}
+
+/* ── Entry option cards — light gray fill, no border ── */
+.entryGrid {
+  display: grid;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .entryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .entryGridSingle {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+}
+
+.entryCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  background: hsl(var(--muted) / 0.5);
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--font-body);
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.entryCard:hover {
+  background: hsl(var(--muted) / 0.75);
+  border-color: hsl(var(--border));
+}
+
+.entryCard:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.entryCard h2 {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.entryCard p {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* ── Black pill button (OnePrep style) ── */
+.pillBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: var(--space-3);
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  background: hsl(222 47% 11%);
+  color: hsl(0 0% 100%);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.entryCard:hover .pillBtn {
+  background: hsl(222 47% 20%);
+}
+
+.pillBtn:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.5);
+  outline-offset: 2px;
+}
+
+:global(.dark) .pillBtn {
+  background: hsl(0 0% 100% / 0.92);
+  color: hsl(222 47% 11%);
+}
+
+:global(.dark) .entryCard:hover .pillBtn {
+  background: hsl(0 0% 100%);
+  color: hsl(222 47% 11%);
+}
+
+/* ── How It Works ── */
+.howSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  width: 100%;
+  max-width: 880px;
+  margin: var(--space-4) auto 0;
+}
+
+.howTitle {
+  font-family: var(--font-body);
+  font-size: 1.375rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.howGrid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .howGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.howCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.iconTile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  margin-bottom: var(--space-1);
+}
+
+.howCol h4 {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.howCol p {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  line-height: 1.5;
+  max-width: 32ch;
+}
+
+/* ── Wizard steps ── */
+.optionGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.optionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-3) var(--space-4);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.optionCard:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.35);
+}
+
+.optionCard:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.optionCardActive,
+.optionCardActive:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.06);
+}
+
+.optionTitle {
+  font-weight: 650;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+}
+
+.optionSub {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.ratingGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-2);
+}
+
+@media (min-width: 480px) {
+  .ratingGrid {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+.ratingBtn {
+  aspect-ratio: 1;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-weight: 700;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.ratingBtn:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.45);
+}
+
+.ratingBtn:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.ratingBtnActive,
+.ratingBtnActive:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.ratingLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: var(--space-2);
+}
+
+.confidenceHint {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 var(--space-2);
+}
+
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.field input {
+  height: 2.5rem;
+  padding: 0 var(--space-3);
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+}
+
+.field input:focus {
+  outline: 2px solid hsl(var(--primary) / 0.35);
+  outline-offset: 1px;
+  border-color: hsl(var(--primary));
+}
+
+.previewText {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.previewBlock {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  border-radius: 12px;
+  background: hsl(var(--muted) / 0.5);
+}
+
+.previewHeading {
+  font-family: var(--font-body);
+  margin: 0 0 var(--space-2);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  color: hsl(var(--foreground));
+}
+
+.previewList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.previewList li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 0.8125rem;
+  padding: 8px 0;
+}
+
+.previewList li + li {
+  border-top: 1px solid hsl(var(--border) / 0.7);
+}
+
+.previewMinutes {
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
+}
+
+/* ── Score report upload page ── */
+.uploadPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-4) var(--space-8);
+  text-align: center;
+}
+
+.uploadTitle {
+  font-family: var(--font-body);
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0;
+  color: hsl(var(--foreground));
+}
+
+.uploadSub {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+  max-width: 56ch;
+}
+
+.uploadZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  max-width: 520px;
+  padding: var(--space-8) var(--space-5);
+  border-radius: 16px;
+  border: 1.5px dashed hsl(var(--border));
+  background: hsl(var(--card));
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.uploadZone:hover {
+  border-color: hsl(var(--primary) / 0.45);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.uploadZone:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.uploadHint {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+}
+
+.uploadInput {
+  display: none;
+}
+
+.uploadActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 2.5rem;
+  padding: 0 var(--space-5);
+  border-radius: 10px;
+  border: none;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.primaryBtn:hover:not(:disabled) {
+  /* Keep the cobalt fill and just darken it — never swap to a token that can
+     read close to the page background and make the white label vanish. */
+  background: hsl(var(--accent));
+  filter: none;
+}
+
+.primaryBtn:active:not(:disabled) {
+  filter: brightness(0.94);
+}
+
+.primaryBtn:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.5);
+  outline-offset: 2px;
+}
+
+.primaryBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 2.5rem;
+  padding: 0 var(--space-5);
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.secondaryBtn:hover:not(:disabled) {
+  background: hsl(var(--muted) / 0.55);
+  border-color: hsl(var(--muted-foreground) / 0.45);
+  color: hsl(var(--foreground));
+}
+
+.secondaryBtn:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.uploadBack {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+}
+
+.uploadBack:hover {
+  color: hsl(var(--foreground));
+  text-decoration: underline;
+}
+
+/* ── Loading skeleton ── */
+@keyframes plannerPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.skelPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.skel {
+  background: hsl(var(--muted));
+  border-radius: 10px;
+  animation: plannerPulse 1.6s ease-in-out infinite;
+}
+
+.skelIllo {
+  width: 280px;
+  max-width: 100%;
+  height: 88px;
+  border-radius: 12px;
+}
+
+.skelTitle {
+  width: 360px;
+  max-width: 80%;
+  height: 30px;
+}
+
+.skelSub {
+  width: 280px;
+  max-width: 60%;
+  height: 16px;
+}
+
+.skelEntryGrid {
+  display: grid;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 880px;
+}
+
+@media (min-width: 768px) {
+  .skelEntryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.skelEntryCard {
+  height: 150px;
+  border-radius: 16px;
+}
+
+.skelHowGrid {
+  display: grid;
+  gap: var(--space-5);
+  width: 100%;
+  max-width: 880px;
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .skelHowGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skelHowCol {
+  height: 120px;
+  border-radius: 16px;
+}
+
+/* ───────────── PDF → plan multi-step wizard ───────────── */
+
+.wizardBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-bottom: var(--space-3);
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wizardBack:hover {
+  color: hsl(var(--foreground));
+}
+
+.wizardBack:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.scoreCard {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: 18px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.scoreSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.scoreField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+.scoreField input {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 var(--space-3);
+  border: 1.5px solid hsl(var(--input));
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 650;
+  background: hsl(var(--muted) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+.scoreField input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.12);
+}
+
+.scoreFieldBig input {
+  height: 3.5rem;
+  font-size: 1.75rem;
+  font-weight: 750;
+  text-align: center;
+}
+
+.weakNote {
+  max-width: 460px;
+  margin-top: var(--space-3);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+  text-align: center;
+}
+
+.dateGrid {
+  width: 100%;
+  max-width: 460px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.datePreset {
+  height: 3rem;
+  padding: 0 var(--space-3);
+  border-radius: 14px;
+  border: 1.5px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.datePreset:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  background: hsl(var(--muted) / 0.35);
+}
+
+.datePreset:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.datePresetActive,
+.datePresetActive:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.dayGrid {
+  width: 100%;
+  max-width: 560px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-2);
+}
+
+.dayCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 5rem;
+  border-radius: 14px;
+  border: 1.5px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  transition: border-color 150ms ease, background 150ms ease, color 150ms ease;
+}
+
+.dayCard:hover {
+  border-color: hsl(var(--primary) / 0.45);
+  background: hsl(var(--muted) / 0.35);
+}
+
+.dayCard:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.dayCardOn {
+  border-color: hsl(var(--primary) / 0.6);
+  background: hsl(var(--primary) / 0.08);
+  color: hsl(var(--foreground));
+}
+
+.dayCardOn:hover {
+  border-color: hsl(var(--primary) / 0.75);
+  background: hsl(var(--primary) / 0.12);
+}
+
+.dayCardExt {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.16);
+}
+
+.dayCardExt:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.2);
+}
+
+.dayCheck {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.dayName {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.dayMode {
+  font-size: 0.625rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Day picker with per-day Standard/Extended dropdown ── */
+.dayPicker {
+  width: 100%;
+  max-width: 640px;
+  /* let the dropdown float past the grid instead of being clipped */
+  overflow: visible;
+}
+
+.dayCol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.dayCardOpen {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.12);
+}
+
+.dayMenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  width: 248px;
+  max-width: 78vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 18px 40px -12px hsl(222 47% 11% / 0.28);
+}
+
+.dayMenu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: hsl(var(--card));
+  border-left: 1px solid hsl(var(--border));
+  border-top: 1px solid hsl(var(--border));
+}
+
+.dayMenuItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.dayMenuItem:hover {
+  background: hsl(var(--muted) / 0.5);
+}
+
+.dayMenuItemActive,
+.dayMenuItemActive:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+}
+
+.dayMenuTitle {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.dayMenuSub {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.dayMenuRemove {
+  margin-top: 2px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  color: hsl(var(--destructive));
+}
+
+.dayMenuRemove:hover {
+  background: hsl(var(--destructive) / 0.08);
+}
+
+.testGrid {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.testPill {
+  height: 2.75rem;
+  padding: 0 var(--space-4);
+  border-radius: 999px;
+  border: 1.5px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.testPill:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  background: hsl(var(--muted) / 0.35);
+}
+
+.testPill:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.testPillActive,
+.testPillActive:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.12);
+  color: hsl(var(--primary));
+}
+
+@media (max-width: 560px) {
+  .dayGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .scoreSplit,
+  .dateGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageShell {
+    padding: 0 0 var(--space-6);
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .illustration {
+    max-width: 100%;
+    gap: 8px;
+  }
+
+  .illoCard {
+    padding: 10px;
+  }
+
+  .entryCard {
+    padding: 18px;
+    min-height: 0;
+  }
+
+  .pillBtn {
+    min-height: 2.75rem;
+    padding: 0 18px;
+    width: 100%;
+    justify-content: center;
+    align-self: stretch;
+  }
+
+  .ratingGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .ratingBtn {
+    min-height: 44px;
+    aspect-ratio: auto;
+    height: 44px;
+  }
+
+  .optionCard {
+    min-height: 52px;
+    padding: var(--space-3);
+  }
+
+  .wizardBack {
+    min-height: 2.75rem;
+    padding: 0 4px;
+  }
+
+  .dayGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+  }
+
+  .dayCard {
+    height: 4.5rem;
+    min-height: 4.5rem;
+  }
+
+  .dayMenu {
+    left: 0;
+    right: 0;
+    transform: none;
+    width: auto;
+    max-width: none;
+  }
+
+  .dayMenu::before {
+    left: 24px;
+    transform: rotate(45deg);
+  }
+
+  .uploadZone {
+    padding: var(--space-6) var(--space-4);
+    min-height: 140px;
+  }
+
+  .uploadActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+
+  .testPill {
+    min-height: 2.75rem;
+    flex: 1 1 auto;
+  }
+
+  .datePreset {
+    min-height: 3rem;
+  }
+
+  .scoreCard {
+    padding: var(--space-4);
+  }
+}

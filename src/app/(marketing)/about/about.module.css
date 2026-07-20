@@ -1,0 +1,37 @@
+.prose {
+  max-width: 640px;
+}
+
+.prose p {
+  font-size: 1.0625rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.75;
+  margin-bottom: var(--space-6);
+}
+
+.press {
+  font-size: 0.9375rem;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+.teamSolo {
+  display: flex;
+  justify-content: center;
+}
+
+.teamSolo > * {
+  max-width: 320px;
+  width: 100%;
+}
+
+.teamAvatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid hsl(var(--background));
+  box-shadow:
+    0 0 0 2px hsl(var(--primary) / 0.35),
+    0 8px 20px -8px hsl(var(--foreground) / 0.25);
+}

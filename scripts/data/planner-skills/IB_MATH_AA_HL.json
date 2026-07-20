@@ -1,0 +1,178 @@
+{
+  "examType": "IB_MATH_AA_HL",
+  "topics": [
+    "Number & algebra",
+    "Functions",
+    "Geometry & trigonometry",
+    "Statistics & probability",
+    "Calculus",
+    "HL further calculus & algebra",
+    "HL further functions & geometry",
+    "Exam technique & IA exploration"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_number_algebra",
+      "title": "Number & algebra",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_functions",
+      "title": "Functions",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_geometry_trigonometry",
+      "title": "Geometry & trigonometry",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_statistics_probability",
+      "title": "Statistics & probability",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_calculus",
+      "title": "Calculus",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_hl_further_calculus_algebra",
+      "title": "HL further calculus & algebra",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_hl_further_functions_geometry",
+      "title": "HL further functions & geometry",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_exam_technique_ia_exploration",
+      "title": "Exam technique & IA exploration",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_MATH_AA_HL:U1_number_algebra",
+      "unit_code": "U1_number_algebra",
+      "title": "Number & algebra",
+      "topics": [
+        "sequences",
+        "exponentials/logs",
+        "binomial",
+        "proof intro"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_MATH_AA_HL:U2_functions",
+      "unit_code": "U2_functions",
+      "title": "Functions",
+      "topics": [
+        "graphs",
+        "transformations",
+        "inverse",
+        "composites"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MATH_AA_HL:U1_number_algebra"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_HL:U3_geometry_trigonometry",
+      "unit_code": "U3_geometry_trigonometry",
+      "title": "Geometry & trigonometry",
+      "topics": [
+        "triangles",
+        "circular functions",
+        "identities",
+        "3D"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MATH_AA_HL:U2_functions"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_HL:U4_statistics_probability",
+      "unit_code": "U4_statistics_probability",
+      "title": "Statistics & probability",
+      "topics": [
+        "descriptive",
+        "bivariate",
+        "probability",
+        "distributions"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MATH_AA_HL:U3_geometry_trigonometry"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_HL:U5_calculus",
+      "unit_code": "U5_calculus",
+      "title": "Calculus",
+      "topics": [
+        "limits intuition",
+        "differentiation",
+        "integration",
+        "applications"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MATH_AA_HL:U4_statistics_probability"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_HL:U6_hl_further_calculus_algebra",
+      "unit_code": "U6_hl_further_calculus_algebra",
+      "title": "HL further calculus & algebra",
+      "topics": [
+        "complex numbers",
+        "induction",
+        "differential equations",
+        "Maclaurin"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MATH_AA_HL:U5_calculus"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_HL:U7_hl_further_functions_geometry",
+      "unit_code": "U7_hl_further_functions_geometry",
+      "title": "HL further functions & geometry",
+      "topics": [
+        "vectors",
+        "matrices intro where applicable",
+        "advanced trig"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MATH_AA_HL:U6_hl_further_calculus_algebra"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AA_HL:U8_exam_technique_ia_exploration",
+      "unit_code": "U8_exam_technique_ia_exploration",
+      "title": "Exam technique & IA exploration",
+      "topics": [
+        "Paper 1 no-GDC fluency",
+        "Paper 2 GDC",
+        "exploration structure"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_MATH_AA_HL:U7_hl_further_functions_geometry"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

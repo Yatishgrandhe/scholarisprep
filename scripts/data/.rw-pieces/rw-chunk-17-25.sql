@@ -1,0 +1,12 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('62ea424b-5cc7-4486-9479-390c21e1cb18', 'Which choice completes the text with the most logical transition?', 'Engineers designing the bridge expected that thicker support cables would always make the structure safer under heavy wind loads. Wind-tunnel tests revealed a counterintuitive limit: beyond a certain thickness, the added mass made the cables vibrate more violently in gusts. ______ piling on extra material, far from guaranteeing stability, can actively undermine it.', NULL, '[{"id":"A","text":"Thus,","is_correct":true,"explanation":"Correct: the final sentence states the general lesson that follows from the test result."},{"id":"B","text":"Granted,","is_correct":false,"explanation":"Wrong: ''Granted'' concedes a point to an opposing view, but the sentence draws a conclusion supporting the test data."},{"id":"C","text":"Likewise,","is_correct":false,"explanation":"Wrong: no parallel case is added; the sentence generalizes from the single finding."},{"id":"D","text":"Instead,","is_correct":false,"explanation":"Wrong: ''Instead'' substitutes one option for another, but the sentence summarizes a result rather than offering an alternative."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The second sentence shows that {{yellow:the added mass made the cables vibrate more violently in gusts}}, and the final sentence states the principle that follows.
+Step 2 — Match the transition
+Because the closing sentence is the logical consequence of the test finding, ''Thus'' fits.
+Distractor analysis:
+- A is correct.
+- B: ''Granted'' would concede to a counterargument that is not present.
+- C: ''Likewise'' needs a second parallel example, which the passage lacks.
+- D: ''Instead'' implies replacing one idea with another, but the sentence draws a conclusion.', 'Does the final sentence offer an alternative action or state the takeaway of the test?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'hard', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

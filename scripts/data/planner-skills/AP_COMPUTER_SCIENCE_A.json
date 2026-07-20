@@ -1,0 +1,65 @@
+{
+  "exam_type": "AP_COMPUTER_SCIENCE_A",
+  "skills": [
+    {
+      "id": "ap_computer_science_a_U1_primitive_types",
+      "unit_code": "U1_primitive_types",
+      "label": "Java primitives and expressions",
+      "description": "Practice and review: Primitive Types. Topics include int, double, boolean; Arithmetic and casting; Compound assignment."
+    },
+    {
+      "id": "ap_computer_science_a_U2_using_objects",
+      "unit_code": "U2_using_objects",
+      "label": "Objects, Strings, and class APIs",
+      "description": "Practice and review: Using Objects. Topics include Object references; String methods; Math class and wrappers."
+    },
+    {
+      "id": "ap_computer_science_a_U3_boolean_conditionals",
+      "unit_code": "U3_boolean_conditionals",
+      "label": "Booleans and conditionals",
+      "description": "Practice and review: Boolean Expressions and if Statements. Topics include Relational and logical operators; if/else nesting; De Morgan equivalents."
+    },
+    {
+      "id": "ap_computer_science_a_U4_iteration",
+      "unit_code": "U4_iteration",
+      "label": "Iteration and loop algorithms",
+      "description": "Practice and review: Iteration. Topics include while and for loops; Nested iteration; Loop algorithms on Strings."
+    },
+    {
+      "id": "ap_computer_science_a_U5_writing_classes",
+      "unit_code": "U5_writing_classes",
+      "label": "Class design and encapsulation",
+      "description": "Practice and review: Writing Classes. Topics include Constructors and fields; Methods and overloading; Encapsulation and this."
+    },
+    {
+      "id": "ap_computer_science_a_U6_arrays",
+      "unit_code": "U6_arrays",
+      "label": "1D arrays",
+      "description": "Practice and review: Array. Topics include 1D array traversal; Standard algorithms; Enhanced for loops."
+    },
+    {
+      "id": "ap_computer_science_a_U7_arraylist",
+      "unit_code": "U7_arraylist",
+      "label": "ArrayList algorithms",
+      "description": "Practice and review: ArrayList. Topics include ArrayList API; Traversal and modification; Searching/sorting patterns."
+    },
+    {
+      "id": "ap_computer_science_a_U8_2d_arrays",
+      "unit_code": "U8_2d_arrays",
+      "label": "2D array algorithms",
+      "description": "Practice and review: 2D Array. Topics include Row-major traversal; 2D algorithms; Rectangular array patterns."
+    },
+    {
+      "id": "ap_computer_science_a_U9_inheritance",
+      "unit_code": "U9_inheritance",
+      "label": "Inheritance and polymorphism",
+      "description": "Practice and review: Inheritance. Topics include extends and super; Overriding; Polymorphism."
+    },
+    {
+      "id": "ap_computer_science_a_U10_recursion",
+      "unit_code": "U10_recursion",
+      "label": "Recursion",
+      "description": "Practice and review: Recursion. Topics include Base and recursive cases; Recursive thinking; Simple recursive algorithms."
+    }
+  ]
+}

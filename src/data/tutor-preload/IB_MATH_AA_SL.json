@@ -1,0 +1,51 @@
+{
+  "exam_type": "IB_MATH_AA_SL",
+  "display_name": "IB Mathematics: Analysis and Approaches SL",
+  "units": [
+    "Number & algebra",
+    "Functions",
+    "Geometry & trigonometry",
+    "Statistics & probability",
+    "Calculus",
+    "Exam technique & IA exploration",
+    "Integration & review 7"
+  ],
+  "command_terms": [
+    "write down",
+    "find",
+    "hence",
+    "show that",
+    "prove",
+    "sketch",
+    "determine",
+    "interpret",
+    "justify"
+  ],
+  "misconceptions": [
+    "GDC on Paper 1 AA",
+    "rounding too early",
+    "not showing working for method marks"
+  ],
+  "paper_rules": [
+    "Paper 1 (no GDC): follow IB command terms; show working where marks require it",
+    "Paper 2 (GDC): follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "AA: Paper 1 no GDC; Paper 2/3 GDC \u2192 map to Desmos graphing when allowed.",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_number_algebra skill focus: sequences",
+    "Keep unit_code=U2_functions skill focus: graphs",
+    "Keep unit_code=U3_geometry_trigonometry skill focus: triangles",
+    "Keep unit_code=U4_statistics_probability skill focus: descriptive",
+    "Keep unit_code=U5_calculus skill focus: limits intuition",
+    "Keep unit_code=U6_exam_technique_ia_exploration skill focus: Paper 1 no-GDC fluency",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}

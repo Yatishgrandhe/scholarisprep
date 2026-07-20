@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('c8679d1b-2ecb-4e5a-bd5f-f25547f69580', 'Which choice completes the text with the most logical transition?', 'In her novel, the author rarely describes her characters'' physical appearances in detail. Instead, she reveals who they are through the rhythms of their speech and the choices they make. ______ readers come to know each character long before learning what he or she looks like.', NULL, '[{"id":"A","text":"Consequently,","is_correct":true,"explanation":"Correctly marks the reader''s experience as the result of the author''s technique."},{"id":"B","text":"Nonetheless,","is_correct":false,"explanation":"Signals contrast, but the sentence follows directly from the described technique."},{"id":"C","text":"For example,","is_correct":false,"explanation":"Introduces an illustration, yet the sentence describes an effect, not an example."},{"id":"D","text":"In contrast,","is_correct":false,"explanation":"Sets up an opposition that the sentence does not provide."}]'::jsonb, 'A', 'Step 1 — Find the relationship
+The text explains that the author reveals characters {{yellow:through the rhythms of their speech and the choices they make}}, and the final sentence describes what this produces for readers.
+Step 2 — Match the transition
+Because readers knowing the characters early is the outcome of this method, a result transition fits.
+Distractor analysis:
+- B: "Nonetheless" signals contrast, but the sentence agrees with and follows the method.
+- C: "For example" introduces an illustration, yet the sentence states a consequence.
+- D: "In contrast" wrongly creates an opposition between the ideas.', 'Decide whether the final sentence is the effect of the author''s method or a contrast to it.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

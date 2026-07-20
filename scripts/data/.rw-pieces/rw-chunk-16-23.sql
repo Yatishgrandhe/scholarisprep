@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('4c69191e-7f86-4fa9-8aa0-4430f71281d2', 'Which choice completes the text with the most logical transition?', 'Desert plants face a constant trade-off: opening their pores to absorb carbon dioxide also lets precious water escape. Some cacti solve this by opening their pores only at night, when the cooler air slows evaporation. ______ they can gather the carbon they need while losing far less moisture than daytime plants do.', NULL, '[{"id":"A","text":"In this way,","is_correct":true,"explanation":"Correct: the final sentence explains the result achieved by the night-opening method just described."},{"id":"B","text":"Nevertheless,","is_correct":false,"explanation":"Wrong: the outcome supports the strategy rather than running counter to it."},{"id":"C","text":"By contrast,","is_correct":false,"explanation":"Wrong: nothing is being contrasted; the sentence describes how the method pays off."},{"id":"D","text":"Admittedly,","is_correct":false,"explanation":"Wrong: ''Admittedly'' concedes a drawback, but the sentence states a benefit."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The cacti {{yellow:open their pores only at night, when the cooler air slows evaporation}}.
+Step 2 — Match the transition
+The final sentence explains the favorable outcome of that method, so a manner/result transition fits.
+Distractor analysis:
+- B: ''Nevertheless'' implies the outcome defies the strategy, but it confirms it.
+- C: ''By contrast'' would set up an opposition that the text lacks.
+- D: ''Admittedly'' concedes a weakness, yet the sentence describes a benefit.', 'The last sentence tells how the night strategy succeeds.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

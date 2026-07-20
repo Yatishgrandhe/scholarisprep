@@ -1,0 +1,125 @@
+{
+  "exam_type": "AP_SPANISH_LIT",
+  "display_name": "AP Spanish Literature and Culture",
+  "family": "AP",
+  "units": [
+    {
+      "unit_code": "U1_las_sociedades_en_contacto",
+      "unit_name": "Las sociedades en contacto",
+      "topics": [
+        "conquista",
+        "identidad",
+        "asimilación",
+        "marginalización"
+      ]
+    },
+    {
+      "unit_code": "U2_la_construcci_n_del_g_nero",
+      "unit_name": "La construcción del género",
+      "topics": [
+        "machismo",
+        "tradición/ruptura",
+        "sexualidad"
+      ]
+    },
+    {
+      "unit_code": "U3_el_tiempo_y_el_espacio",
+      "unit_name": "El tiempo y el espacio",
+      "topics": [
+        "linearidad",
+        "ambigüedad temporal",
+        "espacios simbólicos"
+      ]
+    },
+    {
+      "unit_code": "U4_las_relaciones_interpersonales",
+      "unit_name": "Las relaciones interpersonales",
+      "topics": [
+        "amistad",
+        "amor",
+        "poder",
+        "comunicación"
+      ]
+    },
+    {
+      "unit_code": "U5_la_dualidad_del_ser",
+      "unit_name": "La dualidad del ser",
+      "topics": [
+        "máscara",
+        "espiritualidad",
+        "construcción del ser"
+      ]
+    },
+    {
+      "unit_code": "U6_la_creaci_n_literaria",
+      "unit_name": "La creación literaria",
+      "topics": [
+        "metaficción",
+        "intertextualidad",
+        "proceso creativo"
+      ]
+    }
+  ],
+  "command_terms": [
+    "analizar",
+    "comparar",
+    "interpretar",
+    "relacionar temas"
+  ],
+  "misconceptions": [
+    "Resumir la trama sin análisis literario",
+    "Ignorar el contexto histórico-cultural del texto",
+    "No vincular obras con los temas del curso"
+  ],
+  "paper_rules": [
+    "MCQ + free-response literary analysis in Spanish",
+    "Cite textual evidence; address themes and literary devices"
+  ],
+  "calculator": {
+    "policy": "none",
+    "notes": "No calculator",
+    "section_rules": [
+      {
+        "section": "all",
+        "calculator_allowed": false
+      }
+    ],
+    "per_question_default": false,
+    "desmos_recommended": false
+  },
+  "explanation_standards": {
+    "stem_format": [
+      "**Goal.**",
+      "**Step 1..N.**",
+      "**Answer:**"
+    ],
+    "option_rationales": "Required non-empty explanations for every MCQ option",
+    "hint": "Always present",
+    "desmos_note": "No Desmos block; calculator not used.",
+    "frq": "Rubric JSON with criteria + max_points; student-facing feedback language"
+  },
+  "remix_cues": {
+    "persona": "AP CED-aligned item writer",
+    "preserve": [
+      "unit_code",
+      "difficulty band",
+      "skill focus",
+      "calculator_allowed",
+      "question format"
+    ],
+    "vary": [
+      "surface context/names",
+      "numbers where quantitative",
+      "passage excerpt framing",
+      "distractor set"
+    ],
+    "constraints": [
+      "Original content only — no copyrighted exam stems",
+      "Keep explanation Goal/Steps/Answer structure",
+      "FRQ remix must keep rubric dimensions",
+      "Match AP task model for the unit"
+    ],
+    "frq_aware": true
+  },
+  "reference_sheet": null
+}

@@ -1,0 +1,155 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A function f is defined by the equation $f(x) = 3x^2 - 5$. If $f(a) = 22$, what is the value of $a$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-3","is_correct":false,"explanation":"Choice A (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"-1","is_correct":false,"explanation":"Choice B (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"1","is_correct":false,"explanation":"Choice C (1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"3","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** A function f is defined by the equation $f(x) = 3x^2 - 5$. If $f(a) = 22$, what is the value of $a$?
+
+**Step 2 — Solve.** Substitute 22 for $f(a)$ in the equation to get $22 = 3a^2 - 5$.  Add 5 to both sides to get $27 = 3a^2$. Divide both sides by 3 to get $9 = a^2$.  Take the square root of both sides to get $a = 3$ or $a = -3$.  Since the question asks for the value of $a$, the answer is 3.
+
+**Step 3 — Select D.** 3
+
+**Distractor analysis:**
+- **A** (-3): Choice A (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (-1): Choice B (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (1): Choice C (1…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":682,"opensat_domain":"Advanced Math","opensat_raw_id":"24d6843a","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f00a58ef-45af-4d23-b38e-d44309ebddcd';
+
+UPDATE public.questions SET
+  question_text = 'If $x = 3y + 2$ and $y = 2$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"4","is_correct":false,"explanation":"Choice A (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"6","is_correct":false,"explanation":"Choice B (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"8","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"10","is_correct":false,"explanation":"Choice D (10…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If $x = 3y + 2$ and $y = 2$, what is the value of $x$?
+
+**Step 2 — Solve.** Substituting 2 for $y$ in the equation $x = 3y + 2$, we get $x = 3(2) + 2$. Simplifying, we have $x = 6 + 2$, or $x = 8$.
+
+**Step 3 — Select C.** 8
+
+**Distractor analysis:**
+- **A** (4): Choice A (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (6): Choice B (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (10): Choice D (10…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":844,"opensat_domain":"Algebra","opensat_raw_id":"random_id_c2","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f01662a5-edd5-4131-af1b-ba3162eab208';
+
+UPDATE public.questions SET
+  question_text = 'What is the positive solution to $x^2 - 12x + 35 = 0$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$4$","is_correct":false,"explanation":"Not a root of the quadratic."},{"id":"B","text":"$12$","is_correct":false,"explanation":"Sum of roots, not a root."},{"id":"C","text":"$7$","is_correct":true,"explanation":"**Step 1:** Factor $(x-5)(x-7)=0$. **Step 2:** Positive root is $7$."},{"id":"D","text":"$13$","is_correct":false,"explanation":"Not a solution."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1:** Factor: $(x-5)(x-7)=0$.
+**Step 2:** Roots $x=5$ and $x=7$.
+**Step 3:** Positive solution: $7$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f02628d5-e09c-4c68-993c-ee7ae14197f5';
+
+UPDATE public.questions SET
+  question_text = 'If $3x + 2y = 10$ and $x - 2y = 6$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"6","is_correct":false,"explanation":"Choice C (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"8","is_correct":false,"explanation":"Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $3x + 2y = 10$ and $x - 2y = 6$, what is the value of $x$?
+
+**Step 2 — Solve.** Adding the two equations together eliminates the $y$ term.  The result is $4x = 16$.  Dividing both sides by 4, we get $x = 4$.
+
+**Step 3 — Select B.** 4
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (6): Choice C (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (8): Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":563,"opensat_domain":"Algebra","opensat_raw_id":"a699428d","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f06039be-847e-4a70-973b-1170a738fc5e';
+
+UPDATE public.questions SET
+  question_text = 'The function $f(x) = 2x^2 + 3x - 5$ is defined for all real numbers x. What is the value of $f(-2)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-17","is_correct":false,"explanation":"Choice A (-17…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"-9","is_correct":false,"explanation":"Choice B (-9…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"3","is_correct":false,"explanation":"Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"11","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** The function $f(x) = 2x^2 + 3x - 5$ is defined for all real numbers x. What is the value of $f(-2)$?
+
+**Step 2 — Solve.** Substituting $x = -2$ into the function, we get $f(-2) = 2(-2)^2 + 3(-2) - 5 = 8 - 6 - 5 = 11$.
+
+**Step 3 — Select D.** 11
+
+**Distractor analysis:**
+- **A** (-17): Choice A (-17…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (-9): Choice B (-9…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (3): Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":326,"opensat_domain":"Advanced Math","opensat_raw_id":"85a7b24c","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f06c14c2-aeea-41fa-9cf9-0f9d00e8cf25';
+
+UPDATE public.questions SET
+  question_text = 'The function $f(x) = x^2 - 4x + 3$ is graphed in the xy-plane. What is the y-coordinate of the y-intercept of the graph of $f(x)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"1","is_correct":false,"explanation":"Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"-1","is_correct":false,"explanation":"Choice C (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"-3","is_correct":false,"explanation":"Choice D (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** The function $f(x) = x^2 - 4x + 3$ is graphed in the xy-plane. What is the y-coordinate of the y-intercept of the graph of $f(x)$?
+
+**Step 2 — Solve.** The y-intercept of the graph of a function is the point where the graph crosses the y-axis. This occurs when $x=0$. Substituting 0 for $x$ in the equation $f(x) = x^2 - 4x + 3$ gives us $f(0) = 0^2 - 4(0) + 3$, or $f(0) = 3$. Therefore, the y-coordinate of the y-intercept of the graph of $f(x)$ is 3.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (1): Choice A (1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (-1): Choice C (-1…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (-3): Choice D (-3…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":453,"opensat_domain":"Advanced Math","opensat_raw_id":"random_id_27","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f06fc996-6069-4944-9f30-8a253009e2d0';
+
+UPDATE public.questions SET
+  question_text = 'If $x+2y=7$ and $x-2y=1$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"3","is_correct":false,"explanation":"Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"5","is_correct":false,"explanation":"Choice C (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"6","is_correct":false,"explanation":"Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $x+2y=7$ and $x-2y=1$, what is the value of $x$?
+
+**Step 2 — Solve.** Adding the two equations together eliminates $y$, giving us $2x=8$. Dividing both sides by 2, we get $x=4$.
+
+**Step 3 — Select B.** 4
+
+**Distractor analysis:**
+- **A** (3): Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (5): Choice C (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (6): Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":451,"opensat_domain":"Algebra","opensat_raw_id":"random_id_a8","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f0a90f54-31a1-40ca-985f-0d6f45ddc270';
+
+UPDATE public.questions SET
+  question_text = 'A circle with center O has a radius of 5.  A chord AB of the circle has length 8.  What is the distance from O to the chord AB?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle with center O has a radius of 5.  A chord AB of the circle has length 8.  What is the distance from O to the chord AB?
+
+**Step 2 — Solve.** Draw a segment from O perpendicular to chord AB, intersecting AB at point M.  Since the perpendicular from the center of a circle to a chord bisects the chord, AM = MB = 4.  Triangle OAM is a right triangle with OA as the hypotenuse and AM as a leg.  By the Pythagorean Theorem, .  Therefore, OM = 3.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":402,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = 'f0b46463-8455-4e34-8a6b-7979cecdfa59';
+
+COMMIT;

@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('49dfda3d-739c-4510-85d4-0349ba07d9aa', 'Which choice completes the text with the most logical transition?', 'Ancient Roman roads were engineered with multiple layers of stone, gravel, and sand to ensure durability. Builders also gave the surfaces a slight curve so that rainwater would drain off to the sides. ______ some of these roads remain usable nearly two thousand years after they were built.', NULL, '[{"id":"A","text":"Otherwise,","is_correct":false,"explanation":"Wrong: ''Otherwise'' introduces an alternative outcome, not the actual result described."},{"id":"B","text":"However,","is_correct":false,"explanation":"Wrong: the roads lasting agrees with their careful construction rather than contrasting it."},{"id":"C","text":"As a result,","is_correct":true,"explanation":"Correct: the roads'' long survival is the outcome of the durable layered construction."},{"id":"D","text":"Similarly,","is_correct":false,"explanation":"Wrong: the final sentence is a consequence, not a parallel comparison."}]'::jsonb, 'C', 'Step 1 — Identify the careful design
+The text explains roads were built with {{yellow:multiple layers of stone, gravel, and sand to ensure durability}}.
+Step 2 — Choose the result
+Because durable building explains the roads still working, the consequence transition ''As a result'' fits.
+Distractor analysis:
+- A: ''Otherwise'' marks a hypothetical alternative, not the real outcome.
+- B: ''However'' marks contrast, but durability and longevity agree.
+- D: ''Similarly'' marks comparison, but a result is described.', 'Does the roads'' long life follow from the way they were built?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

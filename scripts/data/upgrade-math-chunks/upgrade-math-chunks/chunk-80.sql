@@ -1,0 +1,117 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'What is the ladder''s length?',
+  stimulus_text = 'A ladder leans against a wall. The foot is 42 ft from the wall and the top is 49 ft high.',
+  options = '[{"id":"A","text":"$63$","is_correct":false,"explanation":"Too short for the given legs."},{"id":"B","text":"$91$","is_correct":false,"explanation":"Length is not the sum of legs."},{"id":"C","text":"$64$","is_correct":false,"explanation":"Close — check $\\sqrt{${a}^2+${b}^2}$."},{"id":"D","text":"$65$","is_correct":true,"explanation":"**Step 1:** Pythagorean theorem. **Step 2:** $c=\\sqrt{42^2+49^2}=65$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Right triangle: legs 42 and 49.
+**Step 2:** $c=\sqrt{42^2+49^2}=65$ ft.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6d8c362e-6b7d-4d86-adc2-34a3bfded08f';
+
+UPDATE public.questions SET
+  question_text = 'A linear function $f$ models temperature change. Given $f(30)=26$ and $f(35)=46$, what is $f(-32)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$-218$","is_correct":false,"explanation":"Adds slope once too many."},{"id":"B","text":"$4$","is_correct":false,"explanation":"That is the rate of change, not $f(-32$)."},{"id":"C","text":"$-225$","is_correct":false,"explanation":"Arithmetic error in point-slope form."},{"id":"D","text":"$-222$","is_correct":true,"explanation":"**Step 1:** Slope $m=4$. **Step 2:** $f(-32)=4(-32-30)+(26)=-222$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** $m=\frac{46-26}{35-30}=4$.
+**Step 2:** Point-slope: $f(-32)=4(-32-30)+(26)$.
+**Step 3:** $f(-32)=-222$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6d923da3-0126-49c9-b0ff-771b1f3a355b';
+
+UPDATE public.questions SET
+  question_text = 'A linear function $f$ models temperature change. Given $f(9)=5$ and $f(14)=25$, what is $f(-11)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$-71$","is_correct":false,"explanation":"Adds slope once too many."},{"id":"B","text":"$4$","is_correct":false,"explanation":"That is the rate of change, not $f(-11$)."},{"id":"C","text":"$-78$","is_correct":false,"explanation":"Arithmetic error in point-slope form."},{"id":"D","text":"$-75$","is_correct":true,"explanation":"**Step 1:** Slope $m=4$. **Step 2:** $f(-11)=4(-11-9)+(5)=-75$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** $m=\frac{25-5}{14-9}=4$.
+**Step 2:** Point-slope: $f(-11)=4(-11-9)+(5)$.
+**Step 3:** $f(-11)=-75$.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '6d931c43-5da9-4f84-8933-2293aa04ea64';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5.  What is the circumference of the circle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5\\pi","is_correct":false,"explanation":"Choice A (5\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"25\\pi","is_correct":false,"explanation":"Choice C (25\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"50\\pi","is_correct":false,"explanation":"Choice D (50\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5.  What is the circumference of the circle?
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula $C = 2\pi r$, where $r$ is the radius. In this case, $r = 5$, so the circumference is $C = 2\pi (5) = 10\pi$.
+
+**Step 3 — Select B.** 10\pi
+
+**Distractor analysis:**
+- **A** (5\pi): Choice A (5\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (25\pi): Choice C (25\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (50\pi): Choice D (50\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":863,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_b6","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6de2538f-1065-453b-a8a5-6a442f2687aa';
+
+UPDATE public.questions SET
+  question_text = 'Which expression is equivalent to $(2x+28)^2 - (2x-28)^2$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$224x$","is_correct":true,"explanation":"**Step 1:** Difference of squares in disguise: $(u+v)(u-v)$ with $u=2x+28$, $v=2x-28$ → $224x$."},{"id":"B","text":"$4x^2$","is_correct":false,"explanation":"Squares each binomial separately — wrong approach."},{"id":"C","text":"$112x$","is_correct":false,"explanation":"Uses $4b$ instead of $4ab$."},{"id":"D","text":"$4x^2+784$","is_correct":false,"explanation":"Adds squares; not equivalent."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Let $u=2x+28$, $v=2x-28$.
+**Step 2:** $u^2-v^2=(u+v)(u-v)=(4x)(56)=224x$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6e1576dd-9647-463c-b117-be4781fad28e';
+
+UPDATE public.questions SET
+  question_text = 'A linear function $f$ models temperature change. Given $f(20)=16$ and $f(25)=36$, what is $f(-22)$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$-148$","is_correct":false,"explanation":"Adds slope once too many."},{"id":"B","text":"$4$","is_correct":false,"explanation":"That is the rate of change, not $f(-22$)."},{"id":"C","text":"$-155$","is_correct":false,"explanation":"Arithmetic error in point-slope form."},{"id":"D","text":"$-152$","is_correct":true,"explanation":"**Step 1:** Slope $m=4$. **Step 2:** $f(-22)=4(-22-20)+(16)=-152$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** $m=\frac{36-16}{25-20}=4$.
+**Step 2:** Point-slope: $f(-22)=4(-22-20)+(16)$.
+**Step 3:** $f(-22)=-152$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6e25d053-224a-4fc1-8a92-7056c34fcbe3';
+
+UPDATE public.questions SET
+  question_text = 'Which conclusion is best supported?',
+  stimulus_text = 'Poll: 67% favor a policy, margin of error ±4 percentage points (95% confidence), $n=1200$.',
+  options = '[{"id":"A","text":"Exactly 67% of all citizens favor the policy","is_correct":false,"explanation":"Sample statistics are not exact population values."},{"id":"B","text":"Plausible support is between 63% and 71%","is_correct":true,"explanation":"**Step 1:** Interval 63% to 71%. **Step 2:** This range is supported."},{"id":"C","text":"The sample proves every citizen was asked","is_correct":false,"explanation":"Only 1200 people were surveyed."},{"id":"D","text":"Margin of error makes the poll useless","is_correct":false,"explanation":"MOE quantifies uncertainty; it does not invalidate the poll."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Compute interval: 63% to 71%.
+**Step 2:** At 95% confidence, true support likely falls in this range.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6e2b95a0-4e7d-472e-8ea4-364d5fa788b5';
+
+UPDATE public.questions SET
+  question_text = 'In a right triangle, the length of the hypotenuse is 10 and the length of one leg is 6. What is the length of the other leg?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"4","is_correct":false,"explanation":"Choice A (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"8","is_correct":false,"explanation":"Choice B (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"$\\sqrt{64}$","is_correct":false,"explanation":"Choice C ($\\sqrt{64}$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"$\\sqrt{136}$","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** In a right triangle, the length of the hypotenuse is 10 and the length of one leg is 6. What is the length of the other leg?
+
+**Step 2 — Solve.** We can use the Pythagorean theorem to solve for the missing leg. The Pythagorean theorem states that in a right triangle, the square of the hypotenuse (the longest side) is equal to the sum of the squares of the other two sides.  Let $x$ be the length of the missing leg.  We have the equation: $10^2 = 6^2 + x^2$.  Simplifying, we get $100 = 36 + x^2$.  Subtracting 36 from both sides, we get $64 = x^2$.  Taking the square root of both sides, we get $x = \sqrt{64}$ or $x = -\sqrt{64}$.  Since a length cannot be negative, the length of the other leg is $x = \sqrt{64}$.
+
+**Step 3 — Select D.** $\sqrt{136}$
+
+**Distractor analysis:**
+- **A** (4): Choice A (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (8): Choice B (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** ($\sqrt{64}$): Choice C ($\sqrt{64}$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RIG","domain_id":"geometry","opensat_index":973,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_d9","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6e7a4190-6f45-4096-9589-4e13de8d4354';
+
+COMMIT;

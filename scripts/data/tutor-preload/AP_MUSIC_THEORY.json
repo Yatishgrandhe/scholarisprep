@@ -1,0 +1,143 @@
+{
+  "exam_type": "AP_MUSIC_THEORY",
+  "display_name": "AP Music Theory",
+  "command_terms": [
+    "identify",
+    "notate",
+    "realize",
+    "harmonize",
+    "analyze",
+    "sing",
+    "dictate",
+    "label"
+  ],
+  "misconceptions": [
+    "Confusing interval quality with scale-degree names",
+    "Ignoring inversion when labeling roman numerals",
+    "Parallel fifths/octaves when voice leading",
+    "Mixing up tonicization with full modulation",
+    "Sight-singing pitch without stable tonic reference"
+  ],
+  "paper_rules": [
+    "MCQ includes aural and non-aural parts; FRQ includes written tasks plus sight singing",
+    "Show roman numerals, figured bass, and voice-leading clearly",
+    "Aural items: listen for meter, intervals, chord quality, and progressions",
+    "Sight singing: establish tonic, keep steady pulse, prioritize pitch then rhythm"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "mcq_aural",
+        "label": "Multiple Choice \u2014 Aural",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "mcq_nonaural",
+        "label": "Multiple Choice \u2014 Non-Aural",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "frq",
+        "label": "Free Response Written",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "sight_singing",
+        "label": "Sight Singing",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "No calculator; aural stimuli and performance tasks require listening/singing, not computation."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1",
+      "unit_name": "Pitch, Scales, and Key Signatures",
+      "quota": 60,
+      "topics": [
+        "staff notation and clefs",
+        "major scales and keys",
+        "intervals",
+        "expressive markings basics"
+      ]
+    },
+    {
+      "unit_code": "U2",
+      "unit_name": "Rhythm, Meter, and Melody Basics",
+      "quota": 60,
+      "topics": [
+        "meter signatures",
+        "rhythmic patterns and syncopation",
+        "melodic contour",
+        "minor scales and keys"
+      ]
+    },
+    {
+      "unit_code": "U3",
+      "unit_name": "Triads, Seventh Chords, and Texture",
+      "quota": 60,
+      "topics": [
+        "triad qualities and inversions",
+        "seventh chords",
+        "timbre and texture types",
+        "roman numeral intro"
+      ]
+    },
+    {
+      "unit_code": "U4",
+      "unit_name": "Harmony and Voice Leading I",
+      "quota": 70,
+      "topics": [
+        "functional harmony basics",
+        "cadences and phrases",
+        "SATB voice-leading rules",
+        "harmonic rhythm"
+      ]
+    },
+    {
+      "unit_code": "U5",
+      "unit_name": "Harmony and Voice Leading II",
+      "quota": 70,
+      "topics": [
+        "predominant function",
+        "progressions and sequences",
+        "six-four uses",
+        "phrase models"
+      ]
+    },
+    {
+      "unit_code": "U6",
+      "unit_name": "Embellishments and Melodic Devices",
+      "quota": 60,
+      "topics": [
+        "nonchord tones",
+        "motivic development",
+        "melodic embellishment",
+        "figured bass reading"
+      ]
+    },
+    {
+      "unit_code": "U7",
+      "unit_name": "Secondary Function and Modulation",
+      "quota": 60,
+      "topics": [
+        "secondary dominants",
+        "secondary leading-tone chords",
+        "tonicization vs modulation",
+        "pivot strategies"
+      ]
+    },
+    {
+      "unit_code": "U8",
+      "unit_name": "Modes, Form, and Performance Skills",
+      "quota": 60,
+      "topics": [
+        "church modes and modal mixture",
+        "binary/ternary and other forms",
+        "aural skills integration",
+        "sight-singing readiness"
+      ]
+    }
+  ]
+}

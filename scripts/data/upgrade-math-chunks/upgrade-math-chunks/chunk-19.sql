@@ -1,0 +1,148 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'If the function *f* is defined by *f*(x) = 2x^2 + 3x - 1, what is the value of *f*(2)?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"15","is_correct":false,"explanation":"Choice A (15…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"17","is_correct":false,"explanation":"Choice B (17…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"21","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"23","is_correct":false,"explanation":"Choice D (23…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If the function *f* is defined by *f*(x) = 2x^2 + 3x - 1, what is the value of *f*(2)?
+
+**Step 2 — Solve.** To find *f*(2), we substitute 2 for *x* in the function: *f*(2) = 2(2)^2 + 3(2) - 1 = 8 + 6 - 1 = 13.
+
+**Step 3 — Select C.** 21
+
+**Distractor analysis:**
+- **A** (15): Choice A (15…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (17): Choice B (17…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (23): Choice D (23…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":488,"opensat_domain":"Advanced Math","opensat_raw_id":"53c35c79","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '18cd0aaf-8164-47fc-9294-6517339e6546';
+
+UPDATE public.questions SET
+  question_text = 'The equation $(x+2)^2 + (y-3)^2 = 25$ represents a circle in the xy-plane.  What is the radius of the circle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"5","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"10","is_correct":false,"explanation":"Choice C (10…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"25","is_correct":false,"explanation":"Choice D (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** The equation $(x+2)^2 + (y-3)^2 = 25$ represents a circle in the xy-plane.  What is the radius of the circle?
+
+**Step 2 — Solve.** The standard form of the equation of a circle is $(x-h)^2 + (y-k)^2 = r^2$, where $(h,k)$ is the center of the circle, and $r$ is the radius.  In this case, the equation is already in standard form, and we can see that $r^2 = 25$.  Therefore, the radius of the circle is $\sqrt{25} = 5$.
+
+**Step 3 — Select B.** 5
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (10): Choice C (10…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (25): Choice D (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LEQ","domain_id":"algebra","opensat_index":833,"opensat_domain":"Algebra","opensat_raw_id":"random_id_c9","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '1903e8c2-ec42-4fbe-8543-d9c03cc7cffb';
+
+UPDATE public.questions SET
+  question_text = 'What is the remaining area, in square inches?',
+  stimulus_text = 'A rectangular poster is 52 by 51 inches. A square corner of side 2 inches is removed.',
+  options = '[{"id":"A","text":"$2652$","is_correct":false,"explanation":"Forgot to subtract the removed corner."},{"id":"B","text":"$103$","is_correct":false,"explanation":"Perimeter-like sum, not area."},{"id":"C","text":"$2648$","is_correct":true,"explanation":"**Step 1:** Full area $2652$. **Step 2:** Subtract $2^2$ → $2648$."},{"id":"D","text":"$2650$","is_correct":false,"explanation":"Adds instead of subtracts corner."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1:** Rectangle: $52×51=2652$.
+**Step 2:** Remove corner: $2^2=4$.
+**Step 3:** $2652-4=2648$ sq in.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '192ea674-fc94-4d90-8d11-649a14488d10';
+
+UPDATE public.questions SET
+  question_text = 'In a right triangle, the length of one leg is 5 units and the length of the hypotenuse is 13 units.  What is the area of the triangle?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"30","is_correct":false,"explanation":"Choice A (30…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"60","is_correct":false,"explanation":"Choice B (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"15","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"36","is_correct":false,"explanation":"Choice D (36…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** In a right triangle, the length of one leg is 5 units and the length of the hypotenuse is 13 units.  What is the area of the triangle?
+
+**Step 2 — Solve.** The area of a right triangle is given by (1/2)bh, where b is the length of the base and h is the length of the height.  In a right triangle, the legs can be considered the base and height.  Using the Pythagorean Theorem, we can find the length of the other leg: a^2 + b^2 = c^2, where a and b are the legs and c is the hypotenuse.  Plugging in the values, we get 5^2 + b^2 = 13^2.  This simplifies to 25 + b^2 = 169.  Subtracting 25 from both sides, we get b^2 = 144.  Taking the square root of both sides, we get b = 12.  Now, the area of the triangle is (1/2)(5)(12) = 30.
+
+**Step 3 — Select C.** 15
+
+**Distractor analysis:**
+- **A** (30): Choice A (30…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (60): Choice B (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (36): Choice D (36…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"RIG","domain_id":"geometry","opensat_index":90,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c3","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '19503e3b-d821-4457-b85e-81716ebeb663';
+
+UPDATE public.questions SET
+  question_text = 'Given $x+y=24$ and $2x-y=21$, what is $x$?',
+  stimulus_text = 'At a fundraiser, 24 tickets were sold in two price tiers. VIP tickets cost twice as much as standard tickets, and revenue from 15 VIP and 9 standard tickets follows the system below.',
+  options = '[{"id":"A","text":"$15$","is_correct":true,"explanation":"**Step 1:** Add equations: $3x=45$. **Step 2:** $x=15$."},{"id":"B","text":"$14$","is_correct":false,"explanation":"One less than the solution."},{"id":"C","text":"$9$","is_correct":false,"explanation":"That is $y$, not $x$."},{"id":"D","text":"$16$","is_correct":false,"explanation":"One more than the solution."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Add: $(x+y)+(2x-y)=24+21$ → $3x=45$.
+**Step 2:** $x=15$.
+**Step 3:** Back-substitute: $y=9$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '19844a77-30be-4e0c-9f38-f7652f637c4b';
+
+UPDATE public.questions SET
+  question_text = 'The function *f* is defined by *f*(x) = 2x^3 - 5x + 3.  What is the value of *f*(-2)?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-13","is_correct":false,"explanation":"Choice A (-13…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"-5","is_correct":false,"explanation":"Choice B (-5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"13","is_correct":false,"explanation":"Choice C (13…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"19","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** The function *f* is defined by *f*(x) = 2x^3 - 5x + 3.  What is the value of *f*(-2)?
+
+**Step 2 — Solve.** Substitute -2 for x in the function: f(-2) = 2(-2)^3 - 5(-2) + 3.  Simplify: f(-2) = 2(-8) + 10 + 3 = -16 + 13 = 19.
+
+**Step 3 — Select D.** 19
+
+**Distractor analysis:**
+- **A** (-13): Choice A (-13…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (-5): Choice B (-5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (13): Choice C (13…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":604,"opensat_domain":"Advanced Math","opensat_raw_id":"13e622f4","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '199fbc92-dc48-459f-9545-c67bc6a3905d';
+
+UPDATE public.questions SET
+  question_text = 'A rectangle has a length of 12 centimeters and a width of 5 centimeters. What is the area of the rectangle, in square centimeters?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"17","is_correct":false,"explanation":"Choice A (17…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"34","is_correct":false,"explanation":"Choice B (34…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"60","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"144","is_correct":false,"explanation":"Choice D (144…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A rectangle has a length of 12 centimeters and a width of 5 centimeters. What is the area of the rectangle, in square centimeters?
+
+**Step 2 — Solve.** The area of a rectangle is found by multiplying its length by its width.  Therefore, the area of this rectangle is 12 * 5 = 60 square centimeters.
+
+**Step 3 — Select C.** 60
+
+**Distractor analysis:**
+- **A** (17): Choice A (17…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (34): Choice B (34…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (144): Choice D (144…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"ARE","domain_id":"geometry","opensat_index":239,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_2","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '19f68152-fd99-4ef4-9965-4657a1e0c0ad';
+
+UPDATE public.questions SET
+  question_text = 'A survey of 100 people found that 60 people liked apples, 40 people liked oranges, and 20 people liked both apples and oranges. How many people liked only oranges?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"10","is_correct":false,"explanation":"Choice A (10…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"20","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"30","is_correct":false,"explanation":"Choice C (30…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"40","is_correct":false,"explanation":"Choice D (40…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A survey of 100 people found that 60 people liked apples, 40 people liked oranges, and 20 people liked both apples and oranges. How many people liked only oranges?
+
+**Step 2 — Solve.** We can use a Venn diagram to solve this problem.  Let the number of people who like only apples be represented by x, and the number of people who like only oranges be represented by y.  We know that x + 20 + y = 100 (the total number of people surveyed), and that x + 20 = 60 (the number of people who like apples).  Solving for x, we get x = 40.  Substituting 40 for x into the equation x + 20 + y = 100, we get 40 + 20 + y = 100, or y = 40. Therefore, 40 people like only oranges.
+
+**Step 3 — Select B.** 20
+
+**Distractor analysis:**
+- **A** (10): Choice A (10…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (30): Choice C (30…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (40): Choice D (40…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":615,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_c1","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.059Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '1a14136e-af02-4c2e-88df-729df4fa74df';
+
+COMMIT;

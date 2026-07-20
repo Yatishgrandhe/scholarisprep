@@ -1,0 +1,157 @@
+{
+  "exam_type": "AP_STATISTICS",
+  "display_name": "AP Statistics",
+  "command_terms": [
+    "compare",
+    "construct",
+    "describe",
+    "estimate",
+    "explain",
+    "interpret",
+    "justify",
+    "plan",
+    "test"
+  ],
+  "misconceptions": [
+    "Confusing correlation with causation",
+    "Omitting conditions for inference procedures",
+    "Misstating hypotheses (parameters vs statistics)",
+    "Interpreting p-value as probability the null is true",
+    "Mixing confidence level with capture of sample statistic",
+    "Using normal procedures when conditions fail"
+  ],
+  "paper_rules": [
+    "Name the procedure; check conditions; compute; conclude in context",
+    "Define parameters clearly (p, μ, β₁)",
+    "FRQ answers need complete sentences for interpretations",
+    "Show calculator method briefly (e.g., 1-PropZTest) plus reasoning"
+  ],
+  "calculator_policy": {
+    "default": "graphing",
+    "sections": [
+      {
+        "key": "mcq",
+        "calculator": "graphing",
+        "note": "Graphing calculator expected on nearly all MCQ"
+      },
+      {
+        "key": "frq",
+        "calculator": "graphing",
+        "note": "Graphing calculator expected on nearly all FRQ"
+      }
+    ],
+    "notes": "Graphing calculator expected on nearly all items; show statistical method and conditions, not only calculator output."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1_one_variable_data",
+      "unit_name": "Exploring One-Variable Data",
+      "unit_order": 1,
+      "weight_hint": 0.18,
+      "quota": 90,
+      "topics": [
+        "Distributions and displays",
+        "Center, spread, shape",
+        "Percentiles and z-scores",
+        "Normal model applications"
+      ]
+    },
+    {
+      "unit_code": "U2_two_variable_data",
+      "unit_name": "Exploring Two-Variable Data",
+      "unit_order": 2,
+      "weight_hint": 0.06,
+      "quota": 30,
+      "topics": [
+        "Scatterplots and association",
+        "Linear regression and residuals",
+        "Correlation vs causation"
+      ]
+    },
+    {
+      "unit_code": "U3_collecting_data",
+      "unit_name": "Collecting Data",
+      "unit_order": 3,
+      "weight_hint": 0.13,
+      "quota": 65,
+      "topics": [
+        "Sampling methods and bias",
+        "Experiments vs observational studies",
+        "Blocking, blinding, confounding"
+      ]
+    },
+    {
+      "unit_code": "U4_probability",
+      "unit_name": "Probability, Random Variables, and Probability Distributions",
+      "unit_order": 4,
+      "weight_hint": 0.14,
+      "quota": 70,
+      "topics": [
+        "Probability rules",
+        "Discrete random variables",
+        "Binomial and geometric models",
+        "Simulation"
+      ]
+    },
+    {
+      "unit_code": "U5_sampling_distributions",
+      "unit_name": "Sampling Distributions",
+      "unit_order": 5,
+      "weight_hint": 0.1,
+      "quota": 50,
+      "topics": [
+        "Sampling variability",
+        "Mean and proportion sampling distributions",
+        "Central limit theorem intuition"
+      ]
+    },
+    {
+      "unit_code": "U6_inference_proportions",
+      "unit_name": "Inference for Categorical Data: Proportions",
+      "unit_order": 6,
+      "weight_hint": 0.14,
+      "quota": 70,
+      "topics": [
+        "Confidence intervals for proportions",
+        "Significance tests for proportions",
+        "Conditions and errors"
+      ]
+    },
+    {
+      "unit_code": "U7_inference_means",
+      "unit_name": "Inference for Quantitative Data: Means",
+      "unit_order": 7,
+      "weight_hint": 0.13,
+      "quota": 65,
+      "topics": [
+        "t-intervals and t-tests",
+        "Two-sample means",
+        "Paired data"
+      ]
+    },
+    {
+      "unit_code": "U8_chi_square",
+      "unit_name": "Inference for Categorical Data: Chi-Square",
+      "unit_order": 8,
+      "weight_hint": 0.06,
+      "quota": 30,
+      "topics": [
+        "Goodness of fit",
+        "Homogeneity and independence",
+        "Expected counts and conditions"
+      ]
+    },
+    {
+      "unit_code": "U9_inference_slopes",
+      "unit_name": "Inference for Quantitative Data: Slopes",
+      "unit_order": 9,
+      "weight_hint": 0.06,
+      "quota": 30,
+      "topics": [
+        "Inference for regression slope",
+        "Conditions and residual checks",
+        "Interval vs test for slope"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "examType": "IB_DANCE_SL",
+  "topics": [
+    "Composition & improvisation",
+    "Performance skills",
+    "Dance in context / investigation",
+    "Movement analysis",
+    "Choreographic processes",
+    "Presentation & production",
+    "Process journal & documentation"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_composition_improvisation",
+      "title": "Composition & improvisation",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_performance_skills",
+      "title": "Performance skills",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_dance_in_context_investigation",
+      "title": "Dance in context / investigation",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_movement_analysis",
+      "title": "Movement analysis",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_choreographic_processes",
+      "title": "Choreographic processes",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_presentation_production",
+      "title": "Presentation & production",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_process_journal_documentation",
+      "title": "Process journal & documentation",
+      "sort_order": 7
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_DANCE_SL:U1_composition_improvisation",
+      "unit_code": "U1_composition_improvisation",
+      "title": "Composition & improvisation",
+      "topics": [
+        "motif",
+        "structure",
+        "chance",
+        "collaboration"
+      ],
+      "recommended_hours": 7,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_DANCE_SL:U2_performance_skills",
+      "unit_code": "U2_performance_skills",
+      "title": "Performance skills",
+      "topics": [
+        "technique",
+        "projection",
+        "musicality",
+        "focus"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DANCE_SL:U1_composition_improvisation"
+      ]
+    },
+    {
+      "skill_id": "IB_DANCE_SL:U3_dance_in_context_investigation",
+      "unit_code": "U3_dance_in_context_investigation",
+      "title": "Dance in context / investigation",
+      "topics": [
+        "cultures",
+        "histories",
+        "functions"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DANCE_SL:U2_performance_skills"
+      ]
+    },
+    {
+      "skill_id": "IB_DANCE_SL:U4_movement_analysis",
+      "unit_code": "U4_movement_analysis",
+      "title": "Movement analysis",
+      "topics": [
+        "Laban-inspired vocabulary",
+        "dynamics",
+        "space"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DANCE_SL:U3_dance_in_context_investigation"
+      ]
+    },
+    {
+      "skill_id": "IB_DANCE_SL:U5_choreographic_processes",
+      "unit_code": "U5_choreographic_processes",
+      "title": "Choreographic processes",
+      "topics": [
+        "intent",
+        "development",
+        "refinement"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DANCE_SL:U4_movement_analysis"
+      ]
+    },
+    {
+      "skill_id": "IB_DANCE_SL:U6_presentation_production",
+      "unit_code": "U6_presentation_production",
+      "title": "Presentation & production",
+      "topics": [
+        "staging",
+        "costume",
+        "lighting awareness"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_DANCE_SL:U5_choreographic_processes"
+      ]
+    },
+    {
+      "skill_id": "IB_DANCE_SL:U7_process_journal_documentation",
+      "unit_code": "U7_process_journal_documentation",
+      "title": "Process journal & documentation",
+      "topics": [
+        "evidence",
+        "reflection",
+        "evaluation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_DANCE_SL:U6_presentation_production"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

@@ -1,0 +1,269 @@
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 767px) {
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statCard {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.statValue {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+.statLabel {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.tableWrap {
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: hsl(var(--card));
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.wizard {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.stepIndicator {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: var(--space-6);
+}
+
+.stepDot {
+  flex: 1;
+  height: 4px;
+  border-radius: 999px;
+  background: hsl(var(--muted));
+}
+
+.stepDotActive {
+  background: hsl(var(--primary));
+}
+
+.sourceCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+@media (max-width: 640px) {
+  .sourceCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sourceCard {
+  padding: var(--space-6);
+  border: 2px solid hsl(var(--border));
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-align: left;
+  background: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.sourceCard:hover {
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+.sourceCardSelected {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 1px hsl(var(--primary));
+}
+
+.sourceCardTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.sourceCardDesc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+}
+
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.wizardNav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-6);
+  gap: var(--space-3);
+}
+
+.progressLog {
+  list-style: none;
+  margin: 0 0 var(--space-5);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.progressItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.progressItemDone {
+  color: hsl(var(--foreground));
+}
+
+.lessonPreviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: var(--space-5);
+}
+
+.lessonPreviewItem {
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.lessonPreviewHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: hsl(var(--muted) / 0.3);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: left;
+  color: hsl(var(--foreground));
+}
+
+.lessonPreviewBody {
+  padding: 0.75rem 1rem 1rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.editorLayout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-5);
+  min-height: 60vh;
+}
+
+@media (max-width: 1023px) {
+  .editorLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lessonListPanel {
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  background: hsl(var(--card));
+}
+
+.sortableLesson {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  margin-bottom: 0.35rem;
+  border-radius: var(--radius-md);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  cursor: grab;
+}
+
+.sortableLessonActive {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+}
+
+.sortableLessonSelected {
+  box-shadow: inset 0 0 0 2px hsl(var(--primary));
+}
+
+.dragHandle {
+  color: hsl(var(--muted-foreground));
+  cursor: grab;
+}
+
+.editorPanel {
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  background: hsl(var(--card));
+}
+
+.metaEditor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.questionListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+}
+
+.questionListText {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  flex: 1;
+  color: hsl(var(--foreground));
+}
+
+.questionListActions {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}

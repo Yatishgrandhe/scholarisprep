@@ -1,0 +1,422 @@
+/* Courses catalog — flat minimal (OnePrep-style). No glass, no glow. */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-width: 0;
+}
+
+/* ── Page header: muted icon + bold title ───────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.headerIcon {
+  color: hsl(var(--muted-foreground));
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: hsl(var(--foreground));
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  max-width: 56ch;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ── Stats row ──────────────────────────────────────────────────── */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+@media (max-width: 720px) {
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    gap: var(--space-4);
+  }
+
+  .title {
+    font-size: 1.375rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+  }
+
+  .statCard {
+    padding: var(--space-3) var(--space-4);
+    min-height: 64px;
+  }
+
+  .tabList {
+    max-width: none;
+  }
+
+  .tabTrigger {
+    min-height: 44px !important;
+    height: 44px !important;
+    font-size: 0.75rem !important;
+    padding: 0 8px !important;
+  }
+
+  .filterDock {
+    padding: var(--space-3);
+  }
+
+  .filterControl,
+  .applyBtn,
+  .pricePill {
+    min-height: 2.75rem;
+  }
+
+  .applyBtn {
+    width: 100%;
+  }
+
+  .grid {
+    gap: var(--space-4);
+  }
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.statIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  flex-shrink: 0;
+}
+
+.statLabel {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--muted-foreground));
+}
+
+.statValue {
+  margin: 2px 0 0;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+/* ── Tabs (flat segmented control) ──────────────────────────────── */
+.tabsShell {
+  display: flex;
+}
+
+.tabList {
+  display: inline-flex;
+  width: 100%;
+  max-width: 420px;
+  gap: 4px;
+  padding: 4px !important;
+  border-radius: 12px !important;
+  border: 1px solid hsl(var(--border)) !important;
+  background: hsl(var(--muted) / 0.5) !important;
+  box-shadow: none !important;
+}
+
+.tabTrigger {
+  flex: 1;
+  height: 38px !important;
+  border-radius: 9px !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 650 !important;
+  color: hsl(var(--muted-foreground)) !important;
+  box-shadow: none !important;
+}
+
+.tabTrigger[data-active] {
+  background: hsl(var(--card)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  box-shadow: none !important;
+}
+
+.tabContent {
+  margin-top: var(--space-5) !important;
+}
+
+/* ── Filters ────────────────────────────────────────────────────── */
+.filterDock {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+@media (min-width: 900px) {
+  .filterDock {
+    grid-template-columns: 180px 1fr 200px auto;
+    align-items: end;
+  }
+}
+
+.filterField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filterLabel {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--muted-foreground));
+}
+
+.filterControl {
+  min-height: 2.5rem;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: 10px !important;
+  background: hsl(var(--card)) !important;
+  box-shadow: none !important;
+}
+
+.pricePills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pricePill {
+  min-height: 2.25rem;
+  padding: 0 14px;
+  border-radius: 999px !important;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  box-shadow: none !important;
+}
+
+.pricePillActive {
+  background: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border-color: transparent !important;
+}
+
+.applyBtn {
+  min-height: 2.5rem;
+  border-radius: 10px !important;
+  font-weight: 650;
+  background: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  box-shadow: none !important;
+}
+
+.applyBtn:hover {
+  background: hsl(var(--accent)) !important;
+}
+
+/* ── Course grid ────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Empty states ───────────────────────────────────────────────── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  padding: var(--space-10) var(--space-5);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.emptyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.emptyTitle {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.emptyText {
+  margin: 0;
+  max-width: 40ch;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ── Skeletons (subtle pulse, matches grid) ─────────────────────── */
+@keyframes skeletonPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.skel {
+  display: block;
+  border-radius: 8px;
+  background: hsl(var(--muted));
+  animation: skeletonPulse 1.6s ease-in-out infinite;
+}
+
+.skelHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.skelIcon {
+  width: 22px;
+  height: 22px;
+  margin-top: 5px;
+  border-radius: 6px;
+}
+
+.skelHeaderText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skelTitle {
+  width: 180px;
+  height: 26px;
+}
+
+.skelSubtitle {
+  width: 320px;
+  max-width: 60vw;
+  height: 14px;
+}
+
+.skelStat {
+  height: 76px;
+  border-radius: 16px;
+}
+
+.skelTabs {
+  width: 100%;
+  max-width: 420px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+@media (max-width: 720px) {
+  .skeletonGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skeletonCard {
+  position: relative;
+  height: 372px;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  overflow: hidden;
+}
+
+.skeletonCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: hsl(var(--muted));
+  animation: skeletonPulse 1.6s ease-in-out infinite;
+}
+
+.skeletonCard::after {
+  content: "";
+  position: absolute;
+  top: 220px;
+  left: 20px;
+  right: 20px;
+  height: 14px;
+  border-radius: 8px;
+  background: hsl(var(--muted));
+  box-shadow:
+    0 30px 0 hsl(var(--muted)),
+    0 88px 0 hsl(var(--muted));
+  animation: skeletonPulse 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skel,
+  .skeletonCard::before,
+  .skeletonCard::after {
+    animation: none;
+  }
+}

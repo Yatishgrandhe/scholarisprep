@@ -1,0 +1,2802 @@
+[
+  {
+    "chunkId": "BOU-easy-001",
+    "skill": "BOU",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-easy-001.json",
+    "done": true
+  },
+  {
+    "chunkId": "BOU-easy-002",
+    "skill": "BOU",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-easy-003",
+    "skill": "BOU",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-easy-004",
+    "skill": "BOU",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-easy-005",
+    "skill": "BOU",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-easy-006",
+    "skill": "BOU",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-easy-007",
+    "skill": "BOU",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 6,
+    "inputPath": "scripts/rewrite/chunks/BOU-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-medium-001",
+    "skill": "BOU",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-medium-002",
+    "skill": "BOU",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-medium-003",
+    "skill": "BOU",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-medium-004",
+    "skill": "BOU",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-medium-005",
+    "skill": "BOU",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-medium-006",
+    "skill": "BOU",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 5,
+    "inputPath": "scripts/rewrite/chunks/BOU-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-hard-001",
+    "skill": "BOU",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-hard-002",
+    "skill": "BOU",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-hard-003",
+    "skill": "BOU",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-hard-004",
+    "skill": "BOU",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/BOU-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-hard-005",
+    "skill": "BOU",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 14,
+    "inputPath": "scripts/rewrite/chunks/BOU-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "BOU-hard-ch-001",
+    "skill": "BOU",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 12,
+    "inputPath": "scripts/rewrite/chunks/BOU-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/BOU-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-easy-001",
+    "skill": "CID",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-easy-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-easy-002",
+    "skill": "CID",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-easy-003",
+    "skill": "CID",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-easy-004",
+    "skill": "CID",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-easy-005",
+    "skill": "CID",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-easy-006",
+    "skill": "CID",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-easy-007",
+    "skill": "CID",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 6,
+    "inputPath": "scripts/rewrite/chunks/CID-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-medium-001",
+    "skill": "CID",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-medium-002",
+    "skill": "CID",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-medium-003",
+    "skill": "CID",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-medium-004",
+    "skill": "CID",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-medium-005",
+    "skill": "CID",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-medium-006",
+    "skill": "CID",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 5,
+    "inputPath": "scripts/rewrite/chunks/CID-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-001",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-002",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-003",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-004",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-005",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 14,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-ch-001",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-ch-002",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-ch-002.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-ch-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-ch-003",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-ch-003.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-ch-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-ch-004",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-ch-004.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-ch-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-ch-005",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-ch-005.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-ch-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-ch-006",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-ch-006.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-ch-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "CID-hard-ch-007",
+    "skill": "CID",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 2,
+    "inputPath": "scripts/rewrite/chunks/CID-hard-ch-007.input.json",
+    "batchPath": "scripts/rewrite/batches/CID-hard-ch-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-001",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-002",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-003",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-004",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-005",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-006",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-007",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-008",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-008.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-008.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-009",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-009.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-009.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-010",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-010.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-010.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-011",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-011.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-011.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-012",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-012.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-012.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-easy-013",
+    "skill": "COE",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 12,
+    "inputPath": "scripts/rewrite/chunks/COE-easy-013.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-easy-013.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-001",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-002",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-003",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-004",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-005",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-006",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-007",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-007.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-008",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-008.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-008.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-009",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-009.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-009.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-010",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-010.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-010.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-medium-011",
+    "skill": "COE",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 10,
+    "inputPath": "scripts/rewrite/chunks/COE-medium-011.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-medium-011.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-001",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-002",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-003",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-004",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-005",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-006",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-006.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-007",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-007.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-008",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-008.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-008.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-009",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-009.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-009.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-010",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 8,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-010.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-010.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-001",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-002",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-002.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-003",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-003.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-004",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-004.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-005",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-005.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-006",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-006.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-007",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-007.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-008",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-008.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-008.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-009",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-009.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-009.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-010",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-010.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-010.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-011",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-011.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-011.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-012",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-012.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-012.json",
+    "done": false
+  },
+  {
+    "chunkId": "COE-hard-ch-013",
+    "skill": "COE",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 3,
+    "inputPath": "scripts/rewrite/chunks/COE-hard-ch-013.input.json",
+    "batchPath": "scripts/rewrite/batches/COE-hard-ch-013.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-easy-001",
+    "skill": "CTC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-easy-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-easy-002",
+    "skill": "CTC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-easy-003",
+    "skill": "CTC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-easy-004",
+    "skill": "CTC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-easy-005",
+    "skill": "CTC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-easy-006",
+    "skill": "CTC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-easy-007",
+    "skill": "CTC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 6,
+    "inputPath": "scripts/rewrite/chunks/CTC-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-medium-001",
+    "skill": "CTC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-medium-002",
+    "skill": "CTC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-medium-003",
+    "skill": "CTC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-medium-004",
+    "skill": "CTC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-medium-005",
+    "skill": "CTC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-medium-006",
+    "skill": "CTC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 5,
+    "inputPath": "scripts/rewrite/chunks/CTC-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-001",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-002",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-003",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-004",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-005",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 14,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-ch-001",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-ch-002",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-ch-002.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-ch-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-ch-003",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-ch-003.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-ch-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-ch-004",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-ch-004.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-ch-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-ch-005",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-ch-005.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-ch-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-ch-006",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-ch-006.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-ch-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "CTC-hard-ch-007",
+    "skill": "CTC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 2,
+    "inputPath": "scripts/rewrite/chunks/CTC-hard-ch-007.input.json",
+    "batchPath": "scripts/rewrite/batches/CTC-hard-ch-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-easy-001",
+    "skill": "FSS",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-easy-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-easy-002",
+    "skill": "FSS",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-easy-003",
+    "skill": "FSS",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-easy-004",
+    "skill": "FSS",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-easy-005",
+    "skill": "FSS",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-easy-006",
+    "skill": "FSS",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-easy-007",
+    "skill": "FSS",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 6,
+    "inputPath": "scripts/rewrite/chunks/FSS-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-medium-001",
+    "skill": "FSS",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-medium-002",
+    "skill": "FSS",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-medium-003",
+    "skill": "FSS",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-medium-004",
+    "skill": "FSS",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-medium-005",
+    "skill": "FSS",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-medium-006",
+    "skill": "FSS",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 5,
+    "inputPath": "scripts/rewrite/chunks/FSS-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-hard-001",
+    "skill": "FSS",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-hard-002",
+    "skill": "FSS",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-hard-003",
+    "skill": "FSS",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-hard-004",
+    "skill": "FSS",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/FSS-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-hard-005",
+    "skill": "FSS",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 14,
+    "inputPath": "scripts/rewrite/chunks/FSS-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "FSS-hard-ch-001",
+    "skill": "FSS",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 12,
+    "inputPath": "scripts/rewrite/chunks/FSS-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/FSS-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-001",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-002",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-003",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-004",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-005",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-006",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-007",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-008",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-008.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-008.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-009",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-009.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-009.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-010",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-010.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-010.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-011",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-011.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-011.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-012",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-012.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-012.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-013",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-013.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-013.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-014",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-014.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-014.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-015",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-015.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-015.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-016",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-016.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-016.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-017",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-017.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-017.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-018",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-018.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-018.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-easy-019",
+    "skill": "INF",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 18,
+    "inputPath": "scripts/rewrite/chunks/INF-easy-019.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-easy-019.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-001",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-002",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-003",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-004",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-005",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-006",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-007",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-007.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-008",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-008.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-008.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-009",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-009.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-009.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-010",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-010.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-010.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-011",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-011.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-011.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-012",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-012.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-012.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-013",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-013.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-013.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-014",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-014.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-014.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-015",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-015.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-015.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-medium-016",
+    "skill": "INF",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 15,
+    "inputPath": "scripts/rewrite/chunks/INF-medium-016.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-medium-016.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-001",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-002",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-003",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-004",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-005",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-006",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-006.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-007",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-007.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-008",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-008.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-008.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-009",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-009.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-009.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-010",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-010.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-010.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-011",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-011.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-011.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-012",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-012.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-012.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-013",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-013.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-013.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-014",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-014.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-014.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-015",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 2,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-015.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-015.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-ch-001",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-ch-002",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-ch-002.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-ch-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-ch-003",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-ch-003.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-ch-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-ch-004",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-ch-004.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-ch-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-ch-005",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-ch-005.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-ch-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-ch-006",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-ch-006.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-ch-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "INF-hard-ch-007",
+    "skill": "INF",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 1,
+    "inputPath": "scripts/rewrite/chunks/INF-hard-ch-007.input.json",
+    "batchPath": "scripts/rewrite/batches/INF-hard-ch-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-easy-001",
+    "skill": "SYN",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-easy-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-easy-002",
+    "skill": "SYN",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-easy-003",
+    "skill": "SYN",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-easy-004",
+    "skill": "SYN",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-easy-005",
+    "skill": "SYN",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-easy-006",
+    "skill": "SYN",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-easy-007",
+    "skill": "SYN",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 6,
+    "inputPath": "scripts/rewrite/chunks/SYN-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-medium-001",
+    "skill": "SYN",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-medium-002",
+    "skill": "SYN",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-medium-003",
+    "skill": "SYN",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-medium-004",
+    "skill": "SYN",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-medium-005",
+    "skill": "SYN",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-medium-006",
+    "skill": "SYN",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 5,
+    "inputPath": "scripts/rewrite/chunks/SYN-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-hard-001",
+    "skill": "SYN",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-hard-002",
+    "skill": "SYN",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-hard-003",
+    "skill": "SYN",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-hard-004",
+    "skill": "SYN",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/SYN-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-hard-005",
+    "skill": "SYN",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 14,
+    "inputPath": "scripts/rewrite/chunks/SYN-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "SYN-hard-ch-001",
+    "skill": "SYN",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 12,
+    "inputPath": "scripts/rewrite/chunks/SYN-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/SYN-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-easy-001",
+    "skill": "TRA",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-easy-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-easy-002",
+    "skill": "TRA",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-easy-003",
+    "skill": "TRA",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-easy-004",
+    "skill": "TRA",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-easy-005",
+    "skill": "TRA",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-easy-006",
+    "skill": "TRA",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-easy-007",
+    "skill": "TRA",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 6,
+    "inputPath": "scripts/rewrite/chunks/TRA-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-medium-001",
+    "skill": "TRA",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-medium-002",
+    "skill": "TRA",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-medium-003",
+    "skill": "TRA",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-medium-004",
+    "skill": "TRA",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-medium-005",
+    "skill": "TRA",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-medium-006",
+    "skill": "TRA",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 5,
+    "inputPath": "scripts/rewrite/chunks/TRA-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-hard-001",
+    "skill": "TRA",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-hard-002",
+    "skill": "TRA",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-hard-003",
+    "skill": "TRA",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-hard-004",
+    "skill": "TRA",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TRA-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-hard-005",
+    "skill": "TRA",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 14,
+    "inputPath": "scripts/rewrite/chunks/TRA-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "TRA-hard-ch-001",
+    "skill": "TRA",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 12,
+    "inputPath": "scripts/rewrite/chunks/TRA-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/TRA-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-easy-001",
+    "skill": "TSP",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-easy-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-easy-002",
+    "skill": "TSP",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-easy-003",
+    "skill": "TSP",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-easy-004",
+    "skill": "TSP",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-easy-005",
+    "skill": "TSP",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-easy-006",
+    "skill": "TSP",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-easy-007",
+    "skill": "TSP",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 6,
+    "inputPath": "scripts/rewrite/chunks/TSP-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-medium-001",
+    "skill": "TSP",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-medium-002",
+    "skill": "TSP",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-medium-003",
+    "skill": "TSP",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-medium-004",
+    "skill": "TSP",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-medium-005",
+    "skill": "TSP",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-medium-006",
+    "skill": "TSP",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 5,
+    "inputPath": "scripts/rewrite/chunks/TSP-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-001",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-002",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-003",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-004",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-005",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 14,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-ch-001",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-ch-002",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-ch-002.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-ch-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-ch-003",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-ch-003.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-ch-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-ch-004",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-ch-004.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-ch-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-ch-005",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-ch-005.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-ch-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-ch-006",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-ch-006.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-ch-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "TSP-hard-ch-007",
+    "skill": "TSP",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 2,
+    "inputPath": "scripts/rewrite/chunks/TSP-hard-ch-007.input.json",
+    "batchPath": "scripts/rewrite/batches/TSP-hard-ch-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-easy-001",
+    "skill": "WIC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-easy-001.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-easy-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-easy-002",
+    "skill": "WIC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-easy-002.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-easy-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-easy-003",
+    "skill": "WIC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-easy-003.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-easy-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-easy-004",
+    "skill": "WIC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-easy-004.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-easy-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-easy-005",
+    "skill": "WIC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-easy-005.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-easy-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-easy-006",
+    "skill": "WIC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-easy-006.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-easy-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-easy-007",
+    "skill": "WIC",
+    "difficulty": "easy",
+    "challenge_only": false,
+    "count": 6,
+    "inputPath": "scripts/rewrite/chunks/WIC-easy-007.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-easy-007.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-medium-001",
+    "skill": "WIC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-medium-001.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-medium-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-medium-002",
+    "skill": "WIC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-medium-002.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-medium-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-medium-003",
+    "skill": "WIC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-medium-003.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-medium-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-medium-004",
+    "skill": "WIC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-medium-004.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-medium-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-medium-005",
+    "skill": "WIC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-medium-005.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-medium-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-medium-006",
+    "skill": "WIC",
+    "difficulty": "medium",
+    "challenge_only": false,
+    "count": 5,
+    "inputPath": "scripts/rewrite/chunks/WIC-medium-006.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-medium-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-001",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-001.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-002",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-002.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-003",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-003.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-004",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-004.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-005",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": false,
+    "count": 14,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-005.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-ch-001",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-ch-001.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-ch-001.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-ch-002",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-ch-002.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-ch-002.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-ch-003",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-ch-003.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-ch-003.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-ch-004",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-ch-004.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-ch-004.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-ch-005",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-ch-005.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-ch-005.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-ch-006",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 20,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-ch-006.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-ch-006.json",
+    "done": false
+  },
+  {
+    "chunkId": "WIC-hard-ch-007",
+    "skill": "WIC",
+    "difficulty": "hard",
+    "challenge_only": true,
+    "count": 2,
+    "inputPath": "scripts/rewrite/chunks/WIC-hard-ch-007.input.json",
+    "batchPath": "scripts/rewrite/batches/WIC-hard-ch-007.json",
+    "done": false
+  }
+]

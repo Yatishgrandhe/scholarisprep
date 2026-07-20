@@ -1,0 +1,147 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A circle with a radius of 5 centimeters is inscribed in a square. What is the area, in square centimeters, of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a radius of 5 centimeters is inscribed in a square. What is the area, in square centimeters, of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square. Since the radius of the circle is 5 centimeters, the diameter is 10 centimeters. Therefore, the side length of the square is 10 centimeters, and the area of the square is 10^2 = 100 square centimeters.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":926,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a5","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fe937b88-a74f-4dd9-8aba-bbea13ed41aa';
+
+UPDATE public.questions SET
+  question_text = 'If $x+5 = 12$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"7","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"17","is_correct":false,"explanation":"Choice C (17…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"60","is_correct":false,"explanation":"Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $x+5 = 12$, what is the value of $x$?
+
+**Step 2 — Solve.** To solve for \(x\), we subtract 5 from both sides of the equation: \(x + 5 - 5 = 12 - 5\), which simplifies to \(x = 7\).
+
+**Step 3 — Select B.** 7
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (17): Choice C (17…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (60): Choice D (60…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":45,"opensat_domain":"Algebra","opensat_raw_id":"f84da248","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fec0b565-bcd9-4bfb-9ac8-13c835ad41f7';
+
+UPDATE public.questions SET
+  question_text = 'If $x + 2y = 10$ and $x - 2y = 4$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"3","is_correct":false,"explanation":"Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"7","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"14","is_correct":false,"explanation":"Choice C (14…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"18","is_correct":false,"explanation":"Choice D (18…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $x + 2y = 10$ and $x - 2y = 4$, what is the value of $x$?
+
+**Step 2 — Solve.** Adding the two equations together eliminates $y$, giving us $2x = 14$. Dividing both sides by 2, we get $x=7$.
+
+**Step 3 — Select B.** 7
+
+**Distractor analysis:**
+- **A** (3): Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (14): Choice C (14…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (18): Choice D (18…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":446,"opensat_domain":"Algebra","opensat_raw_id":"e466132d","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'fef70eed-0936-49bd-8e40-0070ed80e595';
+
+UPDATE public.questions SET
+  question_text = 'For what value of $k$ does the equation $4(x-6)+2k = 120$ have solution $x=33$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$5$","is_correct":false,"explanation":"Substituting this $k$ does not yield $x=33$."},{"id":"B","text":"$6$","is_correct":true,"explanation":"Expand: $4x-24+2k=120$ → $4x=132$ → $x=33$ when $k=6$."},{"id":"C","text":"$7$","is_correct":false,"explanation":"Too large; check substitution."},{"id":"D","text":"$33$","is_correct":false,"explanation":"That is $x$, not $k$."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Substitute $x=33$: $4(33-k)+2k=120$.
+**Step 2:** Simplify: $132-4k+2k=120$ → $132+-2k=120$.
+**Step 3:** Solve for $k$: $-2k=-12$ → $k=6$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'ff08819a-07f3-4ce9-bbfc-0ad90b99448d';
+
+UPDATE public.questions SET
+  question_text = 'A survey of 200 people found that 120 people liked apples, 80 people liked oranges, and 50 people liked both apples and oranges. How many people liked only oranges?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"30","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"70","is_correct":false,"explanation":"Choice C (70…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"130","is_correct":false,"explanation":"Choice D (130…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** A survey of 200 people found that 120 people liked apples, 80 people liked oranges, and 50 people liked both apples and oranges. How many people liked only oranges?
+
+**Step 2 — Solve.** To find the number of people who liked only oranges, we subtract the number of people who liked both apples and oranges from the number who liked oranges: 80 - 50 = 30.
+
+**Step 3 — Select A.** 30
+
+**Distractor analysis:**
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (70): Choice C (70…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (130): Choice D (130…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"IEE","domain_id":"psda","opensat_index":101,"opensat_domain":"Problem-Solving and Data Analysis","opensat_raw_id":"random_id_a5","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'ff2f0053-b0c3-4a6c-abff-dddc9e62e768';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 centimeters. What is the circumference of the circle, in centimeters? (Express your answer in terms of $\pi$.)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$\\pi$","is_correct":false,"explanation":"Choice A ($\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"$5\\pi$","is_correct":false,"explanation":"Choice B ($5\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"$10\\pi$","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"$25\\pi$","is_correct":false,"explanation":"Choice D ($25\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 centimeters. What is the circumference of the circle, in centimeters? (Express your answer in terms of $\pi$.)
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula $C = 2\pi r$, where $r$ is the radius.  Substituting 5 for $r$ gives $C = 2\pi (5) = 10\pi$.
+
+**Step 3 — Select C.** $10\pi$
+
+**Distractor analysis:**
+- **A** ($\pi$): Choice A ($\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** ($5\pi$): Choice B ($5\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** ($25\pi$): Choice D ($25\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":400,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"f86d2a4f","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'ff612d77-8932-47f1-bc4f-e88d36d8d8ef';
+
+UPDATE public.questions SET
+  question_text = 'If $3x - 2y = 12$ and $x + 2y = 4$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"6","is_correct":false,"explanation":"Choice C (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"8","is_correct":false,"explanation":"Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** If $3x - 2y = 12$ and $x + 2y = 4$, what is the value of $x$?
+
+**Step 2 — Solve.** We can solve for x by adding the two equations together. Notice that the y terms will cancel out:  (3x - 2y) + (x + 2y) = 12 + 4.  Simplifying, we get 4x = 16. Dividing both sides by 4, we find that x = 4.
+
+**Step 3 — Select B.** 4
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (6): Choice C (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (8): Choice D (8…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":407,"opensat_domain":"Algebra","opensat_raw_id":"random_id_b8","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'ffa6c767-2655-4942-a564-58b24700bd8a';
+
+UPDATE public.questions SET
+  question_text = 'Which expression is equivalent to $(4x+21)^2 - (4x-21)^2$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$336x$","is_correct":true,"explanation":"**Step 1:** Difference of squares in disguise: $(u+v)(u-v)$ with $u=4x+21$, $v=4x-21$ → $336x$."},{"id":"B","text":"$8x^2$","is_correct":false,"explanation":"Squares each binomial separately — wrong approach."},{"id":"C","text":"$84x$","is_correct":false,"explanation":"Uses $4b$ instead of $4ab$."},{"id":"D","text":"$16x^2+441$","is_correct":false,"explanation":"Adds squares; not equivalent."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Let $u=4x+21$, $v=4x-21$.
+**Step 2:** $u^2-v^2=(u+v)(u-v)=(8x)(42)=336x$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.076Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = 'ffc1cb66-a005-4007-a70d-9f22755765e4';
+
+COMMIT;

@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('c9d9a031-9721-460b-98c3-4b82a6c32050', 'Which choice completes the text with the most logical transition?', 'Geologists studying ancient climate rely on layers of mud at the bottom of lakes, where each year deposits a distinct band of sediment. By counting these bands, much as one counts tree rings, they can reconstruct rainfall patterns stretching back thousands of years. ______, a single core of lakebed mud can serve as a detailed calendar of a region''s vanished weather.', NULL, '[{"id":"A","text":"In effect,","is_correct":true,"explanation":"Correct: it restates the method''s upshot, casting the mud core as a weather calendar."},{"id":"B","text":"On the other hand,","is_correct":false,"explanation":"Wrong: the sentence summarizes the same idea rather than presenting an opposing one."},{"id":"C","text":"By chance,","is_correct":false,"explanation":"Wrong: the calendar-like value comes from method, not coincidence."},{"id":"D","text":"Even so,","is_correct":false,"explanation":"Wrong: ''Even so'' signals concession, but the sentence affirms what precedes it."}]'::jsonb, 'A', 'Step 1 — Identify the method
+Scientists reconstruct climate {{yellow:By counting these bands, much as one counts tree rings}}.
+Step 2 — Choose the relationship
+The final sentence recasts that method''s result as a calendar, so a restatement transition fits.
+Distractor analysis:
+- B: ''On the other hand'' signals contrast, but the sentence agrees with the prior idea.
+- C: ''By chance'' implies coincidence, contradicting the deliberate counting method.
+- D: ''Even so'' concedes against the prior point rather than affirming it.', 'The last sentence restates the method''s payoff in plainer terms.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

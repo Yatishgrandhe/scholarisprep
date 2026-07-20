@@ -1,0 +1,132 @@
+{
+  "examType": "AP_PHYSICS_C_EM",
+  "topics": [
+    "Electrostatics",
+    "Conductors, Capacitors, Dielectrics",
+    "Electric Circuits",
+    "Magnetic Fields",
+    "Electromagnetism"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_electrostatics",
+      "title": "Electrostatics",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_coulomb",
+        "U1_S2_gauss",
+        "U1_S3_potential",
+        "U1_S4_fields_of_distributions"
+      ],
+      "topics": [
+        "Coulomb",
+        "Gauss",
+        "potential",
+        "fields of distributions"
+      ]
+    },
+    {
+      "unit_code": "U2_conductors_capacitors_dielectrics",
+      "title": "Conductors, Capacitors, Dielectrics",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_conductors",
+        "U2_S2_capacitance",
+        "U2_S3_dielectrics",
+        "U2_S4_energy_storage"
+      ],
+      "topics": [
+        "conductors",
+        "capacitance",
+        "dielectrics",
+        "energy storage"
+      ]
+    },
+    {
+      "unit_code": "U3_electric_circuits",
+      "title": "Electric Circuits",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_dc_circuits",
+        "U3_S2_rc",
+        "U3_S3_kirchhoff",
+        "U3_S4_power"
+      ],
+      "topics": [
+        "DC circuits",
+        "RC",
+        "Kirchhoff",
+        "power"
+      ]
+    },
+    {
+      "unit_code": "U4_magnetic_fields",
+      "title": "Magnetic Fields",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_b_from_currents",
+        "U4_S2_forces",
+        "U4_S3_amp_re",
+        "U4_S4_torques"
+      ],
+      "topics": [
+        "B from currents",
+        "forces",
+        "Ampère",
+        "torques"
+      ]
+    },
+    {
+      "unit_code": "U5_electromagnetism",
+      "title": "Electromagnetism",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_faraday",
+        "U5_S2_lenz",
+        "U5_S3_inductance",
+        "U5_S4_maxwell_displacement",
+        "U5_S5_ac_intro"
+      ],
+      "topics": [
+        "Faraday",
+        "Lenz",
+        "inductance",
+        "Maxwell displacement",
+        "AC intro"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_electrostatics": [
+      "U1_S1_coulomb",
+      "U1_S2_gauss",
+      "U1_S3_potential",
+      "U1_S4_fields_of_distributions"
+    ],
+    "U2_conductors_capacitors_dielectrics": [
+      "U2_S1_conductors",
+      "U2_S2_capacitance",
+      "U2_S3_dielectrics",
+      "U2_S4_energy_storage"
+    ],
+    "U3_electric_circuits": [
+      "U3_S1_dc_circuits",
+      "U3_S2_rc",
+      "U3_S3_kirchhoff",
+      "U3_S4_power"
+    ],
+    "U4_magnetic_fields": [
+      "U4_S1_b_from_currents",
+      "U4_S2_forces",
+      "U4_S3_amp_re",
+      "U4_S4_torques"
+    ],
+    "U5_electromagnetism": [
+      "U5_S1_faraday",
+      "U5_S2_lenz",
+      "U5_S3_inductance",
+      "U5_S4_maxwell_displacement",
+      "U5_S5_ac_intro"
+    ]
+  }
+}

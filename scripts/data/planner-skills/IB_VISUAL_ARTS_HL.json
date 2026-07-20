@@ -1,0 +1,175 @@
+{
+  "examType": "IB_VISUAL_ARTS_HL",
+  "topics": [
+    "Art-making forms \u2014 2D",
+    "Art-making forms \u2014 3D & lens",
+    "Visual arts in context",
+    "Visual arts methods",
+    "Communicating visual arts",
+    "Comparative study skills",
+    "Process portfolio skills",
+    "Exhibition & curation"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_art_making_forms_2d",
+      "title": "Art-making forms \u2014 2D",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_art_making_forms_3d_lens",
+      "title": "Art-making forms \u2014 3D & lens",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_visual_arts_in_context",
+      "title": "Visual arts in context",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_visual_arts_methods",
+      "title": "Visual arts methods",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_communicating_visual_arts",
+      "title": "Communicating visual arts",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_comparative_study_skills",
+      "title": "Comparative study skills",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_process_portfolio_skills",
+      "title": "Process portfolio skills",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_exhibition_curation",
+      "title": "Exhibition & curation",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_VISUAL_ARTS_HL:U1_art_making_forms_2d",
+      "unit_code": "U1_art_making_forms_2d",
+      "title": "Art-making forms \u2014 2D",
+      "topics": [
+        "drawing",
+        "painting",
+        "print",
+        "digital 2D"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_VISUAL_ARTS_HL:U2_art_making_forms_3d_lens",
+      "unit_code": "U2_art_making_forms_3d_lens",
+      "title": "Art-making forms \u2014 3D & lens",
+      "topics": [
+        "sculpture",
+        "installation",
+        "photography",
+        "film stills"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_VISUAL_ARTS_HL:U1_art_making_forms_2d"
+      ]
+    },
+    {
+      "skill_id": "IB_VISUAL_ARTS_HL:U3_visual_arts_in_context",
+      "unit_code": "U3_visual_arts_in_context",
+      "title": "Visual arts in context",
+      "topics": [
+        "cultures",
+        "histories",
+        "audiences",
+        "function"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_VISUAL_ARTS_HL:U2_art_making_forms_3d_lens"
+      ]
+    },
+    {
+      "skill_id": "IB_VISUAL_ARTS_HL:U4_visual_arts_methods",
+      "unit_code": "U4_visual_arts_methods",
+      "title": "Visual arts methods",
+      "topics": [
+        "techniques",
+        "processes",
+        "experimentation"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_VISUAL_ARTS_HL:U3_visual_arts_in_context"
+      ]
+    },
+    {
+      "skill_id": "IB_VISUAL_ARTS_HL:U5_communicating_visual_arts",
+      "unit_code": "U5_communicating_visual_arts",
+      "title": "Communicating visual arts",
+      "topics": [
+        "curation",
+        "presentation",
+        "artist statement"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_VISUAL_ARTS_HL:U4_visual_arts_methods"
+      ]
+    },
+    {
+      "skill_id": "IB_VISUAL_ARTS_HL:U6_comparative_study_skills",
+      "unit_code": "U6_comparative_study_skills",
+      "title": "Comparative study skills",
+      "topics": [
+        "formal analysis",
+        "function/purpose",
+        "cultural significance"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_VISUAL_ARTS_HL:U5_communicating_visual_arts"
+      ]
+    },
+    {
+      "skill_id": "IB_VISUAL_ARTS_HL:U7_process_portfolio_skills",
+      "unit_code": "U7_process_portfolio_skills",
+      "title": "Process portfolio skills",
+      "topics": [
+        "investigation",
+        "experimentation",
+        "critical reflection"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_VISUAL_ARTS_HL:U6_comparative_study_skills"
+      ]
+    },
+    {
+      "skill_id": "IB_VISUAL_ARTS_HL:U8_exhibition_curation",
+      "unit_code": "U8_exhibition_curation",
+      "title": "Exhibition & curation",
+      "topics": [
+        "coherence",
+        "resolved works",
+        "curatorial rationale"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_VISUAL_ARTS_HL:U7_process_portfolio_skills"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

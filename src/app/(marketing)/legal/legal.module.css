@@ -1,0 +1,22 @@
+.prose {
+  max-width: 720px;
+}
+
+.prose h2 {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}

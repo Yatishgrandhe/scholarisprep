@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('551e9368-034a-4f4f-adfd-3ea13df07f69', 'Which choice completes the text with the most logical transition?', 'City planners installed protected bike lanes hoping to reduce traffic accidents downtown. Crashes involving cyclists fell sharply in the first year. ______ collisions between cars rose on the parallel streets where drivers diverted to avoid the narrowed roads.', NULL, '[{"id":"A","text":"Meanwhile,","is_correct":true,"explanation":"Correct: it marks a parallel development occurring elsewhere at the same time."},{"id":"B","text":"Therefore,","is_correct":false,"explanation":"Incorrect: the rise in car crashes is not caused by the fall in cyclist crashes."},{"id":"C","text":"In summary,","is_correct":false,"explanation":"Incorrect: the sentence introduces a new effect, not a summary."},{"id":"D","text":"Likewise,","is_correct":false,"explanation":"Incorrect: a fall and a rise are opposite outcomes, not parallel ones."}]'::jsonb, 'A', 'Step 1 — Compare the two outcomes
+Cyclist {{yellow:Crashes involving cyclists fell sharply}}, while car collisions rose elsewhere at the same time.
+Step 2 — Choose the simultaneous shift
+''Meanwhile'' captures a concurrent, contrasting development on nearby streets.
+Distractor analysis:
+- B: ''therefore'' wrongly makes the car-crash rise a result of fewer cyclist crashes.
+- C: ''in summary'' would wrap up, but a new finding is introduced.
+- D: ''likewise'' implies the same direction, yet one figure fell and the other rose.', 'The two streets had opposite results at the same time.', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

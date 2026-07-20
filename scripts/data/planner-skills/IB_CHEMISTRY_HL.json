@@ -1,0 +1,180 @@
+{
+  "examType": "IB_CHEMISTRY_HL",
+  "topics": [
+    "Stoichiometric relationships",
+    "Atomic structure & periodicity",
+    "Bonding & structure",
+    "Energetics / thermochemistry",
+    "Chemical kinetics",
+    "Equilibrium",
+    "Acids & bases + redox",
+    "Organic chemistry & measurement"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_stoichiometric_relationships",
+      "title": "Stoichiometric relationships",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_atomic_structure_periodicity",
+      "title": "Atomic structure & periodicity",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_bonding_structure",
+      "title": "Bonding & structure",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_energetics_thermochemistry",
+      "title": "Energetics / thermochemistry",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_chemical_kinetics",
+      "title": "Chemical kinetics",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_equilibrium",
+      "title": "Equilibrium",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_acids_bases_redox",
+      "title": "Acids & bases + redox",
+      "sort_order": 7
+    },
+    {
+      "unit_code": "U8_organic_chemistry_measurement",
+      "title": "Organic chemistry & measurement",
+      "sort_order": 8
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_CHEMISTRY_HL:U1_stoichiometric_relationships",
+      "unit_code": "U1_stoichiometric_relationships",
+      "title": "Stoichiometric relationships",
+      "topics": [
+        "mole",
+        "equations",
+        "limiting reagent",
+        "yield"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_CHEMISTRY_HL:U2_atomic_structure_periodicity",
+      "unit_code": "U2_atomic_structure_periodicity",
+      "title": "Atomic structure & periodicity",
+      "topics": [
+        "electron config",
+        "periodic trends",
+        "bonding intro"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CHEMISTRY_HL:U1_stoichiometric_relationships"
+      ]
+    },
+    {
+      "skill_id": "IB_CHEMISTRY_HL:U3_bonding_structure",
+      "unit_code": "U3_bonding_structure",
+      "title": "Bonding & structure",
+      "topics": [
+        "ionic",
+        "covalent",
+        "metallic",
+        "intermolecular forces"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CHEMISTRY_HL:U2_atomic_structure_periodicity"
+      ]
+    },
+    {
+      "skill_id": "IB_CHEMISTRY_HL:U4_energetics_thermochemistry",
+      "unit_code": "U4_energetics_thermochemistry",
+      "title": "Energetics / thermochemistry",
+      "topics": [
+        "enthalpy",
+        "Hess",
+        "calorimetry",
+        "Born\u2013Haber HL"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CHEMISTRY_HL:U3_bonding_structure"
+      ]
+    },
+    {
+      "skill_id": "IB_CHEMISTRY_HL:U5_chemical_kinetics",
+      "unit_code": "U5_chemical_kinetics",
+      "title": "Chemical kinetics",
+      "topics": [
+        "rates",
+        "collision theory",
+        "mechanisms",
+        "activation energy"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CHEMISTRY_HL:U4_energetics_thermochemistry"
+      ]
+    },
+    {
+      "skill_id": "IB_CHEMISTRY_HL:U6_equilibrium",
+      "unit_code": "U6_equilibrium",
+      "title": "Equilibrium",
+      "topics": [
+        "dynamic equilibrium",
+        "Kc",
+        "Le Chatelier",
+        "phase equilibria"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CHEMISTRY_HL:U5_chemical_kinetics"
+      ]
+    },
+    {
+      "skill_id": "IB_CHEMISTRY_HL:U7_acids_bases_redox",
+      "unit_code": "U7_acids_bases_redox",
+      "title": "Acids & bases + redox",
+      "topics": [
+        "pH",
+        "buffers",
+        "titration",
+        "oxidation numbers",
+        "electrochemical cells"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_CHEMISTRY_HL:U6_equilibrium"
+      ]
+    },
+    {
+      "skill_id": "IB_CHEMISTRY_HL:U8_organic_chemistry_measurement",
+      "unit_code": "U8_organic_chemistry_measurement",
+      "title": "Organic chemistry & measurement",
+      "topics": [
+        "functional groups",
+        "mechanisms",
+        "spectroscopy",
+        "error analysis"
+      ],
+      "recommended_hours": 4,
+      "prerequisites": [
+        "IB_CHEMISTRY_HL:U7_acids_bases_redox"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

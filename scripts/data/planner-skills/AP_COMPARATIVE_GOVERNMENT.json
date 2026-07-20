@@ -1,0 +1,95 @@
+{
+  "exam_type": "AP_COMPARATIVE_GOVERNMENT",
+  "skills": [
+    {
+      "id": "SK_STATE_REGIME",
+      "unit_code": "U1",
+      "label": "STATE REGIME",
+      "description": "Political Systems Regimes and Governments: practice skill for state regime."
+    },
+    {
+      "id": "SK_DEMOCRATIZATION",
+      "unit_code": "U1",
+      "label": "DEMOCRATIZATION",
+      "description": "Political Systems Regimes and Governments: practice skill for democratization."
+    },
+    {
+      "id": "SK_LEGITIMACY",
+      "unit_code": "U1",
+      "label": "LEGITIMACY",
+      "description": "Political Systems Regimes and Governments: practice skill for legitimacy."
+    },
+    {
+      "id": "SK_EXEC_LEG_JUD",
+      "unit_code": "U2",
+      "label": "EXEC LEG JUD",
+      "description": "Political Institutions: practice skill for exec leg jud."
+    },
+    {
+      "id": "SK_PARL_VS_PRES",
+      "unit_code": "U2",
+      "label": "PARL VS PRES",
+      "description": "Political Institutions: practice skill for parl vs pres."
+    },
+    {
+      "id": "SK_BUREAUCRACY",
+      "unit_code": "U2",
+      "label": "BUREAUCRACY",
+      "description": "Political Institutions: practice skill for bureaucracy."
+    },
+    {
+      "id": "SK_POLITICAL_CULTURE",
+      "unit_code": "U3",
+      "label": "POLITICAL CULTURE",
+      "description": "Political Culture and Participation: practice skill for political culture."
+    },
+    {
+      "id": "SK_CIVIL_SOCIETY",
+      "unit_code": "U3",
+      "label": "CIVIL SOCIETY",
+      "description": "Political Culture and Participation: practice skill for civil society."
+    },
+    {
+      "id": "SK_CLEAVAGES",
+      "unit_code": "U3",
+      "label": "CLEAVAGES",
+      "description": "Political Culture and Participation: practice skill for cleavages."
+    },
+    {
+      "id": "SK_ELECTORAL_SYSTEMS",
+      "unit_code": "U4",
+      "label": "ELECTORAL SYSTEMS",
+      "description": "Party and Electoral Systems: practice skill for electoral systems."
+    },
+    {
+      "id": "SK_PARTY_SYSTEMS",
+      "unit_code": "U4",
+      "label": "PARTY SYSTEMS",
+      "description": "Party and Electoral Systems: practice skill for party systems."
+    },
+    {
+      "id": "SK_INTEREST_GROUPS",
+      "unit_code": "U4",
+      "label": "INTEREST GROUPS",
+      "description": "Party and Electoral Systems: practice skill for interest groups."
+    },
+    {
+      "id": "SK_DEVELOPMENT_MODELS",
+      "unit_code": "U5",
+      "label": "DEVELOPMENT MODELS",
+      "description": "Political and Economic Change: practice skill for development models."
+    },
+    {
+      "id": "SK_LIBERALIZATION",
+      "unit_code": "U5",
+      "label": "LIBERALIZATION",
+      "description": "Political and Economic Change: practice skill for liberalization."
+    },
+    {
+      "id": "SK_GLOBALIZATION_EFFECTS",
+      "unit_code": "U5",
+      "label": "GLOBALIZATION EFFECTS",
+      "description": "Political and Economic Change: practice skill for globalization effects."
+    }
+  ]
+}

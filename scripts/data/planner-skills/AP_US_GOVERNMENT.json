@@ -1,0 +1,125 @@
+{
+  "exam_type": "AP_US_GOVERNMENT",
+  "skills": [
+    {
+      "id": "U1_foundations_s1",
+      "unit_code": "U1_foundations",
+      "label": "Federalist vs Anti-Federalist claims",
+      "description": "Practice Federalist vs Anti-Federalist claims in Foundations of American Democracy with exam-style items and feedback."
+    },
+    {
+      "id": "U1_foundations_s2",
+      "unit_code": "U1_foundations",
+      "label": "Federalism conflicts",
+      "description": "Practice Federalism conflicts in Foundations of American Democracy with exam-style items and feedback."
+    },
+    {
+      "id": "U1_foundations_s3",
+      "unit_code": "U1_foundations",
+      "label": "Democratic models",
+      "description": "Practice Democratic models in Foundations of American Democracy with exam-style items and feedback."
+    },
+    {
+      "id": "U1_foundations_s4",
+      "unit_code": "U1_foundations",
+      "label": "Constitutional principles",
+      "description": "Practice Constitutional principles in Foundations of American Democracy with exam-style items and feedback."
+    },
+    {
+      "id": "U2_branches_s1",
+      "unit_code": "U2_branches",
+      "label": "Legislative process",
+      "description": "Practice Legislative process in Interactions Among Branches of Government with exam-style items and feedback."
+    },
+    {
+      "id": "U2_branches_s2",
+      "unit_code": "U2_branches",
+      "label": "Executive tools",
+      "description": "Practice Executive tools in Interactions Among Branches of Government with exam-style items and feedback."
+    },
+    {
+      "id": "U2_branches_s3",
+      "unit_code": "U2_branches",
+      "label": "Judicial review cases",
+      "description": "Practice Judicial review cases in Interactions Among Branches of Government with exam-style items and feedback."
+    },
+    {
+      "id": "U2_branches_s4",
+      "unit_code": "U2_branches",
+      "label": "Bureaucratic discretion",
+      "description": "Practice Bureaucratic discretion in Interactions Among Branches of Government with exam-style items and feedback."
+    },
+    {
+      "id": "U3_civil_liberties_s1",
+      "unit_code": "U3_civil_liberties",
+      "label": "Incorporation logic",
+      "description": "Practice Incorporation logic in Civil Liberties and Civil Rights with exam-style items and feedback."
+    },
+    {
+      "id": "U3_civil_liberties_s2",
+      "unit_code": "U3_civil_liberties",
+      "label": "Speech and religion tests",
+      "description": "Practice Speech and religion tests in Civil Liberties and Civil Rights with exam-style items and feedback."
+    },
+    {
+      "id": "U3_civil_liberties_s3",
+      "unit_code": "U3_civil_liberties",
+      "label": "Equal protection tiers",
+      "description": "Practice Equal protection tiers in Civil Liberties and Civil Rights with exam-style items and feedback."
+    },
+    {
+      "id": "U3_civil_liberties_s4",
+      "unit_code": "U3_civil_liberties",
+      "label": "Rights expansion timelines",
+      "description": "Practice Rights expansion timelines in Civil Liberties and Civil Rights with exam-style items and feedback."
+    },
+    {
+      "id": "U4_ideologies_s1",
+      "unit_code": "U4_ideologies",
+      "label": "Socialization agents",
+      "description": "Practice Socialization agents in American Political Ideologies and Beliefs with exam-style items and feedback."
+    },
+    {
+      "id": "U4_ideologies_s2",
+      "unit_code": "U4_ideologies",
+      "label": "Polling quality",
+      "description": "Practice Polling quality in American Political Ideologies and Beliefs with exam-style items and feedback."
+    },
+    {
+      "id": "U4_ideologies_s3",
+      "unit_code": "U4_ideologies",
+      "label": "Ideology and policy",
+      "description": "Practice Ideology and policy in American Political Ideologies and Beliefs with exam-style items and feedback."
+    },
+    {
+      "id": "U4_ideologies_s4",
+      "unit_code": "U4_ideologies",
+      "label": "Partisan sorting cues",
+      "description": "Practice Partisan sorting cues in American Political Ideologies and Beliefs with exam-style items and feedback."
+    },
+    {
+      "id": "U5_participation_s1",
+      "unit_code": "U5_participation",
+      "label": "Voter turnout models",
+      "description": "Practice Voter turnout models in Political Participation with exam-style items and feedback."
+    },
+    {
+      "id": "U5_participation_s2",
+      "unit_code": "U5_participation",
+      "label": "Party systems",
+      "description": "Practice Party systems in Political Participation with exam-style items and feedback."
+    },
+    {
+      "id": "U5_participation_s3",
+      "unit_code": "U5_participation",
+      "label": "Linkage institutions",
+      "description": "Practice Linkage institutions in Political Participation with exam-style items and feedback."
+    },
+    {
+      "id": "U5_participation_s4",
+      "unit_code": "U5_participation",
+      "label": "Campaign finance basics",
+      "description": "Practice Campaign finance basics in Political Participation with exam-style items and feedback."
+    }
+  ]
+}

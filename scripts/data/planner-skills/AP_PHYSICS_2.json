@@ -1,0 +1,171 @@
+{
+  "examType": "AP_PHYSICS_2",
+  "topics": [
+    "Fluids",
+    "Thermodynamics",
+    "Electric Force, Field, and Potential",
+    "Electric Circuits",
+    "Magnetism and Electromagnetic Induction",
+    "Geometric and Physical Optics",
+    "Quantum, Atomic, and Nuclear Physics"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_fluids",
+      "title": "Fluids",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_statics",
+        "U1_S2_dynamics",
+        "U1_S3_bernoulli_applications"
+      ],
+      "topics": [
+        "statics",
+        "dynamics",
+        "Bernoulli applications"
+      ]
+    },
+    {
+      "unit_code": "U2_thermodynamics",
+      "title": "Thermodynamics",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_temperature",
+        "U2_S2_pv_diagrams",
+        "U2_S3_laws_of_thermo",
+        "U2_S4_kinetic_theory"
+      ],
+      "topics": [
+        "temperature",
+        "PV diagrams",
+        "laws of thermo",
+        "kinetic theory"
+      ]
+    },
+    {
+      "unit_code": "U3_electric_force_field_and_potential",
+      "title": "Electric Force, Field, and Potential",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_coulomb",
+        "U3_S2_fields",
+        "U3_S3_potential",
+        "U3_S4_equipotentials"
+      ],
+      "topics": [
+        "Coulomb",
+        "fields",
+        "potential",
+        "equipotentials"
+      ]
+    },
+    {
+      "unit_code": "U4_electric_circuits",
+      "title": "Electric Circuits",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_ohm",
+        "U4_S2_kirchhoff",
+        "U4_S3_rc",
+        "U4_S4_power"
+      ],
+      "topics": [
+        "Ohm",
+        "Kirchhoff",
+        "RC",
+        "power"
+      ]
+    },
+    {
+      "unit_code": "U5_magnetism_and_electromagnetic_induction",
+      "title": "Magnetism and Electromagnetic Induction",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_b_fields",
+        "U5_S2_forces_on_charges",
+        "U5_S3_faraday",
+        "U5_S4_lenz"
+      ],
+      "topics": [
+        "B fields",
+        "forces on charges",
+        "Faraday",
+        "Lenz"
+      ]
+    },
+    {
+      "unit_code": "U6_geometric_and_physical_optics",
+      "title": "Geometric and Physical Optics",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_reflection_refraction",
+        "U6_S2_mirrors_lenses",
+        "U6_S3_interference_diffraction"
+      ],
+      "topics": [
+        "reflection/refraction",
+        "mirrors/lenses",
+        "interference/diffraction"
+      ]
+    },
+    {
+      "unit_code": "U7_quantum_atomic_and_nuclear_physics",
+      "title": "Quantum, Atomic, and Nuclear Physics",
+      "sort_order": 7,
+      "skill_ids": [
+        "U7_S1_photons",
+        "U7_S2_energy_levels",
+        "U7_S3_nuclear_decay",
+        "U7_S4_wave_particle"
+      ],
+      "topics": [
+        "photons",
+        "energy levels",
+        "nuclear decay",
+        "wave-particle"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_fluids": [
+      "U1_S1_statics",
+      "U1_S2_dynamics",
+      "U1_S3_bernoulli_applications"
+    ],
+    "U2_thermodynamics": [
+      "U2_S1_temperature",
+      "U2_S2_pv_diagrams",
+      "U2_S3_laws_of_thermo",
+      "U2_S4_kinetic_theory"
+    ],
+    "U3_electric_force_field_and_potential": [
+      "U3_S1_coulomb",
+      "U3_S2_fields",
+      "U3_S3_potential",
+      "U3_S4_equipotentials"
+    ],
+    "U4_electric_circuits": [
+      "U4_S1_ohm",
+      "U4_S2_kirchhoff",
+      "U4_S3_rc",
+      "U4_S4_power"
+    ],
+    "U5_magnetism_and_electromagnetic_induction": [
+      "U5_S1_b_fields",
+      "U5_S2_forces_on_charges",
+      "U5_S3_faraday",
+      "U5_S4_lenz"
+    ],
+    "U6_geometric_and_physical_optics": [
+      "U6_S1_reflection_refraction",
+      "U6_S2_mirrors_lenses",
+      "U6_S3_interference_diffraction"
+    ],
+    "U7_quantum_atomic_and_nuclear_physics": [
+      "U7_S1_photons",
+      "U7_S2_energy_levels",
+      "U7_S3_nuclear_decay",
+      "U7_S4_wave_particle"
+    ]
+  }
+}

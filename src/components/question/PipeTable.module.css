@@ -1,0 +1,46 @@
+.table {
+  border-collapse: collapse;
+  margin: 0.2rem 0;
+  font-variant-numeric: tabular-nums;
+  /* HSL-triplet tokens MUST be hsl()-wrapped, else the value is invalid and the
+     declaration is dropped (that's why borders/backgrounds were invisible). */
+  background: hsl(var(--card, 0 0% 100%));
+  border: 1px solid hsl(var(--border, 220 13% 88%));
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.scrollWrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table th,
+.table td {
+  border: 1px solid hsl(var(--border, 220 13% 88%));
+  padding: 0.4rem 0.95rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: hsl(var(--foreground, 222 22% 14%));
+}
+
+.table th {
+  font-weight: 600;
+  background: hsl(var(--muted, 220 14% 96%));
+  color: hsl(var(--foreground, 222 22% 14%));
+}
+
+/* zebra striping for readability, subtle in both themes */
+.table tbody tr:nth-child(even) td {
+  background: hsl(var(--muted, 220 14% 96%) / 0.4);
+}
+
+@media (max-width: 480px) {
+  .table th,
+  .table td {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.8125rem;
+  }
+}

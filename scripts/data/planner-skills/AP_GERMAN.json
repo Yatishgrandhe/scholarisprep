@@ -1,0 +1,153 @@
+{
+  "examType": "AP_GERMAN",
+  "topics": [
+    "Families and Communities",
+    "Personal and Public Identities",
+    "Beauty and Aesthetics",
+    "Science and Technology",
+    "Contemporary Life",
+    "Global Challenges"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_families_and_communities",
+      "title": "Families and Communities",
+      "sort_order": 1,
+      "skill_ids": [
+        "U1_S1_family_structures",
+        "U1_S2_customs",
+        "U1_S3_citizenship",
+        "U1_S4_education"
+      ],
+      "topics": [
+        "family structures",
+        "customs",
+        "citizenship",
+        "education"
+      ]
+    },
+    {
+      "unit_code": "U2_personal_and_public_identities",
+      "title": "Personal and Public Identities",
+      "sort_order": 2,
+      "skill_ids": [
+        "U2_S1_identity",
+        "U2_S2_alienation",
+        "U2_S3_nationalism",
+        "U2_S4_heroes"
+      ],
+      "topics": [
+        "identity",
+        "alienation",
+        "nationalism",
+        "heroes"
+      ]
+    },
+    {
+      "unit_code": "U3_beauty_and_aesthetics",
+      "title": "Beauty and Aesthetics",
+      "sort_order": 3,
+      "skill_ids": [
+        "U3_S1_ideals_of_beauty",
+        "U3_S2_arts",
+        "U3_S3_architecture",
+        "U3_S4_fashion"
+      ],
+      "topics": [
+        "ideals of beauty",
+        "arts",
+        "architecture",
+        "fashion"
+      ]
+    },
+    {
+      "unit_code": "U4_science_and_technology",
+      "title": "Science and Technology",
+      "sort_order": 4,
+      "skill_ids": [
+        "U4_S1_discovery",
+        "U4_S2_ethics_of_tech",
+        "U4_S3_health",
+        "U4_S4_innovation"
+      ],
+      "topics": [
+        "discovery",
+        "ethics of tech",
+        "health",
+        "innovation"
+      ]
+    },
+    {
+      "unit_code": "U5_contemporary_life",
+      "title": "Contemporary Life",
+      "sort_order": 5,
+      "skill_ids": [
+        "U5_S1_education",
+        "U5_S2_leisure",
+        "U5_S3_travel",
+        "U5_S4_work"
+      ],
+      "topics": [
+        "education",
+        "leisure",
+        "travel",
+        "work"
+      ]
+    },
+    {
+      "unit_code": "U6_global_challenges",
+      "title": "Global Challenges",
+      "sort_order": 6,
+      "skill_ids": [
+        "U6_S1_environment",
+        "U6_S2_human_rights",
+        "U6_S3_peace",
+        "U6_S4_economic_issues"
+      ],
+      "topics": [
+        "environment",
+        "human rights",
+        "peace",
+        "economic issues"
+      ]
+    }
+  ],
+  "skillsByUnit": {
+    "U1_families_and_communities": [
+      "U1_S1_family_structures",
+      "U1_S2_customs",
+      "U1_S3_citizenship",
+      "U1_S4_education"
+    ],
+    "U2_personal_and_public_identities": [
+      "U2_S1_identity",
+      "U2_S2_alienation",
+      "U2_S3_nationalism",
+      "U2_S4_heroes"
+    ],
+    "U3_beauty_and_aesthetics": [
+      "U3_S1_ideals_of_beauty",
+      "U3_S2_arts",
+      "U3_S3_architecture",
+      "U3_S4_fashion"
+    ],
+    "U4_science_and_technology": [
+      "U4_S1_discovery",
+      "U4_S2_ethics_of_tech",
+      "U4_S3_health",
+      "U4_S4_innovation"
+    ],
+    "U5_contemporary_life": [
+      "U5_S1_education",
+      "U5_S2_leisure",
+      "U5_S3_travel",
+      "U5_S4_work"
+    ],
+    "U6_global_challenges": [
+      "U6_S1_environment",
+      "U6_S2_human_rights",
+      "U6_S3_peace",
+      "U6_S4_economic_issues"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('e4a8fd3e-0ac3-47af-b975-505572258bde', 'The student wants to present the researchers'' explanation for why the fungi glow. Which choice most effectively uses information from the notes to accomplish this goal?', 'The Bioluminescent Fungi of New Zealand
+- Several species of fungi in New Zealand forests emit a steady greenish glow at night.
+- The glow is produced by a chemical reaction involving an enzyme called luciferase.
+- Researchers hypothesize the glow attracts insects, which then spread the fungi''s spores.
+- The brightness of the glow peaks around midnight and fades before dawn.
+- Field studies recorded more insect visits to glowing fungi than to non-glowing samples.', NULL, '[{"id":"A","text":"Researchers hypothesize that the fungi glow in order to attract insects, which then help spread the fungi''s spores.","is_correct":true,"explanation":"Correct: it states the researchers'' proposed reason (attracting insects) and the resulting benefit (spore spread) drawn directly from the notes."},{"id":"B","text":"The fungi''s glow, produced by an enzyme called luciferase, peaks around midnight and fades before dawn.","is_correct":false,"explanation":"True but irrelevant: it describes the chemistry and timing of the glow, not the researchers'' explanation for why it occurs."},{"id":"C","text":"Several species of fungi in New Zealand forests emit a steady greenish glow at night.","is_correct":false,"explanation":"Too narrow: it merely describes that the glow exists without giving any reason for it."},{"id":"D","text":"Field studies recorded more insect visits to glowing fungi than to non-glowing samples.","is_correct":false,"explanation":"Supporting evidence, not the explanation itself: it reports a finding rather than stating the proposed reason for the glow."}]'::jsonb, 'A', 'Step 1 — Find the stated reason
+The notes say {{yellow:Researchers hypothesize the glow attracts insects, which then spread the fungi''s spores}}.
+Step 2 — Match the goal
+Choice A restates that hypothesized purpose, naming both the cause (attracting insects) and the effect (spore spread), which is exactly the explanation requested.
+Distractor analysis:
+- B: Describes glow chemistry and timing, not the reason the fungi glow.
+- C: Only confirms the glow exists; gives no explanation.
+- D: Reports field evidence supporting the idea, but is not the explanation itself.', 'The goal asks for the researchers'' proposed reason for the glow, not a description of the glow or its supporting data.', 'Expression of Ideas', 'Rhetorical Synthesis', 'reading_writing', 'expression', 'SYN', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

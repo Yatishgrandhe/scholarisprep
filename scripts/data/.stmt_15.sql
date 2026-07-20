@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('60384366-7128-4a25-9432-2d208c4e9de0', 'Which choice completes the text with the most logical and precise word or phrase?', 'Astronomers once believed the universe was completely still. In the 1920s, however, Edwin Hubble noticed that distant galaxies were moving away from us. The farther away a galaxy was, the faster it seemed to be retreating. This observation suggested that the universe is not static at all but is steadily ______ in every direction.', NULL, '[{"id":"A","text":"expanding","is_correct":true,"explanation":"Correct: galaxies moving away from us in every direction means the universe is growing larger, or expanding."},{"id":"B","text":"shrinking","is_correct":false,"explanation":"Reverse: shrinking would mean galaxies moving closer, not away."},{"id":"C","text":"cooling","is_correct":false,"explanation":"No evidence: the passage describes motion, not temperature."},{"id":"D","text":"spinning","is_correct":false,"explanation":"No evidence: galaxies retreating outward is not the same as the universe spinning."}]'::jsonb, 'A', 'Step 1 — Find the clue
+The text states that {{yellow:distant galaxies were moving away from us}} and farther ones retreated faster.
+Step 2 — Match the word
+A universe in which everything moves apart in every direction is expanding, contradicting the old ''static'' view.
+Distractor analysis:
+- B: ''Shrinking'' reverses the clue; galaxies move away, not closer.
+- C: ''Cooling'' has no support; the passage is about motion, not heat.
+- D: ''Spinning'' is unsupported and does not match outward retreat.', 'If galaxies move away in every direction, the universe is getting what?', 'Craft and Structure', 'Words in Context', 'reading_writing', 'craft', 'WIC', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

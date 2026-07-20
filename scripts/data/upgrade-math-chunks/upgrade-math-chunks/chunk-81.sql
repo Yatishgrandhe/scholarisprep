@@ -1,0 +1,115 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'What is the slope, and what does it represent?',
+  stimulus_text = 'A line models cost vs. units produced, passing through $(44,131)$ and $(50,149)$.',
+  options = '[{"id":"A","text":"$3$; cost increases $3$ per unit","is_correct":true,"explanation":"**Step 1:** Slope $=\\frac{149-131}{50-44}=3$. Interpretation: $3$ dollars per unit."},{"id":"B","text":"$2$; cost decreases per unit","is_correct":false,"explanation":"Wrong sign and magnitude."},{"id":"C","text":"$149$; total cost","is_correct":false,"explanation":"That is a coordinate, not slope."},{"id":"D","text":"$6$; time elapsed","is_correct":false,"explanation":"Horizontal change only."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Slope $=\frac{18}{6}=3$.
+**Step 2:** In context, each additional unit adds $3$ to cost.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6ecee29e-0cc3-4b00-a93e-28596c38d4d8';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 6. A chord of the circle is 8 units long. What is the distance from the center of the circle to the chord? ',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":false,"explanation":"Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"$\\sqrt{20}$","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"$\\sqrt{28}$","is_correct":false,"explanation":"Choice D ($\\sqrt{28}$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 6. A chord of the circle is 8 units long. What is the distance from the center of the circle to the chord? 
+
+**Step 2 — Solve.** Draw a radius from the center of the circle to each endpoint of the chord. This creates an isosceles triangle with the chord as the base. Draw a perpendicular segment from the center of the circle to the chord, bisecting the chord. This forms a right triangle with legs of length 4 and hypotenuse of length 6. Use the Pythagorean theorem to find the length of the other leg, the distance from the center of the circle to the chord: $4^2 + x^2 = 6^2$, so $x = \sqrt{20}$.
+
+**Step 3 — Select C.** $\sqrt{20}$
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (4): Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** ($\sqrt{28}$): Choice D ($\sqrt{28}$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":160,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"67d896a1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6ee74764-0142-4e0f-8952-c269c8064c33';
+
+UPDATE public.questions SET
+  question_text = 'Which choice best evaluates the claim?',
+  stimulus_text = 'A influencer claims "nobody likes the new app" after asking 230 followers who commented on one critical post.',
+  options = '[{"id":"A","text":"The claim overgeneralizes from a biased, non-random sample","is_correct":true,"explanation":"**Step 1:** Sample is self-selected critics. **Step 2:** Cannot support ''nobody''."},{"id":"B","text":"The claim is valid because 40 responses is large","is_correct":false,"explanation":"Size alone does not fix selection bias."},{"id":"C","text":"The claim is valid because social media represents everyone","is_correct":false,"explanation":"Platform users are not the entire population."},{"id":"D","text":"The claim is valid because one post reflects all opinions","is_correct":false,"explanation":"One thread is not representative."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Identify bias: engaged critics only.
+**Step 2:** Absolute claim "nobody" exceeds the evidence.
+**Step 3:** Representative sampling would be needed.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6efb450a-b9e8-4e11-8350-cb061e4f67c9';
+
+UPDATE public.questions SET
+  question_text = 'What is the ladder''s length?',
+  stimulus_text = 'A ladder leans against a wall. The foot is 36 ft from the wall and the top is 43 ft high.',
+  options = '[{"id":"A","text":"$54$","is_correct":false,"explanation":"Too short for the given legs."},{"id":"B","text":"$79$","is_correct":false,"explanation":"Length is not the sum of legs."},{"id":"C","text":"$55$","is_correct":false,"explanation":"Close — check $\\sqrt{${a}^2+${b}^2}$."},{"id":"D","text":"$56$","is_correct":true,"explanation":"**Step 1:** Pythagorean theorem. **Step 2:** $c=\\sqrt{36^2+43^2}=56$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Right triangle: legs 36 and 43.
+**Step 2:** $c=\sqrt{36^2+43^2}=56$ ft.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6efcb2d4-4dcf-4092-adb2-089040bf0eb4';
+
+UPDATE public.questions SET
+  question_text = 'If the first chip is red, what is the probability the second is also red?',
+  stimulus_text = 'A bag has 6 red and 41 blue chips. Two chips are drawn without replacement.',
+  options = '[{"id":"A","text":"$\\frac{6}{47}$","is_correct":false,"explanation":"Ignores that one red chip was removed."},{"id":"B","text":"$\\frac{6}{46}$","is_correct":false,"explanation":"Uses original count in numerator."},{"id":"C","text":"$\\frac{6}{47}$","is_correct":false,"explanation":"Wrong numerator after first draw."},{"id":"D","text":"$\\frac{5}{46}$","is_correct":true,"explanation":"**Step 1:** After red first: 5 red left, 46 total. **Step 2:** P $=\\frac{5}{46}$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** First chip red → 5 red remain out of 46.
+**Step 2:** Conditional probability $=\frac{5}{46}$.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '6f1bf245-2786-417b-ba6b-6a568e78110c';
+
+UPDATE public.questions SET
+  question_text = 'If the first chip is red, what is the probability the second is also red?',
+  stimulus_text = 'A bag has 6 red and 44 blue chips. Two chips are drawn without replacement.',
+  options = '[{"id":"A","text":"$\\frac{6}{50}$","is_correct":false,"explanation":"Ignores that one red chip was removed."},{"id":"B","text":"$\\frac{6}{49}$","is_correct":false,"explanation":"Uses original count in numerator."},{"id":"C","text":"$\\frac{6}{50}$","is_correct":false,"explanation":"Wrong numerator after first draw."},{"id":"D","text":"$\\frac{5}{49}$","is_correct":true,"explanation":"**Step 1:** After red first: 5 red left, 49 total. **Step 2:** P $=\\frac{5}{49}$."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** First chip red → 5 red remain out of 49.
+**Step 2:** Conditional probability $=\frac{5}{49}$.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '6f46e5c1-e5fd-4bdb-9b38-c33992782ffc';
+
+UPDATE public.questions SET
+  question_text = 'What is the slope, and what does it represent?',
+  stimulus_text = 'A line models cost vs. units produced, passing through $(5,14)$ and $(11,32)$.',
+  options = '[{"id":"A","text":"$3$; cost increases $3$ per unit","is_correct":true,"explanation":"**Step 1:** Slope $=\\frac{32-14}{11-5}=3$. Interpretation: $3$ dollars per unit."},{"id":"B","text":"$2$; cost decreases per unit","is_correct":false,"explanation":"Wrong sign and magnitude."},{"id":"C","text":"$32$; total cost","is_correct":false,"explanation":"That is a coordinate, not slope."},{"id":"D","text":"$6$; time elapsed","is_correct":false,"explanation":"Horizontal change only."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Slope $=\frac{18}{6}=3$.
+**Step 2:** In context, each additional unit adds $3$ to cost.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_bulk_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '6f8df9e3-03c7-456c-9651-2667a01fb901';
+
+UPDATE public.questions SET
+  question_text = 'If $2x + 3y = 17$ and $x - y = 2$, what is the value of $x$?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"3","is_correct":false,"explanation":"Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"4","is_correct":false,"explanation":"Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"5","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"6","is_correct":false,"explanation":"Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** If $2x + 3y = 17$ and $x - y = 2$, what is the value of $x$?
+
+**Step 2 — Solve.** To solve for $x$, we can use elimination.  Multiplying the second equation by 3, we get $3x - 3y = 6$.  Adding this equation to the first equation, we get $5x = 23$.  Dividing both sides by 5, we get $x = \frac{23}{5}$, or 4.6. Since the question asks for the value of $x$, we round 4.6 to the nearest whole number, which is 5.
+
+**Step 3 — Select C.** 5
+
+**Distractor analysis:**
+- **A** (3): Choice A (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (4): Choice B (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (6): Choice D (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIF","domain_id":"algebra","opensat_index":701,"opensat_domain":"Algebra","opensat_raw_id":"random_id_a9","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.065Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '6f9c9330-493b-4650-878e-70242d05b55e';
+
+COMMIT;

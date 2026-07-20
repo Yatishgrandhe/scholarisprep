@@ -1,0 +1,581 @@
+/* ============================================================
+   Auth form controls — aligned with landing CTAs / tokens.
+   Layout chrome lives in auth-split.module.css (shell ownership).
+   ============================================================ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  width: 100%;
+}
+
+.labelRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+.forgotLink {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--primary));
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.forgotLink:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 3rem;
+  padding: 0 var(--space-4);
+  border: 1.5px solid hsl(var(--border));
+  border-radius: 12px;
+  font-family: var(--font-body);
+  /* 16px on small screens avoids iOS focus zoom; rem scales up elsewhere */
+  font-size: 1rem;
+  line-height: 1.4;
+  color: hsl(var(--foreground));
+  background: hsl(var(--muted) / 0.4);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.input::placeholder {
+  color: hsl(var(--muted-foreground) / 0.65);
+}
+
+.input:hover:not(:focus):not(:disabled):not(.inputError) {
+  border-color: hsl(var(--muted-foreground) / 0.45);
+}
+
+.input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  background: hsl(var(--card));
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.14);
+}
+
+.input:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.passwordWrap {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.passwordWrap .input {
+  padding-right: 2.75rem;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.togglePassword:hover {
+  color: hsl(var(--foreground));
+  background: hsl(var(--muted) / 0.7);
+}
+
+.togglePassword:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 1px;
+  color: hsl(var(--foreground));
+}
+
+.primaryButton {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-height: 3.25rem;
+  margin-top: var(--space-1);
+  padding: 0.875rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: var(--radius-full);
+  /* Solid cobalt — matches LandingHero .primaryCta (no purple / --exam-sat) */
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  text-align: center;
+  cursor: pointer;
+  box-shadow:
+    0 2px 12px hsl(var(--primary) / 0.32),
+    inset 0 1px 0 hsl(0 0% 100% / 0.16);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.primaryButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px hsl(var(--primary) / 0.4);
+  filter: brightness(1.05);
+}
+
+.primaryButton:active:not(:disabled) {
+  transform: translateY(0) scale(0.99);
+}
+
+.primaryButton:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 3px;
+}
+
+.primaryButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-1) 0;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: hsl(var(--border));
+}
+
+.error {
+  padding: 0.75rem 0.875rem;
+  background: var(--feedback-error-bg);
+  border: 1px solid var(--feedback-error-border);
+  border-radius: var(--radius-md);
+  color: hsl(var(--destructive));
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.success {
+  padding: 0.75rem 0.875rem;
+  background: var(--feedback-success-bg);
+  border: 1px solid var(--feedback-success-border);
+  border-radius: var(--radius-md);
+  color: hsl(var(--score-positive));
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.footer {
+  margin-top: var(--space-1);
+  padding-top: var(--space-5);
+  border-top: 1px solid hsl(var(--border) / 0.7);
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.footer a {
+  color: hsl(var(--primary));
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer a:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.footerArrow {
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.fieldError {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: hsl(var(--destructive));
+}
+
+.fieldHint {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: hsl(var(--muted-foreground));
+}
+
+.inputError {
+  border-color: hsl(var(--destructive));
+}
+
+.inputError:focus {
+  border-color: hsl(var(--destructive));
+  box-shadow: 0 0 0 4px hsl(var(--destructive) / 0.14);
+}
+
+.freeNote {
+  margin: calc(-1 * var(--space-2)) 0 0;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  color: hsl(var(--muted-foreground));
+}
+
+.freeLead {
+  font-weight: 600;
+  color: hsl(var(--primary));
+}
+
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .roleGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .primaryButton,
+  .oauthButton {
+    min-height: 3rem;
+    padding-inline: 1rem;
+  }
+
+  .form {
+    gap: var(--space-4);
+  }
+
+  .footer {
+    font-size: 0.875rem;
+  }
+
+  .checkbox {
+    gap: 0.5rem;
+  }
+}
+
+/* ~375 phones: full-bleed CTAs, no horizontal overflow */
+@media (max-width: 400px) {
+  .input {
+    padding-inline: var(--space-3);
+  }
+
+  .passwordWrap .input {
+    padding-right: 2.5rem;
+  }
+
+  .primaryButton,
+  .oauthButton {
+    width: 100%;
+    max-width: 100%;
+    min-height: 3rem;
+    padding-inline: 0.875rem;
+  }
+
+  .forgotLink {
+    font-size: 0.75rem;
+  }
+
+  .divider {
+    font-size: 0.75rem;
+  }
+
+  .error,
+  .success {
+    font-size: 0.8125rem;
+    padding: 0.625rem 0.75rem;
+  }
+}
+
+.roleCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-3);
+  border: 1.5px solid hsl(var(--border));
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+  background: hsl(var(--muted) / 0.35);
+  text-align: center;
+  font-family: var(--font-body);
+  color: hsl(var(--foreground));
+}
+
+.roleCard:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  transform: translateY(-1px);
+}
+
+.roleCardSelected {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.1);
+}
+
+.roleCardIcon {
+  color: hsl(var(--primary));
+}
+
+.roleCardLabel {
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.checkbox input {
+  margin-top: 3px;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  accent-color: hsl(var(--primary));
+}
+
+.checkbox a {
+  color: hsl(var(--primary));
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.checkbox a:hover {
+  text-decoration: underline;
+}
+
+.checkbox a:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.oauthButton {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 3.25rem;
+  padding: 0.875rem 1.25rem;
+  /* Landing secondary CTA energy — bordered surface, not filled cobalt */
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-full);
+  background: hsl(var(--background) / 0.6);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.oauthButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: hsl(var(--primary) / 0.06);
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+.oauthButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.oauthButton:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 3px;
+}
+
+.oauthButton svg {
+  flex-shrink: 0;
+}
+
+.oauthButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lead {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+  margin-top: calc(-1 * var(--space-4));
+  margin-bottom: var(--space-6);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background) / 0.7);
+  font-size: 0.8125rem;
+  font-weight: 550;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--primary) / 0.4);
+  text-decoration: none;
+}
+
+.backLink:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 3px;
+}
+
+/* Suspense fallback while auth forms hydrate */
+.formFallback {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+}
+
+.skeletonLine,
+.skeletonLineShort,
+.skeletonButton {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted) / 0.55) 0%,
+    hsl(var(--muted) / 0.85) 50%,
+    hsl(var(--muted) / 0.55) 100%
+  );
+  background-size: 200% 100%;
+  animation: authShimmer 1.2s ease-in-out infinite;
+}
+
+.skeletonLine {
+  height: 3rem;
+  border-radius: 12px;
+}
+
+.skeletonLineShort {
+  height: 0.875rem;
+  width: 40%;
+  border-radius: 6px;
+}
+
+.skeletonButton {
+  height: 3.25rem;
+  border-radius: var(--radius-full);
+  margin-top: var(--space-2);
+}
+
+@keyframes authShimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeletonLine {
+    animation: none;
+  }
+
+  .primaryButton:hover:not(:disabled),
+  .oauthButton:hover:not(:disabled) {
+    transform: none;
+  }
+}

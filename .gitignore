@@ -1,0 +1,70 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+*.log
+
+# import pipeline temp payloads
+scripts/.mcp-*
+scripts/.tmp-*
+scripts/.query-only.sql
+scripts/mcp-query.json
+
+# local rewrite pipeline secrets/artifacts
+scripts/rewrite/.env
+scripts/rewrite/batches/
+scripts/rewrite/chunks/
+
+# Large local DB backups (math bank snapshot)
+scripts/rewrite/backups/
+
+# AP/IB + other local bank regen dumps (payloads, mega SQL, apply logs)
+# From commit-readiness audit 6b37b752 — never commit these (~426MB+).
+scripts/data/.ap-ib-regen/
+scripts/data/.*-regen/
+scripts/data/.*-regen-*
+
+# Math bank local exports / pipeline scratch (repo root)
+/math-questions-export*.json
+/declone*.json
+/regen_*.json
+/regen_out*.json
+/*.out

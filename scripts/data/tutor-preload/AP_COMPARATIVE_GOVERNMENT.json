@@ -1,0 +1,34 @@
+{
+  "exam_type": "AP_COMPARATIVE_GOVERNMENT",
+  "display_name": "AP Comparative Government and Politics",
+  "command_terms": [
+    "compare",
+    "define",
+    "describe",
+    "explain",
+    "identify",
+    "evaluate",
+    "apply concept"
+  ],
+  "misconceptions": [
+    "Confusing state, regime, and government",
+    "Assuming parliamentary systems always mean weak executives",
+    "Treating China/Iran as identical “authoritarian” without institutional nuance",
+    "Mixing electoral system type with party system outcome without mechanism",
+    "Ignoring legitimacy sources beyond elections"
+  ],
+  "paper_rules": [
+    "Always ground comparisons in the six course countries when prompted",
+    "FRQs include conceptual analysis, quantitative analysis, and country comparisons",
+    "Define AP course concepts precisely before applying",
+    "Use causal language carefully (institutional design → political outcome)"
+  ],
+  "calculator_policy": "none",
+  "units_summary": [
+    "U1 Political Systems Regimes and Governments (w≈0.18, q=90)",
+    "U2 Political Institutions (w≈0.22, q=110)",
+    "U3 Political Culture and Participation (w≈0.2, q=100)",
+    "U4 Party and Electoral Systems (w≈0.2, q=100)",
+    "U5 Political and Economic Change (w≈0.2, q=100)"
+  ]
+}

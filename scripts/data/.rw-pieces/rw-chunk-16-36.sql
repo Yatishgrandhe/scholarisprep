@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('d49c206d-8929-4edc-a4e4-3de5d2898f1d', 'Which choice completes the text with the most logical transition?', 'The committee assumed that lowering the entry fee would draw larger crowds to the museum. Attendance did climb after the change, ______ but the lost revenue from each ticket left the museum with less money than before.', NULL, '[{"id":"A","text":"indeed,","is_correct":false,"explanation":"Incorrect: the clause introduces a drawback, not an emphatic confirmation."},{"id":"B","text":"and yet","is_correct":true,"explanation":"Correct: it concedes the rise in attendance while contrasting it with the revenue loss."},{"id":"C","text":"because","is_correct":false,"explanation":"Incorrect: the revenue loss is not the cause of rising attendance."},{"id":"D","text":"in particular,","is_correct":false,"explanation":"Incorrect: the clause does not narrow to a specific case of higher attendance."}]'::jsonb, 'B', 'Step 1 — Note the partial success
+The text confirms {{yellow:Attendance did climb after the change}}, but then flags a financial downside.
+Step 2 — Pick the concession-contrast
+''And yet'' acknowledges the gain while pivoting to the loss, matching the sentence''s tension.
+Distractor analysis:
+- A: ''indeed'' would intensify the attendance gain, but the clause reveals a problem.
+- C: ''because'' wrongly makes lost revenue the reason for higher attendance.
+- D: ''in particular'' signals a specific instance, which the clause does not give.', 'The crowd grew, but the money shrank. What links a gain to a setback?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

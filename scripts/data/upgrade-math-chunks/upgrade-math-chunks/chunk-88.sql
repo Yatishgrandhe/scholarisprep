@@ -1,0 +1,139 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 cm. A chord of the circle is 8 cm long. What is the distance, in cm, from the center of the circle to the chord?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2","is_correct":false,"explanation":"Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"3","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"4","is_correct":false,"explanation":"Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"5","is_correct":false,"explanation":"Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 cm. A chord of the circle is 8 cm long. What is the distance, in cm, from the center of the circle to the chord?
+
+**Step 2 — Solve.** Draw a radius from the center of the circle to each endpoint of the chord. This creates an isosceles triangle with a base of 8 cm and two sides of 5 cm. Draw the altitude from the center of the circle to the chord. This altitude bisects the base of the isosceles triangle, creating two right triangles with a hypotenuse of 5 cm and a leg of 4 cm. Using the Pythagorean Theorem, the other leg of the right triangle (which is the distance from the center of the circle to the chord) is  cm.
+
+**Step 3 — Select B.** 3
+
+**Distractor analysis:**
+- **A** (2): Choice A (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (4): Choice C (4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (5): Choice D (5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":372,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_e3","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '76761afb-e091-4d3d-8935-1fca1fa54d21';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 centimeters. What is the circumference of the circle, in centimeters?  (Express your answer in terms of $\pi$.)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"$\\pi$","is_correct":false,"explanation":"Choice A ($\\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"$5 \\pi$","is_correct":false,"explanation":"Choice B ($5 \\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"$10 \\pi$","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"$25 \\pi$","is_correct":false,"explanation":"Choice D ($25 \\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 centimeters. What is the circumference of the circle, in centimeters?  (Express your answer in terms of $\pi$.)
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula $C = 2 \pi r$, where $r$ is the radius. Substituting 5 for $r$, we get $C = 2 \pi (5)$, or $C = 10 \pi$.
+
+**Step 3 — Select C.** $10 \pi$
+
+**Distractor analysis:**
+- **A** ($\pi$): Choice A ($\pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** ($5 \pi$): Choice B ($5 \pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** ($25 \pi$): Choice D ($25 \pi$…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":176,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a7","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '767d90d1-b597-4cf5-a74d-1ea1e9902a4b';
+
+UPDATE public.questions SET
+  question_text = 'If the original price is $210$, what is the final price after both changes?',
+  stimulus_text = 'A retail price is increased by 25% and then discounted by 15%.',
+  options = '[{"id":"A","text":"$224$","is_correct":true,"explanation":"**Step 1:** $210×1.25=263$. **Step 2:** $263×0.85=224$."},{"id":"B","text":"$210$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$263$","is_correct":false,"explanation":"Only applies the markup."},{"id":"D","text":"$234$","is_correct":false,"explanation":"Adds 10 without reason."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Markup: $210×(1+25/100)=263$.
+**Step 2:** Discount: $263×(1-15/100)=224$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '76a60ccb-6d04-4151-aa51-231acc53eaae';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 centimeters. What is the circumference of the circle in centimeters?  (Express your answer in terms of \pi.)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"5\\pi","is_correct":false,"explanation":"Choice A (5\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"10\\pi","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"25\\pi","is_correct":false,"explanation":"Choice C (25\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"50\\pi","is_correct":false,"explanation":"Choice D (50\\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 centimeters. What is the circumference of the circle in centimeters?  (Express your answer in terms of \pi.)
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula C = 2\pi r, where r is the radius of the circle.  Substituting 5 for r, we get C = 2\pi(5) = 10\pi.
+
+**Step 3 — Select B.** 10\pi
+
+**Distractor analysis:**
+- **A** (5\pi): Choice A (5\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (25\pi): Choice C (25\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (50\pi): Choice D (50\pi…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":706,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_55","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '76ca8d43-0e45-4560-b64c-9f5bbcb1efdf';
+
+UPDATE public.questions SET
+  question_text = 'A circle with a radius of 5 centimeters is inscribed in a square. What is the area, in square centimeters, of the square?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"25","is_correct":false,"explanation":"Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"50","is_correct":false,"explanation":"Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"100","is_correct":true,"explanation":"Correct (C). Matches the worked solution above."},{"id":"D","text":"200","is_correct":false,"explanation":"Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'C',
+  explanation = '**Step 1 — Understand the problem.** A circle with a radius of 5 centimeters is inscribed in a square. What is the area, in square centimeters, of the square?
+
+**Step 2 — Solve.** The diameter of the circle is equal to the side length of the square. Since the radius of the circle is 5 centimeters, the diameter is 10 centimeters. Therefore, the side length of the square is 10 centimeters, and the area of the square is (10 cm)(10 cm) = 100 square centimeters.
+
+**Step 3 — Select C.** 100
+
+**Distractor analysis:**
+- **A** (25): Choice A (25…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (50): Choice B (50…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (200): Choice D (200…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":547,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c1","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '76d2ad80-64f0-4ab8-8d48-e49027f3c41d';
+
+UPDATE public.questions SET
+  question_text = 'What is the measure of the adjacent interior angle?',
+  stimulus_text = 'An exterior angle of a triangle measures 126°.',
+  options = '[{"id":"A","text":"$126°$","is_correct":false,"explanation":"That is the exterior angle."},{"id":"B","text":"$54°$","is_correct":true,"explanation":"**Step 1:** Linear pair sums to 180°. **Step 2:** $180-126=54°$."},{"id":"C","text":"$64°$","is_correct":false,"explanation":"Does not satisfy linear pair."},{"id":"D","text":"$90°$","is_correct":false,"explanation":"Not necessarily 90°."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1:** Exterior and interior form a linear pair.
+**Step 2:** $180°-126°=54°$.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '76fc7465-61d1-4753-b573-eb0391ad16dd';
+
+UPDATE public.questions SET
+  question_text = 'Which value of $x$ satisfies $5x + 5 > 157$ and represents a feasible weight?',
+  stimulus_text = 'A package must weigh more than 157 grams but at most 170 grams to ship.',
+  options = '[{"id":"A","text":"$28$","is_correct":false,"explanation":"Too small: $5(28)+5=145$."},{"id":"B","text":"$29$","is_correct":false,"explanation":"Still below threshold 157."},{"id":"C","text":"$30$","is_correct":false,"explanation":"Borderline; check strict inequality."},{"id":"D","text":"$31$","is_correct":true,"explanation":"**Step 1:** $5x > 152$. **Step 2:** $x > 30.4$. Smallest integer choice: 31."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Isolate: $5x > 152$.
+**Step 2:** $x > 30.40$.
+**Step 3:** Among choices, $31$ is the smallest valid value.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '772ddb90-f484-4c28-97f7-9345d7cf7ab6';
+
+UPDATE public.questions SET
+  question_text = 'For what value of \(k\) does the equation \(x^2+6x+k=0\) have exactly one solution? ',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"9","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"6","is_correct":false,"explanation":"Choice B (6…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"3","is_correct":false,"explanation":"Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"0","is_correct":false,"explanation":"Choice D (0…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** For what value of \(k\) does the equation \(x^2+6x+k=0\) have exactly one solution? 
+
+**Step 2 — Solve.** A quadratic equation has exactly one solution if and only if its discriminant is equal to 0.  The discriminant of the quadratic equation \(ax^2 + bx + c = 0\) is \(b^2 - 4ac\).  In this case, the discriminant is \(6^2 - 4 \cdot 1 \cdot k = 36 - 4k\).  Setting the discriminant equal to 0 gives \(36 - 4k = 0\). Solving for \(k\) gives \(k = 9\).
+
+**Step 3 — Select A.** 9
+
+**Distractor analysis:**
+- **B** (6): Choice B (6…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (3): Choice C (3…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (0): Choice D (0…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":226,"opensat_domain":"Advanced Math","opensat_raw_id":"f66432b2","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.066Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '7750f514-248a-4ccc-b81d-948933937a23';
+
+COMMIT;

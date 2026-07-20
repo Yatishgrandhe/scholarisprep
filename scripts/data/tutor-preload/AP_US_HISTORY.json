@@ -1,0 +1,136 @@
+{
+  "exam_type": "AP_US_HISTORY",
+  "display_name": "AP United States History",
+  "command_terms": [
+    "identify",
+    "describe",
+    "explain",
+    "compare",
+    "evaluate",
+    "argue with evidence"
+  ],
+  "misconceptions": [
+    "Narrating events without causation or continuity/change analysis",
+    "Using documents as quotations without HIPP/sourcing analysis",
+    "Outside evidence that is vague or from the wrong period",
+    "Thesis that restates the prompt without a historically defensible claim",
+    "Confusing Period boundaries when sequencing causes and effects"
+  ],
+  "paper_rules": [
+    "DBQ needs thesis, contextualization, document use with sourcing, and outside evidence",
+    "LEQ emphasizes historical thinking skill named in the prompt",
+    "SAQ answers should be concise and directly address each part (a/b/c)"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "mcq",
+        "label": "Multiple Choice",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "saq",
+        "label": "Short Answer",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "dbq",
+        "label": "Document-Based Question",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "leq",
+        "label": "Long Essay Question",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "No calculator. Stimulus-based MCQ and evidence-based writing throughout."
+  },
+  "units_summary": [
+    {
+      "unit_code": "P1_1491_1607",
+      "unit_name": "Period 1: 1491–1607",
+      "topics": [
+        "Native societies before contact",
+        "Columbian Exchange",
+        "early European colonization patterns"
+      ]
+    },
+    {
+      "unit_code": "P2_1607_1754",
+      "unit_name": "Period 2: 1607–1754",
+      "topics": [
+        "regional colonial development",
+        "transatlantic trade and slavery",
+        "colonial society and culture"
+      ]
+    },
+    {
+      "unit_code": "P3_1754_1800",
+      "unit_name": "Period 3: 1754–1800",
+      "topics": [
+        "imperial conflict and Revolution",
+        "Constitution and early republic",
+        "competing visions of nationhood"
+      ]
+    },
+    {
+      "unit_code": "P4_1800_1848",
+      "unit_name": "Period 4: 1800–1848",
+      "topics": [
+        "Jeffersonian/Jacksonian politics",
+        "Market Revolution",
+        "reform and sectional culture"
+      ]
+    },
+    {
+      "unit_code": "P5_1844_1877",
+      "unit_name": "Period 5: 1844–1877",
+      "topics": [
+        "expansion and sectional crisis",
+        "Civil War",
+        "Reconstruction"
+      ]
+    },
+    {
+      "unit_code": "P6_1865_1898",
+      "unit_name": "Period 6: 1865–1898",
+      "topics": [
+        "industrial capitalism",
+        "Gilded Age politics",
+        "West and urbanization",
+        "populism"
+      ]
+    },
+    {
+      "unit_code": "P7_1890_1945",
+      "unit_name": "Period 7: 1890–1945",
+      "topics": [
+        "Progressivism and empire",
+        "1920s–Depression",
+        "World Wars and home front"
+      ]
+    },
+    {
+      "unit_code": "P8_1945_1980",
+      "unit_name": "Period 8: 1945–1980",
+      "topics": [
+        "Cold War",
+        "affluence and unrest",
+        "civil rights",
+        "liberalism and its limits"
+      ]
+    },
+    {
+      "unit_code": "P9_1980_present",
+      "unit_name": "Period 9: 1980–Present",
+      "topics": [
+        "conservative resurgence",
+        "end of Cold War",
+        "globalization and demographics",
+        "recent political polarization"
+      ]
+    }
+  ]
+}

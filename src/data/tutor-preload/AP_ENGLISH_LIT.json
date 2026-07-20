@@ -1,0 +1,40 @@
+{
+  "exam_type": "AP_ENGLISH_LIT",
+  "display_name": "AP English Literature and Composition",
+  "command_terms": [
+    "analyze",
+    "interpret",
+    "compare",
+    "trace",
+    "evaluate effect",
+    "justify reading",
+    "characterize",
+    "explain complexity"
+  ],
+  "misconceptions": [
+    "Plot summary mistaken for literary analysis",
+    "Naming a device without explaining how it shapes meaning",
+    "Forcing a single “correct” theme and ignoring ambiguity",
+    "Open essay: choosing a text without enough specific evidence",
+    "Confusing speaker with poet/author"
+  ],
+  "paper_rules": [
+    "MCQ: poetry and prose passages; focus on craft and meaning",
+    "FRQ1 Poetry analysis: thesis on how poetic choices create meaning",
+    "FRQ2 Prose analysis: fiction/drama excerpt craft analysis",
+    "FRQ3 Literary argument: defend a claim about a work of literary merit with specific evidence",
+    "Essays scored on thesis, evidence/commentary, and sophistication as applicable"
+  ],
+  "calculator_policy": "none",
+  "units_summary": [
+    "U1 Short Fiction Foundations (w≈0.11, q=55)",
+    "U2 Poetry Foundations (w≈0.12, q=60)",
+    "U3 Longer Fiction and Drama Foundations (w≈0.11, q=55)",
+    "U4 Short Fiction Complexity (w≈0.11, q=55)",
+    "U5 Poetry Complexity (w≈0.11, q=55)",
+    "U6 Longer Works Complexity (w≈0.11, q=55)",
+    "U7 Short Fiction Interpretation (w≈0.11, q=55)",
+    "U8 Poetry Interpretation (w≈0.12, q=60)",
+    "U9 Longer Works and Open Response (w≈0.1, q=50)"
+  ]
+}

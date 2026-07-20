@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('3ec3f859-dab4-44b3-aa6b-104eccc55a80', 'Which choice completes the text with the most logical transition?', 'Economists noticed that the small town''s bakeries all raised their prices within the same week. None of the owners had spoken to one another; ______ each had simply responded to the same jump in the cost of flour.', NULL, '[{"id":"A","text":"nevertheless,","is_correct":false,"explanation":"Incorrect: the second clause explains the coincidence rather than opposing it."},{"id":"B","text":"instead,","is_correct":true,"explanation":"Correct: it replaces the idea of collusion with the real cause, a shared cost increase."},{"id":"C","text":"similarly,","is_correct":false,"explanation":"Incorrect: the clause does not add a parallel point; it corrects an implied explanation."},{"id":"D","text":"therefore,","is_correct":false,"explanation":"Incorrect: responding to flour costs is not a consequence of not speaking."}]'::jsonb, 'B', 'Step 1 — Identify the rejected idea
+The text stresses that {{yellow:None of the owners had spoken to one another}}, hinting collusion is ruled out.
+Step 2 — Supply the replacement
+''Instead'' swaps the ruled-out explanation for the true one: a shared cost spike.
+Distractor analysis:
+- A: ''nevertheless'' signals contrast, but the clause completes, not opposes, the thought.
+- C: ''similarly'' adds a parallel, yet the clause offers a correction.
+- D: ''therefore'' implies causation that the sentences do not support.', 'Is the second clause adding a reason or replacing a wrong one?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'medium', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

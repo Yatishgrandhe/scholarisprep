@@ -1,0 +1,185 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: hsl(var(--foreground) / 0.25);
+  backdrop-filter: blur(2px);
+}
+
+.card {
+  width: min(640px, 100%);
+  max-height: min(90vh, 720px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 2px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 24px 48px hsl(var(--foreground) / 0.12);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5) 0;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 12px;
+  background: hsl(var(--muted) / 0.5);
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.backBtn:hover {
+  background: hsl(var(--muted));
+}
+
+.backBtn:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.backSpacer {
+  width: 2.25rem;
+}
+
+.stepLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-5);
+}
+
+.title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-2);
+}
+
+.subtitle {
+  font-size: 0.9375rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 var(--space-5);
+  line-height: 1.5;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid hsl(var(--border));
+}
+
+.footerBtnGhost,
+.footerBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 2.5rem;
+  padding: 0 var(--space-5);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    filter 150ms ease;
+}
+
+.footerBtnGhost {
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+}
+
+.footerBtnGhost:hover:not(:disabled) {
+  background: hsl(var(--muted) / 0.55);
+  border-color: hsl(var(--muted-foreground) / 0.45);
+}
+
+.footerBtnGhost:focus-visible,
+.footerBtnPrimary:focus-visible {
+  outline: 2px solid hsl(var(--primary) / 0.45);
+  outline-offset: 2px;
+}
+
+.footerBtnPrimary {
+  border: none;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  min-width: 7rem;
+}
+
+.footerBtnPrimary:hover:not(:disabled) {
+  background: hsl(var(--accent));
+  filter: none;
+}
+
+/* Dark: ink-on-white pill so Continue never becomes white-on-white. */
+:global(.dark) .footerBtnPrimary {
+  background: hsl(0 0% 100% / 0.94);
+  color: hsl(222 47% 11%);
+}
+
+:global(.dark) .footerBtnPrimary:hover:not(:disabled) {
+  background: hsl(0 0% 100%);
+  filter: none;
+}
+
+.footerBtnPrimary:disabled,
+.footerBtnGhost:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: wizardSpin 0.6s linear infinite;
+}
+
+@keyframes wizardSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

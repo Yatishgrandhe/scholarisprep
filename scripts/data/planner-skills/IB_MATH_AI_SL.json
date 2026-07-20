@@ -1,0 +1,155 @@
+{
+  "examType": "IB_MATH_AI_SL",
+  "topics": [
+    "Number & algebra",
+    "Functions",
+    "Geometry & trigonometry",
+    "Statistics & probability",
+    "Calculus",
+    "Technology & IA skills",
+    "Integration & review 7"
+  ],
+  "units": [
+    {
+      "unit_code": "U1_number_algebra",
+      "title": "Number & algebra",
+      "sort_order": 1
+    },
+    {
+      "unit_code": "U2_functions",
+      "title": "Functions",
+      "sort_order": 2
+    },
+    {
+      "unit_code": "U3_geometry_trigonometry",
+      "title": "Geometry & trigonometry",
+      "sort_order": 3
+    },
+    {
+      "unit_code": "U4_statistics_probability",
+      "title": "Statistics & probability",
+      "sort_order": 4
+    },
+    {
+      "unit_code": "U5_calculus",
+      "title": "Calculus",
+      "sort_order": 5
+    },
+    {
+      "unit_code": "U6_technology_ia_skills",
+      "title": "Technology & IA skills",
+      "sort_order": 6
+    },
+    {
+      "unit_code": "U7_integration_review_7",
+      "title": "Integration & review 7",
+      "sort_order": 7
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "IB_MATH_AI_SL:U1_number_algebra",
+      "unit_code": "U1_number_algebra",
+      "title": "Number & algebra",
+      "topics": [
+        "approximation",
+        "sequences",
+        "financial math",
+        "systems"
+      ],
+      "recommended_hours": 7,
+      "prerequisites": []
+    },
+    {
+      "skill_id": "IB_MATH_AI_SL:U2_functions",
+      "unit_code": "U2_functions",
+      "title": "Functions",
+      "topics": [
+        "modelling",
+        "linear/quadratic/exponential",
+        "sinusoidal"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AI_SL:U1_number_algebra"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AI_SL:U3_geometry_trigonometry",
+      "unit_code": "U3_geometry_trigonometry",
+      "title": "Geometry & trigonometry",
+      "topics": [
+        "bearings",
+        "Voronoi intro",
+        "trigonometry in context"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AI_SL:U2_functions"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AI_SL:U4_statistics_probability",
+      "unit_code": "U4_statistics_probability",
+      "title": "Statistics & probability",
+      "topics": [
+        "sampling",
+        "hypothesis testing",
+        "chi-squared",
+        "normal",
+        "bivariate"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AI_SL:U3_geometry_trigonometry"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AI_SL:U5_calculus",
+      "unit_code": "U5_calculus",
+      "title": "Calculus",
+      "topics": [
+        "rates of change",
+        "optimization",
+        "area",
+        "kinematics intro"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AI_SL:U4_statistics_probability"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AI_SL:U6_technology_ia_skills",
+      "unit_code": "U6_technology_ia_skills",
+      "title": "Technology & IA skills",
+      "topics": [
+        "GDC fluency",
+        "spreadsheet modelling",
+        "exploration"
+      ],
+      "recommended_hours": 6,
+      "prerequisites": [
+        "IB_MATH_AI_SL:U5_calculus"
+      ]
+    },
+    {
+      "skill_id": "IB_MATH_AI_SL:U7_integration_review_7",
+      "unit_code": "U7_integration_review_7",
+      "title": "Integration & review 7",
+      "topics": [
+        "synthesis",
+        "exam practice"
+      ],
+      "recommended_hours": 5,
+      "prerequisites": [
+        "IB_MATH_AI_SL:U6_technology_ia_skills"
+      ]
+    }
+  ],
+  "weekly_template_hints": [
+    "2\u20133 unit lessons",
+    "1 unit test every 2 weeks",
+    "Full-length Form spaced toward exam date"
+  ]
+}

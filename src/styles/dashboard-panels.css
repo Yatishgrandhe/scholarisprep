@@ -1,0 +1,33 @@
+/* Scholaris Dashboard v4 — flat minimal panel system (OnePrep-style) */
+
+.pageBody {
+  --panel-radius: 16px;
+  --panel-padding: var(--space-5);
+  --shadow-panel: none;
+  --shadow-panel-hover: 0 2px 8px hsl(220 30% 10% / 0.05);
+  --bg-raised: hsl(var(--card));
+  --bg-muted: hsl(var(--muted) / 0.55);
+  --border-glow: hsl(var(--muted-foreground) / 0.5);
+  --dash-transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.dark .pageBody {
+  --bg-muted: hsl(var(--muted) / 0.5);
+  --bg-raised: hsl(var(--card));
+  --shadow-panel: none;
+  --shadow-panel-hover: 0 4px 16px hsl(0 0% 0% / 0.3);
+  --border-glow: hsl(222 14% 34%);
+}
+
+.pageBody [data-slot="card"] {
+  position: relative;
+  box-shadow: none !important;
+  transition: var(--dash-transition) !important;
+}
+
+.pageBody [data-slot="card"]:hover {
+  border-color: var(--border-glow) !important;
+}

@@ -1,0 +1,36 @@
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 3px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--primary)),
+    hsl(var(--exam-sat)),
+    hsl(var(--primary))
+  );
+  transform: scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.2s ease;
+}
+
+.barActive {
+  opacity: 1;
+  animation: routeProgress 0.45s ease forwards;
+}
+
+@keyframes routeProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  40% {
+    transform: scaleX(0.65);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

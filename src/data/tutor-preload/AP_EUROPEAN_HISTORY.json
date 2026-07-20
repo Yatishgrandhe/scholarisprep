@@ -1,0 +1,40 @@
+{
+  "exam_type": "AP_EUROPEAN_HISTORY",
+  "display_name": "AP European History",
+  "command_terms": [
+    "contextualize",
+    "compare",
+    "causation",
+    "continuity and change",
+    "sourcing",
+    "corroborate",
+    "argue",
+    "evaluate"
+  ],
+  "misconceptions": [
+    "Narrating events without historical reasoning (causation/CCOT/comparison)",
+    "DBQ: using documents as illustrations only, without sourcing/HIPP",
+    "LEQ: thesis that restates the prompt without a line of reasoning",
+    "Treating “Europe” as static geography across periods",
+    "Confusing correlation in stimulus data with causation"
+  ],
+  "paper_rules": [
+    "MCQ: stimulus sets; select evidence supporting historical claims",
+    "SAQ: concise A/B/C responses with specific evidence",
+    "DBQ: thesis, contextualization, document use, sourcing, complexity as scored",
+    "LEQ: choose prompt; thesis + specific evidence + historical reasoning",
+    "Periodization: c.1450–1648; 1648–1815; 1815–1914; 1914–present"
+  ],
+  "calculator_policy": "none",
+  "units_summary": [
+    "U1 Renaissance and Exploration c.1450–1648 (w≈0.1, q=50)",
+    "U2 Age of Reformation c.1450–1648 (w≈0.1, q=50)",
+    "U3 Absolutism and Constitutionalism c.1648–1815 (w≈0.11, q=55)",
+    "U4 Scientific Philosophical and Political Developments c.1648–1815 (w≈0.11, q=55)",
+    "U5 Conflict Crisis and Reaction in the Late 18th Century (w≈0.12, q=60)",
+    "U6 Industrialization and Its Effects c.1815–1914 (w≈0.12, q=60)",
+    "U7 19th-Century Perspectives and Political Developments (w≈0.12, q=60)",
+    "U8 20th-Century Global Conflicts c.1914–present (w≈0.12, q=60)",
+    "U9 Cold War and Contemporary Europe (w≈0.1, q=50)"
+  ]
+}

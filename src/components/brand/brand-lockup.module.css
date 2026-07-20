@@ -1,0 +1,51 @@
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.mark {
+  flex-shrink: 0;
+  color: hsl(var(--primary));
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: hsl(var(--foreground));
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.sm {
+  gap: 9px;
+}
+
+.sm .wordmark {
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+
+.md {
+  gap: 10px;
+}
+
+.md .wordmark {
+  font-size: 22px;
+  letter-spacing: -0.028em;
+}
+
+.lg {
+  gap: 12px;
+}
+
+.lg .wordmark {
+  font-size: 26px;
+  letter-spacing: -0.03em;
+}
+
+.light .mark,
+.light .wordmark {
+  color: #ffffff;
+}

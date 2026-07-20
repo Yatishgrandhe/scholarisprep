@@ -1,0 +1,12 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('a1124af6-5ce3-480c-a533-55366fb0c50e', 'Which choice completes the text with the most logical transition?', 'Anthropologists studying the remote valley community noted that its members rarely traded with outsiders and grew nearly all their own food. One might expect such isolation to breed a narrow, unchanging set of customs. ______ the village''s oral traditions were strikingly inventive, absorbing new tales and reworking old ones with each generation.', NULL, '[{"id":"A","text":"Surprisingly,","is_correct":true,"explanation":"Correct: the inventive traditions defy the expectation that isolation produces unchanging customs."},{"id":"B","text":"Predictably,","is_correct":false,"explanation":"Wrong: the outcome contradicts the stated expectation, so it is the opposite of predictable."},{"id":"C","text":"Therefore,","is_correct":false,"explanation":"Wrong: inventiveness does not follow logically from isolation; it cuts against the expected result."},{"id":"D","text":"Likewise,","is_correct":false,"explanation":"Wrong: no parallel case is being added; the sentence overturns the expectation just raised."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The second sentence sets up the expectation that isolation would {{yellow:breed a narrow, unchanging set of customs}}, and the final sentence reports the opposite.
+Step 2 — Match the transition
+Because the inventive traditions defy the stated expectation, ''Surprisingly'' fits.
+Distractor analysis:
+- A is correct.
+- B: ''Predictably'' would suit a confirmed expectation, but this one is overturned.
+- C: ''Therefore'' implies the result follows from isolation, which it contradicts.
+- D: ''Likewise'' would add a parallel, but the sentence reverses the expectation.', 'The expectation was set up to be broken—what signals that the result defies it?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'hard', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

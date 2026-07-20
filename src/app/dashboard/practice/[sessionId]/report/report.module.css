@@ -1,0 +1,816 @@
+.page {
+  /*
+   * The report flows in the dashboard's normal chrome + document scroll (its
+   * layout skips the fixed-height exam shell for the /report route), so it
+   * just needs to lay its sections out in a centered, readable column.
+   */
+  width: 100%;
+  font-family: var(--font-body);
+  color: hsl(var(--foreground));
+  padding: var(--space-2) 0 var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.page > * {
+  width: 100%;
+  max-width: 760px;
+}
+
+/*
+ * The report is an analytics surface: keep every heading on the clean UI
+ * sans, not the global display serif (which shadcn's <h3> AccordionTrigger
+ * would otherwise pull in, clashing with the rest of the page).
+ */
+.page :where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-body);
+  letter-spacing: -0.01em;
+}
+
+.summaryCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.emptyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding: var(--space-8) var(--space-6);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.emptyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.emptyTitle {
+  margin: var(--space-2) 0 0;
+  font-family: var(--font-body);
+  font-size: 1.375rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+.emptyText {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: hsl(var(--muted-foreground));
+  max-width: 42ch;
+}
+
+.emptyActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  margin-top: var(--space-3);
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 var(--space-2);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.35);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+.scoreTitle {
+  font-family: var(--font-body);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-2);
+  color: hsl(var(--foreground));
+}
+
+.encouragement {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+  max-width: 46ch;
+}
+
+.chartWrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.2);
+}
+
+.chartLabel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+/* Exam report layout (shared with practice report module) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.headerAside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.metaLine {
+  margin: 0 0 var(--space-2);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--muted-foreground));
+}
+
+.section {
+  padding: var(--space-6);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.section > h2 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+.diffGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-3);
+}
+
+.diffLabel {
+  margin: 0 0 var(--space-1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+.diffValue {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.answerCorrect {
+  margin: var(--space-3) 0;
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: hsl(var(--score-positive));
+}
+
+.answerWrong {
+  margin: var(--space-3) 0;
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: hsl(var(--score-negative));
+}
+
+.impact {
+  margin: 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.25);
+  font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+}
+
+.impact strong {
+  color: hsl(var(--primary));
+}
+
+.panel {
+  padding: var(--space-6);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.panelTitle {
+  margin: 0 0 var(--space-5);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.filterBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-size: 0.8125rem;
+  font-weight: 650;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.filterBtn:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.35);
+}
+
+.filterBtnActive {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.filterBtnActive:hover {
+  background: hsl(var(--accent));
+  border-color: hsl(var(--accent));
+}
+
+.gridPanel {
+  padding: var(--space-4);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.15);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dot {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.dot:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.dotCorrect {
+  background: hsl(var(--score-positive) / 0.12);
+  color: hsl(var(--score-positive));
+  border: 1.5px solid hsl(var(--score-positive) / 0.45);
+}
+
+.dotWrong {
+  background: hsl(var(--score-negative) / 0.1);
+  color: hsl(var(--score-negative));
+  border: 1.5px solid hsl(var(--score-negative) / 0.4);
+}
+
+.dotFlagged {
+  box-shadow: 0 0 0 2px hsl(var(--exam-jamb));
+}
+
+/* ───────── Question breakdown: custom collapsible cards ───────── */
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.qItem {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.qItemCorrect {
+  border-color: hsl(var(--score-positive) / 0.3);
+  background: hsl(var(--score-positive) / 0.045);
+}
+
+.qItemWrong {
+  border-color: hsl(var(--score-negative) / 0.3);
+  background: hsl(var(--score-negative) / 0.045);
+}
+
+.qItemOpen {
+  border-color: hsl(var(--muted-foreground) / 0.35);
+  background: hsl(var(--card));
+}
+
+.qHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  text-align: left;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+}
+
+.qLabel {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.qNum {
+  flex-shrink: 0;
+  font-size: 0.9375rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+.qTopic {
+  overflow: hidden;
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: hsl(var(--muted-foreground));
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.qMetaRight {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.qCaret {
+  flex-shrink: 0;
+  color: hsl(var(--muted-foreground));
+  transition: transform 200ms ease;
+}
+
+.qItemOpen .qCaret {
+  transform: rotate(180deg);
+}
+
+.statusCorrect,
+.statusWrong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.statusCorrect {
+  background: hsl(var(--score-positive) / 0.14);
+  color: hsl(var(--score-positive));
+  border: 1px solid hsl(var(--score-positive) / 0.3);
+}
+
+.statusWrong {
+  background: hsl(var(--score-negative) / 0.12);
+  color: hsl(var(--score-negative));
+  border: 1px solid hsl(var(--score-negative) / 0.3);
+}
+
+.qBody {
+  padding: var(--space-2) var(--space-4) var(--space-4);
+  border-top: 1px solid hsl(var(--border));
+}
+
+.stimulus {
+  margin: var(--space-4) 0 var(--space-4);
+  padding: var(--space-4);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.25);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+}
+
+.question {
+  margin: var(--space-4) 0 var(--space-4);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.65;
+  color: hsl(var(--foreground));
+}
+
+.qFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.aiBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.aiBtn:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+/* ───────── Topic performance: custom grid table ───────── */
+.topicList {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid hsl(var(--border));
+}
+
+.topicRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.topicRow:last-child {
+  border-bottom: none;
+}
+
+.topicRow > span {
+  justify-self: start;
+  text-align: left;
+}
+
+.topicRow > span:nth-child(n + 2) {
+  justify-self: end;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.topicHead {
+  background: hsl(var(--muted) / 0.35);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+.topicName {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.topicNum {
+  font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+}
+
+.topicAcc {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.accGood {
+  color: hsl(var(--score-positive));
+}
+
+.accMid {
+  color: hsl(var(--exam-jamb));
+}
+
+.accLow {
+  color: hsl(var(--score-negative));
+}
+
+.recGrid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.recCard {
+  padding: var(--space-4);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.recCard:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  transform: translateY(-1px);
+}
+
+.recTitle {
+  margin: 0 0 var(--space-2);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.recReason {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0 0 var(--space-3);
+  color: hsl(var(--muted-foreground));
+}
+
+.recMeta {
+  font-size: 0.8125rem;
+  margin: 0 0 var(--space-3);
+  color: hsl(var(--muted-foreground));
+}
+
+.studyTip,
+.warmNote {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  padding: var(--space-4);
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.25);
+  color: hsl(var(--foreground));
+}
+
+.recSkeletons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skeleton {
+  display: block;
+  height: 104px;
+  border-radius: 14px;
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(
+    100deg,
+    hsl(var(--muted) / 0.3) 30%,
+    hsl(var(--muted) / 0.55) 50%,
+    hsl(var(--muted) / 0.3) 70%
+  );
+  background-size: 200% 100%;
+  animation: reportShimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes reportShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/*
+ * Action bar at the end of the report. It lives in normal flow (not fixed or
+ * sticky): the report renders inside the exam shell (100dvh, sitting below the
+ * dashboard toolbar) whose scrollport bottom is off-viewport, and the route
+ * wrapper has a transform — both of which break fixed/sticky pinning. An
+ * in-flow bar is always fully reachable because the report scrolls.
+ */
+.stickyBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  margin-top: var(--space-3);
+  padding: var(--space-4);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: var(--shadow-sm);
+}
+
+.stickyInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  width: 100%;
+}
+
+/*
+ * On a wide toolbar the primary + secondary actions sit left and the tertiary
+ * "back" action pushes to the right. When the row is too narrow to hold all
+ * three (narrow content column), they wrap instead of clipping.
+ */
+.stickyInner .stickyBtnGhost {
+  margin-left: auto;
+}
+
+.stickyBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 650;
+  font-family: var(--font-body);
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.stickyBtnPrimary {
+  border: 1px solid transparent;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.stickyBtnPrimary:hover {
+  background: hsl(var(--accent));
+}
+
+.stickyBtnOutline {
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.stickyBtnOutline:hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+}
+
+.stickyBtnGhost {
+  border: 1px solid transparent;
+  background: transparent;
+  color: hsl(var(--foreground));
+}
+
+.stickyBtnGhost:hover {
+  background: hsl(var(--muted) / 0.5);
+}
+
+@media (max-width: 560px) {
+  .stickyInner {
+    flex-wrap: wrap;
+  }
+
+  .stickyBtn {
+    flex: 1 1 auto;
+  }
+
+  .stickyInner .stickyBtnGhost {
+    margin-left: 0;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .summaryCard,
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .headerAside {
+    align-items: center;
+  }
+
+  .chartWrap {
+    align-self: center;
+  }
+
+  .topicRow {
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--space-2);
+  }
+
+  .topicRow > span:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .topicRow {
+    grid-template-columns: 1fr;
+  }
+
+  .topicRow > span:nth-child(n + 2) {
+    justify-self: start;
+    text-align: left;
+  }
+}

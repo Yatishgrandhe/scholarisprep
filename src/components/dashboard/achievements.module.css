@@ -1,0 +1,110 @@
+/* Achievements grid — flat tiles, no glow */
+.section {
+  margin-bottom: var(--space-8);
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+  margin-bottom: var(--space-3);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  min-height: 200px;
+  overflow: hidden;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.card:not(.cardLocked):hover {
+  border-color: hsl(var(--muted-foreground) / 0.5);
+}
+
+:global(.dark) .card:not(.cardLocked):hover {
+  border-color: hsl(222 14% 34%);
+}
+
+.cardNewlyEarned {
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+.cardLocked {
+  background: hsl(var(--muted) / 0.4);
+  filter: grayscale(1);
+  opacity: 0.75;
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.cardLocked .iconWrap {
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+.lockOverlay {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  color: hsl(var(--muted-foreground));
+}
+
+.name {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: var(--space-2);
+}
+
+.description {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+}
+
+.earnedAt {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.emptyEarned {
+  padding: var(--space-8);
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: 16px;
+  background: hsl(var(--card));
+}

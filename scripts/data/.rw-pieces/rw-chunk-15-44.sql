@@ -1,0 +1,11 @@
+INSERT INTO public.questions
+(id, question_text, stimulus_text, stimulus_type, options, correct_answer, explanation, hint, topic, subtopic, section, domain_id, skill_id, math_skill_code, difficulty, calculator_allowed, exam_type, question_type, is_platform_question, ai_generated, source, source_metadata, created_at, updated_at)
+VALUES ('7fec9224-4c84-4d69-9870-8a83a7eb8907', 'Which choice completes the text with the most logical transition?', 'Honeybees communicate the location of food through a movement called the waggle dance. The angle of the dance indicates direction, while its duration signals distance. ______ a longer waggle tells other bees that the flowers lie farther away.', NULL, '[{"id":"A","text":"For instance,","is_correct":true,"explanation":"Correct: the longer-waggle detail is a specific example of duration signaling distance."},{"id":"B","text":"However,","is_correct":false,"explanation":"Incorrect: the sentence illustrates the prior claim rather than contradicting it."},{"id":"C","text":"Therefore,","is_correct":false,"explanation":"Incorrect: the sentence gives an example, not a logical conclusion drawn from the prior point."},{"id":"D","text":"Otherwise,","is_correct":false,"explanation":"Incorrect: ''Otherwise'' signals an alternative condition, which does not fit an illustration."}]'::jsonb, 'A', 'Step 1 — Identify the relationship
+The prior sentence states that {{yellow:its duration signals distance}}, and the final sentence illustrates that with a longer waggle meaning farther flowers.
+Step 2 — Choose the transition
+Because the last sentence is a concrete example of the general rule, an example transition like ''For instance'' fits.
+Distractor analysis:
+- B: ''However'' implies contrast, but the example agrees with the claim.
+- C: ''Therefore'' frames the example as a deduction rather than an illustration.
+- D: ''Otherwise'' introduces an alternative scenario that the text does not present.', 'Does the last sentence give a specific case of duration signaling distance?', 'Expression of Ideas', 'Transitions', 'reading_writing', 'expression', 'TRA', NULL, 'easy', false, 'SAT', 'multiple_choice', true, true, 'scholaris_ai', '{"generator":"scholaris_ai_v1","model":"gemma-4-26b-a4b-it","original":true,"explanation_v2":true}'::jsonb, now(), now())
+ON CONFLICT (id) DO NOTHING;

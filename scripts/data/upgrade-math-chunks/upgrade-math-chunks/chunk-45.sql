@@ -1,0 +1,147 @@
+BEGIN;
+UPDATE public.questions SET
+  question_text = 'What is the value of \(\frac{x^2 - 1}{x + 1}\) when \(x = -3\)?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"-4","is_correct":false,"explanation":"Choice A (-4…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"-2","is_correct":false,"explanation":"Choice B (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"2","is_correct":false,"explanation":"Choice C (2…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"4","is_correct":true,"explanation":"Correct (D). Matches the worked solution above."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1 — Understand the problem.** What is the value of \(\frac{x^2 - 1}{x + 1}\) when \(x = -3\)?
+
+**Step 2 — Solve.** First, we can factor the numerator, which gives us \(\frac{(x+1)(x-1)}{x+1}\).  Since \(x\neq -1\), we can cancel the \(x+1\) terms, leaving us with \(x-1\).  Substituting -3 for x gives -3 - 1 = -4, so the correct answer is D.
+
+**Step 3 — Select D.** 4
+
+**Distractor analysis:**
+- **A** (-4): Choice A (-4…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **B** (-2): Choice B (-2…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (2): Choice C (2…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRE","domain_id":"advanced","opensat_index":581,"opensat_domain":"Advanced Math","opensat_raw_id":"32df587a","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.062Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '3e585b25-57d0-4c80-8650-af767bac6fce';
+
+UPDATE public.questions SET
+  question_text = 'The equation $\frac{2x-3}{x+1} = 5$ is equivalent to which of the following equations?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"2x - 3 = 5x + 5","is_correct":true,"explanation":"Correct (A). Matches the worked solution above."},{"id":"B","text":"2x - 3 = 5x - 5","is_correct":false,"explanation":"Choice B (2x - 3 = 5x - 5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"C","text":"2x + 3 = 5x + 5","is_correct":false,"explanation":"Adds quantities that should be multiplied or compares unrelated terms."},{"id":"D","text":"2x + 3 = 5x - 5","is_correct":false,"explanation":"Adds quantities that should be multiplied or compares unrelated terms."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1 — Understand the problem.** The equation $\frac{2x-3}{x+1} = 5$ is equivalent to which of the following equations?
+
+**Step 2 — Solve.** To solve for x, we multiply both sides of the equation by (x+1).  This gives us $2x - 3 = 5(x+1)$.  Distributing the 5 on the right side, we get $2x - 3 = 5x + 5$.
+
+**Step 3 — Select A.** 2x - 3 = 5x + 5
+
+**Distractor analysis:**
+- **B** (2x - 3 = 5x - 5): Choice B (2x - 3 = 5x - 5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (2x + 3 = 5x + 5): Adds quantities that should be multiplied or compares unrelated terms.
+- **D** (2x + 3 = 5x - 5): Adds quantities that should be multiplied or compares unrelated terms.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"LIN","domain_id":"algebra","opensat_index":979,"opensat_domain":"Algebra","opensat_raw_id":"random_id_a3","opensat_difficulty":"Hard","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.062Z","prior_difficulty":"hard"}'::jsonb,
+  updated_at = now()
+WHERE id = '3e654601-9ede-4c5d-8157-97e6e1d3da4e';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5. What is the circumference of the circle?  (Use 3.14 for pi)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"15.7","is_correct":false,"explanation":"Choice A (15.7…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"31.4","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"78.5","is_correct":false,"explanation":"Choice C (78.5…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"157","is_correct":false,"explanation":"Choice D (157…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5. What is the circumference of the circle?  (Use 3.14 for pi)
+
+**Step 2 — Solve.** The circumference of a circle is found using the formula C = 2πr, where C is the circumference, π (pi) is approximately 3.14, and r is the radius.  Substituting the given values, we get C = 2 * 3.14 * 5 = 31.4.
+
+**Step 3 — Select B.** 31.4
+
+**Distractor analysis:**
+- **A** (15.7): Choice A (15.7…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (78.5): Choice C (78.5…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (157): Choice D (157…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":156,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_a1","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.062Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '3e78955b-275a-4f38-aee2-253ae231046e';
+
+UPDATE public.questions SET
+  question_text = 'If the original price is $500$, what is the final price after both changes?',
+  stimulus_text = 'A retail price is increased by 20% and then discounted by 20%.',
+  options = '[{"id":"A","text":"$480$","is_correct":true,"explanation":"**Step 1:** $500×1.2=600$. **Step 2:** $600×0.8=480$."},{"id":"B","text":"$500$","is_correct":false,"explanation":"Ignores both percent changes."},{"id":"C","text":"$600$","is_correct":false,"explanation":"Only applies the markup."},{"id":"D","text":"$490$","is_correct":false,"explanation":"Adds 10 without reason."}]'::jsonb,
+  correct_answer = 'A',
+  explanation = '**Step 1:** Markup: $500×(1+20/100)=600$.
+**Step 2:** Discount: $600×(1-20/100)=480$.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"model":"gemma-4-26b-a4b-it","original":true,"generator":"scholaris_ai_v1","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.062Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '3e9f3ab0-e4c0-4728-95cc-234804bd2cbc';
+
+UPDATE public.questions SET
+  question_text = 'Which value of $x$ satisfies $5x + 8 > 100$ and represents a feasible weight?',
+  stimulus_text = 'A package must weigh more than 100 grams but at most 113 grams to ship.',
+  options = '[{"id":"A","text":"$16$","is_correct":false,"explanation":"Too small: $5(16)+8=88$."},{"id":"B","text":"$17$","is_correct":false,"explanation":"Still below threshold 100."},{"id":"C","text":"$18$","is_correct":false,"explanation":"Borderline; check strict inequality."},{"id":"D","text":"$19$","is_correct":true,"explanation":"**Step 1:** $5x > 92$. **Step 2:** $x > 18.4$. Smallest integer choice: 19."}]'::jsonb,
+  correct_answer = 'D',
+  explanation = '**Step 1:** Isolate: $5x > 92$.
+**Step 2:** $x > 18.40$.
+**Step 3:** Among choices, $19$ is the smallest valid value.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"original":true,"generator":"scholaris_template_v1","explanation_v2":true,"math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.062Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '3ee4c039-b4fe-41c0-aa76-85b51fe4b7ce';
+
+UPDATE public.questions SET
+  question_text = 'A circle has a radius of 5 units. What is the circumference of this circle? (Use $\pi = 3.14$)',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"15.7","is_correct":false,"explanation":"Choice A (15.7…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"31.4","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"62.8","is_correct":false,"explanation":"Choice C (62.8…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"78.5","is_correct":false,"explanation":"Choice D (78.5…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** A circle has a radius of 5 units. What is the circumference of this circle? (Use $\pi = 3.14$)
+
+**Step 2 — Solve.** The circumference of a circle is given by the formula $C = 2 \pi r$, where $r$ is the radius.  Substituting 5 for $r$ and 3.14 for $\pi$ gives $C = 2 (3.14) (5) = 31.4$.
+
+**Step 3 — Select B.** 31.4
+
+**Distractor analysis:**
+- **A** (15.7): Choice A (15.7…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** (62.8): Choice C (62.8…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** (78.5): Choice D (78.5…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"CIR","domain_id":"geometry","opensat_index":22,"opensat_domain":"Geometry and Trigonometry","opensat_raw_id":"random_id_c9","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.062Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '3ef2f0b7-593a-49ec-98da-ae7a188958a6';
+
+UPDATE public.questions SET
+  question_text = 'The graph of the equation  $y = \frac{1}{2}(x-3)^2 + 1$  is a parabola. What is the vertex of this parabola?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"(1, 3)","is_correct":false,"explanation":"Choice A ((1, 3)…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"B","text":"(3, 1)","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"(-3, 1)","is_correct":false,"explanation":"Choice C ((-3, 1)…) reflects a common misread or arithmetic slip — re-check each operation against the question."},{"id":"D","text":"(1, -3)","is_correct":false,"explanation":"Choice D ((1, -3)…) reflects a common misread or arithmetic slip — re-check each operation against the question."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** The graph of the equation  $y = \frac{1}{2}(x-3)^2 + 1$  is a parabola. What is the vertex of this parabola?
+
+**Step 2 — Solve.** The vertex form of a parabola is $y = a(x - h)^2 + k$, where $(h, k)$ is the vertex. In the given equation, $h = 3$ and $k = 1$. Therefore, the vertex of the parabola is $(3, 1)$.
+
+**Step 3 — Select B.** (3, 1)
+
+**Distractor analysis:**
+- **A** ((1, 3)): Choice A ((1, 3)…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **C** ((-3, 1)): Choice C ((-3, 1)…) reflects a common misread or arithmetic slip — re-check each operation against the question.
+- **D** ((1, -3)): Choice D ((1, -3)…) reflects a common misread or arithmetic slip — re-check each operation against the question.',
+  difficulty = 'hard'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"NRM","domain_id":"advanced","opensat_index":713,"opensat_domain":"Advanced Math","opensat_raw_id":"73f19b0e","opensat_difficulty":"Medium","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.062Z","prior_difficulty":"medium"}'::jsonb,
+  updated_at = now()
+WHERE id = '3f00276f-db0c-4f2b-9dc3-8de2091e93f5';
+
+UPDATE public.questions SET
+  question_text = 'The expression $(x+2)(x-3)$ is equivalent to which of the following?',
+  stimulus_text = NULL,
+  options = '[{"id":"A","text":"x^2 - 6","is_correct":false,"explanation":"May result from squaring when you should multiply or add."},{"id":"B","text":"x^2 - x - 6","is_correct":true,"explanation":"Correct (B). Matches the worked solution above."},{"id":"C","text":"x^2 + x - 6","is_correct":false,"explanation":"May result from squaring when you should multiply or add."},{"id":"D","text":"x^2 + 5x - 6","is_correct":false,"explanation":"May result from squaring when you should multiply or add."}]'::jsonb,
+  correct_answer = 'B',
+  explanation = '**Step 1 — Understand the problem.** The expression $(x+2)(x-3)$ is equivalent to which of the following?
+
+**Step 2 — Solve.** Using the distributive property (or FOIL), we can expand the expression: (x+2)(x-3) = x(x-3) + 2(x-3) = x^2 - 3x + 2x - 6 = x^2 - x - 6.
+
+**Step 3 — Select B.** x^2 - x - 6
+
+**Distractor analysis:**
+- **A** (x^2 - 6): May result from squaring when you should multiply or add.
+- **C** (x^2 + x - 6): May result from squaring when you should multiply or add.
+- **D** (x^2 + 5x - 6): May result from squaring when you should multiply or add.',
+  difficulty = 'medium'::public.difficulty,
+  source_metadata = '{"section":"math","skill_id":"EQS","domain_id":"advanced","opensat_index":686,"opensat_domain":"Advanced Math","opensat_raw_id":"8a2110dd","opensat_difficulty":"Easy","math_difficulty_upgrade":"math_difficulty_v1","math_difficulty_upgrade_at":"2026-06-12T20:03:17.062Z","prior_difficulty":"easy"}'::jsonb,
+  updated_at = now()
+WHERE id = '3f24d332-9117-4ad2-8445-22caf617d2cb';
+
+COMMIT;

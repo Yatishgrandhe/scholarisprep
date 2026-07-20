@@ -1,0 +1,101 @@
+{
+  "exam_type": "AP_MUSIC_THEORY",
+  "skills": [
+    {
+      "id": "AP_MUSIC_THEORY_U1_pitch_read",
+      "unit_code": "U1",
+      "label": "Read Pitch Notation",
+      "description": "Identify pitches, clefs, and key signatures accurately."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U1_interval_id",
+      "unit_code": "U1",
+      "label": "Identify Intervals",
+      "description": "Name and write melodic/harmonic intervals."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U2_meter_parse",
+      "unit_code": "U2",
+      "label": "Parse Meter and Rhythm",
+      "description": "Interpret meters and notate rhythmic patterns."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U2_melody_shape",
+      "unit_code": "U2",
+      "label": "Analyze Melodic Shape",
+      "description": "Describe contour, motives, and minor-key melody."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U3_chord_spell",
+      "unit_code": "U3",
+      "label": "Spell Chords",
+      "description": "Build triads and seventh chords in root and inversion."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U3_texture_label",
+      "unit_code": "U3",
+      "label": "Label Texture",
+      "description": "Classify monophony, homophony, polyphony, and related textures."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U4_voice_lead",
+      "unit_code": "U4",
+      "label": "Apply Voice Leading",
+      "description": "Write SATB connections respecting common-practice norms."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U4_cadence_id",
+      "unit_code": "U4",
+      "label": "Identify Cadences",
+      "description": "Recognize authentic, plagal, half, and deceptive cadences."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U5_progression",
+      "unit_code": "U5",
+      "label": "Analyze Progressions",
+      "description": "Explain functional chord progressions and sequences."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U5_phrase_model",
+      "unit_code": "U5",
+      "label": "Map Phrase Models",
+      "description": "Relate harmony to phrase and period structure."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U6_nonchord_tone",
+      "unit_code": "U6",
+      "label": "Label Nonchord Tones",
+      "description": "Identify passing, neighbor, suspension, and related tones."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U6_figured_bass",
+      "unit_code": "U6",
+      "label": "Realize Figured Bass",
+      "description": "Interpret figures and produce correct sonorities."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U7_secondary_dom",
+      "unit_code": "U7",
+      "label": "Use Secondary Dominants",
+      "description": "Tonicize chords with V/x and related functions."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U7_modulation",
+      "unit_code": "U7",
+      "label": "Track Modulation",
+      "description": "Explain tonicization vs longer key change."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U8_form_map",
+      "unit_code": "U8",
+      "label": "Map Musical Form",
+      "description": "Identify phrase, binary/ternary, and larger formal units."
+    },
+    {
+      "id": "AP_MUSIC_THEORY_U8_sight_sing",
+      "unit_code": "U8",
+      "label": "Sight-Sing Prepared Lines",
+      "description": "Perform pitch and rhythm accurately from notation."
+    }
+  ]
+}

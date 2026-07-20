@@ -1,0 +1,154 @@
+{
+  "exam_type": "AP_ART_HISTORY",
+  "display_name": "AP Art History",
+  "command_terms": [
+    "identify",
+    "describe",
+    "analyze",
+    "compare",
+    "attribute",
+    "contextualize",
+    "explain"
+  ],
+  "misconceptions": [
+    "Memorizing titles without connecting form\u2013function\u2013content\u2013context",
+    "Style labels without visual evidence",
+    "Treating cultures as isolated rather than networked",
+    "Confusing subject matter with deeper meaning or function",
+    "Writing chronology dump instead of a comparative thesis"
+  ],
+  "paper_rules": [
+    "Section I: 80 image-based MCQs in 60 minutes",
+    "Section II: 6 FRQs in 120 minutes (comparison, visual/contextual analysis, short essays)",
+    "Always ground claims in specific visual or contextual evidence",
+    "Use precise vocabulary for materials, techniques, and patronage"
+  ],
+  "calculator_policy": {
+    "default": "none",
+    "sections": [
+      {
+        "section_id": "mcq",
+        "label": "Multiple Choice",
+        "calculator_allowed": false
+      },
+      {
+        "section_id": "frq",
+        "label": "Free Response",
+        "calculator_allowed": false
+      }
+    ],
+    "notes": "No calculator; image-based stimuli throughout."
+  },
+  "units_summary": [
+    {
+      "unit_code": "U1",
+      "unit_name": "Global Prehistory",
+      "quota": 20,
+      "topics": [
+        "early human image-making",
+        "materials and sites",
+        "ritual and community function",
+        "cross-regional comparisons"
+      ]
+    },
+    {
+      "unit_code": "U2",
+      "unit_name": "Ancient Mediterranean",
+      "quota": 75,
+      "topics": [
+        "Near Eastern and Egyptian contexts",
+        "Greek and Roman traditions",
+        "patronage and civic display",
+        "form, function, content, context"
+      ]
+    },
+    {
+      "unit_code": "U3",
+      "unit_name": "Early Europe and Colonial Americas",
+      "quota": 105,
+      "topics": [
+        "medieval to early modern Europe",
+        "religious and court patronage",
+        "colonial American encounters",
+        "style change and continuity"
+      ]
+    },
+    {
+      "unit_code": "U4",
+      "unit_name": "Later Europe and Americas",
+      "quota": 105,
+      "topics": [
+        "modernizing academies and avant-gardes",
+        "nation, empire, and identity",
+        "new media and urban modernity",
+        "museum and market contexts"
+      ]
+    },
+    {
+      "unit_code": "U5",
+      "unit_name": "Indigenous Americas",
+      "quota": 30,
+      "topics": [
+        "Mesoamerican and Andean traditions",
+        "North American Indigenous arts",
+        "sacred geography and materials",
+        "continuity and change"
+      ]
+    },
+    {
+      "unit_code": "U6",
+      "unit_name": "Africa",
+      "quota": 30,
+      "topics": [
+        "regional traditions and kingdoms",
+        "performance and power objects",
+        "trade and diaspora links",
+        "colonial and modern dialogues"
+      ]
+    },
+    {
+      "unit_code": "U7",
+      "unit_name": "West and Central Asia",
+      "quota": 20,
+      "topics": [
+        "Islamic architectural traditions",
+        "portable arts and luxury",
+        "court cultures",
+        "cross-cultural exchange"
+      ]
+    },
+    {
+      "unit_code": "U8",
+      "unit_name": "South, East, and Southeast Asia",
+      "quota": 40,
+      "topics": [
+        "Buddhist and Hindu visual programs",
+        "imperial and scholarly arts",
+        "trade-route exchange",
+        "architecture and landscape"
+      ]
+    },
+    {
+      "unit_code": "U9",
+      "unit_name": "The Pacific",
+      "quota": 20,
+      "topics": [
+        "Oceanic navigation cultures",
+        "carving and textile traditions",
+        "ritual and ancestry",
+        "colonial contact narratives"
+      ]
+    },
+    {
+      "unit_code": "U10",
+      "unit_name": "Global Contemporary",
+      "quota": 55,
+      "topics": [
+        "1980s\u2013present global art",
+        "identity and activism",
+        "new media and installation",
+        "biennials and global markets"
+      ]
+    }
+  ]
+}

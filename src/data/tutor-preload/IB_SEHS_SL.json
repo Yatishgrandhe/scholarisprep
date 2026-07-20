@@ -1,0 +1,53 @@
+{
+  "exam_type": "IB_SEHS_SL",
+  "display_name": "IB Sports, Exercise and Health Science SL",
+  "units": [
+    "Anatomy",
+    "Exercise physiology",
+    "Energy systems & nutrition",
+    "Movement analysis",
+    "Skill in sport",
+    "Measurement & evaluation of performance",
+    "IA experimental investigation"
+  ],
+  "command_terms": [
+    "state",
+    "outline",
+    "describe",
+    "explain",
+    "calculate",
+    "determine",
+    "deduce",
+    "suggest",
+    "discuss",
+    "evaluate",
+    "design"
+  ],
+  "misconceptions": [
+    "confusing precision and accuracy",
+    "skipping significant figures",
+    "command term mismatch"
+  ],
+  "paper_rules": [
+    "Paper 1: follow IB command terms; show working where marks require it",
+    "Paper 2: follow IB command terms; show working where marks require it"
+  ],
+  "calculator_policy": "Paper calculator rules per subject guide; map GDC to Desmos when allowed",
+  "scoring_notes": [
+    "IB scale 1\u20137",
+    "Criterion-based markbands for extended responses",
+    "Award method marks; follow command terms strictly"
+  ],
+  "remix_cues": [
+    "Keep unit_code=U1_anatomy skill focus: skeletal",
+    "Keep unit_code=U2_exercise_physiology skill focus: cardiorespiratory",
+    "Keep unit_code=U3_energy_systems_nutrition skill focus: ATP pathways",
+    "Keep unit_code=U4_movement_analysis skill focus: biomechanics",
+    "Keep unit_code=U5_skill_in_sport skill focus: skill classification",
+    "Keep unit_code=U6_measurement_evaluation_of_performance skill focus: fitness components",
+    "Preserve SL vs HL depth",
+    "Match paper calculator rules",
+    "Use IB command-term verbs in stems"
+  ],
+  "extra": ""
+}
