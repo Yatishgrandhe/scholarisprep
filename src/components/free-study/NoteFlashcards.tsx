@@ -1,15 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import {
-  X,
-  ArrowLeft,
-  ArrowRight,
-  CheckCircle,
-  XCircle,
-} from "@phosphor-icons/react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { X } from "@phosphor-icons/react";
 import type { FreeStudyFlashcard } from "@/lib/free-study/generateFlashcards";
 import styles from "./note-flashcards.module.css";
+
+type Rating = "again" | "hard" | "good" | "easy";
+
+const RATING_ORDER: Rating[] = ["again", "hard", "good", "easy"];
 
 type NoteFlashcardsProps = {
   cards: FreeStudyFlashcard[];
@@ -22,65 +20,92 @@ export function NoteFlashcards({
   onComplete,
   onClose,
 }: NoteFlashcardsProps) {
+  const [deck, setDeck] = useState<FreeStudyFlashcard[]>(() => [...cards]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const [knownCards, setKnownCards] = useState<Set<number>>(new Set());
+  const [hasFlipped, setHasFlipped] = useState(false);
   const [finished, setFinished] = useState(false);
+  const [ratings, setRatings] = useState<Map<number, Rating>>(new Map());
+  const [showHint, setShowHint] = useState(true);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   const total = cards.length;
-  const current = cards[currentIndex];
+  const reviewedCount = ratings.size;
+  const isFlipped = flipped;
 
-  const progress = useMemo(
-    () => (total > 0 ? ((currentIndex + 1) / total) * 100 : 0),
-    [currentIndex, total],
-  );
+  const progressSegments = useMemo(() => {
+    return cards.map((_, i) => {
+      const rating = ratings.get(i);
+      if (rating === "again") return "again";
+      if (rating === "hard") return "hard";
+      if (rating === "good") return "good";
+      if (rating === "easy") return "easy";
+      if (i < currentIndex) return "pending";
+      return "empty";
+    });
+  }, [cards, ratings, currentIndex]);
 
-  const go = useCallback(
-    (delta: number) => {
-      const next = currentIndex + delta;
-      if (next < 0 || next >= total) return;
-      setCurrentIndex(next);
+  const handleFlip = useCallback(() => {
+    setFlipped((f) => !f);
+    if (!hasFlipped) {
+      setHasFlipped(true);
+      setShowHint(false);
+    }
+  }, [hasFlipped]);
+
+  const advanceCard = useCallback(
+    (rating: Rating) => {
+      setRatings((prev) => new Map(prev).set(currentIndex, rating));
+
+      if (rating === "again") {
+        const card = deck[currentIndex];
+        setDeck((prev) => [...prev, card]);
+        setFlipped(false);
+        setHasFlipped(false);
+        setShowHint(true);
+        return;
+      }
+
+      if (currentIndex === deck.length - 1) {
+        setFinished(true);
+        onComplete();
+        return;
+      }
+
+      setCurrentIndex((i) => i + 1);
       setFlipped(false);
+      setHasFlipped(false);
+      setShowHint(true);
     },
-    [currentIndex, total],
+    [currentIndex, deck, onComplete],
   );
-
-  const handleKnown = useCallback(() => {
-    setKnownCards((prev) => new Set(prev).add(currentIndex));
-    if (currentIndex === total - 1) {
-      setFinished(true);
-      onComplete();
-      return;
-    }
-    setCurrentIndex((i) => i + 1);
-    setFlipped(false);
-  }, [currentIndex, total, onComplete]);
-
-  const handleReview = useCallback(() => {
-    if (currentIndex === total - 1) {
-      setFinished(true);
-      onComplete();
-      return;
-    }
-    setCurrentIndex((i) => i + 1);
-    setFlipped(false);
-  }, [currentIndex, total, onComplete]);
 
   useEffect(() => {
     if (finished) return;
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") go(-1);
-      if (e.key === "ArrowRight") go(1);
       if (e.key === " " || e.key === "Enter") {
         e.preventDefault();
-        setFlipped((f) => !f);
+        handleFlip();
+        return;
+      }
+      if (isFlipped) {
+        if (e.key === "1") advanceCard("again");
+        if (e.key === "2") advanceCard("hard");
+        if (e.key === "3") advanceCard("good");
+        if (e.key === "4") advanceCard("easy");
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [finished, go]);
+  }, [finished, isFlipped, handleFlip, advanceCard]);
 
   if (finished) {
+    const mastered = ratings.size;
+    const againCount = [...ratings.values()].filter((r) => r === "again").length;
+    const hardCount = [...ratings.values()].filter((r) => r === "hard").length;
+    const goodCount = [...ratings.values()].filter((r) => r === "good").length;
+    const easyCount = [...ratings.values()].filter((r) => r === "easy").length;
+
     return (
       <div className={styles.overlay} onClick={onClose}>
         <div
@@ -90,23 +115,60 @@ export function NoteFlashcards({
           aria-label="Flashcards complete"
         >
           <div className={styles.scoreScreen}>
-            <span className={styles.scoreLabel}>All Done</span>
-            <span className={styles.scoreNumber}>Review Complete</span>
-            <span className={styles.scoreSub}>
-              {knownCards.size} of {total} marked as known
+            <div className={styles.scoreIcon}>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="rgb(34 197 94 / 0.12)" />
+                <path
+                  d="M15 25L21 31L33 19"
+                  stroke="rgb(34 197 94)"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <span className={styles.scoreTitle}>Session Complete</span>
+            <span className={styles.scoreMastered}>
+              {mastered} of {total} mastered
             </span>
+
+            <div className={styles.ratingBreakdown}>
+              <div className={styles.ratingRow}>
+                <span className={styles.ratingDot} style={{ background: "rgb(239 68 68)" }} />
+                <span className={styles.ratingLabel}>Again</span>
+                <span className={styles.ratingValue}>{againCount}</span>
+              </div>
+              <div className={styles.ratingRow}>
+                <span className={styles.ratingDot} style={{ background: "rgb(249 115 22)" }} />
+                <span className={styles.ratingLabel}>Hard</span>
+                <span className={styles.ratingValue}>{hardCount}</span>
+              </div>
+              <div className={styles.ratingRow}>
+                <span className={styles.ratingDot} style={{ background: "rgb(34 197 94)" }} />
+                <span className={styles.ratingLabel}>Good</span>
+                <span className={styles.ratingValue}>{goodCount}</span>
+              </div>
+              <div className={styles.ratingRow}>
+                <span className={styles.ratingDot} style={{ background: "rgb(59 130 246)" }} />
+                <span className={styles.ratingLabel}>Easy</span>
+                <span className={styles.ratingValue}>{easyCount}</span>
+              </div>
+            </div>
+
             <button
               type="button"
               className={styles.scoreCloseBtn}
               onClick={onClose}
             >
-              Close
+              Done
             </button>
           </div>
         </div>
       </div>
     );
   }
+
+  const current = deck[currentIndex];
 
   return (
     <div className={styles.overlay} onClick={onClose}>
@@ -117,15 +179,27 @@ export function NoteFlashcards({
         aria-label="Flashcards"
       >
         <div className={styles.progressBar}>
-          <div
-            className={styles.progressFill}
-            style={{ width: `${progress}%` }}
-          />
+          {progressSegments.map((seg, i) => (
+            <div
+              key={i}
+              className={`${styles.segment} ${
+                seg === "again"
+                  ? styles.segmentAgain
+                  : seg === "hard"
+                    ? styles.segmentHard
+                    : seg === "good"
+                      ? styles.segmentGood
+                      : seg === "easy"
+                        ? styles.segmentEasy
+                        : ""
+              }`}
+            />
+          ))}
         </div>
 
         <div className={styles.header}>
-          <span className={styles.headerTitle}>
-            Card {currentIndex + 1} of {total}
+          <span className={styles.headerCounter}>
+            Card {currentIndex + 1} / {deck.length}
           </span>
           <button
             type="button"
@@ -133,78 +207,84 @@ export function NoteFlashcards({
             onClick={onClose}
             aria-label="Close flashcards"
           >
-            <X size={16} weight="bold" />
+            <X size={18} weight="bold" />
           </button>
         </div>
 
         <div className={styles.body}>
-          <div
-            className={styles.cardWrapper}
-            onClick={() => setFlipped((f) => !f)}
-          >
+          <div className={styles.cardContainer}>
             <div
-              className={`${styles.card} ${flipped ? styles.cardFlipped : ""}`}
+              ref={cardRef}
+              className={`${styles.card} ${isFlipped ? styles.cardFlipped : ""}`}
+              onClick={handleFlip}
+              onKeyDown={(e) => {
+                if (e.key === " " || e.key === "Enter") {
+                  e.preventDefault();
+                  handleFlip();
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label={isFlipped ? "Answer" : "Question — press space to flip"}
             >
               <div className={styles.cardFront}>
-                <span className={styles.cardLabel}>Front</span>
+                <span className={styles.cardSideLabel}>Question</span>
                 <span className={styles.cardContent}>{current?.front}</span>
-                {current?.hint ? (
+                {current?.hint && (
                   <span className={styles.cardHint}>{current.hint}</span>
-                ) : null}
+                )}
+                {showHint && (
+                  <span className={styles.flipHint}>Tap to reveal answer</span>
+                )}
               </div>
               <div className={styles.cardBack}>
-                <span className={styles.cardLabel}>Back</span>
+                <span className={styles.cardSideLabel}>Answer</span>
                 <span className={styles.cardContent}>{current?.back}</span>
               </div>
             </div>
           </div>
-
-          {!flipped ? (
-            <span className={styles.flipHint}>Tap to flip</span>
-          ) : null}
         </div>
 
-        <div className={styles.controls}>
-          <div className={styles.rateRow}>
+        {isFlipped && (
+          <div className={styles.ratingBar}>
             <button
               type="button"
-              className={`${styles.rateBtn} ${styles.knownBtn}`}
-              onClick={handleKnown}
+              className={`${styles.ratingBtn} ${styles.ratingAgain}`}
+              onClick={() => advanceCard("again")}
+              aria-label="Again — keyboard shortcut 1"
             >
-              <CheckCircle size={16} weight="fill" />
-              Know it
+              <span className={styles.ratingBtnKey}>1</span>
+              <span className={styles.ratingBtnLabel}>Again</span>
             </button>
             <button
               type="button"
-              className={`${styles.rateBtn} ${styles.reviewBtn}`}
-              onClick={handleReview}
+              className={`${styles.ratingBtn} ${styles.ratingHard}`}
+              onClick={() => advanceCard("hard")}
+              aria-label="Hard — keyboard shortcut 2"
             >
-              <XCircle size={16} weight="fill" />
-              Review
+              <span className={styles.ratingBtnKey}>2</span>
+              <span className={styles.ratingBtnLabel}>Hard</span>
+            </button>
+            <button
+              type="button"
+              className={`${styles.ratingBtn} ${styles.ratingGood}`}
+              onClick={() => advanceCard("good")}
+              aria-label="Good — keyboard shortcut 3"
+            >
+              <span className={styles.ratingBtnKey}>3</span>
+              <span className={styles.ratingBtnLabel}>Good</span>
+            </button>
+            <button
+              type="button"
+              className={`${styles.ratingBtn} ${styles.ratingEasy}`}
+              onClick={() => advanceCard("easy")}
+              aria-label="Easy — keyboard shortcut 4"
+            >
+              <span className={styles.ratingBtnKey}>4</span>
+              <span className={styles.ratingBtnLabel}>Easy</span>
             </button>
           </div>
-
-          <div className={styles.navRow}>
-            <button
-              type="button"
-              className={styles.navBtn}
-              onClick={() => go(-1)}
-              disabled={currentIndex === 0}
-              aria-label="Previous card"
-            >
-              <ArrowLeft size={16} weight="bold" />
-            </button>
-            <button
-              type="button"
-              className={styles.navBtn}
-              onClick={() => go(1)}
-              disabled={currentIndex === total - 1}
-              aria-label="Next card"
-            >
-              <ArrowRight size={16} weight="bold" />
-            </button>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

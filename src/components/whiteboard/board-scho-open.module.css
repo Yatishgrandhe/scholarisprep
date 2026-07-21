@@ -184,6 +184,24 @@
   border: 0;
 }
 
+:global(.dark) .veil {
+  background:
+    radial-gradient(
+      55% 45% at 50% 48%,
+      color-mix(in srgb, hsl(222 28% 14%) 72%, transparent) 0%,
+      color-mix(in srgb, hsl(222 28% 12%) 35%, transparent) 42%,
+      transparent 72%
+    );
+}
+
+:global(.dark) .wordmark {
+  color: hsl(210 40% 92%);
+}
+
+:global(.dark) .tag {
+  color: hsl(215 20% 55%);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ring,
   .core,

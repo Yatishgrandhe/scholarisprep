@@ -81,6 +81,24 @@
   }
 }
 
+:global(.dark) .esc {
+  background: hsl(222 28% 14% / 0.82);
+  border-color: hsl(222 20% 25% / 0.6);
+  color: hsl(210 40% 90%);
+}
+
+:global(.dark) .esc:hover {
+  background: hsl(222 28% 18% / 0.94);
+  border-color: color-mix(in srgb, var(--cobalt, #2563eb) 40%, hsl(222 20% 25%));
+  color: hsl(210 40% 96%);
+}
+
+:global(.dark) .esc:focus-visible {
+  box-shadow:
+    0 1px 0 hsl(222 28% 16% / 0.5) inset,
+    0 0 0 3px color-mix(in srgb, var(--cobalt, #2563eb) 35%, transparent);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .esc {
     transition: none;

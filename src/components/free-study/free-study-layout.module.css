@@ -6,3 +6,30 @@
   padding: 1.5rem;
   background: hsl(var(--background));
 }
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.themeToggle {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid hsl(var(--border));
+  background: transparent;
+  cursor: pointer;
+  color: hsl(var(--muted-foreground));
+  transition: background 150ms ease, color 150ms ease;
+  flex-shrink: 0;
+}
+
+.themeToggle:hover {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
