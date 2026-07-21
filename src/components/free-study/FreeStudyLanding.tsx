@@ -2,13 +2,9 @@
 
 import Link from "next/link";
 import {
-  FolderOpen,
   FileText,
-  Brain,
-  Stack,
   PencilLine,
   NoteBlank,
-  Folder,
   Flame,
 } from "@phosphor-icons/react";
 import { FreeStudyLayout } from "./FreeStudyLayout";
@@ -16,38 +12,16 @@ import styles from "./free-study-landing.module.css";
 
 const STATS = [
   { label: "Total Notes", value: 0, icon: NoteBlank },
-  { label: "Projects", value: 0, icon: Folder },
   { label: "Study Streak", value: "0d", icon: Flame },
 ];
 
 const ACTIONS = [
   {
-    id: "projects",
-    title: "Projects",
-    description: "Organize your study materials into projects",
-    icon: FolderOpen,
-    href: "/dashboard/free-study/projects",
-  },
-  {
     id: "notes",
     title: "Notes",
-    description: "Write notes, attach images, get help",
+    description: "Write notes, attach images and PDFs, generate quizzes and flashcards",
     icon: FileText,
     href: "/dashboard/free-study?dest=notes",
-  },
-  {
-    id: "quiz",
-    title: "Quiz",
-    description: "Test yourself with quiz questions",
-    icon: Brain,
-    href: "/dashboard/free-study/quiz",
-  },
-  {
-    id: "flashcards",
-    title: "Flashcards",
-    description: "Review with spaced repetition flashcards",
-    icon: Stack,
-    href: "/dashboard/free-study/flashcards",
   },
   {
     id: "whiteboard",
@@ -100,7 +74,7 @@ export function FreeStudyLanding() {
                   : {})}
               >
                 <div className={styles.actionIconWrap}>
-                  <Icon size={24} weight="duotone" aria-hidden />
+                  <Icon size={28} weight="duotone" aria-hidden />
                 </div>
                 <div className={styles.actionBody}>
                   <h2 className={styles.actionTitle}>{a.title}</h2>

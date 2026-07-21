@@ -30,7 +30,6 @@ import {
   Flask,
   PencilLine,
   Layout,
-  FolderOpen,
   FileText,
   Brain,
   Stack,
@@ -212,7 +211,6 @@ export function getNavForExam(examType: ExamType): NavSection[] {
             external: true,
             children: [
               { id: "overview", href: FREE_STUDY_HREF, label: "Overview", icon: Layout },
-              { id: "projects", href: FREE_STUDY_HREF + "/projects", label: "Projects", icon: FolderOpen },
               { id: "notes", href: FREE_STUDY_HREF + "?dest=notes", label: "Notes", icon: FileText },
               { id: "quiz", href: FREE_STUDY_HREF + "/quiz", label: "Quiz", icon: Brain },
               { id: "flashcards", href: FREE_STUDY_HREF + "/flashcards", label: "Flashcards", icon: Stack },
@@ -258,7 +256,6 @@ export function getNavForExam(examType: ExamType): NavSection[] {
             external: true,
             children: [
               { id: "overview", href: FREE_STUDY_HREF, label: "Overview", icon: Layout },
-              { id: "projects", href: FREE_STUDY_HREF + "/projects", label: "Projects", icon: FolderOpen },
               { id: "notes", href: FREE_STUDY_HREF + "?dest=notes", label: "Notes", icon: FileText },
               { id: "quiz", href: FREE_STUDY_HREF + "/quiz", label: "Quiz", icon: Brain },
               { id: "flashcards", href: FREE_STUDY_HREF + "/flashcards", label: "Flashcards", icon: Stack },
@@ -303,7 +300,6 @@ export function getNavForExam(examType: ExamType): NavSection[] {
           external: true,
           children: [
             { id: "overview", href: FREE_STUDY_HREF, label: "Overview", icon: Layout },
-            { id: "projects", href: FREE_STUDY_HREF + "/projects", label: "Projects", icon: FolderOpen },
             { id: "notes", href: FREE_STUDY_HREF + "?dest=notes", label: "Notes", icon: FileText },
             { id: "quiz", href: FREE_STUDY_HREF + "/quiz", label: "Quiz", icon: Brain },
             { id: "flashcards", href: FREE_STUDY_HREF + "/flashcards", label: "Flashcards", icon: Stack },

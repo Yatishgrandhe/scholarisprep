@@ -71,7 +71,7 @@
 /* ── Actions Grid ── */
 .actionsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
 }
 
@@ -80,8 +80,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  padding: 1rem;
-  min-height: 4.5rem;
+  padding: 1.25rem;
+  min-height: 6rem;
   border: 1px solid hsl(var(--border));
   border-radius: 12px;
   background: hsl(var(--card));
@@ -110,8 +110,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 9px;
   background: hsl(var(--primary) / 0.08);
   color: hsl(var(--primary));
@@ -127,7 +127,7 @@
 
 .actionTitle {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 700;
   color: hsl(var(--foreground));
   margin: 0;
@@ -135,7 +135,7 @@
 
 .actionDesc {
   font-family: var(--font-body);
-  font-size: 0.78125rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
   color: hsl(var(--muted-foreground));
   margin: 0;
