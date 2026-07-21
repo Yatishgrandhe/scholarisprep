@@ -8,10 +8,43 @@ export type StreamingTtsProgress = {
   message?: string;
 };
 
+let kittenReady = false;
+let kittenLoadPromise: Promise<void> | null = null;
+
 /**
- * Streaming TTS hook — uses browser SpeechSynthesis by default (instant,
- * no downloads). Falls back to ElevenLabs WebSocket streaming when
- * NEXT_PUBLIC_ELEVENLABS_API_KEY is set.
+ * Loads Kitten TTS (80M, WebGPU) once, then reuses the engine.
+ * Falls back to browser SpeechSynthesis if WebGPU unavailable.
+ */
+async function ensureKitten(
+  onProgress?: (stage: string) => void,
+): Promise<boolean> {
+  if (kittenReady) return true;
+  if (typeof window === "undefined") return false;
+
+  // Check WebGPU support
+  if (!navigator.gpu) return false;
+
+  if (!kittenLoadPromise) {
+    kittenLoadPromise = (async () => {
+      try {
+        const { textToSpeech } = await import("kitten-tts-webgpu");
+        // First call downloads model (~75 MB) and inits WebGPU
+        await textToSpeech("", { model: "nano", onProgress });
+        kittenReady = true;
+      } catch (err) {
+        console.warn("Kitten TTS init failed, falling back to browser TTS:", err);
+        kittenLoadPromise = null;
+      }
+    })();
+  }
+
+  await kittenLoadPromise;
+  return kittenReady;
+}
+
+/**
+ * Streaming TTS hook — Kitten TTS (free, local, WebGPU) primary,
+ * browser SpeechSynthesis fallback.
  *
  * Replaces useKokoroTts for faster, interruptible voice output.
  */
@@ -22,9 +55,8 @@ export function useStreamingTts() {
   });
   const abortRef = useRef<AbortController | null>(null);
   const synthRef = useRef<SpeechSynthesis | null>(null);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Ensure synth is available
   const getSynth = useCallback(() => {
     if (typeof window === "undefined") return null;
     if (!synthRef.current) {
@@ -34,8 +66,14 @@ export function useStreamingTts() {
   }, []);
 
   const preload = useCallback(async () => {
-    // Browser SpeechSynthesis needs no preloading
-    setProgress({ status: "ready", progress: 1 });
+    const hasKitten = await ensureKitten((stage) => {
+      setProgress({ status: "downloading", progress: 0.3, message: stage });
+    });
+    if (hasKitten) {
+      setProgress({ status: "ready", progress: 1, message: "Kitten TTS ready" });
+    } else {
+      setProgress({ status: "ready", progress: 1, message: "Browser TTS ready" });
+    }
   }, []);
 
   const speak = useCallback(
@@ -50,20 +88,23 @@ export function useStreamingTts() {
       if (!clean) return;
 
       // Cancel any ongoing speech
-      const synth = getSynth();
-      if (synth) {
-        synth.cancel();
-      }
       abortRef.current?.abort();
       abortRef.current = new AbortController();
+      const signal = abortRef.current.signal;
 
-      const apiKey = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
+      // Stop any playing audio
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
 
-      if (apiKey) {
-        // ElevenLabs streaming path
-        await speakElevenLabs(clean, apiKey, abortRef.current.signal, setProgress);
+      const hasKitten = await ensureKitten((stage) => {
+        setProgress({ status: "downloading", progress: 0.3, message: stage });
+      });
+
+      if (hasKitten) {
+        await speakKitten(clean, signal, setProgress, audioRef);
       } else {
-        // Browser SpeechSynthesis path
         await speakBrowser(clean, getSynth, setProgress);
       }
     },
@@ -72,6 +113,10 @@ export function useStreamingTts() {
 
   const interrupt = useCallback(() => {
     abortRef.current?.abort();
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
     const synth = getSynth();
     if (synth) {
       synth.cancel();
@@ -82,7 +127,52 @@ export function useStreamingTts() {
   return { progress, speak, preload, interrupt };
 }
 
-/** Browser SpeechSynthesis — instant, no API key needed. */
+/** Kitten TTS — free, local, WebGPU. Sub-second on desktop. */
+async function speakKitten(
+  text: string,
+  signal: AbortSignal,
+  setProgress: (p: StreamingTtsProgress) => void,
+  audioRef: React.MutableRefObject<HTMLAudioElement | null>,
+): Promise<void> {
+  setProgress({ status: "downloading", progress: 0.2, message: "Generating speech…" });
+
+  try {
+    const { textToSpeech } = await import("kitten-tts-webgpu");
+    const wavBlob = await textToSpeech(text, {
+      model: "nano",
+      voice: "Bella",
+      speed: 1.0,
+    });
+
+    if (signal.aborted) return;
+
+    setProgress({ status: "speaking", progress: 0.6 });
+
+    const url = URL.createObjectURL(wavBlob);
+    const audio = new Audio(url);
+    audioRef.current = audio;
+
+    await new Promise<void>((resolve, reject) => {
+      audio.onended = () => {
+        URL.revokeObjectURL(url);
+        audioRef.current = null;
+        resolve();
+      };
+      audio.onerror = () => {
+        URL.revokeObjectURL(url);
+        audioRef.current = null;
+        reject(new Error("Audio playback failed"));
+      };
+      audio.play().catch(reject);
+    });
+
+    setProgress({ status: "ready", progress: 1 });
+  } catch (err) {
+    setProgress({ status: "error", progress: 0, message: `Kitten TTS failed: ${err}` });
+  }
+}
+
+/** Browser SpeechSynthesis — instant fallback, no API key needed. */
 function speakBrowser(
   text: string,
   getSynth: () => SpeechSynthesis | null,
@@ -100,7 +190,6 @@ function speakBrowser(
     utterance.pitch = 1.0;
     utterance.volume = 1.0;
 
-    // Pick a good English voice
     const voices = synth.getVoices();
     const preferred = voices.find(
       (v) =>
@@ -125,99 +214,9 @@ function speakBrowser(
     };
 
     utterance.onboundary = () => {
-      // Keep progress alive during long speeches
       setProgress({ status: "speaking", progress: 0.8 });
     };
 
     synth.speak(utterance);
   });
-}
-
-/** ElevenLabs WebSocket streaming — high quality, ~150ms TTFB. */
-async function speakElevenLabs(
-  text: string,
-  apiKey: string,
-  signal: AbortSignal,
-  setProgress: (p: StreamingTtsProgress) => void,
-): Promise<void> {
-  setProgress({ status: "downloading", progress: 0.1, message: "Connecting to voice service…" });
-
-  // ElevenLabs TTS API (REST streaming)
-  const voiceId = "21m00Tcm4TlvDq8ikWAM"; // Rachel - natural female voice
-  const modelId = "eleven_turbo_v2_5";
-
-  const res = await fetch(
-    `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/stream`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "xi-api-key": apiKey,
-      },
-      body: JSON.stringify({
-        text,
-        model_id: modelId,
-        voice_settings: {
-          stability: 0.5,
-          similarity_boost: 0.75,
-          style: 0.3,
-          use_speaker_boost: true,
-        },
-      }),
-      signal,
-    },
-  );
-
-  if (!res.ok) {
-    const errText = await res.text().catch(() => "Unknown error");
-    setProgress({ status: "error", progress: 0, message: `Voice service error: ${res.status}` });
-    throw new Error(`ElevenLabs error ${res.status}: ${errText}`);
-  }
-
-  setProgress({ status: "speaking", progress: 0.5 });
-
-  // Decode audio stream and play via AudioContext
-  const reader = res.body?.getReader();
-  if (!reader) {
-    setProgress({ status: "error", progress: 0, message: "No audio stream" });
-    return;
-  }
-
-  const chunks: Uint8Array[] = [];
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    if (value) chunks.push(value);
-  }
-
-  // Combine all chunks
-  const totalLength = chunks.reduce((acc, c) => acc + c.length, 0);
-  const combined = new Uint8Array(totalLength);
-  let offset = 0;
-  for (const chunk of chunks) {
-    combined.set(chunk, offset);
-    offset += chunk.length;
-  }
-
-  // Decode and play
-  const audioCtx = new AudioContext();
-  try {
-    const audioBuffer = await audioCtx.decodeAudioData(combined.buffer);
-    const source = audioCtx.createBufferSource();
-    source.buffer = audioBuffer;
-    source.connect(audioCtx.destination);
-
-    await new Promise<void>((resolve, reject) => {
-      source.onended = () => {
-        void audioCtx.close();
-        resolve();
-      };
-      source.addEventListener("error", () =>
-        reject(new Error("Audio playback failed")),
-      );
-      source.start();
-    });
-  } finally {
-    setProgress({ status: "ready", progress: 1 });
-  }
 }

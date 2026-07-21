@@ -12,6 +12,7 @@ import {
   CaretDown,
   PaperPlaneTilt,
   Stop,
+  Radio,
 } from "@phosphor-icons/react";
 import { toast } from "sonner";
 import { useActiveExamType } from "@/hooks/useActiveExamType";
@@ -25,6 +26,7 @@ import {
 } from "@/components/whiteboard/boardA11y";
 import {
   BoardVoiceControls,
+  type BoardVoiceControlsHandle,
   type BoardVoiceTranscriptUpdate,
 } from "@/components/whiteboard/BoardVoiceControls";
 import {
@@ -106,6 +108,8 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
     const feedRef = useRef<HTMLDivElement | null>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
     const pendingExpandRef = useRef(false);
+    const voiceRef = useRef<BoardVoiceControlsHandle>(null);
+    const [continuousMode, setContinuousMode] = useState(false);
 
     useEffect(() => {
       ocrLiveRef.current = ocrText;
@@ -255,6 +259,28 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
       setInput(final);
     }, []);
 
+    // Auto-send on silence in continuous mode
+    const onVoiceSilence = useCallback(
+      (transcript: string) => {
+        const final = transcript.trim();
+        if (!final || disabled || !canAsk) return;
+        setInput("");
+        transcriptRef.current = final;
+        void sendAsk(final);
+      },
+      [sendAsk, canAsk, disabled],
+    );
+
+    // When AI finishes speaking in continuous mode, auto-start listening
+    useEffect(() => {
+      if (!continuousMode || disabled || isStreaming || listening) return;
+      // Small delay to let TTS cleanup finish
+      const timer = setTimeout(() => {
+        voiceRef.current?.startListening();
+      }, 500);
+      return () => clearTimeout(timer);
+    }, [continuousMode, disabled, isStreaming, listening]);
+
     const edge = resolveEdge(placement, autoEdge);
     const placementClass =
       placement === "side"
@@ -332,6 +358,15 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
               </p>
             </div>
             <div className={styles.headActions}>
+              <button
+                type="button"
+                className={`${styles.iconBtn} ${continuousMode ? styles.iconBtnActive : ""}`}
+                onClick={() => setContinuousMode((c) => !c)}
+                aria-label={continuousMode ? "Disable continuous listening" : "Enable continuous listening"}
+                title={continuousMode ? "Continuous ON" : "Continuous OFF"}
+              >
+                <Radio size={14} weight={continuousMode ? "fill" : "regular"} />
+              </button>
               {isStreaming ? (
                 <button
                   type="button"
@@ -438,12 +473,14 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
                 aria-label={BOARD_ARIA.voiceControls}
               >
                 <BoardVoiceControls
-                  lockedMode="toggle"
+                  ref={voiceRef}
+                  lockedMode={continuousMode ? "continuous" : "toggle"}
                   hidePreview
                   compact
                   disabled={disabled || isStreaming}
                   onTranscript={onVoiceTranscript}
                   onSessionEnd={onVoiceSessionEnd}
+                  onSilence={continuousMode ? onVoiceSilence : undefined}
                   className={styles.voiceControls}
                 />
               </div>

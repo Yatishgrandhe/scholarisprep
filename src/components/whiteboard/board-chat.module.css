@@ -231,6 +231,12 @@
   cursor: not-allowed;
 }
 
+.iconBtnActive {
+  color: var(--dock-cobalt);
+  background: color-mix(in srgb, var(--dock-cobalt) 12%, transparent);
+  border-color: color-mix(in srgb, var(--dock-cobalt) 30%, transparent);
+}
+
 .feed {
   flex: 1;
   min-height: 0;
@@ -765,6 +771,12 @@
 :global(.dark) .iconBtn:hover {
   background: hsl(222 28% 19% / 0.72);
   border-color: hsl(222 20% 25% / 0.85);
+}
+
+:global(.dark) .iconBtnActive {
+  color: hsl(210 60% 70%);
+  background: hsl(210 60% 70% / 0.15);
+  border-color: hsl(210 60% 70% / 0.35);
 }
 
 :global(.dark) .tab {

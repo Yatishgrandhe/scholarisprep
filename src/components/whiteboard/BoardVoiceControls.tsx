@@ -1,9 +1,11 @@
 "use client";
 
 import {
+  forwardRef,
   useCallback,
   useEffect,
   useId,
+  useImperativeHandle,
   useRef,
   useState,
   type PointerEvent as ReactPointerEvent,
@@ -16,7 +18,7 @@ import {
 } from "@/lib/free-study/stt";
 import styles from "./board-voice.module.css";
 
-export type BoardVoiceMode = "toggle" | "ptt";
+export type BoardVoiceMode = "toggle" | "ptt" | "continuous";
 
 export type BoardVoiceTranscriptUpdate = {
   /** Accumulated final transcript for the current session. */
@@ -34,6 +36,8 @@ export type BoardVoiceControlsProps = {
   onTranscript?: (update: BoardVoiceTranscriptUpdate) => void;
   /** Fired once when a listening session stops, with accumulated finals. */
   onSessionEnd?: (transcript: string) => void;
+  /** Fired in continuous mode when silence detected after speech (auto-send trigger). */
+  onSilence?: (transcript: string) => void;
   /** Initial interaction mode. User can switch in the UI unless locked. */
   defaultMode?: BoardVoiceMode;
   /** Lock to one mode (hides the mode switcher). */
@@ -49,6 +53,8 @@ export type BoardVoiceControlsProps = {
   compact?: boolean;
   disabled?: boolean;
   className?: string;
+  /** In continuous mode, ms of silence before auto-sending. Default: 2000. */
+  silenceTimeoutMs?: number;
 };
 
 function combineDisplay(finalText: string, interim: string): string {
@@ -59,9 +65,16 @@ function combineDisplay(finalText: string, interim: string): string {
  * Push-to-talk / toggle mic for Whiteboard Studio chat dock.
  * Uses Free Studying Web Speech helpers — does not reimplement STT.
  */
-export function BoardVoiceControls({
+export type BoardVoiceControlsHandle = {
+  startListening: () => void;
+  stopListening: () => void;
+  setContinuousMode: (enabled: boolean) => void;
+};
+
+export const BoardVoiceControls = forwardRef<BoardVoiceControlsHandle, BoardVoiceControlsProps>(function BoardVoiceControls({
   onTranscript,
   onSessionEnd,
+  onSilence,
   defaultMode = "toggle",
   lockedMode,
   lang = "en-US",
@@ -69,7 +82,8 @@ export function BoardVoiceControls({
   compact = false,
   disabled = false,
   className,
-}: BoardVoiceControlsProps) {
+  silenceTimeoutMs = 2000,
+}: BoardVoiceControlsProps, ref) {
   const labelId = useId();
   const supported = isSpeechRecognitionSupported();
   const [mode, setMode] = useState<BoardVoiceMode>(lockedMode ?? defaultMode);
@@ -84,7 +98,11 @@ export function BoardVoiceControls({
   const modeRef = useRef(mode);
   const onTranscriptRef = useRef(onTranscript);
   const onSessionEndRef = useRef(onSessionEnd);
+  const onSilenceRef = useRef(onSilence);
+  const silenceTimeoutMsRef = useRef(silenceTimeoutMs);
   const pttPointerIdRef = useRef<number | null>(null);
+  const silenceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const continuousRestartRef = useRef(false);
 
   useEffect(() => {
     modeRef.current = mode;
@@ -97,6 +115,14 @@ export function BoardVoiceControls({
   useEffect(() => {
     onSessionEndRef.current = onSessionEnd;
   }, [onSessionEnd]);
+
+  useEffect(() => {
+    onSilenceRef.current = onSilence;
+  }, [onSilence]);
+
+  useEffect(() => {
+    silenceTimeoutMsRef.current = silenceTimeoutMs;
+  }, [silenceTimeoutMs]);
 
   useEffect(() => {
     if (lockedMode) setMode(lockedMode);
@@ -150,6 +176,18 @@ export function BoardVoiceControls({
         setFinalText(bufferRef.current);
         setInterim(nextInterim);
         emit(bufferRef.current, nextInterim, true);
+
+        // Reset silence timer on each speech result
+        if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
+        if (modeRef.current === "continuous" && bufferRef.current.trim()) {
+          silenceTimerRef.current = setTimeout(() => {
+            if (!listeningRef.current) return;
+            const finished = bufferRef.current.trim();
+            if (finished) {
+              onSilenceRef.current?.(finished);
+            }
+          }, silenceTimeoutMsRef.current);
+        }
       },
       onError: (message) => {
         setError(message);
@@ -157,7 +195,6 @@ export function BoardVoiceControls({
       },
       onEnd: () => {
         if (!listeningRef.current) return;
-        // Browser ended continuous recognition — keep UI in sync.
         listeningRef.current = false;
         sessionRef.current = null;
         pttPointerIdRef.current = null;
@@ -166,6 +203,16 @@ export function BoardVoiceControls({
         emit(bufferRef.current, "", false);
         const finished = bufferRef.current.trim();
         if (finished) onSessionEndRef.current?.(finished);
+
+        // Continuous mode: auto-restart after a short pause
+        if (modeRef.current === "continuous" && !disabled && continuousRestartRef.current) {
+          continuousRestartRef.current = false;
+          setTimeout(() => {
+            if (modeRef.current === "continuous" && !listeningRef.current) {
+              startSession();
+            }
+          }, 300);
+        }
       },
     });
 
@@ -190,11 +237,33 @@ export function BoardVoiceControls({
 
   useEffect(() => {
     return () => {
+      if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
       sessionRef.current?.abort();
       sessionRef.current = null;
       listeningRef.current = false;
     };
   }, []);
+
+  useImperativeHandle(
+    ref,
+    () => ({
+      startListening: () => {
+        if (!listeningRef.current) startSession();
+      },
+      stopListening: () => {
+        stopSession();
+      },
+      setContinuousMode: (enabled: boolean) => {
+        continuousRestartRef.current = enabled;
+        if (enabled) {
+          setMode("continuous");
+        } else if (modeRef.current === "continuous") {
+          setMode(defaultMode);
+        }
+      },
+    }),
+    [startSession, stopSession, defaultMode],
+  );
 
   const toggleListening = () => {
     if (listeningRef.current) stopSession();
@@ -254,10 +323,14 @@ export function BoardVoiceControls({
     : listening
       ? activeMode === "ptt"
         ? "Listening — release to stop"
-        : "Listening — tap mic to stop"
+        : activeMode === "continuous"
+          ? "Listening — auto-sends on silence"
+          : "Listening — tap mic to stop"
       : activeMode === "ptt"
         ? "Hold to talk"
-        : "Tap to talk";
+        : activeMode === "continuous"
+          ? "Tap to start continuous"
+          : "Tap to talk";
 
   const preview = combineDisplay(finalText, interim);
   const micLabel =
@@ -265,9 +338,13 @@ export function BoardVoiceControls({
       ? listening
         ? "Release"
         : "Hold"
-      : listening
-        ? "Stop"
-        : "Talk";
+      : activeMode === "continuous"
+        ? listening
+          ? "Stop"
+          : "Live"
+        : listening
+          ? "Stop"
+          : "Talk";
 
   return (
     <div
@@ -307,6 +384,21 @@ export function BoardVoiceControls({
               onClick={() => setMode("ptt")}
             >
               Hold
+            </button>
+            <button
+              type="button"
+              role="radio"
+              aria-checked={mode === "continuous"}
+              className={[
+                styles.modeBtn,
+                mode === "continuous" ? styles.modeBtnActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              disabled={disabled || listening}
+              onClick={() => setMode("continuous")}
+            >
+              Live
             </button>
           </div>
         ) : null}
@@ -366,7 +458,9 @@ export function BoardVoiceControls({
             <p className={styles.hint}>
               {activeMode === "ptt"
                 ? "Push-to-talk keeps the board free while you speak."
-                : "Toggle stays on until you tap stop."}
+                : activeMode === "continuous"
+                  ? "Auto-sends when you stop talking."
+                  : "Toggle stays on until you tap stop."}
             </p>
           ) : null}
         </div>
@@ -397,6 +491,6 @@ export function BoardVoiceControls({
       ) : null}
     </div>
   );
-}
+});
 
-export default BoardVoiceControls;
+BoardVoiceControls.displayName = "BoardVoiceControls";
