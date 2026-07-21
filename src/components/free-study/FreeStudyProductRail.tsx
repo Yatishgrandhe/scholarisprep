@@ -31,7 +31,7 @@ import {
   destinationRailLabel,
   handleDestinationRailKeyDown,
 } from "@/components/free-study/freeStudyA11y";
-import styles from "./free-study-studio-shell.module.css";
+import styles from "./free-study-product-rail.module.css";
 
 export type FreeStudyDestId =
   | "home"

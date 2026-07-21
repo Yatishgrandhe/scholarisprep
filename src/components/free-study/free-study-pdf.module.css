@@ -3,26 +3,27 @@
  * Never posts PDF bytes; telemetry uses pdf_excerpt.
  */
 
+@import "./free-study-tokens.css";
+@import "./free-study-base.module.css";
+
 .shell {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
+  composes: flexCol from "./free-study-base.module.css";
+  gap: var(--fs-space-3);
   min-width: 0;
 }
 
 .uploadZone {
-  display: flex;
-  flex-direction: column;
+  composes: flexCol from "./free-study-base.module.css";
   align-items: stretch;
-  gap: var(--space-3);
-  padding: 1.1rem 1rem;
-  border-radius: 14px;
-  border: 1px dashed color-mix(in srgb, var(--cobalt, #2563eb) 35%, hsl(var(--border)));
+  gap: var(--fs-space-3);
+  padding: var(--fs-space-4);
+  border-radius: var(--fs-radius-xl);
+  border: 1px dashed color-mix(in srgb, var(--fs-primary) 35%, var(--fs-border));
   background:
     linear-gradient(
       165deg,
-      color-mix(in srgb, var(--cobalt, #2563eb) 7%, transparent) 0%,
-      hsl(var(--card)) 55%
+      color-mix(in srgb, var(--fs-primary) 7%, transparent) 0%,
+      var(--fs-surface-raised) 55%
     );
 }
 
@@ -32,78 +33,45 @@
 }
 
 .uploadTitle {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: hsl(var(--foreground));
+  composes: h4 from "./free-study-base.module.css";
 }
 
 .uploadHint {
-  margin: 0;
-  font-size: 0.8125rem;
-  line-height: 1.45;
-  color: hsl(var(--muted-foreground));
+  composes: hint from "./free-study-base.module.css";
 }
 
 .actions {
-  display: flex;
+  composes: flex from "./free-study-base.module.css";
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--fs-space-2);
   align-items: center;
 }
 
 .uploadBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  min-height: 2.5rem;
-  padding: 0 0.95rem;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  background: var(--cobalt, #2563eb);
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 650;
-  cursor: pointer;
-  font-family: var(--font-body);
+  composes: btnPrimary from "./free-study-base.module.css";
 }
 
 .uploadBtn:hover:not(:disabled) {
-  background: var(--cobalt-dark, #1d4ed8);
+  background: var(--fs-primary-hover);
+  box-shadow: var(--fs-shadow-cobalt);
 }
 
 .uploadBtn:disabled {
-  opacity: 0.5;
+  opacity: var(--fs-disabled-opacity);
   cursor: not-allowed;
 }
 
 .ghostBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  min-height: 2.5rem;
-  padding: 0 0.85rem;
-  border-radius: 10px;
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--muted) / 0.45);
-  color: hsl(var(--foreground));
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: var(--font-body);
+  composes: btnSecondary from "./free-study-base.module.css";
 }
 
 .ghostBtn:hover:not(:disabled) {
-  border-color: color-mix(in srgb, var(--cobalt, #2563eb) 40%, hsl(var(--border)));
-  color: var(--cobalt, #2563eb);
+  border-color: color-mix(in srgb, var(--fs-primary) 40%, var(--fs-border));
+  color: var(--fs-primary);
 }
 
 .ghostBtn:disabled {
-  opacity: 0.45;
+  opacity: var(--fs-disabled-opacity);
   cursor: not-allowed;
 }
 
@@ -116,10 +84,7 @@
 }
 
 .fileName {
-  margin: 0;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: hsl(var(--foreground));
+  composes: label from "./free-study-base.module.css";
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -130,29 +95,20 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: var(--fs-space-2);
 }
 
 .charCount {
-  margin: 0;
-  font-size: 0.75rem;
-  font-weight: 650;
-  color: hsl(var(--muted-foreground));
+  composes: caption from "./free-study-base.module.css";
   font-variant-numeric: tabular-nums;
 }
 
 .error {
-  margin: 0;
-  font-size: 0.8125rem;
-  line-height: 1.4;
-  color: hsl(var(--destructive));
+  composes: errorText from "./free-study-base.module.css";
 }
 
 .safeNote {
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.4;
-  color: hsl(var(--muted-foreground));
+  composes: hint from "./free-study-base.module.css";
 }
 
 .safeNote code {
@@ -161,26 +117,11 @@
 }
 
 .titleRow {
-  display: flex;
+  composes: flex from "./free-study-base.module.css";
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--fs-space-2);
 }
 
 .pasteArea {
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: 12px;
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  padding: 0.75rem 0.9rem;
-  resize: vertical;
-  min-height: 5rem;
-  line-height: 1.45;
-}
-
-.pasteArea:disabled {
-  opacity: 0.6;
+  composes: textarea from "./free-study-base.module.css";
 }

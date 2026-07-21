@@ -343,19 +343,7 @@
     border-color var(--fs-fast),
     color var(--fs-fast);
 }
-  background: color-mix(in srgb, white 88%, var(--fs-cobalt));
-  color: var(--shell-ink, hsl(215 28% 14%));
-  font: inherit;
-  font-size: 0.75rem;
-  font-weight: 650;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 1px 2px hsl(215 30% 20% / 0.06);
-  transition:
-    border-color 140ms var(--fs-ease),
-    background 140ms var(--fs-ease);
-}
-
+  
 .peepBtn:hover,
 .exitTop:hover {
   background: var(--fs-surface-hover);
