@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Plus,
   Trash,
@@ -9,21 +10,10 @@ import {
   Image,
   FilePdf,
   ChatCircle,
-  X,
 } from "@phosphor-icons/react";
 import { toast } from "sonner";
 import { FreeStudyLayout } from "./FreeStudyLayout";
 import { FreeStudyChat, type ChatMessage } from "./FreeStudyChat";
-import { NoteQuiz } from "./NoteQuiz";
-import { NoteFlashcards } from "./NoteFlashcards";
-import {
-  generateQuiz,
-  type GenerateQuizQuestion,
-} from "@/lib/free-study/generateQuiz";
-import {
-  generateFlashcardsFromText,
-  type FreeStudyFlashcard,
-} from "@/lib/free-study/generateFlashcards";
 import styles from "./free-study-notes.module.css";
 
 const PROJECT_COLORS = [
@@ -56,7 +46,14 @@ function newNote(projectId: string): Note {
   return { id: crypto.randomUUID(), title: "", body: "", projectId };
 }
 
+function wordCount(text: string): number {
+  const trimmed = text.trim();
+  if (!trimmed) return 0;
+  return trimmed.split(/\s+/).length;
+}
+
 export function FreeStudyNotes() {
+  const router = useRouter();
   const [projects, setProjects] = useState<Project[]>([]);
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const [notes, setNotes] = useState<Note[]>([]);
@@ -64,17 +61,13 @@ export function FreeStudyNotes() {
 
   const [showNewProject, setShowNewProject] = useState(false);
   const [newProjectName, setNewProjectName] = useState("");
-  const [newProjectColor, setNewProjectColor] = useState<string>(PROJECT_COLORS[0]);
+  const [newProjectColor, setNewProjectColor] = useState<string>(
+    PROJECT_COLORS[0],
+  );
 
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isStreaming, setIsStreaming] = useState(false);
   const [showChat, setShowChat] = useState(false);
-
-  const [showQuiz, setShowQuiz] = useState(false);
-  const [quizQuestions, setQuizQuestions] = useState<GenerateQuizQuestion[]>([]);
-  const [showFlashcards, setShowFlashcards] = useState(false);
-  const [flashcards, setFlashcards] = useState<FreeStudyFlashcard[]>([]);
-  const [generating, setGenerating] = useState(false);
 
   const activeProject = useMemo(
     () => projects.find((p) => p.id === activeProjectId) ?? null,
@@ -134,10 +127,7 @@ export function FreeStudyNotes() {
 
   const handleDeleteNote = useCallback(
     (id: string) => {
-      setNotes((prev) => {
-        const next = prev.filter((n) => n.id !== id);
-        return next;
-      });
+      setNotes((prev) => prev.filter((n) => n.id !== id));
       if (activeNoteId === id) {
         setActiveNoteId(null);
       }
@@ -157,6 +147,7 @@ export function FreeStudyNotes() {
 
   const noteContent = activeNote?.body ?? "";
   const canGenerate = noteContent.replace(/\s/g, "").length >= 40;
+  const words = wordCount(noteContent);
 
   const handleSend = useCallback(
     async (content: string) => {
@@ -216,42 +207,21 @@ export function FreeStudyNotes() {
 
   const handleQuiz = useCallback(async () => {
     if (!canGenerate) return;
-    setGenerating(true);
-    try {
-      const result = await generateQuiz({ text: noteContent, count: 5 });
-      setQuizQuestions(result.questions);
-      setShowQuiz(true);
-    } catch (err) {
-      const msg =
-        err instanceof Error ? err.message : "Failed to generate quiz";
-      toast.error(msg);
-    } finally {
-      setGenerating(false);
-    }
-  }, [noteContent, canGenerate]);
+    // Navigate to standalone quiz page with note content
+    const params = new URLSearchParams();
+    params.set("text", noteContent);
+    if (activeNote?.title) params.set("title", activeNote.title);
+    router.push(`/dashboard/free-study/quiz?${params.toString()}`);
+  }, [noteContent, canGenerate, activeNote?.title, router]);
 
   const handleFlashcards = useCallback(async () => {
     if (!canGenerate) return;
-    setGenerating(true);
-    try {
-      const result = await generateFlashcardsFromText({
-        text: noteContent,
-        count: 8,
-      });
-      if (!result.ok) {
-        toast.error(result.error);
-        return;
-      }
-      setFlashcards(result.data.cards);
-      setShowFlashcards(true);
-    } catch (err) {
-      const msg =
-        err instanceof Error ? err.message : "Failed to generate flashcards";
-      toast.error(msg);
-    } finally {
-      setGenerating(false);
-    }
-  }, [noteContent, canGenerate]);
+    // Navigate to standalone flashcards page with note content
+    const params = new URLSearchParams();
+    params.set("text", noteContent);
+    if (activeNote?.title) params.set("title", activeNote.title);
+    router.push(`/dashboard/free-study/flashcards?${params.toString()}`);
+  }, [noteContent, canGenerate, activeNote?.title, router]);
 
   const handleProjectKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -268,7 +238,7 @@ export function FreeStudyNotes() {
   return (
     <FreeStudyLayout mode="Notes">
       <div className={styles.layout}>
-        {/* Project Sidebar */}
+        {/* ── Project sidebar ────────────────────── */}
         <div className={styles.projectSidebar}>
           <div className={styles.projectHeader}>
             <span className={styles.projectHeaderTitle}>Projects</span>
@@ -281,7 +251,7 @@ export function FreeStudyNotes() {
               }}
               aria-label="New project"
             >
-              <Plus size={16} weight="bold" aria-hidden />
+              <Plus size={15} weight="bold" aria-hidden />
             </button>
           </div>
 
@@ -354,14 +324,14 @@ export function FreeStudyNotes() {
                 className={styles.emptyStateBtn}
                 onClick={() => setShowNewProject(true)}
               >
-                <Plus size={14} weight="bold" aria-hidden />
+                <Plus size={13} weight="bold" aria-hidden />
                 Create project
               </button>
             </div>
           ) : null}
         </div>
 
-        {/* Notes List */}
+        {/* ── Notes list ─────────────────────────── */}
         <div className={styles.notesPanel}>
           {activeProject ? (
             <>
@@ -375,7 +345,7 @@ export function FreeStudyNotes() {
                   onClick={handleAddNote}
                   aria-label="New note"
                 >
-                  <Plus size={16} weight="bold" aria-hidden />
+                  <Plus size={15} weight="bold" aria-hidden />
                 </button>
               </div>
 
@@ -422,7 +392,7 @@ export function FreeStudyNotes() {
                     className={styles.emptyStateBtn}
                     onClick={handleAddNote}
                   >
-                    <Plus size={14} weight="bold" aria-hidden />
+                    <Plus size={13} weight="bold" aria-hidden />
                     New note
                   </button>
                 </div>
@@ -437,7 +407,7 @@ export function FreeStudyNotes() {
           )}
         </div>
 
-        {/* Editor + Chat */}
+        {/* ── Editor panel ───────────────────────── */}
         <div className={styles.editorPanel}>
           {activeNote ? (
             <>
@@ -452,35 +422,35 @@ export function FreeStudyNotes() {
               <div className={styles.editorActionBar}>
                 <button
                   type="button"
-                  className={`${styles.actionBtn} ${generating ? styles.actionBtnLoading : ""}`}
+                  className={styles.actionBtn}
                   onClick={handleQuiz}
-                  disabled={!canGenerate || generating}
+                  disabled={!canGenerate}
                   title={
                     canGenerate
                       ? "Generate a quiz from your notes"
                       : "Write at least 40 characters"
                   }
                 >
-                  <Lightning size={15} weight="fill" aria-hidden />
+                  <Lightning size={14} weight="fill" aria-hidden />
                   Quiz Me
                 </button>
                 <button
                   type="button"
-                  className={`${styles.actionBtn} ${generating ? styles.actionBtnLoading : ""}`}
+                  className={styles.actionBtn}
                   onClick={handleFlashcards}
-                  disabled={!canGenerate || generating}
+                  disabled={!canGenerate}
                   title={
                     canGenerate
                       ? "Generate flashcards from your notes"
                       : "Write at least 40 characters"
                   }
                 >
-                  <Cardholder size={15} weight="fill" aria-hidden />
+                  <Cardholder size={14} weight="fill" aria-hidden />
                   Flashcards
                 </button>
                 <div className={styles.actionBarSpacer} />
                 <label className={styles.actionBtn} title="Upload image">
-                  <Image size={15} weight="fill" aria-hidden />
+                  <Image size={14} weight="fill" aria-hidden />
                   <input
                     type="file"
                     accept="image/*"
@@ -493,7 +463,7 @@ export function FreeStudyNotes() {
                   />
                 </label>
                 <label className={styles.actionBtn} title="Upload PDF">
-                  <FilePdf size={15} weight="fill" aria-hidden />
+                  <FilePdf size={14} weight="fill" aria-hidden />
                   <input
                     type="file"
                     accept=".pdf"
@@ -511,7 +481,7 @@ export function FreeStudyNotes() {
                   onClick={() => setShowChat(!showChat)}
                   title="Toggle AI chat"
                 >
-                  <ChatCircle size={15} weight="fill" aria-hidden />
+                  <ChatCircle size={14} weight="fill" aria-hidden />
                 </button>
               </div>
 
@@ -521,6 +491,10 @@ export function FreeStudyNotes() {
                 onChange={(e) => updateNote({ body: e.target.value })}
                 placeholder="Start writing…"
               />
+
+              <div className={styles.wordCount}>
+                {words > 0 ? `${words} word${words === 1 ? "" : "s"}` : ""}
+              </div>
 
               {showChat ? (
                 <div className={styles.chatPanel}>
@@ -556,7 +530,7 @@ export function FreeStudyNotes() {
                     className={styles.emptyStateBtn}
                     onClick={handleAddNote}
                   >
-                    <Plus size={14} weight="bold" aria-hidden />
+                    <Plus size={13} weight="bold" aria-hidden />
                     New note
                   </button>
                 </>
@@ -570,33 +544,6 @@ export function FreeStudyNotes() {
         </div>
       </div>
 
-      {showQuiz && quizQuestions.length > 0 ? (
-        <NoteQuiz
-          questions={quizQuestions}
-          onComplete={(score) => {
-            toast.success(
-              `Quiz done — ${score.correct} of ${score.total} correct`,
-            );
-          }}
-          onClose={() => {
-            setShowQuiz(false);
-            setQuizQuestions([]);
-          }}
-        />
-      ) : null}
-
-      {showFlashcards && flashcards.length > 0 ? (
-        <NoteFlashcards
-          cards={flashcards}
-          onComplete={() => {
-            toast.success("Flashcard review complete");
-          }}
-          onClose={() => {
-            setShowFlashcards(false);
-            setFlashcards([]);
-          }}
-        />
-      ) : null}
     </FreeStudyLayout>
   );
 }
