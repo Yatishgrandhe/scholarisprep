@@ -154,3 +154,31 @@
   border-color: color-mix(in srgb, var(--ask-cobalt) 50%, var(--ask-edge));
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--ask-cobalt) 22%, transparent);
 }
+
+/* ── Dark mode overrides ── */
+:global(.dark) .strip {
+  --ask-ink: hsl(210 40% 96%);
+  --ask-muted: hsl(215 20% 65%);
+  --ask-surface: color-mix(in srgb, hsl(222 28% 14%) 88%, transparent);
+  --ask-edge: color-mix(in srgb, hsl(222 20% 25%) 40%, transparent);
+  --ask-shadow:
+    0 1px 0 hsl(222 28% 10% / 0.55) inset,
+    0 8px 28px hsl(222 40% 4% / 0.2),
+    0 2px 6px hsl(222 40% 4% / 0.1);
+}
+
+:global(.dark) .secondary {
+  background: color-mix(in srgb, hsl(222 28% 16%) 55%, transparent);
+}
+
+:global(.dark) .secondary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ask-cobalt) 8%, hsl(222 28% 16%));
+}
+
+:global(.dark) .primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ask-cobalt) 88%, hsl(222 28% 8%));
+}
+
+:global(.dark) .textarea {
+  background: color-mix(in srgb, hsl(222 28% 16%) 72%, transparent);
+}

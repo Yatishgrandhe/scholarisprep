@@ -694,3 +694,134 @@
     transform: none;
   }
 }
+
+/* ——— Dark mode overrides ——— */
+
+:global(.dark) .dock {
+  --dock-ink: hsl(210 40% 96%);
+  --dock-glass: hsl(222 28% 12% / 0.95);
+  --dock-surface: hsl(222 28% 14%);
+  --dock-border: hsl(222 20% 25%);
+  --dock-shadow: 0 8px 32px hsl(222 40% 4% / 0.5);
+  --dock-accent: hsl(var(--primary));
+  --dock-muted: hsl(215 20% 65%);
+  --dock-surface-2: hsl(222 28% 16%);
+  --dock-line: hsl(222 20% 25%);
+}
+
+:global(.dark) .shell {
+  background: var(--dock-glass);
+  border-color: var(--dock-border);
+  box-shadow:
+    0 1px 0 hsl(222 28% 16% / 0.5) inset,
+    0 0 0 1px hsl(222 28% 16% / 0.18) inset,
+    0 22px 48px -28px hsl(222 40% 4% / 0.55),
+    0 8px 20px -16px hsl(222 40% 4% / 0.28);
+}
+
+:global(.dark) .head {
+  border-bottom-color: hsl(222 20% 25% / 0.65);
+  background: linear-gradient(
+    180deg,
+    hsl(222 28% 16% / 0.45) 0%,
+    transparent 100%
+  );
+}
+
+:global(.dark) .brandMark {
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--dock-cobalt) 20%, hsl(222 28% 16%)),
+    color-mix(in srgb, var(--dock-aqua) 12%, hsl(222 28% 16%))
+  );
+  box-shadow:
+    0 1px 0 hsl(222 28% 20% / 0.7) inset,
+    0 4px 10px -6px color-mix(in srgb, var(--dock-cobalt) 35%, transparent);
+}
+
+:global(.dark) .assistantBody {
+  background: hsl(222 28% 16% / 0.72);
+  border-color: hsl(222 20% 25% / 0.8);
+  box-shadow: 0 1px 0 hsl(222 28% 12% / 0.5) inset;
+}
+
+:global(.dark) .footer {
+  border-top-color: hsl(222 20% 25% / 0.65);
+  background: linear-gradient(
+    0deg,
+    hsl(222 28% 16% / 0.55) 0%,
+    hsl(222 28% 14% / 0.4) 100%
+  );
+}
+
+:global(.dark) .emptyMark {
+  background: color-mix(in srgb, var(--dock-cobalt) 14%, hsl(222 28% 16%));
+}
+
+:global(.dark) .empty strong {
+  color: hsl(210 40% 96%);
+}
+
+:global(.dark) .iconBtn:hover {
+  background: hsl(222 28% 19% / 0.72);
+  border-color: hsl(222 20% 25% / 0.85);
+}
+
+:global(.dark) .tab {
+  border-color: hsl(222 20% 25%);
+  background: linear-gradient(
+    135deg,
+    hsl(222 28% 16% / 0.78),
+    color-mix(in srgb, var(--dock-cobalt) 10%, hsl(222 28% 16%))
+  ),
+  var(--dock-glass);
+  color: hsl(210 40% 96%);
+  box-shadow:
+    0 1px 0 hsl(222 28% 20% / 0.65) inset,
+    0 14px 32px -18px hsl(222 40% 4% / 0.52);
+}
+
+:global(.dark) .tab:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--dock-cobalt) 35%, hsl(222 20% 25%));
+  box-shadow:
+    0 1px 0 hsl(222 28% 20% / 0.65) inset,
+    0 18px 36px -16px hsl(222 40% 4% / 0.58);
+}
+
+:global(.dark) .tab:focus-visible {
+  border-color: color-mix(in srgb, var(--dock-cobalt) 50%, transparent);
+  box-shadow:
+    0 1px 0 hsl(222 28% 20% / 0.65) inset,
+    0 0 0 3px color-mix(in srgb, var(--dock-cobalt) 22%, transparent),
+    0 14px 32px -18px hsl(222 40% 4% / 0.52);
+}
+
+:global(.dark) .tabMark {
+  background: color-mix(in srgb, var(--dock-cobalt) 18%, hsl(222 28% 16%));
+}
+
+:global(.dark) .tabCount {
+  background: color-mix(in srgb, var(--dock-cobalt) 16%, hsl(222 28% 16%));
+}
+
+:global(.dark) .composer {
+  background: var(--dock-surface);
+  border-color: hsl(222 20% 25% / 0.9);
+  box-shadow:
+    0 1px 0 hsl(222 28% 16% / 0.7) inset,
+    0 8px 20px -16px hsl(222 40% 4% / 0.32);
+}
+
+:global(.dark) .composer:focus-within {
+  border-color: color-mix(in srgb, var(--dock-cobalt) 48%, transparent);
+  box-shadow:
+    0 1px 0 hsl(222 28% 16% / 0.7) inset,
+    0 0 0 3px color-mix(in srgb, var(--dock-cobalt) 16%, transparent),
+    0 8px 20px -16px hsl(222 40% 4% / 0.28);
+}
+
+:global(.dark) .ocrChip {
+  border-color: color-mix(in srgb, var(--dock-cobalt) 25%, hsl(222 20% 25%));
+  background: color-mix(in srgb, var(--dock-cobalt) 10%, hsl(222 28% 16%));
+  color: color-mix(in srgb, var(--dock-cobalt) 78%, hsl(210 40% 96%));
+}

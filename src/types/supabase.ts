@@ -711,6 +711,7 @@ export type Database = {
           note_id: string
           object_key: string
           paths: Json
+          project_id: string | null
           provider: string
           user_id: string
           width: number | null
@@ -724,6 +725,7 @@ export type Database = {
           note_id: string
           object_key: string
           paths?: Json
+          project_id?: string | null
           provider?: string
           user_id: string
           width?: number | null
@@ -737,6 +739,7 @@ export type Database = {
           note_id?: string
           object_key?: string
           paths?: Json
+          project_id?: string | null
           provider?: string
           user_id?: string
           width?: number | null
@@ -764,6 +767,8 @@ export type Database = {
           created_at: string
           exam_type: string | null
           id: string
+          project_id: string | null
+          sort_order: number
           title: string
           updated_at: string
           user_id: string
@@ -773,6 +778,8 @@ export type Database = {
           created_at?: string
           exam_type?: string | null
           id?: string
+          project_id?: string | null
+          sort_order?: number
           title?: string
           updated_at?: string
           user_id: string
@@ -782,13 +789,130 @@ export type Database = {
           created_at?: string
           exam_type?: string | null
           id?: string
+          project_id?: string | null
+          sort_order?: number
           title?: string
           updated_at?: string
           user_id?: string
         }
         Relationships: [
           {
+            foreignKeyName: "free_study_notes_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "free_study_projects"
+            referencedColumns: ["id"]
+          },
+          {
             foreignKeyName: "free_study_notes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      free_study_pdfs: {
+        Row: {
+          byte_size: number | null
+          created_at: string
+          extracted_text: string | null
+          id: string
+          object_key: string
+          page_count: number | null
+          project_id: string | null
+          thumbnail_key: string | null
+          title: string
+          user_id: string
+        }
+        Insert: {
+          byte_size?: number | null
+          created_at?: string
+          extracted_text?: string | null
+          id?: string
+          object_key: string
+          page_count?: number | null
+          project_id?: string | null
+          thumbnail_key?: string | null
+          title: string
+          user_id: string
+        }
+        Update: {
+          byte_size?: number | null
+          created_at?: string
+          extracted_text?: string | null
+          id?: string
+          object_key?: string
+          page_count?: number | null
+          project_id?: string | null
+          thumbnail_key?: string | null
+          title?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "free_study_pdfs_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "free_study_projects"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "free_study_pdfs_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      free_study_projects: {
+        Row: {
+          color: string | null
+          created_at: string
+          description: string | null
+          icon: string | null
+          id: string
+          name: string
+          parent_id: string | null
+          sort_order: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          color?: string | null
+          created_at?: string
+          description?: string | null
+          icon?: string | null
+          id?: string
+          name: string
+          parent_id?: string | null
+          sort_order?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          color?: string | null
+          created_at?: string
+          description?: string | null
+          icon?: string | null
+          id?: string
+          name?: string
+          parent_id?: string | null
+          sort_order?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "free_study_projects_parent_id_fkey"
+            columns: ["parent_id"]
+            isOneToOne: false
+            referencedRelation: "free_study_projects"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "free_study_projects_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
             referencedRelation: "profiles"

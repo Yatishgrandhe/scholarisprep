@@ -187,7 +187,7 @@
 
 .primaryBtn {
   background: var(--cobalt, #2563eb);
-  color: #fff;
+  color: hsl(var(--primary-foreground));
 }
 
 .primaryBtn:disabled,

@@ -1,85 +1,111 @@
 "use client";
 
-import {
-  ChatsCircle,
-  FilePdf,
-  Microphone,
-  Notebook,
-  PencilLine,
-} from "@phosphor-icons/react";
 import Link from "next/link";
+import {
+  FolderOpen,
+  FileText,
+  Brain,
+  Stack,
+  PencilLine,
+  NoteBlank,
+  Folder,
+  Flame,
+} from "@phosphor-icons/react";
 import { FreeStudyLayout } from "./FreeStudyLayout";
 import styles from "./free-study-landing.module.css";
 
-const DESTINATIONS = [
+const STATS = [
+  { label: "Total Notes", value: 0, icon: NoteBlank },
+  { label: "Projects", value: 0, icon: Folder },
+  { label: "Study Streak", value: "0d", icon: Flame },
+];
+
+const ACTIONS = [
   {
-    mode: "tutor",
-    label: "Tutor",
-    description: "Chat with Scho about any subject",
-    icon: ChatsCircle,
-    href: "/dashboard/free-study?dest=tutor",
+    id: "projects",
+    title: "Projects",
+    description: "Organize your study materials into projects",
+    icon: FolderOpen,
+    href: "/dashboard/free-study/projects",
   },
   {
-    mode: "pdf",
-    label: "PDF",
-    description: "Upload a PDF, extract text, ask questions",
-    icon: FilePdf,
-    href: "/dashboard/free-study?dest=pdf",
-  },
-  {
-    mode: "voice",
-    label: "Voice",
-    description: "Speak your question, get answers",
-    icon: Microphone,
-    href: "/dashboard/free-study?dest=voice",
-  },
-  {
-    mode: "notes",
-    label: "Notes",
+    id: "notes",
+    title: "Notes",
     description: "Write notes, attach images, get help",
-    icon: Notebook,
+    icon: FileText,
     href: "/dashboard/free-study?dest=notes",
   },
   {
-    mode: "whiteboard",
-    label: "Whiteboard",
+    id: "quiz",
+    title: "Quiz",
+    description: "Test yourself with quiz questions",
+    icon: Brain,
+    href: "/dashboard/free-study/quiz",
+  },
+  {
+    id: "flashcards",
+    title: "Flashcards",
+    description: "Review with spaced repetition flashcards",
+    icon: Stack,
+    href: "/dashboard/free-study/flashcards",
+  },
+  {
+    id: "whiteboard",
+    title: "Whiteboard",
     description: "Draw diagrams and equations",
     icon: PencilLine,
     href: "/dashboard/whiteboard",
     external: true,
   },
-] as const;
+];
 
 export function FreeStudyLanding() {
   return (
     <FreeStudyLayout>
-      <div className={styles.wrapper}>
-        <div className={styles.heading}>
-          <h1 className={styles.title}>How would you like to study?</h1>
-          <p className={styles.subtitle}>
-            Pick a mode to get started. You can switch anytime.
-          </p>
+      <div className={styles.dashboard}>
+        <header className={styles.header}>
+          <h1 className={styles.title}>Free Studying</h1>
+        </header>
+
+        <div className={styles.statsRow}>
+          {STATS.map((s) => {
+            const Icon = s.icon;
+            return (
+              <div key={s.label} className={styles.statCard}>
+                <Icon
+                  size={18}
+                  weight="duotone"
+                  className={styles.statIcon}
+                  aria-hidden
+                />
+                <div className={styles.statInfo}>
+                  <span className={styles.statValue}>{s.value}</span>
+                  <span className={styles.statLabel}>{s.label}</span>
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <nav className={styles.grid} aria-label="Study modes">
-          {DESTINATIONS.map((d) => {
-            const Icon = d.icon;
+
+        <nav className={styles.actionsGrid} aria-label="Study tools">
+          {ACTIONS.map((a) => {
+            const Icon = a.icon;
             return (
               <Link
-                key={d.mode}
-                href={d.href}
-                className={styles.card}
-                {...(d.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                key={a.id}
+                href={a.href}
+                className={styles.actionCard}
+                {...(a.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
               >
-                <div className={styles.iconWrap}>
-                  <Icon size={28} weight="duotone" aria-hidden />
+                <div className={styles.actionIconWrap}>
+                  <Icon size={24} weight="duotone" aria-hidden />
                 </div>
-                <div className={styles.cardBody}>
-                  <h2 className={styles.cardTitle}>{d.label}</h2>
-                  <p className={styles.cardDesc}>{d.description}</p>
+                <div className={styles.actionBody}>
+                  <h2 className={styles.actionTitle}>{a.title}</h2>
+                  <p className={styles.actionDesc}>{a.description}</p>
                 </div>
-                {d.external ? (
-                  <span className={styles.externalBadge}>New tab</span>
-                ) : null}
               </Link>
             );
           })}

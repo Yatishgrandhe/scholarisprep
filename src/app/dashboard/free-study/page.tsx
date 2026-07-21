@@ -1,7 +1,5 @@
 import { FreeStudyLanding } from "@/components/free-study/FreeStudyLanding";
 import { FreeStudyTutor } from "@/components/free-study/FreeStudyTutor";
-import { FreeStudyPdf } from "@/components/free-study/FreeStudyPdf";
-import { FreeStudyVoice } from "@/components/free-study/FreeStudyVoice";
 import { FreeStudyNotes } from "@/components/free-study/FreeStudyNotes";
 
 export default async function FreeStudyPage({
@@ -15,10 +13,6 @@ export default async function FreeStudyPage({
   switch (dest) {
     case "tutor":
       return <FreeStudyTutor />;
-    case "pdf":
-      return <FreeStudyPdf />;
-    case "voice":
-      return <FreeStudyVoice />;
     case "notes":
       return <FreeStudyNotes />;
     default:

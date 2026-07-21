@@ -257,3 +257,40 @@
     height: 1.85rem;
   }
 }
+
+/* ── Dark mode ─────────────────────────────────────────────── */
+
+:global(.dark) .dock {
+  --tb-ink: hsl(210 40% 96%);
+  --tb-muted: hsl(215 20% 65%);
+  --tb-surface: hsl(222 28% 14%);
+  --tb-edge: hsl(222 20% 25%);
+  --tb-shadow:
+    0 1px 0 hsl(222 28% 10% / 0.6) inset,
+    0 8px 28px hsl(222 40% 6% / 0.35),
+    0 2px 6px hsl(222 40% 6% / 0.2);
+}
+
+:global(.dark) .rule {
+  background: hsl(222 20% 25%);
+}
+
+:global(.dark) .swatch {
+  border-color: hsl(222 20% 30%);
+  box-shadow: 0 0 0 1px hsl(215 20% 65% / 0.45);
+}
+
+:global(.dark) .swatch[data-active="true"] {
+  box-shadow:
+    0 0 0 1px hsl(215 20% 65% / 0.35),
+    0 0 0 3px color-mix(in srgb, var(--tb-cobalt) 42%, transparent);
+}
+
+:global(.dark) .tool:hover:not(:disabled),
+:global(.dark) .width:hover:not(:disabled) {
+  background: hsl(222 28% 20%);
+}
+
+:global(.dark) .peek:hover {
+  background: hsl(222 28% 18%);
+}

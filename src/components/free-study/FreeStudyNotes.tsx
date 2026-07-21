@@ -1,10 +1,20 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { Plus, Trash, X } from "@phosphor-icons/react";
+import { Plus, Trash, X, Lightning, Cardholder } from "@phosphor-icons/react";
 import { toast } from "sonner";
 import { FreeStudyLayout } from "./FreeStudyLayout";
 import { FreeStudyChat, type ChatMessage } from "./FreeStudyChat";
+import { NoteQuiz } from "./NoteQuiz";
+import { NoteFlashcards } from "./NoteFlashcards";
+import {
+  generateQuiz,
+  type GenerateQuizQuestion,
+} from "@/lib/free-study/generateQuiz";
+import {
+  generateFlashcardsFromText,
+  type FreeStudyFlashcard,
+} from "@/lib/free-study/generateFlashcards";
 import styles from "./free-study-notes.module.css";
 
 type Note = {
@@ -23,6 +33,12 @@ export function FreeStudyNotes() {
   const [activeId, setActiveId] = useState<string>(notes[0]!.id);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isStreaming, setIsStreaming] = useState(false);
+
+  const [showQuiz, setShowQuiz] = useState(false);
+  const [quizQuestions, setQuizQuestions] = useState<GenerateQuizQuestion[]>([]);
+  const [showFlashcards, setShowFlashcards] = useState(false);
+  const [flashcards, setFlashcards] = useState<FreeStudyFlashcard[]>([]);
+  const [generating, setGenerating] = useState(false);
 
   const activeNote = notes.find((n) => n.id === activeId) ?? notes[0];
 
@@ -115,6 +131,48 @@ export function FreeStudyNotes() {
     [activeNote, messages],
   );
 
+  const noteContent = activeNote?.body ?? "";
+  const canGenerate = noteContent.replace(/\s/g, "").length >= 40;
+
+  const handleQuiz = useCallback(async () => {
+    if (!canGenerate) return;
+    setGenerating(true);
+    try {
+      const result = await generateQuiz({ text: noteContent, count: 5 });
+      setQuizQuestions(result.questions);
+      setShowQuiz(true);
+    } catch (err) {
+      const msg =
+        err instanceof Error ? err.message : "Failed to generate quiz";
+      toast.error(msg);
+    } finally {
+      setGenerating(false);
+    }
+  }, [noteContent, canGenerate]);
+
+  const handleFlashcards = useCallback(async () => {
+    if (!canGenerate) return;
+    setGenerating(true);
+    try {
+      const result = await generateFlashcardsFromText({
+        text: noteContent,
+        count: 8,
+      });
+      if (!result.ok) {
+        toast.error(result.error);
+        return;
+      }
+      setFlashcards(result.data.cards);
+      setShowFlashcards(true);
+    } catch (err) {
+      const msg =
+        err instanceof Error ? err.message : "Failed to generate flashcards";
+      toast.error(msg);
+    } finally {
+      setGenerating(false);
+    }
+  }, [noteContent, canGenerate]);
+
   return (
     <FreeStudyLayout mode="Notes">
       <div className={styles.layout}>
@@ -168,6 +226,36 @@ export function FreeStudyNotes() {
             onChange={(e) => updateNote({ title: e.target.value })}
             placeholder="Note title…"
           />
+          <div className={styles.actionBar}>
+            <button
+              type="button"
+              className={`${styles.actionBtn} ${generating ? styles.actionBtnLoading : ""}`}
+              onClick={handleQuiz}
+              disabled={!canGenerate || generating}
+              title={
+                canGenerate
+                  ? "Generate a quiz from your notes"
+                  : "Write at least 40 characters to generate a quiz"
+              }
+            >
+              <Lightning size={15} weight="fill" aria-hidden />
+              Quiz Me
+            </button>
+            <button
+              type="button"
+              className={`${styles.actionBtn} ${generating ? styles.actionBtnLoading : ""}`}
+              onClick={handleFlashcards}
+              disabled={!canGenerate || generating}
+              title={
+                canGenerate
+                  ? "Generate flashcards from your notes"
+                  : "Write at least 40 characters to generate flashcards"
+              }
+            >
+              <Cardholder size={15} weight="fill" aria-hidden />
+              Flashcards
+            </button>
+          </div>
           <textarea
             className={styles.bodyTextarea}
             value={activeNote?.body ?? ""}
@@ -193,6 +281,34 @@ export function FreeStudyNotes() {
           />
         </div>
       </div>
+
+      {showQuiz && quizQuestions.length > 0 ? (
+        <NoteQuiz
+          questions={quizQuestions}
+          onComplete={(score) => {
+            toast.success(
+              `Quiz done — ${score.correct} of ${score.total} correct`,
+            );
+          }}
+          onClose={() => {
+            setShowQuiz(false);
+            setQuizQuestions([]);
+          }}
+        />
+      ) : null}
+
+      {showFlashcards && flashcards.length > 0 ? (
+        <NoteFlashcards
+          cards={flashcards}
+          onComplete={() => {
+            toast.success("Flashcard review complete");
+          }}
+          onClose={() => {
+            setShowFlashcards(false);
+            setFlashcards([]);
+          }}
+        />
+      ) : null}
     </FreeStudyLayout>
   );
 }

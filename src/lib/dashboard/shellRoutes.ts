@@ -31,11 +31,25 @@ export function isWhiteboardFullscreenRoute(pathname: string): boolean {
 }
 
 /**
- * Free Studying hub — immersive studio (no primary dashboard chrome).
- * Product chrome lives in `FreeStudyShell` (own sidebar).
+ * Free Studying hub — only whiteboard routes get immersive fullscreen treatment.
+ * All other free-study routes show the primary dashboard sidebar.
  */
 export function isFreeStudyFullscreenRoute(pathname: string): boolean {
-  return pathMatches(pathname, "/dashboard/free-study");
+  const path = normalizeDashboardPath(pathname);
+  if (path === "/dashboard/whiteboard") return true;
+  if (path.startsWith("/dashboard/whiteboard/")) return true;
+  const queryIndex = pathname.indexOf("?");
+  if (queryIndex !== -1) {
+    const base = pathname.slice(0, queryIndex);
+    const query = pathname.slice(queryIndex + 1);
+    if (
+      (base === "/dashboard/free-study" || base === "/dashboard/free-study/") &&
+      /(?:^|&)dest=whiteboard(?:&|$)/.test(query)
+    ) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**

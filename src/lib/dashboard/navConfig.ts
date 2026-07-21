@@ -29,6 +29,11 @@ import {
   Notebook,
   Flask,
   PencilLine,
+  Layout,
+  FolderOpen,
+  FileText,
+  Brain,
+  Stack,
 } from "@phosphor-icons/react";
 import { isApOrIbExam, isLanguageCourse } from "@/lib/apIbCatalog";
 import { tutorHref, tutorNavLabel } from "@/lib/tutor/routes";
@@ -101,7 +106,14 @@ function mainNavForExam(examType: ExamType): NavItem[] {
       badge: "New",
       /** Open hub in a new browser tab from dashboard chrome. */
       external: true,
-      children: [WHITEBOARD_NAV_ITEM],
+      children: [
+        { id: "overview", href: FREE_STUDY_HREF, label: "Overview", icon: Layout },
+        { id: "projects", href: FREE_STUDY_HREF + "/projects", label: "Projects", icon: FolderOpen },
+        { id: "notes", href: FREE_STUDY_HREF + "?dest=notes", label: "Notes", icon: FileText },
+        { id: "quiz", href: FREE_STUDY_HREF + "/quiz", label: "Quiz", icon: Brain },
+        { id: "flashcards", href: FREE_STUDY_HREF + "/flashcards", label: "Flashcards", icon: Stack },
+        WHITEBOARD_NAV_ITEM,
+      ],
     },
     {
       id: LABS_NAV_ID,
