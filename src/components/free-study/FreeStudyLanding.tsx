@@ -1,148 +1,90 @@
 "use client";
 
-import Link from "next/link";
 import {
-  ArrowRight,
-  ArrowSquareOut,
   ChatsCircle,
   FilePdf,
-  Flask,
   Microphone,
   Notebook,
   PencilLine,
 } from "@phosphor-icons/react";
-import {
-  FREE_STUDY_HREF,
-  LABS_HREF,
-  PRODUCT_NEW_TAB_PROPS,
-  WHITEBOARD_HREF,
-} from "@/lib/dashboard/navRoutes";
-import {
-  FS_ARIA,
-  destinationLandingLabel,
-  handleDestinationRailKeyDown,
-  type FreeStudyDestinationId,
-} from "@/components/free-study/freeStudyA11y";
+import Link from "next/link";
+import { FreeStudyLayout } from "./FreeStudyLayout";
 import styles from "./free-study-landing.module.css";
 
-type Destination = {
-  id: FreeStudyDestinationId;
-  label: string;
-  hint: string;
-  href: string;
-  icon: typeof ChatsCircle;
-};
-
-const DESTINATIONS: Destination[] = [
+const DESTINATIONS = [
   {
-    id: "tutor",
+    mode: "tutor",
     label: "Tutor",
-    hint: "Ask Scho anything",
-    href: `${FREE_STUDY_HREF}?dest=tutor`,
+    description: "Chat with Scho about any subject",
     icon: ChatsCircle,
+    href: "/dashboard/free-study?dest=tutor",
   },
   {
-    id: "whiteboard",
-    label: "Whiteboard",
-    hint: "Draw, then talk to Scho",
-    href: WHITEBOARD_HREF,
-    icon: PencilLine,
-  },
-  {
-    id: "pdf",
-    label: "PDF Studio",
-    hint: "Upload, extract, quiz",
-    href: `${FREE_STUDY_HREF}?dest=pdf`,
+    mode: "pdf",
+    label: "PDF",
+    description: "Upload a PDF, extract text, ask questions",
     icon: FilePdf,
+    href: "/dashboard/free-study?dest=pdf",
   },
   {
-    id: "voice",
+    mode: "voice",
     label: "Voice",
-    hint: "Speak naturally to Scho",
-    href: `${FREE_STUDY_HREF}?dest=voice`,
+    description: "Speak your question, get answers",
     icon: Microphone,
+    href: "/dashboard/free-study?dest=voice",
   },
   {
-    id: "notes",
+    mode: "notes",
     label: "Notes",
-    hint: "Write, OCR, ask Scho",
-    href: `${FREE_STUDY_HREF}?dest=notes`,
+    description: "Write notes, attach images, get help",
     icon: Notebook,
+    href: "/dashboard/free-study?dest=notes",
   },
   {
-    id: "flashcards",
-    label: "Flashcards",
-    hint: "Generate from any source",
-    href: `${FREE_STUDY_HREF}?dest=flashcards`,
+    mode: "whiteboard",
+    label: "Whiteboard",
+    description: "Draw diagrams and equations",
     icon: PencilLine,
+    href: "/dashboard/whiteboard",
+    external: true,
   },
-];
+] as const;
 
 export function FreeStudyLanding() {
   return (
-    <div className={styles.root} data-free-study-landing="">
-      <header className={styles.hero} aria-label={FS_ARIA.hero}>
-        <span className={styles.badge}>Free Studying</span>
-        <h1 className={styles.title} id="fs-landing-title">
-          Study your way. Scho follows.
-        </h1>
-        <p className={styles.subtitle} id="fs-landing-subtitle">
-          Six tools. One conversation. Upload a PDF, snap a photo, draw on a
-          whiteboard, speak naturally, or just chat — Scho meets you where you
-          are.
-        </p>
-      </header>
-
-      <nav
-        className={styles.destinations}
-        aria-label={FS_ARIA.destinations}
-        onKeyDown={handleDestinationRailKeyDown}
-      >
-        {DESTINATIONS.map((dest, i) => {
-          const Icon = dest.icon;
-          return (
-            <Link
-              key={dest.id}
-              href={dest.href}
-              className={styles.dest}
-              style={{ ["--delay" as string]: `${90 + i * 55}ms` }}
-              aria-label={destinationLandingLabel(dest.id, dest.hint)}
-            >
-              <span className={styles.destIcon} aria-hidden="true">
-                <Icon size={22} weight="duotone" />
-              </span>
-              <div className={styles.destCopy}>
-                <span className={styles.destLabel}>{dest.label}</span>
-                <span className={styles.destHint}>{dest.hint}</span>
-              </div>
-              <ArrowRight
-                className={styles.destArrow}
-                size={16}
-                weight="bold"
-                aria-hidden="true"
-              />
-            </Link>
-          );
-        })}
-      </nav>
-
-      <footer className={styles.foot}>
-        <a
-          href={LABS_HREF}
-          className={styles.labsLink}
-          {...PRODUCT_NEW_TAB_PROPS}
-          title="Opens STEM Labs in a new tab"
-        >
-          <Flask size={14} weight="fill" aria-hidden="true" />
-          Open STEM Labs
-          <ArrowSquareOut
-            className={styles.labsOpenCue}
-            size={12}
-            weight="bold"
-            aria-hidden="true"
-          />
-        </a>
-      </footer>
-    </div>
+    <FreeStudyLayout>
+      <div className={styles.wrapper}>
+        <div className={styles.heading}>
+          <h1 className={styles.title}>How would you like to study?</h1>
+          <p className={styles.subtitle}>
+            Pick a mode to get started. You can switch anytime.
+          </p>
+        </div>
+        <nav className={styles.grid} aria-label="Study modes">
+          {DESTINATIONS.map((d) => {
+            const Icon = d.icon;
+            return (
+              <Link
+                key={d.mode}
+                href={d.href}
+                className={styles.card}
+                {...(d.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              >
+                <div className={styles.iconWrap}>
+                  <Icon size={28} weight="duotone" aria-hidden />
+                </div>
+                <div className={styles.cardBody}>
+                  <h2 className={styles.cardTitle}>{d.label}</h2>
+                  <p className={styles.cardDesc}>{d.description}</p>
+                </div>
+                {d.external ? (
+                  <span className={styles.externalBadge}>New tab</span>
+                ) : null}
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+    </FreeStudyLayout>
   );
 }

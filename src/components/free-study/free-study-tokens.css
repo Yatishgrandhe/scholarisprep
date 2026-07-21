@@ -1,127 +1,74 @@
 /**
  * Free Studying Design Tokens
- *
- * Extends studio-tokens.css with Free Study specific tokens.
+ * Minimal token set preserved for Whiteboard component compatibility.
  * All values reference globals.css design system tokens.
- * OKLCH for modern color, HSL for globals compat.
  */
 
-@import "../../styles/studio-tokens.css";
-
-/* ┌─────────────────────────────────────────────────────────────┐
-   │  Free Study Semantic Tokens (map to globals.css)            │
-   └─────────────────────────────────────────────────────────────┘ */
-
 :root {
-  /* Brand */
   --fs-cobalt: var(--cobalt, #2563eb);
   --fs-cobalt-deep: var(--cobalt-dark, #1d4ed8);
   --fs-cobalt-light: var(--cobalt-light, #eff6ff);
-  --fs-aqua: var(--aqua, #06b6d4);
-  --fs-aqua-light: var(--aqua-light, #cffafe);
 
-  /* Surfaces */
   --fs-surface: hsl(var(--background));
   --fs-surface-raised: hsl(var(--card));
   --fs-surface-sunken: hsl(var(--muted));
-  --fs-surface-hover: hsl(var(--accent) / 0.08);
-  --fs-surface-active: hsl(var(--accent) / 0.14);
 
-  /* Text */
   --fs-text: hsl(var(--foreground));
   --fs-text-muted: hsl(var(--muted-foreground));
   --fs-text-faint: hsl(var(--muted-foreground) / 0.6);
   --fs-text-inverse: hsl(var(--primary-foreground));
 
-  /* Borders */
   --fs-border: hsl(var(--border));
   --fs-border-strong: hsl(var(--border) / 1.5);
-  --fs-border-focus: hsl(var(--ring));
-  --fs-border-subtle: hsl(var(--border) / 0.5);
 
-  /* Interactive */
   --fs-primary: hsl(var(--primary));
   --fs-primary-hover: hsl(var(--primary) / 0.9);
-  --fs-primary-active: hsl(var(--primary) / 0.75);
   --fs-primary-text: hsl(var(--primary-foreground));
 
-  --fs-secondary: hsl(var(--secondary));
-  --fs-secondary-hover: hsl(var(--secondary) / 0.8);
-  --fs-secondary-active: hsl(var(--secondary) / 0.6);
-  --fs-secondary-text: hsl(var(--secondary-foreground));
-
   --fs-destructive: hsl(var(--destructive));
-  --fs-destructive-hover: hsl(var(--destructive) / 0.9);
   --fs-destructive-text: hsl(var(--destructive-foreground));
 
-  --fs-accent: hsl(var(--accent));
-  --fs-accent-hover: hsl(var(--accent) / 0.9);
-  --fs-accent-text: hsl(var(--accent-foreground));
+  --fs-secondary: hsl(var(--secondary));
+  --fs-secondary-text: hsl(var(--secondary-foreground));
 
-  /* State */
   --fs-focus-ring: 0 0 0 2px hsl(var(--ring)), 0 0 0 4px hsl(var(--ring) / 0.28);
   --fs-disabled-opacity: 0.45;
 
-  /* Section accent borders (used in sectioned replies) */
   --fs-insight: 210 80% 48%;
   --fs-strategy: 160 55% 38%;
   --fs-pivot: 28 85% 48%;
 
-  /* Spacing (from globals.css) */
   --fs-space-1: var(--space-1);
   --fs-space-2: var(--space-2);
   --fs-space-3: var(--space-3);
   --fs-space-4: var(--space-4);
   --fs-space-5: var(--space-5);
   --fs-space-6: var(--space-6);
-  --fs-space-7: var(--space-7);
   --fs-space-8: var(--space-8);
   --fs-space-10: var(--space-10);
   --fs-space-12: var(--space-12);
 
-  /* Radius */
   --fs-radius-sm: var(--radius-sm);
   --fs-radius-md: var(--radius-md);
   --fs-radius-lg: var(--radius-lg);
-  --fs-radius-xl: var(--radius-xl);
   --fs-radius-full: var(--radius-full);
 
-  /* Shadows */
   --fs-shadow-sm: var(--shadow-sm);
   --fs-shadow-md: var(--shadow-md);
-  --fs-shadow-lg: var(--shadow-lg);
   --fs-shadow-cobalt: var(--shadow-cobalt);
 
-  /* Transitions */
   --fs-ease: cubic-bezier(0.22, 1, 0.36, 1);
   --fs-fast: 150ms var(--fs-ease);
   --fs-normal: 250ms var(--fs-ease);
 
-  /* Layout */
-  --fs-ask-height: 3.25rem;
-  --fs-rail-width: 280px;
-  --fs-rail-width-compact: 72px;
-  --fs-header-height: 48px;
   --fs-composer-min-h: 64px;
   --fs-composer-max-h: 160px;
-
-  /* Z-index scale */
-  --fs-z-base: 0;
-  --fs-z-rail: 10;
-  --fs-z-sticky: 20;
-  --fs-z-drawer: 40;
-  --fs-z-modal: 50;
-  --fs-z-toast: 60;
-  --fs-z-tooltip: 70;
 }
 
-/* Dark mode overrides */
 .dark {
   --fs-surface: hsl(var(--background));
   --fs-surface-raised: hsl(var(--card));
   --fs-surface-sunken: hsl(var(--muted));
-  --fs-surface-hover: hsl(var(--accent) / 0.12);
-  --fs-surface-active: hsl(var(--accent) / 0.18);
 
   --fs-text: hsl(var(--foreground));
   --fs-text-muted: hsl(var(--muted-foreground));
@@ -129,20 +76,13 @@
 
   --fs-border: hsl(var(--border));
   --fs-border-strong: hsl(var(--border) / 1.3);
-  --fs-border-subtle: hsl(var(--border) / 0.4);
 
   --fs-primary: hsl(var(--primary));
   --fs-primary-hover: hsl(var(--primary) / 0.9);
-  --fs-primary-active: hsl(var(--primary) / 0.7);
 
   --fs-secondary: hsl(var(--secondary));
-  --fs-secondary-hover: hsl(var(--secondary) / 0.85);
 
   --fs-destructive: hsl(var(--destructive));
-  --fs-destructive-hover: hsl(var(--destructive) / 0.9);
-
-  --fs-accent: hsl(var(--accent));
-  --fs-accent-hover: hsl(var(--accent) / 0.9);
 
   --fs-insight: 210 70% 60%;
   --fs-strategy: 160 50% 50%;
@@ -150,11 +90,9 @@
 
   --fs-shadow-sm: 0 1px 3px hsl(0 0% 0% / 0.3), 0 1px 2px hsl(0 0% 0% / 0.2);
   --fs-shadow-md: 0 4px 16px hsl(0 0% 0% / 0.35), 0 2px 6px hsl(0 0% 0% / 0.2);
-  --fs-shadow-lg: 0 12px 40px hsl(0 0% 0% / 0.4), 0 4px 12px hsl(0 0% 0% / 0.25);
   --fs-shadow-cobalt: 0 8px 32px hsl(var(--primary) / 0.35);
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   :root {
     --fs-fast: 0ms;
