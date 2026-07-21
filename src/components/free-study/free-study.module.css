@@ -1,12 +1,14 @@
 /**
  * Free Studying pane / chat / notes / whiteboard primitives.
- * Landing + slim destination rail: free-study-studio.module.css
+ * Uses design tokens from free-study-tokens.css and base from free-study-base.module.css
  */
 
+@import "./free-study-tokens.css";
+
 .layout {
-  display: grid;
+  display: flex;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-  gap: var(--space-4);
+  gap: var(--fs-space-4);
   min-width: 0;
   align-items: stretch;
   flex: 1;
@@ -60,20 +62,18 @@
 .pane,
 .chat {
   min-width: 0;
-  border: 1px solid color-mix(in srgb, var(--cobalt, #2563eb) 12%, hsl(var(--border)));
-  border-radius: 16px;
-  background:
-    linear-gradient(165deg, hsl(0 0% 100% / 0.96) 0%, hsl(var(--card)) 100%);
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 8px 28px hsl(215 30% 20% / 0.04);
+  border: 1px solid var(--fs-border);
+  border-radius: var(--fs-radius-lg);
+  background: var(--fs-surface-raised);
+  composes: flexCol from "./free-study-base.module.css";
+  box-shadow: var(--fs-shadow-sm);
 }
 
 .paneBody {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-  padding: var(--space-4);
+  gap: var(--fs-space-3);
+  padding: var(--fs-space-4);
   min-width: 0;
 }
 
@@ -83,7 +83,7 @@
   height: 100%;
   touch-action: none;
   cursor: crosshair;
-  background: #f8fafc;
+  background: var(--fs-surface);
   user-select: none;
   -webkit-user-select: none;
 }
@@ -92,12 +92,11 @@
   position: relative;
   width: 100%;
   height: min(420px, 55vh);
-  border-radius: 12px;
-  border: 1px solid hsl(var(--border));
+  border-radius: var(--fs-radius-lg);
+  border: 1px solid var(--fs-border);
   overflow: hidden;
-  background:
-    linear-gradient(180deg, #fbfcfe 0%, #f1f5f9 100%);
-  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.7);
+  background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+  box-shadow: inset 0 1px 0 hsl(var(--background) / 0.7);
 }
 
 .wbEmpty {

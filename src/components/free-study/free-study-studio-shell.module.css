@@ -4,84 +4,19 @@
  * See docs/research/free-study/10-own-shell-new-tab.md
  */
 
-.root {
-  --fs-rail: 13.75rem; /* ~220px — Notion/Figma page rail */
-  --fs-rail-compact: 3.5rem;
-  --fs-cobalt: var(--shell-cobalt, var(--cobalt, #2563eb));
-  --fs-cobalt-deep: var(--shell-cobalt-deep, var(--cobalt-dark, #1d4ed8));
-  --fs-aqua: var(--shell-aqua, #06b6d4);
-  --fs-ease: var(--shell-ease, cubic-bezier(0.22, 1, 0.36, 1));
+@import "./free-study-tokens.css";
+@import "./free-study-base.module.css";
 
+.root {
   position: relative;
   isolation: isolate;
-  display: grid;
-  grid-template-columns: var(--fs-rail) minmax(0, 1fr);
-  width: 100%;
-  height: 100dvh;
-  max-height: 100dvh;
-  overflow: hidden;
-  color: var(--shell-ink, hsl(215 28% 14%));
-  font-family: var(--font-body, "Plus Jakarta Sans", system-ui, sans-serif);
-  background: var(--shell-snow, #f8fafc);
-  transition: grid-template-columns 220ms var(--fs-ease);
-}
-
-.root[data-density="compact"] {
-  grid-template-columns: var(--fs-rail-compact) minmax(0, 1fr);
-}
-
-.root[data-density="hidden"] {
-  grid-template-columns: 0 minmax(0, 1fr);
-}
-
-/* Soft stage wash — dim rail / bright content */
-.atmosphere {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.glow {
-  position: absolute;
-  top: -20%;
-  right: -6%;
-  width: min(48vw, 26rem);
-  height: min(48vw, 26rem);
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 40% 40%,
-    color-mix(in srgb, #fff 65%, var(--fs-aqua)) 0%,
-    color-mix(in srgb, var(--fs-cobalt) 22%, transparent) 45%,
-    transparent 72%
-  );
-  opacity: 0.38;
-}
-
-/* ── Product rail (dark, like LabsShell / dashboard) ── */
-
-.rail {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  height: 100dvh;
-  min-height: 0;
-  min-width: 0;
-  padding:
-    max(0.7rem, env(safe-area-inset-top, 0px))
-    0.55rem
-    max(0.7rem, env(safe-area-inset-bottom, 0px));
-  background: hsl(var(--dashboard-sidebar-bg, 220 55% 16%));
-  color: hsl(var(--dashboard-sidebar-fg, 210 40% 98%));
-  border-right: 1px solid
-    hsl(var(--dashboard-sidebar-border, 210 40% 98% / 0.1));
-  overflow: hidden;
-  transition:
-    padding 220ms var(--fs-ease),
-    opacity 180ms var(--fs-ease);
+  composes: flex from "./free-study-base.module.css";
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--fs-surface);
+  color: var(--fs-text);
+  font-family: var(--font-body);
+  transition: background-color var(--fs-normal), color var(--fs-normal);
 }
 
 .root[data-density="hidden"] .rail {
@@ -186,12 +121,12 @@
 }
 
 .sectionLabel {
-  margin: 0.35rem 0.55rem 0.15rem;
+  margin: var(--fs-space-2) var(--fs-space-2) var(--fs-space-1);
   font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%) / 0.9);
+  color: var(--fs-text-faint);
 }
 
 .root[data-density="compact"] .sectionLabel {
@@ -206,22 +141,22 @@
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0.15rem 0;
+  padding: var(--fs-space-1) 0;
 }
 
 .navItem {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: var(--fs-space-2);
   width: 100%;
-  min-height: 2.25rem;
-  padding: 0.4rem 0.55rem;
+  min-height: 44px;
+  padding: var(--fs-space-2) var(--fs-space-3);
   border: 1px solid transparent;
-  border-radius: 9px;
+  border-radius: var(--fs-radius-md);
   background: transparent;
-  color: hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%));
-  font: inherit;
-  font-size: 0.8125rem;
+  color: var(--fs-text-muted);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   text-decoration: none;
@@ -234,32 +169,28 @@
 }
 
 .navItem:hover {
-  background: hsl(var(--dashboard-sidebar-hover, 210 40% 98% / 0.08));
-  color: hsl(var(--dashboard-sidebar-fg, 210 40% 98%));
+  background: var(--fs-surface-hover);
+  color: var(--fs-text);
 }
 
 .navItem:focus-visible {
-  outline: 2px solid var(--fs-cobalt);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: var(--fs-focus-ring);
 }
 
 .navItemActive {
-  background: hsl(var(--dashboard-sidebar-active, 210 40% 98% / 0.14));
-  color: hsl(var(--dashboard-sidebar-fg, 210 40% 98%));
-  border-color: color-mix(in srgb, var(--fs-cobalt) 40%, transparent);
-  box-shadow: inset 3px 0 0 var(--fs-cobalt);
+  background: var(--fs-surface-active);
+  color: var(--fs-text);
+  border-color: color-mix(in srgb, var(--fs-primary) 40%, transparent);
+  box-shadow: inset 3px 0 0 var(--fs-primary);
 }
 
 .navItemAccent {
-  color: color-mix(
-    in srgb,
-    var(--fs-aqua) 50%,
-    hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%))
-  );
+  color: color-mix(in srgb, var(--fs-aqua) 50%, var(--fs-text-muted));
 }
 
 .navItemAccent:hover {
-  color: color-mix(in srgb, var(--fs-aqua) 35%, white);
+  color: var(--fs-aqua);
 }
 
 .navIcon {
@@ -279,7 +210,7 @@
 
 .root[data-density="compact"] .navItem {
   justify-content: center;
-  padding: 0.5rem;
+  padding: var(--fs-space-2);
   gap: 0;
 }
 
@@ -301,8 +232,8 @@
 
 .sep {
   height: 1px;
-  margin: 0.45rem 0.5rem;
-  background: hsl(var(--dashboard-sidebar-border, 210 40% 98% / 0.1));
+  margin: var(--fs-space-2) var(--fs-space-2);
+  background: var(--fs-border);
   border: 0;
   flex-shrink: 0;
 }
@@ -312,21 +243,21 @@
   flex-direction: column;
   gap: 2px;
   margin-top: auto;
-  padding-top: 0.35rem;
+  padding-top: var(--fs-space-2);
   flex-shrink: 0;
 }
 
 .exitBtn {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: var(--fs-space-2);
   width: 100%;
-  min-height: 2.25rem;
-  padding: 0.4rem 0.55rem;
+  min-height: 44px;
+  padding: var(--fs-space-2) var(--fs-space-3);
   border: 1px solid transparent;
-  border-radius: 9px;
+  border-radius: var(--fs-radius-md);
   background: transparent;
-  color: hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%));
+  color: var(--fs-text-muted);
   font: inherit;
   font-size: 0.8125rem;
   font-weight: 600;
@@ -335,23 +266,23 @@
   text-align: left;
   cursor: pointer;
   transition:
-    background 140ms var(--fs-ease),
-    color 140ms var(--fs-ease);
+    background var(--fs-fast),
+    color var(--fs-fast);
 }
 
 .exitBtn:hover {
-  background: hsl(var(--dashboard-sidebar-hover, 210 40% 98% / 0.08));
-  color: hsl(var(--dashboard-sidebar-fg, 210 40% 98%));
+  background: var(--fs-surface-hover);
+  color: var(--fs-text);
 }
 
 .exitBtn:focus-visible {
-  outline: 2px solid var(--fs-cobalt);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: var(--fs-focus-ring);
 }
 
 .root[data-density="compact"] .exitBtn {
   justify-content: center;
-  padding: 0.5rem;
+  padding: var(--fs-space-2);
   gap: 0;
 }
 
@@ -371,9 +302,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: var(--fs-space-3);
   flex-shrink: 0;
-  padding: 0.55rem 0.85rem 0.35rem;
+  padding: var(--fs-space-2) var(--fs-space-3);
   z-index: 2;
 }
 
@@ -382,13 +313,13 @@
   font-size: 0.75rem;
   font-weight: 650;
   letter-spacing: 0.02em;
-  color: var(--shell-muted, hsl(215 14% 42%));
+  color: var(--fs-text-muted);
 }
 
 .stageActions {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: var(--fs-space-2);
 }
 
 .peepBtn,
@@ -396,11 +327,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
-  min-height: 2rem;
-  padding: 0.3rem 0.55rem;
-  border: 1px solid var(--shell-edge, hsl(215 20% 78% / 0.55));
-  border-radius: 999px;
+  gap: var(--fs-space-2);
+  min-height: 2.5rem;
+  padding: var(--fs-space-1) var(--fs-space-3);
+  border: 1px solid var(--fs-border);
+  border-radius: var(--fs-radius-full);
+  background: var(--fs-surface-raised);
+  color: var(--fs-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition:
+    background-color var(--fs-fast),
+    border-color var(--fs-fast),
+    color var(--fs-fast);
+}
   background: color-mix(in srgb, white 88%, var(--fs-cobalt));
   color: var(--shell-ink, hsl(215 28% 14%));
   font: inherit;
@@ -416,14 +358,15 @@
 
 .peepBtn:hover,
 .exitTop:hover {
-  border-color: color-mix(in srgb, var(--fs-cobalt) 40%, var(--shell-edge));
-  color: var(--fs-cobalt-deep);
+  background: var(--fs-surface-hover);
+  border-color: var(--fs-border-strong);
+  color: var(--fs-primary);
 }
 
 .peepBtn:focus-visible,
 .exitTop:focus-visible {
-  outline: 2px solid var(--fs-cobalt);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: var(--fs-focus-ring);
 }
 
 .root:not([data-density="hidden"]) .peepBtn {

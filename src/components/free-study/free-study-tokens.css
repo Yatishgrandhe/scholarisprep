@@ -6,7 +6,7 @@
  * OKLCH for modern color, HSL for globals compat.
  */
 
-@import "./studio-tokens.css";
+@import "../../styles/studio-tokens.css";
 
 /* ┌─────────────────────────────────────────────────────────────┐
    │  Free Study Semantic Tokens (map to globals.css)            │
