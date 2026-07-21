@@ -16,7 +16,7 @@ import {
 import { toast } from "sonner";
 import { useActiveExamType } from "@/hooks/useActiveExamType";
 import { useBoardTutor } from "@/hooks/useBoardTutor";
-import { useKokoroTts } from "@/hooks/useKokoroTts";
+import { useStreamingTts } from "@/hooks/useStreamingTts";
 import { FreeStudySectionedReply } from "@/components/free-study/FreeStudySectionedReply";
 import { ScholarisLogoMark } from "@/components/brand/ScholarisLogoMark";
 import {
@@ -63,6 +63,8 @@ export type BoardChatDockProps = {
    * (e.g. wait for centered Scho open ceremony).
    */
   revealReady?: boolean;
+  /** Capture a board snapshot (PNG Blob) to attach as vision context. */
+  getSnapshot?: () => Promise<Blob | null>;
 };
 
 function resolveEdge(
@@ -85,6 +87,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
       playing,
       disabled,
       revealReady = true,
+      getSnapshot,
     },
     ref,
   ) {
@@ -148,7 +151,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
       getTranscript: () => transcriptRef.current,
     });
 
-    const { progress: ttsProgress, speak } = useKokoroTts();
+    const { progress: ttsProgress, speak, interrupt: interruptTts } = useStreamingTts();
 
     useEffect(() => {
       if (ocrText.trim()) setOcrText(ocrText);
@@ -158,7 +161,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
       onPlay ??
       ((text: string) => {
         void speak(text).catch((err) =>
-          toast.error(err instanceof Error ? err.message : "Kokoro failed"),
+          toast.error(err instanceof Error ? err.message : "Voice playback failed"),
         );
       });
     const isPlaying =
@@ -184,12 +187,31 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
         } else {
           setCollapsed(false);
         }
+        let snapshotBase64: string | undefined;
+        if (getSnapshot) {
+          try {
+            const blob = await getSnapshot();
+            if (blob) {
+              const reader = new FileReader();
+              snapshotBase64 = await new Promise<string>((resolve) => {
+                reader.onloadend = () => {
+                  const result = reader.result;
+                  resolve(typeof result === "string" ? result : "");
+                };
+                reader.readAsDataURL(blob);
+              });
+            }
+          } catch {
+            // snapshot capture is best-effort
+          }
+        }
         await askScho(text, {
           ocrText: options?.ocrText,
           transcript: transcriptRef.current || undefined,
+          snapshotBase64,
         });
       },
-      [askScho, canAsk, disabled, revealReady],
+      [askScho, canAsk, disabled, getSnapshot, revealReady],
     );
 
     useImperativeHandle(

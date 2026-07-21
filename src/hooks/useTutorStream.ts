@@ -12,6 +12,8 @@ type StreamOptions = {
   context?: TutorStreamContext;
   /** Free Studying multimodal telemetry (OCR / PDF / voice / sims). */
   telemetry?: FreeStudyTelemetry | null;
+  /** Board snapshot as base64 data-URL for vision. */
+  snapshotBase64?: string;
 };
 
 export function useTutorStream() {
@@ -40,6 +42,7 @@ export function useTutorStream() {
           message: options.message,
           context: options.context,
           ...(options.telemetry ? { telemetry: options.telemetry } : {}),
+          ...(options.snapshotBase64 ? { snapshot_base64: options.snapshotBase64 } : {}),
         }),
         signal: abortRef.current.signal,
       });

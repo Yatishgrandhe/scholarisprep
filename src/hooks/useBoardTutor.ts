@@ -91,7 +91,7 @@ export function useBoardTutor(options: UseBoardTutorOptions = {}) {
   const askScho = useCallback(
     async (
       message: string,
-      options?: { ocrText?: string; transcript?: string },
+      options?: { ocrText?: string; transcript?: string; snapshotBase64?: string },
     ) => {
       const text = message.trim();
       if (!text || isStreaming || !user) return;
@@ -113,6 +113,7 @@ export function useBoardTutor(options: UseBoardTutorOptions = {}) {
           message: text,
           context: { exam_type: examType },
           telemetry,
+          snapshotBase64: options?.snapshotBase64,
         });
         if (!result.aborted && result.text) {
           setMessages((m) => [

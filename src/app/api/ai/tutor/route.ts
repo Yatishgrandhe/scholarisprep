@@ -73,6 +73,7 @@ const schema = z.object({
     })
     .optional(),
   telemetry: telemetrySchema,
+  snapshot_base64: z.string().max(2_000_000).optional(),
 });
 
 const SSE_HEADERS = {
@@ -127,7 +128,7 @@ async function handleTutor(req: NextRequest): Promise<Response> {
   const parsed = await parseJsonBody(req, schema);
   if (!parsed.ok) return parsed.response;
 
-  const { conversation_id, message, context, telemetry: rawTelemetry } =
+  const { conversation_id, message, context, telemetry: rawTelemetry, snapshot_base64 } =
     parsed.data;
   const cleanMessage = sanitizeUserInput(message);
   const telemetry: FreeStudyTelemetry | null = normalizeTelemetry(rawTelemetry);
@@ -172,6 +173,21 @@ async function handleTutor(req: NextRequest): Promise<Response> {
       role: (m.role === "assistant" ? "assistant" : "user") as ChatTurn["role"],
       content: m.content,
     }));
+
+  // Attach board snapshot as vision content if provided
+  if (snapshot_base64) {
+    const lastUserIdx = messages.findLastIndex((m) => m.role === "user");
+    if (lastUserIdx >= 0) {
+      const existing = messages[lastUserIdx]!;
+      messages[lastUserIdx] = {
+        role: "user",
+        content: [
+          { type: "text", text: existing.content as string },
+          { type: "image_url", image_url: { url: snapshot_base64 } },
+        ],
+      } as unknown as ChatTurn;
+    }
+  }
 
   const examTypeRaw = context?.exam_type;
   const resolvedExamType =

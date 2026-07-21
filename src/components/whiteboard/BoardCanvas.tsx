@@ -52,6 +52,7 @@ export type BoardCanvasProps = {
   /** Fires whenever undo stack availability changes. */
   onUndoAvailabilityChange?: (canUndo: boolean) => void;
   onStrokeEnd?: () => void;
+  onContentChange?: () => void;
 };
 
 /** Matches CSS paper wash for OCR-friendly PNG composites. */
@@ -128,6 +129,7 @@ export const BoardCanvas = forwardRef<BoardCanvasHandle, BoardCanvasProps>(
       onInkChange,
       onUndoAvailabilityChange,
       onStrokeEnd,
+      onContentChange,
     },
     ref,
   ) {
@@ -147,6 +149,7 @@ export const BoardCanvas = forwardRef<BoardCanvasHandle, BoardCanvasProps>(
     const onInkChangeRef = useRef(onInkChange);
     const onUndoAvailRef = useRef(onUndoAvailabilityChange);
     const onStrokeEndRef = useRef(onStrokeEnd);
+    const onContentChangeRef = useRef(onContentChange);
 
     toolRef.current = tool;
     colorRef.current = color;
@@ -155,6 +158,7 @@ export const BoardCanvas = forwardRef<BoardCanvasHandle, BoardCanvasProps>(
     onInkChangeRef.current = onInkChange;
     onUndoAvailRef.current = onUndoAvailabilityChange;
     onStrokeEndRef.current = onStrokeEnd;
+    onContentChangeRef.current = onContentChange;
 
     const [hasInk, setHasInk] = useState(false);
 
@@ -430,6 +434,7 @@ export const BoardCanvas = forwardRef<BoardCanvasHandle, BoardCanvasProps>(
           // already released
         }
       }
+      onContentChangeRef.current?.();
       onStrokeEndRef.current?.();
     };
 
@@ -459,6 +464,7 @@ export const BoardCanvas = forwardRef<BoardCanvasHandle, BoardCanvasProps>(
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       applyRoundStyle(ctx);
       setInk(false);
+      onContentChangeRef.current?.();
     }, [clearInkLayer, getCtx, pushUndo, setInk]);
 
     const exportPng = useCallback(async (): Promise<Blob | null> => {

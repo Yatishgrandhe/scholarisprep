@@ -175,6 +175,7 @@ export function WhiteboardStudio() {
             placement="auto"
             defaultCollapsed={false}
             revealReady={schoOpenDone}
+            getSnapshot={getSnapshot}
           />
         </div>
       </BoardAtmosphere>
