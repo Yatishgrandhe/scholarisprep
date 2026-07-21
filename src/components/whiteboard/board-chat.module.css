@@ -825,3 +825,12 @@
   background: color-mix(in srgb, var(--dock-cobalt) 10%, hsl(222 28% 16%));
   color: color-mix(in srgb, var(--dock-cobalt) 78%, hsl(210 40% 96%));
 }
+
+:global(.dark) .field {
+  background: var(--dock-surface) !important;
+  color: var(--dock-ink) !important;
+}
+
+:global(.dark) .field::placeholder {
+  color: color-mix(in srgb, var(--dock-muted) 82%, transparent) !important;
+}

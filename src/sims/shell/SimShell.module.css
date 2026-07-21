@@ -127,7 +127,7 @@
   z-index: 2;
   top: 0.5rem;
   right: 0.5rem;
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -301,7 +301,7 @@
 }
 
 .metricHead {
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -509,4 +509,19 @@
   .btnGhost {
     width: 100%;
   }
+}
+
+:global(.dark) .btnSecondary {
+  background: hsl(222 28% 16%);
+  color: hsl(210 40% 90%);
+  border-color: hsl(222 20% 25%);
+}
+
+:global(.dark) .btnSecondary:hover {
+  background: hsl(222 28% 20%);
+}
+
+:global(.dark) .examTag {
+  background: hsl(222 28% 16%);
+  color: hsl(210 40% 80%);
 }

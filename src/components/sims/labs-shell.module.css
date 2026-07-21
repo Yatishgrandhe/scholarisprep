@@ -248,11 +248,11 @@
 }
 
 .categoryCount {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 650;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.01em;
-  color: hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%) / 0.85);
+  color: hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%) / 1);
 }
 
 .category[data-active="true"] .categoryCount {
@@ -272,11 +272,11 @@
 .listLabel {
   margin: 0;
   padding: 0.25rem 0.55rem 0.1rem;
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%) / 0.8);
+  color: hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%) / 0.9);
 }
 
 .listEmpty {
@@ -348,11 +348,11 @@
 }
 
 .labMeta {
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.045em;
   text-transform: uppercase;
-  color: hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%) / 0.85);
+  color: hsl(var(--dashboard-sidebar-fg-muted, 215 26% 74%) / 1);
 }
 
 .catalogLink {
@@ -761,4 +761,18 @@
 :global(.dark) .mobileClose:hover {
   color: hsl(210 40% 98%);
   background: hsl(222 47% 20% / 0.3);
+}
+
+:global(.dark) .catalogLink {
+  color: hsl(210 40% 80%);
+}
+
+:global(.dark) .catalogLink:hover,
+:global(.dark) .catalogLink[data-active] {
+  color: #fff;
+}
+
+:global(.dark) .menuBtn {
+  background: hsl(222 28% 16%);
+  color: hsl(210 40% 80%);
 }

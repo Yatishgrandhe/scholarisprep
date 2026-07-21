@@ -60,6 +60,7 @@ export type NavItem = {
 export type NavSection = {
   id: string;
   label?: string;
+  collapsible?: boolean;
   items: NavItem[];
 };
 
@@ -99,32 +100,6 @@ function mainNavForExam(examType: ExamType): NavItem[] {
   return [
     { id: "home", href: "/dashboard", label: "Home", icon: House },
     {
-      id: FREE_STUDY_NAV_ID,
-      href: FREE_STUDY_HREF,
-      label: "Free Studying",
-      icon: Notebook,
-      badge: "New",
-      /** Open hub in a new browser tab from dashboard chrome. */
-      external: true,
-      children: [
-        { id: "overview", href: FREE_STUDY_HREF, label: "Overview", icon: Layout },
-        { id: "projects", href: FREE_STUDY_HREF + "/projects", label: "Projects", icon: FolderOpen },
-        { id: "notes", href: FREE_STUDY_HREF + "?dest=notes", label: "Notes", icon: FileText },
-        { id: "quiz", href: FREE_STUDY_HREF + "/quiz", label: "Quiz", icon: Brain },
-        { id: "flashcards", href: FREE_STUDY_HREF + "/flashcards", label: "Flashcards", icon: Stack },
-        WHITEBOARD_NAV_ITEM,
-      ],
-    },
-    {
-      id: LABS_NAV_ID,
-      href: LABS_HREF,
-      label: "STEM Labs",
-      icon: Flask,
-      badge: "New",
-      /** Open labs catalog in a new browser tab from dashboard chrome. */
-      external: true,
-    },
-    {
       id: "scho",
       href: tutorHref(examType),
       label: tutorNavLabel(examType),
@@ -136,12 +111,6 @@ function mainNavForExam(examType: ExamType): NavItem[] {
       href: "/dashboard/masterclass",
       label: "Expert Workshops",
       icon: PlayCircle,
-    },
-    {
-      id: "ai-courses",
-      href: "/dashboard/courses/create",
-      label: "AI Courses",
-      icon: Sparkle,
     },
     { id: "analytics", href: "/dashboard/analytics", label: "Analytics", icon: ChartLine },
   ];
@@ -229,6 +198,43 @@ export function getNavForExam(examType: ExamType): NavSection[] {
   if (isApOrIbExam(examType)) {
     return [
       { id: "main", items: mainNav },
+      {
+        id: "courses",
+        label: "Courses",
+        collapsible: true,
+        items: [
+          {
+            id: FREE_STUDY_NAV_ID,
+            href: FREE_STUDY_HREF,
+            label: "Free Studying",
+            icon: Notebook,
+            badge: "New",
+            external: true,
+            children: [
+              { id: "overview", href: FREE_STUDY_HREF, label: "Overview", icon: Layout },
+              { id: "projects", href: FREE_STUDY_HREF + "/projects", label: "Projects", icon: FolderOpen },
+              { id: "notes", href: FREE_STUDY_HREF + "?dest=notes", label: "Notes", icon: FileText },
+              { id: "quiz", href: FREE_STUDY_HREF + "/quiz", label: "Quiz", icon: Brain },
+              { id: "flashcards", href: FREE_STUDY_HREF + "/flashcards", label: "Flashcards", icon: Stack },
+              WHITEBOARD_NAV_ITEM,
+            ],
+          },
+          {
+            id: LABS_NAV_ID,
+            href: LABS_HREF,
+            label: "STEM Labs",
+            icon: Flask,
+            badge: "New",
+            external: true,
+          },
+          {
+            id: "ai-courses",
+            href: "/dashboard/courses/create",
+            label: "AI Courses",
+            icon: Sparkle,
+          },
+        ],
+      },
       { id: "practice", label: "Practice", items: practiceNavForExam(examType) },
       { id: "progress", label: "Progress", items: SAT_PROGRESS },
       { id: "college", label: "College", items: COLLEGE },
@@ -238,6 +244,43 @@ export function getNavForExam(examType: ExamType): NavSection[] {
   if (examType === "ACT") {
     return [
       { id: "main", items: mainNav },
+      {
+        id: "courses",
+        label: "Courses",
+        collapsible: true,
+        items: [
+          {
+            id: FREE_STUDY_NAV_ID,
+            href: FREE_STUDY_HREF,
+            label: "Free Studying",
+            icon: Notebook,
+            badge: "New",
+            external: true,
+            children: [
+              { id: "overview", href: FREE_STUDY_HREF, label: "Overview", icon: Layout },
+              { id: "projects", href: FREE_STUDY_HREF + "/projects", label: "Projects", icon: FolderOpen },
+              { id: "notes", href: FREE_STUDY_HREF + "?dest=notes", label: "Notes", icon: FileText },
+              { id: "quiz", href: FREE_STUDY_HREF + "/quiz", label: "Quiz", icon: Brain },
+              { id: "flashcards", href: FREE_STUDY_HREF + "/flashcards", label: "Flashcards", icon: Stack },
+              WHITEBOARD_NAV_ITEM,
+            ],
+          },
+          {
+            id: LABS_NAV_ID,
+            href: LABS_HREF,
+            label: "STEM Labs",
+            icon: Flask,
+            badge: "New",
+            external: true,
+          },
+          {
+            id: "ai-courses",
+            href: "/dashboard/courses/create",
+            label: "AI Courses",
+            icon: Sparkle,
+          },
+        ],
+      },
       { id: "practice", label: "Practice", items: ACT_PRACTICE },
       { id: "progress", label: "Progress", items: ACT_PROGRESS },
       { id: "college", label: "College", items: COLLEGE },
@@ -246,6 +289,43 @@ export function getNavForExam(examType: ExamType): NavSection[] {
 
   return [
     { id: "main", items: mainNav },
+    {
+      id: "courses",
+      label: "Courses",
+      collapsible: true,
+      items: [
+        {
+          id: FREE_STUDY_NAV_ID,
+          href: FREE_STUDY_HREF,
+          label: "Free Studying",
+          icon: Notebook,
+          badge: "New",
+          external: true,
+          children: [
+            { id: "overview", href: FREE_STUDY_HREF, label: "Overview", icon: Layout },
+            { id: "projects", href: FREE_STUDY_HREF + "/projects", label: "Projects", icon: FolderOpen },
+            { id: "notes", href: FREE_STUDY_HREF + "?dest=notes", label: "Notes", icon: FileText },
+            { id: "quiz", href: FREE_STUDY_HREF + "/quiz", label: "Quiz", icon: Brain },
+            { id: "flashcards", href: FREE_STUDY_HREF + "/flashcards", label: "Flashcards", icon: Stack },
+            WHITEBOARD_NAV_ITEM,
+          ],
+        },
+        {
+          id: LABS_NAV_ID,
+          href: LABS_HREF,
+          label: "STEM Labs",
+          icon: Flask,
+          badge: "New",
+          external: true,
+        },
+        {
+          id: "ai-courses",
+          href: "/dashboard/courses/create",
+          label: "AI Courses",
+          icon: Sparkle,
+        },
+      ],
+    },
     { id: "practice", label: "Practice", items: SAT_PRACTICE },
     { id: "progress", label: "Progress", items: SAT_PROGRESS },
     { id: "college", label: "College", items: COLLEGE },

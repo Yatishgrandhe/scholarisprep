@@ -235,6 +235,33 @@
   overflow: hidden;
 }
 
+.sectionToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-2) var(--space-2) var(--space-1);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 120ms ease;
+}
+
+.sectionToggle:hover {
+  background: hsl(var(--dashboard-sidebar-hover));
+}
+
+.sectionChevron {
+  flex-shrink: 0;
+  color: hsl(var(--dashboard-sidebar-fg-muted));
+  transition: transform 200ms ease;
+}
+
+.sectionChevronExpanded {
+  transform: rotate(180deg);
+}
+
 /* Nav links */
 .navLink {
   display: flex;

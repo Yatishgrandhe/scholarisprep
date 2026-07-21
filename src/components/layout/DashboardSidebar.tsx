@@ -4,8 +4,9 @@ import Link from "next/link";
 import { BrandHomeLink } from "@/components/brand/BrandHomeLink";
 import { ScholarisLogoMark } from "@/components/brand/ScholarisLogoMark";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
+  CaretDown,
   CaretLeft,
   CaretRight,
   ChartBar,
@@ -52,6 +53,44 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
   const [bugOpen, setBugOpen] = useState(false);
   const [classOpen, setClassOpen] = useState(false);
   const [supportOpen, setSupportOpen] = useState(false);
+  const [expandedGroups, setExpandedGroups] = useState<Set<string>>(() => {
+    if (typeof window === "undefined") return new Set(["courses"]);
+    try {
+      const saved = localStorage.getItem("scholaris-expanded-nav");
+      return saved ? new Set(JSON.parse(saved)) : new Set(["courses"]);
+    } catch {
+      return new Set(["courses"]);
+    }
+  });
+
+  const toggleGroup = (id: string) => {
+    setExpandedGroups((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      localStorage.setItem("scholaris-expanded-nav", JSON.stringify([...next]));
+      return next;
+    });
+  };
+
+  useEffect(() => {
+    const activeSection = sections.find((s) =>
+      s.items.some(
+        (item) =>
+          isActive(item.href, item.id) ||
+          item.children?.some((c) => isActive(c.href, c.id)),
+      ),
+    );
+    if (activeSection?.collapsible) {
+      setExpandedGroups((prev) => {
+        if (prev.has(activeSection.id)) return prev;
+        const next = new Set(prev);
+        next.add(activeSection.id);
+        localStorage.setItem("scholaris-expanded-nav", JSON.stringify([...next]));
+        return next;
+      });
+    }
+  }, [pathname]);
 
   const avatarInitial = getProfileAvatarInitial(displayEmail);
   const nameLabel = getDisplayNameLabel(displayName, displayEmail);
@@ -145,11 +184,26 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
         <nav className={styles.nav} aria-label="Dashboard">
           {sections.map((section) => (
             <div key={section.id} className={styles.section}>
-              {section.label && !collapsed ? (
+              {section.collapsible && !collapsed ? (
+                <button
+                  type="button"
+                  className={`${styles.sectionToggle} ${expandedGroups.has(section.id) ? styles.sectionToggleExpanded : ""}`}
+                  onClick={() => toggleGroup(section.id)}
+                  aria-expanded={expandedGroups.has(section.id)}
+                >
+                  <span className={styles.sectionLabel}>{section.label}</span>
+                  <CaretDown
+                    size={12}
+                    weight="bold"
+                    className={`${styles.sectionChevron} ${expandedGroups.has(section.id) ? styles.sectionChevronExpanded : ""}`}
+                  />
+                </button>
+              ) : section.label && !collapsed ? (
                 <span className={styles.sectionLabel}>{section.label}</span>
               ) : null}
-              {section.items.map(
-                ({ id, href, label, icon: Icon, badge, children, external }) => {
+              {(!section.collapsible || expandedGroups.has(section.id)) &&
+                section.items.map(
+                  ({ id, href, label, icon: Icon, badge, children, external }) => {
                   const active =
                     id === "scho"
                       ? isTutorRoute(pathname)
