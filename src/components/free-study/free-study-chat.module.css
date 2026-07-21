@@ -62,7 +62,7 @@
 
 .userBubble .bubbleContent {
   background: hsl(var(--primary));
-  color: #fff;
+  color: hsl(var(--primary-foreground));
   border-bottom-right-radius: 4px;
 }
 
@@ -144,7 +144,7 @@
   border: none;
   border-radius: 8px;
   background: hsl(var(--primary));
-  color: #fff;
+  color: hsl(var(--primary-foreground));
   cursor: pointer;
   transition:
     background 150ms ease,

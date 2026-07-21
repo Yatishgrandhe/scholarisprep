@@ -741,3 +741,24 @@
   background: hsl(222 47% 11%);
   border-bottom-color: hsl(210 40% 98% / 0.08);
 }
+
+:global(.dark) .main {
+  background: hsl(222 47% 11%);
+  background-image: none;
+}
+
+:global(.dark) .menuBtn {
+  background: hsl(222 47% 16% / 0.8);
+  border-color: hsl(222 47% 25%);
+  color: hsl(215 20% 80%);
+  box-shadow: 0 1px 4px hsl(222 47% 11% / 0.3);
+}
+
+:global(.dark) .mobileClose {
+  color: hsl(215 20% 70%);
+}
+
+:global(.dark) .mobileClose:hover {
+  color: hsl(210 40% 98%);
+  background: hsl(222 47% 20% / 0.3);
+}

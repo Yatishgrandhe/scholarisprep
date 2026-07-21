@@ -101,11 +101,19 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
     const ocrLiveRef = useRef(ocrText);
     const transcriptRef = useRef("");
     const feedRef = useRef<HTMLDivElement | null>(null);
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
     const pendingExpandRef = useRef(false);
 
     useEffect(() => {
       ocrLiveRef.current = ocrText;
     }, [ocrText]);
+
+    useEffect(() => {
+      const el = textareaRef.current;
+      if (!el) return;
+      el.style.height = "auto";
+      el.style.height = `${Math.min(el.scrollHeight, 120)}px`;
+    }, [input]);
 
     useEffect(() => {
       if (typeof window === "undefined") return;
@@ -401,13 +409,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
 
             <form
               className={styles.composer}
-              onSubmit={(e) => {
-                e.preventDefault();
-                const text = input.trim();
-                if (!text) return;
-                setInput("");
-                void sendAsk(text);
-              }}
+              onSubmit={(e) => e.preventDefault()}
             >
               <div
                 className={styles.voiceSlot}
@@ -424,15 +426,26 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
                 />
               </div>
 
-              <input
+              <textarea
+                ref={textareaRef}
                 className={styles.field}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && !e.shiftKey) {
+                    e.preventDefault();
+                    const text = input.trim();
+                    if (!text) return;
+                    setInput("");
+                    void sendAsk(text);
+                  }
+                }}
                 placeholder={
                   listening ? "Listening…" : "Ask about the board…"
                 }
                 disabled={isStreaming || !canAsk || disabled}
                 aria-label={BOARD_ARIA.chatComposer}
+                rows={1}
               />
               <button
                 type="submit"

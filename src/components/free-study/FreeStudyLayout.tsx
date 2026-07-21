@@ -15,7 +15,7 @@ export function FreeStudyLayout({
   return (
     <div className={styles.shell}>
       <header className={styles.header}>
-        <Link href="/dashboard" className={styles.backLink}>
+        <Link href="/dashboard/free-study" className={styles.backLink}>
           <ArrowLeft size={16} weight="bold" aria-hidden />
           <span>Free Studying</span>
         </Link>

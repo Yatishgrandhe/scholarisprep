@@ -90,7 +90,7 @@
 .micActive {
   background: hsl(var(--destructive));
   border-color: hsl(var(--destructive));
-  color: #fff;
+  color: hsl(var(--destructive-foreground));
   animation: pulse 1.5s ease infinite;
 }
 
