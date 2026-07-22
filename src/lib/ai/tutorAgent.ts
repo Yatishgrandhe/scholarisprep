@@ -51,8 +51,10 @@ export function buildTutorToolHint(examType?: string | null): string {
   const label = courseLabel(examType);
   return (
     `\n\nTOOLS — course-aware tutoring for ${label}:\n` +
-    `- You may call \`web_search\` when you need current or uncertain facts ` +
+    `- You may call \`web_search\` ONLY when you need current or uncertain facts ` +
     `(test dates/policies, college data, statistics, scoring updates).\n` +
+    `- NEVER search for: basic arithmetic (2+2, 3×5, 10/2), algebra, calculus, ` +
+    `physics formulas, definitions, or any concept you already know. Answer directly.\n` +
     `- Prefer course/exam-specific queries (include "${label}" or the official ` +
     `exam name when relevant).\n` +
     `- For concepts, worked examples, and strategy you already know for this ` +
@@ -92,7 +94,7 @@ export function streamTutorAgent(
     examType = null,
     temperature = 0.6,
     maxTokens = 650,
-    maxRounds = 3,
+    maxRounds = 2,
   } = params;
 
   return streamWithTools(ai, {

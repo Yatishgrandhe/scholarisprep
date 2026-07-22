@@ -263,7 +263,7 @@ async function handleTutor(req: NextRequest): Promise<Response> {
     examType: preloadExam ?? resolvedExamType ?? examTypeRaw ?? null,
     temperature: freeStudy ? 0.2 : 0.6,
     maxTokens: freeStudy ? 700 : 650,
-    maxRounds: 3,
+    maxRounds: 2,
   });
 
   const stream = new ReadableStream({
