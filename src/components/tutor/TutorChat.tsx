@@ -224,6 +224,19 @@ export function TutorChat({
                       });
                       setInput(prompt);
                       setSparkSuggestion(null);
+                      // Auto-send the spark prompt
+                      setTimeout(() => {
+                        setInput((current) => {
+                          if (current === prompt) {
+                            // Trigger send via a synthetic enter or direct call
+                            const textarea = document.getElementById("course-tutor-message") as HTMLTextAreaElement | null;
+                            if (textarea) {
+                              textarea.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true }));
+                            }
+                          }
+                          return current;
+                        });
+                      }, 50);
                     }}
                     onDismiss={() => {
                       logSparkInteraction({

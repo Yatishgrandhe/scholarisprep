@@ -186,6 +186,11 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
         if (options?.ocrText !== undefined) {
           ocrLiveRef.current = options.ocrText;
         }
+        // Clear stale OCR text when user types a manual message (no OCR override)
+        if (options?.ocrText === undefined && !listening) {
+          ocrLiveRef.current = "";
+          setOcrText("");
+        }
         if (!revealReady) {
           pendingExpandRef.current = true;
         } else {

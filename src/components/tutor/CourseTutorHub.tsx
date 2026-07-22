@@ -552,7 +552,6 @@ export function CourseTutorHub({ initialCourseId }: CourseTutorHubProps) {
   const ensureConversation = async (): Promise<string | null> => {
     if (activeId) return activeId;
     if (!user) return null;
-    await ensureFreshSession(supabase);
     const { data } = await supabase
       .from("tutor_conversations")
       .insert({
@@ -566,7 +565,6 @@ export function CourseTutorHub({ initialCourseId }: CourseTutorHubProps) {
     if (!data) return null;
     skipLoadRef.current = data.id;
     setActiveId(data.id);
-    await loadConversations();
     return data.id;
   };
 
@@ -593,7 +591,6 @@ export function CourseTutorHub({ initialCourseId }: CourseTutorHubProps) {
       setSparkSuggestion(null);
     }
 
-    await ensureFreshSession(supabase);
     const conversationId = await ensureConversation();
     if (!conversationId) {
       setShowTyping(false);
@@ -608,7 +605,6 @@ export function CourseTutorHub({ initialCourseId }: CourseTutorHubProps) {
           updated_at: new Date().toISOString(),
         })
         .eq("id", conversationId);
-      void loadConversations();
     }
 
     try {
@@ -1195,6 +1191,18 @@ export function CourseTutorHub({ initialCourseId }: CourseTutorHubProps) {
                       });
                       setInput(prompt);
                       setSparkSuggestion(null);
+                      // Auto-send the spark prompt after state updates
+                      setTimeout(() => {
+                        setInput((current) => {
+                          if (current === prompt) {
+                            const textarea = document.getElementById("course-tutor-message") as HTMLTextAreaElement | null;
+                            if (textarea) {
+                              textarea.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true }));
+                            }
+                          }
+                          return current;
+                        });
+                      }, 50);
                     }}
                     onDismiss={() => {
                       logSparkInteraction({

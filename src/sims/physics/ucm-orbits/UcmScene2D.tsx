@@ -167,8 +167,10 @@ export function UcmScene2D({ params, time, trail }: Props) {
     ctx.lineTo(sat.px + tx * vLen, sat.py - ty * vLen);
     ctx.stroke();
 
-    ctx.fillStyle = "rgba(226, 232, 240, 0.8)";
-    ctx.font = `${11 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.fillStyle = "rgba(226, 232, 240, 0.92)";
+    ctx.font = `${14 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.shadowColor = "rgba(0,0,0,0.6)";
+    ctx.shadowBlur = 3 * dpr;
     ctx.fillText(
       params.mode === "orbit" ? "gravity-orbit" : "UCM",
       24 * dpr,
@@ -180,6 +182,8 @@ export function UcmScene2D({ params, time, trail }: Props) {
       24 * dpr,
       64 * dpr,
     );
+    ctx.shadowColor = "transparent";
+    ctx.shadowBlur = 0;
   }, [params, time, trail]);
 
   return (

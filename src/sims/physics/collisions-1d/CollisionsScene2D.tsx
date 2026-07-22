@@ -162,8 +162,10 @@ export function CollisionsScene2D({ params, progress, playing }: Props) {
     ctx.shadowBlur = 0;
 
     // Labels
-    ctx.fillStyle = "rgba(226, 232, 240, 0.85)";
-    ctx.font = `${11 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.fillStyle = "rgba(226, 232, 240, 0.92)";
+    ctx.font = `${14 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.shadowColor = "rgba(0,0,0,0.6)";
+    ctx.shadowBlur = 3 * dpr;
     ctx.textAlign = "center";
     ctx.fillText(`m₁ ${params.m1.toFixed(1)} kg`, sx1, midY + r1 + 18 * dpr);
     ctx.fillText(`m₂ ${params.m2.toFixed(1)} kg`, sx2, midY + r2 + 18 * dpr);
@@ -179,6 +181,8 @@ export function CollisionsScene2D({ params, progress, playing }: Props) {
       24 * dpr,
       46 * dpr,
     );
+    ctx.shadowColor = "transparent";
+    ctx.shadowBlur = 0;
   }, [params, progress, playing]);
 
   return (

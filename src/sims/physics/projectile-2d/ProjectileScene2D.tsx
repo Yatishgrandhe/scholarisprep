@@ -144,10 +144,14 @@ export function ProjectileScene2D({
     ctx.shadowBlur = 0;
 
     // Axes ticks
-    ctx.fillStyle = "rgba(226, 232, 240, 0.7)";
-    ctx.font = `${11 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.fillStyle = "rgba(226, 232, 240, 0.92)";
+    ctx.font = `${14 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.shadowColor = "rgba(0,0,0,0.6)";
+    ctx.shadowBlur = 3 * dpr;
     ctx.fillText("0", pad - 10 * dpr, g0.py + 16 * dpr);
     ctx.fillText(`${worldW.toFixed(0)} m`, g1.px - 36 * dpr, g0.py + 16 * dpr);
+    ctx.shadowColor = "transparent";
+    ctx.shadowBlur = 0;
   }, [params, time, playing, trail, onTrailPoint]);
 
   return (

@@ -120,6 +120,10 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
     }
     const path = href.split("?")[0]!;
     if (path === "/dashboard") return pathname === "/dashboard";
+    // For children with query params, require exact match including query string
+    if (href.includes("?")) {
+      return pathname === path;
+    }
     return pathname.startsWith(path);
   };
 

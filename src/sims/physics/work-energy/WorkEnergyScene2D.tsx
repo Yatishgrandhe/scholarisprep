@@ -91,14 +91,18 @@ export function WorkEnergyScene2D({ params, time }: Props) {
     ctx.stroke();
     ctx.setLineDash([]);
 
-    ctx.fillStyle = "rgba(226, 232, 240, 0.65)";
-    ctx.font = `${10 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.fillStyle = "rgba(226, 232, 240, 0.92)";
+    ctx.font = `${13 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.shadowColor = "rgba(0,0,0,0.6)";
+    ctx.shadowBlur = 3 * dpr;
     ctx.fillText("0", startX - 4 * dpr, groundY + 22 * dpr);
     ctx.fillText(
       `${params.distance.toFixed(1)} m`,
       endX - 18 * dpr,
       groundY + 22 * dpr,
     );
+    ctx.shadowColor = "transparent";
+    ctx.shadowBlur = 0;
 
     // Work region tint
     ctx.fillStyle = "rgba(37, 99, 235, 0.12)";
@@ -130,8 +134,8 @@ export function WorkEnergyScene2D({ params, time }: Props) {
       ctx.fillRect(barLeft, y, barMaxW, barH);
       ctx.fillStyle = color;
       ctx.fillRect(barLeft, y, width, barH);
-      ctx.fillStyle = "rgba(226, 232, 240, 0.8)";
-      ctx.font = `${10 * dpr}px ui-monospace, Menlo, monospace`;
+      ctx.fillStyle = "rgba(226, 232, 240, 0.92)";
+      ctx.font = `${13 * dpr}px ui-monospace, Menlo, monospace`;
       ctx.fillText(
         `${label} ${value.toFixed(2)} J`,
         barLeft + 6 * dpr,
@@ -144,8 +148,10 @@ export function WorkEnergyScene2D({ params, time }: Props) {
     drawBar(barTop + 56 * dpr, analytics.WFric, "#f87171", "W_fric");
     drawBar(barTop + 84 * dpr, analytics.WNet, "#a78bfa", "W_net");
 
-    ctx.fillStyle = "rgba(226, 232, 240, 0.8)";
-    ctx.font = `${11 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.fillStyle = "rgba(226, 232, 240, 0.92)";
+    ctx.font = `${14 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.shadowColor = "rgba(0,0,0,0.6)";
+    ctx.shadowBlur = 3 * dpr;
     ctx.fillText(`x = ${x.toFixed(2)} m`, 28 * dpr, 28 * dpr);
     ctx.fillText(`v = ${v.toFixed(2)} m/s`, 28 * dpr, 46 * dpr);
     ctx.fillText(
@@ -153,6 +159,8 @@ export function WorkEnergyScene2D({ params, time }: Props) {
       28 * dpr,
       64 * dpr,
     );
+    ctx.shadowColor = "transparent";
+    ctx.shadowBlur = 0;
   }, [params, time]);
 
   return (

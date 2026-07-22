@@ -7,7 +7,7 @@ import {
   isSpeechRecognitionSupported,
   type SttSession,
 } from "@/lib/free-study/stt";
-import { useKokoroTts } from "@/hooks/useKokoroTts";
+import { useStreamingTts } from "@/hooks/useStreamingTts";
 
 export type LocalModelStatus =
   | "idle"
@@ -23,7 +23,7 @@ export type LocalTelemetryModelsState = {
 };
 
 /**
- * Aggregates OCR / STT / Kokoro progress for Free Studying panes.
+ * Aggregates OCR / STT / TTS progress for Free Studying panes.
  */
 export function useLocalTelemetryModels() {
   const [ocr, setOcr] = useState<LocalTelemetryModelsState["ocr"]>({
@@ -36,7 +36,7 @@ export function useLocalTelemetryModels() {
       ? undefined
       : "Web Speech API needs Chrome or Edge",
   });
-  const { progress: ttsProgress, speak, preload } = useKokoroTts();
+  const { progress: ttsProgress, speak, preload } = useStreamingTts();
   const sttSessionRef = useRef<SttSession | null>(null);
   const sttBufferRef = useRef("");
 
@@ -123,7 +123,7 @@ export function useLocalTelemetryModels() {
     startListening,
     stopListening,
     preloadTts: preload,
-    speakWithKokoro: speak,
+    speakWithStreaming: speak,
     ttsProgress,
   };
 }

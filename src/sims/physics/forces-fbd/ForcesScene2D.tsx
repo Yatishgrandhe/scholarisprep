@@ -54,7 +54,7 @@ function drawArrow(
   ctx.closePath();
   ctx.fill();
 
-  ctx.font = `${11 * dpr}px ui-monospace, Menlo, monospace`;
+  ctx.font = `${14 * dpr}px ui-monospace, Menlo, monospace`;
   ctx.fillText(label, x1 + 6 * dpr * Math.sign(ux || 1), y1 - 8 * dpr);
 }
 
@@ -116,14 +116,16 @@ export function ForcesScene2D({ params, time, playing: _playing }: Props) {
     ctx.stroke();
 
     // Distance markers
-    ctx.fillStyle = "rgba(226, 232, 240, 0.55)";
-    ctx.font = `${10 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.fillStyle = "rgba(226, 232, 240, 0.92)";
+    ctx.font = `${13 * dpr}px ui-monospace, Menlo, monospace`;
     for (let m = 0; m <= 4; m++) {
       const px = pad + m * scale;
       ctx.beginPath();
       ctx.moveTo(px, groundY);
       ctx.lineTo(px, groundY + 8 * dpr);
       ctx.stroke();
+      ctx.shadowColor = "rgba(0,0,0,0.6)";
+      ctx.shadowBlur = 3 * dpr;
       ctx.fillText(`${m} m`, px - 8 * dpr, groundY + 20 * dpr);
     }
 
@@ -176,12 +178,16 @@ export function ForcesScene2D({ params, time, playing: _playing }: Props) {
     );
 
     // Readouts
-    ctx.fillStyle = "rgba(226, 232, 240, 0.8)";
-    ctx.font = `${11 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.fillStyle = "rgba(226, 232, 240, 0.92)";
+    ctx.font = `${14 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.shadowColor = "rgba(0,0,0,0.6)";
+    ctx.shadowBlur = 3 * dpr;
     ctx.fillText(`x = ${x.toFixed(2)} m`, 28 * dpr, 28 * dpr);
     ctx.fillText(`v = ${v.toFixed(2)} m/s`, 28 * dpr, 46 * dpr);
     ctx.fillText(`a = ${analytics.a.toFixed(2)} m/s²`, 28 * dpr, 64 * dpr);
     ctx.fillText(`F_net = ${analytics.FNet.toFixed(2)} N`, 28 * dpr, 82 * dpr);
+    ctx.shadowColor = "transparent";
+    ctx.shadowBlur = 0;
   }, [params, time]);
 
   return (

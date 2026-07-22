@@ -398,14 +398,23 @@ export async function getAiKeyModeAdmin(): Promise<{
   };
 }
 
+/** Module-level cache for platform credentials to avoid repeated DB queries. */
+let platformCache: { client: ResolvedAiClient; ts: number } | null = null;
+const PLATFORM_CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
+
 async function platformClient(): Promise<ResolvedAiClient | null> {
+  if (platformCache && Date.now() - platformCache.ts < PLATFORM_CACHE_TTL_MS) {
+    return platformCache.client;
+  }
   const apiKey = await getPlatformAiKey();
   if (!apiKey) return null;
   const [serverURL, model] = await Promise.all([
     getPlatformAiBaseUrl(),
     getPlatformAiModel(),
   ]);
-  return { apiKey, serverURL, model, source: "platform" };
+  const client: ResolvedAiClient = { apiKey, serverURL, model, source: "platform" };
+  platformCache = { client, ts: Date.now() };
+  return client;
 }
 
 /**

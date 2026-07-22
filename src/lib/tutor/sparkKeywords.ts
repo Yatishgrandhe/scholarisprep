@@ -14,9 +14,10 @@ export interface SparkSuggestion {
   tryPrompt?: string;
 }
 
-/** Normalized lowercase keywords → Spark suggestion mapping. */
+/** Normalized lowercase keywords → Spark suggestion mapping.
+ *  Keys are already normalized (lowercase, no punctuation). */
 const SPARK_KEYWORDS: Record<string, SparkSuggestion> = {
-  // Simple Harmonic Motion
+  // Simple Harmonic Motion — strong intent keywords
   shm: {
     type: "shm_live_graph",
     title: "Live Graph: Simple Harmonic Motion",
@@ -53,26 +54,14 @@ const SPARK_KEYWORDS: Record<string, SparkSuggestion> = {
     description: "See displacement x(t) and acceleration a(t) in real time.",
     tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
   },
-  // Graph/plot related
-  graph: {
+  // Graph/plot related — only match when SHM context is present
+  pendulum: {
     type: "shm_live_graph",
     title: "Live Graph: Simple Harmonic Motion",
     description: "See displacement x(t) and acceleration a(t) in real time.",
     tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
   },
-  plot: {
-    type: "shm_live_graph",
-    title: "Live Graph: Simple Harmonic Motion",
-    description: "See displacement x(t) and acceleration a(t) in real time.",
-    tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
-  },
-  "x(t)": {
-    type: "shm_live_graph",
-    title: "Live Graph: Simple Harmonic Motion",
-    description: "See displacement x(t) and acceleration a(t) in real time.",
-    tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
-  },
-  "a(t)": {
+  "spring mass": {
     type: "shm_live_graph",
     title: "Live Graph: Simple Harmonic Motion",
     description: "See displacement x(t) and acceleration a(t) in real time.",
@@ -84,46 +73,14 @@ const SPARK_KEYWORDS: Record<string, SparkSuggestion> = {
     description: "See displacement x(t) and acceleration a(t) in real time.",
     tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
   },
-  sine: {
-    type: "shm_live_graph",
-    title: "Live Graph: Simple Harmonic Motion",
-    description: "See displacement x(t) and acceleration a(t) in real time.",
-    tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
-  },
-  sin: {
-    type: "shm_live_graph",
-    title: "Live Graph: Simple Harmonic Motion",
-    description: "See displacement x(t) and acceleration a(t) in real time.",
-    tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
-  },
-  cos: {
-    type: "shm_live_graph",
-    title: "Live Graph: Simple Harmonic Motion",
-    description: "See displacement x(t) and acceleration a(t) in real time.",
-    tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
-  },
-  pendulum: {
-    type: "shm_live_graph",
-    title: "Live Graph: Simple Harmonic Motion",
-    description: "See displacement x(t) and acceleration a(t) in real time.",
-    tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
-  },
-  spring: {
-    type: "shm_live_graph",
-    title: "Live Graph: Simple Harmonic Motion",
-    description: "See displacement x(t) and acceleration a(t) in real time.",
-    tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
-  },
-  mass: {
-    type: "shm_live_graph",
-    title: "Live Graph: Simple Harmonic Motion",
-    description: "See displacement x(t) and acceleration a(t) in real time.",
-    tryPrompt: "Show me a graph of SHM: x = A cos(ωt), a = −ω²x",
-  },
 };
 
+/** Keywords that require SHM context to trigger (avoid false positives). */
+const CONTEXTUAL_KEYWORDS = new Set(["graph", "plot", "sin", "cos", "spring", "mass", "xt", "at"]);
+
 /**
- * Normalize text for keyword matching: lowercase, remove common punctuation.
+ * Normalize text for keyword matching: lowercase, remove punctuation
+ * including parentheses (so "x(t)" becomes "xt").
  */
 function normalizeText(text: string): string {
   return text
@@ -158,8 +115,19 @@ const LEARN_INTENT_PATTERNS = [
  */
 export function matchSparkKeyword(message: string): SparkSuggestion | null {
   const normalized = normalizeText(message);
+  // SHM context indicators — these appear alongside contextual keywords
+  const hasShmContext =
+    normalized.includes("shm") ||
+    normalized.includes("simple harmonic") ||
+    normalized.includes("harmonic") ||
+    normalized.includes("oscillat") ||
+    normalized.includes("pendulum") ||
+    normalized.includes("spring mass");
+
   for (const [keyword, suggestion] of Object.entries(SPARK_KEYWORDS)) {
     if (normalized.includes(keyword)) {
+      // For contextual keywords, require SHM context in the message
+      if (CONTEXTUAL_KEYWORDS.has(keyword) && !hasShmContext) continue;
       return suggestion;
     }
   }

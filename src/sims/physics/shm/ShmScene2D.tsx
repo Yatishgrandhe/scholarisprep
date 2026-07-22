@@ -150,11 +150,15 @@ export function ShmScene2D({ params, time, history }: Props) {
     });
     ctx.stroke();
 
-    ctx.fillStyle = "rgba(226, 232, 240, 0.75)";
-    ctx.font = `${11 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.fillStyle = "rgba(226, 232, 240, 0.92)";
+    ctx.font = `${14 * dpr}px ui-monospace, Menlo, monospace`;
+    ctx.shadowColor = "rgba(0,0,0,0.6)";
+    ctx.shadowBlur = 3 * dpr;
     ctx.fillText(`x = ${x.toFixed(3)} m`, 28 * dpr, 28 * dpr);
     ctx.fillText(`v = ${v.toFixed(3)} m/s`, 28 * dpr, 46 * dpr);
     ctx.fillText("x(t)", 28 * dpr, graphTop + 16 * dpr);
+    ctx.shadowColor = "transparent";
+    ctx.shadowBlur = 0;
   }, [params, time, history]);
 
   return (

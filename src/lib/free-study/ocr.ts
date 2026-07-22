@@ -28,8 +28,10 @@ export async function recognizeImageText(
     await worker.setParameters({
       tessedit_pageseg_mode: "11" as never,
       preserve_interword_spaces: "1",
+      tessedit_char_whitelist:
+        "0123456789+-=×÷/(). ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ",
     });
-    const { data } = await worker.recognize(image);
+    const { data } = await worker.recognize(image as Parameters<typeof worker.recognize>[0]);
     return (data.text ?? "").replace(/\s+\n/g, "\n").trim();
   } finally {
     await worker.terminate();

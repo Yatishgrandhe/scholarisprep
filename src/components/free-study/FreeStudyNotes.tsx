@@ -10,6 +10,7 @@ import {
   Image,
   FilePdf,
   ChatCircle,
+  CaretLeft,
 } from "@phosphor-icons/react";
 import { toast } from "sonner";
 import { FreeStudyLayout } from "./FreeStudyLayout";
@@ -68,6 +69,7 @@ export function FreeStudyNotes() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isStreaming, setIsStreaming] = useState(false);
   const [showChat, setShowChat] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   const activeProject = useMemo(
     () => projects.find((p) => p.id === activeProjectId) ?? null,
@@ -167,11 +169,9 @@ export function FreeStudyNotes() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            messages: [...messages, userMsg].map((m) => ({
-              role: m.role,
-              content: m.content,
-            })),
-            examType: "general",
+            conversation_id: "free-study-notes",
+            message: content + noteContext,
+            context: { exam_type: "general" },
           }),
         });
 
@@ -239,23 +239,38 @@ export function FreeStudyNotes() {
     <FreeStudyLayout mode="Notes">
       <div className={styles.layout}>
         {/* ── Project sidebar ────────────────────── */}
-        <div className={styles.projectSidebar}>
+        <div className={`${styles.projectSidebar} ${sidebarCollapsed ? styles.projectSidebarCollapsed : ""}`}>
           <div className={styles.projectHeader}>
-            <span className={styles.projectHeaderTitle}>Projects</span>
+            {!sidebarCollapsed && <span className={styles.projectHeaderTitle}>Projects</span>}
             <button
               type="button"
               className={styles.iconBtn}
-              onClick={() => {
-                setShowNewProject(true);
-                setNewProjectColor(PROJECT_COLORS[0]);
-              }}
-              aria-label="New project"
+              onClick={() => setSidebarCollapsed((c) => !c)}
+              aria-label={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+              title={sidebarCollapsed ? "Expand" : "Collapse"}
             >
-              <Plus size={15} weight="bold" aria-hidden />
+              {sidebarCollapsed ? (
+                <Plus size={15} weight="bold" aria-hidden />
+              ) : (
+                <CaretLeft size={15} weight="bold" aria-hidden />
+              )}
             </button>
+            {!sidebarCollapsed && (
+              <button
+                type="button"
+                className={styles.iconBtn}
+                onClick={() => {
+                  setShowNewProject(true);
+                  setNewProjectColor(PROJECT_COLORS[0]);
+                }}
+                aria-label="New project"
+              >
+                <Plus size={15} weight="bold" aria-hidden />
+              </button>
+            )}
           </div>
 
-          {showNewProject ? (
+          {showNewProject && !sidebarCollapsed ? (
             <div className={styles.newProjectForm}>
               <div className={styles.newProjectColors}>
                 {PROJECT_COLORS.map((c) => (
@@ -281,42 +296,44 @@ export function FreeStudyNotes() {
             </div>
           ) : null}
 
-          <ul className={styles.projectList}>
-            {projects.map((project) => (
-              <li key={project.id}>
-                <button
-                  type="button"
-                  className={`${styles.projectItem} ${project.id === activeProjectId ? styles.projectItemActive : ""}`}
-                  onClick={() => {
-                    setActiveProjectId(project.id);
-                    setActiveNoteId(null);
-                  }}
-                >
-                  <span
-                    className={styles.projectColorDot}
-                    style={{ background: project.color }}
-                  />
-                  <span className={styles.projectItemName}>{project.name}</span>
-                  <span className={styles.projectItemCount}>
-                    {projectNoteCounts[project.id] ?? 0}
-                  </span>
-                  <span
-                    className={styles.projectDelete}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleDeleteProject(project.id);
+          {!sidebarCollapsed && (
+            <ul className={styles.projectList}>
+              {projects.map((project) => (
+                <li key={project.id}>
+                  <button
+                    type="button"
+                    className={`${styles.projectItem} ${project.id === activeProjectId ? styles.projectItemActive : ""}`}
+                    onClick={() => {
+                      setActiveProjectId(project.id);
+                      setActiveNoteId(null);
                     }}
-                    role="button"
-                    tabIndex={0}
                   >
-                    <Trash size={12} aria-hidden />
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
+                    <span
+                      className={styles.projectColorDot}
+                      style={{ background: project.color }}
+                    />
+                    <span className={styles.projectItemName}>{project.name}</span>
+                    <span className={styles.projectItemCount}>
+                      {projectNoteCounts[project.id] ?? 0}
+                    </span>
+                    <span
+                      className={styles.projectDelete}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDeleteProject(project.id);
+                      }}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <Trash size={12} aria-hidden />
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
 
-          {projects.length === 0 && !showNewProject ? (
+          {!sidebarCollapsed && projects.length === 0 && !showNewProject ? (
             <div className={styles.emptyState}>
               <p className={styles.emptyStateText}>No projects yet</p>
               <button
