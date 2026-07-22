@@ -108,6 +108,13 @@ export function useBoardTutor(options: UseBoardTutorOptions = {}) {
         if (options?.transcript?.trim()) {
           telemetry.transcript = options.transcript.trim();
         }
+        // When a board snapshot (vision) is attached, drop OCR text from
+        // telemetry. The vision model reads the board directly from the image;
+        // sending garbled OCR text alongside it causes misinterpretation
+        // (e.g. "2+2" OCR'd as "2 V 2" confuses the model).
+        if (options?.snapshotBase64) {
+          delete telemetry.ocr_text;
+        }
         const result = await startStream({
           conversationId: id,
           message: text,
