@@ -5,7 +5,12 @@ import { buildTutorPrompt } from "@/lib/promptBuilder";
 import { verifyCsrf } from "@/lib/csrf";
 import { rateLimit, rateLimitResponse } from "@/lib/rateLimit";
 import { NO_KEY_MESSAGE, type ChatTurn } from "@/lib/ai/mistral";
-import { resolveAiClient } from "@/lib/ai/keyPolicy";
+import {
+  resolveAiClient,
+  getPlatformAiKey,
+  getPlatformAiBaseUrl,
+  getPlatformAiModel,
+} from "@/lib/ai/keyPolicy";
 import {
   formatTutorAgentError,
   formatTutorRouteError,
@@ -172,9 +177,26 @@ async function handleTutor(req: NextRequest): Promise<Response> {
   // AI runs on the user's own Mistral key. No key → guide them to Settings
   // instead of failing opaquely. (Checked before persisting the user message so
   // the conversation isn't left with a dangling unanswered turn.)
-  const ai = await resolveAiClient(req, user);
+  let ai = await resolveAiClient(req, user);
   if (!ai) {
     return sseMessageStream(NO_KEY_MESSAGE);
+  }
+
+  // When a board snapshot (vision) is provided, the model MUST support vision.
+  // Personal Mistral keys use mistral-small-2506 which does NOT support images.
+  // Upgrade to the platform key (Claude Sonnet 4.6 via FreeModel) which does.
+  if (snapshot_base64 && !ai.serverURL) {
+    const platformKey = await getPlatformAiKey();
+    if (platformKey) {
+      const [serverURL, model] = await Promise.all([
+        getPlatformAiBaseUrl(),
+        getPlatformAiModel(),
+      ]);
+      ai = { apiKey: platformKey, serverURL, model, source: "platform" };
+    }
+    // If no platform key available, proceed with personal key — the image
+    // will be silently ignored but OCR text is still stripped so the model
+    // will at least see a clean text prompt.
   }
 
   await supabase.from("tutor_messages").insert({
@@ -199,7 +221,12 @@ async function handleTutor(req: NextRequest): Promise<Response> {
       content: m.content,
     }));
 
-  // Attach board snapshot as vision content if provided
+  // Attach board snapshot as vision content if provided.
+  // The multimodal array form is required by LangChain's HumanMessage to
+  // correctly pass images to vision-capable models (e.g. Claude Sonnet 4.6).
+  // NOTE: personal Mistral keys (mistral-small-2506) do NOT support vision —
+  // the image is silently ignored. Snapshot vision only works with platform
+  // keys (FreeModel / Claude Sonnet). Use `forcePlatformKey` below.
   if (snapshot_base64) {
     const lastUserIdx = messages.findLastIndex((m) => m.role === "user");
     if (lastUserIdx >= 0) {
@@ -207,10 +234,10 @@ async function handleTutor(req: NextRequest): Promise<Response> {
       messages[lastUserIdx] = {
         role: "user",
         content: [
-          { type: "text", text: existing.content as string },
+          { type: "text", text: String(existing.content) },
           { type: "image_url", image_url: { url: snapshot_base64 } },
         ],
-      } as unknown as ChatTurn;
+      };
     }
   }
 
@@ -244,6 +271,7 @@ async function handleTutor(req: NextRequest): Promise<Response> {
     coursePreload: coursePreload || null,
     performanceData,
     telemetry,
+    hasSnapshot: !!snapshot_base64,
     conversationContext: {
       context_type: conversation.context_type,
       context_id: conversation.context_id,

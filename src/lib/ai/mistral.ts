@@ -184,7 +184,17 @@ async function throttle(): Promise<void> {
   if (wait > 0) await new Promise((resolve) => setTimeout(resolve, wait));
 }
 
-export type ChatTurn = { role: "user" | "assistant"; content: string };
+/**
+ * A single conversation turn. `content` is normally a plain string, but vision
+ * turns inject multimodal content blocks (text + image_url) as an array.
+ * The array form is required by LangChain's `HumanMessage` constructor to
+ * correctly pass images to vision-capable models.
+ */
+export type ChatTurnContent =
+  | string
+  | Array<{ type: string; text?: string; image_url?: { url: string } }>;
+
+export type ChatTurn = { role: "user" | "assistant"; content: ChatTurnContent };
 
 export type ChatOptions = {
   system?: string;
@@ -245,11 +255,18 @@ function toMessages(system: string | undefined, turns: ChatTurn[]): BaseMessage[
   const messages: BaseMessage[] = [];
   if (system && system.trim()) messages.push(new SystemMessage(system));
   for (const turn of turns) {
-    messages.push(
-      turn.role === "assistant"
-        ? new AIMessage(turn.content)
-        : new HumanMessage(turn.content),
-    );
+    if (turn.role === "assistant") {
+      // Assistant turns are always plain text.
+      messages.push(new AIMessage(typeof turn.content === "string" ? turn.content : JSON.stringify(turn.content)));
+    } else {
+      // HumanMessage positional string arg → plain text.
+      // Object form `{ content }` → multimodal blocks (text + image_url).
+      if (typeof turn.content === "string") {
+        messages.push(new HumanMessage(turn.content));
+      } else {
+        messages.push(new HumanMessage({ content: turn.content as MessageContent }));
+      }
+    }
   }
   return messages;
 }

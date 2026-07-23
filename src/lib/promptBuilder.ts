@@ -50,6 +50,8 @@ export type TutorPromptOptions = {
   };
   /** Free Studying multimodal payload (OCR / PDF / voice / sims). */
   telemetry?: FreeStudyTelemetry | null;
+  /** True when a whiteboard snapshot image is attached to this turn. */
+  hasSnapshot?: boolean;
 };
 
 export type StudyPlanDiagnosticAnswer = {
@@ -261,8 +263,17 @@ export function buildTutorPrompt(
     "- Keep replies focused and skimmable — lead with the answer, then the explanation.",
     "",
     "When MULTIMODAL TELEMETRY is present in SESSION CONTEXT:",
-    "- Prefer the three-section Free Studying layout (Conceptual Insight / Test-Hacker Strategy / Socratic Pivot).",
     "- Do not invent OCR, transcript, PDF, or simulation values that were not provided.",
+    "",
+    options.hasSnapshot
+      ? [
+          "WHITEBOARD SNAPSHOT ATTACHED:",
+          "- A whiteboard image is attached to this message. Look at it directly — read any handwriting, equations, diagrams, or annotations yourself.",
+          "- Do NOT rely on any OCR text that may appear in the message text. The image is the ground truth.",
+          "- If the handwriting is ambiguous, state what you see and ask for clarification.",
+          "- Solve the problem you see on the board; do not ask the student to describe what they wrote.",
+        ].join("\n")
+      : "",
   ].join("\n");
 
   return (
