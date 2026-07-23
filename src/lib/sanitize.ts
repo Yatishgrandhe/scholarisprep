@@ -5,5 +5,7 @@
 
 /** Strip tags and clamp length on free-text user input. Pure, dependency-free. */
 export function sanitizeUserInput(input: string): string {
-  return input.replace(/<[^>]*>/g, "").trim().substring(0, 10000);
+  // Only strip actual HTML tags (e.g. <div>, </p>, <br>), not bare < and >
+  // used in math equations (e.g. x < 5, 3 < x < 7).
+  return input.replace(/<\/?[a-zA-Z][^>]*>/g, "").trim().substring(0, 10000);
 }
