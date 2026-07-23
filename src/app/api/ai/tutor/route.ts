@@ -154,12 +154,17 @@ async function handleTutor(req: NextRequest): Promise<Response> {
         title: "Free Study",
         exam_type: resolvedExamType,
         context_type: "general",
+        subject_context: {},
       })
       .select("id, user_id, context_type, context_id")
       .single();
 
     if (createErr || !created) {
-      return new Response("Forbidden", { status: 403 });
+      console.error("[AI Tutor] conversation create failed:", createErr);
+      return new Response(
+        JSON.stringify({ error: "Could not create conversation" }),
+        { status: 403, headers: { "content-type": "application/json" } },
+      );
     }
     conversation = created;
   }

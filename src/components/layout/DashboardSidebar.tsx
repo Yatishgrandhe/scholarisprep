@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { BrandHomeLink } from "@/components/brand/BrandHomeLink";
 import { ScholarisLogoMark } from "@/components/brand/ScholarisLogoMark";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   CaretDown,
@@ -45,6 +45,7 @@ type DashboardSidebarProps = {
 
 export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProps) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const { user, profile, displayName, displayEmail, displayAvatarUrl, signOut } =
     useAuth();
   const examType = useActiveExamType();
@@ -114,13 +115,22 @@ export function DashboardSidebar({ collapsed, onCollapse }: DashboardSidebarProp
     if (id === WHITEBOARD_NAV_ID || href === WHITEBOARD_HREF) {
       return pathname === WHITEBOARD_HREF || pathname.startsWith(`${WHITEBOARD_HREF}/`);
     }
-    if (id === FREE_STUDY_NAV_ID || href === FREE_STUDY_HREF) {
-      // Hub only — Whiteboard Studio is a child link; STEM Labs stay separate.
-      return pathname === FREE_STUDY_HREF;
+    // Parent "Free Studying" link: highlight on ALL free-study routes
+    if (id === FREE_STUDY_NAV_ID) {
+      return pathname === FREE_STUDY_HREF || pathname.startsWith(`${FREE_STUDY_HREF}/`);
+    }
+    // Overview child: highlight only on the hub page with no dest param
+    if (href === FREE_STUDY_HREF) {
+      return pathname === FREE_STUDY_HREF && !searchParams.get("dest");
     }
     const path = href.split("?")[0]!;
     if (path === "/dashboard") return pathname === "/dashboard";
-    // For children with query params, require exact match including query string
+    // Free-study children with dest query param
+    if (href.includes("?") && path === FREE_STUDY_HREF) {
+      const dest = searchParams.get("dest");
+      const expectedDest = href.split("dest=")[1]?.split("&")[0];
+      return pathname === path && dest === expectedDest;
+    }
     if (href.includes("?")) {
       return pathname === path;
     }

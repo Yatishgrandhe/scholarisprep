@@ -102,7 +102,9 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
       </Suspense>
 
       {/* Primary dashboard sidebar — not used on free-study / labs / whiteboard */}
-      <DashboardSidebar collapsed={collapsed} onCollapse={toggleSidebar} />
+      <Suspense fallback={null}>
+        <DashboardSidebar collapsed={collapsed} onCollapse={toggleSidebar} />
+      </Suspense>
 
       <div className={styles.contentShell} data-dashboard-shell>
         <main className={styles.main} id="dashboard-main">
