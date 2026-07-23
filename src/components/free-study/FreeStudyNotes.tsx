@@ -169,7 +169,7 @@ export function FreeStudyNotes() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            conversation_id: "free-study-notes",
+            conversation_id: crypto.randomUUID(),
             message: content + noteContext,
             context: { exam_type: "general" },
           }),

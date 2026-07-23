@@ -134,14 +134,34 @@ async function handleTutor(req: NextRequest): Promise<Response> {
   const telemetry: FreeStudyTelemetry | null = normalizeTelemetry(rawTelemetry);
   const freeStudy = isFreeStudyTurn(telemetry);
 
-  const { data: conversation } = await supabase
+  let { data: conversation } = await supabase
     .from("tutor_conversations")
     .select("id, user_id, context_type, context_id")
     .eq("id", conversation_id)
     .single();
 
+  // Auto-create conversation if it doesn't exist (free-study pages don't
+  // pre-create via Supabase client — they generate a UUID client-side).
   if (!conversation || conversation.user_id !== user.id) {
-    return new Response("Forbidden", { status: 403 });
+    const examTypeRaw = context?.exam_type;
+    const resolvedExamType =
+      examTypeRaw && isExamType(examTypeRaw) ? examTypeRaw : null;
+    const { data: created, error: createErr } = await supabase
+      .from("tutor_conversations")
+      .insert({
+        id: conversation_id,
+        user_id: user.id,
+        title: "Free Study",
+        exam_type: resolvedExamType,
+        context_type: "general",
+      })
+      .select("id, user_id, context_type, context_id")
+      .single();
+
+    if (createErr || !created) {
+      return new Response("Forbidden", { status: 403 });
+    }
+    conversation = created;
   }
 
   // AI runs on the user's own Mistral key. No key → guide them to Settings

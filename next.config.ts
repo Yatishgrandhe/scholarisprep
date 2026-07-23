@@ -27,8 +27,7 @@ const contentSecurityPolicy = [
   `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ${DESMOS_CSP_ORIGINS} ${VERCEL_LIVE_ORIGIN}`,
   // `data:` is required — Desmos embeds its keypad/toolbar icon font as a
   // base64 data: URI, so without it those buttons render as empty squares (tofu).
-  // Do NOT add frontend-cdn.perplexity.ai — not used by the app (extension noise).
-  `font-src 'self' data: https://fonts.gstatic.com ${DESMOS_CSP_ORIGINS} ${VERCEL_LIVE_FONT}`,
+  `font-src 'self' data: https://fonts.gstatic.com https://frontend-cdn.perplexity.ai ${DESMOS_CSP_ORIGINS} ${VERCEL_LIVE_FONT}`,
   `img-src 'self' data: blob: https://*.supabase.co https://*.r2.cloudflarestorage.com https://img.youtube.com https://i.ytimg.com https://images.unsplash.com https://api.dicebear.com ${DESMOS_CSP_ORIGINS} ${VERCEL_LIVE_IMG}`,
   `worker-src 'self' blob: ${DESMOS_CSP_ORIGINS}`,
   `connect-src 'self' https://*.supabase.co https://*.r2.cloudflarestorage.com ${DESMOS_CSP_ORIGINS} ${HF_CSP_ORIGINS} ${VERCEL_LIVE_CONNECT}`,

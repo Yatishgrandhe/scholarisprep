@@ -34,7 +34,7 @@ export function FreeStudyTutor() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            conversation_id: "free-study-tutor",
+            conversation_id: crypto.randomUUID(),
             message: content,
             context: { exam_type: examType },
           }),
