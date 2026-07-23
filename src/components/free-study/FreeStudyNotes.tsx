@@ -477,7 +477,7 @@ export function FreeStudyNotes() {
                       if (file) {
                         try {
                           const { recognizeImageText } = await import("@/lib/free-study/ocr");
-                          const text = await recognizeImageText(file);
+                          const text = await recognizeImageText(file, undefined, { mode: "auto" });
                           if (text.trim()) {
                             updateNote({ body: (activeNote?.body || "") + "\n\n" + text.trim() });
                             toast.success("Image text extracted and added to note");

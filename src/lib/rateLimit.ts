@@ -17,6 +17,7 @@ export const RATE_LIMITS = {
   "free-study-pdf-upload-url": { limit: 30, window: "1h" as const },
   "free-study-pdf-confirm": { limit: 30, window: "1h" as const },
   "free-study-pdf-url": { limit: 120, window: "1h" as const },
+  "free-study-ocr": { limit: 60, window: "1h" as const },
 } as const;
 
 export type RateLimitKey = keyof typeof RATE_LIMITS;

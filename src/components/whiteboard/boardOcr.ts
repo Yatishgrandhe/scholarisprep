@@ -60,6 +60,8 @@ export type OcrBoardOptions = {
   requireInk?: boolean;
   /** From BoardCanvas.hasInk() — required when requireInk is true. */
   hasInk?: boolean;
+  /** Vision OCR mode. Defaults to "handwriting" for whiteboards. */
+  mode?: "handwriting" | "printed" | "math" | "auto";
 };
 
 const MSG = {
@@ -131,7 +133,9 @@ export async function ocrBoardSnapshot(
 
   try {
     const image = await resolveBoardImage(source);
-    const text = (await ocrImage(image, options.onProgress)).trim();
+    const text = (await ocrImage(image, options.onProgress, {
+      mode: options.mode ?? "handwriting",
+    })).trim();
     if (!text) {
       return { ok: false, code: "no_text", error: MSG.no_text };
     }
