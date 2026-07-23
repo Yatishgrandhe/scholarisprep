@@ -172,5 +172,6 @@ export const config = {
     "/auth/:path*",
     "/onboarding",
     "/onboarding/:path*",
+    "/api/ai/:path*",
   ],
 };
