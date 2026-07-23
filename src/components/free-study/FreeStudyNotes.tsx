@@ -202,7 +202,7 @@ export function FreeStudyNotes() {
         setIsStreaming(false);
       }
     },
-    [activeNote, messages],
+    [activeNote],
   );
 
   const handleQuiz = useCallback(async () => {
@@ -472,9 +472,22 @@ export function FreeStudyNotes() {
                     type="file"
                     accept="image/*"
                     className={styles.hiddenFileInput}
-                    onChange={(e) => {
+                    onChange={async (e) => {
                       const file = e.target.files?.[0];
-                      if (file) toast.info(`Image "${file.name}" selected`);
+                      if (file) {
+                        try {
+                          const { recognizeImageText } = await import("@/lib/free-study/ocr");
+                          const text = await recognizeImageText(file);
+                          if (text.trim()) {
+                            updateNote({ body: (activeNote?.body || "") + "\n\n" + text.trim() });
+                            toast.success("Image text extracted and added to note");
+                          } else {
+                            toast.error("No text found in image");
+                          }
+                        } catch {
+                          toast.error("Failed to extract text from image");
+                        }
+                      }
                       e.target.value = "";
                     }}
                   />
@@ -485,9 +498,22 @@ export function FreeStudyNotes() {
                     type="file"
                     accept=".pdf"
                     className={styles.hiddenFileInput}
-                    onChange={(e) => {
+                    onChange={async (e) => {
                       const file = e.target.files?.[0];
-                      if (file) toast.info(`PDF "${file.name}" selected`);
+                      if (file) {
+                        try {
+                          const { extractPdfTextClient } = await import("@/lib/pdf/extractText");
+                          const text = await extractPdfTextClient(file);
+                          if (text.trim()) {
+                            updateNote({ body: (activeNote?.body || "") + "\n\n" + text.trim() });
+                            toast.success("PDF text extracted and added to note");
+                          } else {
+                            toast.error("No text found in PDF");
+                          }
+                        } catch {
+                          toast.error("Failed to extract text from PDF");
+                        }
+                      }
                       e.target.value = "";
                     }}
                   />

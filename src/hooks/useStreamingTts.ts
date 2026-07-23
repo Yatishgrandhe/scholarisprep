@@ -186,19 +186,31 @@ function speakBrowser(
     }
 
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.rate = 1.0;
-    utterance.pitch = 1.0;
+    
+    // Optimized parameters for natural-sounding speech
+    utterance.rate = 0.9;  // Slightly slower for clarity
+    utterance.pitch = 1.0; // Natural pitch
     utterance.volume = 1.0;
 
+    // Best voice selection: prefer natural/enhanced voices
     const voices = synth.getVoices();
-    const preferred = voices.find(
-      (v) =>
-        v.lang.startsWith("en") &&
-        (v.name.includes("Google") ||
-          v.name.includes("Samantha") ||
-          v.name.includes("Daniel") ||
-          v.name.includes("Enhanced")),
-    );
+    const preferred = voices.find((v) => {
+      const lang = v.lang.toLowerCase();
+      const name = v.name.toLowerCase();
+      return (
+        lang.startsWith("en") &&
+        (name.includes("natural") ||
+          name.includes("enhanced") ||
+          name.includes("premium") ||
+          name.includes("neural") ||
+          name.includes("google") ||
+          name.includes("samantha") ||
+          name.includes("daniel") ||
+          name.includes("karen") ||
+          name.includes("moira") ||
+          name.includes("tessa"))
+      );
+    });
     if (preferred) utterance.voice = preferred;
 
     setProgress({ status: "speaking", progress: 0.5 });

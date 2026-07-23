@@ -23,6 +23,8 @@ export function FreeStudyTutor() {
 
   const handleSend = useCallback(
     async (content: string) => {
+      if (isStreaming) return;
+      
       const userMsg: ChatMessage = { role: "user", content };
       setMessages((prev) => [...prev, userMsg]);
       setIsStreaming(true);
@@ -58,14 +60,14 @@ export function FreeStudyTutor() {
             return next;
           });
         }
-      } catch (err) {
+      } catch {
         toast.error("Something went wrong. Please try again.");
         setMessages((prev) => prev.filter((m) => m !== userMsg));
       } finally {
         setIsStreaming(false);
       }
     },
-    [messages, examType],
+    [isStreaming, examType],
   );
 
   return (

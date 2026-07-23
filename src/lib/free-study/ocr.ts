@@ -24,13 +24,12 @@ export async function recognizeImageText(
     },
   });
   try {
-    // PSM 7 = SINGLE_LINE — best for sparse board handwriting on one line.
-    // PSM 11 (SPARSE_TEXT) caused + to be misread as √ (sqrt symbol).
+    // PSM 6 = UNIFORM_BLOCK — good for mixed handwriting/math on a whiteboard.
+    // PSM 7 = SINGLE_LINE caused issues with multi-line content.
+    // Removed whitelist to allow all characters (math symbols, special chars).
     await worker.setParameters({
-      tessedit_pageseg_mode: "7" as never,
+      tessedit_pageseg_mode: "6" as never,
       preserve_interword_spaces: "1",
-      tessedit_char_whitelist:
-        "0123456789+-=×÷/().√ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ",
     });
     const { data } = await worker.recognize(image as Parameters<typeof worker.recognize>[0]);
     return (data.text ?? "").replace(/\s+\n/g, "\n").trim();

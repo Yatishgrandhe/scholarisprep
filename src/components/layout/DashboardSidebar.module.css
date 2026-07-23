@@ -217,6 +217,7 @@
 }
 
 .navLinkParentActive {
+  background: hsl(var(--dashboard-sidebar-active) / 0.6);
   color: hsl(var(--dashboard-sidebar-fg));
 }
 
