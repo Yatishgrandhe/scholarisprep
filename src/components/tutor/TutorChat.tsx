@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/client";
 import { useActiveExamType } from "@/hooks/useActiveExamType";
 import { useAuth } from "@/hooks/useAuth";
 import { useTutorStream } from "@/hooks/useTutorStream";
+import { useStreamingTts } from "@/hooks/useStreamingTts";
 import { createTutorConversation } from "@/lib/tutor/queries";
 import { matchSparkKeyword, type SparkSuggestion } from "@/lib/tutor/sparkKeywords";
 import { SparkSuggestionCard } from "@/components/tutor/SparkSuggestionCard";
@@ -15,6 +16,7 @@ import { TutorMessageBubble } from "./TutorMessageBubble";
 import { TutorTypingIndicator } from "./TutorTypingIndicator";
 import { TutorChatInput } from "./TutorChatInput";
 import { toast } from "sonner";
+import { SpeakerHigh, StopCircle } from "@phosphor-icons/react";
 import type { TutorStreamContext } from "@/lib/tutor/questionContext";
 import styles from "./tutor.module.css";
 import courseChatStyles from "@/components/course-chat/course-chat.module.css";
@@ -58,6 +60,9 @@ export function TutorChat({
 
   const { isStreaming, streamedText, statusNote, startStream, setStreamedText } =
     useTutorStream();
+
+  const { speak, interrupt: interruptTts } = useStreamingTts();
+  const [playingMsgIdx, setPlayingMsgIdx] = useState<number | null>(null);
 
   const initConversation = useCallback(async () => {
     if (!user) return;
@@ -178,6 +183,16 @@ export function TutorChat({
     }
   };
 
+  const handlePlayMsg = useCallback((idx: number, text: string) => {
+    if (playingMsgIdx === idx) {
+      interruptTts();
+      setPlayingMsgIdx(null);
+      return;
+    }
+    setPlayingMsgIdx(idx);
+    void speak(text).catch(() => setPlayingMsgIdx(null));
+  }, [playingMsgIdx, speak, interruptTts]);
+
   return (
     <div className={`${styles.embeddedChat} ${className ?? ""}`}>
       <div className={styles.messages}>
@@ -201,12 +216,27 @@ export function TutorChat({
               </div>
             ) : null}
             {messages.map((msg, i) => (
-              <TutorMessageBubble
-                key={msg.id ?? `msg-${i}`}
-                role={msg.role}
-                content={msg.content}
-                plainAssistantText={plainAssistantText}
-              />
+              <div key={msg.id ?? `msg-${i}`} className={styles.messageRow}>
+                <TutorMessageBubble
+                  role={msg.role}
+                  content={msg.content}
+                  plainAssistantText={plainAssistantText}
+                />
+                {msg.role === "assistant" && msg.content.trim() ? (
+                  <button
+                    type="button"
+                    className={playingMsgIdx === i ? styles.stopVoiceBtn : styles.playVoiceBtn}
+                    onClick={() => handlePlayMsg(i, msg.content)}
+                    aria-label={playingMsgIdx === i ? "Stop speaking" : "Read aloud"}
+                  >
+                    {playingMsgIdx === i ? (
+                      <StopCircle size={14} weight="fill" />
+                    ) : (
+                      <SpeakerHigh size={14} weight="fill" />
+                    )}
+                  </button>
+                ) : null}
+              </div>
             ))}
             {sparkSuggestion ? (
               <div className={courseChatStyles.messageAssistant}>

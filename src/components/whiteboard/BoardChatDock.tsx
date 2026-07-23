@@ -433,6 +433,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
                       content={m.content}
                       playing={isPlaying}
                       onPlay={handlePlay}
+                      onStop={interruptTts}
                     />
                   </div>
                 </div>
@@ -443,7 +444,7 @@ export const BoardChatDock = forwardRef<BoardChatDockHandle, BoardChatDockProps>
               <div className={`${styles.turn} ${styles.turnAssistant}`}>
                 <span className={styles.turnMeta}>Scho</span>
                 <div className={styles.assistantBody}>
-                  <FreeStudySectionedReply content={streamedText} />
+                  <FreeStudySectionedReply content={streamedText} onStop={interruptTts} />
                 </div>
               </div>
             ) : null}

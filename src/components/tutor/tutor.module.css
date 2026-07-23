@@ -963,3 +963,48 @@
     min-height: 65vh;
   }
 }
+
+/* ---- Voice play / stop buttons ---- */
+
+.messageRow {
+  position: relative;
+}
+
+.playVoiceBtn,
+.stopVoiceBtn {
+  position: absolute;
+  top: 4px;
+  right: -32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 150ms ease;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+}
+
+.messageRow:hover .playVoiceBtn,
+.messageRow:hover .stopVoiceBtn {
+  opacity: 1;
+}
+
+.playVoiceBtn:hover {
+  background: hsl(var(--muted) / 0.6);
+  color: hsl(var(--foreground));
+}
+
+.stopVoiceBtn {
+  opacity: 1;
+  background: hsl(var(--destructive, #ef4444) / 0.1);
+  color: hsl(var(--destructive, #ef4444));
+}
+
+.stopVoiceBtn:hover {
+  background: hsl(var(--destructive, #ef4444) / 0.2);
+}

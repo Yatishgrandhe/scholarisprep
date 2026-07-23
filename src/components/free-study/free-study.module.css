@@ -386,3 +386,25 @@
   outline: 2px solid var(--cobalt, #2563eb);
   outline-offset: 2px;
 }
+
+.stopBtn {
+  background: transparent;
+  color: hsl(var(--destructive, #ef4444));
+  border-color: transparent;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, hsl(var(--destructive, #ef4444)) 35%, transparent);
+}
+
+.stopBtn:hover {
+  text-decoration-color: currentColor;
+}
+
+.stopBtn:focus-visible {
+  outline: 2px solid hsl(var(--destructive, #ef4444));
+  outline-offset: 2px;
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { SpeakerHigh } from "@phosphor-icons/react";
+import { SpeakerHigh, StopCircle } from "@phosphor-icons/react";
 import { TutorMarkdown } from "@/components/tutor/TutorMarkdown";
 import styles from "./free-study.module.css";
 
@@ -50,10 +50,12 @@ export function parseFreeStudySections(content: string): ParsedTutorSection[] {
 export function FreeStudySectionedReply({
   content,
   onPlay,
+  onStop,
   playing,
 }: {
   content: string;
   onPlay?: (text: string) => void;
+  onStop?: () => void;
   playing?: boolean;
 }) {
   const sections = parseFreeStudySections(content);
@@ -64,17 +66,28 @@ export function FreeStudySectionedReply({
 
   return (
     <div className={styles.sectionedReply}>
-      {onPlay ? (
+      {onPlay || onStop ? (
         <div className={styles.replyToolbar}>
-          <button
-            type="button"
-            className={styles.playBtn}
-            onClick={() => onPlay(speakText || content)}
-            disabled={playing}
-          >
-            <SpeakerHigh size={16} weight="fill" aria-hidden />
-            {playing ? "Playing…" : "Play with Kokoro"}
-          </button>
+          {playing && onStop ? (
+            <button
+              type="button"
+              className={styles.stopBtn}
+              onClick={onStop}
+            >
+              <StopCircle size={16} weight="fill" aria-hidden />
+              Stop
+            </button>
+          ) : onPlay ? (
+            <button
+              type="button"
+              className={styles.playBtn}
+              onClick={() => onPlay(speakText || content)}
+              disabled={playing}
+            >
+              <SpeakerHigh size={16} weight="fill" aria-hidden />
+              {playing ? "Playing…" : "Play with Kokoro"}
+            </button>
+          ) : null}
         </div>
       ) : null}
       {sections.map((section, idx) => (
