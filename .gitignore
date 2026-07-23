@@ -85,3 +85,4 @@ scripts/data/.*
 /regen_*.json
 /regen_out*.json
 /*.out
+opencode.json
